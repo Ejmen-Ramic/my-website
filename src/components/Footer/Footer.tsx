@@ -17,7 +17,7 @@ import {
   MenuList,
 } from "@chakra-ui/react"
 import { ReactNode } from "react"
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa"
 import { BiMailSend } from "react-icons/bi"
 
 const Logo = (props: any) => {
@@ -29,11 +29,7 @@ const Logo = (props: any) => {
       fontWeight={"400"}
       color={useColorModeValue("#2b333d", "white")}
     >
-      web
-      <Box color={"red"} as={"span"}>
-        X
-      </Box>
-      arkitect
+      Ejmen Ramic
     </Text>
   )
 }
@@ -42,10 +38,14 @@ const SocialButton = ({
   children,
   label,
   href,
+  color,
+  hoverColor,
 }: {
   children: ReactNode
   label: string
   href: string
+  color: string
+  hoverColor: string
 }) => {
   return (
     <chakra.button
@@ -62,6 +62,7 @@ const SocialButton = ({
       transition={"background 0.3s ease"}
       _hover={{
         bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+        color: hoverColor,
       }}
     >
       <VisuallyHidden>{label}</VisuallyHidden>
@@ -104,9 +105,9 @@ const Footer = () => {
               fontWeight={"400"}
               color={useColorModeValue("#2b333d", "white")}
             >
-              Welcome to WebXArkitect! We are a team of skilled developers and
-              designers who specialize in crafting custom web solutions for
-              businesses of all sizes. <br /> <br />
+              Welcome to my website! I am a software engineer and photographer
+              based in Bosnia and Herzegovina. Feel free to view my portfolio
+              and work. <br /> <br />
               Powered by {""}
               <Link href="https://react.dev/" isExternal>
                 <Box as="span" color="#02bece">
@@ -130,19 +131,43 @@ const Footer = () => {
                 </Box>
               </Link>
             </Text>
-            <Text fontSize={"sm"}>
-              © 2023 WebXArkitect. All rights reserved
-            </Text>
+            <Text fontSize={"sm"}>© 2024 EjmenRamic. All rights reserved</Text>
             <Stack direction={"row"} spacing={6}>
-              <SocialButton label={"GitHub"} href={"#"}>
+              <SocialButton
+                label={"GitHub"}
+                href={"https://github.com/Ejmen-Ramic/"}
+                color={"#333333"}
+                hoverColor={"gray"}
+              >
                 <FaGithub />
               </SocialButton>
-              <SocialButton label={"Twitter"} href={"#"}>
+
+              <SocialButton
+                label={"Twitter"}
+                href={"https://twitter.com/EjmenRamic"}
+                color={"#00aced"}
+                hoverColor={"cyan"}
+              >
                 <FaTwitter />
               </SocialButton>
 
-              <SocialButton label={"LinkedIn"} href={"#"}>
+              <SocialButton
+                label={"LinkedIn"}
+                href={
+                  "https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my"
+                }
+                color={"#0077b5"}
+                hoverColor={"#0A66C2"}
+              >
                 <FaLinkedin />
+              </SocialButton>
+              <SocialButton
+                label={"Instagram"}
+                href={"https://www.instagram.com/ejmenramic/"}
+                color={"#0077b5"}
+                hoverColor={"#C13584"}
+              >
+                <FaInstagram />
               </SocialButton>
             </Stack>
           </Stack>
@@ -227,22 +252,6 @@ const Footer = () => {
               Contacts
             </Link>
           </Stack>
-          {/* <Stack align={"flex-start"}>
-            <ListHeader>Navigate</ListHeader>
-            <Link href={"#"}>Home</Link>
-            <Link href={"#"}>Portfolio</Link>
-            <Link href={"#"}>Hobbies</Link>
-            <Link href={"#"}>About Me</Link>
-            <Link href={"#"}>Contacts</Link>
-          </Stack> */}
-          {/* <Stack align={"flex-start"}>
-            <ListHeader>Support</ListHeader>
-            <Link href={"#"}>Help Center</Link>
-            <Link href={"#"}>Terms of Service</Link>
-            <Link href={"#"}>Legal</Link>
-            <Link href={"#"}>Privacy Policy</Link>
-            <Link href={"#"}>Status</Link>
-          </Stack> */}
           <Stack align={"flex-start"}>
             <ListHeader>Stay up to date</ListHeader>
             <Stack direction={"row"}>
