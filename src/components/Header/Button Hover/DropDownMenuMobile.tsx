@@ -8,30 +8,30 @@ import {
   MenuItem,
   useColorModeValue,
   chakra,
-} from "@chakra-ui/react";
-import { BiChevronDown } from "react-icons/bi";
+} from "@chakra-ui/react"
+import { BiChevronDown } from "react-icons/bi"
 
 const MenuContainerMobile = () => {
   return (
     <Flex h={"full"}>
       <DropDownMenuMobile />
     </Flex>
-  );
-};
+  )
+}
 
 const dropdownLinks = [
   {
-    name: "Classes",
-    path: "/classes",
+    name: "Photography",
+    path: "/photography",
   },
-  {
-    name: "Become a Tutor",
-    path: "/tutoring",
-  },
-];
+  // {
+  //   name: "Become a Tutor",
+  //   path: "/hobbies",
+  // },
+]
 
 const DropDownMenuMobile = () => {
-  const color = useColorModeValue("#2b333d", "white");
+  const color = useColorModeValue("#2b333d", "white")
 
   return (
     <Menu autoSelect={false} isLazy>
@@ -48,7 +48,7 @@ const DropDownMenuMobile = () => {
             mb={"5px"}
           >
             <Flex alignItems="center">
-              <Text>Tutoring</Text>
+              <Text>Hobbies</Text>
               <Icon
                 as={BiChevronDown}
                 h={"100%"}
@@ -70,13 +70,13 @@ const DropDownMenuMobile = () => {
         </>
       )}
     </Menu>
-  );
-};
+  )
+}
 
 interface MenuLinkProps {
-  name: string;
-  path: string;
-  onClose: () => void;
+  name: string
+  path: string
+  onClose: () => void
 }
 
 const MenuLink = ({ name, path, onClose }: MenuLinkProps) => {
@@ -91,7 +91,7 @@ const MenuLink = ({ name, path, onClose }: MenuLinkProps) => {
         <Text>{name}</Text>
       </MenuItem>
     </chakra.a>
-  );
-};
+  )
+}
 
-export default MenuContainerMobile;
+export default MenuContainerMobile

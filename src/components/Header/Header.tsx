@@ -28,7 +28,7 @@ const Header = () => {
 
   const [homeHovered, setHomeHovered] = useState(false)
   const [portfolioHovered, setPortfolioHovered] = useState(false)
-  const [tutoringHovered, setTutoringHovered] = useState(false)
+  const [hobbiesHovered, setHobbiesHovered] = useState(false)
   const [aboutHovered, setAboutHovered] = useState(false)
   const [contactHovered, setContactHovered] = useState(false)
 
@@ -57,11 +57,7 @@ const Header = () => {
               }}
               cursor={"pointer"}
             >
-              Web
-              <Box as={"span"} color={"red"}>
-                X
-              </Box>
-              Arkitect
+              Ejmen Ramic
             </Heading>
           </Link>
         </VStack>
@@ -136,15 +132,15 @@ const Header = () => {
           </Link>
           <Box
             h={"100%"}
-            borderColor={tutoringHovered ? "#02bece" : "#2b333d"}
-            borderTopWidth={tutoringHovered ? "4px" : "0px"}
+            borderColor={hobbiesHovered ? "#02bece" : "#2b333d"}
+            borderTopWidth={hobbiesHovered ? "4px" : "0px"}
             borderTopColor="#02bece"
             transition="all 0.1s ease-in-out"
             onMouseEnter={() => {
-              setTutoringHovered(true)
+              setHobbiesHovered(true)
             }}
             onMouseLeave={() => {
-              setTutoringHovered(false)
+              setHobbiesHovered(false)
             }}
             overflow="hidden"
             justifyItems={"center"}
@@ -192,7 +188,7 @@ const Header = () => {
                 pr={"10px"}
                 p={"50px"}
               >
-                About Us
+                About Me
               </Button>
             </Box>
           </Link>
@@ -222,7 +218,7 @@ const Header = () => {
                 pr={"10px"}
                 p={"50px"}
               >
-                Contact Us
+                Contacts
               </Button>
             </Box>
           </Link>

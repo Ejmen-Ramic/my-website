@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {
   Stack,
   Flex,
@@ -12,44 +12,44 @@ import {
   PopoverContent,
   useDisclosure,
   useColorModeValue,
-} from "@chakra-ui/react";
-import { FaChevronDown } from "react-icons/fa";
+} from "@chakra-ui/react"
+import { FaChevronDown } from "react-icons/fa"
 
 const menuData = [
   {
     id: 1,
-    label: "Classes",
-    href: "/classes",
+    label: "Photography",
+    href: "/photography",
   },
-  {
-    id: 2,
-    label: "Become a Tutor",
-    href: "/tutoring",
-  },
-];
+  // {
+  //   id: 2,
+  //   label: "Become a Tutor",
+  //   href: "/hobbies",
+  // },
+]
 
 const MenuContainer = () => {
   return (
     <Flex h={"100%"}>
       <DropDownMenu menuData={menuData} />
     </Flex>
-  );
-};
+  )
+}
 
 interface MenuData {
-  id: number;
-  label: string;
-  href: string;
-  linkColor?: string;
+  id: number
+  label: string
+  href: string
+  linkColor?: string
 }
 
 interface MenuDataProps {
-  menuData: MenuData[];
+  menuData: MenuData[]
 }
 
 const DropDownMenu = ({ menuData }: MenuDataProps) => {
-  const linkColor = "#02bece";
-  const { onOpen, onClose, isOpen } = useDisclosure();
+  const linkColor = "#02bece"
+  const { onOpen, onClose, isOpen } = useDisclosure()
 
   return (
     <Stack direction={"row"} spacing={4}>
@@ -73,7 +73,7 @@ const DropDownMenu = ({ menuData }: MenuDataProps) => {
                 color: linkColor,
               }}
             >
-              Tutoring
+              Hobbies
             </Link>
             <Icon
               as={FaChevronDown}
@@ -91,11 +91,8 @@ const DropDownMenu = ({ menuData }: MenuDataProps) => {
 
         <PopoverContent
           border={0}
-          mt={"-5px"}
-          boxShadow={useColorModeValue(
-            "2px 4px 6px rgba(160, 174, 192, 0.6)",
-            "0 4px 6px rgba(9, 17, 28, 0.9)"
-          )}
+          mt={"-7px"}
+          zIndex={1}
           bg={useColorModeValue("white", "gray.800")}
           p={3}
           rounded={"lg"}
@@ -109,8 +106,8 @@ const DropDownMenu = ({ menuData }: MenuDataProps) => {
         </PopoverContent>
       </Popover>
     </Stack>
-  );
-};
+  )
+}
 
 const DropDownItem = ({ label, href, linkColor }: MenuData) => {
   return (
@@ -130,7 +127,7 @@ const DropDownItem = ({ label, href, linkColor }: MenuData) => {
         </Box>
       </Stack>
     </Link>
-  );
-};
+  )
+}
 
-export default MenuContainer;
+export default MenuContainer

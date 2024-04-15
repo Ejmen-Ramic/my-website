@@ -10,7 +10,7 @@ import {
   Stack,
   Text,
   VStack,
-} from "@chakra-ui/react";
+} from "@chakra-ui/react"
 
 const OldFooter = () => {
   return (
@@ -128,11 +128,11 @@ const OldFooter = () => {
                 fontSize={"16px"}
                 textTransform={"capitalize"}
               >
-                Tutoring
+                Hobbies
               </MenuButton>
               <MenuList borderRadius={"3px"}>
-                <MenuItem>Classes</MenuItem>
-                <MenuItem>Become a Tutor</MenuItem>
+                <MenuItem>Photography</MenuItem>
+                {/* <MenuItem>Become a Tutor</MenuItem> */}
               </MenuList>
             </Menu>
             <Link
@@ -141,7 +141,7 @@ const OldFooter = () => {
               _hover={{ color: "white" }}
               fontSize={"16px"}
             >
-              About Us
+              About Me
             </Link>
             <Link
               href={"/"}
@@ -149,7 +149,7 @@ const OldFooter = () => {
               _hover={{ color: "white" }}
               fontSize={"16px"}
             >
-              Contact Us
+              Contacts
             </Link>
           </VStack>
         </Box>
@@ -196,7 +196,7 @@ const OldFooter = () => {
         </Box>
       </Stack>
     </Stack>
-  );
-};
+  )
+}
 
-export default OldFooter;
+export default OldFooter

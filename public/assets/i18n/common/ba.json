@@ -1,10 +1,10 @@
 {
   "home": "Home",
   "portfolio": "Portfolio",
-  "tutoring": "Tutoring",
+  "mywebsites": "My Websites",
   "language": "Language",
   "bosnian": "Bosnian",
   "english": "English",
-  "aboutus": "About Us",
-  "contactus": "Contact Us"
+  "aboutme": "About Me",
+  "contacts": "Contacts"
 }

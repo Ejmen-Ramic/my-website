@@ -22,7 +22,7 @@ import DropDownMenuMobile from "./Button Hover/DropDownMenuMobile"
 const HeaderMobile = () => {
   const [homeHovered, setHomeHovered] = useState(false)
   const [portfolioHovered, setPortfolioHovered] = useState(false)
-  const [tutoringHovered, setTutoringHovered] = useState(false)
+  const [hobbiesHovered, setHobbiesHovered] = useState(false)
   const [aboutHovered, setAboutHovered] = useState(false)
   const [contactHovered, setContactHovered] = useState(false)
   const [accountHovered, setAccountHovered] = useState(false)
@@ -131,29 +131,29 @@ const HeaderMobile = () => {
 
                 <Box
                   h={"100%"}
-                  borderColor={tutoringHovered ? "#02bece" : "#2b333d"}
+                  borderColor={hobbiesHovered ? "#02bece" : "#2b333d"}
                   borderRightWidth={
-                    showMenu ? "0px" : tutoringHovered ? "4px" : "0px"
+                    showMenu ? "0px" : hobbiesHovered ? "4px" : "0px"
                   }
                   borderRightColor="#02bece"
                   transition="all 0.1s ease-in-out"
-                  onMouseEnter={() => setTutoringHovered(true)}
-                  onMouseLeave={() => setTutoringHovered(false)}
+                  onMouseEnter={() => setHobbiesHovered(true)}
+                  onMouseLeave={() => setHobbiesHovered(false)}
                 ></Box>
                 <Box
                   h={"100%"}
-                  borderColor={tutoringHovered ? "#02bece" : "#2b333d"}
+                  borderColor={hobbiesHovered ? "#02bece" : "#2b333d"}
                   pr={"12%"}
                   borderRightWidth={
-                    showMenu ? "0px" : tutoringHovered ? "4px" : "0px"
+                    showMenu ? "0px" : hobbiesHovered ? "4px" : "0px"
                   }
                   borderRightColor="#02bece"
                   transition="all 0.1s ease-in-out"
                   onMouseEnter={() => {
-                    setTutoringHovered(true)
+                    setHobbiesHovered(true)
                   }}
                   onMouseLeave={() => {
-                    setTutoringHovered(false)
+                    setHobbiesHovered(false)
                   }}
                 >
                   <DropDownMenuMobile />
@@ -182,7 +182,7 @@ const HeaderMobile = () => {
                       ml={"54%"}
                       mb={"5px"}
                     >
-                      About Us
+                      About Me
                     </Button>
                   </Box>
                 </Link>
@@ -211,7 +211,7 @@ const HeaderMobile = () => {
                       ml={"48%"}
                       mb={"5px"}
                     >
-                      Contact Us
+                      Contacts
                     </Button>
                   </Box>
                 </Link>

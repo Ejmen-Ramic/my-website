@@ -189,7 +189,7 @@ const Footer = () => {
                 fontSize={"16px"}
                 textTransform={"capitalize"}
               >
-                Tutoring
+                Hobbies
               </MenuButton>
               <MenuList borderRadius={"3px"}>
                 <MenuItem
@@ -198,16 +198,16 @@ const Footer = () => {
                     bg: useColorModeValue("gray.100", "gray.900"),
                   }}
                 >
-                  Classes
+                  Photography
                 </MenuItem>
-                <MenuItem
+                {/* <MenuItem
                   _hover={{
                     color: "#02bece",
                     bg: useColorModeValue("gray.100", "gray.900"),
                   }}
                 >
                   Become a Tutor
-                </MenuItem>
+                </MenuItem> */}
               </MenuList>
             </Menu>{" "}
             <Link
@@ -216,7 +216,7 @@ const Footer = () => {
               _hover={{ color: useColorModeValue("#2b333d", "white") }}
               fontSize={"16px"}
             >
-              About Us
+              About Me
             </Link>
             <Link
               href={"/"}
@@ -224,16 +224,16 @@ const Footer = () => {
               _hover={{ color: useColorModeValue("#2b333d", "white") }}
               fontSize={"16px"}
             >
-              Contact Us
+              Contacts
             </Link>
           </Stack>
           {/* <Stack align={"flex-start"}>
             <ListHeader>Navigate</ListHeader>
             <Link href={"#"}>Home</Link>
             <Link href={"#"}>Portfolio</Link>
-            <Link href={"#"}>Tutoring</Link>
-            <Link href={"#"}>About Us</Link>
-            <Link href={"#"}>Contact Us</Link>
+            <Link href={"#"}>Hobbies</Link>
+            <Link href={"#"}>About Me</Link>
+            <Link href={"#"}>Contacts</Link>
           </Stack> */}
           {/* <Stack align={"flex-start"}>
             <ListHeader>Support</ListHeader>

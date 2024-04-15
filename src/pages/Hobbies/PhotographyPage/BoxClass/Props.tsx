@@ -1,17 +1,17 @@
 type BoxClassProps = {
-  languageimage: string;
-  alt: string;
-  image: string;
-  name: string;
-  jobtitle: string;
-  rating: string;
-  skills: string;
-  followers: string;
-};
+  languageimage: string
+  alt: string
+  image: string
+  name: string
+  jobtitle: string
+  rating: string
+  skills: string
+  followers: string
+}
 
 const items: BoxClassProps[] = [
   {
-    languageimage: "/Website/Tutoring/typescript-background.png",
+    languageimage: "/Website/Hobbies/typescript-background.png",
     alt: "TypeScript",
     image: "/Website/About-Us/ejmenbusiness.png",
     name: "Ejmen Ramic",
@@ -21,7 +21,7 @@ const items: BoxClassProps[] = [
     followers: "23k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -31,7 +31,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -41,7 +41,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -51,7 +51,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -61,7 +61,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -71,7 +71,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -81,7 +81,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -91,7 +91,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -101,7 +101,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -111,7 +111,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -121,7 +121,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -131,7 +131,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -141,7 +141,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -151,7 +151,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -161,7 +161,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -171,7 +171,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -181,7 +181,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -191,7 +191,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -201,7 +201,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -211,7 +211,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -221,7 +221,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -231,7 +231,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -241,7 +241,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -251,7 +251,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -261,7 +261,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -271,7 +271,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -281,7 +281,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -291,7 +291,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -301,7 +301,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -311,7 +311,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -321,7 +321,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -331,7 +331,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -341,7 +341,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -351,7 +351,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -361,7 +361,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -371,7 +371,7 @@ const items: BoxClassProps[] = [
     followers: "49k",
   },
   {
-    languageimage: "/Website/Tutoring/python-background.png",
+    languageimage: "/Website/Hobbies/python-background.png",
     alt: "Python",
     image: "/Website/About-Us//duckbusiness.jpg",
     name: "Maimul Hoque",
@@ -380,6 +380,6 @@ const items: BoxClassProps[] = [
     skills: "Python, Next JS",
     followers: "49k",
   },
-];
+]
 
-export default items;
+export default items

@@ -1,18 +1,18 @@
-import { Suspense, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
-import { extendTheme, ChakraProvider } from "@chakra-ui/react";
-import ScrollToTopButton from "./components/Back-To-Top/BackToTopButton";
-import Tutoring from "./pages/Tutoring/Tutoring";
-import About from "./pages/About Us/index";
-import HomePage from "./pages/Home";
-import Portfolio from "./pages/Portfolio/Portfolio";
-import ClassesPage from "./pages/Tutoring/ClassPage";
-import Contact from "./pages/Contact Us/Contact";
-import NotFound from "./pages/Not Found/NotFound";
-import Test from "./pages/test";
-import SignIn from "./pages/Account/SignIn/SignIn";
-import SignUp from "./pages/Account/SignUp/SignUp";
-import ForgotPassword from "./pages/Account/Password/ForgotPassword";
+import { Suspense, useEffect } from "react"
+import { Route, Routes } from "react-router-dom"
+import { extendTheme, ChakraProvider } from "@chakra-ui/react"
+import ScrollToTopButton from "./components/Back-To-Top/BackToTopButton"
+import About from "./pages/AboutMe/index"
+import HomePage from "./pages/Home"
+import Portfolio from "./pages/Portfolio/Portfolio"
+import Contact from "./pages/Contacts/Contact"
+import NotFound from "./pages/NotFound/NotFound"
+import Test from "./pages/test"
+import SignIn from "./pages/Account/SignIn/SignIn"
+import SignUp from "./pages/Account/SignUp/SignUp"
+import ForgotPassword from "./pages/Account/Password/ForgotPassword"
+import Hobbies from "./pages/Hobbies"
+import Photography from "./pages/Hobbies/PhotographyPage/Photography"
 // import NotFound from "./pages/Not Found/NewNotFound";
 
 const breakpoints = {
@@ -21,28 +21,28 @@ const breakpoints = {
   lg: "62em",
   xl: "80em",
   "2xl": "96em",
-};
+}
 
 export const theme = extendTheme({
   breakpoints,
-});
+})
 
 const App: React.FC = () => {
   const handleScroll = () => {
-    const scrollToTopButton = document.getElementById("scrollToTopButton");
+    const scrollToTopButton = document.getElementById("scrollToTopButton")
     if (scrollToTopButton) {
       scrollToTopButton.style.display =
-        window.pageYOffset > 100 ? "block" : "none";
+        window.pageYOffset > 100 ? "block" : "none"
     }
-  };
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll)
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return (
     <ChakraProvider theme={theme}>
@@ -52,8 +52,8 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
-          <Route path="/tutoring" element={<Tutoring />} />
-          <Route path="/classes" element={<ClassesPage />} />
+          <Route path="/hobbies" element={<Hobbies />} />
+          <Route path="/photography" element={<Photography />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/test" element={<Test />} />
@@ -66,7 +66,7 @@ const App: React.FC = () => {
         <ScrollToTopButton />
       </Suspense>
     </ChakraProvider>
-  );
-};
+  )
+}
 
-export default App;
+export default App
