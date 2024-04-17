@@ -9,7 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 import {
-  faFacebook,
+  faGithub,
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
@@ -116,25 +116,13 @@ const Welcome = () => {
           </a>
         </Tooltip>
         <HStack>
-          <Tooltip label="Facebook">
-            <a href="https://www.facebook.com/profile.php?id=100092716802936">
+          <Tooltip label="GitHub">
+            <a href="https://github.com/Ejmen-Ramic/">
               <Button
                 _hover={{ transform: "translateY(-10px)" }}
                 transition={"0.2s"}
-                colorScheme={"facebook"}
               >
-                <FontAwesomeIcon icon={faFacebook} />
-              </Button>
-            </a>
-          </Tooltip>
-          <Tooltip label="Twitter">
-            <a href="https://www.twitter.com">
-              <Button
-                _hover={{ transform: "translateY(-10px)" }}
-                transition={"0.2s"}
-                colorScheme={"purple"}
-              >
-                <FontAwesomeIcon icon={faInstagram} />
+                <FontAwesomeIcon icon={faGithub} />
               </Button>
             </a>
           </Tooltip>
@@ -146,6 +134,17 @@ const Welcome = () => {
                 colorScheme={"linkedin"}
               >
                 <FontAwesomeIcon icon={faLinkedin} />
+              </Button>
+            </a>
+          </Tooltip>
+          <Tooltip label="Instagram">
+            <a href="https://www.instagram.com/ejmenramic/">
+              <Button
+                _hover={{ transform: "translateY(-10px)" }}
+                transition={"0.2s"}
+                colorScheme={"purple"}
+              >
+                <FontAwesomeIcon icon={faInstagram} />
               </Button>
             </a>
           </Tooltip>

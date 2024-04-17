@@ -80,6 +80,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 }
 
 const Footer = () => {
+  const year = new Date().getFullYear()
   return (
     <Box
       bg={useColorModeValue("gray.100", "#2b333d")}
@@ -131,7 +132,9 @@ const Footer = () => {
                 </Box>
               </Link>
             </Text>
-            <Text fontSize={"sm"}>© 2024 EjmenRamic. All rights reserved</Text>
+            <Text fontSize={"sm"}>
+              © {year} EjmenRamic. All rights reserved
+            </Text>
             <Stack direction={"row"} spacing={6}>
               <SocialButton
                 label={"GitHub"}
