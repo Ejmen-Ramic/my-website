@@ -1,33 +1,75 @@
+import React from "react"
 import {
   Box,
   Button,
   Grid,
-  HStack,
+  GridItem,
   Heading,
+  HStack,
   Icon,
+  Image,
   SimpleGrid,
   Text,
-  VStack,
-  Image,
-  Hide,
-  GridItem,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import { BsFillInfoCircleFill } from "react-icons/bs";
-import { IoPricetags } from "react-icons/io5";
-import { IoThumbsUp } from "react-icons/io5";
-import { GiStairsGoal } from "react-icons/gi";
-import { TbCertificate } from "react-icons/tb";
-import FadeInView from "../../../components/Hooks/FadeInView";
+  Stack,
+} from "@chakra-ui/react"
+import { BsFillInfoCircleFill, BsSpeedometer } from "react-icons/bs"
+import { IoThumbsUp } from "react-icons/io5"
+import { GiStairsGoal } from "react-icons/gi"
+import { TbCertificate } from "react-icons/tb"
+import FadeInView from "../../../components/Hooks/FadeInView"
+
+// Define colors based on color mode
+const lightModeColor = "white"
+const darkModeColor = "#171923"
+
+// Define type for reason item
+type ReasonItem = {
+  icon: React.ReactElement
+  number: string
+  title: string
+  description: string
+}
 
 const ReasonsToChoose = () => {
+  // Array of reasons
+  const reasons: ReasonItem[] = [
+    {
+      icon: <Icon as={BsSpeedometer} boxSize={9} color={darkModeColor} />,
+      number: "01",
+      title: "Fast development",
+      description:
+        "You won't find better value in the marketplace. If you find a lower price, send us the offer, and we'll beat it.",
+    },
+    {
+      icon: <Icon as={IoThumbsUp} boxSize={9} color={darkModeColor} />,
+      number: "02",
+      title: "Guaranteed Quality",
+      description:
+        "Our training courses are 100% guaranteed to run on dates provided, whether they are classroom, virtual, or In-house.",
+    },
+    {
+      icon: <Icon as={GiStairsGoal} boxSize={9} color={darkModeColor} />,
+      number: "03",
+      title: "Highly Experienced",
+      description:
+        "Our support staff and Instructors have years of experience in meeting the specific needs of our clients and delivering exceptional quality.",
+    },
+    {
+      icon: <Icon as={TbCertificate} boxSize={9} color={darkModeColor} />,
+      number: "04",
+      title: "Award-Winning Training Material",
+      description:
+        "Our training program is supported by our well-researched and high-quality course material that will assist the learners in gaining full knowledge into their desired subject matter.",
+    },
+  ]
+
   return (
-    // Parent Stack
-    <VStack
+    <Stack
       spacing={0}
       mx={"auto"}
       minH={{ base: "900px", md: "450px", lg: "500px" }}
       maxW={{ base: "100%", md: "90%", lg: "1600px" }}
+      direction={{ base: "column", lg: "row" }}
     >
       <FadeInView>
         <Grid templateColumns={["1fr", "1fr ", "1fr", "1fr 1fr"]}>
@@ -60,7 +102,7 @@ const ReasonsToChoose = () => {
                   <Box as={"span"} color={"red"}>
                     Count
                   </Box>{" "}
-                  on Us
+                  on Me
                 </Heading>
                 <Text mt={"20px"} color={"white"}>
                   Our coding school boasts a team of highly skilled and
@@ -81,246 +123,67 @@ const ReasonsToChoose = () => {
               </Box>
             </Box>
           </GridItem>
-          {/* </Hide> */}
           <GridItem>
-            {/* Main Container for the Right side */}
             <Box w={"100%"} h={{ base: "full", md: "500px" }}>
               <SimpleGrid columns={[1, 1, 2]}>
-                {/* 1st Reason */}
-                <Box
-                  height={"250px"}
-                  px={"20px"}
-                  py={"20px"}
-                  pr={"40px"}
-                  bg={useColorModeValue("white", "#171923")}
-                  borderWidth={"1px"}
-                  borderColor={"#E4E4E4"}
-                  borderLeft={{ lg: 0 }}
-                  borderBottom={0}
-                >
-                  <HStack justify={"space-between"}>
-                    <Box
-                      w={"50px"}
-                      h={"50px"}
-                      borderRadius={"50px"}
-                      bgColor={"#F5F5F5"}
-                      display={"flex"}
-                      justifyContent={"center"}
-                      alignItems={"center"}
-                    >
-                      <Icon
-                        as={IoPricetags}
-                        boxSize={9}
-                        color={useColorModeValue("#1A202C", "#1A202C")}
-                      />
-                    </Box>
-                    <Box
-                      w={"30px"}
-                      h={"30px"}
-                      borderRadius={"20px"}
-                      color={"#F5F5F5"}
-                      display={"flex"}
-                      justifyContent={"center"}
-                      alignItems={"center"}
-                      fontSize={"40px"}
+                {reasons.map((reason, index) => (
+                  <Box
+                    key={index}
+                    height={"250px"}
+                    px={"20px"}
+                    py={"20px"}
+                    pr={"40px"}
+                    bg={lightModeColor}
+                    borderWidth={"1px"}
+                    borderColor={"#E4E4E4"}
+                    borderLeft={{ lg: 0 }}
+                  >
+                    <HStack justify={"space-between"}>
+                      <Box
+                        w={"50px"}
+                        h={"50px"}
+                        borderRadius={"50px"}
+                        bgColor={"#F5F5F5"}
+                        display={"flex"}
+                        justifyContent={"center"}
+                        alignItems={"center"}
+                      >
+                        {reason.icon}
+                      </Box>
+                      <Box
+                        w={"30px"}
+                        h={"30px"}
+                        borderRadius={"20px"}
+                        color={"#CDC8C8"}
+                        display={"flex"}
+                        justifyContent={"center"}
+                        alignItems={"center"}
+                        fontSize={"40px"}
+                        fontWeight={"extrabold"}
+                      >
+                        {reason.number}
+                      </Box>
+                    </HStack>
+                    <Heading
+                      mt={"20px"}
+                      fontSize={"l"}
                       fontWeight={"extrabold"}
+                      color={"black"}
                     >
-                      01
-                    </Box>
-                  </HStack>
-                  <Heading mt={"20px"} fontSize={"l"} fontWeight={"extrabold"}>
-                    Best Price Guarantee
-                  </Heading>
-                  <Text mt={"20px"}>
-                    You won't find better value in the{" "}
-                    <Hide below={"lg"}>
-                      <br />{" "}
-                    </Hide>
-                    marketplace. If you find a lower price,
-                    <Hide below={"lg"}>
-                      <br />
-                    </Hide>
-                    send us the offer, and we'll beat it.
-                  </Text>
-                </Box>
-
-                {/* 2nd Reason */}
-                <Box
-                  height={"250px"}
-                  px={"20px"}
-                  py={"20px"}
-                  pr={"40px"}
-                  bg={useColorModeValue("white", "#171923")}
-                  borderWidth={"1px"}
-                  borderColor={"#E4E4E4"}
-                  borderLeft={{ lg: 0 }}
-                  borderBottom={0}
-                >
-                  <HStack justify={"space-between"}>
-                    <Box
-                      w={"50px"}
-                      h={"50px"}
-                      borderRadius={"50px"}
-                      bgColor={"#F5F5F5"}
-                      display={"flex"}
-                      justifyContent={"center"}
-                      alignItems={"center"}
-                    >
-                      <Icon
-                        as={IoThumbsUp}
-                        boxSize={9}
-                        color={useColorModeValue("#1A202C", "#1A202C")}
-                      />
-                    </Box>
-                    <Box
-                      w={"30px"}
-                      h={"30px"}
-                      borderRadius={"20px"}
-                      color={"#F5F5F5"}
-                      display={"flex"}
-                      justifyContent={"center"}
-                      alignItems={"center"}
-                      fontSize={"40px"}
-                      fontWeight={"extrabold"}
-                    >
-                      02
-                    </Box>
-                  </HStack>
-                  <Heading mt={"20px"} fontSize={"l"} fontWeight={"extrabold"}>
-                    Guaranteed to Run
-                  </Heading>
-                  <Text mt={"20px"}>
-                    Our training courses are 100%{" "}
-                    <Hide below={"lg"}>
-                      <br />{" "}
-                    </Hide>
-                    guaranteed to run on dates provided,
-                    <Hide below={"lg"}>
-                      <br />
-                    </Hide>
-                    wether they are classroom, virtual, or In-house.
-                  </Text>
-                </Box>
-
-                {/* 3rd Reason */}
-                <Box
-                  height={"250px"}
-                  px={"20px"}
-                  py={"20px"}
-                  pr={"40px"}
-                  bg={useColorModeValue("white", "#171923")}
-                  borderWidth={"1px"}
-                  borderColor={"#E4E4E4"}
-                  borderLeft={{ lg: 0 }}
-                >
-                  <HStack justify={"space-between"}>
-                    <Box
-                      w={"50px"}
-                      h={"50px"}
-                      borderRadius={"50px"}
-                      bgColor={"#F5F5F5"}
-                      display={"flex"}
-                      justifyContent={"center"}
-                      alignItems={"center"}
-                    >
-                      <Icon
-                        as={GiStairsGoal}
-                        boxSize={9}
-                        color={useColorModeValue("#1A202C", "#1A202C")}
-                      />
-                    </Box>
-                    <Box
-                      w={"30px"}
-                      h={"30px"}
-                      borderRadius={"20px"}
-                      color={"#F5F5F5"}
-                      display={"flex"}
-                      justifyContent={"center"}
-                      alignItems={"center"}
-                      fontSize={"40px"}
-                      fontWeight={"extrabold"}
-                    >
-                      03
-                    </Box>
-                  </HStack>
-                  <Heading mt={"20px"} fontSize={"l"} fontWeight={"extrabold"}>
-                    Highly Experienced Staff
-                  </Heading>
-                  <Text mt={"20px"}>
-                    Our support staff and Instructors have{" "}
-                    <Hide below={"lg"}>
-                      <br />{" "}
-                    </Hide>
-                    years of experience In meeting the
-                    <Hide below={"lg"}>
-                      <br />
-                    </Hide>
-                    specific needs of our clients and{" "}
-                    <Hide below={"lg"}>
-                      <br />
-                    </Hide>{" "}
-                    delivering exceptional quality.
-                  </Text>
-                </Box>
-
-                {/* 4th Reason */}
-                <Box
-                  height={"250px"}
-                  px={"20px"}
-                  py={"20px"}
-                  pr={"40px"}
-                  bg={useColorModeValue("white", "#171923")}
-                  borderWidth={"1px"}
-                  borderColor={"#E4E4E4"}
-                  borderLeft={{ lg: 0 }}
-                >
-                  <HStack justify={"space-between"}>
-                    <Box
-                      w={"50px"}
-                      h={"50px"}
-                      borderRadius={"50px"}
-                      bgColor={"#F5F5F5"}
-                      display={"flex"}
-                      justifyContent={"center"}
-                      alignItems={"center"}
-                    >
-                      <Icon
-                        as={TbCertificate}
-                        boxSize={9}
-                        color={useColorModeValue("#1A202C", "#1A202C")}
-                      />
-                    </Box>
-                    <Box
-                      w={"30px"}
-                      h={"30px"}
-                      borderRadius={"20px"}
-                      color={"#F5F5F5"}
-                      display={"flex"}
-                      justifyContent={"center"}
-                      alignItems={"center"}
-                      fontSize={"40px"}
-                      fontWeight={"extrabold"}
-                    >
-                      04
-                    </Box>
-                  </HStack>
-                  <Heading mt={"20px"} fontSize={"l"} fontWeight={"extrabold"}>
-                    Award-Winning Training Material
-                  </Heading>
-                  <Text mt={"20px"}>
-                    Our training program are supported by our well researched,
-                    and high-quality course material that will assist the
-                    learners in gaining full knowledge into their desired
-                    subject matter.
-                  </Text>
-                </Box>
+                      {reason.title}
+                    </Heading>
+                    <Text color={"black"} mt={"20px"}>
+                      {reason.description}
+                    </Text>
+                  </Box>
+                ))}
               </SimpleGrid>
             </Box>
           </GridItem>
         </Grid>
       </FadeInView>
-    </VStack>
-  );
-};
+    </Stack>
+  )
+}
 
-export default ReasonsToChoose;
+export default ReasonsToChoose

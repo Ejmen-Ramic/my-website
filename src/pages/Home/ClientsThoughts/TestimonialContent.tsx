@@ -101,8 +101,10 @@ export default function WithSpeechBubbles() {
       <FadeInView>
         <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
           <Stack spacing={0} align={"center"}>
-            <Heading>Our Clients Speak</Heading>
-            <Text>We have been working with clients around the world</Text>
+            <Heading>Endorsement</Heading>
+            <Text textAlign={"center"}>
+              Recommendation from top employers in Malaysia and Bosnia
+            </Text>
           </Stack>
           <Stack
             direction={{ base: "column", md: "row" }}
@@ -118,8 +120,8 @@ export default function WithSpeechBubbles() {
               </TestimonialContent>
               <TestimonialAvatar
                 src={"./Website/Home/thumbnail2.jpg"}
-                name={"Maimul"}
-                title={"CEO"}
+                name={"Datuk Amer Bukvic"}
+                title={"Director at Islamic Development Bank (IsDB)"}
               />
             </Testimonial>
             <Testimonial>
@@ -132,8 +134,8 @@ export default function WithSpeechBubbles() {
               </TestimonialContent>
               <TestimonialAvatar
                 src={"./Website/Home/thumbnail2.jpg"}
-                name={"Ejmen Ramic"}
-                title={"CEO at ABC Corporation"}
+                name={"Halit Kayar"}
+                title={"Chief Technology Officer"}
               />
             </Testimonial>
             <Testimonial>

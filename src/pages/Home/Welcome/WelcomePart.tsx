@@ -14,6 +14,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import FadeInView from "../../../components/Hooks/FadeInView"
 
 const Welcome = () => {
   // const { t } = useTranslation(["home"])
@@ -60,101 +61,107 @@ const Welcome = () => {
         px={{ base: "40px", md: "70px", lg: "0px" }}
         zIndex={3}
       >
-        <Text
-          color={"white"}
-          fontSize={{ base: "", md: "2em", lg: "2em" }}
-          fontWeight={"800"}
-          lineHeight={"1em"}
-          textTransform={"uppercase"}
-        >
-          neversettle
-        </Text>
-        <Heading
-          color={"white"}
-          fontSize={{ base: "2em", md: "2em", lg: "4em" }}
-          fontWeight={"700"}
-          lineHeight={"1em"}
-          textTransform={"uppercase"}
-        >
-          Explore
-          <Box as={"span"} color={"red"}>
-            your
-          </Box>
-          <br />
-          limitless possibilities
-        </Heading>
-        <Text
-          color={"white"}
-          fontSize={{ md: "1.0em", lg: "1.1em" }}
-          fontWeight={"400"}
-          maxWidth={"700px"}
-        >
-          We build stunning websites and offer coding classes. Our talented team
-          crafts customized sites that captivate your audience. Whether you're a
-          beginner or experienced programmer, our classes enhance your coding
-          skills. Join us to thrive online and unlock endless digital
-          opportunities.
-        </Text>
-        <Tooltip>
-          <a href="/">
-            <Button
-              textTransform={"uppercase"}
-              borderRadius={"0px"}
-              color={"#051721"}
-              bgColor={"white"}
-              display={"inline-block"}
-              fontSize={"1em"}
-              padding={"10px 30px"}
-              fontWeight={"500"}
-              marginTop={"10px"}
-              letterSpacing={"2px"}
-              _hover={{ letterSpacing: "7px" }}
-              transition={"0.2s"}
-            >
-              Explore
-            </Button>
-          </a>
-        </Tooltip>
-        <HStack>
-          <Tooltip label="GitHub">
-            <a href="https://github.com/Ejmen-Ramic/">
+        <FadeInView direction={"left"} delay={0.1}>
+          <Text
+            color={"white"}
+            fontSize={{ base: "", md: "2em", lg: "2em" }}
+            fontWeight={"800"}
+            lineHeight={"1em"}
+            textTransform={"uppercase"}
+          >
+            neversettle
+          </Text>
+        </FadeInView>
+        <FadeInView direction={"left"} delay={0.2}>
+          <Heading
+            color={"white"}
+            fontSize={{ base: "2em", md: "2em", lg: "4em" }}
+            fontWeight={"700"}
+            lineHeight={"1em"}
+            textTransform={"uppercase"}
+          >
+            Explore{" "}
+            <Box as={"span"} color={"red"}>
+              my
+            </Box>
+            <br />
+            limitless possibilities
+          </Heading>
+        </FadeInView>
+        <FadeInView direction={"left"} delay={0.3}>
+          <Text
+            color={"white"}
+            fontSize={{ md: "1.0em", lg: "1.1em" }}
+            fontWeight={"400"}
+            maxWidth={"700px"}
+          >
+            Hi. My name is Ejmen. I'm a Full Stack engineer from Bosnia and
+            Herzegovina and this is my web portfolio. Here you can see my
+            capabilities and skills as a software engineer and a photographer.
+            Feel free to explore my website and my photo gallery.
+          </Text>
+        </FadeInView>
+        <FadeInView direction={"left"} delay={0.4}>
+          <Tooltip>
+            <a href="/">
               <Button
-                _hover={{ transform: "translateY(-10px)" }}
+                textTransform={"uppercase"}
+                borderRadius={"0px"}
+                color={"#051721"}
+                bgColor={"white"}
+                display={"inline-block"}
+                fontSize={"1em"}
+                padding={"10px 30px"}
+                fontWeight={"500"}
+                marginTop={"10px"}
+                letterSpacing={"2px"}
+                _hover={{ letterSpacing: "7px" }}
                 transition={"0.2s"}
               >
-                <FontAwesomeIcon icon={faGithub} />
+                Resume
               </Button>
             </a>
           </Tooltip>
-          <Tooltip label="LinkedIn">
-            <a href="https://www.linkedin.com/company/webxarkitect/">
-              <Button
-                _hover={{ transform: "translateY(-10px)" }}
-                transition={"0.2s"}
-                colorScheme={"linkedin"}
-              >
-                <FontAwesomeIcon icon={faLinkedin} />
-              </Button>
-            </a>
-          </Tooltip>
-          <Tooltip label="Instagram">
-            <a href="https://www.instagram.com/ejmenramic/">
-              <Button
-                _hover={{ transform: "translateY(-10px)" }}
-                transition={"0.2s"}
-                colorScheme={"purple"}
-              >
-                <FontAwesomeIcon icon={faInstagram} />
-              </Button>
-            </a>
-          </Tooltip>
-        </HStack>
+        </FadeInView>
+        <FadeInView direction={"left"} delay={0.5}>
+          <HStack>
+            <Tooltip label="GitHub">
+              <a href="https://github.com/Ejmen-Ramic/">
+                <Button
+                  _hover={{ transform: "translateY(-10px)" }}
+                  transition={"0.2s"}
+                >
+                  <FontAwesomeIcon icon={faGithub} />
+                </Button>
+              </a>
+            </Tooltip>
+            <Tooltip label="LinkedIn">
+              <a href="https://www.linkedin.com/company/webxarkitect/">
+                <Button
+                  _hover={{ transform: "translateY(-10px)" }}
+                  transition={"0.2s"}
+                  colorScheme={"linkedin"}
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </Button>
+              </a>
+            </Tooltip>
+            <Tooltip label="Instagram">
+              <a href="https://www.instagram.com/ejmenramic/">
+                <Button
+                  _hover={{ transform: "translateY(-10px)" }}
+                  transition={"0.2s"}
+                  colorScheme={"purple"}
+                >
+                  <FontAwesomeIcon icon={faInstagram} />
+                </Button>
+              </a>
+            </Tooltip>
+          </HStack>
+        </FadeInView>
       </VStack>
     </Box>
   )
 }
 
 export default Welcome
-// function useTranslation(arg0: string[]): { t: any } {
-//   throw new Error("Function not implemented.")
-// }

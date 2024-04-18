@@ -6,7 +6,6 @@ import {
   HStack,
   Show,
   useColorModeValue,
-  VStack,
 } from "@chakra-ui/react"
 import { useState } from "react"
 import HeaderMobile from "./HeaderMobile"
@@ -41,26 +40,24 @@ const Header = () => {
       top={0}
       // style={blurStyle}
     >
-      <HStack>
-        <VStack>
-          <Link to={"/"}>
-            <Heading
-              ml={{ base: "20px", md: "40px" }}
-              color={useColorModeValue("#2b333d", "white")}
-              fontSize={{ base: "20px", md: "35px" }}
-              fontFamily={"inherit"}
-              fontWeight={"400"}
-              textTransform={"uppercase"}
-              _hover={{
-                color: "white",
-                transition: "color 0.2s ease-in-out",
-              }}
-              cursor={"pointer"}
-            >
-              Ejmen Ramic
-            </Heading>
-          </Link>
-        </VStack>
+      <HStack w={"full"}>
+        <Link to={"/"}>
+          <Heading
+            ml={{ base: "20px", md: "40px" }}
+            color={useColorModeValue("#2b333d", "white")}
+            fontSize={{ base: "20px", md: "35px" }}
+            fontFamily={"inherit"}
+            fontWeight={"400"}
+            textTransform={"uppercase"}
+            _hover={{
+              color: "white",
+              transition: "color 0.2s ease-in-out",
+            }}
+            cursor={"pointer"}
+          >
+            Ejmen Ramic
+          </Heading>
+        </Link>
       </HStack>
       <Show above={"lg"}>
         <HStack
@@ -239,6 +236,3 @@ const Header = () => {
 }
 
 export default Header
-// function useTranslation(arg0: string[]): { i18n: any; t: any } {
-//   throw new Error("Function not implemented.")
-// }
