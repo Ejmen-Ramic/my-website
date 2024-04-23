@@ -4,7 +4,7 @@ import { BsFillInfoCircleFill, BsSpeedometer } from 'react-icons/bs'
 import { IoThumbsUp } from 'react-icons/io5'
 import { GiStairsGoal } from 'react-icons/gi'
 import { TbCertificate } from 'react-icons/tb'
-import FadeInView from '../../../components/Hooks/FadeInView'
+import FadeInView from '../../../shared/components/Hooks/FadeInView'
 
 // Define colors based on color mode
 const lightModeColor = 'white'

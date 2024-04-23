@@ -1,6 +1,6 @@
-import Header from "../../../components/Header/Header"
-import Footer from "../../../components/Footer/Footer"
-import BoxClass from "./BoxClass/BoxClass"
+import Header from '../../../shared/components/Header/Header'
+import Footer from '../../../shared/components/Footer/Footer'
+import BoxClass from './BoxClass/BoxClass'
 
 const Photography = () => {
   return (

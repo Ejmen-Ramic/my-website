@@ -1,19 +1,10 @@
-import {
-  Flex,
-  Text,
-  Icon,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  useColorModeValue,
-  chakra,
-} from "@chakra-ui/react"
-import { BiChevronDown } from "react-icons/bi"
+import { Flex, Text, Icon, Menu, MenuButton, MenuList, MenuItem, useColorModeValue, chakra } from '@chakra-ui/react'
+import { BiChevronDown } from 'react-icons/bi'
+import { IoCameraOutline } from 'react-icons/io5'
 
 const MenuContainerMobile = () => {
   return (
-    <Flex h={"full"}>
+    <Flex h={'full'}>
       <DropDownMenuMobile />
     </Flex>
   )
@@ -21,8 +12,8 @@ const MenuContainerMobile = () => {
 
 const dropdownLinks = [
   {
-    name: "Photography",
-    path: "/photography",
+    name: 'Photography',
+    path: '/photography',
   },
   // {
   //   name: "Become a Tutor",
@@ -31,40 +22,37 @@ const dropdownLinks = [
 ]
 
 const DropDownMenuMobile = () => {
-  const color = useColorModeValue("#2b333d", "white")
+  const color = useColorModeValue('#2b333d', 'white')
 
   return (
     <Menu autoSelect={false} isLazy>
       {({ isOpen, onClose }) => (
         <>
           <MenuButton
-            _hover={{ color: "#02bece" }}
-            fontWeight={"light"}
+            _hover={{ color: '#02bece' }}
+            fontWeight={'light'}
             color={color}
-            fontSize={"18px"}
-            fontFamily={"revert-layer"}
-            letterSpacing={"1px"}
-            ml={"59%"}
-            mb={"5px"}
+            fontSize={'18px'}
+            fontFamily={'revert-layer'}
+            letterSpacing={'1px'}
+            ml={'7%'}
+            mb={'5px'}
           >
-            <Flex alignItems="center">
+            <Flex alignItems={'center'}>
+              <IoCameraOutline size={33} style={{ marginRight: '12px' }} />
               <Text>Hobbies</Text>
+
               <Icon
                 as={BiChevronDown}
-                h={"100%"}
-                transition={"all .25s ease-in-out"}
-                transform={isOpen ? "rotate(180deg)" : ""}
+                h={'100%'}
+                transition={'all .25s ease-in-out'}
+                transform={isOpen ? 'rotate(180deg)' : ''}
               />
             </Flex>
           </MenuButton>
           <MenuList>
             {dropdownLinks.map((link, index) => (
-              <MenuLink
-                key={index}
-                name={link.name}
-                path={link.path}
-                onClose={onClose}
-              />
+              <MenuLink key={index} name={link.name} path={link.path} onClose={onClose} />
             ))}
           </MenuList>
         </>
@@ -84,8 +72,8 @@ const MenuLink = ({ name, path, onClose }: MenuLinkProps) => {
     <chakra.a href={path} onClick={() => onClose()}>
       <MenuItem
         _hover={{
-          color: "#02bece",
-          bg: useColorModeValue("gray.100", "gray.900"),
+          color: '#02bece',
+          bg: useColorModeValue('gray.100', 'gray.900'),
         }}
       >
         <Text>{name}</Text>

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import { Box, Flex, Heading, Text, Stack, Container, Avatar, useColorModeValue, VStack } from '@chakra-ui/react'
-import FadeInView from '../../../components/Hooks/FadeInView'
+import FadeInView from '../../../shared/components/Hooks/FadeInView'
 import items from './Props'
 
 const Testimonial = ({ children }: { children: ReactNode }) => {

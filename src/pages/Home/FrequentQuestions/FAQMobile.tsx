@@ -2,7 +2,7 @@ import { Accordion } from '@chakra-ui/react'
 import { FC } from 'react'
 import FAQItemBox from './FAQItemBox'
 import { FAQItem } from '.'
-import FadeInView from '../../../components/Hooks/FadeInView'
+import FadeInView from '../../../shared/components/Hooks/FadeInView'
 
 type Props = {
   items: FAQItem[]

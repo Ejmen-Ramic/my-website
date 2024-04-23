@@ -1,6 +1,6 @@
 import { Box, Button, Grid, GridItem, Heading, VStack, Text, HStack, Link, Stack, Center } from '@chakra-ui/react'
 import items from './Props'
-import FadeInView from '../../../components/Hooks/FadeInView'
+import FadeInView from '../../../shared/components/Hooks/FadeInView'
 
 const TechnicalExpertise: React.FC = () => {
   const zoomInStyles = {

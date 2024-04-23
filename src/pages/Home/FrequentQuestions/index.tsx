@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react'
 import FAQDesktop from './FAQDesktop'
 import FAQMobile from './FAQMobile'
 import { Heading, VStack, Text, useBreakpointValue, Box } from '@chakra-ui/react'
-import FadeInView from '../../../components/Hooks/FadeInView'
+import FadeInView from '../../../shared/components/Hooks/FadeInView'
 
 export type FAQItem = {
   title: ReactNode

@@ -1,10 +1,10 @@
-import React from "react"
-import Header from "../../components/Header/Header"
-import Footer from "../../components/Footer/Footer"
+import React from 'react'
+import Header from '../../shared/components/Header/Header'
+import Footer from '../../shared/components/Footer/Footer'
 
-import MakeMoney from "./MakeMoney/MakeMoney"
-import JoinOurTeam from "./JoinOurTeam/JoinOurTeam"
-import WorkersTestimonial from "./WorkersReview/WorkersTestimonial"
+import MakeMoney from './MakeMoney/MakeMoney'
+import JoinOurTeam from './JoinOurTeam/JoinOurTeam'
+import WorkersTestimonial from './WorkersReview/WorkersTestimonial'
 
 const Hobbies: React.FC<{}> = () => {
   return (
