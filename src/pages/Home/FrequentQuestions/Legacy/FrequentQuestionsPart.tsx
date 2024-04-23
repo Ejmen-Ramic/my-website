@@ -10,8 +10,8 @@ import {
   AccordionPanel,
   Grid,
   GridItem,
-} from "@chakra-ui/react";
-import FadeInView from "../../../../components/Hooks/FadeInView";
+} from "@chakra-ui/react"
+import FadeInView from "../../../../components/Hooks/FadeInView"
 
 const FrequentQuestions = () => {
   return (
@@ -26,8 +26,8 @@ const FrequentQuestions = () => {
         >
           <Heading>Frequently Asked Questions </Heading>
           <Text>
-            The following list of frequently asked questions by our clients may
-            also assist you in getting your questions answered:
+            The following list of frequently asked questions by employers that
+            may also assist you in getting your questions answered:
           </Text>
           <Grid
             templateColumns={["1fr", "1fr", "1fr", "1fr 1fr "]}
@@ -315,7 +315,7 @@ const FrequentQuestions = () => {
         </VStack>
       </FadeInView>
     </>
-  );
-};
+  )
+}
 
-export default FrequentQuestions;
+export default FrequentQuestions

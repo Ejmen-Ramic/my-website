@@ -9,9 +9,9 @@ import {
   SiWordpress,
   SiPlaywright,
   SiMongodb,
-  SiAdobephotoshop,
-  SiAdobelightroom,
-  SiFigma,
+  // SiAdobephotoshop,
+  // SiAdobelightroom,
+  // SiFigma,
 } from "react-icons/si"
 
 export type CTLProps = {

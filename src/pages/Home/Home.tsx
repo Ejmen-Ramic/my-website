@@ -1,20 +1,20 @@
-import React from "react"
-import Header from "../../components/Header/Header"
-import Footer from "../../components/Footer/Footer"
-import Welcome from "./Welcome/WelcomePart"
-import ChooseToLearn from "./TechnicalExpertise./TechnicalExpertise"
-import ReasonsToChoose from "./Reasons_To_Choose_Us/ReasonsToChoose"
+import React from 'react'
+import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer'
+import Welcome from './Welcome/WelcomePart'
+import ChooseToLearn from './TechnicalExpertise./TechnicalExpertise'
+import ReasonsToChoose from './Reasons_To_Choose_Us/ReasonsToChoose'
 // import DeliveryMethods from "./DeliveryMethods/DeliveryMethods"
 // import CareerBenefits from "./Career_Benefits/CareerBenefits"
-import TestimonialContent from "./ClientsThoughts/TestimonialContent"
-import HostFAQ from "./FrequentQuestions"
-import { VStack } from "@chakra-ui/react"
+import TestimonialContent from './ClientsThoughts/TestimonialContent'
+import HostFAQ from './FrequentQuestions'
+import { VStack } from '@chakra-ui/react'
 
 const Home: React.FC<{}> = () => {
   return (
     <>
       <Header />
-      <VStack spacing={{ base: "70px", lg: "250px" }} w={"full"}>
+      <VStack spacing={'0px'} w={'full'}>
         <Welcome />
         <ChooseToLearn />
         <ReasonsToChoose />
