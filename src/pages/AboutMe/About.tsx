@@ -1,7 +1,6 @@
 import React from 'react'
 import OurProgress from './OurProgress/OurProgress'
 import TestimonialEjmen from './Testimonial/TestimonialEjmen'
-import TestimonialMaimul from './Testimonial/TestimonialMaimul'
 import Milestones from './Milestone/Milestone'
 import Header from '../../shared/components/Header/Header'
 import Footer from '../../shared/components/Footer/Footer'
@@ -16,7 +15,6 @@ const About: React.FC = () => {
         <AboutIntro />
         <OurProgress />
         <TestimonialEjmen />
-        <TestimonialMaimul />
         <Milestones />
         {/* <AboutCarousel /> */}
       </VStack>

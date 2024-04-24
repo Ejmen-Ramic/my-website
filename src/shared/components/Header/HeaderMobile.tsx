@@ -12,6 +12,8 @@ import {
   useColorModeValue,
   Show,
   Hide,
+  Text,
+  Flex,
 } from '@chakra-ui/react'
 import IconBurger from '../../icons/IconBurger'
 import IconBurgerMobile from '../../icons/IconBurgerMobile'
@@ -23,8 +25,8 @@ import { IconType } from 'react-icons'
 const HeaderMobile = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const color = useColorModeValue('#2b333d', 'white')
+  const year = new Date().getFullYear()
 
-  // Define the menu items array with explicit type annotations
   const menuItems: (MenuItemLink | React.ReactElement)[] = [
     { label: 'Home', icon: IoHomeOutline, to: '/' },
     { label: 'Portfolio', icon: IoBriefcaseOutline, to: '/portfolio' },
@@ -42,49 +44,56 @@ const HeaderMobile = () => {
             <IconBurger size={'30px'} />
           </Hide>
           <Show below={'md'}>
-            <IconBurgerMobile size={'20px'} />
+            <Box as={IconBurgerMobile} size='20px' _hover={{ color: '#02bece' }} />
           </Show>
         </Button>
       </Box>
       <Drawer isOpen={isOpen} placement={'left'} onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent backgroundColor={useColorModeValue('white', '#2b333d')}>
-          <DrawerCloseButton size={'20px'} color={useColorModeValue('#2b333d', 'white')} mt={'17px'} mr={'20px'} />
-          <DrawerHeader
+          <DrawerCloseButton
+            size={'20px'}
             color={useColorModeValue('#2b333d', 'white')}
-            fontSize={'25px'}
-            fontFamily={''}
-            letterSpacing={'2px'}
-          >
+            mt={'20px'}
+            mr={'20px'}
+            _hover={{ color: '#02bece' }}
+          />
+          <DrawerHeader color={useColorModeValue('#2b333d', 'white')} fontSize={'25px'} letterSpacing={'2px'}>
             Main Menu
           </DrawerHeader>
           <DrawerBody>
-            <Stack>
-              {menuItems.map((item, index) => (
-                <Box key={index} transition={'all 0.1s ease-in-out'}>
-                  {isMenuItemLink(item) ? (
-                    <Link to={item.to}>
-                      <Button
-                        variant={'link'}
-                        border={'none'}
-                        _hover={{ color: '#02bece' }}
-                        color={color}
-                        fontWeight={'light'}
-                        fontSize={'18px'}
-                        letterSpacing={'1px'}
-                        textTransform={'capitalize'}
-                        ml={'7.5%'}
-                      >
-                        {item.icon && <item.icon size={30} style={{ marginRight: '12px' }} />}
-                        {item.label}
-                      </Button>
-                    </Link>
-                  ) : (
-                    item
-                  )}
-                </Box>
-              ))}
-            </Stack>
+            <Flex direction={'column'} h={'full'}>
+              <Stack>
+                {menuItems.map((item, index) => (
+                  <Box key={index} transition={'all 0.1s ease-in-out'}>
+                    {isMenuItemLink(item) ? (
+                      <Link to={item.to}>
+                        <Button
+                          variant={'link'}
+                          border={'none'}
+                          _hover={{ color: '#02bece' }}
+                          color={color}
+                          fontWeight={'light'}
+                          fontSize={'18px'}
+                          letterSpacing={'1px'}
+                          textTransform={'capitalize'}
+                          ml={'7.5%'}
+                        >
+                          {item.icon && <item.icon size={30} style={{ marginRight: '12px' }} />}
+                          {item.label}
+                        </Button>
+                      </Link>
+                    ) : (
+                      item
+                    )}
+                  </Box>
+                ))}
+              </Stack>
+
+              <Text mt={'auto'} bottom={'0'} fontSize={'sm'} mb={'40px'}>
+                Copyright ©{year} EjmenRamic. All rights reserved.
+              </Text>
+            </Flex>
           </DrawerBody>
         </DrawerContent>
       </Drawer>

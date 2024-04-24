@@ -41,7 +41,6 @@ const SocialButton = ({
   children,
   label,
   href,
-  color,
   hoverColor,
 }: {
   children: ReactNode
@@ -136,7 +135,7 @@ const Footer = () => {
               </Text>
             </FadeInView>
             <FadeInView delay={0.1}>
-              <Text fontSize={'sm'}>© {year} EjmenRamic. All rights reserved</Text>
+              <Text fontSize={'sm'}>Copyright ©{year} EjmenRamic. All rights reserved</Text>
             </FadeInView>
             <FadeInView delay={0.1}>
               <Stack direction={'row'} spacing={6}>
@@ -218,7 +217,7 @@ const Footer = () => {
                   color={useColorModeValue('#02bece', '#02bece')}
                   _hover={{ color: useColorModeValue('#2b333d', 'white') }}
                   _expanded={{ color: useColorModeValue('#2b333d', 'white') }}
-                  fontWeight={'light'}
+                  fontWeight={400}
                   fontSize={'16px'}
                   textTransform={'capitalize'}
                 >

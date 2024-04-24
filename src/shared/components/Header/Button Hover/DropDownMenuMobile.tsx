@@ -10,6 +10,28 @@ const MenuContainerMobile = () => {
   )
 }
 
+interface MenuLinkProps {
+  name: string
+  path: string
+  onClose: () => void
+}
+
+const MenuLink = ({ name, path, onClose }: MenuLinkProps) => {
+  return (
+    <chakra.a href={path} onClick={() => onClose()}>
+      <MenuItem
+        fontSize={'16px'}
+        letterSpacing={'1px'}
+        _hover={{
+          color: '#02bece',
+          bg: useColorModeValue('gray.100', 'gray.900'),
+        }}
+      >
+        <Text>{name}</Text>
+      </MenuItem>
+    </chakra.a>
+  )
+}
 const dropdownLinks = [
   {
     name: 'Photography',
@@ -50,7 +72,7 @@ const DropDownMenuMobile = () => {
               />
             </Flex>
           </MenuButton>
-          <MenuList>
+          <MenuList fontSize={''}>
             {dropdownLinks.map((link, index) => (
               <MenuLink key={index} name={link.name} path={link.path} onClose={onClose} />
             ))}
@@ -58,27 +80,6 @@ const DropDownMenuMobile = () => {
         </>
       )}
     </Menu>
-  )
-}
-
-interface MenuLinkProps {
-  name: string
-  path: string
-  onClose: () => void
-}
-
-const MenuLink = ({ name, path, onClose }: MenuLinkProps) => {
-  return (
-    <chakra.a href={path} onClick={() => onClose()}>
-      <MenuItem
-        _hover={{
-          color: '#02bece',
-          bg: useColorModeValue('gray.100', 'gray.900'),
-        }}
-      >
-        <Text>{name}</Text>
-      </MenuItem>
-    </chakra.a>
   )
 }
 
