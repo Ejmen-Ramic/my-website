@@ -1,0 +1,45 @@
+import { Box, Heading, Input, Button, useColorModeValue } from '@chakra-ui/react'
+
+const HeaderForm = () => {
+  return (
+    <Box mt={'auto'} bottom={0}>
+      <Heading fontSize={'20px'} pb={'15px'}>
+        Stay up to date
+      </Heading>
+      <form action={'#'}>
+        <Box position={'relative'}>
+          <Input
+            type={'email'}
+            isRequired
+            name={'entry.1808449400'}
+            px={'25px'}
+            height={'50px'}
+            rounded={'17px'}
+            _placeholder={{ color: 'gray.300' }}
+            placeholder={'Enter your email'}
+            _focus={{ outline: 0, bg: 'whiteAlpha.400' }}
+            color={'gray.100'}
+            bg={useColorModeValue('blackAlpha.100', 'gray.600')}
+            borderWidth={0}
+          />
+          <Button
+            type={'submit'}
+            height={'50px'}
+            color={useColorModeValue('white', 'gray.100')}
+            bg={useColorModeValue('green.400', 'gray.700')}
+            _hover={{ bg: 'yellow.400', color: 'gray.900' }}
+            position={'absolute'}
+            top={'0'}
+            right={'0'}
+            rounded={'17px'}
+            px={'20px'}
+          >
+            Subscribe
+          </Button>
+        </Box>
+      </form>
+    </Box>
+  )
+}
+
+export default HeaderForm

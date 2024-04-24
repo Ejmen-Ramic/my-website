@@ -1,4 +1,4 @@
-import Header from '../../shared/components/Header/Header'
+import Header from '../../shared/components/Header'
 import Footer from '../../shared/components/Footer/Footer'
 
 import { Box, Button, Center, Flex, Heading, Text, VStack } from '@chakra-ui/react'

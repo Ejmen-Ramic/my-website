@@ -1,6 +1,6 @@
 import { Box, Heading, Text, Button, VStack } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-import Header from '../../shared/components/Header/Header'
+import Header from '../../shared/components/Header'
 import Footer from '../../shared/components/Footer/Footer'
 
 const NotFound = () => {

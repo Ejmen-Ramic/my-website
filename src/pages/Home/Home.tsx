@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../../shared/components/Header/Header'
+import Header from '../../shared/components/Header'
 import Footer from '../../shared/components/Footer/Footer'
 import Welcome from './Welcome/WelcomePart'
 import ChooseToLearn from './TechnicalExpertise./TechnicalExpertise'

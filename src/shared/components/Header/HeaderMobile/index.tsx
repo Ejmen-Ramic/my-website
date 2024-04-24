@@ -15,18 +15,28 @@ import {
   Text,
   Flex,
 } from '@chakra-ui/react'
-import IconBurger from '../../icons/IconBurger'
-import IconBurgerMobile from '../../icons/IconBurgerMobile'
+import IconBurger from '../../../icons/IconBurger'
+import IconBurgerMobile from '../../../icons/IconBurgerMobile'
 import { Link } from 'react-router-dom'
 import { IoBriefcaseOutline, IoHomeOutline, IoPersonOutline, IoFileTrayFullOutline, IoCodeSlash } from 'react-icons/io5'
-import MenuContainerMobile from './Button Hover/DropDownMenuMobile'
+import MenuContainerMobile from '../ButtonHover/DropDownMenuMobile'
 import { IconType } from 'react-icons'
+import HeaderForm from './Form'
+
+type MenuItemLink = {
+  label: string
+  icon?: IconType
+  to: string
+}
 
 const HeaderMobile = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const color = useColorModeValue('#2b333d', 'white')
   const year = new Date().getFullYear()
 
+  const isMenuItemLink = (item: any): item is MenuItemLink => {
+    return (item as MenuItemLink).to !== undefined
+  }
   const menuItems: (MenuItemLink | React.ReactElement)[] = [
     { label: 'Home', icon: IoHomeOutline, to: '/' },
     { label: 'Portfolio', icon: IoBriefcaseOutline, to: '/portfolio' },
@@ -89,8 +99,8 @@ const HeaderMobile = () => {
                   </Box>
                 ))}
               </Stack>
-
-              <Text mt={'auto'} bottom={'0'} fontSize={'sm'} mb={'40px'}>
+              <HeaderForm />
+              <Text bottom={'0'} fontSize={'sm'} mb={'40px'} mt={'40px'}>
                 Copyright ©{year} EjmenRamic. All rights reserved.
               </Text>
             </Flex>
@@ -102,15 +112,3 @@ const HeaderMobile = () => {
 }
 
 export default HeaderMobile
-
-// Type for menu item with link
-interface MenuItemLink {
-  label: string
-  icon?: IconType
-  to: string
-}
-
-// Function to check if an item is a MenuItemLink
-const isMenuItemLink = (item: any): item is MenuItemLink => {
-  return (item as MenuItemLink).to !== undefined
-}
