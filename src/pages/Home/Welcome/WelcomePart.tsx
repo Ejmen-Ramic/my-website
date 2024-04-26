@@ -71,9 +71,9 @@ const Welcome = () => {
         </FadeInView>
         <FadeInView direction={'left'} delay={0.3}>
           <Text color={'white'} fontSize={{ md: '1.0em', lg: '1.1em' }} fontWeight={'400'} maxWidth={'700px'}>
-            Hi. My name is Ejmen. I'm a Full Stack engineer from Bosnia and Herzegovina and this is my web portfolio.
-            Here you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore
-            my website and my photo gallery.
+            Hi. My name is Ejmen. I'm a Full Stack engineer from Bosnia and Herzegovina and this is my web resume. Here
+            you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore my
+            website and my photo gallery.
           </Text>
         </FadeInView>
         <FadeInView direction={'left'} delay={0.4}>

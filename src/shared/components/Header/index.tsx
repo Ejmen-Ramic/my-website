@@ -18,7 +18,7 @@ const Header = () => {
   // }
 
   const [homeHovered, setHomeHovered] = useState(false)
-  const [portfolioHovered, setPortfolioHovered] = useState(false)
+  const [resumeHovered, setResumeHovered] = useState(false)
   const [hobbiesHovered, setHobbiesHovered] = useState(false)
   const [aboutHovered, setAboutHovered] = useState(false)
   const [contactHovered, setContactHovered] = useState(false)
@@ -83,15 +83,15 @@ const Header = () => {
               </Button>
             </Box>
           </Link>
-          <Link to={'/portfolio'}>
+          <Link to={'/resume'}>
             <Box
               h={'100%'}
-              borderColor={portfolioHovered ? '#02bece' : '#2b333d'}
-              borderTopWidth={portfolioHovered ? '8px' : '0px'}
+              borderColor={resumeHovered ? '#02bece' : '#2b333d'}
+              borderTopWidth={resumeHovered ? '8px' : '0px'}
               borderTopColor='#02bece'
               transition='all 0.1s ease-in-out'
-              onMouseEnter={() => setPortfolioHovered(true)}
-              onMouseLeave={() => setPortfolioHovered(false)}
+              onMouseEnter={() => setResumeHovered(true)}
+              onMouseLeave={() => setResumeHovered(false)}
               overflow='hidden'
               justifyItems={'center'}
               boxSizing='border-box'
@@ -109,7 +109,7 @@ const Header = () => {
                 pr={'10px'}
                 p={'50px'}
               >
-                Portfolio
+                Resume
               </Button>
             </Box>
           </Link>

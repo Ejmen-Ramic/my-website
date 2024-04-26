@@ -108,7 +108,7 @@ const Footer = () => {
                 color={useColorModeValue('#2b333d', 'white')}
               >
                 Welcome to my website! I am a software engineer and photographer based in Bosnia and Herzegovina. Feel
-                free to view my portfolio and work. <br /> <br />
+                free to view my resume and work. <br /> <br />
                 Powered by {''}
                 <Link href='https://react.dev/' isExternal>
                   <Box as='span' color='#02bece'>
@@ -204,7 +204,7 @@ const Footer = () => {
                 _hover={{ color: useColorModeValue('#2b333d', 'white') }}
                 fontSize={'16px'}
               >
-                Portfolio
+                Resume
               </Link>
             </FadeInView>
             <FadeInView delay={0.1}>

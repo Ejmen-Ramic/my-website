@@ -4,7 +4,6 @@ import { extendTheme, ChakraProvider } from '@chakra-ui/react'
 import ScrollToTopButton from './shared/components/Back-To-Top/BackToTopButton'
 import About from './pages/AboutMe/index'
 import HomePage from './pages/Home'
-import Portfolio from './pages/Portfolio/Portfolio'
 import Contact from './pages/Contacts/Contact'
 import NotFound from './pages/NotFound/NotFound'
 import Test from './pages/test'
@@ -13,6 +12,7 @@ import SignUp from './pages/Account/SignUp/SignUp'
 import ForgotPassword from './pages/Account/Password/ForgotPassword'
 import Hobbies from './pages/Hobbies'
 import Photography from './pages/Hobbies/PhotographyPage/Photography'
+import Resume from './pages/Resume'
 // import NotFound from "./pages/Not Found/NewNotFound";
 
 const breakpoints = {
@@ -53,13 +53,12 @@ const App: React.FC = () => {
           <Route path='/about' element={<About />} />
           <Route path='/hobbies' element={<Hobbies />} />
           <Route path='/photography' element={<Photography />} />
-          <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/resume' element={<Resume />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/test' element={<Test />} />
           <Route path='/signin' element={<SignIn />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/passwordreset' element={<ForgotPassword />} />
-
           <Route path='*' element={<NotFound />} />
         </Routes>
         <ScrollToTopButton />
