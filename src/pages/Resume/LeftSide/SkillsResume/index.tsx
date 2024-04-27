@@ -2,6 +2,7 @@ import { VStack, Box, Heading } from '@chakra-ui/react'
 import ProgrammingTable from './ProgrammingTable'
 import ToolsTable from './ToolsTable'
 import OSTable from './OSTable'
+import LanguageProficiency from './LanguageProficiency'
 
 const SkillsResume = () => {
   return (
@@ -14,6 +15,7 @@ const SkillsResume = () => {
         <ProgrammingTable />
         <ToolsTable />
         <OSTable />
+        <LanguageProficiency />
       </VStack>
     </VStack>
   )
