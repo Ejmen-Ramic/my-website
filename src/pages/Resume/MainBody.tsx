@@ -23,10 +23,10 @@ const MainBody = () => {
       </HStack>
       <Stack w={'full'} h={'1000px'} borderWidth={'1px'} borderColor={'black'} bgColor={'white'} spacing={'0px'}>
         <VStack bgColor={'#0b3948'} w={'full'} px={'25px'} py={'24px'} alignItems={'start'}>
-          <Heading color={'white'} fontWeight={700} fontSize={'25px'}>
+          <Heading color={'#ECEFF4'} fontWeight={700} fontSize={'25px'}>
             Ejmen Ramic
           </Heading>
-          <Text color={'white'} fontWeight={600} fontSize={'15px'}>
+          <Text color={'white'} fontWeight={600} fontSize={'12px'}>
             Programming Enthusiast. Software & Quality Assurance Engineer.
           </Text>
         </VStack>

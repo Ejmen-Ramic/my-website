@@ -31,7 +31,7 @@ export const resumeItems: ContactResume[] = [
   },
   {
     icon: IoCameraOutline,
-    socialMedia: 'LinkedIn',
+    socialMedia: 'Photography by Ejmen Ramic',
     //TODO: Add link here when its pushed to production
     link: '',
   },
