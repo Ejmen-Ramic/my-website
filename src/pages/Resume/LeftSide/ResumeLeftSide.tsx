@@ -2,7 +2,7 @@ import React from 'react'
 import { VStack, Box, Heading, Button } from '@chakra-ui/react'
 import { IoMailOutline } from 'react-icons/io5'
 import { resumeItems } from './items'
-import SkillsResume from './SkillsResume/SkillsResume'
+import SkillsResume from './SkillsResume'
 
 const ResumeLeftSide = () => {
   const handleContactClick = (link: string) => {

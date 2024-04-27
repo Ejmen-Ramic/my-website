@@ -1,5 +1,7 @@
 import { VStack, Box, Heading } from '@chakra-ui/react'
-import SkillsTable from './SkillsTable'
+import ProgrammingTable from './ProgrammingTable'
+import ToolsTable from './ToolsTable'
+import OSTable from './OSTable'
 
 const SkillsResume = () => {
   return (
@@ -8,9 +10,10 @@ const SkillsResume = () => {
         Skills
       </Heading>
       <Box bgColor={'#ECEFF4'} height={'2px'} w={'full'}></Box>
-      <VStack w={'full'} spacing={'0px'} alignItems={'start'}>
-        {/* Add the table here */}
-        <SkillsTable />
+      <VStack w={'full'} spacing={'20px'} alignItems={'start'}>
+        <ProgrammingTable />
+        <ToolsTable />
+        <OSTable />
       </VStack>
     </VStack>
   )

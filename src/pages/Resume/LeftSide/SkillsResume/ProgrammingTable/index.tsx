@@ -60,7 +60,7 @@ const getItems = () => {
   return items
 }
 
-const SkillsTable: FC = () => {
+const ProgrammingTable: FC = () => {
   const columnWidth = useBreakpointValue({ base: '0px', md: '0px' })
   const headers = useBreakpointValue({
     base: [
@@ -121,4 +121,4 @@ const SkillsTable: FC = () => {
   )
 }
 
-export default SkillsTable
+export default ProgrammingTable
