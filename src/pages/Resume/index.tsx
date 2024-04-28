@@ -13,7 +13,7 @@ const Resume: React.FC<{}> = () => {
       <Header />
       <Center w={'full'}>
         <VStack maxW={'800px'} w={'full'} my={{ base: '30px', lg: '50px' }}>
-          <Stack w={'full'}>
+          <Stack w={'full'} spacing={'0px'}>
             <HStack w={'full'} h={'70px'} justify={'space-between'}>
               <Button variant={'ghost'} color={'#98bed5'}>
                 <GrLanguage style={{ marginRight: '10px' }} />
@@ -29,17 +29,20 @@ const Resume: React.FC<{}> = () => {
                 </Button>
               </HStack>
             </HStack>
-            <Stack w={'full'} h={'1000px'} borderWidth={'1px'} borderColor={'black'} bgColor={'white'} spacing={'0px'}>
-              <VStack bgColor={'#0b3948'} w={'full'} px={'25px'} py={'24px'} alignItems={'start'}>
-                <Heading color={'#ECEFF4'} fontWeight={700} fontSize={'25px'} textTransform={'uppercase'}>
-                  Ejmen Ramic
-                </Heading>
-                <Text color={'white'} fontWeight={600} fontSize={'12px'}>
-                  Programming Enthusiast. Software & Quality Assurance Engineer.
-                </Text>
-              </VStack>
-              {/* Main Section */}
-              <Stack direction={{ base: 'column', lg: 'row' }} w={'full'} h={'full'} spacing={'0px'}>
+
+            {/* Header */}
+            <VStack bgColor={'#0b3948'} w={'full'} px={'25px'} py={'24px'} alignItems={'start'}>
+              <Heading color={'#ECEFF4'} fontWeight={700} fontSize={'25px'} textTransform={'uppercase'}>
+                Ejmen Ramic
+              </Heading>
+              <Text color={'white'} fontWeight={600} fontSize={'12px'}>
+                Programming Enthusiast. Software & Quality Assurance Engineer.
+              </Text>
+            </VStack>
+
+            {/* Main Section */}
+            <Stack w={'full'} h={'auto'} spacing={'0px'}>
+              <Stack direction={{ base: 'column', md: 'row' }} w={'full'} h={'auto'} spacing={'0px'}>
                 {/* Left Side */}
                 <ResumeLeftSide />
 
@@ -47,7 +50,7 @@ const Resume: React.FC<{}> = () => {
                 <ResumeRightSide />
               </Stack>
             </Stack>
-          </Stack>{' '}
+          </Stack>
         </VStack>
       </Center>
       <Footer />

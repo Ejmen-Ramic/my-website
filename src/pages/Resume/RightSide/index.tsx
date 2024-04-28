@@ -8,7 +8,7 @@ const ResumeRightSide = () => {
   return (
     <VStack
       w={'full'}
-      h={'full'}
+      maxH={'full'}
       spacing={'40px'}
       bgColor={'#1b1b1b'}
       alignItems={'start'}

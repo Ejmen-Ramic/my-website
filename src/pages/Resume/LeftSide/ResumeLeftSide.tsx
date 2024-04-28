@@ -13,7 +13,7 @@ const ResumeLeftSide = () => {
     <VStack
       w={'full'}
       maxW={{ lg: '267px' }}
-      h={'full'}
+      maxH={'full'}
       bgColor={'#232b2e'}
       alignItems={'start'}
       px={{ lg: '18px' }}

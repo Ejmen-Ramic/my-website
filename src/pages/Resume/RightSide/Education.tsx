@@ -43,7 +43,7 @@ const Education = () => {
           <Box as={'span'} pr={'9px'}>
             •
           </Box>
-          Awarded
+          Awarded{' '}
           <Box as={'span'} color={'#98bed5'} fontWeight={'bold'}>
             Academic Excellence Diploma (2020/2021)
           </Box>
@@ -51,7 +51,7 @@ const Education = () => {
           <Box as={'span'} pr={'9px'}>
             •
           </Box>
-          Awarded
+          Awarded{' '}
           <Box as={'span'} color={'#98bed5'} fontWeight={'bold'}>
             Academic Merit Diploma (2021/2022)
           </Box>

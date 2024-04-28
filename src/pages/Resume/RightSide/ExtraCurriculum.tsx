@@ -1,4 +1,4 @@
-import { VStack, Box, Heading, HStack, Text, Button } from '@chakra-ui/react'
+import { VStack, Box, Heading, HStack, Text } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 import { FaLink, FaRunning, FaShapes } from 'react-icons/fa'
 
@@ -24,7 +24,7 @@ const ExtraCurriculum = () => {
       <HStack w={'full'} spacing={'10px'}>
         <FaShapes size={'18px'} />
         <Heading textTransform={'uppercase'} lineHeight={'12px'} fontSize={'18px'} color={'#ECEFF4'}>
-          Extra Corriculum
+          Extra Curriculum
         </Heading>
       </HStack>
 
