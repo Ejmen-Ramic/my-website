@@ -2,6 +2,7 @@ import { VStack } from '@chakra-ui/react'
 import Education from './Education'
 import ProExperience from './ProExperience'
 import Projects from './Projects'
+import ExtraCurriculum from './ExtraCurriculum'
 
 const ResumeRightSide = () => {
   return (
@@ -17,6 +18,7 @@ const ResumeRightSide = () => {
       <Education />
       <ProExperience />
       <Projects />
+      <ExtraCurriculum />
     </VStack>
   )
 }
