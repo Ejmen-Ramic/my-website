@@ -1,8 +1,7 @@
 import { VStack } from '@chakra-ui/react'
 import Education from './Education'
 import ProExperience from './ProExperience'
-
-// import { FaBriefcase, FaPaintBrush } from 'react-icons/fa'
+import Projects from './Projects'
 
 const ResumeRightSide = () => {
   return (
@@ -17,6 +16,7 @@ const ResumeRightSide = () => {
     >
       <Education />
       <ProExperience />
+      <Projects />
     </VStack>
   )
 }
