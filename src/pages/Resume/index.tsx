@@ -12,7 +12,7 @@ const Resume: React.FC<{}> = () => {
     <Stack w={'full'} spacing={'0px'}>
       <Header />
       <Center w={'full'}>
-        <VStack maxW={'800px'} w={'full'} my={{ md: '5px', lg: '50px' }}>
+        <VStack maxW={'800px'} w={'full'} my={{ md: '5px', lg: '50px' }} mb={{ lg: '100px' }}>
           <Stack w={'full'} spacing={'0px'} px={{ md: '20px', lg: '0px' }} mb={{ md: '30px', lg: '0px' }}>
             <HStack w={'full'} h={'70px'} justify={'space-between'}>
               <Button variant={'ghost'} color={'#98bed5'}>
