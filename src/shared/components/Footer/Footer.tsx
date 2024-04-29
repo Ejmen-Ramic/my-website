@@ -94,7 +94,7 @@ const Footer = () => {
       left={'0'}
       right={'0'}
     >
-      <Container as={Stack} py={10} maxW={'6xl'} align='center'>
+      <Container as={Stack} py={10} px={{ md: '40px', lg: '0px' }} maxW={'6xl'} align='center'>
         <SimpleGrid templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 2fr' }} spacing={20}>
           <Stack spacing={6}>
             <Box>

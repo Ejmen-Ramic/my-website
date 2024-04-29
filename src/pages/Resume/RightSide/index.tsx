@@ -1,7 +1,7 @@
 import { VStack } from '@chakra-ui/react'
 import Education from './Education'
 import ProExperience from './ProExperience'
-import Projects from './Projects'
+import Projects from './ProjectResume'
 import ExtraCurriculum from './ExtraCurriculum'
 
 const ResumeRightSide = () => {
@@ -12,8 +12,9 @@ const ResumeRightSide = () => {
       spacing={'40px'}
       bgColor={'#1b1b1b'}
       alignItems={'start'}
-      px={{ lg: '28px' }}
-      py={{ lg: '31px' }}
+      px={{ base: '25px', md: '20px', lg: '28px' }}
+      py={{ base: '25px', md: '11px', lg: '31px' }}
+      pb={'40px'}
     >
       <Education />
       <ProExperience />

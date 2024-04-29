@@ -26,8 +26,8 @@ const LanguageProficiency = () => {
       <Heading textTransform={'capitalize'} fontSize={'14px'} color={'#98BED5'}>
         Languages
       </Heading>
-      {languages.map(({ language, level }) => (
-        <HStack key={language} w={'full'} justify={'space-between'}>
+      {languages.map(({ language, level }, i) => (
+        <HStack key={i} w={'full'} justify={'space-between'}>
           <Heading fontSize={'12px'} fontWeight={600} color={'#ECEFF4'}>
             {language}
           </Heading>

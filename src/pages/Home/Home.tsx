@@ -3,7 +3,7 @@ import Header from '../../shared/components/Header'
 import Footer from '../../shared/components/Footer/Footer'
 import Welcome from './Welcome/WelcomePart'
 import ChooseToLearn from './TechnicalExpertise./TechnicalExpertise'
-import ReasonsToChoose from './Reasons_To_Choose_Us/ReasonsToChoose'
+import ReasonsToChoose from './ReasonsToCount/ReasonsToChoose'
 // import DeliveryMethods from "./DeliveryMethods/DeliveryMethods"
 // import CareerBenefits from "./Career_Benefits/CareerBenefits"
 import TestimonialContent from './ClientsThoughts/TestimonialContent'

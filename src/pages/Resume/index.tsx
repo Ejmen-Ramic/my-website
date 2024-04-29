@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../shared/components/Header'
 import Footer from '../../shared/components/Footer/Footer'
-import { Center, Stack, HStack, VStack, Button, Text, Heading } from '@chakra-ui/react'
+import { Center, Stack, HStack, VStack, Button, Text, Heading, Link } from '@chakra-ui/react'
 import { BsFillPrinterFill, BsGithub } from 'react-icons/bs'
 import { GrLanguage } from 'react-icons/gr'
 import ResumeLeftSide from './LeftSide/ResumeLeftSide'
@@ -9,21 +9,24 @@ import ResumeRightSide from './RightSide'
 
 const Resume: React.FC<{}> = () => {
   return (
-    <Stack w={'full'}>
+    <Stack w={'full'} spacing={'0px'}>
       <Header />
       <Center w={'full'}>
-        <VStack maxW={'800px'} w={'full'} my={{ base: '30px', lg: '50px' }}>
-          <Stack w={'full'} spacing={'0px'}>
+        <VStack maxW={'800px'} w={'full'} my={{ md: '5px', lg: '50px' }}>
+          <Stack w={'full'} spacing={'0px'} px={{ md: '20px', lg: '0px' }} mb={{ md: '30px', lg: '0px' }}>
             <HStack w={'full'} h={'70px'} justify={'space-between'}>
               <Button variant={'ghost'} color={'#98bed5'}>
                 <GrLanguage style={{ marginRight: '10px' }} />
                 View in Bosnian
               </Button>
               <HStack>
-                <Button variant={'ghost'} color={'#98bed5'}>
-                  <BsGithub style={{ marginRight: '10px' }} />
-                  Source code
-                </Button>
+                <Link href={'https://github.com/Ejmen-Ramic/my-website/tree/master/src/pages/Resume'}>
+                  <Button variant={'ghost'} color={'#98bed5'}>
+                    <BsGithub style={{ marginRight: '10px' }} />
+                    Source code
+                  </Button>
+                </Link>
+
                 <Button variant={'ghost'} color={'#98bed5'}>
                   <BsFillPrinterFill />
                 </Button>

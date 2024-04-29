@@ -49,7 +49,15 @@ const ToolsTable: FC = () => {
       <Thead>
         <Tr>
           {headers?.map(({ name }, i) => (
-            <Th key={i} w={'120px'} py={'10px'} px={0} fontSize={'14px'} textAlign={'start'} border={0}>
+            <Th
+              key={i}
+              w={{ base: '200px', md: '120px' }}
+              py={'10px'}
+              px={0}
+              fontSize={'14px'}
+              textAlign={'start'}
+              border={0}
+            >
               {name}
             </Th>
           ))}

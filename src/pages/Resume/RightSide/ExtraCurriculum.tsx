@@ -32,8 +32,8 @@ const ExtraCurriculum = () => {
       <VStack w={'full'} spacing={'10px'} alignItems={'start'}>
         <HStack w={'full'}>
           <VStack w={'full'} alignItems={'start'} fontSize={'12px'} textAlign={'start'} spacing={'1px'}>
-            {itemProps.map(({ icon, text }) => (
-              <HStack w={'full'} key={text}>
+            {itemProps.map(({ icon, text }, i) => (
+              <HStack w={'full'} key={i}>
                 {icon}
                 <Text color={'#ECEFF4'} variant={'none'} p={'0px'}>
                   {text}

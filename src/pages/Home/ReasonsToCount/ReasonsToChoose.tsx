@@ -6,11 +6,9 @@ import { GiStairsGoal } from 'react-icons/gi'
 import { TbCertificate } from 'react-icons/tb'
 import FadeInView from '../../../shared/components/Hooks/FadeInView'
 
-// Define colors based on color mode
 const lightModeColor = 'white'
 const darkModeColor = '#171923'
 
-// Define type for reason item
 type ReasonItem = {
   icon: React.ReactElement
   number: string
@@ -62,6 +60,7 @@ const ReasonsToChoose = () => {
         w={'full'}
         mt={{ base: '15px', lg: '0px' }}
         py={{ lg: '120px' }}
+        mb={{ md: '120px', lg: '0px' }}
       >
         <Stack
           h={'500px'}

@@ -12,12 +12,12 @@ const ResumeLeftSide = () => {
   return (
     <VStack
       w={'full'}
-      maxW={{ lg: '267px' }}
+      maxW={{ md: '250px', lg: '267px' }}
       maxH={'full'}
       bgColor={'#232b2e'}
       alignItems={'start'}
-      px={{ lg: '18px' }}
-      py={{ lg: '12px' }}
+      px={{ base: '25px', md: '15px', lg: '18px' }}
+      py={{ base: '25px', md: '12px', lg: '12px' }}
       spacing={'20px'}
     >
       <VStack w={'full'} alignItems={'start'} pt={{ lg: '20px' }}>
@@ -38,8 +38,9 @@ const ResumeLeftSide = () => {
           >
             <IoMailOutline style={{ marginRight: '10px' }} size={'15px'} /> ejmenramic5@gmail.com
           </Button>
-          {resumeItems.map((item, index) => (
+          {resumeItems.map((item, i) => (
             <Button
+              key={i}
               padding={0}
               variant={'none'}
               _hover={{ textDecoration: 'underline' }}
