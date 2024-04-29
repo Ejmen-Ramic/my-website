@@ -2,6 +2,7 @@ import { Box, Button, HStack, Heading, Tooltip, VStack, Image, Text } from '@cha
 import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import FadeInView from '../../../shared/components/Hooks/FadeInView'
+import { Trans } from '@lingui/react'
 
 const Welcome = () => {
   // const { t } = useTranslation(["home"])
@@ -50,7 +51,7 @@ const Welcome = () => {
             lineHeight={'1em'}
             textTransform={'uppercase'}
           >
-            neversettle
+            <Trans id={'welcome.message'}>Neversettle</Trans>
           </Text>
         </FadeInView>
         <FadeInView direction={'left'} delay={0.2}>
