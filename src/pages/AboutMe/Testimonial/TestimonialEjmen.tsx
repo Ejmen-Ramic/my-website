@@ -1,77 +1,60 @@
-import { Fragment } from 'react'
-import { Container, Text, Stack, Avatar, Icon, Image, Box, Show } from '@chakra-ui/react'
-import { ImQuotesLeft } from 'react-icons/im'
-import FadeInView from '../../../shared/components/Hooks/FadeInView'
-
+import { Container, Text, VStack, Stack, Avatar, Icon, useColorModeValue } from '@chakra-ui/react'
+// Here we have used react-icons package for the icon
+import { FaQuoteRight } from 'react-icons/fa'
 interface TestimonialAttributes {
-  name: string
+  username: string
   position: string
   company: string
   content: string
   image: string
 }
 
-const testimonials: TestimonialAttributes[] = [
-  {
-    name: 'Ejmen Ramic',
-    position: 'CEO',
-    company: 'WebXArkitect',
-    image: './Website/About-Us/ejmenbusiness.png',
-    content:
-      'Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper',
-  },
-]
+const testimonial: TestimonialAttributes = {
+  username: 'Ejmen Ramic',
+  position: 'Software & QA Engineer',
+  company: 'FLUX',
+  image: './Website/About-Us/ejmenbusiness.png',
+  content: `Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+      rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
+      risus at semper`,
+}
 
-const TestimonialEjmen = () => {
+const TestimonialCard = () => {
   return (
-    <Container maxW={'5xl'} p={{ base: 0, md: 8 }}>
-      <FadeInView>
-        {testimonials.map((obj, index) => (
-          <Fragment key={index}>
-            <Stack
-              direction={{ base: 'column', sm: 'row' }}
-              bgGradient={'linear(to-br, #42e14e, blue.300)'}
-              spacing={{ base: 0, sm: 10 }}
-              p={{ base: 4, sm: 10 }}
-              rounded={'lg'}
-              justify={'center'}
-            >
-              <Show above='md'>
-                <Box width={'40rem'} pos={'relative'}>
-                  <Image
-                    boxSize={'l'}
-                    pos={'absolute'}
-                    rounded={'lg'}
-                    src={obj.image}
-                    top={'-3.8rem'}
-                    boxShadow={'lg'}
-                  />
-                </Box>
-              </Show>
-
-              <Stack direction={'column'} spacing={4} textAlign={'left'} maxW={'4xl'}>
-                <Icon as={ImQuotesLeft} w={10} h={10} color={'gray.700'} />
-                <Text fontSize={'md'} fontWeight={'medium'}>
-                  {obj.content}
-                </Text>
-                <Stack alignItems={{ base: 'center', sm: 'flex-start' }} spacing={0}>
-                  <Show below={'md'}>
-                    <Avatar size={'xl'} showBorder={true} borderColor='green.400' name={'avatar'} src={obj.image} />
-                  </Show>
-                  <Text fontWeight={'bold'} fontSize={'lg'} mt={'100px'}>
-                    {obj.name}
-                  </Text>
-                  <Text fontWeight={'medium'} fontSize={'sm'} color={'gray.600'}>
-                    {obj.position}, {obj.company}
-                  </Text>
-                </Stack>
-              </Stack>
-            </Stack>
-          </Fragment>
-        ))}
-      </FadeInView>
+    <Container maxW='5xl' p={{ base: 10, md: 14 }}>
+      <VStack
+        spacing={3}
+        p={4}
+        bg={useColorModeValue('white', 'blackAlpha.600')}
+        border='3px solid'
+        borderColor='green.400'
+        maxW='xl'
+        margin='0 auto'
+        boxShadow='lg'
+        pos='relative'
+      >
+        <Icon as={FaQuoteRight} w={10} h={10} color='green.400' left='-1.3rem' position='absolute' top='-1.5rem' />
+        <Stack direction='column' spacing={5}>
+          <Text color='gray.500'></Text>
+          <Text color='gray.500'></Text>
+          <Text fontWeight='bold' fontSize='lg' align='right' mr='3rem !important'>
+            {testimonial.username}
+          </Text>
+        </Stack>
+        <Avatar
+          name='avatar'
+          src={testimonial.image}
+          showBorder={true}
+          borderColor='green.400'
+          size='xl'
+          pos='absolute'
+          right='-48px'
+          bottom='-20px'
+          shadow='lg'
+        />
+      </VStack>
     </Container>
   )
 }
 
-export default TestimonialEjmen
+export default TestimonialCard

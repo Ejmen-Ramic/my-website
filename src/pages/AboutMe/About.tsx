@@ -14,7 +14,7 @@ const About: React.FC = () => {
       <VStack spacing={{ base: '100px', md: '100px', lg: '150px' }} px={{ base: '35px', lg: '0px' }}>
         <AboutIntro />
         <OurProgress />
-        <TestimonialEjmen />
+        {/* <TestimonialEjmen /> */}
         <Milestones />
         {/* <AboutCarousel /> */}
       </VStack>

@@ -136,18 +136,20 @@ const Card = ({ id, title, description, date }: CardProps) => {
         display: 'block',
       }}
     >
-      <Box>
-        <Text fontSize={'lg'} color={isEvenId ? 'teal.400' : 'blue.400'}>
-          {date}
-        </Text>
+      <FadeInView delay={0.1}>
+        <Box>
+          <Text fontSize={'lg'} color={isEvenId ? 'teal.400' : 'blue.400'}>
+            {date}
+          </Text>
 
-        <VStack spacing={2} mb={3} textAlign={'left'}>
-          <chakra.h1 fontSize={'2xl'} lineHeight={1.2} fontWeight={'bold'} w={'100%'}>
-            {title}
-          </chakra.h1>
-          <Text fontSize={'md'}>{description}</Text>
-        </VStack>
-      </Box>
+          <VStack spacing={2} mb={3} textAlign={'left'}>
+            <chakra.h1 fontSize={'2xl'} lineHeight={1.2} fontWeight={'bold'} w={'100%'}>
+              {title}
+            </chakra.h1>
+            <Text fontSize={'md'}>{description}</Text>
+          </VStack>
+        </Box>
+      </FadeInView>
     </HStack>
   )
 }
