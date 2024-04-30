@@ -1,6 +1,5 @@
 import React from 'react'
 import OurProgress from './OurProgress/OurProgress'
-import TestimonialEjmen from './Testimonial/TestimonialEjmen'
 import Milestones from './Milestone'
 import Header from '../../shared/components/Header'
 import Footer from '../../shared/components/Footer/Footer'
