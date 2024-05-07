@@ -21,7 +21,7 @@ const Welcome = () => {
         backgroundImage='linear-gradient(to top, rgba(5,23,33,2) 0%, rgba(5,23,33,0) 100%)'
       >
         <Image
-          src={'./Website/Home/hero.jpg'}
+          src={'./Website/Resume/Home/hero.jpg'}
           alt={'Background'}
           objectFit={'cover'}
           position={'absolute'}

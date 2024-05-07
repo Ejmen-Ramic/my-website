@@ -13,6 +13,8 @@ import ForgotPassword from './pages/Resume-Website/Account/Password/ForgotPasswo
 import Hobbies from './pages/Resume-Website/Hobbies'
 import Photography from './pages/Resume-Website/Hobbies/PhotographyPage/Photography'
 import Resume from './pages/Resume-Website/Resume'
+import PhotoHome from './pages/Photography-Website/Home'
+import PhotographyHome from './pages/Photography-Website/Home'
 // import NotFound from "./pages/Not Found/NewNotFound";
 
 const breakpoints = {
@@ -49,10 +51,11 @@ const App: React.FC = () => {
       instead of null you can add 'Loading...' */}
       <Suspense fallback={null}>
         <Routes>
+          {/* Resume */}
           <Route path='/' element={<HomePage />} />
           <Route path='/about' element={<About />} />
           <Route path='/hobbies' element={<Hobbies />} />
-          <Route path='/photography' element={<Photography />} />
+          <Route path='/photography' element={<PhotographyHome />} />
           <Route path='/resume' element={<Resume />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/test' element={<Test />} />
@@ -60,6 +63,7 @@ const App: React.FC = () => {
           <Route path='/signup' element={<SignUp />} />
           <Route path='/passwordreset' element={<ForgotPassword />} />
           <Route path='*' element={<NotFound />} />
+          {/* Photography */}
         </Routes>
         <ScrollToTopButton />
       </Suspense>
