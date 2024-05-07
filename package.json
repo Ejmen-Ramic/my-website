@@ -15,6 +15,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@lingui/detect-locale": "^4.10.1",
     "@lingui/react": "^4.10.0",
     "@lingui/swc-plugin": "^4.0.6",
     "@testing-library/jest-dom": "^5.17.0",
@@ -72,8 +73,9 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.24.4",
+    "@babel/core": "^7.24.5",
     "@lingui/cli": "^4.10.0",
+    "@lingui/loader": "^4.10.1",
     "@lingui/macro": "^4.10.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-plugin-macros": "^3.1.0"

@@ -15,5 +15,37 @@ msgstr ""
 
 #. js-lingui-explicit-id
 #: src/pages/Home/Welcome/WelcomePart.tsx:54
-msgid "welcome.message"
-msgstr "welcome.message"
+#~ msgid "welcome.message"
+#~ msgstr "welcome.message"
+
+#: src/Inbox.js:26
+#~ msgid "{messagesCount, plural, one {There's # message in your inbox} other {There are # messages in your inbox}}"
+#~ msgstr "{messagesCount, plural, one {There's # message in your inbox} other {There are # messages in your inbox}}"
+
+#: src/Inbox.js:24
+#~ msgid "{null, plural,}"
+#~ msgstr "{null, plural,}"
+
+#: src/shared/components/Header/index.tsx:215
+msgid "Ejmen Ramic"
+msgstr "Ejmen Ramic"
+
+#: src/pages/test.tsx:10
+msgid "How are you?"
+msgstr "How are you?"
+
+#: src/Inbox.js:33
+#~ msgid "Last login on {0}."
+#~ msgstr "Last login on {0}."
+
+#: src/Inbox.js:15
+#~ msgid "Message Inbox"
+#~ msgstr "Message Inbox"
+
+#: src/pages/Home/Welcome/WelcomePart.tsx:54
+msgid "Neversettle"
+msgstr "Neversettle"
+
+#: src/Inbox.js:18
+#~ msgid "See all <0>unread messages</0>or <1>mark them</1> as read."
+#~ msgstr "See all <0>unread messages</0>or <1>mark them</1> as read."

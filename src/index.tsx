@@ -1,18 +1,25 @@
-import React from "react"
-import ReactDOM from "react-dom/client"
-import "./index.css"
-import App from "./App"
-import reportWebVitals from "./reportWebVitals"
-import { ChakraProvider, theme } from "@chakra-ui/react"
-import { BrowserRouter } from "react-router-dom"
-// import "./i18n";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+import { ChakraProvider, theme } from '@chakra-ui/react'
+import { BrowserRouter } from 'react-router-dom'
 
-const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
+import { i18n } from '@lingui/core'
+import { I18nProvider } from '@lingui/react'
+import { messages } from './locales/en/messages'
+
+i18n.load('en', messages)
+i18n.activate('en')
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
       <BrowserRouter>
-        <App />
+        <I18nProvider i18n={i18n}>
+          <App />
+        </I18nProvider>
       </BrowserRouter>
     </ChakraProvider>
   </React.StrictMode>
