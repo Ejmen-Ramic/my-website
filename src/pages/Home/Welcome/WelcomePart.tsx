@@ -2,7 +2,7 @@ import { Box, Button, HStack, Heading, Tooltip, VStack, Image, Text } from '@cha
 import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import FadeInView from '../../../shared/components/Hooks/FadeInView'
-import { Trans } from '@lingui/react'
+import { Link } from 'react-router-dom'
 
 const Welcome = () => {
   // const { t } = useTranslation(["home"])
@@ -78,26 +78,24 @@ const Welcome = () => {
           </Text>
         </FadeInView>
         <FadeInView direction={'left'} delay={0.4}>
-          <Tooltip>
-            <a href='/'>
-              <Button
-                textTransform={'uppercase'}
-                borderRadius={'0px'}
-                color={'#051721'}
-                bgColor={'white'}
-                display={'inline-block'}
-                fontSize={'1em'}
-                padding={'10px 30px'}
-                fontWeight={'500'}
-                marginTop={'10px'}
-                letterSpacing={'2px'}
-                _hover={{ letterSpacing: '7px' }}
-                transition={'0.2s'}
-              >
-                Resume
-              </Button>
-            </a>
-          </Tooltip>
+          <Link to={'/resume'}>
+            <Button
+              textTransform={'uppercase'}
+              borderRadius={'0px'}
+              color={'#051721'}
+              bgColor={'white'}
+              display={'inline-block'}
+              fontSize={'1em'}
+              padding={'10px 30px'}
+              fontWeight={'500'}
+              marginTop={'10px'}
+              letterSpacing={'2px'}
+              _hover={{ letterSpacing: '7px' }}
+              transition={'0.2s'}
+            >
+              Resume
+            </Button>
+          </Link>
         </FadeInView>
         <FadeInView direction={'left'} delay={0.5}>
           <HStack>

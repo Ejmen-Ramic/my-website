@@ -1,6 +1,5 @@
 import React from 'react'
 import OurProgress from './OurProgress/OurProgress'
-import TestimonialEjmen from './Testimonial/TestimonialEjmen'
 import Milestones from './Milestone'
 import Header from '../../shared/components/Header'
 import Footer from '../../shared/components/Footer/Footer'
@@ -14,7 +13,7 @@ const About: React.FC = () => {
       <VStack spacing={{ base: '100px', md: '100px', lg: '150px' }} px={{ base: '35px', lg: '0px' }}>
         <AboutIntro />
         <OurProgress />
-        <TestimonialEjmen />
+        {/* <TestimonialEjmen /> */}
         <Milestones />
         {/* <AboutCarousel /> */}
       </VStack>

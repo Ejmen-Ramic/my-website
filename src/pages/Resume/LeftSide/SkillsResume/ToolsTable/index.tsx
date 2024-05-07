@@ -1,4 +1,15 @@
-import { ChakraProps, useBreakpointValue, Text, Table, Thead, Tr, Th, Tbody, Td } from '@chakra-ui/react'
+import {
+  ChakraProps,
+  useBreakpointValue,
+  Text,
+  Table,
+  Thead,
+  Tr,
+  Th,
+  Tbody,
+  Td,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import { FC, ReactNode } from 'react'
 import { FaCircle } from 'react-icons/fa6'
 
@@ -29,12 +40,15 @@ const getItems = () => {
 }
 
 const ToolsTable: FC = () => {
+  const nameColor = useColorModeValue('#000000', '#ECEFF4')
+  const skillColor = useColorModeValue('#0b3948', '#98bed5')
+  const noSkillColor = useColorModeValue('#8d9da7', '#303c40')
   const columnWidth = useBreakpointValue({ base: '0px', md: '0px' })
   const headers = useBreakpointValue({
     base: [
       {
         name: (
-          <Text textTransform={'capitalize'} color={'#98BED5'}>
+          <Text textTransform={'capitalize'} color={useColorModeValue('#0B3948', '#98BED5')}>
             Tools
           </Text>
         ),
@@ -66,7 +80,7 @@ const ToolsTable: FC = () => {
       <Tbody gap={'24px'} alignItems={'start'}>
         {items.map(({ name, level }: Item, i) => (
           <Tr key={i} border={0}>
-            <Td fontSize={'12px'} fontWeight={600} color={'#ECEFF4'} border={0} p={'0px'}>
+            <Td fontSize={'12px'} fontWeight={600} color={nameColor} border={0} p={'0px'}>
               {name}
             </Td>
             {skillLevel.map((skill, j) => {
@@ -83,9 +97,9 @@ const ToolsTable: FC = () => {
                   style={{ lineHeight: 0 }}
                 >
                   {isCheck ? (
-                    <FaCircle color={'#98bed5'} size={'13px'} style={{ margin: '0px', display: 'inline-block' }} />
+                    <FaCircle color={skillColor} size={'13px'} style={{ margin: '0px', display: 'inline-block' }} />
                   ) : (
-                    <FaCircle color={'#303c40'} size={'13px'} style={{ margin: '0px', display: 'inline-block' }} />
+                    <FaCircle color={noSkillColor} size={'13px'} style={{ margin: '0px', display: 'inline-block' }} />
                   )}
                 </Td>
               )

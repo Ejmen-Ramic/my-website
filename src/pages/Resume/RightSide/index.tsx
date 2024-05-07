@@ -1,4 +1,4 @@
-import { VStack } from '@chakra-ui/react'
+import { useColorModeValue, VStack } from '@chakra-ui/react'
 import Education from './Education'
 import ProExperience from './ProExperience'
 import Projects from './ProjectResume'
@@ -10,7 +10,7 @@ const ResumeRightSide = () => {
       w={'full'}
       maxH={'full'}
       spacing={'40px'}
-      bgColor={'#1b1b1b'}
+      bgColor={useColorModeValue('#FFFFFF', '#1b1b1b')}
       alignItems={'start'}
       px={{ base: '25px', md: '20px', lg: '28px' }}
       py={{ base: '25px', md: '11px', lg: '31px' }}
