@@ -2,7 +2,6 @@ import React from 'react'
 import {
   Stack,
   Flex,
-  Box,
   Popover,
   Link,
   Text,
@@ -19,7 +18,7 @@ const menuData = [
   {
     id: 1,
     label: 'Coding',
-    href: '/photography',
+    href: '/',
   },
   // {
   //   id: 2,
@@ -31,7 +30,7 @@ const menuData = [
 const MenuContainer = () => {
   return (
     <Flex h={'100%'}>
-      <DropDownMenu menuData={menuData} />
+      <DropDownMenu menuData={menuData} linkColor={useColorModeValue('#817e7e', '#02bece')} />
     </Flex>
   )
 }
@@ -40,15 +39,14 @@ interface MenuData {
   id: number
   label: string
   href: string
-  linkColor?: string
 }
 
 interface MenuDataProps {
   menuData: MenuData[]
+  linkColor: string
 }
 
-const DropDownMenu = ({ menuData }: MenuDataProps) => {
-  const linkColor = '#02bece'
+const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
   const { onOpen, onClose, isOpen } = useDisclosure()
 
   return (
@@ -58,9 +56,9 @@ const DropDownMenu = ({ menuData }: MenuDataProps) => {
           <HStack alignItems={'center'} cursor={'pointer'} role={'group'}>
             <Link
               p={2}
-              fontSize={'18px'}
+              fontSize={'16px'}
               fontFamily={'revert-layer'}
-              color={useColorModeValue('#2b333d', '#817e7e')}
+              color={useColorModeValue('#2b333d', 'white')}
               textDecor={'none'}
               letterSpacing={'1px'}
               _groupHover={{
@@ -88,7 +86,7 @@ const DropDownMenu = ({ menuData }: MenuDataProps) => {
           border={0}
           mt={'-7px'}
           zIndex={1}
-          bg={useColorModeValue('white', '#817e7e')}
+          bg={useColorModeValue('white', 'gray.800')}
           p={3}
           rounded={'lg'}
           maxW={'200px'}
@@ -104,7 +102,7 @@ const DropDownMenu = ({ menuData }: MenuDataProps) => {
   )
 }
 
-const DropDownItem = ({ label, href, linkColor }: MenuData) => {
+const DropDownItem = ({ label, href, linkColor }: MenuData & { linkColor: string }) => {
   return (
     <Link
       href={href!}
@@ -117,9 +115,9 @@ const DropDownItem = ({ label, href, linkColor }: MenuData) => {
       }}
     >
       <Stack direction={'row'} align={'center'}>
-        <Box>
-          <Text>{label}</Text>
-        </Box>
+        <Text letterSpacing={'1px'} fontSize={'16px'}>
+          {label}
+        </Text>
       </Stack>
     </Link>
   )
