@@ -1,5 +1,3 @@
-import bosniaImage from '/home/ejmen/Projects/my-website/public/Website/Photography/Home/bosnia.jpg'
-
 type Props = {
   image: string
   location: string
