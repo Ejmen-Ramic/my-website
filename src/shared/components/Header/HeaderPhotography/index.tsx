@@ -39,7 +39,13 @@ const Header = () => {
             }}
             cursor={'pointer'}
           ></Heading>
-          <EjmenSignature w={'160px'} h={'300px'} ml={'50px'} _hover={{ color: 'blue' }} />
+          <EjmenSignature
+            w={'160px'}
+            h={'300px'}
+            ml={'50px'}
+            _hover={{ color: useColorModeValue('gray.400', 'gray.600') }}
+            transition={'0.6s'}
+          />
         </Link>
       </HStack>
       <Show above={'lg'}>

@@ -7,8 +7,9 @@ const AccountButton = (props: ButtonProps) => {
     <Flex justifyContent={'center'} alignItems={'center'}>
       <Link to={'/signin'}>
         <Button
-          bg={useColorModeValue('gray.300', '#A4A3A3')}
-          _hover={{ color: 'white', bgColor: '#817e7e' }}
+          bg={useColorModeValue('#979191', '#FFFFFF14')}
+          color={'white'}
+          _hover={{ bgColor: useColorModeValue('#817e7e', 'gray.600') }}
           p={'13px'}
         >
           <MdOutlineAccountCircle size={'22px'} />
