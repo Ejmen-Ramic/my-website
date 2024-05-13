@@ -12,19 +12,19 @@ const TechnicalExpertise: React.FC = () => {
 
   return (
     <HStack
-      maxW={{ base: '440px', md: '600px', lg: '1200px' }}
-      px={{ base: '20px', md: '20px', lg: '0px' }}
+      maxW={{ base: '440px', md: '680px', lg: '1200px' }}
+      px={{ base: '20px', md: '0px' }}
       mx={'auto'}
       mt={{ lg: '70px' }}
       py={{ base: '60px', md: '120px' }}
     >
       <FadeInView>
-        <Stack direction={{ base: 'column', lg: 'row' }}>
+        <Stack direction={{ base: 'column', lg: 'row' }} spacing={{ md: '50px' }}>
           {/* Title & text */}
           <Center>
-            <VStack alignItems={'start'} spacing={'20px'} p={'10px'}>
+            <VStack alignItems={{ base: 'start', md: 'center', lg: 'start' }} spacing={'20px'} p={'10px'}>
               <Heading>Technical Expertise</Heading>
-              <Text>
+              <Text textAlign={{ md: 'center', lg: 'start' }}>
                 Explore my proficiency in web development tools, programming languages, QA testing frameworks, and
                 MongoDB database management.
               </Text>
