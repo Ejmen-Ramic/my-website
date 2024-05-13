@@ -21,13 +21,13 @@ import FadeInView from '../../../../shared/components/Hooks/FadeInView'
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false)
   return (
-    <Flex align={'center'} justify={'center'} bg={useColorModeValue('gray.50', 'gray.800')}>
+    <Flex minH={'100vh'} align={'center'} justify={'center'} bg={useColorModeValue('gray.50', 'gray.800')}>
       <FadeInView>
         <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
           <Stack align={'center'}>
             <Heading fontSize={'4xl'}>Sign in to your account</Heading>
             <Text fontSize={'lg'} color={'gray.600'}>
-              to enjoy all of our cool{' '}
+              to enjoy all of the cool{' '}
               <Link style={{ color: '#4299E1' }} to={'/'}>
                 features
               </Link>{' '}

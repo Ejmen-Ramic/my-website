@@ -11,7 +11,7 @@ export const resumeItems: ContactResume[] = [
   {
     icon: IoLocationOutline,
     socialMedia: 'Sarajevo, Bosnia and Herzegovina ',
-    link: '',
+    link: 'https://www.bing.com/maps?q=sarajevo&FORM=HDRSC6',
   },
   {
     icon: IoLogoGithub,
@@ -33,6 +33,6 @@ export const resumeItems: ContactResume[] = [
     icon: IoCameraOutline,
     socialMedia: 'Photography by Ejmen Ramic',
     //TODO: Add link here when its pushed to production
-    link: '',
+    link: '/photography',
   },
 ]

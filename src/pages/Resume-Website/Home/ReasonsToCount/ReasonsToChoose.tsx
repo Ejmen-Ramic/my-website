@@ -17,7 +17,6 @@ type ReasonItem = {
 }
 
 const ReasonsToChoose = () => {
-  // Array of reasons
   const reasons: ReasonItem[] = [
     {
       icon: <Icon as={BsSpeedometer} boxSize={9} color={darkModeColor} />,
@@ -75,7 +74,7 @@ const ReasonsToChoose = () => {
           minW={{ lg: '700px' }}
         >
           <Image
-            src={'./Website/Home/code.jpg'}
+            src={'./Website/Resume/Home/code.jpg'}
             alt={'Background'}
             objectFit={'cover'}
             position={'absolute'}
@@ -84,7 +83,7 @@ const ReasonsToChoose = () => {
             zIndex={0}
             width={'100%'}
             height={'100%'}
-            filter={{ base: 'brightness(0.1)', lg: 'brightness(0.1)' }} // Bottom fading effect
+            filter={{ base: 'brightness(0.1)', lg: 'brightness(0.1)' }}
           />
           <Box position={'relative'} pt={{ lg: '40px' }} zIndex={1}>
             <FadeInView delay={0.1}>

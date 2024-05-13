@@ -29,7 +29,7 @@ const SignUp = () => {
               Sign up
             </Heading>
             <Text fontSize={'lg'} color={'gray.600'}>
-              to enjoy all of our cool{' '}
+              to enjoy all of the cool{' '}
               <Link style={{ color: '#4299E1' }} to={'/'}>
                 features
               </Link>{' '}
