@@ -8,6 +8,15 @@ import ResumeLeftSide from './LeftSide/ResumeLeftSide'
 import ResumeRightSide from './RightSide'
 
 const Resume: React.FC<{}> = () => {
+  const onButtonClick = () => {
+    const pdfUrl = 'Sample.pdf'
+    const link = document.createElement('a')
+    link.href = pdfUrl
+    link.download = 'document.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
   return (
     <Stack w={'full'} spacing={'0px'}>
       <Header />
@@ -26,7 +35,7 @@ const Resume: React.FC<{}> = () => {
                 </Button>
               </Link>
 
-              <Button variant={'ghost'} color={useColorModeValue('#0B3948', '#98bed5')}>
+              <Button variant={'ghost'} color={useColorModeValue('#0B3948', '#98bed5')} onClick={onButtonClick}>
                 <BsFillPrinterFill />
               </Button>
             </HStack>
