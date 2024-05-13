@@ -3,20 +3,10 @@ import { useState } from 'react'
 import HeaderMobile from './HeaderMobile'
 import { Link } from 'react-router-dom'
 import ColorMode from '../Color-Mode/ColorMode'
-import AccountButton from '../../../pages/Account/Button/AccountButton'
+import AccountButton from '../../../pages/Resume-Website/Account/Button/AccountButton'
 import DropDownMenu from './ButtonHover/DropDownMenu'
 
 const Header = () => {
-  // const { i18n, t } = useTranslation(["common"])
-  // const lang = localStorage.getItem("i18nextLng") || []
-
-  // if (lang.length > 2) {
-  //   i18n.changeLanguage("en")
-  // }
-  // const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-  //   i18n.changeLanguage(e.target.value)
-  // }
-
   const [homeHovered, setHomeHovered] = useState(false)
   const [resumeHovered, setResumeHovered] = useState(false)
   const [hobbiesHovered, setHobbiesHovered] = useState(false)
@@ -30,7 +20,6 @@ const Header = () => {
       bg={useColorModeValue('gray.100', '#2b333d')}
       justifyContent={'space-between'}
       top={0}
-      // style={blurStyle}
     >
       <HStack w={'full'}>
         <Link to={'/'}>

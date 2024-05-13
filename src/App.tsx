@@ -2,17 +2,19 @@ import { Suspense, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { extendTheme, ChakraProvider } from '@chakra-ui/react'
 import ScrollToTopButton from './shared/components/Back-To-Top/BackToTopButton'
-import About from './pages/AboutMe/index'
-import HomePage from './pages/Home'
-import Contact from './pages/Contacts/Contact'
-import NotFound from './pages/NotFound/NotFound'
+import About from './pages/Resume-Website/AboutMe/index'
+import HomePage from './pages/Resume-Website/Home'
+import Contact from './pages/Resume-Website/Contacts/Contact'
+import NotFound from './pages/Resume-Website/NotFound/NotFound'
 import Test from './pages/test'
-import SignIn from './pages/Account/SignIn/SignIn'
-import SignUp from './pages/Account/SignUp/SignUp'
-import ForgotPassword from './pages/Account/Password/ForgotPassword'
-import Hobbies from './pages/Hobbies'
-import Photography from './pages/Hobbies/PhotographyPage/Photography'
-import Resume from './pages/Resume'
+import SignIn from './pages/Resume-Website/Account/SignIn/SignIn'
+import SignUp from './pages/Resume-Website/Account/SignUp/SignUp'
+import ForgotPassword from './pages/Resume-Website/Account/Password/ForgotPassword'
+import Hobbies from './pages/Resume-Website/Hobbies'
+import Photography from './pages/Resume-Website/Hobbies/PhotographyPage/Photography'
+import Resume from './pages/Resume-Website/Resume'
+import PhotoHome from './pages/Photography-Website/Home'
+import PhotographyHome from './pages/Photography-Website/Home'
 // import NotFound from "./pages/Not Found/NewNotFound";
 
 const breakpoints = {
@@ -49,10 +51,11 @@ const App: React.FC = () => {
       instead of null you can add 'Loading...' */}
       <Suspense fallback={null}>
         <Routes>
+          {/* Resume */}
           <Route path='/' element={<HomePage />} />
           <Route path='/about' element={<About />} />
           <Route path='/hobbies' element={<Hobbies />} />
-          <Route path='/photography' element={<Photography />} />
+          <Route path='/photography' element={<PhotographyHome />} />
           <Route path='/resume' element={<Resume />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/test' element={<Test />} />
@@ -60,6 +63,7 @@ const App: React.FC = () => {
           <Route path='/signup' element={<SignUp />} />
           <Route path='/passwordreset' element={<ForgotPassword />} />
           <Route path='*' element={<NotFound />} />
+          {/* Photography */}
         </Routes>
         <ScrollToTopButton />
       </Suspense>

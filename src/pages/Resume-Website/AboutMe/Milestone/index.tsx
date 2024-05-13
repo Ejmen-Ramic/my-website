@@ -1,0 +1,194 @@
+import {
+  Box,
+  chakra,
+  Container,
+  Text,
+  HStack,
+  VStack,
+  Flex,
+  useColorModeValue,
+  useBreakpointValue,
+} from '@chakra-ui/react'
+import FadeInView from '../../../../shared/components/Hooks/FadeInView'
+
+type CardProps = {
+  id: number
+  title: string
+  description: string
+  date: string
+}
+
+const milestones = [
+  {
+    id: 1,
+    date: 'February 2, 2018',
+    title: 'Started my studies',
+    description: `Kick off my academic journey at the International Islamic University Malaysia (IIUM), marking the beginning of my studies.`,
+  },
+  {
+    id: 2,
+    date: 'April 15, 2022 - January 15, 2023',
+    title: 'Internship at IMTM',
+    description: `Engaged in a valuable internship experience as a Web Coordinator at International Maldives Travel Market (IMTM), where I gained practical skills and insights into Travel and Tourism.`,
+  },
+  {
+    id: 3,
+    date: 'September 25, 2022',
+    title: 'University Graduation',
+    description:
+      'Successfully completed my academic journey at the International Islamic University Malaysia (IIUM), earning a degree in Information and Communication Technologies.',
+  },
+  {
+    id: 4,
+    date: 'January 28, 2023',
+    title: 'Internship at FLUX',
+    description:
+      'During my time at FLUX, I had the opportunity to dive into the world of frontend web development. Working hands-on with Chakra UI, TypeScript, React, Next.js, JavaScript, and CSS, I contributed to several projects, learning and growing every step of the way. It was an invaluable experience that helped me refine my skills and solidify my passion for creating dynamic and user-friendly web applications.',
+  },
+  {
+    id: 5,
+    date: 'July 28, 2023',
+    title: 'Promotion - Software & QA Engineer',
+    description:
+      "Promoted to the role of Junior Software & QA Engineer, I embraced new challenges and expanded my expertise. Alongside my existing skills in frontend development, I delved into the learning of backend with MongoDB, automated testing with Playwright, and deployment with Vercel server. This journey not only elevated my technical capabilities but also deepened my understanding of software development and quality assurance practices, allowing me to contribute effectively to the team's projects and objectives.",
+  },
+]
+
+const Milestones = () => {
+  const isMobile = useBreakpointValue({ base: true, md: false })
+  const isDesktop = useBreakpointValue({ base: false, md: true })
+
+  return (
+    <Container maxWidth={'7xl'} p={{ base: 2, sm: 10 }} mb={{ base: '50px', lg: '100px' }}>
+      <FadeInView delay={0.1}>
+        <chakra.h3 fontSize={'4xl'} fontWeight={'bold'} mb={18} textAlign={'center'}>
+          Milestones
+        </chakra.h3>
+      </FadeInView>
+      <FadeInView delay={0.1}>
+        {milestones.map((milestone) => (
+          <Flex key={milestone.id} mb={'10px'}>
+            {/* Desktop view(left card) */}
+            {isDesktop && milestone.id % 2 === 0 && (
+              <>
+                <EmptyCard />
+                <LineWithDot />
+                <Card {...milestone} />
+              </>
+            )}
+
+            {/* Mobile view */}
+            {isMobile && (
+              <>
+                <LineWithDot />
+                <Card {...milestone} />
+              </>
+            )}
+
+            {/* Desktop view(right card) */}
+            {isDesktop && milestone.id % 2 !== 0 && (
+              <>
+                <Card {...milestone} />
+
+                <LineWithDot />
+                <EmptyCard />
+              </>
+            )}
+          </Flex>
+        ))}
+      </FadeInView>
+    </Container>
+  )
+}
+
+const Card = ({ id, title, description, date }: CardProps) => {
+  const isEvenId = id % 2 === 0
+  let borderWidthValue = isEvenId ? '15px 15px 15px 0' : '15px 0 15px 15px'
+  let leftValue = isEvenId ? '-15px' : 'unset'
+  let rightValue = isEvenId ? 'unset' : '-15px'
+
+  const isMobile = useBreakpointValue({ base: true, md: false })
+  if (isMobile) {
+    leftValue = '-15px'
+    rightValue = 'unset'
+    borderWidthValue = '15px 15px 15px 0'
+  }
+
+  return (
+    <HStack
+      flex={1}
+      p={{ base: 3, sm: 6 }}
+      bg={useColorModeValue('gray.100', 'gray.800')}
+      spacing={5}
+      rounded={'lg'}
+      alignItems={'center'}
+      pos={'relative'}
+      _before={{
+        content: `""`,
+        w: '0',
+        h: '0',
+        borderColor: `transparent ${useColorModeValue('#edf2f6', '#1a202c')} transparent`,
+        borderStyle: 'solid',
+        borderWidth: borderWidthValue,
+        position: 'absolute',
+        left: leftValue,
+        right: rightValue,
+        display: 'block',
+      }}
+    >
+      <FadeInView delay={0.1}>
+        <Box>
+          <Text fontSize={'lg'} color={isEvenId ? 'teal.400' : 'blue.400'}>
+            {date}
+          </Text>
+
+          <VStack spacing={2} mb={3} textAlign={'left'}>
+            <chakra.h1 fontSize={'2xl'} lineHeight={1.2} fontWeight={'bold'} w={'100%'}>
+              {title}
+            </chakra.h1>
+            <Text fontSize={'md'}>{description}</Text>
+          </VStack>
+        </Box>
+      </FadeInView>
+    </HStack>
+  )
+}
+
+const LineWithDot = () => {
+  return (
+    <Flex pos={'relative'} alignItems={'center'} mr={{ base: '40px', md: '40px' }} ml={{ base: '0', md: '40px' }}>
+      <chakra.span
+        position={'absolute'}
+        left={'50%'}
+        height={'calc(100% + 10px)'}
+        border={'1px solid'}
+        borderColor={useColorModeValue('gray.200', 'gray.700')}
+        top={'0px'}
+      ></chakra.span>
+      <Box pos={'relative'} p={'10px'}>
+        <Box
+          pos={'absolute'}
+          top={'0'}
+          left={'0'}
+          bottom={'0'}
+          right={'0'}
+          width={'100%'}
+          height={'100%'}
+          backgroundSize={'cover'}
+          backgroundRepeat={'no-repeat'}
+          backgroundPosition={'center center'}
+          bg={useColorModeValue('gray.600', 'gray.200')}
+          borderRadius={'100px'}
+          backgroundImage={'none'}
+          opacity={1}
+        ></Box>
+      </Box>
+    </Flex>
+  )
+}
+
+const EmptyCard = () => {
+  return <Box flex={{ base: 0, md: 1 }} p={{ base: 0, md: 6 }} bg={'transparent'}></Box>
+}
+
+export default Milestones
