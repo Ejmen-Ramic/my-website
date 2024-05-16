@@ -8,7 +8,7 @@ const PhotographyHome = () => {
   return (
     <Stack w={'full'} bgColor={useColorModeValue('#ede9e3', '#2b333d')}>
       <HeaderPhotography />
-      <SimpleGrid columns={2} spacing={5} mb={'100px'}>
+      <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: '0px', lg: '20px' }} mb={'100px'}>
         {itemProps.map(({ image, location, link }, i) => (
           <Stack
             as={Link}
@@ -18,9 +18,9 @@ const PhotographyHome = () => {
               opacity: 0.3,
               transitionTimingFunction: 'ease-in-out',
             }}
-            bg={'black'} // Set a fallback background color
-            backgroundImage={`url(${image})`} // Set background image
-            backgroundSize='cover'
+            bg={'black'}
+            backgroundImage={`url(${image})`}
+            backgroundSize={'cover'}
             transition={'0.5s'}
             justify={'center'}
             textAlign={'left'}

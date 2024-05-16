@@ -26,14 +26,16 @@ const Header = () => {
           <Heading
             ml={{ base: '20px', md: '40px' }}
             color={useColorModeValue('#2b333d', 'white')}
+            _hover={{ color: useColorModeValue('gray.400', 'gray.600') }}
             fontSize={{ base: '20px', md: '35px' }}
             fontFamily={'inherit'}
             fontWeight={'400'}
             textTransform={'uppercase'}
-            _hover={{
-              color: 'white',
-              transition: 'color 0.2s ease-in-out',
-            }}
+            transition={'0.6s'}
+            // _hover={{
+            //   color: 'white',
+            //   transition: 'color 0.2s ease-in-out',
+            // }}
             cursor={'pointer'}
           >
             Ejmen Ramic

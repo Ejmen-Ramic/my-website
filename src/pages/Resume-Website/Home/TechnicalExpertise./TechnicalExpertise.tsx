@@ -34,11 +34,11 @@ const TechnicalExpertise: React.FC = () => {
           <Box w={'100%'}>
             <Grid templateColumns={['1fr', '1fr 1fr', '1fr 1fr 1fr ']} gap={5} w={'100%'} mt={['20px', 0]}>
               {/* Buttons */}
-              {items.map(({ icon, name, link }, i) => {
+              {items.map(({ icon, name, link }, n) => {
                 const ItemIcon = icon
                 return (
                   <FadeInView>
-                    <GridItem key={i}>
+                    <GridItem key={n}>
                       <VStack align={'start'}>
                         <Link href={link} w={'100%'}>
                           <Button
