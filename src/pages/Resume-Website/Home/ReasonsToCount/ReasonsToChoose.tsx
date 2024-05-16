@@ -3,8 +3,9 @@ import { Box, Button, GridItem, Heading, HStack, Icon, Image, SimpleGrid, Text, 
 import { BsFillInfoCircleFill, BsSpeedometer } from 'react-icons/bs'
 import { IoThumbsUp } from 'react-icons/io5'
 import { GiStairsGoal } from 'react-icons/gi'
-import { TbCertificate } from 'react-icons/tb'
+import { FaHandshakeSimple } from 'react-icons/fa6'
 import FadeInView from '../../../../shared/components/Hooks/FadeInView'
+import { Link } from 'react-router-dom'
 
 const lightModeColor = 'white'
 const darkModeColor = '#171923'
@@ -22,29 +23,28 @@ const ReasonsToChoose = () => {
       icon: <Icon as={BsSpeedometer} boxSize={9} color={darkModeColor} />,
       number: '01',
       title: 'Fast development',
-      description:
-        "You won't find better value in the marketplace. If you find a lower price, send us the offer, and we'll beat it.",
+      description: 'When it comes to coding swiftly, I aim for efficiency without sacrificing quality.',
     },
     {
       icon: <Icon as={IoThumbsUp} boxSize={9} color={darkModeColor} />,
       number: '02',
       title: 'Guaranteed Quality',
       description:
-        'Our training courses are 100% guaranteed to run on dates provided, whether they are classroom, virtual, or In-house.',
+        'My coding style goes beyond just speed. I prioritize writing clean, readable code that ensures responsiveness across all devices.',
     },
     {
       icon: <Icon as={GiStairsGoal} boxSize={9} color={darkModeColor} />,
       number: '03',
       title: 'Highly Experienced',
       description:
-        'Our support staff and Instructors have years of experience in meeting the specific needs of our clients and delivering exceptional quality.',
+        "I've developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team.",
     },
     {
-      icon: <Icon as={TbCertificate} boxSize={9} color={darkModeColor} />,
+      icon: <Icon as={FaHandshakeSimple} boxSize={9} color={darkModeColor} />,
       number: '04',
-      title: 'Award-Winning Training Material',
+      title: 'Team Collaboration',
       description:
-        'Our training program is supported by our well-researched and high-quality course material that will assist the learners in gaining full knowledge into their desired subject matter.',
+        'I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished.',
     },
   ]
 
@@ -97,17 +97,20 @@ const ReasonsToChoose = () => {
             </FadeInView>
             <FadeInView delay={0.1}>
               <Text mt={'20px'} color={'white'}>
-                Our coding school boasts a team of highly skilled and experienced instructors who are passionate about
-                teaching coding. They possess deep knowledge in various programming languages and technologies, ensuring
-                that our students receive expert guidance and mentorship throughout their learning journey. Our
-                instructors are dedicated to fostering a supportive and engaging environment, enabling customers to
-                learn effectively and gain valuable coding skills.
+                Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to
+                continuous learning. My experience collaborating with diverse teams has equipped me with strong
+                communication and interpersonal skills, fostering an environment of creativity and innovation.
+                Additionally, I have a proven track record of meeting tight deadlines while maintaining a high standard
+                of quality. With a proactive mindset and a drive to excel, I am poised to make significant contributions
+                to any project or team.
               </Text>
             </FadeInView>
             <FadeInView delay={0.1}>
-              <Button mt={'20px'} leftIcon={<Icon as={BsFillInfoCircleFill} boxSize={4} />}>
-                Need More Information
-              </Button>
+              <Link to={'/about'}>
+                <Button mt={'20px'} leftIcon={<Icon as={BsFillInfoCircleFill} boxSize={4} />}>
+                  Need More Information
+                </Button>
+              </Link>
             </FadeInView>
           </Box>
         </Stack>
