@@ -5,6 +5,7 @@ import Header from '../../../shared/components/Header'
 import Footer from '../../../shared/components/Footer/Footer'
 import AboutIntro from './Intro/AboutIntro'
 import { VStack } from '@chakra-ui/react'
+import SchoolCertificates from './SchoolCertificates'
 
 const About: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const About: React.FC = () => {
       <Header />
       <VStack spacing={{ base: '100px', md: '100px', lg: '150px' }} px={{ base: '35px', lg: '0px' }}>
         <AboutIntro />
+        <SchoolCertificates />
         <OurProgress />
         {/* <TestimonialEjmen /> */}
         <Milestones />

@@ -32,10 +32,6 @@ const Header = () => {
             fontWeight={'400'}
             textTransform={'uppercase'}
             transition={'0.6s'}
-            // _hover={{
-            //   color: 'white',
-            //   transition: 'color 0.2s ease-in-out',
-            // }}
             cursor={'pointer'}
           >
             Ejmen Ramic

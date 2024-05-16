@@ -7,24 +7,24 @@ export type Props = {
 
 export const itemProps = [
   {
-    name: 'Final Year Project',
-    year: '2018 - 2022',
-    location: 'Kuala Lumpur, Malaysia',
+    name: 'Crypto Charity',
+    year: '2022',
+    location: 'IIUM, Malaysia',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'The "Blockchain Charity" project is a web application designed to ensure safe and transparent charitable donations via blockchain. It includes smart contract testing for donation and withdrawal transactions, and features for managing and monitoring donations and thresholds. The app uses tools like Truffle, Ganache, and MetaMask to securely handle and display transactions, helping to prevent fraud and money laundering while ensuring funds reach the intended recipients.',
   },
   {
     name: 'Final Year Project',
-    year: '2018 - 2022',
-    location: 'Kuala Lumpur, Malaysia',
+    year: '2021 - 2022',
+    location: 'IIUM, Malaysia',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project’s significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues.',
   },
   {
-    name: 'Final Year Project',
-    year: '2018 - 2022',
-    location: 'Kuala Lumpur, Malaysia',
+    name: 'Project V4',
+    year: '2023',
+    location: 'FLUX Sdn. Bhd., Malaysia',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'I worked on a project called Project V4, where my role as a software engineer involved converting and rewriting old JavaScript code and outdated packages into the latest TypeScript, React, Chakra UI and improved server side rendering of Next.js. I managed this project alongside one colleague, and together we completed it within three months. The project was a success, requiring us to write thousands of lines of code to achieve our goals. Currently FLUX website is the fastest in Asia.',
   },
 ]

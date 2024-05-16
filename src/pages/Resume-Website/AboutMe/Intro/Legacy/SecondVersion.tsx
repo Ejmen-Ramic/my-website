@@ -1,35 +1,16 @@
-import { Fragment } from "react";
-import {
-  chakra,
-  Container,
-  Stack,
-  Text,
-  useColorModeValue,
-  Button,
-  Link,
-  Icon,
-  Flex,
-  Box,
-  Show,
-} from "@chakra-ui/react";
+import { Fragment } from 'react'
+import { chakra, Container, Stack, Text, useColorModeValue, Link, Icon, Flex, Box, Show } from '@chakra-ui/react'
 // Here we have used react-icons package for the icons
-import { FaGithub } from "react-icons/fa";
+import { FaGithub } from 'react-icons/fa'
 
 const features = [
   {
-    title: "Free and open source",
-    detail: "All components have MIT license, you can use in any project",
+    title: 'Free and open source',
+    detail: 'All components have MIT license, you can use in any project',
     icon: (
-      <svg
-        aria-hidden="true"
-        role="img"
-        viewBox="0 0 24 24"
-        width="28"
-        height="28"
-        fill="currentColor"
-      >
+      <svg aria-hidden='true' role='img' viewBox='0 0 24 24' width='28' height='28' fill='currentColor'>
         <path
-          fillRule="evenodd"
+          fillRule='evenodd'
           d={`M12.75 2.75a.75.75 0 00-1.5 0V4.5H9.276a1.75 1.75 0 00-.985.303L6.596 5.957A.25.25 0 016.455 
           6H2.353a.75.75 0 100 1.5H3.93L.563 15.18a.762.762 0 00.21.88c.08.064.161.125.309.221.186.121.452.278.792.433.68.311 
           1.662.62 2.876.62a6.919 6.919 0 002.876-.62c.34-.155.606-.312.792-.433.15-.097.23-.158.31-.223a.75.75 0 
@@ -45,20 +26,12 @@ const features = [
     ),
   },
   {
-    title: "TypeScript based",
-    detail:
-      "Build type safe applications, all components and hooks export types",
+    title: 'TypeScript based',
+    detail: 'Build type safe applications, all components and hooks export types',
     icon: (
-      <svg
-        aria-hidden="true"
-        role="img"
-        viewBox="0 0 24 24"
-        width="28"
-        height="28"
-        fill="currentColor"
-      >
+      <svg aria-hidden='true' role='img' viewBox='0 0 24 24' width='28' height='28' fill='currentColor'>
         <path
-          fillRule="evenodd"
+          fillRule='evenodd'
           d={`M3 3a2 2 0 012-2h9.982a2 2 0 011.414.586l4.018 4.018A2 2 0 0121 7.018V21a2 2 0 01-2 2H4.75a.75.75 
           0 010-1.5H19a.5.5 0 00.5-.5V8.5h-4a2 2 0 01-2-2v-4H5a.5.5 0 00-.5.5v6.25a.75.75 0 01-1.5 0V3zm12-.5v4a.5.5 
           0 00.5.5h4a.5.5 0 00-.146-.336l-4.018-4.018A.5.5 0 0015 2.5z`}
@@ -72,20 +45,12 @@ const features = [
     ),
   },
   {
-    title: "Easy to customize",
-    detail:
-      "Build type safe applications, all components and hooks export types",
+    title: 'Easy to customize',
+    detail: 'Build type safe applications, all components and hooks export types',
     icon: (
-      <svg
-        aria-hidden="true"
-        role="img"
-        viewBox="0 0 24 24"
-        width="28"
-        height="28"
-        fill="currentColor"
-      >
+      <svg aria-hidden='true' role='img' viewBox='0 0 24 24' width='28' height='28' fill='currentColor'>
         <path
-          fillRule="evenodd"
+          fillRule='evenodd'
           d={`M10.157 1.154a11.07 11.07 0 013.686 0 .75.75 0 01-.25 1.479 9.568 9.568 0 00-3.186 0 .75.75 0 
           01-.25-1.48zM6.68 3.205a.75.75 0 01-.177 1.046A9.558 9.558 0 004.25 6.503a.75.75 0 01-1.223-.87 
           11.058 11.058 0 012.606-2.605.75.75 0 011.046.177zm10.64 0a.75.75 0 011.046-.177 11.058 11.058 0 
@@ -100,104 +65,79 @@ const features = [
       </svg>
     ),
   },
-];
+]
 const HeroSection = () => {
   return (
     <Fragment>
-      <Container maxW="max-content" pr={{ base: 6, md: 10 }} py={14}>
-        <Stack direction={{ base: "column", md: "row" }}>
-          <Stack direction="column" spacing={10}>
-            <chakra.h1
-              fontSize="5xl"
-              lineHeight={1}
-              fontWeight="bold"
-              textAlign="left"
-            >
+      <Container maxW='max-content' pr={{ base: 6, md: 10 }} py={14}>
+        <Stack direction={{ base: 'column', md: 'row' }}>
+          <Stack direction='column' spacing={10}>
+            <chakra.h1 fontSize='5xl' lineHeight={1} fontWeight='bold' textAlign='left'>
               Production-ready
-              <chakra.span
-                bgGradient="linear(to-br, #228be6, #15aabf)"
-                bgClip="text"
-              >
-                {" "}
-                Projects and Components{" "}
-              </chakra.span>{" "}
+              <chakra.span bgGradient='linear(to-br, #228be6, #15aabf)' bgClip='text'>
+                {' '}
+                Projects and Components{' '}
+              </chakra.span>{' '}
               <br /> built on top of Chakra UI
             </chakra.h1>
             <Text
-              color={useColorModeValue("gray.500", "gray.400")}
-              fontSize="lg"
-              textAlign="left"
-              fontWeight="400"
-              maxW="700px"
+              color={useColorModeValue('gray.500', 'gray.400')}
+              fontSize='lg'
+              textAlign='left'
+              fontWeight='400'
+              maxW='700px'
             >
-              Build fully functional accessible web applications faster than
-              ever – TemplatesKart includes more than 80 customizable components
-              and hooks to cover you in any situation
+              Build fully functional accessible web applications faster than ever – TemplatesKart includes more than 80
+              customizable components and hooks to cover you in any situation
             </Text>
-            <Stack
-              direction={{ base: "column", md: "row" }}
-              spacing={{ base: 5, md: 10 }}
-              flexWrap="wrap"
-            >
+            <Stack direction={{ base: 'column', md: 'row' }} spacing={{ base: 5, md: 10 }} flexWrap='wrap'>
               {features.map((feature, index) => (
-                <Stack
-                  key={index}
-                  direction={{ base: "row", md: "column" }}
-                  spacing={2}
-                >
+                <Stack key={index} direction={{ base: 'row', md: 'column' }} spacing={2}>
                   <Flex
                     p={3}
-                    maxH="52px"
-                    w="max-content"
-                    color="white"
-                    bgGradient="linear(to-br, #228be6, #15aabf)"
-                    rounded="md"
+                    maxH='52px'
+                    w='max-content'
+                    color='white'
+                    bgGradient='linear(to-br, #228be6, #15aabf)'
+                    rounded='md'
                   >
                     {feature.icon}
                   </Flex>
-                  <Stack direction="column" spacing={2}>
-                    <Text fontSize="md" fontWeight="500">
+                  <Stack direction='column' spacing={2}>
+                    <Text fontSize='md' fontWeight='500'>
                       {feature.title}
                     </Text>
-                    <Text
-                      fontSize="sm"
-                      color="gray.400"
-                      maxW={{ base: "100%", md: "200px" }}
-                    >
+                    <Text fontSize='sm' color='gray.400' maxW={{ base: '100%', md: '200px' }}>
                       {feature.detail}
                     </Text>
                   </Stack>
                 </Stack>
               ))}
             </Stack>
-            <Stack
-              direction={{ base: "column", sm: "row" }}
-              spacing={{ base: 0, sm: 2 }}
-              flexWrap="wrap"
-            >
+            <Stack direction={{ base: 'column', sm: 'row' }} spacing={{ base: 0, sm: 2 }} flexWrap='wrap'>
               <chakra.button
                 h={12}
                 px={6}
-                bgGradient="linear(to-br, #228be6, #15aabf)"
-                color="white"
-                _hover={{ bgGradient: "linear(to-br, #228be6, #228be6)" }}
-                rounded="md"
-                fontWeight="bold"
+                bgGradient='linear(to-br, #228be6, #15aabf)'
+                color='white'
+                _hover={{ bgGradient: 'linear(to-br, #228be6, #228be6)' }}
+                rounded='md'
+                fontWeight='bold'
                 mb={{ base: 2, sm: 0 }}
               >
                 <chakra.span> Get started </chakra.span>
               </chakra.button>
               <Flex
-                border="1px solid"
-                borderColor="gray.700"
-                justify="center"
+                border='1px solid'
+                borderColor='gray.700'
+                justify='center'
                 p={3}
                 px={4}
                 lineHeight={1.18}
-                rounded="md"
-                boxShadow="md"
-                fontWeight="bold"
-                alignItems="center"
+                rounded='md'
+                boxShadow='md'
+                fontWeight='bold'
+                alignItems='center'
                 as={Link}
               >
                 <Icon as={FaGithub} h={4} w={4} />
@@ -207,17 +147,17 @@ const HeroSection = () => {
           </Stack>
         </Stack>
       </Container>
-      <Show below="lg">
-        <Box overflow="hidden">
+      <Show below='lg'>
+        <Box overflow='hidden'>
           <svg
-            fill={useColorModeValue("#f7fafc", "#171923")}
-            width="150%"
-            height="56px"
-            transform="scaleX(-1)"
-            filter="drop-shadow(10px 5px 5px rgba(0, 0, 0, 0.05))"
-            preserveAspectRatio="none"
-            viewBox="0 0 1200 120"
-            xmlns="http://www.w3.org/2000/svg"
+            fill={useColorModeValue('#f7fafc', '#171923')}
+            width='150%'
+            height='56px'
+            transform='scaleX(-1)'
+            filter='drop-shadow(10px 5px 5px rgba(0, 0, 0, 0.05))'
+            preserveAspectRatio='none'
+            viewBox='0 0 1200 120'
+            xmlns='http://www.w3.org/2000/svg'
           >
             <path
               d={`M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 
@@ -228,7 +168,7 @@ const HeroSection = () => {
         </Box>
       </Show>
     </Fragment>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection

@@ -12,7 +12,7 @@ const languages: LanguageProps[] = [
   },
   {
     language: 'English',
-    level: 'C1 (IELTS Band 8.0)',
+    level: 'Fluent',
   },
   {
     language: 'German',
