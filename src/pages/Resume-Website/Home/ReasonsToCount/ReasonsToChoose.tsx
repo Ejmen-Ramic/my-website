@@ -51,43 +51,47 @@ const ReasonsToChoose = () => {
   return (
     <FadeInView>
       <Stack
+        w={'full'}
+        minH={{ base: '900px', md: '450px', lg: '500px' }}
+        maxW={{ base: 'full', md: '90%', lg: '1600px' }}
         spacing={0}
         mx={'auto'}
-        minH={{ base: '900px', md: '450px', lg: '500px' }}
-        maxW={{ base: '100%', md: '90%', lg: '1600px' }}
-        direction={{ base: 'column', lg: 'row' }}
-        w={'full'}
         mt={{ base: '15px', lg: '0px' }}
         py={{ lg: '120px' }}
         mb={{ md: '120px', lg: '0px' }}
+        direction={{ base: 'column', lg: 'row' }}
       >
         <Stack
-          h={'500px'}
-          justifyItems={'center'}
-          textAlign={'start'}
-          p={{ base: '20px', md: '40px', lg: '70px' }}
-          zIndex={1}
-          position={'relative'}
-          pt={{ lg: '20px' }}
-          backgroundImage='linear-gradient(to top, rgba(5,23,33,2) 0%, rgba(5,23,33,0) 100%)'
           w={'full'}
+          h={'auto'}
+          minH={'full'}
           minW={{ lg: '700px' }}
+          p={{ base: '20px', md: '40px', lg: '70px' }}
+          pt={{ lg: '20px' }}
+          justifyItems={'center'}
+          position={'relative'}
+          textAlign={'start'}
+          zIndex={1}
         >
           <Image
+            width={'full'}
+            height={'full'}
             src={'./Website/Resume/Home/code.jpg'}
             alt={'Background'}
             objectFit={'cover'}
+            borderLeftRadius={{ lg: '20px' }}
+            borderTopRadius={{ md: '20px', lg: '0px' }}
+            borderTopLeftRadius={{ lg: '20px' }}
+            boxShadow={{ md: 'md' }}
+            filter={{ base: 'brightness(0.1)', lg: 'brightness(0.1)' }}
             position={'absolute'}
             top={0}
             left={0}
             zIndex={0}
-            width={'100%'}
-            height={'100%'}
-            filter={{ base: 'brightness(0.1)', lg: 'brightness(0.1)' }}
           />
-          <Box position={'relative'} pt={{ lg: '40px' }} zIndex={1}>
+          <Box position={'relative'} pt={{ lg: '40px' }} py={{ base: '20px', lg: '0px' }} zIndex={1}>
             <FadeInView delay={0.1}>
-              <Heading mt={{ base: '25px' }} color={'white'}>
+              <Heading color={'white'}>
                 Reasons to{' '}
                 <Box as={'span'} color={'red'}>
                   Count
@@ -115,13 +119,13 @@ const ReasonsToChoose = () => {
           </Box>
         </Stack>
         <GridItem>
-          <Box w={'100%'} h={{ base: 'full', md: '500px' }}>
-            <SimpleGrid columns={[1, 1, 2]}>
+          <Stack w={'full'} h={{ base: 'full', md: '500px' }}>
+            <SimpleGrid columns={[1, 1, 2]} borderRadius={'20%'} minH={'500px'}>
               {reasons.map((reason, index) => (
                 <Box
                   zIndex={1}
                   key={index}
-                  height={'250px'}
+                  height={{ base: 'auto', md: 'auto', lg: 'auto' }}
                   px={'20px'}
                   py={'20px'}
                   pr={'40px'}
@@ -129,6 +133,13 @@ const ReasonsToChoose = () => {
                   borderWidth={'1px'}
                   borderColor={'#E4E4E4'}
                   borderLeft={{ lg: 0 }}
+                  borderStartEndRadius={{ lg: index === 1 || index === 1 ? '20px' : '0px' }}
+                  borderEndStartRadius={{ md: index === 2 || index === 2 ? '20px' : '0px', lg: '0px' }}
+                  borderEndEndRadius={{
+                    md: index === 3 || index === 3 ? '20px' : '0px',
+                    lg: index === 3 || index === 3 ? '20px' : '0px',
+                  }}
+                  boxShadow={{ md: 'md' }}
                 >
                   <HStack justify={'space-between'}>
                     <FadeInView delay={0.1}>
@@ -173,7 +184,7 @@ const ReasonsToChoose = () => {
                 </Box>
               ))}
             </SimpleGrid>
-          </Box>
+          </Stack>
         </GridItem>
       </Stack>
     </FadeInView>

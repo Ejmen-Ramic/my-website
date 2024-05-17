@@ -68,7 +68,7 @@ const FAQ: FC = () => {
   return (
     <FadeInView>
       <Box my={{ base: '60px', lg: '120px' }}>
-        <VStack w={'full'} spacing={'30px'} textAlign={'center'}>
+        <VStack w={'full'} spacing={'30px'} textAlign={'center'} px={'16px'}>
           <Box px={{ base: '10px', md: '0px' }}>
             <Heading>Frequently Asked Questions </Heading>
           </Box>
