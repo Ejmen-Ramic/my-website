@@ -26,7 +26,7 @@ const items: FAQItem[] = [
       "In five years, I see myself taking on more leadership responsibilities, possibly leading a development team. I'd like to continue honing my technical skills while also mentoring junior developers. I'm also interested in exploring more about system architecture and design, contributing to larger strategic decisions.",
   },
   {
-    title: '4. Can you describe a challenging situation at work and how you handled it?',
+    title: '4. Describe a challenging situation at work and how you handled it?',
     description:
       "In one of my projects, we had a major issue right before a product launch where our application wasn't scaling properly under load. I led a small team to identify the bottlenecks. We optimized our database queries and introduced caching mechanisms, which significantly improved performance. It was a stressful situation, but it taught me a lot about teamwork and problem-solving under pressure",
   },
@@ -41,12 +41,12 @@ const items: FAQItem[] = [
       'When we decided to switch to TypeScript at one of the companies I worked for, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team.',
   },
   {
-    title: '7. How do you prioritize your tasks when you have multiple deadlines to meet?',
+    title: '7. How do you prioritize your tasks when you have multiple deadlines?',
     description:
       'I use a combination of prioritization techniques like the Eisenhower Matrix to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like Trello or Notion to keep track of progress. This helps me stay organized and ensures that I focus on the most critical tasks first.',
   },
   {
-    title: '8. Describe a time when you optimized an application for better performance.',
+    title: '8. A time when you optimized an application for better performance.',
     description:
       "We had a data-heavy application that was experiencing slow load times. I optimized the code by implementing lazy loading for components and using React.memo to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced indexing. These changes improved the application's performance significantly, reducing load times by about 40%.",
   },
