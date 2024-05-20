@@ -17,8 +17,15 @@ const items: FAQItem[] = [
   },
   {
     title: '2. What are your greatest strengths and weaknesses?',
-    description:
-      "One of my greatest strengths is my ability to learn quickly and adapt to new technologies. For instance, I picked up Chakra UI on my own and have been able to integrate it seamlessly into my projects. On the flip side, a weakness of mine is that I can be a bit of a perfectionist. Sometimes I spend too much time tweaking small details. '’m working on balancing my attention to detail with efficiency.",
+    description: (
+      <Box>
+        One of my greatest strengths is my ability to learn quickly and adapt to new technologies. For instance, I
+        picked up Chakra UI on my own and have been able to integrate it seamlessly into my projects.
+        <br />
+        <br /> On the flip side, a weakness of mine is that I can be a bit of a perfectionist. Sometimes I spend too
+        much time tweaking small details. I'm working on balancing my attention to detail with efficiency.
+      </Box>
+    ),
   },
   {
     title: '3. Where do you see yourself in five years?',
@@ -52,8 +59,18 @@ const items: FAQItem[] = [
   },
   {
     title: '9. Can you walk me through a project you worked on?',
-    description:
-      'I worked on an e-commerce platform where we used React, TypeScript, and Chakra UI for the frontend, Next.js for the backend, MongoDB and Prisma for the database, and Playwright for writing tests. I implemented features like user authentication, product listings, and a checkout page. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly. Additionally, I collaborated closely with backend developers to integrate the frontend with the server-side logic seamlessly, resulting in a smooth and efficient user experience. The project was a great success, improving user engagement and increasing sales for the platform.',
+    description: (
+      <Box>
+        I worked on an e-commerce platform where we used React, TypeScript, and Chakra UI for the frontend, Next.js for
+        the backend, MongoDB and Prisma for the database, and Playwright for writing tests. I implemented features like
+        user authentication, product listings, and a checkout page. Using TypeScript, I ensured type safety and reduced
+        bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.
+        <br />
+        <br /> Additionally, I collaborated closely with backend developers to integrate the frontend with the
+        server-side logic seamlessly, resulting in a smooth and efficient user experience. The project was a great
+        success, improving user engagement and increasing sales for the platform.
+      </Box>
+    ),
   },
   {
     title: '10. Tell us about a time when you had to learn something new quickly.',

@@ -7,17 +7,18 @@ export type stepsItems = {
 export const steps: stepsItems[] = [
   {
     title: 'Deans List',
-    description: 'Semester ',
-    image: '',
+    description: 'Semester 1, 2019/2020',
+    image: './Website/Resume/AboutMe/deans-list-1.jpg',
   },
   {
-    title: 'First',
-    description: 'Contact Info',
-    image: '',
+    title: 'Deans List',
+    description: 'Semester 1, 2020/2021',
+    image: './Website/Resume/AboutMe/deans-list-2.jpg',
   },
+
   {
-    title: 'First',
-    description: 'Contact Info',
+    title: "Bachelor's Diploma",
+    description: 'Information and Communication Technology',
     image: '',
   },
   {
