@@ -107,7 +107,7 @@ const Welcome = () => {
               </a>
             </Tooltip>
             <Tooltip label='LinkedIn'>
-              <a href='https://www.linkedin.com/company/webxarkitect/'>
+              <a href='https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'>
                 <Button _hover={{ transform: 'translateY(-10px)' }} transition={'0.2s'} colorScheme={'linkedin'}>
                   <FontAwesomeIcon icon={faLinkedin} />
                 </Button>

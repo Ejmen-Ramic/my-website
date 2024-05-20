@@ -66,8 +66,8 @@ const ReasonsToChoose = () => {
           h={'auto'}
           minH={'full'}
           minW={{ lg: '700px' }}
-          p={{ base: '20px', md: '40px', lg: '70px' }}
-          pt={{ lg: '20px' }}
+          p={{ base: '20px', md: '40px', lg: '0px' }}
+          px={{ lg: '50px' }}
           justifyItems={'center'}
           position={'relative'}
           textAlign={'start'}
@@ -89,7 +89,7 @@ const ReasonsToChoose = () => {
             left={0}
             zIndex={0}
           />
-          <Box position={'relative'} pt={{ lg: '40px' }} py={{ base: '20px', lg: '0px' }} zIndex={1}>
+          <Box position={'relative'} py={{ base: '20px', lg: '80px' }} zIndex={1}>
             <FadeInView delay={0.1}>
               <Heading color={'white'}>
                 Reasons to{' '}

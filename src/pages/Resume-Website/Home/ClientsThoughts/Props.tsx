@@ -11,7 +11,7 @@ const items: TestimonialProps[] = [
     title: 'Efficient Collaborating',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.',
-    image: './Website/Resume/Home/thumbnail2.jpg',
+    image: './Website/Resume/Home/amer-bukvic.png',
     name: 'Datuk Amer Bukvic',
     jobTitle: 'Director at Islamic Development Bank (IsDB)',
   },
@@ -19,9 +19,9 @@ const items: TestimonialProps[] = [
     title: 'Intuitive Design',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.',
-    image: './Website/Resume/Home/thumbnail2.jpg',
+    image: './Website/Resume/Home/halit.jpg',
     name: 'Halit Kayar',
-    jobTitle: 'Chief Technology Officer',
+    jobTitle: 'Chief Technology Officer at Sense Sdn. Bhd.',
   },
   {
     title: 'Mindblowing Service',
