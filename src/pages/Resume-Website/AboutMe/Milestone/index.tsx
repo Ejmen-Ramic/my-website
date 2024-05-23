@@ -59,9 +59,9 @@ const Milestones = () => {
   const isDesktop = useBreakpointValue({ base: false, md: true })
 
   return (
-    <Container maxWidth={'7xl'} p={{ base: 2, sm: 10 }} mb={{ base: '50px', lg: '100px' }}>
+    <Container maxWidth={'7xl'} p={{ base: 2, sm: 1, lg: 10 }} mb={{ base: '50px', lg: '100px' }}>
       <FadeInView delay={0.1}>
-        <chakra.h3 fontSize={'4xl'} fontWeight={'bold'} mb={18} textAlign={'center'}>
+        <chakra.h3 fontSize={'36px'} fontWeight={'bold'} mb={18} textAlign={'center'}>
           Milestones
         </chakra.h3>
       </FadeInView>

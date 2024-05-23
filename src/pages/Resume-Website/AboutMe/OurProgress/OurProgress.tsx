@@ -75,7 +75,7 @@ export default function BasicStatistics() {
   return (
     <VStack w={'full'} px={{ lg: 40 }} spacing={'50px'}>
       <FadeInView delay={0.1}>
-        <chakra.h1 textAlign={'center'} fontSize={'4xl'} fontWeight={'bold'}>
+        <chakra.h1 textAlign={'center'} fontSize={'36px'} fontWeight={'bold'}>
           What are the website achievements?
         </chakra.h1>
       </FadeInView>

@@ -34,7 +34,7 @@ const MenuLink = ({ name, path, onClose }: MenuLinkProps) => {
 }
 const dropdownLinks = [
   {
-    name: 'Photography',
+    name: 'Photography (dev)',
     path: '/photography',
   },
   // {

@@ -24,6 +24,7 @@ const TestimonialContent = ({
         p={8}
         rounded={'xl'}
         align={'center'}
+        textAlign={'center'}
         pos={'relative'}
         _after={{
           content: `""`,

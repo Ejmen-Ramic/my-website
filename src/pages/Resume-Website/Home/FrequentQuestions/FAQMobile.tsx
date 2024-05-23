@@ -11,9 +11,9 @@ type Props = {
 const FAQMobile: FC<Props> = ({ items }) => {
   return (
     <Accordion w={'full'} allowToggle>
-      {items.map(({ title, description }, i) => (
+      {items.map(({ title, description }, t) => (
         <FadeInView delay={0.1}>
-          <FAQItemBox key={`mobile_item_${i}`} title={title} description={description} />
+          <FAQItemBox key={`mobile_item_${t}`} title={title} description={description} />
         </FadeInView>
       ))}
     </Accordion>

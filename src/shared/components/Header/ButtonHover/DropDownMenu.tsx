@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 import {
   Stack,
   Flex,
@@ -12,14 +12,14 @@ import {
   PopoverContent,
   useDisclosure,
   useColorModeValue,
-} from "@chakra-ui/react"
-import { FaChevronDown } from "react-icons/fa"
+} from '@chakra-ui/react'
+import { FaChevronDown } from 'react-icons/fa'
 
 const menuData = [
   {
     id: 1,
-    label: "Photography",
-    href: "/photography",
+    label: 'Photography (dev)',
+    href: '/photography',
   },
   // {
   //   id: 2,
@@ -30,7 +30,7 @@ const menuData = [
 
 const MenuContainer = () => {
   return (
-    <Flex h={"100%"}>
+    <Flex h={'100%'}>
       <DropDownMenu menuData={menuData} />
     </Flex>
   )
@@ -48,28 +48,23 @@ interface MenuDataProps {
 }
 
 const DropDownMenu = ({ menuData }: MenuDataProps) => {
-  const linkColor = "#02bece"
+  const linkColor = '#02bece'
   const { onOpen, onClose, isOpen } = useDisclosure()
 
   return (
-    <Stack direction={"row"} spacing={4}>
-      <Popover
-        trigger={"hover"}
-        placement={"bottom-start"}
-        onOpen={onOpen}
-        onClose={onClose}
-      >
+    <Stack direction={'row'} spacing={4}>
+      <Popover trigger={'hover'} placement={'bottom-start'} onOpen={onOpen} onClose={onClose}>
         <PopoverTrigger>
-          <HStack alignItems={"center"} cursor={"pointer"} role={"group"}>
+          <HStack alignItems={'center'} cursor={'pointer'} role={'group'}>
             <Link
               p={2}
-              fontSize={"18px"}
-              fontFamily={"revert-layer"}
-              color={useColorModeValue("#2b333d", "#white")}
-              textDecor={"none"}
-              letterSpacing={"1px"}
+              fontSize={'18px'}
+              fontFamily={'revert-layer'}
+              color={useColorModeValue('#2b333d', '#white')}
+              textDecor={'none'}
+              letterSpacing={'1px'}
               _groupHover={{
-                textDecoration: "none",
+                textDecoration: 'none',
                 color: linkColor,
               }}
             >
@@ -79,24 +74,24 @@ const DropDownMenu = ({ menuData }: MenuDataProps) => {
               as={FaChevronDown}
               h={4}
               w={4}
-              color={useColorModeValue("#2b333d", "#white")}
+              color={useColorModeValue('#2b333d', '#white')}
               _groupHover={{
                 color: linkColor,
               }}
-              transition={"all .25s ease-in-out"}
-              transform={isOpen ? "rotate(180deg)" : ""}
+              transition={'all .25s ease-in-out'}
+              transform={isOpen ? 'rotate(180deg)' : ''}
             />
           </HStack>
         </PopoverTrigger>
 
         <PopoverContent
           border={0}
-          mt={"-7px"}
+          mt={'-7px'}
           zIndex={1}
-          bg={useColorModeValue("white", "gray.800")}
+          bg={useColorModeValue('white', 'gray.800')}
           p={3}
-          rounded={"lg"}
-          maxW={"200px"}
+          rounded={'lg'}
+          maxW={'200px'}
         >
           <Stack>
             {menuData.map((data) => (
@@ -113,15 +108,15 @@ const DropDownItem = ({ label, href, linkColor }: MenuData) => {
   return (
     <Link
       href={href!}
-      display={"block"}
+      display={'block'}
       p={2}
-      rounded={"md"}
+      rounded={'md'}
       _hover={{
-        bg: useColorModeValue("gray.100", "gray.900"),
+        bg: useColorModeValue('gray.100', 'gray.900'),
         color: linkColor,
       }}
     >
-      <Stack direction={"row"} align={"center"}>
+      <Stack direction={'row'} align={'center'}>
         <Box>
           <Text>{label}</Text>
         </Box>

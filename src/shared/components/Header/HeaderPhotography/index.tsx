@@ -25,9 +25,9 @@ const Header = () => {
       <HStack w={'full'}>
         <Link to={'/photography'}>
           <EjmenSignature
-            w={'160px'}
-            h={'300px'}
-            ml={'100px'}
+            w={{ base: '120px', md: '100px', lg: '160px' }}
+            h={{ base: '90px', md: '150px', lg: '300px' }}
+            ml={{ base: '15px', md: '30px', lg: '100px' }}
             _hover={{ color: useColorModeValue('gray.400', 'gray.600') }}
             transition={'0.6s'}
           />

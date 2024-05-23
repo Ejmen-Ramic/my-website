@@ -3,8 +3,9 @@ import { Box, Button, GridItem, Heading, HStack, Icon, Image, SimpleGrid, Text, 
 import { BsFillInfoCircleFill, BsSpeedometer } from 'react-icons/bs'
 import { IoThumbsUp } from 'react-icons/io5'
 import { GiStairsGoal } from 'react-icons/gi'
-import { TbCertificate } from 'react-icons/tb'
+import { FaHandshakeSimple } from 'react-icons/fa6'
 import FadeInView from '../../../../shared/components/Hooks/FadeInView'
+import { Link } from 'react-router-dom'
 
 const lightModeColor = 'white'
 const darkModeColor = '#171923'
@@ -22,72 +23,75 @@ const ReasonsToChoose = () => {
       icon: <Icon as={BsSpeedometer} boxSize={9} color={darkModeColor} />,
       number: '01',
       title: 'Fast development',
-      description:
-        "You won't find better value in the marketplace. If you find a lower price, send us the offer, and we'll beat it.",
+      description: 'When it comes to coding swiftly, I aim for efficiency without sacrificing quality.',
     },
     {
       icon: <Icon as={IoThumbsUp} boxSize={9} color={darkModeColor} />,
       number: '02',
       title: 'Guaranteed Quality',
       description:
-        'Our training courses are 100% guaranteed to run on dates provided, whether they are classroom, virtual, or In-house.',
+        'My coding style goes beyond just speed. I prioritize writing clean, readable code that ensures responsiveness across all devices.',
     },
     {
       icon: <Icon as={GiStairsGoal} boxSize={9} color={darkModeColor} />,
       number: '03',
       title: 'Highly Experienced',
       description:
-        'Our support staff and Instructors have years of experience in meeting the specific needs of our clients and delivering exceptional quality.',
+        "I've developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team.",
     },
     {
-      icon: <Icon as={TbCertificate} boxSize={9} color={darkModeColor} />,
+      icon: <Icon as={FaHandshakeSimple} boxSize={9} color={darkModeColor} />,
       number: '04',
-      title: 'Award-Winning Training Material',
+      title: 'Team Collaboration',
       description:
-        'Our training program is supported by our well-researched and high-quality course material that will assist the learners in gaining full knowledge into their desired subject matter.',
+        'I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished.',
     },
   ]
 
   return (
     <FadeInView>
       <Stack
+        w={'full'}
+        minH={{ base: '900px', md: '450px', lg: '500px' }}
+        maxW={{ base: 'full', md: '90%', lg: '1600px' }}
         spacing={0}
         mx={'auto'}
-        minH={{ base: '900px', md: '450px', lg: '500px' }}
-        maxW={{ base: '100%', md: '90%', lg: '1600px' }}
-        direction={{ base: 'column', lg: 'row' }}
-        w={'full'}
         mt={{ base: '15px', lg: '0px' }}
         py={{ lg: '120px' }}
         mb={{ md: '120px', lg: '0px' }}
+        direction={{ base: 'column', lg: 'row' }}
       >
         <Stack
-          h={'500px'}
-          justifyItems={'center'}
-          textAlign={'start'}
-          p={{ base: '20px', md: '40px', lg: '70px' }}
-          zIndex={1}
-          position={'relative'}
-          pt={{ lg: '20px' }}
-          backgroundImage='linear-gradient(to top, rgba(5,23,33,2) 0%, rgba(5,23,33,0) 100%)'
           w={'full'}
+          h={'auto'}
+          minH={'full'}
           minW={{ lg: '700px' }}
+          p={{ base: '20px', md: '40px', lg: '0px' }}
+          px={{ lg: '50px' }}
+          justifyItems={'center'}
+          position={'relative'}
+          textAlign={'start'}
+          zIndex={1}
         >
           <Image
+            width={'full'}
+            height={'full'}
             src={'./Website/Resume/Home/code.jpg'}
             alt={'Background'}
             objectFit={'cover'}
+            borderLeftRadius={{ lg: '20px' }}
+            borderTopRadius={{ md: '20px', lg: '0px' }}
+            borderTopLeftRadius={{ lg: '20px' }}
+            boxShadow={{ md: 'md' }}
+            filter={{ base: 'brightness(0.1)', lg: 'brightness(0.1)' }}
             position={'absolute'}
             top={0}
             left={0}
             zIndex={0}
-            width={'100%'}
-            height={'100%'}
-            filter={{ base: 'brightness(0.1)', lg: 'brightness(0.1)' }}
           />
-          <Box position={'relative'} pt={{ lg: '40px' }} zIndex={1}>
+          <Box position={'relative'} py={{ base: '20px', lg: '80px' }} zIndex={1}>
             <FadeInView delay={0.1}>
-              <Heading mt={{ base: '25px' }} color={'white'}>
+              <Heading color={'white'}>
                 Reasons to{' '}
                 <Box as={'span'} color={'red'}>
                   Count
@@ -97,28 +101,31 @@ const ReasonsToChoose = () => {
             </FadeInView>
             <FadeInView delay={0.1}>
               <Text mt={'20px'} color={'white'}>
-                Our coding school boasts a team of highly skilled and experienced instructors who are passionate about
-                teaching coding. They possess deep knowledge in various programming languages and technologies, ensuring
-                that our students receive expert guidance and mentorship throughout their learning journey. Our
-                instructors are dedicated to fostering a supportive and engaging environment, enabling customers to
-                learn effectively and gain valuable coding skills.
+                Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to
+                continuous learning. My experience collaborating with diverse teams has equipped me with strong
+                communication and interpersonal skills, fostering an environment of creativity and innovation.
+                Additionally, I have a proven track record of meeting tight deadlines while maintaining a high standard
+                of quality. With a proactive mindset and a drive to excel, I am poised to make significant contributions
+                to any project or team.
               </Text>
             </FadeInView>
             <FadeInView delay={0.1}>
-              <Button mt={'20px'} leftIcon={<Icon as={BsFillInfoCircleFill} boxSize={4} />}>
-                Need More Information
-              </Button>
+              <Link to={'/about'}>
+                <Button mt={'20px'} leftIcon={<Icon as={BsFillInfoCircleFill} boxSize={4} />}>
+                  Need More Information
+                </Button>
+              </Link>
             </FadeInView>
           </Box>
         </Stack>
         <GridItem>
-          <Box w={'100%'} h={{ base: 'full', md: '500px' }}>
-            <SimpleGrid columns={[1, 1, 2]}>
+          <Stack w={'full'} h={{ base: 'full', md: '500px' }}>
+            <SimpleGrid columns={[1, 1, 2]} borderRadius={'20%'} minH={'500px'}>
               {reasons.map((reason, index) => (
                 <Box
                   zIndex={1}
                   key={index}
-                  height={'250px'}
+                  height={{ base: 'auto', md: 'auto', lg: 'auto' }}
                   px={'20px'}
                   py={'20px'}
                   pr={'40px'}
@@ -126,6 +133,13 @@ const ReasonsToChoose = () => {
                   borderWidth={'1px'}
                   borderColor={'#E4E4E4'}
                   borderLeft={{ lg: 0 }}
+                  borderStartEndRadius={{ lg: index === 1 || index === 1 ? '20px' : '0px' }}
+                  borderEndStartRadius={{ md: index === 2 || index === 2 ? '20px' : '0px', lg: '0px' }}
+                  borderEndEndRadius={{
+                    md: index === 3 || index === 3 ? '20px' : '0px',
+                    lg: index === 3 || index === 3 ? '20px' : '0px',
+                  }}
+                  boxShadow={{ md: 'md' }}
                 >
                   <HStack justify={'space-between'}>
                     <FadeInView delay={0.1}>
@@ -170,7 +184,7 @@ const ReasonsToChoose = () => {
                 </Box>
               ))}
             </SimpleGrid>
-          </Box>
+          </Stack>
         </GridItem>
       </Stack>
     </FadeInView>

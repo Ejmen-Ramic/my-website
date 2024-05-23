@@ -22,7 +22,7 @@ const Resume: React.FC<{}> = () => {
       <Header />
       <Center w={'full'}>
         <VStack maxW={'800px'} w={'full'} my={{ md: '5px', lg: '50px' }} mb={{ lg: '100px' }} spacing={'0px'}>
-          <HStack w={'full'} h={'70px'} justify={'space-between'}>
+          <HStack w={'full'} h={'70px'} justify={'space-between'} px={{ md: '10px', lg: '0px' }}>
             <Button variant={'ghost'} color={useColorModeValue('#0B3948', '#98bed5')}>
               <GrLanguage style={{ marginRight: '10px' }} />
               View in Bosnian
@@ -43,7 +43,7 @@ const Resume: React.FC<{}> = () => {
           <Stack
             w={'full'}
             spacing={'0px'}
-            px={{ md: '20px', lg: '0px' }}
+            px={{ md: '0px', lg: '0px' }}
             mb={{ md: '30px', lg: '0px' }}
             boxShadow={'0px 4px 10px rgba(0, 0, 0, 0.3)'}
           >

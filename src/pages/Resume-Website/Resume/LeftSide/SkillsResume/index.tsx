@@ -3,6 +3,7 @@ import ProgrammingTable from './ProgrammingTable'
 import ToolsTable from './ToolsTable'
 import OSTable from './OSTable'
 import LanguageProficiency from './LanguageProficiency'
+import DesignTable from './DesignTable'
 
 const SkillsResume = () => {
   return (
@@ -14,6 +15,7 @@ const SkillsResume = () => {
       <VStack w={'full'} spacing={'20px'} alignItems={'start'}>
         <ProgrammingTable />
         <ToolsTable />
+        <DesignTable />
         <OSTable />
         <LanguageProficiency />
       </VStack>

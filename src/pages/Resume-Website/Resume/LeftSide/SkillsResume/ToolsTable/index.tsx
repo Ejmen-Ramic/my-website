@@ -32,6 +32,10 @@ const getItems = () => {
       level: ['Novice', 'Beginner', 'Intermediate', 'Proficient', 'Advanced'],
     },
     {
+      name: 'Wordpress',
+      level: ['Novice', 'Beginner', 'Intermediate', 'Proficient', 'Advanced'],
+    },
+    {
       name: 'MongoDB',
       level: ['Novice', 'Beginner', 'Intermediate'],
     },
