@@ -9,8 +9,7 @@ const LanguageSwitcher: React.FC = () => {
   useEffect(() => {
     const DEFAULT_FALLBACK = () => 'en'
     const result = multipleDetect(fromUrl('lang'), fromStorage('lang'), fromNavigator(), DEFAULT_FALLBACK)
-
-    setDetectedLocales(result)
+    setDetectedLocales(Array.from(new Set(['en', 'ba', ...result])))
   }, [])
 
   const changeLanguage = async (locale: string) => {

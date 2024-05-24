@@ -11,9 +11,7 @@ import SignIn from './pages/Resume-Website/Account/SignIn/SignIn'
 import SignUp from './pages/Resume-Website/Account/SignUp/SignUp'
 import ForgotPassword from './pages/Resume-Website/Account/Password/ForgotPassword'
 import Hobbies from './pages/Resume-Website/Hobbies'
-import Photography from './pages/Resume-Website/Hobbies/PhotographyPage/Photography'
 import Resume from './pages/Resume-Website/Resume'
-import PhotoHome from './pages/Photography-Website/Home'
 import PhotographyHome from './pages/Photography-Website/Home'
 // import NotFound from "./pages/Not Found/NewNotFound";
 

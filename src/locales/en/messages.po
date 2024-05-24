@@ -27,8 +27,8 @@ msgstr ""
 #~ msgstr "{null, plural,}"
 
 #: src/shared/components/Header/index.tsx:215
-msgid "Ejmen Ramic"
-msgstr "Ejmen Ramic"
+#~ msgid "Ejmen Ramic"
+#~ msgstr "Ejmen Ramic"
 
 #: src/pages/test.tsx:10
 msgid "How are you?"
@@ -42,7 +42,7 @@ msgstr "How are you?"
 #~ msgid "Message Inbox"
 #~ msgstr "Message Inbox"
 
-#: src/pages/Home/Welcome/WelcomePart.tsx:54
+#: src/pages/Resume-Website/Home/Welcome/WelcomePart.tsx:55
 msgid "Neversettle"
 msgstr "Neversettle"
 

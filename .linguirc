@@ -1,31 +1,21 @@
 {
   "catalogs": [
     {
-      "path": "<rootDir>/locale/{locale}/messages",
+      "path": "<rootDir>/src/locales/{locale}/messages",
       "include": [
-        "<rootDir>"
-      ],
-      "exclude": [
-        "**/node_modules/**"
+        "<rootDir>/src"
       ]
     }
   ],
-  "catalogsMergePath": "",
-  "compileNamespace": "cjs",
-  "extractorParserOptions": {},
-  "compilerBabelOptions": {},
-  "fallbackLocales": {},
+  "locales": [
+    "en",
+    "ba"
+  ],
+  "sourceLocale": "en",
   "format": "po",
-  "locales": [],
   "extractors": [
     "babel"
   ],
   "orderBy": "messageId",
-  "pseudoLocale": "",
-  "rootDir": ".",
-  "runtimeConfigModule": [
-    "@lingui/core",
-    "i18n"
-  ],
-  "sourceLocale": ""
+  "rootDir": "."
 }
