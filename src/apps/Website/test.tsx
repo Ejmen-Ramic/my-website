@@ -1,6 +1,6 @@
 import { HStack, Text } from '@chakra-ui/react'
-import LanguageSwitcher from '../shared/components/LanguageSwitcher/LanguageSwitcher'
 import { Trans } from '@lingui/macro'
+import LanguageSwitcher from '../../shared/components/LanguageSwitcher/LanguageSwitcher'
 
 const test = () => {
   return (

@@ -14,6 +14,8 @@ import Hobbies from './apps/Website/Resume-Website/pages/Hobbies'
 import Resume from './apps/Website/Resume-Website/pages/Resume'
 import PhotographyHome from './apps/Website/Photography-Website/pages/Home'
 // import NotFound from "./pages/Not Found/NewNotFound";
+import { i18n } from '@lingui/core'
+import { fromNavigator, fromStorage, fromUrl, multipleDetect } from '@lingui/detect-locale'
 
 const breakpoints = {
   sm: '30em',
@@ -35,6 +37,21 @@ const App: React.FC = () => {
     }
   }
 
+  const localeAsync = async () => {
+    const DEFAULT_FALLBACK = () => 'en'
+    const result = multipleDetect(fromUrl('lang'), fromStorage('lang'), fromNavigator(), DEFAULT_FALLBACK)
+    const detectedLocale = result[0].split('-')[0]
+    console.log('detectedLocale', detectedLocale)
+
+    const localLocale = localStorage.getItem('locale')
+
+    const availableLocales = ['en', 'ba']
+    const locale = localLocale || availableLocales.includes(detectedLocale) ? detectedLocale : 'en'
+
+    const { messages } = await import(`../src/locales/${locale}/messages.ts`)
+    i18n.loadAndActivate({ locale, messages })
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
 
@@ -42,6 +59,10 @@ const App: React.FC = () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
+
+  useEffect(() => {
+    localeAsync()
+  })
 
   return (
     <ChakraProvider theme={theme}>

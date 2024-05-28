@@ -15,7 +15,7 @@ msgstr ""
 
 #: src/pages/test.tsx:10
 msgid "How are you?"
-msgstr ""
+msgstr "Kako si?"
 
 #: src/pages/Resume-Website/Home/Welcome/WelcomePart.tsx:55
 msgid "Neversettle"
