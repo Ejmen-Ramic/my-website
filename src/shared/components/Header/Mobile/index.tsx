@@ -19,9 +19,10 @@ import IconBurger from '../../../icons/IconBurger'
 import IconBurgerMobile from '../../../icons/IconBurgerMobile'
 import { Link } from 'react-router-dom'
 import { IoBriefcaseOutline, IoHomeOutline, IoPersonOutline, IoFileTrayFullOutline, IoCodeSlash } from 'react-icons/io5'
-import MenuContainerMobile from '../ButtonHover/DropDownMenuMobile'
+import MenuContainerMobile from './DropDownHobbies'
 import { IconType } from 'react-icons'
 import HeaderForm from './Form'
+import LanguageDropDown from '../Mobile/LanguageMenuMobile'
 
 type MenuItemLink = {
   label: string
@@ -44,6 +45,7 @@ const HeaderMobile = () => {
     { label: 'About Me', icon: IoCodeSlash, to: '/about' },
     { label: 'Contacts', icon: IoFileTrayFullOutline, to: '/contact' },
     { label: 'My Account', icon: IoPersonOutline, to: '/signin' },
+    <LanguageDropDown />,
   ]
 
   return (

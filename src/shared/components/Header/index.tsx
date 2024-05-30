@@ -1,10 +1,11 @@
 import { Box, Button, Flex, Heading, HStack, Show, useColorModeValue } from '@chakra-ui/react'
 import { useState } from 'react'
-import HeaderMobile from './HeaderMobile'
+import HeaderMobile from './Mobile'
 import { Link } from 'react-router-dom'
 import ColorMode from '../Color-Mode/ColorMode'
 import AccountButton from '../../../apps/Website/Resume-Website/pages/Account/Button/AccountButton'
-import DropDownMenu from './ButtonHover/DropDownMenu'
+import DropDownHobbies from './MenuButton/DropDownHobbies'
+import LanguageMenu from './MenuButton/LanguageMenu'
 
 const Header = () => {
   const [homeHovered, setHomeHovered] = useState(false)
@@ -12,6 +13,7 @@ const Header = () => {
   const [hobbiesHovered, setHobbiesHovered] = useState(false)
   const [aboutHovered, setAboutHovered] = useState(false)
   const [contactHovered, setContactHovered] = useState(false)
+  const [languageHovered, setLanguageHovered] = useState(false)
 
   return (
     <Flex
@@ -116,22 +118,8 @@ const Header = () => {
             justifyItems={'center'}
             boxSizing='border-box'
           >
-            <DropDownMenu />
+            <DropDownHobbies />
           </Box>
-          {/* <Menu>
-            <MenuButton
-              as={Button}
-              value={localStorage.getItem("i18nextLng") ?? "en"}
-              onChange={(e) => handleLanguageChange(e)}
-              rightIcon={<ChevronDownIcon />}
-            >
-              Language
-            </MenuButton>
-            <MenuList>
-              <MenuItem>English</MenuItem>
-              <MenuItem>Bosnian</MenuItem>
-            </MenuList>
-          </Menu> */}
           <Link to={'/about'}>
             <Box
               h={'100%'}
@@ -192,6 +180,24 @@ const Header = () => {
               </Button>
             </Box>
           </Link>
+          <Box
+            h={'100%'}
+            borderColor={languageHovered ? '#02bece' : '#2b333d'}
+            borderTopWidth={languageHovered ? '4px' : '0px'}
+            borderTopColor='#02bece'
+            transition='all 0.1s ease-in-out'
+            onMouseEnter={() => {
+              setLanguageHovered(true)
+            }}
+            onMouseLeave={() => {
+              setLanguageHovered(false)
+            }}
+            overflow='hidden'
+            justifyItems={'center'}
+            boxSizing='border-box'
+          >
+            <LanguageMenu />
+          </Box>
           <AccountButton />
           <ColorMode />
         </HStack>

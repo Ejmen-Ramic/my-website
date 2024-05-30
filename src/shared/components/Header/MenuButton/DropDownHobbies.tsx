@@ -31,7 +31,7 @@ const menuData = [
 const MenuContainer = () => {
   return (
     <Flex h={'100%'}>
-      <DropDownMenu menuData={menuData} />
+      <DropDownHobbies menuData={menuData} />
     </Flex>
   )
 }
@@ -47,7 +47,7 @@ interface MenuDataProps {
   menuData: MenuData[]
 }
 
-const DropDownMenu = ({ menuData }: MenuDataProps) => {
+const DropDownHobbies = ({ menuData }: MenuDataProps) => {
   const linkColor = '#02bece'
   const { onOpen, onClose, isOpen } = useDisclosure()
 

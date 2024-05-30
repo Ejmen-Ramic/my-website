@@ -13,10 +13,14 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/pages/test.tsx:10
+#: src/apps/Website/test.tsx:10
 msgid "How are you?"
 msgstr "Kako si?"
 
-#: src/pages/Resume-Website/Home/Welcome/WelcomePart.tsx:55
+#: src/shared/components/Header/ButtonHover/DropDownLanguage.tsx:89
+msgid "Languages"
+msgstr "Jezici"
+
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:55
 msgid "Neversettle"
 msgstr ""
