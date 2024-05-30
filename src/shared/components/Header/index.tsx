@@ -6,6 +6,7 @@ import ColorMode from '../Color-Mode/ColorMode'
 import AccountButton from '../../../apps/Website/Resume-Website/pages/Account/Button/AccountButton'
 import DropDownHobbies from './MenuButton/DropDownHobbies'
 import LanguageMenu from './MenuButton/LanguageMenu'
+import { Trans } from '@lingui/macro'
 
 const Header = () => {
   const [homeHovered, setHomeHovered] = useState(false)
@@ -68,7 +69,7 @@ const Header = () => {
                 pr={'10px'}
                 p={'50px'}
               >
-                home
+                <Trans>Home</Trans>
               </Button>
             </Box>
           </Link>
@@ -98,7 +99,7 @@ const Header = () => {
                 pr={'10px'}
                 p={'50px'}
               >
-                Resume
+                <Trans>Resume</Trans>
               </Button>
             </Box>
           </Link>
@@ -146,7 +147,7 @@ const Header = () => {
                 pr={'10px'}
                 p={'50px'}
               >
-                About Me
+                <Trans>About Me</Trans>
               </Button>
             </Box>
           </Link>
@@ -176,7 +177,7 @@ const Header = () => {
                 pr={'10px'}
                 p={'50px'}
               >
-                Contacts
+                <Trans>Contacts</Trans>
               </Button>
             </Box>
           </Link>

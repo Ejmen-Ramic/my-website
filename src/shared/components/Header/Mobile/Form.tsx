@@ -1,10 +1,11 @@
 import { Box, Heading, Input, Button, useColorModeValue } from '@chakra-ui/react'
+import { Trans } from '@lingui/macro'
 
 const HeaderForm = () => {
   return (
     <Box mt={'auto'} bottom={0}>
       <Heading fontSize={'20px'} pb={'15px'}>
-        Stay up to date
+        <Trans>Stay up to date</Trans>
       </Heading>
       <form action={'#'}>
         <Box position={'relative'}>
@@ -34,7 +35,7 @@ const HeaderForm = () => {
             rounded={'17px'}
             px={'20px'}
           >
-            Subscribe
+            <Trans>Subscribe</Trans>
           </Button>
         </Box>
       </form>

@@ -20,6 +20,7 @@ import { ReactNode } from 'react'
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
 import FadeInView from '../Hooks/FadeInView'
+import { Trans } from '@lingui/macro'
 
 const Logo = (props: any) => {
   return (
@@ -107,9 +108,11 @@ const Footer = () => {
                 fontWeight={'400'}
                 color={useColorModeValue('#2b333d', 'white')}
               >
-                Welcome to my website! I am a software engineer and photographer based in Bosnia and Herzegovina. Feel
-                free to view my resume and work. <br /> <br />
-                Powered by {''}
+                <Trans>
+                  Welcome to my website! I am a software engineer and photographer based in Bosnia and Herzegovina. Feel
+                  free to view my resume and work. <br /> <br />
+                  Powered by {''}
+                </Trans>
                 <Link href='https://react.dev/' isExternal>
                   <Box as='span' color='#02bece'>
                     React
@@ -134,7 +137,9 @@ const Footer = () => {
               </Text>
             </FadeInView>
             <FadeInView delay={0.1}>
-              <Text fontSize={'sm'}>Copyright ©{year} EjmenRamic. All rights reserved</Text>
+              <Text fontSize={'sm'}>
+                <Trans>Copyright</Trans> ©{year} EjmenRamic. <Trans>All rights reserved</Trans>
+              </Text>
             </FadeInView>
             <FadeInView delay={0.1}>
               <Stack direction={'row'} spacing={6}>
@@ -184,7 +189,7 @@ const Footer = () => {
                 fontFamily={'inherit'}
                 fontWeight={'400'}
               >
-                Navigate
+                <Trans>Navigate</Trans>
               </Text>
             </FadeInView>
             <FadeInView delay={0.1}>
@@ -194,7 +199,7 @@ const Footer = () => {
                 _hover={{ color: useColorModeValue('#2b333d', 'white') }}
                 fontSize={'16px'}
               >
-                Home
+                <Trans>Home</Trans>
               </Link>
             </FadeInView>
             <FadeInView delay={0.1}>
@@ -204,7 +209,7 @@ const Footer = () => {
                 _hover={{ color: useColorModeValue('#2b333d', 'white') }}
                 fontSize={'16px'}
               >
-                Resume
+                <Trans>Resume</Trans>
               </Link>
             </FadeInView>
             <FadeInView delay={0.1}>
@@ -220,7 +225,7 @@ const Footer = () => {
                   fontSize={'16px'}
                   textTransform={'capitalize'}
                 >
-                  Hobbies
+                  <Trans>Hobbies</Trans>
                 </MenuButton>
                 <MenuList borderRadius={'3px'}>
                   <MenuItem
@@ -229,7 +234,7 @@ const Footer = () => {
                       bg: useColorModeValue('gray.100', 'gray.900'),
                     }}
                   >
-                    Photography
+                    <Trans>Photography</Trans>
                   </MenuItem>
                   {/* <MenuItem
                   _hover={{
@@ -249,7 +254,7 @@ const Footer = () => {
                 _hover={{ color: useColorModeValue('#2b333d', 'white') }}
                 fontSize={'16px'}
               >
-                About Me
+                <Trans>About Me</Trans>
               </Link>
             </FadeInView>
             <FadeInView delay={0.1}>
@@ -259,13 +264,15 @@ const Footer = () => {
                 _hover={{ color: useColorModeValue('#2b333d', 'white') }}
                 fontSize={'16px'}
               >
-                Contacts
+                <Trans>Contacts</Trans>
               </Link>
             </FadeInView>
           </Stack>
           <Stack align={'flex-start'}>
             <FadeInView delay={0.1}>
-              <ListHeader>Stay up to date</ListHeader>
+              <ListHeader>
+                <Trans>Stay up to date</Trans>
+              </ListHeader>
             </FadeInView>
             <FadeInView delay={0.1}>
               <Stack direction={'row'}>

@@ -14,17 +14,17 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import { FaChevronDown } from 'react-icons/fa'
-import { Trans } from '@lingui/macro'
+import { t, Trans } from '@lingui/macro'
 import { IoLanguageOutline } from 'react-icons/io5'
 import { dynamicActivate } from '../../LanguageSwitcher/dynamicActivate'
 
 const languageOptions = [
   {
-    name: 'English',
+    name: t`English`,
     locale: 'en',
   },
   {
-    name: 'Bosnian',
+    name: t`Bosnian`,
     locale: 'ba',
   },
 ]

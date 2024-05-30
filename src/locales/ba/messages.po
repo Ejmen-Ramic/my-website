@@ -53,13 +53,45 @@ msgstr "8. Vrijeme kada ste optimizirali aplikaciju za bolje performanse."
 msgid "9. Can you walk me through a project you worked on?"
 msgstr "9. Možete li me provesti kroz projekt na kojem ste radili?"
 
+#: src/shared/components/Footer/Footer.tsx:257
+#: src/shared/components/Header/index.tsx:150
+#: src/shared/components/Header/Mobile/index.tsx:46
+msgid "About Me"
+msgstr "O meni"
+
+#: src/shared/components/Footer/Footer.tsx:141
+msgid "All rights reserved"
+msgstr "Sva prava zadržana"
+
+#: src/shared/components/Header/Mobile/index.tsx:107
+msgid "All rights reserved."
+msgstr "Sva prava zadržana."
+
+
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:104
 msgid "Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to continuous learning. My experience collaborating with diverse teams has equipped me with strong communication and interpersonal skills, fostering an environment of creativity and innovation. Additionally, I have a proven track record of meeting tight deadlines while maintaining a high standard of quality. With a proactive mindset and a drive to excel, I am poised to make significant contributions to any project or team."
 msgstr "Osim isporuke čistog, čitljivog koda, donosim strast za rješavanjem problema i posvećenost kontinuiranom učenju. Moje iskustvo u suradnji s različitim timovima opremilo me snažnim komunikacijskim i interpersonalnim vještinama, potičući okruženje kreativnosti i inovacija. Dodatno, imam dokazane rezultate u ispunjavanju strogih rokova uz održavanje visokih standarda kvaliteta. S proaktivnim načinom razmišljanja i željom za izvrsnošću, spreman sam dati značajan doprinos bilo kojem projektu ili timu."
 
+#: src/shared/components/Header/MenuButton/LanguageMenu.tsx:27
+#: src/shared/components/Header/Mobile/LanguageMenuMobile.tsx:48
+msgid "Bosnian"
+msgstr "Bosanski"
+
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:24
 msgid "Chief Technology Officer at Sense Sdn. Bhd."
 msgstr "Direktor za tehnologiju u Sense Sdn. Bhd."
+
+#: src/shared/components/Footer/Footer.tsx:267
+#: src/shared/components/Header/index.tsx:180
+#: src/shared/components/Header/Mobile/index.tsx:47
+msgid "Contacts"
+msgstr "Kontakti"
+
+#: src/shared/components/Footer/Footer.tsx:141
+#: src/shared/components/Header/Mobile/index.tsx:107
+msgid "Copyright"
+msgstr "Autorsko pravo"
+
 
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:17
 msgid "Director at Islamic Development Bank (IsDB)"
@@ -68,6 +100,11 @@ msgstr "Direktor u Islamskoj razvojnoj banci (IsDB)"
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/TestimonialContent.tsx:103
 msgid "Endorsement"
 msgstr "Preporuka"
+
+#: src/shared/components/Header/MenuButton/LanguageMenu.tsx:23
+#: src/shared/components/Header/Mobile/LanguageMenuMobile.tsx:44
+msgid "English"
+msgstr "Engleski"
 
 #: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:66
 msgid "Explore <0>my</0><1/>limitless possibilities"
@@ -96,6 +133,18 @@ msgstr "Zdravo. Moje ime je Ejmen. Ja sam softverski inženjer iz Bosne i Herceg
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:38
 msgid "Highly Experienced"
 msgstr "Visoko Iskusan"
+
+#: src/shared/components/Footer/Footer.tsx:228
+#: src/shared/components/Header/MenuButton/DropDownHobbies.tsx:72
+#: src/shared/components/Header/Mobile/DropDownHobbies.tsx:67
+msgid "Hobbies"
+msgstr "Hobiji"
+
+#: src/shared/components/Footer/Footer.tsx:202
+#: src/shared/components/Header/index.tsx:72
+#: src/shared/components/Header/Mobile/index.tsx:43
+msgid "Home"
+msgstr "Početna"
 
 #: src/apps/Website/test.tsx:10
 msgid "How are you?"
@@ -131,7 +180,7 @@ msgstr "Za pet godina vidim sebe kako preuzimam više liderskih odgovornosti, mo
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:38
 msgid "In one of my projects, we had a major issue right before a product launch where our application wasn't scaling properly under load. I led a small team to identify the bottlenecks. We optimized our database queries and introduced caching mechanisms, which significantly improved performance. It was a stressful situation, but it taught me a lot about teamwork and problem-solving under pressure"
-msgstr ""
+msgstr "Na jednom od mojih projekata imali smo veliki problem neposredno prije lansiranja proizvoda kada naša aplikacija nije pravilno skalirala pod opterećenjem. Vodio sam mali tim kako bismo identificirali uska grla. Optimizirali smo upite baze podataka i uveli mehanizme keširanja, što je značajno poboljšalo performanse. Bila je to stresna situacija, ali me naučila mnogo o timskom radu i rješavanju problema pod pritiskom."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:38
 #~ msgid "In one of my projects, we had a major issue right before a product launch where our application wasn't scaling properly under load. I led a small team to identify the bottlenecks. We optimized our database queries and introduced caching mechanisms, which significantly improved performance. It was a stressful situation, but it taught me a lot about teamwork and problem-solving under pressure."
@@ -148,9 +197,21 @@ msgstr "Jezici"
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem."
 msgstr ""
 
+#: src/shared/components/Header/Mobile/index.tsx:75
+msgid "Main Menu"
+msgstr "Glavni meni"
+
+#: src/shared/components/Header/Mobile/index.tsx:48
+msgid "My Account"
+msgstr "Moj račun"
+
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:33
 msgid "My coding style goes beyond just speed. I prioritize writing clean, readable code that ensures responsiveness across all devices."
 msgstr "Moj stil kodiranja nadilazi samo brzinu. Prioritet mi je pisanje čistog, čitljivog koda koji osigurava responzivnost na svim uređajima."
+
+#: src/shared/components/Footer/Footer.tsx:192
+msgid "Navigate"
+msgstr "Navigacija"
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:117
 msgid "Need More Information"
@@ -158,11 +219,20 @@ msgstr "Potrebne su dodatne informacije"
 
 #: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:55
 msgid "Neversettle"
-msgstr ""
+msgstr "Nikada nepristaj"
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:22
 msgid "One of my greatest strengths is my ability to learn quickly and adapt to new technologies. For instance, I picked up Chakra UI on my own and have been able to integrate it seamlessly into my projects.<0/><1/> On the flip side, a weakness of mine is that I can be a bit of a perfectionist. Sometimes I spend too much time tweaking small details. I'm working on balancing my attention to detail with efficiency."
 msgstr "Jedna od mojih najvećih snaga je moja sposobnost da brzo učim i prilagođavam se novim tehnologijama. Na primjer, samostalno sam naučio Chakra UI i uspio ga besprijekorno integrirati u svoje projekte.<0/><1/> S druge strane, moja slabost je to što mogu biti malo perfekcionista. Ponekad trošim previše vremena na sitne detalje. Radim na balansiranju svoje pažnje prema detaljima s efikasnošću."
+
+#: src/shared/components/Footer/Footer.tsx:237
+msgid "Photography"
+msgstr "Fotografija"
+
+#: src/shared/components/Header/MenuButton/DropDownHobbies.tsx:22
+#: src/shared/components/Header/Mobile/DropDownHobbies.tsx:38
+msgid "Photography (dev)"
+msgstr "Fotografija (dev)"
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:93
 msgid "Reasons to <0>Count</0> on Me"
@@ -173,12 +243,24 @@ msgid "Recommendation from top employers in Malaysia and Bosnia"
 msgstr "Preporuka od vodećih poslodavaca u Maleziji i Bosni"
 
 #: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:101
+#: src/shared/components/Footer/Footer.tsx:212
+#: src/shared/components/Header/index.tsx:102
+#: src/shared/components/Header/Mobile/index.tsx:44
 msgid "Resume"
 msgstr "Rezime"
 
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:31
 msgid "Secret Coder"
 msgstr "Tajni Koder"
+
+#: src/shared/components/Footer/Footer.tsx:274
+#: src/shared/components/Header/Mobile/Form.tsx:8
+msgid "Stay up to date"
+msgstr "Ostanite u toku"
+
+#: src/shared/components/Header/Mobile/Form.tsx:38
+msgid "Subscribe"
+msgstr "Pretplatite se"
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:44
 msgid "Team Collaboration"
@@ -195,6 +277,10 @@ msgstr "Sljedeća lista često postavljanih pitanja od strane poslodavaca takođ
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:54
 msgid "We had a data-heavy application that was experiencing slow load times. I optimized the code by implementing lazy loading for components and using React.memo to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced indexing. These changes improved the application's performance significantly, reducing load times by about 40%."
 msgstr "Imali smo aplikaciju s velikom količinom podataka koja je imala sporo vrijeme učitavanja. Optimizirao sam kod implementacijom lijenog učitavanja za komponente i korištenjem React.memo kako bi spriječio nepotrebne ponovne rendere. Na backendu sam optimizirao upite na bazi podataka i uveo indeksiranje. Ove promjene su značajno poboljšale performanse aplikacije, smanjujući vrijeme učitavanja za oko 40%."
+
+#: src/shared/components/Footer/Footer.tsx:111
+msgid "Welcome to my website! I am a software engineer and photographer based in Bosnia and Herzegovina. Feel free to view my resume and work. <0/> <1/>Powered by"
+msgstr "Dobrodošli na moju web stranicu! Ja sam softverski inženjer i fotograf sa sjedištem u Bosni i Hercegovini. Slobodno pogledajte moj životopis i rad. <0/> <1/>Pokreće"
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:27
 msgid "When it comes to coding swiftly, I aim for efficiency without sacrificing quality."
