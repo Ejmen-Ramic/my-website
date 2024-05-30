@@ -13,14 +13,197 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:15
+msgid "1. Tell me about yourself."
+msgstr "1. Recite mi nešto o sebi."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:75
+msgid "10. Tell us about a time when you had to learn something new quickly."
+msgstr "10. Recite nam o vremenu kada ste morali brzo naučiti nešto novo."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:19
+msgid "2. What are your greatest strengths and weaknesses?"
+msgstr "2. Koje su vaše najveće snage i slabosti?"
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:33
+msgid "3. Where do you see yourself in five years?"
+msgstr "3. Gdje se vidite za pet godina?"
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:37
+msgid "4. Describe a challenging situation at work and how you handled it?"
+msgstr "4. Opišite izazovnu situaciju na poslu i kako ste je riješili?"
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:41
+msgid "5. Give me an example of a time when you worked as part of a team."
+msgstr "5. Dajte mi primjer kada ste radili kao dio tima."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:45
+msgid "6. Tell me about a time when you had to learn something new quickly."
+msgstr "6. Recite mi o vremenu kada ste morali brzo naučiti nešto novo."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:49
+msgid "7. How do you prioritize your tasks when you have multiple deadlines?"
+msgstr "7. Kako prioritizirate svoje zadatke kada imate više rokova?"
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:53
+msgid "8. A time when you optimized an application for better performance."
+msgstr "8. Vrijeme kada ste optimizirali aplikaciju za bolje performanse."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:57
+msgid "9. Can you walk me through a project you worked on?"
+msgstr "9. Možete li me provesti kroz projekt na kojem ste radili?"
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:104
+msgid "Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to continuous learning. My experience collaborating with diverse teams has equipped me with strong communication and interpersonal skills, fostering an environment of creativity and innovation. Additionally, I have a proven track record of meeting tight deadlines while maintaining a high standard of quality. With a proactive mindset and a drive to excel, I am poised to make significant contributions to any project or team."
+msgstr "Osim isporuke čistog, čitljivog koda, donosim strast za rješavanjem problema i posvećenost kontinuiranom učenju. Moje iskustvo u suradnji s različitim timovima opremilo me snažnim komunikacijskim i interpersonalnim vještinama, potičući okruženje kreativnosti i inovacija. Dodatno, imam dokazane rezultate u ispunjavanju strogih rokova uz održavanje visokih standarda kvaliteta. S proaktivnim načinom razmišljanja i željom za izvrsnošću, spreman sam dati značajan doprinos bilo kojem projektu ili timu."
+
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:24
+msgid "Chief Technology Officer at Sense Sdn. Bhd."
+msgstr "Direktor za tehnologiju u Sense Sdn. Bhd."
+
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:17
+msgid "Director at Islamic Development Bank (IsDB)"
+msgstr "Direktor u Islamskoj razvojnoj banci (IsDB)"
+
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/TestimonialContent.tsx:103
+msgid "Endorsement"
+msgstr "Preporuka"
+
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:66
+msgid "Explore <0>my</0><1/>limitless possibilities"
+msgstr "Istražite <0>moje</0><1/>neograničene mogućnosti"
+
+#: src/apps/Website/Resume-Website/pages/Home/TechnicalExpertise./TechnicalExpertise.tsx:31
+msgid "Explore my proficiency in web development tools, programming languages, QA testing frameworks, and MongoDB database management."
+msgstr "Istražite moje vještine u alatima za razvoj weba, programskim jezicima, QA okvirima za testiranje i upravljanju MongoDB bazom podataka."
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:26
+msgid "Fast development"
+msgstr "Brz razvoj"
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:89
+msgid "Frequently Asked Questions"
+msgstr "Često postavljana pitanja"
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:32
+msgid "Guaranteed Quality"
+msgstr "Zajamčena kvaliteta"
+
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:78
+msgid "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina and this is my web resume. Here you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore my website and my photo gallery."
+msgstr "Zdravo. Moje ime je Ejmen. Ja sam softverski inženjer iz Bosne i Hercegovine i ovo je moj web životopis. Ovdje možete vidjeti moje sposobnosti i vještine kao softverskog inženjera i fotografa. Slobodno istražite moju web stranicu i moju foto galeriju."
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:38
+msgid "Highly Experienced"
+msgstr "Visoko Iskusan"
+
 #: src/apps/Website/test.tsx:10
 msgid "How are you?"
 msgstr "Kako si?"
 
-#: src/shared/components/Header/ButtonHover/DropDownLanguage.tsx:89
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:45
+msgid "I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished."
+msgstr "Uspijevam u suradničkim okruženjima, gdje mogu učiti, rasti i razmjenjivati iskustva s drugima. Čvrsto vjerujem da se s timskim radom svaki projekt može ostvariti."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:50
+msgid "I use a combination of prioritization techniques like the Eisenhower Matrix to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like Trello or Notion to keep track of progress. This helps me stay organized and ensures that I focus on the most critical tasks first."
+msgstr "Koristim kombinaciju tehnika za prioritizaciju kao što je Eisenhower Matrix za kategorizaciju zadataka po hitnosti i važnosti. Također, razdvajam veće zadatke u manje, upravljive dijelove i koristim alate poput Trello ili Notion za praćenje napretka. To mi pomaže da ostanem organiziran i osiguram da se fokusiram na najvažnije zadatke prvo."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:42
+msgid "I worked on a project where we had to develop a complex admin dashboard for the company. I was responsible for the frontend using React and Chakra UI and wrote tests using the Playwright testing tool, while my teammates handled the backend. We had regular sync-ups to ensure our components integrated smoothly. This collaboration not only helped us meet our deadlines but also improved the overall quality of the product."
+msgstr "Radio sam na projektu gdje smo morali razviti složeni administrativni nadzorni panel za kompaniju. Bio sam odgovoran za frontend koristeći React i Chakra UI i pisao testove koristeći Playwright alat za testiranje, dok su moji timski kolege radili na backend"
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:60
+msgid "I worked on an e-commerce platform where we used React, TypeScript, and Chakra UI for the frontend, Next.js for the backend, MongoDB and Prisma for the database, and Playwright for writing tests. I implemented features like user authentication, product listings, and a checkout page. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<0/><1/> Additionally, I collaborated closely with backend developers to integrate the frontend with the server-side logic seamlessly, resulting in a smooth and efficient user experience. The project was a great success, improving user engagement and increasing sales for the platform."
+msgstr "Radio sam na e-commerce platformi gdje smo koristili React, TypeScript i Chakra UI za frontend, Next.js za backend, MongoDB i Prisma za bazu podataka, i Playwright za pisanje testova. Implementirao sam funkcije kao što su autentifikacija korisnika, liste proizvoda i stranicu za naplatu. Koristeći TypeScript, osigurao sam sigurnost tipova i smanjio greške. Također smo koristili Chakra UI za stvaranje kohezivnog i responzivnog dizajna, što je učinilo sajt vrlo korisnički prijatnim.<0/><1/> Dodatno, blisko sam sarađivao sa backend programerima da integriramo frontend sa logikom na strani servera, što je rezultiralo glatkim i efikasnim korisničkim iskustvom. Projekat je bio veliki uspjeh, poboljšavajući angažman korisnika i povećavajući prodaju za platformu."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:16
+msgid "I'm a software developer with a passion for creating intuitive and efficient user experiences. I've been working with latest languages, frameworks and testing tools for the past few years, and I love how these tools enable me to build scalable and maintainable applications. Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
+msgstr "Ja sam softverski developer sa strašću za kreiranje intuitivnih i efikasnih korisničkih iskustava. Posljednjih nekoliko godina radim s najnovijim jezicima, frameworkovima i alatima za testiranje, i volim kako mi ovi alati omogućavaju da gradim skalabilne i održive aplikacije. Izvan posla, uživam u planinarenju i istraživanju novih mjesta, što mi pomaže da ostanem kreativan i osvježen."
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:39
+msgid "I've developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team."
+msgstr "Razvio sam svoje vještine kroz potpunu posvećenost i naporan rad, ulažući bezbroj sati u kodiranje i blisku saradnju s timom za proizvod."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:34
+msgid "In five years, I see myself taking on more leadership responsibilities, possibly leading a development team. I'd like to continue honing my technical skills while also mentoring junior developers. I'm also interested in exploring more about system architecture and design, contributing to larger strategic decisions."
+msgstr "Za pet godina vidim sebe kako preuzimam više liderskih odgovornosti, moguće vodeći razvojni tim. Želio bih nastaviti usavršavati svoje tehničke vještine dok također mentoriram mlađe developere. Također sam zainteresiran za istraživanje više o sistemskoj arhitekturi i dizajnu, doprinoseći većim strateškim odlukama."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:38
+msgid "In one of my projects, we had a major issue right before a product launch where our application wasn't scaling properly under load. I led a small team to identify the bottlenecks. We optimized our database queries and introduced caching mechanisms, which significantly improved performance. It was a stressful situation, but it taught me a lot about teamwork and problem-solving under pressure"
+msgstr ""
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:38
+#~ msgid "In one of my projects, we had a major issue right before a product launch where our application wasn't scaling properly under load. I led a small team to identify the bottlenecks. We optimized our database queries and introduced caching mechanisms, which significantly improved performance. It was a stressful situation, but it taught me a lot about teamwork and problem-solving under pressure."
+#~ msgstr "U jednom od mojih projekata, imali smo veliki problem neposredno prije lansiranja proizvoda kada naša aplikacija nije pravilno skalirala pod opterećenjem. Vodio sam mali tim da identificiramo uska grla. Optimizirali smo upite na bazi podataka i uveli mehanizme keširanja, što je značajno poboljšalo performanse. Bila je to stresna situacija, ali me naučila mnogo o timskom radu i rješavanju problema pod pritiskom."
+
+#: src/shared/components/Header/MenuButton/LanguageMenu.tsx:77
+#: src/shared/components/Header/Mobile/LanguageMenuMobile.tsx:78
 msgid "Languages"
 msgstr "Jezici"
+
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:14
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:21
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:28
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem."
+msgstr ""
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:33
+msgid "My coding style goes beyond just speed. I prioritize writing clean, readable code that ensures responsiveness across all devices."
+msgstr "Moj stil kodiranja nadilazi samo brzinu. Prioritet mi je pisanje čistog, čitljivog koda koji osigurava responzivnost na svim uređajima."
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:117
+msgid "Need More Information"
+msgstr "Potrebne su dodatne informacije"
 
 #: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:55
 msgid "Neversettle"
 msgstr ""
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:22
+msgid "One of my greatest strengths is my ability to learn quickly and adapt to new technologies. For instance, I picked up Chakra UI on my own and have been able to integrate it seamlessly into my projects.<0/><1/> On the flip side, a weakness of mine is that I can be a bit of a perfectionist. Sometimes I spend too much time tweaking small details. I'm working on balancing my attention to detail with efficiency."
+msgstr "Jedna od mojih najvećih snaga je moja sposobnost da brzo učim i prilagođavam se novim tehnologijama. Na primjer, samostalno sam naučio Chakra UI i uspio ga besprijekorno integrirati u svoje projekte.<0/><1/> S druge strane, moja slabost je to što mogu biti malo perfekcionista. Ponekad trošim previše vremena na sitne detalje. Radim na balansiranju svoje pažnje prema detaljima s efikasnošću."
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:93
+msgid "Reasons to <0>Count</0> on Me"
+msgstr "Razlozi za <0>Računanje</0> na Mene"
+
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/TestimonialContent.tsx:108
+msgid "Recommendation from top employers in Malaysia and Bosnia"
+msgstr "Preporuka od vodećih poslodavaca u Maleziji i Bosni"
+
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:101
+msgid "Resume"
+msgstr "Rezime"
+
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:31
+msgid "Secret Coder"
+msgstr "Tajni Koder"
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:44
+msgid "Team Collaboration"
+msgstr "Timsku Saradnju"
+
+#: src/apps/Website/Resume-Website/pages/Home/TechnicalExpertise./TechnicalExpertise.tsx:28
+msgid "Technical Expertise"
+msgstr "Tehnička Stručnost"
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:93
+msgid "The following list of frequently asked questions by employers that may also assist you in getting your questions answered:"
+msgstr "Sljedeća lista često postavljanih pitanja od strane poslodavaca također vam može pomoći da dobijete odgovore na svoja pitanja:"
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:54
+msgid "We had a data-heavy application that was experiencing slow load times. I optimized the code by implementing lazy loading for components and using React.memo to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced indexing. These changes improved the application's performance significantly, reducing load times by about 40%."
+msgstr "Imali smo aplikaciju s velikom količinom podataka koja je imala sporo vrijeme učitavanja. Optimizirao sam kod implementacijom lijenog učitavanja za komponente i korištenjem React.memo kako bi spriječio nepotrebne ponovne rendere. Na backendu sam optimizirao upite na bazi podataka i uveo indeksiranje. Ove promjene su značajno poboljšale performanse aplikacije, smanjujući vrijeme učitavanja za oko 40%."
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:27
+msgid "When it comes to coding swiftly, I aim for efficiency without sacrificing quality."
+msgstr "Kada je riječ o brzom kodiranju, težim ka efikasnosti bez žrtvovanja kvaliteta."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:76
+msgid "When we decided to switch from JavaScript and CSS to TypeScript and Chakra UI in my previous job, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
+msgstr "Kada smo odlučili preći sa JavaScript-a i CSS-a na TypeScript i Chakra UI na mom prethodnom poslu, morao sam se brzo prilagoditi jer sam bio jedan od ključnih developera u timu. Pohađao sam online kurs, pročitao dokumentaciju i počeo refaktorirati male dijelove našeg koda. U roku od nekoliko sedmica, bio sam dovoljno siguran da vodim tranziciju za cijeli naš frontend tim."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:46
+msgid "When we decided to switch to TypeScript at one of the companies I worked for, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
+msgstr "Kada smo odlučili preći na TypeScript u jednoj od kompanija u kojima sam radio, morao sam se brzo prilagoditi jer sam bio jedan od ključnih developera u timu. Pohađao sam online kurs, pročitao dokumentaciju i počeo refaktorirati male dijelove našeg koda. U roku od nekoliko sedmica, bio sam dovoljno siguran da vodim tranziciju za cijeli naš frontend tim."

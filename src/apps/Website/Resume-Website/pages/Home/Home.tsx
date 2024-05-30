@@ -4,8 +4,6 @@ import Footer from '../../../../../shared/components/Footer/Footer'
 import Welcome from './Welcome/WelcomePart'
 import ChooseToLearn from './TechnicalExpertise./TechnicalExpertise'
 import ReasonsToChoose from './ReasonsToCount/ReasonsToChoose'
-// import DeliveryMethods from "./DeliveryMethods/DeliveryMethods"
-// import CareerBenefits from "./Career_Benefits/CareerBenefits"
 import TestimonialContent from './ClientsThoughts/TestimonialContent'
 import HostFAQ from './FrequentQuestions'
 import { VStack } from '@chakra-ui/react'
@@ -18,8 +16,6 @@ const Home: React.FC<{}> = () => {
         <Welcome />
         <ChooseToLearn />
         <ReasonsToChoose />
-        {/* <DeliveryMethods />
-        <CareerBenefits /> */}
         <TestimonialContent />
       </VStack>
       <HostFAQ />

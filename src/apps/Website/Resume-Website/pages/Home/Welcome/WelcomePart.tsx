@@ -31,7 +31,7 @@ const Welcome = () => {
           zIndex={0}
           width={'100%'}
           height={'100%'}
-          filter={{ base: 'brightness(0.3)', lg: 'brightness(0.6)' }} // Bottom fading effect
+          filter={{ base: 'brightness(0.3)', lg: 'brightness(0.6)' }}
         />
       </Box>
 
@@ -63,19 +63,23 @@ const Welcome = () => {
             lineHeight={'1em'}
             textTransform={'uppercase'}
           >
-            Explore{' '}
-            <Box as={'span'} color={'red'}>
-              my
-            </Box>
-            <br />
-            limitless possibilities
+            <Trans>
+              Explore{' '}
+              <Box as={'span'} color={'red'}>
+                my
+              </Box>
+              <br />
+              limitless possibilities
+            </Trans>
           </Heading>
         </FadeInView>
         <FadeInView direction={'left'} delay={0.3}>
           <Text color={'white'} fontSize={{ md: '1.0em', lg: '1.1em' }} fontWeight={'400'} maxWidth={'700px'}>
-            Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina and this is my web resume. Here
-            you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore my
-            website and my photo gallery.
+            <Trans>
+              Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina and this is my web resume. Here
+              you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore my
+              website and my photo gallery.
+            </Trans>
           </Text>
         </FadeInView>
         <FadeInView direction={'left'} delay={0.4}>
@@ -94,7 +98,7 @@ const Welcome = () => {
               _hover={{ letterSpacing: '7px' }}
               transition={'0.2s'}
             >
-              Resume
+              <Trans>Resume</Trans>
             </Button>
           </Link>
         </FadeInView>

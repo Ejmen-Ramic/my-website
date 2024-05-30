@@ -1,6 +1,7 @@
 import { Box, Button, Grid, GridItem, Heading, VStack, Text, HStack, Link, Stack, Center } from '@chakra-ui/react'
 import items from './Props'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { Trans } from '@lingui/macro'
 
 const TechnicalExpertise: React.FC = () => {
   const zoomInStyles = {
@@ -23,10 +24,14 @@ const TechnicalExpertise: React.FC = () => {
           {/* Title & text */}
           <Center>
             <VStack alignItems={{ base: 'start', md: 'center', lg: 'start' }} spacing={'20px'} p={'10px'}>
-              <Heading>Technical Expertise</Heading>
+              <Heading>
+                <Trans>Technical Expertise</Trans>
+              </Heading>
               <Text textAlign={{ md: 'center', lg: 'start' }}>
-                Explore my proficiency in web development tools, programming languages, QA testing frameworks, and
-                MongoDB database management.
+                <Trans>
+                  Explore my proficiency in web development tools, programming languages, QA testing frameworks, and
+                  MongoDB database management.
+                </Trans>
               </Text>
             </VStack>{' '}
           </Center>

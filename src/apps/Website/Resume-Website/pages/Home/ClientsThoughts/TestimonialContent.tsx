@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 import { Box, Flex, Heading, Text, Stack, Container, Avatar, useColorModeValue, VStack } from '@chakra-ui/react'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import items from './Props'
+import { Trans } from '@lingui/macro'
 
 const Testimonial = ({ children }: { children: ReactNode }) => {
   return <Box>{children}</Box>
@@ -98,10 +99,14 @@ export default function WithSpeechBubbles() {
         <Container maxW={'7xl'} py={16} as={Stack} spacing={12}>
           <Stack spacing={0} align={'center'}>
             <FadeInView delay={0.1}>
-              <Heading>Endorsement</Heading>
+              <Heading>
+                <Trans>Endorsement</Trans>
+              </Heading>
             </FadeInView>
             <FadeInView delay={0.1}>
-              <Text textAlign={'center'}>Recommendation from top employers in Malaysia and Bosnia</Text>
+              <Text textAlign={'center'}>
+                <Trans>Recommendation from top employers in Malaysia and Bosnia</Trans>
+              </Text>
             </FadeInView>
           </Stack>
           <Stack direction={{ base: 'column', md: 'row' }} spacing={{ base: 10, md: 4, lg: 10 }}>

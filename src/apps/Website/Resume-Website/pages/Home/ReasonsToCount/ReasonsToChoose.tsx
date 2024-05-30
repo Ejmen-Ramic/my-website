@@ -6,6 +6,7 @@ import { GiStairsGoal } from 'react-icons/gi'
 import { FaHandshakeSimple } from 'react-icons/fa6'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { Link } from 'react-router-dom'
+import { t, Trans } from '@lingui/macro'
 
 const lightModeColor = 'white'
 const darkModeColor = '#171923'
@@ -22,29 +23,26 @@ const ReasonsToChoose = () => {
     {
       icon: <Icon as={BsSpeedometer} boxSize={9} color={darkModeColor} />,
       number: '01',
-      title: 'Fast development',
-      description: 'When it comes to coding swiftly, I aim for efficiency without sacrificing quality.',
+      title: t`Fast development`,
+      description: t`When it comes to coding swiftly, I aim for efficiency without sacrificing quality.`,
     },
     {
       icon: <Icon as={IoThumbsUp} boxSize={9} color={darkModeColor} />,
       number: '02',
-      title: 'Guaranteed Quality',
-      description:
-        'My coding style goes beyond just speed. I prioritize writing clean, readable code that ensures responsiveness across all devices.',
+      title: t`Guaranteed Quality`,
+      description: t`My coding style goes beyond just speed. I prioritize writing clean, readable code that ensures responsiveness across all devices.`,
     },
     {
       icon: <Icon as={GiStairsGoal} boxSize={9} color={darkModeColor} />,
       number: '03',
-      title: 'Highly Experienced',
-      description:
-        "I've developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team.",
+      title: t`Highly Experienced`,
+      description: t`I've developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team.`,
     },
     {
       icon: <Icon as={FaHandshakeSimple} boxSize={9} color={darkModeColor} />,
       number: '04',
-      title: 'Team Collaboration',
-      description:
-        'I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished.',
+      title: t`Team Collaboration`,
+      description: t`I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished.`,
     },
   ]
 
@@ -92,27 +90,31 @@ const ReasonsToChoose = () => {
           <Box position={'relative'} py={{ base: '20px', lg: '80px' }} zIndex={1}>
             <FadeInView delay={0.1}>
               <Heading color={'white'}>
-                Reasons to{' '}
-                <Box as={'span'} color={'red'}>
-                  Count
-                </Box>{' '}
-                on Me
+                <Trans>
+                  Reasons to{' '}
+                  <Box as={'span'} color={'red'}>
+                    Count
+                  </Box>{' '}
+                  on Me
+                </Trans>
               </Heading>
             </FadeInView>
             <FadeInView delay={0.1}>
               <Text mt={'20px'} color={'white'}>
-                Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to
-                continuous learning. My experience collaborating with diverse teams has equipped me with strong
-                communication and interpersonal skills, fostering an environment of creativity and innovation.
-                Additionally, I have a proven track record of meeting tight deadlines while maintaining a high standard
-                of quality. With a proactive mindset and a drive to excel, I am poised to make significant contributions
-                to any project or team.
+                <Trans>
+                  Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to
+                  continuous learning. My experience collaborating with diverse teams has equipped me with strong
+                  communication and interpersonal skills, fostering an environment of creativity and innovation.
+                  Additionally, I have a proven track record of meeting tight deadlines while maintaining a high
+                  standard of quality. With a proactive mindset and a drive to excel, I am poised to make significant
+                  contributions to any project or team.
+                </Trans>
               </Text>
             </FadeInView>
             <FadeInView delay={0.1}>
               <Link to={'/about'}>
                 <Button mt={'20px'} leftIcon={<Icon as={BsFillInfoCircleFill} boxSize={4} />}>
-                  Need More Information
+                  <Trans>Need More Information</Trans>
                 </Button>
               </Link>
             </FadeInView>

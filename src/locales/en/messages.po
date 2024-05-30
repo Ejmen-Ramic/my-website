@@ -26,15 +26,132 @@ msgstr ""
 #~ msgid "{null, plural,}"
 #~ msgstr "{null, plural,}"
 
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:15
+msgid "1. Tell me about yourself."
+msgstr "1. Tell me about yourself."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:75
+msgid "10. Tell us about a time when you had to learn something new quickly."
+msgstr "10. Tell us about a time when you had to learn something new quickly."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:19
+msgid "2. What are your greatest strengths and weaknesses?"
+msgstr "2. What are your greatest strengths and weaknesses?"
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:33
+msgid "3. Where do you see yourself in five years?"
+msgstr "3. Where do you see yourself in five years?"
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:37
+msgid "4. Describe a challenging situation at work and how you handled it?"
+msgstr "4. Describe a challenging situation at work and how you handled it?"
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:41
+msgid "5. Give me an example of a time when you worked as part of a team."
+msgstr "5. Give me an example of a time when you worked as part of a team."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:45
+msgid "6. Tell me about a time when you had to learn something new quickly."
+msgstr "6. Tell me about a time when you had to learn something new quickly."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:49
+msgid "7. How do you prioritize your tasks when you have multiple deadlines?"
+msgstr "7. How do you prioritize your tasks when you have multiple deadlines?"
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:53
+msgid "8. A time when you optimized an application for better performance."
+msgstr "8. A time when you optimized an application for better performance."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:57
+msgid "9. Can you walk me through a project you worked on?"
+msgstr "9. Can you walk me through a project you worked on?"
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:104
+msgid "Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to continuous learning. My experience collaborating with diverse teams has equipped me with strong communication and interpersonal skills, fostering an environment of creativity and innovation. Additionally, I have a proven track record of meeting tight deadlines while maintaining a high standard of quality. With a proactive mindset and a drive to excel, I am poised to make significant contributions to any project or team."
+msgstr "Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to continuous learning. My experience collaborating with diverse teams has equipped me with strong communication and interpersonal skills, fostering an environment of creativity and innovation. Additionally, I have a proven track record of meeting tight deadlines while maintaining a high standard of quality. With a proactive mindset and a drive to excel, I am poised to make significant contributions to any project or team."
+
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:24
+msgid "Chief Technology Officer at Sense Sdn. Bhd."
+msgstr "Chief Technology Officer at Sense Sdn. Bhd."
+
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:17
+msgid "Director at Islamic Development Bank (IsDB)"
+msgstr "Director at Islamic Development Bank (IsDB)"
+
 #: src/shared/components/Header/index.tsx:215
 #~ msgid "Ejmen Ramic"
 #~ msgstr "Ejmen Ramic"
+
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/TestimonialContent.tsx:103
+msgid "Endorsement"
+msgstr "Endorsement"
+
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:66
+msgid "Explore <0>my</0><1/>limitless possibilities"
+msgstr "Explore <0>my</0><1/>limitless possibilities"
+
+#: src/apps/Website/Resume-Website/pages/Home/TechnicalExpertise./TechnicalExpertise.tsx:31
+msgid "Explore my proficiency in web development tools, programming languages, QA testing frameworks, and MongoDB database management."
+msgstr "Explore my proficiency in web development tools, programming languages, QA testing frameworks, and MongoDB database management."
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:26
+msgid "Fast development"
+msgstr "Fast development"
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:89
+msgid "Frequently Asked Questions"
+msgstr "Frequently Asked Questions"
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:32
+msgid "Guaranteed Quality"
+msgstr "Guaranteed Quality"
+
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:78
+msgid "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina and this is my web resume. Here you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore my website and my photo gallery."
+msgstr "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina and this is my web resume. Here you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore my website and my photo gallery."
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:38
+msgid "Highly Experienced"
+msgstr "Highly Experienced"
 
 #: src/apps/Website/test.tsx:10
 msgid "How are you?"
 msgstr "How are you?"
 
-#: src/shared/components/Header/ButtonHover/DropDownLanguage.tsx:89
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:45
+msgid "I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished."
+msgstr "I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:50
+msgid "I use a combination of prioritization techniques like the Eisenhower Matrix to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like Trello or Notion to keep track of progress. This helps me stay organized and ensures that I focus on the most critical tasks first."
+msgstr "I use a combination of prioritization techniques like the Eisenhower Matrix to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like Trello or Notion to keep track of progress. This helps me stay organized and ensures that I focus on the most critical tasks first."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:42
+msgid "I worked on a project where we had to develop a complex admin dashboard for the company. I was responsible for the frontend using React and Chakra UI and wrote tests using the Playwright testing tool, while my teammates handled the backend. We had regular sync-ups to ensure our components integrated smoothly. This collaboration not only helped us meet our deadlines but also improved the overall quality of the product."
+msgstr "I worked on a project where we had to develop a complex admin dashboard for the company. I was responsible for the frontend using React and Chakra UI and wrote tests using the Playwright testing tool, while my teammates handled the backend. We had regular sync-ups to ensure our components integrated smoothly. This collaboration not only helped us meet our deadlines but also improved the overall quality of the product."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:60
+msgid "I worked on an e-commerce platform where we used React, TypeScript, and Chakra UI for the frontend, Next.js for the backend, MongoDB and Prisma for the database, and Playwright for writing tests. I implemented features like user authentication, product listings, and a checkout page. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<0/><1/> Additionally, I collaborated closely with backend developers to integrate the frontend with the server-side logic seamlessly, resulting in a smooth and efficient user experience. The project was a great success, improving user engagement and increasing sales for the platform."
+msgstr "I worked on an e-commerce platform where we used React, TypeScript, and Chakra UI for the frontend, Next.js for the backend, MongoDB and Prisma for the database, and Playwright for writing tests. I implemented features like user authentication, product listings, and a checkout page. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<0/><1/> Additionally, I collaborated closely with backend developers to integrate the frontend with the server-side logic seamlessly, resulting in a smooth and efficient user experience. The project was a great success, improving user engagement and increasing sales for the platform."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:16
+msgid "I'm a software developer with a passion for creating intuitive and efficient user experiences. I've been working with latest languages, frameworks and testing tools for the past few years, and I love how these tools enable me to build scalable and maintainable applications. Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
+msgstr "I'm a software developer with a passion for creating intuitive and efficient user experiences. I've been working with latest languages, frameworks and testing tools for the past few years, and I love how these tools enable me to build scalable and maintainable applications. Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:39
+msgid "I've developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team."
+msgstr "I've developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:34
+msgid "In five years, I see myself taking on more leadership responsibilities, possibly leading a development team. I'd like to continue honing my technical skills while also mentoring junior developers. I'm also interested in exploring more about system architecture and design, contributing to larger strategic decisions."
+msgstr "In five years, I see myself taking on more leadership responsibilities, possibly leading a development team. I'd like to continue honing my technical skills while also mentoring junior developers. I'm also interested in exploring more about system architecture and design, contributing to larger strategic decisions."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:38
+msgid "In one of my projects, we had a major issue right before a product launch where our application wasn't scaling properly under load. I led a small team to identify the bottlenecks. We optimized our database queries and introduced caching mechanisms, which significantly improved performance. It was a stressful situation, but it taught me a lot about teamwork and problem-solving under pressure"
+msgstr "In one of my projects, we had a major issue right before a product launch where our application wasn't scaling properly under load. I led a small team to identify the bottlenecks. We optimized our database queries and introduced caching mechanisms, which significantly improved performance. It was a stressful situation, but it taught me a lot about teamwork and problem-solving under pressure"
+
+#: src/shared/components/Header/MenuButton/LanguageMenu.tsx:77
+#: src/shared/components/Header/Mobile/LanguageMenuMobile.tsx:78
 msgid "Languages"
 msgstr "Languages"
 
@@ -42,14 +159,76 @@ msgstr "Languages"
 #~ msgid "Last login on {0}."
 #~ msgstr "Last login on {0}."
 
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:14
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:21
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:28
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem."
+
 #: src/Inbox.js:15
 #~ msgid "Message Inbox"
 #~ msgstr "Message Inbox"
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:33
+msgid "My coding style goes beyond just speed. I prioritize writing clean, readable code that ensures responsiveness across all devices."
+msgstr "My coding style goes beyond just speed. I prioritize writing clean, readable code that ensures responsiveness across all devices."
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:117
+msgid "Need More Information"
+msgstr "Need More Information"
 
 #: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:55
 msgid "Neversettle"
 msgstr "Neversettle"
 
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:22
+msgid "One of my greatest strengths is my ability to learn quickly and adapt to new technologies. For instance, I picked up Chakra UI on my own and have been able to integrate it seamlessly into my projects.<0/><1/> On the flip side, a weakness of mine is that I can be a bit of a perfectionist. Sometimes I spend too much time tweaking small details. I'm working on balancing my attention to detail with efficiency."
+msgstr "One of my greatest strengths is my ability to learn quickly and adapt to new technologies. For instance, I picked up Chakra UI on my own and have been able to integrate it seamlessly into my projects.<0/><1/> On the flip side, a weakness of mine is that I can be a bit of a perfectionist. Sometimes I spend too much time tweaking small details. I'm working on balancing my attention to detail with efficiency."
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:93
+msgid "Reasons to <0>Count</0> on Me"
+msgstr "Reasons to <0>Count</0> on Me"
+
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/TestimonialContent.tsx:108
+msgid "Recommendation from top employers in Malaysia and Bosnia"
+msgstr "Recommendation from top employers in Malaysia and Bosnia"
+
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:101
+msgid "Resume"
+msgstr "Resume"
+
+#: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:31
+msgid "Secret Coder"
+msgstr "Secret Coder"
+
 #: src/Inbox.js:18
 #~ msgid "See all <0>unread messages</0>or <1>mark them</1> as read."
 #~ msgstr "See all <0>unread messages</0>or <1>mark them</1> as read."
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:44
+msgid "Team Collaboration"
+msgstr "Team Collaboration"
+
+#: src/apps/Website/Resume-Website/pages/Home/TechnicalExpertise./TechnicalExpertise.tsx:28
+msgid "Technical Expertise"
+msgstr "Technical Expertise"
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:93
+msgid "The following list of frequently asked questions by employers that may also assist you in getting your questions answered:"
+msgstr "The following list of frequently asked questions by employers that may also assist you in getting your questions answered:"
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:54
+msgid "We had a data-heavy application that was experiencing slow load times. I optimized the code by implementing lazy loading for components and using React.memo to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced indexing. These changes improved the application's performance significantly, reducing load times by about 40%."
+msgstr "We had a data-heavy application that was experiencing slow load times. I optimized the code by implementing lazy loading for components and using React.memo to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced indexing. These changes improved the application's performance significantly, reducing load times by about 40%."
+
+#: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:27
+msgid "When it comes to coding swiftly, I aim for efficiency without sacrificing quality."
+msgstr "When it comes to coding swiftly, I aim for efficiency without sacrificing quality."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:76
+msgid "When we decided to switch from JavaScript and CSS to TypeScript and Chakra UI in my previous job, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
+msgstr "When we decided to switch from JavaScript and CSS to TypeScript and Chakra UI in my previous job, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:46
+msgid "When we decided to switch to TypeScript at one of the companies I worked for, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
+msgstr "When we decided to switch to TypeScript at one of the companies I worked for, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
