@@ -1,4 +1,5 @@
 import { VStack, Box, Heading, HStack, Text, useColorModeValue } from '@chakra-ui/react'
+import { t, Trans } from '@lingui/macro'
 import { ReactNode } from 'react'
 import { FaLink, FaRunning, FaShapes } from 'react-icons/fa'
 
@@ -9,11 +10,11 @@ type Props = {
 
 const itemProps: Props[] = [
   {
-    text: "I'm a web developer.",
+    text: t`I'm a web developer.`,
     icon: <FaShapes />,
   },
   {
-    text: 'I love running.',
+    text: t`I love running.`,
     icon: <FaRunning />,
   },
 ]
@@ -27,7 +28,7 @@ const ExtraCurriculum = () => {
       <HStack w={'full'} spacing={'10px'}>
         <FaShapes size={'18px'} color={colorMode} />
         <Heading textTransform={'uppercase'} lineHeight={'12px'} fontSize={'18px'} color={colorMode}>
-          Extra Curriculum
+          <Trans>Extra Curriculum</Trans>
         </Heading>
       </HStack>
 

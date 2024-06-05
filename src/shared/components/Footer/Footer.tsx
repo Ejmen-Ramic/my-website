@@ -20,7 +20,7 @@ import { ReactNode } from 'react'
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
 import FadeInView from '../Hooks/FadeInView'
-import { Trans } from '@lingui/macro'
+import { t, Trans } from '@lingui/macro'
 
 const Logo = (props: any) => {
   return (
@@ -111,8 +111,8 @@ const Footer = () => {
                 <Trans>
                   Welcome to my website! I am a software engineer and photographer based in Bosnia and Herzegovina. Feel
                   free to view my resume and work. <br /> <br />
-                  Powered by {''}
-                </Trans>
+                  Powered by
+                </Trans>{' '}
                 <Link href='https://react.dev/' isExternal>
                   <Box as='span' color='#02bece'>
                     React
@@ -277,7 +277,7 @@ const Footer = () => {
             <FadeInView delay={0.1}>
               <Stack direction={'row'}>
                 <Input
-                  placeholder={'Your email address'}
+                  placeholder={t`Your email address`}
                   bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
                   border={0}
                   _focus={{

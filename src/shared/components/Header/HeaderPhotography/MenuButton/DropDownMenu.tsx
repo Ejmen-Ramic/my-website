@@ -13,11 +13,12 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import { FaChevronDown } from 'react-icons/fa'
+import { t, Trans } from '@lingui/macro'
 
 const menuData = [
   {
     id: 1,
-    label: 'Coding',
+    label: t`Coding`,
     href: '/',
   },
   // {
@@ -66,7 +67,7 @@ const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
                 color: linkColor,
               }}
             >
-              Hobbies
+              <Trans>Hobbies</Trans>
             </Link>
             <Icon
               as={FaChevronDown}

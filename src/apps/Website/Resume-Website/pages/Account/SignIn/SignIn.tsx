@@ -17,6 +17,7 @@ import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { Trans } from '@lingui/macro'
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false)
@@ -25,11 +26,13 @@ const SignIn = () => {
       <FadeInView>
         <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
           <Stack align={'center'}>
-            <Heading fontSize={'4xl'}>Sign in to your account</Heading>
+            <Heading fontSize={'4xl'}>
+              <Trans>Sign in to your account</Trans>
+            </Heading>
             <Text fontSize={'lg'} color={'gray.600'}>
-              to enjoy all of the cool{' '}
+              <Trans>to enjoy all of the cool</Trans>{' '}
               <Link style={{ color: '#4299E1' }} to={'/'}>
-                features
+                <Trans>features</Trans>
               </Link>{' '}
               ✌️
             </Text>
@@ -37,11 +40,15 @@ const SignIn = () => {
           <Box rounded={'lg'} bg={useColorModeValue('white', 'gray.700')} boxShadow={'lg'} p={8}>
             <Stack spacing={4}>
               <FormControl id={'email'}>
-                <FormLabel>Email address</FormLabel>
+                <FormLabel>
+                  <Trans>Email address</Trans>
+                </FormLabel>
                 <Input type={'email'} />
               </FormControl>
               <FormControl id={'password'}>
-                <FormLabel>Password</FormLabel>
+                <FormLabel>
+                  <Trans>Password</Trans>
+                </FormLabel>
                 <InputGroup>
                   <Input type={showPassword ? 'text' : 'password'} />
                   <InputRightElement h={'full'}>
@@ -53,9 +60,11 @@ const SignIn = () => {
               </FormControl>
               <Stack spacing={10}>
                 <Stack direction={{ base: 'column', sm: 'row' }} align={'start'} justify={'space-between'}>
-                  <Checkbox>Remember me</Checkbox>
+                  <Checkbox>
+                    <Trans>Remember me</Trans>
+                  </Checkbox>
                   <Link style={{ color: '#4299E1' }} to={'/passwordreset'}>
-                    Forgot password?
+                    <Trans>Forgot password?</Trans>
                   </Link>
                 </Stack>
                 <Button
@@ -65,14 +74,14 @@ const SignIn = () => {
                     bg: 'blue.500',
                   }}
                 >
-                  Sign in
+                  <Trans>Sign in</Trans>
                 </Button>
               </Stack>
               <Stack pt={6}>
                 <Text align={'center'}>
-                  Not a user?{' '}
+                  <Trans>Not a user?</Trans>{' '}
                   <Link style={{ color: '#4299E1' }} to={'/signup'}>
-                    Register
+                    <Trans>Register</Trans>
                   </Link>
                 </Text>
               </Stack>

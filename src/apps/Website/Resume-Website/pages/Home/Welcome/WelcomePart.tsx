@@ -104,25 +104,31 @@ const Welcome = () => {
         </FadeInView>
         <FadeInView direction={'left'} delay={0.5}>
           <HStack>
-            <Tooltip label='GitHub'>
+            <Tooltip label={'GitHub'}>
               <a href='https://github.com/Ejmen-Ramic/'>
-                <Button _hover={{ transform: 'translateY(-10px)' }} transition={'0.2s'}>
-                  <FontAwesomeIcon icon={faGithub} />
-                </Button>
+                <Box p={0} pt={'10px'} _hover={{ pt: 0, pb: '10px' }} transition={'0.2s'}>
+                  <Button>
+                    <FontAwesomeIcon icon={faGithub} />
+                  </Button>
+                </Box>
               </a>
             </Tooltip>
-            <Tooltip label='LinkedIn'>
+            <Tooltip label={'LinkedIn'}>
               <a href='https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'>
-                <Button _hover={{ transform: 'translateY(-10px)' }} transition={'0.2s'} colorScheme={'linkedin'}>
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </Button>
+                <Box p={0} pt={'10px'} _hover={{ pt: 0, pb: '10px' }} transition={'0.2s'}>
+                  <Button colorScheme={'linkedin'}>
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </Button>
+                </Box>
               </a>
             </Tooltip>
-            <Tooltip label='Instagram'>
+            <Tooltip label={'Instagram'}>
               <a href='https://www.instagram.com/ejmenramic/'>
-                <Button _hover={{ transform: 'translateY(-10px)' }} transition={'0.2s'} colorScheme={'purple'}>
-                  <FontAwesomeIcon icon={faInstagram} />
-                </Button>
+                <Box p={0} pt={'10px'} _hover={{ pt: 0, pb: '10px' }} transition={'0.2s'}>
+                  <Button colorScheme={'purple'}>
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </Button>
+                </Box>
               </a>
             </Tooltip>
           </HStack>

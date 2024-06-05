@@ -1,3 +1,4 @@
+import { t } from '@lingui/macro'
 import { IconType } from 'react-icons'
 import { IoCameraOutline, IoHomeOutline, IoLocationOutline, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 
@@ -10,7 +11,7 @@ export type ContactResume = {
 export const resumeItems: ContactResume[] = [
   {
     icon: IoLocationOutline,
-    socialMedia: 'Sarajevo, Bosnia and Herzegovina ',
+    socialMedia: t`Sarajevo, Bosnia and Herzegovina`,
     link: 'https://www.bing.com/maps?q=sarajevo&FORM=HDRSC6',
   },
   {
@@ -25,13 +26,13 @@ export const resumeItems: ContactResume[] = [
   },
   {
     icon: IoHomeOutline,
-    socialMedia: 'My Website',
+    socialMedia: t`My Website`,
     //TODO: Add link here when its pushed to production
     link: '',
   },
   {
     icon: IoCameraOutline,
-    socialMedia: 'Photography by Ejmen Ramic',
+    socialMedia: t`Photography by Ejmen Ramic`,
     //TODO: Add link here when its pushed to production
     link: '/photography',
   },

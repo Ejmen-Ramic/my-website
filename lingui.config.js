@@ -10,6 +10,3 @@ module.exports = {
     ],
     format: "po",
   };
-
-
-  

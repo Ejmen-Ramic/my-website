@@ -1,5 +1,6 @@
 import { Button, FormControl, Flex, Heading, Input, Stack, Text, useColorModeValue } from '@chakra-ui/react'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { t, Trans } from '@lingui/macro'
 
 // type ForgotPasswordFormInputs = {
 //   email: string;
@@ -20,13 +21,13 @@ const ForgotPassword = (): JSX.Element => {
           my={12}
         >
           <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl' }}>
-            Forgot your password?
+            <Trans>Forgot your password?</Trans>
           </Heading>
           <Text fontSize={{ base: 'sm', sm: 'md' }} color={useColorModeValue('gray.800', 'gray.400')}>
-            You&apos;ll get an email with a reset link
+            <Trans>You&apos;ll get an email with a reset link</Trans>
           </Text>
           <FormControl id={'email'}>
-            <Input placeholder={'your-email@example.com'} _placeholder={{ color: 'gray.500' }} type={'email'} />
+            <Input placeholder={t`your-email@example.com`} _placeholder={{ color: 'gray.500' }} type={'email'} />
           </FormControl>
           <Stack spacing={6}>
             <Button
@@ -36,7 +37,7 @@ const ForgotPassword = (): JSX.Element => {
                 bg: 'blue.500',
               }}
             >
-              Request Reset
+              <Trans>Request Reset</Trans>
             </Button>
           </Stack>
         </Stack>

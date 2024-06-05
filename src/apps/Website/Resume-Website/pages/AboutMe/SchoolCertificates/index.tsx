@@ -17,6 +17,7 @@ import {
   VStack,
 } from '@chakra-ui/react'
 import { steps } from './items'
+import { Trans } from '@lingui/macro'
 
 const SchoolCertificates = () => {
   const { activeStep, setActiveStep } = useSteps({
@@ -46,7 +47,7 @@ const SchoolCertificates = () => {
   return (
     <VStack w={'full'} px={{ md: '100px', lg: '25%' }}>
       <chakra.h3 fontSize={'36px'} fontWeight={'bold'} mb={{ base: '35px', md: '42px' }} textAlign={'center'}>
-        School Achievements
+        <Trans>School Achievements</Trans>
       </chakra.h3>
       <Stack alignItems={'start'} w={'full'} mb={{ md: '50px' }}>
         <Stepper size={'lg'} index={activeStep} orientation={'vertical'} height={getStepHeight()} gap={'0'}>

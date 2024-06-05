@@ -3,6 +3,7 @@ import { FaCalendarAlt, FaLink } from 'react-icons/fa'
 import { FaLocationDot } from 'react-icons/fa6'
 import { FaPaintBrush } from 'react-icons/fa'
 import { itemProps } from './Props'
+import { Trans } from '@lingui/macro'
 
 const Projects = () => {
   const colorMode = useColorModeValue('#000000', '#ECEFF4')
@@ -12,7 +13,7 @@ const Projects = () => {
       <HStack w={'full'} spacing={'10px'}>
         <FaPaintBrush size={'18px'} color={colorMode} />
         <Heading textTransform={'uppercase'} lineHeight={'12px'} fontSize={'18px'} color={colorMode}>
-          Projects
+          <Trans>Projects</Trans>
         </Heading>
       </HStack>
 

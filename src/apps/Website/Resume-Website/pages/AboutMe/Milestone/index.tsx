@@ -10,6 +10,7 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { t, Trans } from '@lingui/macro'
 
 type CardProps = {
   id: number
@@ -21,36 +22,33 @@ type CardProps = {
 const milestones = [
   {
     id: 1,
-    date: 'February 2, 2018',
-    title: 'Started my studies',
-    description: `Kick off my academic journey at the International Islamic University Malaysia (IIUM), marking the beginning of my studies.`,
+    date: t`February 2, 2018`,
+    title: t`Started my studies`,
+    description: t`Kick off my academic journey at the International Islamic University Malaysia (IIUM), marking the beginning of my studies.`,
   },
   {
     id: 2,
-    date: 'April 15, 2022 - January 15, 2023',
-    title: 'Internship at IMTM',
-    description: `Engaged in a valuable internship experience as a Web Coordinator at International Maldives Travel Market (IMTM), where I gained practical skills and insights into Travel and Tourism.`,
+    date: t`April 15, 2022 - January 15, 2023`,
+    title: t`Internship at IMTM`,
+    description: t`Engaged in a valuable internship experience as a Web Coordinator at International Maldives Travel Market (IMTM), where I gained practical skills and insights into Travel and Tourism.`,
   },
   {
     id: 3,
-    date: 'September 25, 2022',
-    title: 'University Graduation',
-    description:
-      'Successfully completed my academic journey at the International Islamic University Malaysia (IIUM), earning a degree in Information and Communication Technologies.',
+    date: t`September 25, 2022`,
+    title: t`University Graduation`,
+    description: t`Successfully completed my academic journey at the International Islamic University Malaysia (IIUM), earning a degree in Information and Communication Technologies.`,
   },
   {
     id: 4,
-    date: 'January 28, 2023',
-    title: 'Internship at FLUX',
-    description:
-      'During my time at FLUX, I had the opportunity to dive into the world of frontend web development. Working hands-on with Chakra UI, TypeScript, React, Next.js, JavaScript, and CSS, I contributed to several projects, learning and growing every step of the way. It was an invaluable experience that helped me refine my skills and solidify my passion for creating dynamic and user-friendly web applications.',
+    date: t`January 28, 2023`,
+    title: t`Internship at FLUX`,
+    description: t`During my time at FLUX, I had the opportunity to dive into the world of frontend web development. Working hands-on with Chakra UI, TypeScript, React, Next.js, JavaScript, and CSS, I contributed to several projects, learning and growing every step of the way. It was an invaluable experience that helped me refine my skills and solidify my passion for creating dynamic and user-friendly web applications.`,
   },
   {
     id: 5,
-    date: 'July 28, 2023',
-    title: 'Promotion - Software & QA Engineer',
-    description:
-      "Promoted to the role of Junior Software & QA Engineer, I embraced new challenges and expanded my expertise. Alongside my existing skills in frontend development, I delved into the learning of backend with MongoDB, automated testing with Playwright, and deployment with Vercel server. This journey not only elevated my technical capabilities but also deepened my understanding of software development and quality assurance practices, allowing me to contribute effectively to the team's projects and objectives.",
+    date: t`July 28, 2023`,
+    title: t`Promotion - Software & QA Engineer`,
+    description: t`Promoted to the role of Junior Software & QA Engineer, I embraced new challenges and expanded my expertise. Alongside my existing skills in frontend development, I delved into the learning of backend with MongoDB, automated testing with Playwright, and deployment with Vercel server. This journey not only elevated my technical capabilities but also deepened my understanding of software development and quality assurance practices, allowing me to contribute effectively to the team's projects and objectives.`,
   },
 ]
 
@@ -62,7 +60,7 @@ const Milestones = () => {
     <Container maxWidth={'7xl'} p={{ base: 2, sm: 1, lg: 10 }} mb={{ base: '50px', lg: '100px' }}>
       <FadeInView delay={0.1}>
         <chakra.h3 fontSize={'36px'} fontWeight={'bold'} mb={18} textAlign={'center'}>
-          Milestones
+          <Trans>Milestones</Trans>
         </chakra.h3>
       </FadeInView>
       <FadeInView delay={0.1}>

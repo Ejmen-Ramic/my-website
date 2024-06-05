@@ -1,4 +1,5 @@
 import { Flex, Text, Icon, Menu, MenuButton, MenuList, MenuItem, useColorModeValue, chakra } from '@chakra-ui/react'
+import { t, Trans } from '@lingui/macro'
 import { BiChevronDown } from 'react-icons/bi'
 import { IoCameraOutline } from 'react-icons/io5'
 
@@ -34,7 +35,7 @@ const MenuLink = ({ name, path, onClose }: MenuLinkProps) => {
 }
 const dropdownLinks = [
   {
-    name: 'Photography',
+    name: t`Photography`,
     path: '/photography',
   },
   // {
@@ -62,7 +63,9 @@ const DropDownMenuMobile = () => {
           >
             <Flex alignItems={'center'}>
               <IoCameraOutline size={33} style={{ marginRight: '12px' }} />
-              <Text>Hobbies</Text>
+              <Text>
+                <Trans>Hobbies</Trans>
+              </Text>
 
               <Icon
                 as={BiChevronDown}

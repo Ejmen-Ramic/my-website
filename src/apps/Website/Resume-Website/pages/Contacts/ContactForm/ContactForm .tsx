@@ -21,6 +21,7 @@ import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from 'react-icons/bs'
 import { MdEmail, MdOutlineEmail } from 'react-icons/md'
 
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { t, Trans } from '@lingui/macro'
 
 const confetti = {
   light: {
@@ -135,27 +136,33 @@ const ContactForm = () => {
                 >
                   <VStack spacing={5}>
                     <FormControl isRequired>
-                      <FormLabel>Name</FormLabel>
+                      <FormLabel>
+                        <Trans>Name</Trans>
+                      </FormLabel>
 
                       <InputGroup>
                         <InputLeftElement children={<BsPerson />} />
-                        <Input type={'text'} name={'name'} placeholder={'Your Name'} />
+                        <Input type={'text'} name={'name'} placeholder={t`Your Name`} />
                       </InputGroup>
                     </FormControl>
 
                     <FormControl isRequired>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>
+                        <Trans>Email</Trans>
+                      </FormLabel>
 
                       <InputGroup>
                         <InputLeftElement children={<MdOutlineEmail />} />
-                        <Input type={'email'} name={'email'} placeholder={'Your Email'} />
+                        <Input type={'email'} name={'email'} placeholder={t`Your Email`} />
                       </InputGroup>
                     </FormControl>
 
                     <FormControl isRequired>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>
+                        <Trans>Message</Trans>
+                      </FormLabel>
 
-                      <Textarea name={'message'} placeholder={'Your Message'} rows={6} resize={'none'} />
+                      <Textarea name={'message'} placeholder={t`Your Message`} rows={6} resize={'none'} />
                     </FormControl>
 
                     <Button
@@ -166,7 +173,7 @@ const ContactForm = () => {
                         bg: 'blue.500',
                       }}
                     >
-                      Send Message
+                      <Trans>Send Message</Trans>
                     </Button>
                   </VStack>
                 </Box>

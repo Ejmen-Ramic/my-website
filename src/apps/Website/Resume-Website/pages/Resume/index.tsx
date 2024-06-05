@@ -6,6 +6,7 @@ import { BsFillPrinterFill, BsGithub } from 'react-icons/bs'
 import { GrLanguage } from 'react-icons/gr'
 import ResumeLeftSide from './LeftSide/ResumeLeftSide'
 import ResumeRightSide from './RightSide'
+import { Trans } from '@lingui/macro'
 
 const Resume: React.FC<{}> = () => {
   const onButtonClick = () => {
@@ -25,13 +26,13 @@ const Resume: React.FC<{}> = () => {
           <HStack w={'full'} h={'70px'} justify={'space-between'} px={{ md: '10px', lg: '0px' }}>
             <Button variant={'ghost'} color={useColorModeValue('#0B3948', '#98bed5')}>
               <GrLanguage style={{ marginRight: '10px' }} />
-              View in Bosnian
+              <Trans>View in Bosnian</Trans>
             </Button>
             <HStack>
               <Link href={'https://github.com/Ejmen-Ramic/my-website/tree/master/src/pages/Resume'}>
                 <Button variant={'ghost'} color={useColorModeValue('#0B3948', '#98bed5')}>
                   <BsGithub style={{ marginRight: '10px' }} />
-                  Source code
+                  <Trans>Source code</Trans>
                 </Button>
               </Link>
 
@@ -58,7 +59,7 @@ const Resume: React.FC<{}> = () => {
                 Ejmen Ramic
               </Heading>
               <Text color={useColorModeValue('#FFFFFF', '#ECEFF4')} fontWeight={600} fontSize={'12px'}>
-                Programming Enthusiast. Software & Quality Assurance Engineer.
+                <Trans>Programming Enthusiast. Software & Quality Assurance Engineer.</Trans>
               </Text>
             </VStack>
 

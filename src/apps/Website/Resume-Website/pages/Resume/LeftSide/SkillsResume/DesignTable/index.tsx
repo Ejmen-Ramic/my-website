@@ -10,6 +10,7 @@ import {
   Td,
   useColorModeValue,
 } from '@chakra-ui/react'
+import { Trans } from '@lingui/macro'
 import { FC, ReactNode } from 'react'
 import { FaCircle } from 'react-icons/fa6'
 
@@ -57,7 +58,7 @@ const DesignTable: FC = () => {
       {
         name: (
           <Text textTransform={'capitalize'} color={useColorModeValue('#0B3948', '#98BED5')}>
-            Graphics Design
+            <Trans>Graphics Design</Trans>
           </Text>
         ),
       },

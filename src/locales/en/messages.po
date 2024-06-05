@@ -26,6 +26,18 @@ msgstr ""
 #~ msgid "{null, plural,}"
 #~ msgstr "{null, plural,}"
 
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:36
+msgid "• Creating and maintaining automated test scripts<0/>• Front and Backend development of the website<1/>• Database design, modeling, data import and migration"
+msgstr "• Creating and maintaining automated test scripts<0/>• Front and Backend development of the website<1/>• Database design, modeling, data import and migration"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:19
+msgid "• Maintain the company's website, design, and create new content<0/> • Handling customers and providing the best packages and locations based on the requirements set out by them in the Maldives<1/> • Creating invoices for the customers<2/> • Successfully connected luxury hotels in Bosnia & Herzegovina with IMTM to create affordable tourist packages for Maldivians to experience the Balkan region especially during the winter season"
+msgstr "• Maintain the company's website, design, and create new content<0/> • Handling customers and providing the best packages and locations based on the requirements set out by them in the Maldives<1/> • Creating invoices for the customers<2/> • Successfully connected luxury hotels in Bosnia & Herzegovina with IMTM to create affordable tourist packages for Maldivians to experience the Balkan region especially during the winter season"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:19
+msgid "<0>•</0>Cummulative Grade Point's Average(CGPA): 3.44/4.0<1/><2>•</2>The Dean's List for academic excellence in <3>Semester2, 2019/2020 </3> Session<4/><5>•</5>The Dean's List for academic excellence in <6>Semester2, 2020/2021 </6>Session<7/><8>•</8>Final Year Project (FYP) promising projects 2021 (System Development Category)"
+msgstr "<0>•</0>Cummulative Grade Point's Average(CGPA): 3.44/4.0<1/><2>•</2>The Dean's List for academic excellence in <3>Semester2, 2019/2020 </3> Session<4/><5>•</5>The Dean's List for academic excellence in <6>Semester2, 2020/2021 </6>Session<7/><8>•</8>Final Year Project (FYP) promising projects 2021 (System Development Category)"
+
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:15
 msgid "1. Tell me about yourself."
 msgstr "1. Tell me about yourself."
@@ -67,12 +79,15 @@ msgid "9. Can you walk me through a project you worked on?"
 msgstr "9. Can you walk me through a project you worked on?"
 
 #: src/shared/components/Footer/Footer.tsx:257
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:46
+#: src/shared/components/Header/HeaderPhotography/index.tsx:94
 #: src/shared/components/Header/index.tsx:150
 #: src/shared/components/Header/Mobile/index.tsx:46
 msgid "About Me"
 msgstr "About Me"
 
 #: src/shared/components/Footer/Footer.tsx:141
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:106
 msgid "All rights reserved"
 msgstr "All rights reserved"
 
@@ -80,10 +95,31 @@ msgstr "All rights reserved"
 msgid "All rights reserved."
 msgstr "All rights reserved."
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:31
+msgid "April 15, 2022 - January 15, 2023"
+msgstr "April 15, 2022 - January 15, 2023"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:14
+msgid "April, 2022 - January, 2023"
+msgstr "April, 2022 - January, 2023"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Intro/AboutIntro.tsx:35
+msgid "As a young adult, growing up in a beautiful city of Bosnia and Herzegovina, I always admired the great developers who managed to make something new from an empty page wether its a computer software of a basic web page. Bosnia at the time was not well developed so I had to pursue my studies in Malaysia as a software engineer. Further down the road I have found my interest in software engineering. Wether its difficult or not my passion grew. Iv'e met many people who shared the same interest as me and together we improved not just in coding but also problem solving. This website is a showcase of my journey and projects that I have undertaken so far."
+msgstr "As a young adult, growing up in a beautiful city of Bosnia and Herzegovina, I always admired the great developers who managed to make something new from an empty page wether its a computer software of a basic web page. Bosnia at the time was not well developed so I had to pursue my studies in Malaysia as a software engineer. Further down the road I have found my interest in software engineering. Wether its difficult or not my passion grew. Iv'e met many people who shared the same interest as me and together we improved not just in coding but also problem solving. This website is a showcase of my journey and projects that I have undertaken so far."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:22
+msgid "Bachelor's Diploma"
+msgstr "Bachelor's Diploma"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:16
+msgid "Bachelor's in Information and Communication Technology"
+msgstr "Bachelor's in Information and Communication Technology"
+
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:104
 msgid "Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to continuous learning. My experience collaborating with diverse teams has equipped me with strong communication and interpersonal skills, fostering an environment of creativity and innovation. Additionally, I have a proven track record of meeting tight deadlines while maintaining a high standard of quality. With a proactive mindset and a drive to excel, I am poised to make significant contributions to any project or team."
 msgstr "Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to continuous learning. My experience collaborating with diverse teams has equipped me with strong communication and interpersonal skills, fostering an environment of creativity and innovation. Additionally, I have a proven track record of meeting tight deadlines while maintaining a high standard of quality. With a proactive mindset and a drive to excel, I am poised to make significant contributions to any project or team."
 
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:11
 #: src/shared/components/Header/MenuButton/LanguageMenu.tsx:27
 #: src/shared/components/Header/Mobile/LanguageMenuMobile.tsx:48
 msgid "Bosnian"
@@ -93,33 +129,92 @@ msgstr "Bosnian"
 msgid "Chief Technology Officer at Sense Sdn. Bhd."
 msgstr "Chief Technology Officer at Sense Sdn. Bhd."
 
+#: src/shared/components/Header/HeaderPhotography/MenuButton/DropDownMenu.tsx:21
+msgid "Coding"
+msgstr "Coding"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/ResumeLeftSide.tsx:26
+msgid "Contact"
+msgstr "Contact"
+
 #: src/shared/components/Footer/Footer.tsx:267
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:47
+#: src/shared/components/Header/HeaderPhotography/index.tsx:142
 #: src/shared/components/Header/index.tsx:180
 #: src/shared/components/Header/Mobile/index.tsx:47
 msgid "Contacts"
 msgstr "Contacts"
 
 #: src/shared/components/Footer/Footer.tsx:141
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:106
 #: src/shared/components/Header/Mobile/index.tsx:107
 msgid "Copyright"
 msgstr "Copyright"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:12
+msgid "Crypto Charity"
+msgstr "Crypto Charity"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:11
+#: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:16
+msgid "Deans List"
+msgstr "Deans List"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Carousel/AboutCarousel.tsx:25
+msgid "Design Projects 1"
+msgstr "Design Projects 1"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Carousel/AboutCarousel.tsx:31
+msgid "Design Projects 2"
+msgstr "Design Projects 2"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Carousel/AboutCarousel.tsx:37
+msgid "Design Projects 3"
+msgstr "Design Projects 3"
 
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:17
 msgid "Director at Islamic Development Bank (IsDB)"
 msgstr "Director at Islamic Development Bank (IsDB)"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:45
+msgid "During my time at FLUX, I had the opportunity to dive into the world of frontend web development. Working hands-on with Chakra UI, TypeScript, React, Next.js, JavaScript, and CSS, I contributed to several projects, learning and growing every step of the way. It was an invaluable experience that helped me refine my skills and solidify my passion for creating dynamic and user-friendly web applications."
+msgstr "During my time at FLUX, I had the opportunity to dive into the world of frontend web development. Working hands-on with Chakra UI, TypeScript, React, Next.js, JavaScript, and CSS, I contributed to several projects, learning and growing every step of the way. It was an invaluable experience that helped me refine my skills and solidify my passion for creating dynamic and user-friendly web applications."
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/index.tsx:15
+msgid "Education"
+msgstr "Education"
+
 #: src/shared/components/Header/index.tsx:215
 #~ msgid "Ejmen Ramic"
 #~ msgstr "Ejmen Ramic"
+
+#: src/apps/Website/Resume-Website/pages/Contacts/ContactForm/ContactForm .tsx:151
+#: src/shared/components/Experimental/Examples/FetchPostAPI.tsx:50
+msgid "Email"
+msgstr "Email"
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:44
+msgid "Email address"
+msgstr "Email address"
 
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/TestimonialContent.tsx:103
 msgid "Endorsement"
 msgstr "Endorsement"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:33
+msgid "Engaged in a valuable internship experience as a Web Coordinator at International Maldives Travel Market (IMTM), where I gained practical skills and insights into Travel and Tourism."
+msgstr "Engaged in a valuable internship experience as a Web Coordinator at International Maldives Travel Market (IMTM), where I gained practical skills and insights into Travel and Tourism."
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:15
 #: src/shared/components/Header/MenuButton/LanguageMenu.tsx:23
 #: src/shared/components/Header/Mobile/LanguageMenuMobile.tsx:44
 msgid "English"
 msgstr "English"
+
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /Form.tsx:20
+#: src/shared/components/Header/Mobile/Form.tsx:20
+msgid "Enter your email"
+msgstr "Enter your email"
 
 #: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:66
 msgid "Explore <0>my</0><1/>limitless possibilities"
@@ -129,13 +224,57 @@ msgstr "Explore <0>my</0><1/>limitless possibilities"
 msgid "Explore my proficiency in web development tools, programming languages, QA testing frameworks, and MongoDB database management."
 msgstr "Explore my proficiency in web development tools, programming languages, QA testing frameworks, and MongoDB database management."
 
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:31
+msgid "Extra Curriculum"
+msgstr "Extra Curriculum"
+
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:26
 msgid "Fast development"
 msgstr "Fast development"
 
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:35
+msgid "features"
+msgstr "features"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:25
+msgid "February 2, 2018"
+msgstr "February 2, 2018"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:31
+msgid "February, 2023 - Present"
+msgstr "February, 2023 - Present"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:18
+msgid "Final Year Project"
+msgstr "Final Year Project"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:16
+msgid "Fluent"
+msgstr "Fluent"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:26
+msgid "FLUX Sdn. Bhd., Malaysia"
+msgstr "FLUX Sdn. Bhd., Malaysia"
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:67
+msgid "Forgot password?"
+msgstr "Forgot password?"
+
+#: src/apps/Website/Resume-Website/pages/Account/Password/ForgotPassword.tsx:24
+msgid "Forgot your password?"
+msgstr "Forgot your password?"
+
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:89
 msgid "Frequently Asked Questions"
 msgstr "Frequently Asked Questions"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:19
+msgid "German"
+msgstr "German"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/DesignTable/index.tsx:61
+msgid "Graphics Design"
+msgstr "Graphics Design"
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:32
 msgid "Guaranteed Quality"
@@ -150,12 +289,16 @@ msgid "Highly Experienced"
 msgstr "Highly Experienced"
 
 #: src/shared/components/Footer/Footer.tsx:228
+#: src/shared/components/Header/HeaderPhotography/MenuButton/DropDownMenu.tsx:70
+#: src/shared/components/Header/HeaderPhotography/MenuButton/DropDownMenuMobile.tsx:67
 #: src/shared/components/Header/MenuButton/DropDownHobbies.tsx:72
 #: src/shared/components/Header/Mobile/DropDownHobbies.tsx:67
 msgid "Hobbies"
 msgstr "Hobbies"
 
 #: src/shared/components/Footer/Footer.tsx:202
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:43
+#: src/shared/components/Header/HeaderPhotography/index.tsx:64
 #: src/shared/components/Header/index.tsx:72
 #: src/shared/components/Header/Mobile/index.tsx:43
 msgid "Home"
@@ -165,6 +308,14 @@ msgstr "Home"
 msgid "How are you?"
 msgstr "How are you?"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/Intro/AboutIntro.tsx:20
+msgid "I"
+msgstr "I"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:17
+msgid "I love running."
+msgstr "I love running."
+
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:45
 msgid "I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished."
 msgstr "I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished."
@@ -172,6 +323,10 @@ msgstr "I thrive in collaborative environments, where I can learn, grow, and exc
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:50
 msgid "I use a combination of prioritization techniques like the Eisenhower Matrix to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like Trello or Notion to keep track of progress. This helps me stay organized and ensures that I focus on the most critical tasks first."
 msgstr "I use a combination of prioritization techniques like the Eisenhower Matrix to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like Trello or Notion to keep track of progress. This helps me stay organized and ensures that I focus on the most critical tasks first."
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:27
+msgid "I worked on a project called Project V4, where my role as a software engineer involved converting and rewriting old JavaScript code and outdated packages into the latest TypeScript, React, Chakra UI and improved server side rendering of Next.js. I managed this project alongside one colleague, and together we completed it within three months. The project was a success, requiring us to write thousands of lines of code to achieve our goals. Currently FLUX website is the fastest in Asia."
+msgstr "I worked on a project called Project V4, where my role as a software engineer involved converting and rewriting old JavaScript code and outdated packages into the latest TypeScript, React, Chakra UI and improved server side rendering of Next.js. I managed this project alongside one colleague, and together we completed it within three months. The project was a success, requiring us to write thousands of lines of code to achieve our goals. Currently FLUX website is the fastest in Asia."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:42
 msgid "I worked on a project where we had to develop a complex admin dashboard for the company. I was responsible for the frontend using React and Chakra UI and wrote tests using the Playwright testing tool, while my teammates handled the backend. We had regular sync-ups to ensure our components integrated smoothly. This collaboration not only helped us meet our deadlines but also improved the overall quality of the product."
@@ -185,9 +340,18 @@ msgstr "I worked on an e-commerce platform where we used React, TypeScript, and 
 msgid "I'm a software developer with a passion for creating intuitive and efficient user experiences. I've been working with latest languages, frameworks and testing tools for the past few years, and I love how these tools enable me to build scalable and maintainable applications. Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
 msgstr "I'm a software developer with a passion for creating intuitive and efficient user experiences. I've been working with latest languages, frameworks and testing tools for the past few years, and I love how these tools enable me to build scalable and maintainable applications. Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
 
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:13
+msgid "I'm a web developer."
+msgstr "I'm a web developer."
+
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:39
 msgid "I've developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team."
 msgstr "I've developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team."
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:14
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:20
+msgid "IIUM, Malaysia"
+msgstr "IIUM, Malaysia"
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:34
 msgid "In five years, I see myself taking on more leadership responsibilities, possibly leading a development team. I'd like to continue honing my technical skills while also mentoring junior developers. I'm also interested in exploring more about system architecture and design, contributing to larger strategic decisions."
@@ -197,6 +361,40 @@ msgstr "In five years, I see myself taking on more leadership responsibilities, 
 msgid "In one of my projects, we had a major issue right before a product launch where our application wasn't scaling properly under load. I led a small team to identify the bottlenecks. We optimized our database queries and introduced caching mechanisms, which significantly improved performance. It was a stressful situation, but it taught me a lot about teamwork and problem-solving under pressure"
 msgstr "In one of my projects, we had a major issue right before a product launch where our application wasn't scaling properly under load. I led a small team to identify the bottlenecks. We optimized our database queries and introduced caching mechanisms, which significantly improved performance. It was a stressful situation, but it taught me a lot about teamwork and problem-solving under pressure"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:23
+msgid "Information and Communication Technology"
+msgstr "Information and Communication Technology"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:20
+msgid "Intermediate"
+msgstr "Intermediate"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:44
+msgid "Internship at FLUX"
+msgstr "Internship at FLUX"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:32
+msgid "Internship at IMTM"
+msgstr "Internship at IMTM"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:43
+msgid "January 28, 2023"
+msgstr "January 28, 2023"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:49
+msgid "July 28, 2023"
+msgstr "July 28, 2023"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:27
+msgid "Kick off my academic journey at the International Islamic University Malaysia (IIUM), marking the beginning of my studies."
+msgstr "Kick off my academic journey at the International Islamic University Malaysia (IIUM), marking the beginning of my studies."
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:15
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:32
+msgid "Kuala Lumpur, Malaysia"
+msgstr "Kuala Lumpur, Malaysia"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:31
 #: src/shared/components/Header/MenuButton/LanguageMenu.tsx:77
 #: src/shared/components/Header/Mobile/LanguageMenuMobile.tsx:78
 msgid "Languages"
@@ -206,20 +404,43 @@ msgstr "Languages"
 #~ msgid "Last login on {0}."
 #~ msgstr "Last login on {0}."
 
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:21
+msgid "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project’s significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
+msgstr "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project’s significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
+
+#: src/shared/components/Experimental/Examples/FetchPostAPI.tsx:47
+#: src/shared/components/Experimental/Examples/FetchPostAPI.tsx:62
+msgid "Login"
+msgstr "Login"
+
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:14
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:21
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:28
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem."
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem."
 
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:74
 #: src/shared/components/Header/Mobile/index.tsx:75
 msgid "Main Menu"
 msgstr "Main Menu"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:15
+msgid "Male, Maldives"
+msgstr "Male, Maldives"
+
+#: src/apps/Website/Resume-Website/pages/Contacts/ContactForm/ContactForm .tsx:162
+msgid "Message"
+msgstr "Message"
 
 #: src/Inbox.js:15
 #~ msgid "Message Inbox"
 #~ msgstr "Message Inbox"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:63
+msgid "Milestones"
+msgstr "Milestones"
+
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:48
 #: src/shared/components/Header/Mobile/index.tsx:48
 msgid "My Account"
 msgstr "My Account"
@@ -227,6 +448,18 @@ msgstr "My Account"
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:33
 msgid "My coding style goes beyond just speed. I prioritize writing clean, readable code that ensures responsiveness across all devices."
 msgstr "My coding style goes beyond just speed. I prioritize writing clean, readable code that ensures responsiveness across all devices."
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/items.tsx:29
+msgid "My Website"
+msgstr "My Website"
+
+#: src/apps/Website/Resume-Website/pages/Contacts/ContactForm/ContactForm .tsx:140
+msgid "Name"
+msgstr "Name"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:12
+msgid "Native"
+msgstr "Native"
 
 #: src/shared/components/Footer/Footer.tsx:192
 msgid "Navigate"
@@ -240,11 +473,29 @@ msgstr "Need More Information"
 msgid "Neversettle"
 msgstr "Neversettle"
 
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:82
+msgid "Not a user?"
+msgstr "Not a user?"
+
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:22
 msgid "One of my greatest strengths is my ability to learn quickly and adapt to new technologies. For instance, I picked up Chakra UI on my own and have been able to integrate it seamlessly into my projects.<0/><1/> On the flip side, a weakness of mine is that I can be a bit of a perfectionist. Sometimes I spend too much time tweaking small details. I'm working on balancing my attention to detail with efficiency."
 msgstr "One of my greatest strengths is my ability to learn quickly and adapt to new technologies. For instance, I picked up Chakra UI on my own and have been able to integrate it seamlessly into my projects.<0/><1/> On the flip side, a weakness of mine is that I can be a bit of a perfectionist. Sometimes I spend too much time tweaking small details. I'm working on balancing my attention to detail with efficiency."
 
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/OSTable/index.tsx:57
+msgid "Operative Sytem"
+msgstr "Operative Sytem"
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:50
+#: src/shared/components/Experimental/Examples/FetchPostAPI.tsx:55
+msgid "Password"
+msgstr "Password"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/OurProgress/OurProgress.tsx:86
+msgid "Photographs"
+msgstr "Photographs"
+
 #: src/shared/components/Footer/Footer.tsx:237
+#: src/shared/components/Header/HeaderPhotography/MenuButton/DropDownMenuMobile.tsx:38
 msgid "Photography"
 msgstr "Photography"
 
@@ -252,6 +503,38 @@ msgstr "Photography"
 #: src/shared/components/Header/Mobile/DropDownHobbies.tsx:38
 msgid "Photography (dev)"
 msgstr "Photography (dev)"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/items.tsx:35
+msgid "Photography by Ejmen Ramic"
+msgstr "Photography by Ejmen Ramic"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/index.tsx:15
+msgid "Professional Experience"
+msgstr "Professional Experience"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/ProgrammingTable/index.tsx:86
+msgid "Programming"
+msgstr "Programming"
+
+#: src/apps/Website/Resume-Website/pages/Resume/index.tsx:62
+msgid "Programming Enthusiast. Software & Quality Assurance Engineer."
+msgstr "Programming Enthusiast. Software & Quality Assurance Engineer."
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:24
+msgid "Project V4"
+msgstr "Project V4"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/index.tsx:16
+msgid "Projects"
+msgstr "Projects"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:51
+msgid "Promoted to the role of Junior Software & QA Engineer, I embraced new challenges and expanded my expertise. Alongside my existing skills in frontend development, I delved into the learning of backend with MongoDB, automated testing with Playwright, and deployment with Vercel server. This journey not only elevated my technical capabilities but also deepened my understanding of software development and quality assurance practices, allowing me to contribute effectively to the team's projects and objectives."
+msgstr "Promoted to the role of Junior Software & QA Engineer, I embraced new challenges and expanded my expertise. Alongside my existing skills in frontend development, I delved into the learning of backend with MongoDB, automated testing with Playwright, and deployment with Vercel server. This journey not only elevated my technical capabilities but also deepened my understanding of software development and quality assurance practices, allowing me to contribute effectively to the team's projects and objectives."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:50
+msgid "Promotion - Software & QA Engineer"
+msgstr "Promotion - Software & QA Engineer"
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:93
 msgid "Reasons to <0>Count</0> on Me"
@@ -261,12 +544,37 @@ msgstr "Reasons to <0>Count</0> on Me"
 msgid "Recommendation from top employers in Malaysia and Bosnia"
 msgstr "Recommendation from top employers in Malaysia and Bosnia"
 
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:84
+msgid "Register"
+msgstr "Register"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/OurProgress/OurProgress.tsx:85
+msgid "Registered"
+msgstr "Registered"
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:64
+msgid "Remember me"
+msgstr "Remember me"
+
+#: src/apps/Website/Resume-Website/pages/Account/Password/ForgotPassword.tsx:40
+msgid "Request Reset"
+msgstr "Request Reset"
+
 #: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:101
 #: src/shared/components/Footer/Footer.tsx:212
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:44
 #: src/shared/components/Header/index.tsx:102
 #: src/shared/components/Header/Mobile/index.tsx:44
 msgid "Resume"
 msgstr "Resume"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/items.tsx:14
+msgid "Sarajevo, Bosnia and Herzegovina"
+msgstr "Sarajevo, Bosnia and Herzegovina"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/index.tsx:50
+msgid "School Achievements"
+msgstr "School Achievements"
 
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:31
 msgid "Secret Coder"
@@ -276,14 +584,67 @@ msgstr "Secret Coder"
 #~ msgid "See all <0>unread messages</0>or <1>mark them</1> as read."
 #~ msgstr "See all <0>unread messages</0>or <1>mark them</1> as read."
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:12
+msgid "Semester 1, 2019/2020"
+msgstr "Semester 1, 2019/2020"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:17
+msgid "Semester 1, 2020/2021"
+msgstr "Semester 1, 2020/2021"
+
+#: src/apps/Website/Resume-Website/pages/Contacts/ContactForm/ContactForm .tsx:176
+msgid "Send Message"
+msgstr "Send Message"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:37
+msgid "September 25, 2022"
+msgstr "September 25, 2022"
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:77
+msgid "Sign in"
+msgstr "Sign in"
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:30
+msgid "Sign in to your account"
+msgstr "Sign in to your account"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/index.tsx:13
+msgid "Skills"
+msgstr "Skills"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Intro/AboutIntro.tsx:18
+msgid "So, you want to know how"
+msgstr "So, you want to know how"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:33
+msgid "Software and QA Engineer at FLUX"
+msgstr "Software and QA Engineer at FLUX"
+
+#: src/apps/Website/Resume-Website/pages/Resume/index.tsx:35
+msgid "Source code"
+msgstr "Source code"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Intro/AboutIntro.tsx:22
+msgid "started coding, huh?"
+msgstr "started coding, huh?"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:26
+msgid "Started my studies"
+msgstr "Started my studies"
+
 #: src/shared/components/Footer/Footer.tsx:274
 #: src/shared/components/Header/Mobile/Form.tsx:8
 msgid "Stay up to date"
 msgstr "Stay up to date"
 
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /Form.tsx:38
 #: src/shared/components/Header/Mobile/Form.tsx:38
 msgid "Subscribe"
 msgstr "Subscribe"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:39
+msgid "Successfully completed my academic journey at the International Islamic University Malaysia (IIUM), earning a degree in Information and Communication Technologies."
+msgstr "Successfully completed my academic journey at the International Islamic University Malaysia (IIUM), earning a degree in Information and Communication Technologies."
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:44
 msgid "Team Collaboration"
@@ -293,17 +654,55 @@ msgstr "Team Collaboration"
 msgid "Technical Expertise"
 msgstr "Technical Expertise"
 
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:15
+msgid "The \"Blockchain Charity\" project is a web application designed to ensure safe and transparent charitable donations via blockchain. It includes smart contract testing for donation and withdrawal transactions, and features for managing and monitoring donations and thresholds. The app uses tools like Truffle, Ganache, and MetaMask to securely handle and display transactions, helping to prevent fraud and money laundering while ensuring funds reach the intended recipients."
+msgstr "The \"Blockchain Charity\" project is a web application designed to ensure safe and transparent charitable donations via blockchain. It includes smart contract testing for donation and withdrawal transactions, and features for managing and monitoring donations and thresholds. The app uses tools like Truffle, Ganache, and MetaMask to securely handle and display transactions, helping to prevent fraud and money laundering while ensuring funds reach the intended recipients."
+
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:93
 msgid "The following list of frequently asked questions by employers that may also assist you in getting your questions answered:"
 msgstr "The following list of frequently asked questions by employers that may also assist you in getting your questions answered:"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Carousel/AboutCarousel.tsx:26
+#: src/apps/Website/Resume-Website/pages/AboutMe/Carousel/AboutCarousel.tsx:32
+#: src/apps/Website/Resume-Website/pages/AboutMe/Carousel/AboutCarousel.tsx:38
+msgid "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters."
+msgstr "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters."
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:33
+msgid "to enjoy all of the cool"
+msgstr "to enjoy all of the cool"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/ToolsTable/index.tsx:57
+msgid "Tools"
+msgstr "Tools"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:38
+msgid "University Graduation"
+msgstr "University Graduation"
+
+#: src/apps/Website/Resume-Website/pages/Resume/index.tsx:29
+msgid "View in Bosnian"
+msgstr "View in Bosnian"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/OurProgress/OurProgress.tsx:84
+msgid "Visitors"
+msgstr "Visitors"
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:54
 msgid "We had a data-heavy application that was experiencing slow load times. I optimized the code by implementing lazy loading for components and using React.memo to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced indexing. These changes improved the application's performance significantly, reducing load times by about 40%."
 msgstr "We had a data-heavy application that was experiencing slow load times. I optimized the code by implementing lazy loading for components and using React.memo to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced indexing. These changes improved the application's performance significantly, reducing load times by about 40%."
 
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:16
+msgid "Web Coordinator at International Maldives Travel Market (IMTM)"
+msgstr "Web Coordinator at International Maldives Travel Market (IMTM)"
+
 #: src/shared/components/Footer/Footer.tsx:111
 msgid "Welcome to my website! I am a software engineer and photographer based in Bosnia and Herzegovina. Feel free to view my resume and work. <0/> <1/>Powered by"
 msgstr "Welcome to my website! I am a software engineer and photographer based in Bosnia and Herzegovina. Feel free to view my resume and work. <0/> <1/>Powered by"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/OurProgress/OurProgress.tsx:80
+msgid "What are the website achievements?"
+msgstr "What are the website achievements?"
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:27
 msgid "When it comes to coding swiftly, I aim for efficiency without sacrificing quality."
@@ -316,3 +715,27 @@ msgstr "When we decided to switch from JavaScript and CSS to TypeScript and Chak
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:46
 msgid "When we decided to switch to TypeScript at one of the companies I worked for, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
 msgstr "When we decided to switch to TypeScript at one of the companies I worked for, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
+
+#: src/apps/Website/Resume-Website/pages/Account/Password/ForgotPassword.tsx:27
+msgid "You'll get an email with a reset link"
+msgstr "You'll get an email with a reset link"
+
+#: src/apps/Website/Resume-Website/pages/Contacts/ContactForm/ContactForm .tsx:156
+msgid "Your Email"
+msgstr "Your Email"
+
+#: src/shared/components/Footer/Footer.tsx:280
+msgid "Your email address"
+msgstr "Your email address"
+
+#: src/apps/Website/Resume-Website/pages/Contacts/ContactForm/ContactForm .tsx:165
+msgid "Your Message"
+msgstr "Your Message"
+
+#: src/apps/Website/Resume-Website/pages/Contacts/ContactForm/ContactForm .tsx:145
+msgid "Your Name"
+msgstr "Your Name"
+
+#: src/apps/Website/Resume-Website/pages/Account/Password/ForgotPassword.tsx:30
+msgid "your-email@example.com"
+msgstr "your-email@example.com"

@@ -2,6 +2,7 @@ import { VStack, Box, Heading, HStack, Text, useColorModeValue, Stack } from '@c
 import { FaCalendarAlt } from 'react-icons/fa'
 import { FaBriefcase, FaLocationDot } from 'react-icons/fa6'
 import { itemProps } from './Props'
+import { Trans } from '@lingui/macro'
 
 const ProExperience = () => {
   const colorMode = useColorModeValue('#000000', '#ECEFF4')
@@ -11,7 +12,7 @@ const ProExperience = () => {
       <HStack w={'full'} spacing={'10px'}>
         <FaBriefcase size={'18px'} />
         <Heading textTransform={'uppercase'} lineHeight={'12px'} fontSize={'18px'} color={colorMode}>
-          Professional Experience
+          <Trans>Professional Experience</Trans>
         </Heading>
       </HStack>
 

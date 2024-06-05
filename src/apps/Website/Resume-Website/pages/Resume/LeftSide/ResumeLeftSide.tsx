@@ -3,6 +3,7 @@ import { VStack, Box, Heading, Button, useColorModeValue } from '@chakra-ui/reac
 import { IoMailOutline } from 'react-icons/io5'
 import { resumeItems } from './items'
 import SkillsResume from './SkillsResume'
+import { Trans } from '@lingui/macro'
 
 const ResumeLeftSide = () => {
   const handleContactClick = (link: string) => {
@@ -22,7 +23,7 @@ const ResumeLeftSide = () => {
     >
       <VStack w={'full'} alignItems={'start'} pt={{ lg: '20px' }}>
         <Heading textTransform={'uppercase'} fontSize={'18px'} color={useColorModeValue('#000000', '#ECEFF4')}>
-          Contact
+          <Trans>Contact</Trans>
         </Heading>
         <Box bgColor={useColorModeValue('#000000', '#ECEFF4')} height={'2px'} w={'full'}></Box>
         <VStack w={'full'} spacing={'0px'} alignItems={'start'}>

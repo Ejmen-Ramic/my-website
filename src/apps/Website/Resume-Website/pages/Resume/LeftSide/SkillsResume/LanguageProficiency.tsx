@@ -1,4 +1,5 @@
 import { Heading, HStack, Text, useColorModeValue, VStack } from '@chakra-ui/react'
+import { t, Trans } from '@lingui/macro'
 
 type LanguageProps = {
   language: string
@@ -7,16 +8,16 @@ type LanguageProps = {
 
 const languages: LanguageProps[] = [
   {
-    language: 'Bosnian',
-    level: 'Native',
+    language: t`Bosnian`,
+    level: t`Native`,
   },
   {
-    language: 'English',
-    level: 'Fluent',
+    language: t`English`,
+    level: t`Fluent`,
   },
   {
-    language: 'German',
-    level: 'Intermediate',
+    language: t`German`,
+    level: t`Intermediate`,
   },
 ]
 
@@ -27,7 +28,7 @@ const LanguageProficiency = () => {
   return (
     <VStack w={'full'} alignItems={'start'} spacing={'3px'}>
       <Heading textTransform={'capitalize'} fontSize={'14px'} color={useColorModeValue('#0B3948', '#98BED5')}>
-        Languages
+        <Trans>Languages</Trans>
       </Heading>
       {languages.map(({ language, level }, i) => (
         <HStack key={i} w={'full'} justify={'space-between'}>

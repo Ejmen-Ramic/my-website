@@ -1,5 +1,5 @@
 import { Box, Heading, Input, Button, useColorModeValue } from '@chakra-ui/react'
-import { Trans } from '@lingui/macro'
+import { t, Trans } from '@lingui/macro'
 
 const HeaderForm = () => {
   return (
@@ -17,7 +17,7 @@ const HeaderForm = () => {
             height={'50px'}
             rounded={'17px'}
             _placeholder={{ color: 'gray.300' }}
-            placeholder={'Enter your email'}
+            placeholder={t`Enter your email`}
             _focus={{ outline: 0, bg: 'whiteAlpha.400' }}
             color={'gray.100'}
             bg={useColorModeValue('blackAlpha.100', 'gray.600')}

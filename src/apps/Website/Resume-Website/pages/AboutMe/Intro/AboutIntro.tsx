@@ -2,6 +2,7 @@ import { Box, Flex, Heading, Stack, Text, VStack } from '@chakra-ui/react'
 import { FC } from 'react'
 import AboutAlbum from './AboutAlbum'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { Trans } from '@lingui/macro'
 
 const AboutIntro: FC = () => {
   return (
@@ -14,11 +15,11 @@ const AboutIntro: FC = () => {
             </FadeInView>
             <FadeInView delay={0.3}>
               <Heading fontSize={{ base: '40px', md: '54px' }} fontWeight={300} letterSpacing={'1px'}>
-                So, you want to know how{' '}
+                <Trans>So, you want to know how</Trans>{' '}
                 <Box color={'red'} as={'span'} fontWeight={'bold'}>
-                  I
+                  <Trans>I</Trans>
                 </Box>{' '}
-                started coding, huh?
+                <Trans>started coding, huh?</Trans>
               </Heading>
             </FadeInView>
           </Stack>
@@ -31,13 +32,15 @@ const AboutIntro: FC = () => {
           >
             <FadeInView delay={0.4}>
               <Text>
-                As a young adult, growing up in a beautiful city of Bosnia and Herzegovina, I always admired the great
-                developers who managed to make something new from an empty page wether its a computer software of a
-                basic web page. Bosnia at the time was not well developed so I had to pursue my studies in Malaysia as a
-                software engineer. Further down the road I have found my interest in software engineering. Wether its
-                difficult or not my passion grew. Iv'e met many people who shared the same interest as me and together
-                we improved not just in coding but also problem solving. This website is a showcase of my journey and
-                projects that I have undertaken so far.
+                <Trans>
+                  As a young adult, growing up in a beautiful city of Bosnia and Herzegovina, I always admired the great
+                  developers who managed to make something new from an empty page wether its a computer software of a
+                  basic web page. Bosnia at the time was not well developed so I had to pursue my studies in Malaysia as
+                  a software engineer. Further down the road I have found my interest in software engineering. Wether
+                  its difficult or not my passion grew. Iv'e met many people who shared the same interest as me and
+                  together we improved not just in coding but also problem solving. This website is a showcase of my
+                  journey and projects that I have undertaken so far.
+                </Trans>
               </Text>
             </FadeInView>
           </Stack>

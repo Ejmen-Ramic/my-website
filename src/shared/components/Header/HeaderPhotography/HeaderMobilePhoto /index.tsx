@@ -23,6 +23,7 @@ import { IconType } from 'react-icons'
 import HeaderForm from './Form'
 import IconBurgerMobile from '../../../../icons/IconBurgerMobile'
 import IconBurger from '../../../../icons/IconBurger'
+import { t, Trans } from '@lingui/macro'
 
 type MenuItemLink = {
   label: string
@@ -39,12 +40,12 @@ const HeaderMobile = () => {
     return (item as MenuItemLink).to !== undefined
   }
   const menuItems: (MenuItemLink | React.ReactElement)[] = [
-    { label: 'Home', icon: IoHomeOutline, to: '/' },
-    { label: 'Resume', icon: IoBriefcaseOutline, to: '/resume' },
+    { label: t`Home`, icon: IoHomeOutline, to: '/' },
+    { label: t`Resume`, icon: IoBriefcaseOutline, to: '/resume' },
     <MenuContainerMobile />,
-    { label: 'About Me', icon: IoCodeSlash, to: '/about' },
-    { label: 'Contacts', icon: IoFileTrayFullOutline, to: '/contact' },
-    { label: 'My Account', icon: IoPersonOutline, to: '/signin' },
+    { label: t`About Me`, icon: IoCodeSlash, to: '/about' },
+    { label: t`Contacts`, icon: IoFileTrayFullOutline, to: '/contact' },
+    { label: t`My Account`, icon: IoPersonOutline, to: '/signin' },
   ]
 
   return (
@@ -70,7 +71,7 @@ const HeaderMobile = () => {
             _hover={{ color: '#02bece' }}
           />
           <DrawerHeader color={useColorModeValue('#2b333d', 'white')} fontSize={'25px'} letterSpacing={'2px'}>
-            Main Menu
+            <Trans>Main Menu</Trans>
           </DrawerHeader>
           <DrawerBody>
             <Flex direction={'column'} h={'full'}>
@@ -102,7 +103,7 @@ const HeaderMobile = () => {
               </Stack>
               <HeaderForm />
               <Text bottom={'0'} fontSize={'sm'} mb={'40px'} mt={'40px'}>
-                Copyright ©{year} EjmenRamic. All rights reserved.
+                <Trans>Copyright</Trans> ©{year} EjmenRamic. <Trans>All rights reserved</Trans>
               </Text>
             </Flex>
           </DrawerBody>

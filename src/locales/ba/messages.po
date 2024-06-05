@@ -13,6 +13,18 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:36
+msgid "• Creating and maintaining automated test scripts<0/>• Front and Backend development of the website<1/>• Database design, modeling, data import and migration"
+msgstr "• Kreiranje i održavanje automatizovanih test skripti<0/>• Frontend i Backend razvoj web stranice<1/>• Dizajn baze podataka, modeliranje, unos podataka i migracija"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:19
+msgid "• Maintain the company's website, design, and create new content<0/> • Handling customers and providing the best packages and locations based on the requirements set out by them in the Maldives<1/> • Creating invoices for the customers<2/> • Successfully connected luxury hotels in Bosnia & Herzegovina with IMTM to create affordable tourist packages for Maldivians to experience the Balkan region especially during the winter season"
+msgstr "• Održavanje web stranice kompanije, dizajniranje i kreiranje novog sadržaja<0/> • Rad sa klijentima i pružanje najboljih paketa i lokacija prema njihovim zahtjevima na Maldivima<1/> • Kreiranje faktura za klijente<2/> • Uspješno povezivanje luksuznih hotela u Bosni i Hercegovini sa IMTM-om kako bi se kreirali pristupačni turistički paketi za Maldivce da dožive balkansku regiju, posebno tokom zimske sezone"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:19
+msgid "<0>•</0>Cummulative Grade Point's Average(CGPA): 3.44/4.0<1/><2>•</2>The Dean's List for academic excellence in <3>Semester2, 2019/2020 </3> Session<4/><5>•</5>The Dean's List for academic excellence in <6>Semester2, 2020/2021 </6>Session<7/><8>•</8>Final Year Project (FYP) promising projects 2021 (System Development Category)"
+msgstr "<0>•</0>Prosječna ocjena (CGPA): 3.44/4.0<1/><2>•</2>Lista dekana za akademsku izvrsnost u <3>semestru 2, 2019/2020</3> sesija<4/><5>•</5>Lista dekana za akademsku izvrsnost u <6>semestru 2, 2020/2021</6> sesija<7/><8>•</8>Finalni projekt (FYP) obećavajući projekti 2021 (Kategorija razvoja sistema)"
+
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:15
 msgid "1. Tell me about yourself."
 msgstr "1. Recite mi nešto o sebi."
@@ -54,12 +66,15 @@ msgid "9. Can you walk me through a project you worked on?"
 msgstr "9. Možete li me provesti kroz projekt na kojem ste radili?"
 
 #: src/shared/components/Footer/Footer.tsx:257
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:46
+#: src/shared/components/Header/HeaderPhotography/index.tsx:94
 #: src/shared/components/Header/index.tsx:150
 #: src/shared/components/Header/Mobile/index.tsx:46
 msgid "About Me"
 msgstr "O meni"
 
 #: src/shared/components/Footer/Footer.tsx:141
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:106
 msgid "All rights reserved"
 msgstr "Sva prava zadržana"
 
@@ -67,11 +82,31 @@ msgstr "Sva prava zadržana"
 msgid "All rights reserved."
 msgstr "Sva prava zadržana."
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:31
+msgid "April 15, 2022 - January 15, 2023"
+msgstr "15. april 2022 - 15. Januar 2023"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:14
+msgid "April, 2022 - January, 2023"
+msgstr "April, 2022 - Januar 2023"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Intro/AboutIntro.tsx:35
+msgid "As a young adult, growing up in a beautiful city of Bosnia and Herzegovina, I always admired the great developers who managed to make something new from an empty page wether its a computer software of a basic web page. Bosnia at the time was not well developed so I had to pursue my studies in Malaysia as a software engineer. Further down the road I have found my interest in software engineering. Wether its difficult or not my passion grew. Iv'e met many people who shared the same interest as me and together we improved not just in coding but also problem solving. This website is a showcase of my journey and projects that I have undertaken so far."
+msgstr "Kao mlada osoba, odrastajući u prelijepom gradu Bosni i Hercegovini, uvijek sam divio velikim programerima koji su uspjeli stvoriti nešto novo od prazne stranice, bilo da je to računarski softver ili osnovna web stranica. Bosna u to vrijeme nije bila dobro razvijena pa sam morao nastaviti studije u Maleziji kao softverski inženjer. Nekoliko godina kasnije pronašao sam svoj interes za softversko inženjerstvo. Bez obzira na to je li teško ili ne, moja strast je rasla. Upoznao sam mnoge ljude koji su dijelili isti interes kao ja i zajedno smo napredovali ne samo u kodiranju već i u rješavanju problema. Ova web stranica je prikaz mog puta i projekata koje sam dosad poduzeo."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:22
+msgid "Bachelor's Diploma"
+msgstr "Diploma Prvostupnika"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:16
+msgid "Bachelor's in Information and Communication Technology"
+msgstr "Diplomirani inženjer informacijskih i komunikacijskih tehnologija"
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:104
 msgid "Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to continuous learning. My experience collaborating with diverse teams has equipped me with strong communication and interpersonal skills, fostering an environment of creativity and innovation. Additionally, I have a proven track record of meeting tight deadlines while maintaining a high standard of quality. With a proactive mindset and a drive to excel, I am poised to make significant contributions to any project or team."
 msgstr "Osim isporuke čistog, čitljivog koda, donosim strast za rješavanjem problema i posvećenost kontinuiranom učenju. Moje iskustvo u suradnji s različitim timovima opremilo me snažnim komunikacijskim i interpersonalnim vještinama, potičući okruženje kreativnosti i inovacija. Dodatno, imam dokazane rezultate u ispunjavanju strogih rokova uz održavanje visokih standarda kvaliteta. S proaktivnim načinom razmišljanja i željom za izvrsnošću, spreman sam dati značajan doprinos bilo kojem projektu ili timu."
 
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:11
 #: src/shared/components/Header/MenuButton/LanguageMenu.tsx:27
 #: src/shared/components/Header/Mobile/LanguageMenuMobile.tsx:48
 msgid "Bosnian"
@@ -81,30 +116,88 @@ msgstr "Bosanski"
 msgid "Chief Technology Officer at Sense Sdn. Bhd."
 msgstr "Direktor za tehnologiju u Sense Sdn. Bhd."
 
+#: src/shared/components/Header/HeaderPhotography/MenuButton/DropDownMenu.tsx:21
+msgid "Coding"
+msgstr "Kodiranje"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/ResumeLeftSide.tsx:26
+msgid "Contact"
+msgstr "Kontakt"
+
 #: src/shared/components/Footer/Footer.tsx:267
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:47
+#: src/shared/components/Header/HeaderPhotography/index.tsx:142
 #: src/shared/components/Header/index.tsx:180
 #: src/shared/components/Header/Mobile/index.tsx:47
 msgid "Contacts"
 msgstr "Kontakti"
 
 #: src/shared/components/Footer/Footer.tsx:141
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:106
 #: src/shared/components/Header/Mobile/index.tsx:107
 msgid "Copyright"
 msgstr "Autorsko pravo"
 
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:12
+msgid "Crypto Charity"
+msgstr "Kripto dobrotvorna organizacija"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:11
+#: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:16
+msgid "Deans List"
+msgstr "Dekanova Lista"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Carousel/AboutCarousel.tsx:25
+msgid "Design Projects 1"
+msgstr "Dizajnerski Projekti 1"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Carousel/AboutCarousel.tsx:31
+msgid "Design Projects 2"
+msgstr "Dizajnerski Projekti 2"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Carousel/AboutCarousel.tsx:37
+msgid "Design Projects 3"
+msgstr "Dizajnerski Projekti 3"
 
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:17
 msgid "Director at Islamic Development Bank (IsDB)"
 msgstr "Direktor u Islamskoj razvojnoj banci (IsDB)"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:45
+msgid "During my time at FLUX, I had the opportunity to dive into the world of frontend web development. Working hands-on with Chakra UI, TypeScript, React, Next.js, JavaScript, and CSS, I contributed to several projects, learning and growing every step of the way. It was an invaluable experience that helped me refine my skills and solidify my passion for creating dynamic and user-friendly web applications."
+msgstr "Tokom mog vremena u FLUX-u, imao sam priliku da se upustim u svet frontend web razvoja. Radeći direktno sa Chakra UI, TypeScript-om, React-om, Next.js-om, JavaScript-om i CSS-om, doprineo sam nekoliko projekata, učeći i napredujući na svakom koraku. Bilo je to neprocenjivo iskustvo koje mi je pomoglo da usavršim svoje veštine i učvrstim svoju strast za kreiranjem dinamičnih i korisnički prijatnih web aplikacija."
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/index.tsx:15
+msgid "Education"
+msgstr "Edukacija"
+
+#: src/apps/Website/Resume-Website/pages/Contacts/ContactForm/ContactForm .tsx:151
+#: src/shared/components/Experimental/Examples/FetchPostAPI.tsx:50
+msgid "Email"
+msgstr "Email"
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:44
+msgid "Email address"
+msgstr "Email adresa"
+
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/TestimonialContent.tsx:103
 msgid "Endorsement"
 msgstr "Preporuka"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:33
+msgid "Engaged in a valuable internship experience as a Web Coordinator at International Maldives Travel Market (IMTM), where I gained practical skills and insights into Travel and Tourism."
+msgstr "Učestvovao sam u vrednom iskustvu prakse kao web koordinator na International Maldives Travel Market (IMTM), gde sam stekao praktične veštine i uvide u putovanja i turizam."
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:15
 #: src/shared/components/Header/MenuButton/LanguageMenu.tsx:23
 #: src/shared/components/Header/Mobile/LanguageMenuMobile.tsx:44
 msgid "English"
 msgstr "Engleski"
+
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto/Form.tsx:20
+#: src/shared/components/Header/Mobile/Form.tsx:20
+msgid "Enter your email"
+msgstr "Unesite vašu email adresu"
 
 #: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:66
 msgid "Explore <0>my</0><1/>limitless possibilities"
@@ -114,13 +207,57 @@ msgstr "Istražite <0>moje</0><1/>neograničene mogućnosti"
 msgid "Explore my proficiency in web development tools, programming languages, QA testing frameworks, and MongoDB database management."
 msgstr "Istražite moje vještine u alatima za razvoj weba, programskim jezicima, QA okvirima za testiranje i upravljanju MongoDB bazom podataka."
 
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:31
+msgid "Extra Curriculum"
+msgstr "Vanredne aktivnosti"
+
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:26
 msgid "Fast development"
 msgstr "Brz razvoj"
 
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:35
+msgid "features"
+msgstr "značajke"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:25
+msgid "February 2, 2018"
+msgstr "2. Februar 2018."
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:31
+msgid "February, 2023 - Present"
+msgstr "Februar, 2023 - Sada"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:18
+msgid "Final Year Project"
+msgstr "Završni Projekat Godine"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:16
+msgid "Fluent"
+msgstr "Tečno"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:26
+msgid "FLUX Sdn. Bhd., Malaysia"
+msgstr "FLUX Sdn. Bhd., Malezija"
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:67
+msgid "Forgot password?"
+msgstr "Zaboravili ste lozinku?"
+
+#: src/apps/Website/Resume-Website/pages/Account/Password/ForgotPassword.tsx:24
+msgid "Forgot your password?"
+msgstr "Zaboravili ste lozinku?"
+
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:89
 msgid "Frequently Asked Questions"
 msgstr "Često postavljana pitanja"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:19
+msgid "German"
+msgstr "Njemački"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/DesignTable/index.tsx:61
+msgid "Graphics Design"
+msgstr "Grafički Dizajn"
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:32
 msgid "Guaranteed Quality"
@@ -135,12 +272,16 @@ msgid "Highly Experienced"
 msgstr "Visoko Iskusan"
 
 #: src/shared/components/Footer/Footer.tsx:228
+#: src/shared/components/Header/HeaderPhotography/MenuButton/DropDownMenu.tsx:70
+#: src/shared/components/Header/HeaderPhotography/MenuButton/DropDownMenuMobile.tsx:67
 #: src/shared/components/Header/MenuButton/DropDownHobbies.tsx:72
 #: src/shared/components/Header/Mobile/DropDownHobbies.tsx:67
 msgid "Hobbies"
 msgstr "Hobiji"
 
 #: src/shared/components/Footer/Footer.tsx:202
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:43
+#: src/shared/components/Header/HeaderPhotography/index.tsx:64
 #: src/shared/components/Header/index.tsx:72
 #: src/shared/components/Header/Mobile/index.tsx:43
 msgid "Home"
@@ -150,6 +291,14 @@ msgstr "Početna"
 msgid "How are you?"
 msgstr "Kako si?"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/Intro/AboutIntro.tsx:20
+msgid "I"
+msgstr "Ja"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:17
+msgid "I love running."
+msgstr "Volim trčanje."
+
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:45
 msgid "I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished."
 msgstr "Uspijevam u suradničkim okruženjima, gdje mogu učiti, rasti i razmjenjivati iskustva s drugima. Čvrsto vjerujem da se s timskim radom svaki projekt može ostvariti."
@@ -157,6 +306,11 @@ msgstr "Uspijevam u suradničkim okruženjima, gdje mogu učiti, rasti i razmjen
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:50
 msgid "I use a combination of prioritization techniques like the Eisenhower Matrix to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like Trello or Notion to keep track of progress. This helps me stay organized and ensures that I focus on the most critical tasks first."
 msgstr "Koristim kombinaciju tehnika za prioritizaciju kao što je Eisenhower Matrix za kategorizaciju zadataka po hitnosti i važnosti. Također, razdvajam veće zadatke u manje, upravljive dijelove i koristim alate poput Trello ili Notion za praćenje napretka. To mi pomaže da ostanem organiziran i osiguram da se fokusiram na najvažnije zadatke prvo."
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:27
+msgid "I worked on a project called Project V4, where my role as a software engineer involved converting and rewriting old JavaScript code and outdated packages into the latest TypeScript, React, Chakra UI and improved server side rendering of Next.js. I managed this project alongside one colleague, and together we completed it within three months. The project was a success, requiring us to write thousands of lines of code to achieve our goals. Currently FLUX website is the fastest in Asia."
+msgstr "Radio na projektu nazvanom Projekt V4, gde je moja uloga kao softverskog inženjera uključivala konvertovanje i prepravku starog JavaScript koda i zastarelih paketa u najnoviji TypeScript, React, Chakra UI i poboljšanje server-side renderinga Next.js. Upravljao sam ovim projektom zajedno s jednim kolegom, i zajedno smo ga završili u roku od tri meseca. Projekat je bio uspešan, zahtevajući da napišemo hiljade linija koda kako bismo postigli naše ciljeve. Trenutno je FLUX-ov web sajt najbrži u Aziji."
+
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:42
 msgid "I worked on a project where we had to develop a complex admin dashboard for the company. I was responsible for the frontend using React and Chakra UI and wrote tests using the Playwright testing tool, while my teammates handled the backend. We had regular sync-ups to ensure our components integrated smoothly. This collaboration not only helped us meet our deadlines but also improved the overall quality of the product."
@@ -170,9 +324,18 @@ msgstr "Radio sam na e-commerce platformi gdje smo koristili React, TypeScript i
 msgid "I'm a software developer with a passion for creating intuitive and efficient user experiences. I've been working with latest languages, frameworks and testing tools for the past few years, and I love how these tools enable me to build scalable and maintainable applications. Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
 msgstr "Ja sam softverski developer sa strašću za kreiranje intuitivnih i efikasnih korisničkih iskustava. Posljednjih nekoliko godina radim s najnovijim jezicima, frameworkovima i alatima za testiranje, i volim kako mi ovi alati omogućavaju da gradim skalabilne i održive aplikacije. Izvan posla, uživam u planinarenju i istraživanju novih mjesta, što mi pomaže da ostanem kreativan i osvježen."
 
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:13
+msgid "I'm a web developer."
+msgstr "Ja sam web programer."
+
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:39
 msgid "I've developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team."
 msgstr "Razvio sam svoje vještine kroz potpunu posvećenost i naporan rad, ulažući bezbroj sati u kodiranje i blisku saradnju s timom za proizvod."
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:14
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:20
+msgid "IIUM, Malaysia"
+msgstr "IIUM Malezija"
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:34
 msgid "In five years, I see myself taking on more leadership responsibilities, possibly leading a development team. I'd like to continue honing my technical skills while also mentoring junior developers. I'm also interested in exploring more about system architecture and design, contributing to larger strategic decisions."
@@ -186,10 +349,53 @@ msgstr "Na jednom od mojih projekata imali smo veliki problem neposredno prije l
 #~ msgid "In one of my projects, we had a major issue right before a product launch where our application wasn't scaling properly under load. I led a small team to identify the bottlenecks. We optimized our database queries and introduced caching mechanisms, which significantly improved performance. It was a stressful situation, but it taught me a lot about teamwork and problem-solving under pressure."
 #~ msgstr "U jednom od mojih projekata, imali smo veliki problem neposredno prije lansiranja proizvoda kada naša aplikacija nije pravilno skalirala pod opterećenjem. Vodio sam mali tim da identificiramo uska grla. Optimizirali smo upite na bazi podataka i uveli mehanizme keširanja, što je značajno poboljšalo performanse. Bila je to stresna situacija, ali me naučila mnogo o timskom radu i rješavanju problema pod pritiskom."
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:23
+msgid "Information and Communication Technology"
+msgstr "Informacione i komunikacione tehnologije"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:20
+msgid "Intermediate"
+msgstr "Srednji"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:44
+msgid "Internship at FLUX"
+msgstr "Praksa u FLUX-u"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:32
+msgid "Internship at IMTM"
+msgstr "Praksa u IMTM-u"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:43
+msgid "January 28, 2023"
+msgstr "28. januar 2023."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:49
+msgid "July 28, 2023"
+msgstr "28. juli 2023."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:27
+msgid "Kick off my academic journey at the International Islamic University Malaysia (IIUM), marking the beginning of my studies."
+msgstr "Početak mog akademskog putovanja na Međunarodnom Islamskom Univerzitetu Malezija (IIUM), označava početak mojih studija."
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:15
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:32
+msgid "Kuala Lumpur, Malaysia"
+msgstr "Kuala Lumpur, Malezija"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:31
 #: src/shared/components/Header/MenuButton/LanguageMenu.tsx:77
 #: src/shared/components/Header/Mobile/LanguageMenuMobile.tsx:78
 msgid "Languages"
 msgstr "Jezici"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:21
+msgid "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project’s significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
+msgstr "LifeLine, sistem profiliranja siromaštva, ima za cilj optimizaciju distribucije donacija koristeći rudarenje podataka kako bi se predvidjele i riješile potrebe na efikasan način. Razvijen od strane Ejmena Ramica, projekat se fokusira na smanjenje nepotrebnih donacija, pružajući detaljne informacije o potrebama i predviđajući buduće krize. Cilja svakoga ko želi boriti se protiv siromaštva, koristeći JavaScript i RapidMiner za svoju web platformu. Značaj projekta leži u njegovoj sposobnosti da poboljša uticaj donacija i podigne svijest o globalnim problemima siromaštva."
+
+#: src/shared/components/Experimental/Examples/FetchPostAPI.tsx:47
+#: src/shared/components/Experimental/Examples/FetchPostAPI.tsx:62
+msgid "Login"
+msgstr "Prijavite se"
 
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:14
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:21
@@ -197,10 +403,24 @@ msgstr "Jezici"
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem."
 msgstr ""
 
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:74
 #: src/shared/components/Header/Mobile/index.tsx:75
 msgid "Main Menu"
 msgstr "Glavni meni"
 
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:15
+msgid "Male, Maldives"
+msgstr "Male, Maldivi"
+
+#: src/apps/Website/Resume-Website/pages/Contacts/ContactForm/ContactForm .tsx:162
+msgid "Message"
+msgstr "Poruka"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:63
+msgid "Milestones"
+msgstr "Prekretnice"
+
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:48
 #: src/shared/components/Header/Mobile/index.tsx:48
 msgid "My Account"
 msgstr "Moj račun"
@@ -208,6 +428,18 @@ msgstr "Moj račun"
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:33
 msgid "My coding style goes beyond just speed. I prioritize writing clean, readable code that ensures responsiveness across all devices."
 msgstr "Moj stil kodiranja nadilazi samo brzinu. Prioritet mi je pisanje čistog, čitljivog koda koji osigurava responzivnost na svim uređajima."
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/items.tsx:29
+msgid "My Website"
+msgstr "Moja web stranica"
+
+#: src/apps/Website/Resume-Website/pages/Contacts/ContactForm/ContactForm .tsx:140
+msgid "Name"
+msgstr "Ime"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:12
+msgid "Native"
+msgstr "Materinski"
 
 #: src/shared/components/Footer/Footer.tsx:192
 msgid "Navigate"
@@ -221,11 +453,29 @@ msgstr "Potrebne su dodatne informacije"
 msgid "Neversettle"
 msgstr "Nikada nepristaj"
 
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:82
+msgid "Not a user?"
+msgstr "Niste korisnik?"
+
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:22
 msgid "One of my greatest strengths is my ability to learn quickly and adapt to new technologies. For instance, I picked up Chakra UI on my own and have been able to integrate it seamlessly into my projects.<0/><1/> On the flip side, a weakness of mine is that I can be a bit of a perfectionist. Sometimes I spend too much time tweaking small details. I'm working on balancing my attention to detail with efficiency."
 msgstr "Jedna od mojih najvećih snaga je moja sposobnost da brzo učim i prilagođavam se novim tehnologijama. Na primjer, samostalno sam naučio Chakra UI i uspio ga besprijekorno integrirati u svoje projekte.<0/><1/> S druge strane, moja slabost je to što mogu biti malo perfekcionista. Ponekad trošim previše vremena na sitne detalje. Radim na balansiranju svoje pažnje prema detaljima s efikasnošću."
 
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/OSTable/index.tsx:57
+msgid "Operative Sytem"
+msgstr "Operativni sistem"
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:50
+#: src/shared/components/Experimental/Examples/FetchPostAPI.tsx:55
+msgid "Password"
+msgstr "Lozinka"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/OurProgress/OurProgress.tsx:86
+msgid "Photographs"
+msgstr "Fotografije"
+
 #: src/shared/components/Footer/Footer.tsx:237
+#: src/shared/components/Header/HeaderPhotography/MenuButton/DropDownMenuMobile.tsx:38
 msgid "Photography"
 msgstr "Fotografija"
 
@@ -233,6 +483,38 @@ msgstr "Fotografija"
 #: src/shared/components/Header/Mobile/DropDownHobbies.tsx:38
 msgid "Photography (dev)"
 msgstr "Fotografija (dev)"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/items.tsx:35
+msgid "Photography by Ejmen Ramic"
+msgstr "Fotografije Ejmena Ramica"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/index.tsx:15
+msgid "Professional Experience"
+msgstr "Profesionalno iskustvo"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/ProgrammingTable/index.tsx:86
+msgid "Programming"
+msgstr "Programiranje"
+
+#: src/apps/Website/Resume-Website/pages/Resume/index.tsx:62
+msgid "Programming Enthusiast. Software & Quality Assurance Engineer."
+msgstr "Entuzijasta za programiranje. Inženjer softvera i osiguranja kvaliteta."
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:24
+msgid "Project V4"
+msgstr "Projekat V4"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/index.tsx:16
+msgid "Projects"
+msgstr "Projekti"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:51
+msgid "Promoted to the role of Junior Software & QA Engineer, I embraced new challenges and expanded my expertise. Alongside my existing skills in frontend development, I delved into the learning of backend with MongoDB, automated testing with Playwright, and deployment with Vercel server. This journey not only elevated my technical capabilities but also deepened my understanding of software development and quality assurance practices, allowing me to contribute effectively to the team's projects and objectives."
+msgstr "Promovisan u ulogu Junior Softverskog i QA inženjera, prihvatio sam nove izazove i proširio svoju stručnost. Pored postojećih veština u frontend razvoju, uronio sam u učenje backend tehnologija sa MongoDB, automatizovanog testiranja sa Playwright i deploymenta sa Vercel serverom. Ovo putovanje je ne samo unapredilo moje tehničke sposobnosti, već je i produbilo moje razumevanje praksi razvoja softvera i osiguranja kvaliteta, omogućavajući mi da efikasno doprinosim projektima i ciljevima tima."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:50
+msgid "Promotion - Software & QA Engineer"
+msgstr "Promocija - Softverski i QA inženjer"
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:93
 msgid "Reasons to <0>Count</0> on Me"
@@ -242,25 +524,103 @@ msgstr "Razlozi za <0>Računanje</0> na Mene"
 msgid "Recommendation from top employers in Malaysia and Bosnia"
 msgstr "Preporuka od vodećih poslodavaca u Maleziji i Bosni"
 
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:84
+msgid "Register"
+msgstr "Registrovati se"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/OurProgress/OurProgress.tsx:85
+msgid "Registered"
+msgstr "Registrovan"
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:64
+msgid "Remember me"
+msgstr "Zapamti me"
+
+#: src/apps/Website/Resume-Website/pages/Account/Password/ForgotPassword.tsx:40
+msgid "Request Reset"
+msgstr "Zatraži reset"
+
 #: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:101
 #: src/shared/components/Footer/Footer.tsx:212
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /index.tsx:44
 #: src/shared/components/Header/index.tsx:102
 #: src/shared/components/Header/Mobile/index.tsx:44
 msgid "Resume"
 msgstr "Rezime"
 
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/items.tsx:14
+msgid "Sarajevo, Bosnia and Herzegovina"
+msgstr "Sarajevo, Bosna i Hercegovina"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/index.tsx:50
+msgid "School Achievements"
+msgstr "Školska dostignuća"
+
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:31
 msgid "Secret Coder"
 msgstr "Tajni Koder"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:12
+msgid "Semester 1, 2019/2020"
+msgstr "Semestar 1, 2019/2020"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:17
+msgid "Semester 1, 2020/2021"
+msgstr "Semestar 1, 2020/2021"
+
+#: src/apps/Website/Resume-Website/pages/Contacts/ContactForm/ContactForm .tsx:176
+msgid "Send Message"
+msgstr "Pošalji poruku"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:37
+msgid "September 25, 2022"
+msgstr "25. Septembar 2022."
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:77
+msgid "Sign in"
+msgstr "Prijavi se"
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:30
+msgid "Sign in to your account"
+msgstr "Prijavite se na svoj račun"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/index.tsx:13
+msgid "Skills"
+msgstr "Vještine"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Intro/AboutIntro.tsx:18
+msgid "So, you want to know how"
+msgstr "Dakle, želite da znate kako"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:33
+msgid "Software and QA Engineer at FLUX"
+msgstr "Softverski i QA inženjer u FLUX-u"
+
+#: src/apps/Website/Resume-Website/pages/Resume/index.tsx:35
+msgid "Source code"
+msgstr "Izvorni kod"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Intro/AboutIntro.tsx:22
+msgid "started coding, huh?"
+msgstr "sam počeo programirati, ha?"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:26
+msgid "Started my studies"
+msgstr "Počeo sam studije"
 
 #: src/shared/components/Footer/Footer.tsx:274
 #: src/shared/components/Header/Mobile/Form.tsx:8
 msgid "Stay up to date"
 msgstr "Ostanite u toku"
 
+#: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /Form.tsx:38
 #: src/shared/components/Header/Mobile/Form.tsx:38
 msgid "Subscribe"
 msgstr "Pretplatite se"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:39
+msgid "Successfully completed my academic journey at the International Islamic University Malaysia (IIUM), earning a degree in Information and Communication Technologies."
+msgstr "Uspješno sam završio svoje akademsko putovanje na Međunarodnom islamskom univerzitetu Malezije (IIUM), stekavši diplomu iz informacionih i komunikacionih tehnologija."
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:44
 msgid "Team Collaboration"
@@ -270,17 +630,55 @@ msgstr "Timsku Saradnju"
 msgid "Technical Expertise"
 msgstr "Tehnička Stručnost"
 
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:15
+msgid "The \"Blockchain Charity\" project is a web application designed to ensure safe and transparent charitable donations via blockchain. It includes smart contract testing for donation and withdrawal transactions, and features for managing and monitoring donations and thresholds. The app uses tools like Truffle, Ganache, and MetaMask to securely handle and display transactions, helping to prevent fraud and money laundering while ensuring funds reach the intended recipients."
+msgstr "Projekt \"Blockchain Charity\" je web aplikacija dizajnirana za osiguravanje sigurnih i transparentnih dobrotvornih donacija putem blockchaina. Uključuje testiranje pametnih ugovora za transakcije donacija i povlačenja, te značajke za upravljanje i praćenje donacija i pragova. Aplikacija koristi alate poput Truffle-a, Ganache-a i MetaMask-a za sigurno rukovanje i prikazivanje transakcija, pomažući u sprječavanju prijevara i pranja novca, osiguravajući da sredstva stignu do namijenjenih primatelja."
+
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:93
 msgid "The following list of frequently asked questions by employers that may also assist you in getting your questions answered:"
 msgstr "Sljedeća lista često postavljanih pitanja od strane poslodavaca također vam može pomoći da dobijete odgovore na svoja pitanja:"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Carousel/AboutCarousel.tsx:26
+#: src/apps/Website/Resume-Website/pages/AboutMe/Carousel/AboutCarousel.tsx:32
+#: src/apps/Website/Resume-Website/pages/AboutMe/Carousel/AboutCarousel.tsx:38
+msgid "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters."
+msgstr "Tabla projekata je ekskluzivni resurs za ugovorni rad. Savršena je za slobodne stručnjake, agencije i povremene radnike."
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:33
+msgid "to enjoy all of the cool"
+msgstr "da uživate u svim cool"
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/ToolsTable/index.tsx:57
+msgid "Tools"
+msgstr "Alati"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:38
+msgid "University Graduation"
+msgstr "Diplomiranje na univerzitetu"
+
+#: src/apps/Website/Resume-Website/pages/Resume/index.tsx:29
+msgid "View in Bosnian"
+msgstr "Pogledaj na bosanskom"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/OurProgress/OurProgress.tsx:84
+msgid "Visitors"
+msgstr "Posjetitelji"
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:54
 msgid "We had a data-heavy application that was experiencing slow load times. I optimized the code by implementing lazy loading for components and using React.memo to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced indexing. These changes improved the application's performance significantly, reducing load times by about 40%."
 msgstr "Imali smo aplikaciju s velikom količinom podataka koja je imala sporo vrijeme učitavanja. Optimizirao sam kod implementacijom lijenog učitavanja za komponente i korištenjem React.memo kako bi spriječio nepotrebne ponovne rendere. Na backendu sam optimizirao upite na bazi podataka i uveo indeksiranje. Ove promjene su značajno poboljšale performanse aplikacije, smanjujući vrijeme učitavanja za oko 40%."
 
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:16
+msgid "Web Coordinator at International Maldives Travel Market (IMTM)"
+msgstr "Web koordinator na Internacionalnom Maldivskom sajmu putovanja (IMTM)"
+
 #: src/shared/components/Footer/Footer.tsx:111
 msgid "Welcome to my website! I am a software engineer and photographer based in Bosnia and Herzegovina. Feel free to view my resume and work. <0/> <1/>Powered by"
 msgstr "Dobrodošli na moju web stranicu! Ja sam softverski inženjer i fotograf sa sjedištem u Bosni i Hercegovini. Slobodno pogledajte moj životopis i rad. <0/> <1/>Pokreće"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/OurProgress/OurProgress.tsx:80
+msgid "What are the website achievements?"
+msgstr "Koji su dostignuća web stranice?"
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:27
 msgid "When it comes to coding swiftly, I aim for efficiency without sacrificing quality."
@@ -293,3 +691,27 @@ msgstr "Kada smo odlučili preći sa JavaScript-a i CSS-a na TypeScript i Chakra
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:46
 msgid "When we decided to switch to TypeScript at one of the companies I worked for, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
 msgstr "Kada smo odlučili preći na TypeScript u jednoj od kompanija u kojima sam radio, morao sam se brzo prilagoditi jer sam bio jedan od ključnih developera u timu. Pohađao sam online kurs, pročitao dokumentaciju i počeo refaktorirati male dijelove našeg koda. U roku od nekoliko sedmica, bio sam dovoljno siguran da vodim tranziciju za cijeli naš frontend tim."
+
+#: src/apps/Website/Resume-Website/pages/Account/Password/ForgotPassword.tsx:27
+msgid "You'll get an email with a reset link"
+msgstr "Dobićete email sa linkom za resetovanje"
+
+#: src/apps/Website/Resume-Website/pages/Contacts/ContactForm/ContactForm .tsx:156
+msgid "Your Email"
+msgstr "Vaša email adresa"
+
+#: src/shared/components/Footer/Footer.tsx:280
+msgid "Your email address"
+msgstr "Vaša email adresa"
+
+#: src/apps/Website/Resume-Website/pages/Contacts/ContactForm/ContactForm .tsx:165
+msgid "Your Message"
+msgstr "Vaša poruka"
+
+#: src/apps/Website/Resume-Website/pages/Contacts/ContactForm/ContactForm .tsx:145
+msgid "Your Name"
+msgstr "Vaše ime"
+
+#: src/apps/Website/Resume-Website/pages/Account/Password/ForgotPassword.tsx:30
+msgid "your-email@example.com"
+msgstr "vas-email@example.com"

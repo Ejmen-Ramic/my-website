@@ -2,6 +2,7 @@ import { VStack, Box, Heading, HStack, Text, useColorModeValue, Stack } from '@c
 import { FaCalendarAlt } from 'react-icons/fa'
 import { FaGraduationCap, FaLocationDot } from 'react-icons/fa6'
 import { itemProps } from './Props'
+import { Trans } from '@lingui/macro'
 
 const Education = () => {
   const colorMode = useColorModeValue('#000000', '#ECEFF4')
@@ -11,7 +12,7 @@ const Education = () => {
       <HStack w={'full'} spacing={'10px'}>
         <FaGraduationCap size={'22px'} color={colorMode} />
         <Heading textTransform={'uppercase'} lineHeight={'12px'} fontSize={'18px'} color={colorMode}>
-          Education
+          <Trans>Education</Trans>
         </Heading>
       </HStack>
 
