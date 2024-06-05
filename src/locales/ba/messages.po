@@ -197,7 +197,7 @@ msgstr "Engleski"
 #: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto/Form.tsx:20
 #: src/shared/components/Header/Mobile/Form.tsx:20
 msgid "Enter your email"
-msgstr "Unesite vašu email adresu"
+msgstr "Vaša email adresa"
 
 #: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:66
 msgid "Explore <0>my</0><1/>limitless possibilities"
@@ -616,7 +616,7 @@ msgstr "Ostanite u toku"
 #: src/shared/components/Header/HeaderPhotography/HeaderMobilePhoto /Form.tsx:38
 #: src/shared/components/Header/Mobile/Form.tsx:38
 msgid "Subscribe"
-msgstr "Pretplatite se"
+msgstr "Subscribe"
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:39
 msgid "Successfully completed my academic journey at the International Islamic University Malaysia (IIUM), earning a degree in Information and Communication Technologies."
