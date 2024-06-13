@@ -1,6 +1,6 @@
 import { IconType } from 'react-icons'
 import {
-  SiCss3,
+  SiTailwindcss,
   SiJavascript,
   SiTypescript,
   SiReact,
@@ -57,9 +57,9 @@ const items: CTLProps[] = [
     link: 'https://nextjs.org/',
   },
   {
-    icon: SiCss3,
-    name: 'CSS',
-    link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+    icon: SiTailwindcss,
+    name: 'Tailwind',
+    link: 'https://tailwindcss.com/',
   },
 
   {

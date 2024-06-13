@@ -1,4 +1,4 @@
-import { VStack, Box, Heading, HStack, Text, Button, useColorModeValue } from '@chakra-ui/react'
+import { VStack, Box, Heading, HStack, Text, Button, useColorModeValue, Link } from '@chakra-ui/react'
 import { FaCalendarAlt, FaLink } from 'react-icons/fa'
 import { FaLocationDot } from 'react-icons/fa6'
 import { FaPaintBrush } from 'react-icons/fa'
@@ -18,14 +18,16 @@ const Projects = () => {
       </HStack>
 
       <Box bgColor={colorMode} height={'2px'} w={'full'}></Box>
-      {itemProps.map(({ name, year, location, description }, i) => (
+      {itemProps.map(({ name, year, location, description, link }, i) => (
         <VStack w={'full'} spacing={'10px'} alignItems={'start'} key={i}>
           <HStack w={'full'}>
             <VStack w={'full'} alignItems={'start'} fontSize={'16px'} fontWeight={400} textAlign={'start'}>
-              <Button color={colorLink} variant={'none'} p={'0px'} _hover={{ textDecoration: 'underline' }}>
-                {name}
-                <FaLink style={{ marginLeft: '8px' }} />
-              </Button>
+              <Link href={link}>
+                <Button color={colorLink} variant={'none'} p={'0px'} _hover={{ textDecoration: 'underline' }}>
+                  {name}
+                  <FaLink style={{ marginLeft: '8px' }} />
+                </Button>
+              </Link>
             </VStack>
             <VStack w={{ md: '300px' }} spacing={'0px'}>
               <HStack w={'full'}>

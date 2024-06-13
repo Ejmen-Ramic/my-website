@@ -53,6 +53,10 @@ const getItems = () => {
       level: ['Novice', 'Beginner', 'Intermediate'],
     },
     {
+      name: 'Shadcn UI',
+      level: ['Novice', 'Beginner', 'Intermediate'],
+    },
+    {
       name: 'NodeJS',
       level: ['Novice', 'Beginner', 'Intermediate'],
     },
@@ -62,6 +66,10 @@ const getItems = () => {
     },
     {
       name: 'SQL',
+      level: ['Novice', 'Beginner'],
+    },
+    {
+      name: 'Framer Motion',
       level: ['Novice', 'Beginner'],
     },
     {
