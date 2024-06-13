@@ -17,7 +17,7 @@ import {
   useColorModeValue,
   VStack,
 } from '@chakra-ui/react'
-import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from 'react-icons/bs'
+import { BsGithub, BsLinkedin, BsPerson, BsTwitterX } from 'react-icons/bs'
 import { MdEmail, MdOutlineEmail } from 'react-icons/md'
 
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
@@ -98,12 +98,12 @@ const ContactForm = () => {
                     />
                   </Link>
 
-                  <Link href='https://www.twitter.com'>
+                  <Link href='https://x.com/EjmenRamic'>
                     <IconButton
-                      aria-label='twitter'
+                      aria-label='x'
                       variant={'ghost'}
                       size={'lg'}
-                      icon={<BsTwitter size='28px' />}
+                      icon={<BsTwitterX size='28px' />}
                       _hover={{
                         bg: 'blue.500',
                         color: useColorModeValue('white', 'gray.700'),

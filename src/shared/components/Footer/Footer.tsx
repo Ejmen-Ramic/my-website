@@ -17,7 +17,8 @@ import {
   MenuList,
 } from '@chakra-ui/react'
 import { ReactNode } from 'react'
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 import { BiMailSend } from 'react-icons/bi'
 import FadeInView from '../Hooks/FadeInView'
 import { t, Trans } from '@lingui/macro'
@@ -152,13 +153,8 @@ const Footer = () => {
                   <FaGithub />
                 </SocialButton>
 
-                <SocialButton
-                  label={'Twitter'}
-                  href={'https://twitter.com/EjmenRamic'}
-                  color={'#00aced'}
-                  hoverColor={'cyan'}
-                >
-                  <FaTwitter />
+                <SocialButton label={'X'} href={'https://x.com/EjmenRamic'} color={'#00aced'} hoverColor={'#657786'}>
+                  <FaXTwitter />
                 </SocialButton>
 
                 <SocialButton
@@ -204,7 +200,7 @@ const Footer = () => {
             </FadeInView>
             <FadeInView delay={0.1}>
               <Link
-                href={'/'}
+                href={'/resume'}
                 color={useColorModeValue('#02bece', '#02bece')}
                 _hover={{ color: useColorModeValue('#2b333d', 'white') }}
                 fontSize={'16px'}
@@ -216,7 +212,7 @@ const Footer = () => {
               <Menu>
                 <MenuButton
                   as={Button}
-                  variant='link'
+                  variant={'link'}
                   border={'none'}
                   color={useColorModeValue('#02bece', '#02bece')}
                   _hover={{ color: useColorModeValue('#2b333d', 'white') }}
@@ -234,22 +230,16 @@ const Footer = () => {
                       bg: useColorModeValue('gray.100', 'gray.900'),
                     }}
                   >
-                    <Trans>Photography</Trans>
+                    <Link href={'/photography'}>
+                      <Trans>Photography</Trans>
+                    </Link>
                   </MenuItem>
-                  {/* <MenuItem
-                  _hover={{
-                    color: "#02bece",
-                    bg: useColorModeValue("gray.100", "gray.900"),
-                  }}
-                >
-                  Become a Tutor
-                </MenuItem> */}
                 </MenuList>
-              </Menu>{' '}
+              </Menu>
             </FadeInView>
             <FadeInView delay={0.1}>
               <Link
-                href={'/'}
+                href={'/about'}
                 color={useColorModeValue('#02bece', '#02bece')}
                 _hover={{ color: useColorModeValue('#2b333d', 'white') }}
                 fontSize={'16px'}
@@ -259,7 +249,7 @@ const Footer = () => {
             </FadeInView>
             <FadeInView delay={0.1}>
               <Link
-                href={'/'}
+                href={'/contact'}
                 color={useColorModeValue('#02bece', '#02bece')}
                 _hover={{ color: useColorModeValue('#2b333d', 'white') }}
                 fontSize={'16px'}
