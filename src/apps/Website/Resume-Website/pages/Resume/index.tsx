@@ -7,16 +7,28 @@ import { GrLanguage } from 'react-icons/gr'
 import ResumeLeftSide from './LeftSide/ResumeLeftSide'
 import ResumeRightSide from './RightSide'
 import { Trans } from '@lingui/macro'
-
+// import resumePDF from '../../../../../../public/Website/Resume/PDF/Ejmen-Ramic-Resume.pdf'
 const Resume: React.FC<{}> = () => {
   const onButtonClick = () => {
-    const pdfUrl = 'Sample.pdf'
-    const link = document.createElement('a')
-    link.href = pdfUrl
-    link.download = 'document.pdf'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+    fetch('../../../../../../public/Website /Ejmen-Ramic-Resume.pdf')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok')
+        }
+        return response.blob()
+      })
+      .then((blob) => {
+        const fileURL = window.URL.createObjectURL(blob)
+        const alink = document.createElement('a')
+        alink.href = fileURL
+        alink.download = 'Ejmen-Ramic-Resume.pdf'
+        document.body.appendChild(alink)
+        alink.click()
+        document.body.removeChild(alink)
+      })
+      .catch((error) => {
+        console.error('There has been a problem with your fetch operation:', error)
+      })
   }
   return (
     <Stack w={'full'} spacing={'0px'}>
@@ -35,8 +47,7 @@ const Resume: React.FC<{}> = () => {
                   <Trans>Source code</Trans>
                 </Button>
               </Link>
-
-              <Button variant={'ghost'} color={useColorModeValue('#0B3948', '#98bed5')} onClick={onButtonClick}>
+              <Button variant={'ghost'} onClick={onButtonClick} color={useColorModeValue('#0B3948', '#98bed5')}>
                 <BsFillPrinterFill />
               </Button>
             </HStack>
