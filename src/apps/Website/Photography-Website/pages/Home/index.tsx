@@ -1,15 +1,15 @@
 import { Stack, SimpleGrid, Text, Flex, useColorModeValue } from '@chakra-ui/react'
-import Footer from '../../../../../shared/components/Footer/Footer'
 import { itemProps } from './Props'
 import { Link } from 'react-router-dom'
 import HeaderPhotography from '../../../../../shared/components/Header/HeaderPhotography'
 import FadeInView from '../../../../../shared/components/Hooks/FadeInView'
+import FooterPhotography from '../../../../../shared/components/Footer/FooterPhotography'
 
 const PhotographyHome = () => {
   return (
     <Stack w={'full'} bgColor={useColorModeValue('#ede9e3', '#2b333d')}>
       <HeaderPhotography />
-      <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: '0px', lg: '20px' }} mb={'100px'}>
+      <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: '0px', lg: '20px' }} mb={'100px'} zIndex={1}>
         {itemProps.map(({ image, location, link }, i) => (
           <FadeInView>
             <Stack
@@ -17,6 +17,7 @@ const PhotographyHome = () => {
               key={i}
               height={'450px'}
               _hover={{
+                bgColor: '#00000000',
                 opacity: 0.3,
                 transitionTimingFunction: 'ease-in-out',
               }}
@@ -27,9 +28,6 @@ const PhotographyHome = () => {
               justify={'center'}
               textAlign={'left'}
               zIndex={1}
-              style={{
-                backdropFilter: 'blur(0.5rem)', // Adjust blur strength as needed
-              }}
             >
               {link}
               <FadeInView delay={0.4} direction={'left'}>
@@ -42,16 +40,18 @@ const PhotographyHome = () => {
                   pt={'75px'}
                   direction={'column'}
                   alignItems={'flex-start'}
-                  zIndex={10}
+                  zIndex={100}
                 >
-                  <Text textTransform={'uppercase'}>{location}</Text>
+                  <Text textTransform={'uppercase'} _hover={{ color: 'white' }}>
+                    {location}
+                  </Text>
                 </Flex>
               </FadeInView>
             </Stack>
           </FadeInView>
         ))}
       </SimpleGrid>
-      <Footer />
+      <FooterPhotography />
     </Stack>
   )
 }
