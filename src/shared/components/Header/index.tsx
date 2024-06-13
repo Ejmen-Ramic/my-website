@@ -31,8 +31,9 @@ const Header = () => {
             color={useColorModeValue('#2b333d', 'white')}
             _hover={{ color: useColorModeValue('gray.400', 'gray.600') }}
             fontSize={{ base: '20px', md: '35px' }}
-            fontFamily={'inherit'}
-            fontWeight={'400'}
+            fontFamily={'oswald'}
+            fontWeight={'300'}
+            letterSpacing={'8px'}
             textTransform={'uppercase'}
             transition={'0.6s'}
             cursor={'pointer'}
