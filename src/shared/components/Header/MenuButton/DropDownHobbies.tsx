@@ -86,13 +86,14 @@ const DropDownHobbies = ({ menuData }: MenuDataProps) => {
         </PopoverTrigger>
 
         <PopoverContent
-          border={0}
-          mt={'-7px'}
-          zIndex={1}
-          bg={useColorModeValue('white', 'gray.800')}
-          p={3}
-          rounded={'lg'}
           maxW={'200px'}
+          p={3}
+          mt={'-7px'}
+          border={'1px'}
+          borderColor={useColorModeValue('transparent', 'white')}
+          rounded={'lg'}
+          bg={useColorModeValue('white', 'gray.800')}
+          zIndex={1}
         >
           <Stack>
             {menuData.map((data) => (
