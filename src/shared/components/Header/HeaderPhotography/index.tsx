@@ -2,7 +2,6 @@ import { Box, Button, Flex, HStack, Show, useColorModeValue } from '@chakra-ui/r
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import DropDownMenu from './MenuButton/DropDownMenu'
-import ColorMode from '../../Color-Mode/ColorMode'
 import HeaderMobile from './HeaderMobilePhoto '
 import ColorModePhoto from './ColorModePhoto'
 import AccountButtonPhoto from './AccountButtonPhoto'
@@ -149,7 +148,7 @@ const Header = () => {
       </Show>
       <Show below={'lg'}>
         <Flex justifyContent={'flex-end'} w={'full'} mr={'15px'}>
-          <ColorMode />
+          <ColorModePhoto />
         </Flex>
       </Show>
       <Show below={'lg'}>
