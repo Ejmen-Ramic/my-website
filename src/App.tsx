@@ -16,6 +16,7 @@ import PhotographyHome from './apps/Website/Photography-Website/pages/Home'
 // import NotFound from "./pages/Not Found/NewNotFound";
 import { i18n } from '@lingui/core'
 import { fromNavigator, fromStorage, fromUrl, multipleDetect } from '@lingui/detect-locale'
+import BosniaAlbum from './apps/Website/Photography-Website/pages/Photography/Bosnia'
 
 const breakpoints = {
   sm: '30em',
@@ -74,7 +75,6 @@ const App: React.FC = () => {
           <Route path='/' element={<HomePage />} />
           <Route path='/about' element={<About />} />
           <Route path='/hobbies' element={<Hobbies />} />
-          <Route path='/photography' element={<PhotographyHome />} />
           <Route path='/resume' element={<Resume />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/test' element={<Test />} />
@@ -83,6 +83,8 @@ const App: React.FC = () => {
           <Route path='/passwordreset' element={<ForgotPassword />} />
           <Route path='*' element={<NotFound />} />
           {/* Photography */}
+          <Route path='/photography' element={<PhotographyHome />} />
+          <Route path='/bosnia-and-herzegovina' element={<BosniaAlbum />} />
         </Routes>
         <ScrollToTopButton />
       </Suspense>

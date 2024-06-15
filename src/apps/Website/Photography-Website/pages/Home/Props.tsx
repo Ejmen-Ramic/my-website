@@ -8,7 +8,7 @@ export const itemProps: Props[] = [
   {
     image: './Website/Photography/Home/bosnia.jpg',
     location: 'Bosnia and Herzegovina',
-    link: '',
+    link: '/bosnia-and-herzegovina',
   },
   {
     image: './Website/Photography/Home/malaysia.jpg',
