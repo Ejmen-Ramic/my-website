@@ -16,11 +16,12 @@ const Header = () => {
 
   return (
     <Flex
-      h={{ base: '58px', md: '67px', lg: '120px' }}
       w={'full'}
+      h={{ base: '58px', md: '67px', lg: '120px' }}
       bg={useColorModeValue('#ede9e3', '#2b333d')}
       justifyContent={'space-between'}
       top={0}
+      mt={{ base: '10px', md: '0px' }}
     >
       <HStack w={'full'}>
         <Link to={'/photography'}>
