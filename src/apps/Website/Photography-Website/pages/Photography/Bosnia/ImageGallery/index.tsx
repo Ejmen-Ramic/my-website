@@ -11,6 +11,7 @@ import {
   IconButton,
   Text,
   HStack,
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { ArrowBackIcon, ArrowForwardIcon, CloseIcon } from '@chakra-ui/icons'
 import { useSwipeable } from 'react-swipeable'
@@ -63,6 +64,8 @@ const ImageGallery: React.FC = () => {
     trackMouse: true,
   })
 
+  const ColorDetails = useColorModeValue('black', 'white')
+
   return (
     <Box px={{ base: '20px', md: '50px', lg: '100px' }} mb={{ base: '50px', md: '100px' }} mt={'25px'}>
       <SimpleGrid columns={[1, 2, 2, 3]} spacing={'40px'}>
@@ -87,7 +90,7 @@ const ImageGallery: React.FC = () => {
                 textAlign={'center'}
                 p={4}
               >
-                <Text>{details}</Text>
+                <Text color={ColorDetails}>{details}</Text>
               </Box>
             </Box>
           </FadeInView>
@@ -169,7 +172,7 @@ const ImageGallery: React.FC = () => {
                 textAlign={'center'}
                 color={'white'}
               >
-                <Text fontSize={'lg'} color={'black'}>
+                <Text fontSize={'lg'} color={ColorDetails}>
                   {images[currentImageIndex].details}
                 </Text>
                 <HStack mt={'20%'} display={'flex'} justifyContent={'space-between'}>

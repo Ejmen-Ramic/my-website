@@ -27,10 +27,11 @@ const Header = () => {
       <HStack w={'full'}>
         <Link to={'/'}>
           <Heading
+            w={{ base: 'max-content', md: 'fit-content' }}
             ml={{ base: '20px', md: '40px' }}
             color={useColorModeValue('#2b333d', 'white')}
             _hover={{ color: useColorModeValue('gray.400', 'gray.600') }}
-            fontSize={{ base: '20px', md: '35px' }}
+            fontSize={{ base: '20px', md: '30px', lg: '35px' }}
             fontFamily={'oswald'}
             fontWeight={'300'}
             letterSpacing={'8px'}
