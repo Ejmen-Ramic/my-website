@@ -1,6 +1,7 @@
 import { ArrowUpIcon } from '@chakra-ui/icons'
 import { Box, IconButton, Icon } from '@chakra-ui/react'
 import { useState, useEffect } from 'react'
+import { colors } from '../Hooks/color'
 
 const ScrollToTopButton = () => {
   const [showButton, setShowButton] = useState(false)
@@ -29,23 +30,23 @@ const ScrollToTopButton = () => {
 
   return (
     <Box
-      position="fixed"
-      bottom="40px"
-      right="40px"
+      position={'fixed'}
+      bottom={'40px'}
+      right={'40px'}
       opacity={showButton ? 1 : 0}
       visibility={showButton ? 'visible' : 'hidden'}
-      transition="opacity 0.3s, visibility 0.3s"
+      transition={'opacity 0.3s, visibility 0.3s'}
       zIndex={100}
     >
       <IconButton
-        aria-label="Scroll to Top"
+        aria-label={'Scroll to Top'}
         icon={<Icon as={ArrowUpIcon} />}
-        borderRadius="50%"
-        width="40px"
-        height="40px"
-        bgColor="#02bece"
-        color="white"
-        _hover={{ bgColor: 'white', color: 'black' }}
+        borderRadius={'50%'}
+        width={'40px'}
+        height={'40px'}
+        bgColor={'#02bece'}
+        color={colors.white}
+        _hover={{ bgColor: colors.white, color: colors.black }}
         onClick={scrollToTop}
       />
     </Box>

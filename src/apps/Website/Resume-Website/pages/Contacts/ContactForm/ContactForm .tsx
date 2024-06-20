@@ -22,6 +22,7 @@ import { MdEmail, MdOutlineEmail } from 'react-icons/md'
 
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { t, Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const confetti = {
   light: {
@@ -76,7 +77,7 @@ const ContactForm = () => {
                       icon={<MdEmail />}
                       _hover={{
                         bg: 'blue.500',
-                        color: useColorModeValue('white', 'gray.700'),
+                        color: useColorModeValue(colors.white, 'gray.700'),
                       }}
                       onClick={onCopy}
                       isRound
@@ -92,7 +93,7 @@ const ContactForm = () => {
                       icon={<BsGithub />}
                       _hover={{
                         bg: 'blue.500',
-                        color: useColorModeValue('white', 'gray.700'),
+                        color: useColorModeValue(colors.white, 'gray.700'),
                       }}
                       isRound
                     />
@@ -106,7 +107,7 @@ const ContactForm = () => {
                       icon={<BsTwitterX size='28px' />}
                       _hover={{
                         bg: 'blue.500',
-                        color: useColorModeValue('white', 'gray.700'),
+                        color: useColorModeValue(colors.white, 'gray.700'),
                       }}
                       isRound
                     />
@@ -120,7 +121,7 @@ const ContactForm = () => {
                       icon={<BsLinkedin size='28px' />}
                       _hover={{
                         bg: 'blue.500',
-                        color: useColorModeValue('white', 'gray.700'),
+                        color: useColorModeValue(colors.white, 'gray.700'),
                       }}
                       isRound
                     />
@@ -128,7 +129,7 @@ const ContactForm = () => {
                 </Stack>
 
                 <Box
-                  bg={useColorModeValue('white', 'gray.700')}
+                  bg={useColorModeValue(colors.white, 'gray.700')}
                   borderRadius={'lg'}
                   p={8}
                   color={useColorModeValue('gray.700', 'whiteAlpha.900')}
@@ -168,7 +169,7 @@ const ContactForm = () => {
                     <Button
                       colorScheme={'blue'}
                       bg={'blue.400'}
-                      color={'white'}
+                      color={colors.white}
                       _hover={{
                         bg: 'blue.500',
                       }}

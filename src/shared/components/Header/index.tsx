@@ -7,6 +7,7 @@ import AccountButton from '../../../apps/Website/Resume-Website/pages/Account/Bu
 import DropDownHobbies from './Desktop/DropDownHobbies'
 import LanguageMenu from './Desktop/LanguageMenu'
 import { Trans } from '@lingui/macro'
+import { colors } from '../Hooks/color'
 
 const Header = () => {
   const [homeHovered, setHomeHovered] = useState(false)
@@ -29,7 +30,7 @@ const Header = () => {
           <Heading
             w={{ base: 'max-content', md: 'fit-content' }}
             ml={{ base: '20px', md: '40px' }}
-            color={useColorModeValue('#2b333d', 'white')}
+            color={useColorModeValue('#2b333d', colors.white)}
             _hover={{ color: useColorModeValue('gray.400', 'gray.600') }}
             fontSize={{ base: '20px', md: '30px', lg: '35px' }}
             fontFamily={'oswald'}
@@ -62,7 +63,7 @@ const Header = () => {
                 variant={'link'}
                 border={'none'}
                 _hover={{ color: '#02bece' }}
-                color={useColorModeValue('#2b333d', 'white')}
+                color={useColorModeValue('#2b333d', colors.white)}
                 fontWeight={'light'}
                 fontSize={'18px'}
                 letterSpacing={'1px'}
@@ -92,7 +93,7 @@ const Header = () => {
                 variant={'link'}
                 border={'none'}
                 _hover={{ color: '#02bece' }}
-                color={useColorModeValue('#2b333d', 'white')}
+                color={useColorModeValue('#2b333d', colors.white)}
                 fontWeight={'light'}
                 fontSize={'18px'}
                 letterSpacing={'1px'}
@@ -140,7 +141,7 @@ const Header = () => {
                 variant={'link'}
                 border={'none'}
                 _hover={{ color: '#02bece' }}
-                color={useColorModeValue('#2b333d', 'white')}
+                color={useColorModeValue('#2b333d', colors.white)}
                 fontWeight={'light'}
                 fontSize={'18px'}
                 letterSpacing={'1px'}
@@ -170,7 +171,7 @@ const Header = () => {
                 variant={'link'}
                 border={'none'}
                 _hover={{ color: '#02bece' }}
-                color={useColorModeValue('#2b333d', 'white')}
+                color={useColorModeValue('#2b333d', colors.white)}
                 fontWeight={'light'}
                 fontSize={'18px'}
                 letterSpacing={'1px'}

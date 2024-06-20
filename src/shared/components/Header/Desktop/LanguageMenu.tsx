@@ -17,6 +17,7 @@ import { FaChevronDown } from 'react-icons/fa'
 import { t, Trans } from '@lingui/macro'
 import { IoLanguageOutline } from 'react-icons/io5'
 import { dynamicActivate } from '../../LanguageSwitcher/dynamicActivate'
+import { colors } from '../../Hooks/color'
 
 const languageOptions = [
   {
@@ -64,7 +65,7 @@ const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
               p={2}
               fontSize={'18px'}
               fontFamily={'revert-layer'}
-              color={useColorModeValue('#2b333d', 'white')}
+              color={useColorModeValue('#2b333d', colors.white)}
               textDecor={'none'}
               letterSpacing={'1px'}
               _groupHover={{
@@ -81,7 +82,7 @@ const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
                   w={4}
                   ml={'8px'}
                   mr={'10px'}
-                  color={useColorModeValue('#2b333d', 'white')}
+                  color={useColorModeValue('#2b333d', colors.white)}
                   _groupHover={{
                     color: linkColor,
                   }}
@@ -97,7 +98,7 @@ const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
           border={0}
           mt={'-7px'}
           zIndex={1}
-          bg={useColorModeValue('white', 'gray.800')}
+          bg={useColorModeValue(colors.white, 'gray.800')}
           p={3}
           rounded={'lg'}
           maxW={'200px'}

@@ -7,8 +7,9 @@ import { FaHandshakeSimple } from 'react-icons/fa6'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { Link } from 'react-router-dom'
 import { t, Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
-const lightModeColor = 'white'
+const lightModeColor = colors.white
 const darkModeColor = '#171923'
 
 type ReasonItem = {
@@ -89,7 +90,7 @@ const ReasonsToChoose = () => {
           />
           <Box position={'relative'} py={{ base: '20px', lg: '80px' }} zIndex={1}>
             <FadeInView delay={0.1}>
-              <Heading color={'white'}>
+              <Heading color={colors.white}>
                 <Trans>
                   Reasons to{' '}
                   <Box as={'span'} color={'red'}>
@@ -100,7 +101,7 @@ const ReasonsToChoose = () => {
               </Heading>
             </FadeInView>
             <FadeInView delay={0.1}>
-              <Text mt={'20px'} color={'white'}>
+              <Text mt={'20px'} color={colors.white}>
                 <Trans>
                   Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to
                   continuous learning. My experience collaborating with diverse teams has equipped me with strong
@@ -174,12 +175,12 @@ const ReasonsToChoose = () => {
                     </FadeInView>
                   </HStack>
                   <FadeInView delay={0.2}>
-                    <Heading mt={'20px'} fontSize={'l'} fontWeight={'extrabold'} color={'black'}>
+                    <Heading mt={'20px'} fontSize={'l'} fontWeight={'extrabold'} color={colors.black}>
                       {reason.title}
                     </Heading>
                   </FadeInView>
                   <FadeInView delay={0.3}>
-                    <Text color={'black'} mt={'20px'}>
+                    <Text color={colors.black} mt={'20px'}>
                       {reason.description}
                     </Text>
                   </FadeInView>

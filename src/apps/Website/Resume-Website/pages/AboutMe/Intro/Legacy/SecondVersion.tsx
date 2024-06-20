@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import { chakra, Container, Stack, Text, useColorModeValue, Link, Icon, Flex, Box, Show } from '@chakra-ui/react'
 // Here we have used react-icons package for the icons
 import { FaGithub } from 'react-icons/fa'
+import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 const features = [
   {
@@ -69,12 +70,12 @@ const features = [
 const HeroSection = () => {
   return (
     <Fragment>
-      <Container maxW='max-content' pr={{ base: 6, md: 10 }} py={14}>
+      <Container maxW={'max-content'} pr={{ base: 6, md: 10 }} py={14}>
         <Stack direction={{ base: 'column', md: 'row' }}>
-          <Stack direction='column' spacing={10}>
-            <chakra.h1 fontSize='5xl' lineHeight={1} fontWeight='bold' textAlign='left'>
+          <Stack direction={'column'} spacing={10}>
+            <chakra.h1 fontSize={'5xl'} lineHeight={1} fontWeight={'bold'} textAlign={'left'}>
               Production-ready
-              <chakra.span bgGradient='linear(to-br, #228be6, #15aabf)' bgClip='text'>
+              <chakra.span bgGradient={'linear(to-br, #228be6, #15aabf)'} bgClip={'text'}>
                 {' '}
                 Projects and Components{' '}
               </chakra.span>{' '}
@@ -82,62 +83,62 @@ const HeroSection = () => {
             </chakra.h1>
             <Text
               color={useColorModeValue('gray.500', 'gray.400')}
-              fontSize='lg'
-              textAlign='left'
-              fontWeight='400'
-              maxW='700px'
+              fontSize={'lg'}
+              textAlign={'left'}
+              fontWeight={'400'}
+              maxW={'700px'}
             >
               Build fully functional accessible web applications faster than ever – TemplatesKart includes more than 80
               customizable components and hooks to cover you in any situation
             </Text>
-            <Stack direction={{ base: 'column', md: 'row' }} spacing={{ base: 5, md: 10 }} flexWrap='wrap'>
+            <Stack direction={{ base: 'column', md: 'row' }} spacing={{ base: 5, md: 10 }} flexWrap={'wrap'}>
               {features.map((feature, index) => (
                 <Stack key={index} direction={{ base: 'row', md: 'column' }} spacing={2}>
                   <Flex
                     p={3}
-                    maxH='52px'
-                    w='max-content'
-                    color='white'
-                    bgGradient='linear(to-br, #228be6, #15aabf)'
-                    rounded='md'
+                    maxH={'52px'}
+                    w={'max-content'}
+                    color={colors.white}
+                    bgGradient={'linear(to-br, #228be6, #15aabf)'}
+                    rounded={'md'}
                   >
                     {feature.icon}
                   </Flex>
-                  <Stack direction='column' spacing={2}>
-                    <Text fontSize='md' fontWeight='500'>
+                  <Stack direction={'column'} spacing={2}>
+                    <Text fontSize={'md'} fontWeight={'500'}>
                       {feature.title}
                     </Text>
-                    <Text fontSize='sm' color='gray.400' maxW={{ base: '100%', md: '200px' }}>
+                    <Text fontSize={'sm'} color={'gray.400'} maxW={{ base: '100%', md: '200px' }}>
                       {feature.detail}
                     </Text>
                   </Stack>
                 </Stack>
               ))}
             </Stack>
-            <Stack direction={{ base: 'column', sm: 'row' }} spacing={{ base: 0, sm: 2 }} flexWrap='wrap'>
+            <Stack direction={{ base: 'column', sm: 'row' }} spacing={{ base: 0, sm: 2 }} flexWrap={'wrap'}>
               <chakra.button
                 h={12}
                 px={6}
-                bgGradient='linear(to-br, #228be6, #15aabf)'
-                color='white'
+                bgGradient={'linear(to-br, #228be6, #15aabf)'}
+                color={colors.white}
                 _hover={{ bgGradient: 'linear(to-br, #228be6, #228be6)' }}
-                rounded='md'
-                fontWeight='bold'
+                rounded={'md'}
+                fontWeight={'bold'}
                 mb={{ base: 2, sm: 0 }}
               >
                 <chakra.span> Get started </chakra.span>
               </chakra.button>
               <Flex
-                border='1px solid'
-                borderColor='gray.700'
-                justify='center'
+                border={'1px solid'}
+                borderColor={'gray.700'}
+                justify={'center'}
                 p={3}
                 px={4}
                 lineHeight={1.18}
-                rounded='md'
-                boxShadow='md'
-                fontWeight='bold'
-                alignItems='center'
+                rounded={'md'}
+                boxShadow={'md'}
+                fontWeight={'bold'}
+                alignItems={'center'}
                 as={Link}
               >
                 <Icon as={FaGithub} h={4} w={4} />
@@ -147,17 +148,17 @@ const HeroSection = () => {
           </Stack>
         </Stack>
       </Container>
-      <Show below='lg'>
-        <Box overflow='hidden'>
+      <Show below={'lg'}>
+        <Box overflow={'hidden'}>
           <svg
             fill={useColorModeValue('#f7fafc', '#171923')}
-            width='150%'
-            height='56px'
-            transform='scaleX(-1)'
-            filter='drop-shadow(10px 5px 5px rgba(0, 0, 0, 0.05))'
-            preserveAspectRatio='none'
-            viewBox='0 0 1200 120'
-            xmlns='http://www.w3.org/2000/svg'
+            width={'150%'}
+            height={'56px'}
+            transform={'scaleX(-1)'}
+            filter={'drop-shadow(10px 5px 5px rgba(0, 0, 0, 0.05))'}
+            preserveAspectRatio={'none'}
+            viewBox={'0 0 1200 120'}
+            xmlns={'http://www.w3.org/2000/svg'}
           >
             <path
               d={`M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 

@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react'
 import { FaChevronDown } from 'react-icons/fa'
 import { t, Trans } from '@lingui/macro'
+import { colors } from '../../Hooks/color'
 
 const menuData = [
   {
@@ -90,9 +91,9 @@ const DropDownHobbies = ({ menuData }: MenuDataProps) => {
           p={3}
           mt={'-7px'}
           border={'1px'}
-          borderColor={useColorModeValue('transparent', 'white')}
+          borderColor={useColorModeValue('transparent', colors.white)}
           rounded={'lg'}
-          bg={useColorModeValue('white', 'gray.800')}
+          bg={useColorModeValue(colors.white, 'gray.800')}
           zIndex={1}
         >
           <Stack>

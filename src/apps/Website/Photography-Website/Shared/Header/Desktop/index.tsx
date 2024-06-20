@@ -7,6 +7,7 @@ import ColorModePhoto from '../ColorModePhoto'
 import AccountButtonPhoto from './AccountButtonPhoto'
 import EjmenSignature from '../EjmenSignature'
 import { Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const Header = () => {
   const [homeHovered, setHomeHovered] = useState(false)
@@ -53,7 +54,7 @@ const Header = () => {
                 variant={'link'}
                 border={'none'}
                 _hover={{ color: useColorModeValue('#817e7e', '#02bece') }}
-                color={useColorModeValue('#2b333d', 'white')}
+                color={useColorModeValue('#2b333d', colors.white)}
                 fontWeight={'light'}
                 letterSpacing={'1px'}
                 textTransform={'capitalize'}
@@ -83,7 +84,7 @@ const Header = () => {
                 variant={'link'}
                 border={'none'}
                 _hover={{ color: useColorModeValue('#817e7e', '#02bece') }}
-                color={useColorModeValue('#2b333d', 'white')}
+                color={useColorModeValue('#2b333d', colors.white)}
                 fontWeight={'light'}
                 letterSpacing={'1px'}
                 textTransform={'capitalize'}
@@ -131,7 +132,7 @@ const Header = () => {
                 variant={'link'}
                 border={'none'}
                 _hover={{ color: useColorModeValue('#817e7e', '#02bece') }}
-                color={useColorModeValue('#2b333d', 'white')}
+                color={useColorModeValue('#2b333d', colors.white)}
                 fontWeight={'light'}
                 letterSpacing={'1px'}
                 textTransform={'capitalize'}

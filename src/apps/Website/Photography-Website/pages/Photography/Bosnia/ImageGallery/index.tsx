@@ -17,6 +17,7 @@ import { ArrowBackIcon, ArrowForwardIcon, CloseIcon } from '@chakra-ui/icons'
 import { useSwipeable } from 'react-swipeable'
 import { images } from './Props'
 import FadeInView from '../../../../../../../shared/components/Hooks/FadeInView'
+import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 const ImageGallery: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -64,7 +65,7 @@ const ImageGallery: React.FC = () => {
     trackMouse: true,
   })
 
-  const ColorDetails = useColorModeValue('black', 'white')
+  const ColorDetails = useColorModeValue(colors.black, colors.white)
 
   return (
     <Box px={{ base: '20px', md: '50px', lg: '100px' }} mb={{ base: '50px', md: '100px' }} mt={'25px'}>
@@ -86,11 +87,10 @@ const ImageGallery: React.FC = () => {
                 display={['none', 'none', 'flex']}
                 alignItems={'center'}
                 justifyContent={'center'}
-                color={'white'}
                 textAlign={'center'}
                 p={4}
               >
-                <Text color={ColorDetails}>{details}</Text>
+                <Text color={colors.white}>{details}</Text>
               </Box>
             </Box>
           </FadeInView>
@@ -170,7 +170,7 @@ const ImageGallery: React.FC = () => {
                 p={4}
                 mt={{ base: 4, md: '50px' }}
                 textAlign={'center'}
-                color={'white'}
+                color={colors.white}
               >
                 <Text fontSize={'lg'} color={ColorDetails}>
                   {images[currentImageIndex].details}

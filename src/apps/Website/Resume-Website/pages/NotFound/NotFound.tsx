@@ -3,6 +3,7 @@ import Footer from '../../../../../shared/components/Footer/Footer'
 
 import { Box, Button, Center, Flex, Heading, Text, VStack } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+import { colors } from '../../../../../shared/components/Hooks/color'
 
 const NotFound = () => {
   return (
@@ -25,10 +26,10 @@ const NotFound = () => {
                 h={'50px'}
                 borderRadius={'0px'}
                 borderWidth={'1px'}
-                borderColor={'black'}
-                bgColor={'white'}
-                color={'black'}
-                _hover={{ bgColor: 'black', color: 'white' }}
+                borderColor={colors.black}
+                bgColor={colors.white}
+                color={colors.black}
+                _hover={{ bgColor: colors.black, color: colors.white }}
               >
                 Home Page
               </Button>

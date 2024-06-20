@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { Link } from 'react-router-dom'
 import { Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const Welcome = () => {
   // const { t } = useTranslation(["home"])
@@ -46,7 +47,7 @@ const Welcome = () => {
       >
         <FadeInView direction={'left'} delay={0.1}>
           <Text
-            color={'white'}
+            color={colors.white}
             fontSize={{ base: '', md: '2em', lg: '2em' }}
             fontWeight={'800'}
             lineHeight={'1em'}
@@ -57,7 +58,7 @@ const Welcome = () => {
         </FadeInView>
         <FadeInView direction={'left'} delay={0.2}>
           <Heading
-            color={'white'}
+            color={colors.white}
             fontSize={{ base: '2em', md: '2em', lg: '4em' }}
             fontWeight={'700'}
             lineHeight={'1em'}
@@ -74,7 +75,7 @@ const Welcome = () => {
           </Heading>
         </FadeInView>
         <FadeInView direction={'left'} delay={0.3}>
-          <Text color={'white'} fontSize={{ md: '1.0em', lg: '1.1em' }} fontWeight={'400'} maxWidth={'700px'}>
+          <Text color={colors.white} fontSize={{ md: '1.0em', lg: '1.1em' }} fontWeight={'400'} maxWidth={'700px'}>
             <Trans>
               Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina and this is my web resume. Here
               you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore my
@@ -88,7 +89,7 @@ const Welcome = () => {
               textTransform={'uppercase'}
               borderRadius={'0px'}
               color={'#051721'}
-              bgColor={'white'}
+              bgColor={colors.white}
               display={'inline-block'}
               fontSize={'1em'}
               padding={'10px 30px'}

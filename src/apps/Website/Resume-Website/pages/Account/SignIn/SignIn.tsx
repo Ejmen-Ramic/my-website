@@ -18,6 +18,7 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false)
@@ -37,7 +38,7 @@ const SignIn = () => {
               ✌️
             </Text>
           </Stack>
-          <Box rounded={'lg'} bg={useColorModeValue('white', 'gray.700')} boxShadow={'lg'} p={8}>
+          <Box rounded={'lg'} bg={useColorModeValue(colors.white, 'gray.700')} boxShadow={'lg'} p={8}>
             <Stack spacing={4}>
               <FormControl id={'email'}>
                 <FormLabel>
@@ -69,7 +70,7 @@ const SignIn = () => {
                 </Stack>
                 <Button
                   bg={'blue.400'}
-                  color={'white'}
+                  color={colors.white}
                   _hover={{
                     bg: 'blue.500',
                   }}

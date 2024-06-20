@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import HeaderPhotography from '../../Shared/Header/Desktop'
 import FadeInView from '../../../../../shared/components/Hooks/FadeInView'
 import FooterPhotography from '../../Shared/FooterPhotography'
+import { colors } from '../../../../../shared/components/Hooks/color'
 
 const PhotographyHome = () => {
   return (
@@ -30,7 +31,7 @@ const PhotographyHome = () => {
                   _hover={{
                     opacity: 0.7,
                   }}
-                  bg={'black'}
+                  bg={colors.black}
                   backgroundSize={'cover'}
                   textAlign={'start'}
                   alignItems={'start'}
@@ -55,7 +56,7 @@ const PhotographyHome = () => {
                     letterSpacing={'2px'}
                     fontSize={'26px'}
                     fontWeight={400}
-                    color={'white'}
+                    color={colors.white}
                     textAlign={'start'}
                     textTransform={'uppercase'}
                   >

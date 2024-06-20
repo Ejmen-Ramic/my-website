@@ -1,6 +1,7 @@
 import { Box, HStack, Heading, Hide, VStack, Text, Button, Icon, Grid } from '@chakra-ui/react'
 import { BsFillInfoCircleFill } from 'react-icons/bs'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const CareerBenefits = () => {
   // const [lightColor, darkColor] = useToken("colors", ["#FFBB88", "#FF6000"]);
@@ -20,8 +21,8 @@ const CareerBenefits = () => {
         <Grid w={'100%'} gridColumnGap={'150px'} templateColumns={['1fr', '1fr', '1fr', '1fr 1fr']}>
           <VStack position={'relative'} minH={'600px'} maxW={'710px'} zIndex={1}>
             <VStack alignItems={'flex-start'} p={'50px'}>
-              <Heading color={'white'}>Career Benefits of Learning Coding</Heading>
-              <Text pb={'30px'} pt={'30px'} color={'white'}>
+              <Heading color={colors.white}>Career Benefits of Learning Coding</Heading>
+              <Text pb={'30px'} pt={'30px'} color={colors.white}>
                 Coding is a part of computer programming, and coders, also known as programmers, write instructions for
                 what a computer, software, or application does and how it does. Coders or programmers wh write computer
                 programs are the backbones of almost every modern technology being used today. That's why computer
@@ -59,7 +60,7 @@ const CareerBenefits = () => {
               alignItems={'center'}
               w={'full'}
               h={'full'}
-              backgroundColor={'white'}
+              backgroundColor={colors.white}
               borderRadius={{ base: '20px 20px 0 0', md: '25px' }}
               boxShadow={'0px 4px 10px rgba(0, 0, 0, 0.6)'}
             >

@@ -15,6 +15,7 @@ import {
   Icon,
 } from '@chakra-ui/react'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const avatars = [
   {
@@ -91,7 +92,7 @@ const JoinOurTeam = () => {
                 fontFamily={'heading'}
                 fontSize={{ base: 'sm', md: 'lg' }}
                 bg={'gray.800'}
-                color={'white'}
+                color={colors.white}
                 rounded={'full'}
                 minWidth={useBreakpointValue({ base: '44px', md: '60px' })}
                 minHeight={useBreakpointValue({ base: '44px', md: '60px' })}
@@ -164,7 +165,7 @@ const JoinOurTeam = () => {
                 mt={8}
                 w={'full'}
                 bgGradient='linear(to-r, red.400,pink.400)'
-                color={'white'}
+                color={colors.white}
                 _hover={{
                   bgGradient: 'linear(to-r, red.400,pink.400)',
                   boxShadow: 'xl',

@@ -17,6 +17,7 @@ import { useState } from 'react'
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false)
@@ -36,7 +37,7 @@ const SignUp = () => {
               ✌️
             </Text>
           </Stack>
-          <Box rounded={'lg'} bg={useColorModeValue('white', 'gray.700')} boxShadow={'lg'} p={8}>
+          <Box rounded={'lg'} bg={useColorModeValue(colors.white, 'gray.700')} boxShadow={'lg'} p={8}>
             <Stack spacing={4}>
               <HStack>
                 <Box>
@@ -72,7 +73,7 @@ const SignUp = () => {
                   loadingText={'Submitting'}
                   size={'lg'}
                   bg={'blue.400'}
-                  color={'white'}
+                  color={colors.white}
                   _hover={{
                     bg: 'blue.500',
                   }}

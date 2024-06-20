@@ -2,6 +2,7 @@ import { Box, Button, Grid, GridItem, Heading, VStack, Text, HStack, Link, Stack
 import items from './Props'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const TechnicalExpertise: React.FC = () => {
   const zoomInStyles = {
@@ -57,7 +58,7 @@ const TechnicalExpertise: React.FC = () => {
                             boxShadow={'md'}
                             borderWidth={'1px'}
                             color={'#1A202C'}
-                            backgroundColor={'white'}
+                            backgroundColor={colors.white}
                             justifyContent={{
                               base: 'center',
                               lg: 'flex-start',

@@ -4,6 +4,7 @@ import { BiChevronDown } from 'react-icons/bi'
 import { IoLanguageOutline } from 'react-icons/io5'
 import { t, Trans } from '@lingui/macro'
 import { dynamicActivate } from '../../LanguageSwitcher/dynamicActivate'
+import { colors } from '../../Hooks/color'
 
 const LanguageDropDown: React.FC = () => {
   return (
@@ -51,7 +52,7 @@ const dropdownLinks = [
 ]
 
 const LanguageMenuMobile: React.FC = () => {
-  const color = useColorModeValue('#2b333d', 'white')
+  const color = useColorModeValue('#2b333d', colors.white)
 
   const changeLanguage = async (locale: string) => {
     await dynamicActivate(locale)

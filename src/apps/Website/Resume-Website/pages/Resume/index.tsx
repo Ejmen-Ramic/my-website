@@ -2,13 +2,12 @@ import React from 'react'
 import Header from '../../../../../shared/components/Header'
 import Footer from '../../../../../shared/components/Footer/Footer'
 import { Center, Stack, HStack, VStack, Button, Text, Heading, Link, useColorModeValue } from '@chakra-ui/react'
-import { BsFillPrinterFill, BsGithub } from 'react-icons/bs'
+import { BsGithub } from 'react-icons/bs'
 import { GrLanguage } from 'react-icons/gr'
 import ResumeLeftSide from './LeftSide/ResumeLeftSide'
 import ResumeRightSide from './RightSide'
 import { Trans } from '@lingui/macro'
 import PDFFEtcher from './PDF/PDFFetcher'
-// import resumePDF from '../../../../../../public/Website/Resume/PDF/Ejmen-Ramic-Resume.pdf'
 const Resume: React.FC<{}> = () => {
   return (
     <Stack w={'full'} spacing={'0px'}>

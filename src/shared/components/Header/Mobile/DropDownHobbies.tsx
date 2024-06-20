@@ -2,6 +2,7 @@ import { Flex, Text, Icon, Menu, MenuButton, MenuList, MenuItem, useColorModeVal
 import { t, Trans } from '@lingui/macro'
 import { BiChevronDown } from 'react-icons/bi'
 import { IoCameraOutline } from 'react-icons/io5'
+import { colors } from '../../Hooks/color'
 
 const MenuContainerMobile = () => {
   return (
@@ -45,7 +46,7 @@ const dropdownLinks = [
 ]
 
 const DropDownMenuMobile = () => {
-  const color = useColorModeValue('#2b333d', 'white')
+  const color = useColorModeValue('#2b333d', colors.white)
 
   return (
     <Menu autoSelect={false} isLazy>

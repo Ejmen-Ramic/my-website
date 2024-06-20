@@ -1,6 +1,7 @@
 import { Button, FormControl, Flex, Heading, Input, Stack, Text, useColorModeValue } from '@chakra-ui/react'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { t, Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 // type ForgotPasswordFormInputs = {
 //   email: string;
@@ -14,7 +15,7 @@ const ForgotPassword = (): JSX.Element => {
           spacing={4}
           w={'full'}
           maxW={'md'}
-          bg={useColorModeValue('white', 'gray.700')}
+          bg={useColorModeValue(colors.white, 'gray.700')}
           rounded={'xl'}
           boxShadow={'lg'}
           p={6}
@@ -32,7 +33,7 @@ const ForgotPassword = (): JSX.Element => {
           <Stack spacing={6}>
             <Button
               bg={'blue.400'}
-              color={'white'}
+              color={colors.white}
               _hover={{
                 bg: 'blue.500',
               }}

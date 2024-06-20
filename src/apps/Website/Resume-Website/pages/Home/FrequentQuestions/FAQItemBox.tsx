@@ -1,9 +1,10 @@
 import { AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, useColorModeValue } from '@chakra-ui/react'
 import { FC } from 'react'
 import { FAQItem } from '.'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const FAQItemBox: FC<FAQItem> = ({ title, description }) => {
-  const ColorModeValueFAQ = useColorModeValue('black', 'white')
+  const ColorModeValueFAQ = useColorModeValue(colors.black, colors.white)
   return (
     <AccordionItem w={'full'} overflow={'none'} border={'0px'}>
       {() => (

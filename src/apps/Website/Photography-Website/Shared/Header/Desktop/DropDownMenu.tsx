@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/react'
 import { FaChevronDown } from 'react-icons/fa'
 import { t, Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const menuData = [
   {
@@ -59,7 +60,7 @@ const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
               p={2}
               fontSize={'16px'}
               fontFamily={'revert-layer'}
-              color={useColorModeValue('#2b333d', 'white')}
+              color={useColorModeValue('#2b333d', colors.white)}
               textDecor={'none'}
               letterSpacing={'1px'}
               _groupHover={{
@@ -87,7 +88,7 @@ const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
           border={0}
           mt={'-7px'}
           zIndex={1}
-          bg={useColorModeValue('white', 'gray.800')}
+          bg={useColorModeValue(colors.white, 'gray.800')}
           p={3}
           rounded={'lg'}
           maxW={'200px'}

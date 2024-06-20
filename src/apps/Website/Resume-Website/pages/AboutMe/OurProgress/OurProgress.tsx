@@ -4,6 +4,7 @@ import { BsPerson } from 'react-icons/bs'
 import { FaAddressCard, FaCamera } from 'react-icons/fa6'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { t, Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 interface StatsCardProps {
   title: string
@@ -49,12 +50,12 @@ function StatsCard(props: StatsCardProps) {
         shadow={'xl'}
         border={'1px solid'}
         borderColor={useColorModeValue('gray.800', 'gray.500')}
-        bgColor={useColorModeValue('white', 'gray.700')}
+        bgColor={useColorModeValue(colors.white, 'gray.700')}
         rounded={'lg'}
       >
         <FadeInView delay={0.3}>
           <Flex justifyContent={'space-between'}>
-            <Box pl={{ base: 2, md: 4 }} color={useColorModeValue('gray.800', 'white')}>
+            <Box pl={{ base: 2, md: 4 }} color={useColorModeValue('gray.800', colors.white)}>
               <StatLabel fontWeight={'medium'} isTruncated>
                 {title}
               </StatLabel>
@@ -62,7 +63,7 @@ function StatsCard(props: StatsCardProps) {
                 {count.toLocaleString()}
               </StatNumber>
             </Box>
-            <Box my={'auto'} color={useColorModeValue('gray.800', 'white')} alignContent={'center'}>
+            <Box my={'auto'} color={useColorModeValue('gray.800', colors.white)} alignContent={'center'}>
               {icon}
             </Box>
           </Flex>

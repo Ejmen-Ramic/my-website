@@ -3,6 +3,7 @@ import { Box, Flex, Heading, Text, Stack, Container, Avatar, useColorModeValue, 
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import items from './Props'
 import { Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const Testimonial = ({ children }: { children: ReactNode }) => {
   return <Box>{children}</Box>
@@ -20,7 +21,7 @@ const TestimonialContent = ({
   return (
     <FadeInView delay={0.1}>
       <Stack
-        bg={useColorModeValue('white', 'gray.800')}
+        bg={useColorModeValue(colors.white, 'gray.800')}
         boxShadow={'lg'}
         p={8}
         rounded={'xl'}
@@ -37,7 +38,7 @@ const TestimonialContent = ({
           borderRightWidth: 16,
           borderTop: 'solid',
           borderTopWidth: 16,
-          borderTopColor: useColorModeValue('white', 'gray.800'),
+          borderTopColor: useColorModeValue(colors.white, 'gray.800'),
           pos: 'absolute',
           bottom: '-16px',
           left: '50%',

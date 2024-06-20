@@ -22,6 +22,7 @@ import { FaXTwitter } from 'react-icons/fa6'
 import { BiMailSend } from 'react-icons/bi'
 import FadeInView from '../Hooks/FadeInView'
 import { t, Trans } from '@lingui/macro'
+import { colors } from '../Hooks/color'
 
 const Logo = (props: any) => {
   return (
@@ -31,7 +32,7 @@ const Logo = (props: any) => {
         textTransform={'uppercase'}
         fontFamily={'inherit'}
         fontWeight={'400'}
-        color={useColorModeValue('#2b333d', 'white')}
+        color={useColorModeValue('#2b333d', colors.white)}
       >
         Ejmen Ramic
       </Text>
@@ -100,14 +101,14 @@ const Footer = () => {
         <SimpleGrid templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 2fr' }} spacing={20}>
           <Stack spacing={6}>
             <Box>
-              <Logo color={useColorModeValue('gray.700', 'white')} />
+              <Logo color={useColorModeValue('gray.700', colors.white)} />
             </Box>
             <FadeInView delay={0.1}>
               <Text
                 fontSize={'13px'}
                 fontFamily={'revert-layer'}
                 fontWeight={'400'}
-                color={useColorModeValue('#2b333d', 'white')}
+                color={useColorModeValue('#2b333d', colors.white)}
               >
                 <Trans>
                   Welcome to my website! I am a software engineer and photographer based in Bosnia and Herzegovina. Feel
@@ -119,7 +120,7 @@ const Footer = () => {
                     React
                   </Box>
                 </Link>
-                <Box as={'span'} color={useColorModeValue('#2b333d', 'white')}>
+                <Box as={'span'} color={useColorModeValue('#2b333d', colors.white)}>
                   {''} • {''}
                 </Box>
                 <Link href='https://www.typescriptlang.org/' isExternal>
@@ -127,7 +128,7 @@ const Footer = () => {
                     Typescript
                   </Box>
                 </Link>
-                <Box as={'span'} color={useColorModeValue('#2b333d', 'white')}>
+                <Box as={'span'} color={useColorModeValue('#2b333d', colors.white)}>
                   {''} • {''}
                 </Box>
                 <Link href='https://chakra-ui.com/' isExternal>
@@ -181,7 +182,7 @@ const Footer = () => {
               <Text
                 mb={{ md: '20px' }}
                 fontSize={'17px'}
-                color={useColorModeValue('gray.700', 'white')}
+                color={useColorModeValue('gray.700', colors.white)}
                 fontFamily={'inherit'}
                 fontWeight={'400'}
               >
@@ -192,7 +193,7 @@ const Footer = () => {
               <Link
                 href={'/'}
                 color={useColorModeValue('#02bece', '#02bece')}
-                _hover={{ color: useColorModeValue('#2b333d', 'white') }}
+                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
                 fontSize={'16px'}
               >
                 <Trans>Home</Trans>
@@ -202,7 +203,7 @@ const Footer = () => {
               <Link
                 href={'/resume'}
                 color={useColorModeValue('#02bece', '#02bece')}
-                _hover={{ color: useColorModeValue('#2b333d', 'white') }}
+                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
                 fontSize={'16px'}
               >
                 <Trans>Resume</Trans>
@@ -215,8 +216,8 @@ const Footer = () => {
                   variant={'link'}
                   border={'none'}
                   color={useColorModeValue('#02bece', '#02bece')}
-                  _hover={{ color: useColorModeValue('#2b333d', 'white') }}
-                  _expanded={{ color: useColorModeValue('#2b333d', 'white') }}
+                  _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
+                  _expanded={{ color: useColorModeValue('#2b333d', colors.white) }}
                   fontWeight={400}
                   fontSize={'16px'}
                   textTransform={'capitalize'}
@@ -241,7 +242,7 @@ const Footer = () => {
               <Link
                 href={'/about'}
                 color={useColorModeValue('#02bece', '#02bece')}
-                _hover={{ color: useColorModeValue('#2b333d', 'white') }}
+                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
                 fontSize={'16px'}
               >
                 <Trans>About Me</Trans>
@@ -251,7 +252,7 @@ const Footer = () => {
               <Link
                 href={'/contact'}
                 color={useColorModeValue('#02bece', '#02bece')}
-                _hover={{ color: useColorModeValue('#2b333d', 'white') }}
+                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
                 fontSize={'16px'}
               >
                 <Trans>Contacts</Trans>
@@ -276,7 +277,7 @@ const Footer = () => {
                 />
                 <IconButton
                   bg={useColorModeValue('green.400', 'green.800')}
-                  color={useColorModeValue('white', 'gray.800')}
+                  color={useColorModeValue(colors.white, 'gray.800')}
                   _hover={{
                     bg: 'green.600',
                   }}

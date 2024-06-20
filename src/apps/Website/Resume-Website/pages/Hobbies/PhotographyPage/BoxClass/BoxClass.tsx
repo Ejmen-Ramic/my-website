@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react'
 import items from './Props'
 import FadeInView from '../../../../../../../shared/components/Hooks/FadeInView'
+import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 interface BoxClassProps {
   languageimage: string
@@ -26,7 +27,7 @@ interface BoxClassProps {
 }
 
 const BoxClass = () => {
-  const boxColorValue = useColorModeValue('white', 'gray.800')
+  const boxColorValue = useColorModeValue(colors.white, 'gray.800')
   const buttonProfileColor = useColorModeValue('#151f21', 'gray.500')
   const buttonFollowColor = useColorModeValue('green.400', 'blue.800')
 
@@ -123,7 +124,7 @@ const BoxClass = () => {
                   <Button
                     w={'full'}
                     bg={buttonProfileColor}
-                    color={'white'}
+                    color={colors.white}
                     rounded={'md'}
                     _hover={{
                       transform: 'translateY(-2px)',
@@ -135,7 +136,7 @@ const BoxClass = () => {
                   <Button
                     w={'full'}
                     bg={buttonFollowColor}
-                    color={'white'}
+                    color={colors.white}
                     rounded={'md'}
                     _hover={{
                       transform: 'translateY(-2px)',

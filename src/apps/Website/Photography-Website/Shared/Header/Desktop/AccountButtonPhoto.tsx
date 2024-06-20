@@ -1,6 +1,7 @@
 import { Button, ButtonProps, Flex, useColorModeValue } from '@chakra-ui/react'
 import { MdOutlineAccountCircle } from 'react-icons/md'
 import { Link } from 'react-router-dom'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const AccountButton = (props: ButtonProps) => {
   return (
@@ -8,7 +9,7 @@ const AccountButton = (props: ButtonProps) => {
       <Link to={'/signin'}>
         <Button
           bg={useColorModeValue('#979191', '#FFFFFF14')}
-          color={'white'}
+          color={colors.white}
           _hover={{ bgColor: useColorModeValue('#817e7e', 'gray.600') }}
           p={'13px'}
         >

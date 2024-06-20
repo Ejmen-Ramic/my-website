@@ -24,6 +24,7 @@ import HeaderForm from './Form'
 import IconBurgerMobile from '../../../../../../shared/icons/IconBurgerMobile'
 import IconBurger from '../../../../../../shared/icons/IconBurger'
 import { t, Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 type MenuItemLink = {
   label: string
@@ -33,7 +34,7 @@ type MenuItemLink = {
 
 const HeaderMobile = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const color = useColorModeValue('#2b333d', 'white')
+  const color = useColorModeValue('#2b333d', colors.white)
   const year = new Date().getFullYear()
 
   const isMenuItemLink = (item: any): item is MenuItemLink => {
@@ -62,15 +63,15 @@ const HeaderMobile = () => {
       </Box>
       <Drawer isOpen={isOpen} placement={'left'} onClose={onClose}>
         <DrawerOverlay />
-        <DrawerContent backgroundColor={useColorModeValue('white', '#2b333d')}>
+        <DrawerContent backgroundColor={useColorModeValue(colors.white, '#2b333d')}>
           <DrawerCloseButton
             size={'20px'}
-            color={useColorModeValue('#2b333d', 'white')}
+            color={useColorModeValue('#2b333d', colors.white)}
             mt={'20px'}
             mr={'20px'}
             _hover={{ color: '#02bece' }}
           />
-          <DrawerHeader color={useColorModeValue('#2b333d', 'white')} fontSize={'25px'} letterSpacing={'2px'}>
+          <DrawerHeader color={useColorModeValue('#2b333d', colors.white)} fontSize={'25px'} letterSpacing={'2px'}>
             <Trans>Main Menu</Trans>
           </DrawerHeader>
           <DrawerBody>
