@@ -1,6 +1,6 @@
 import { Stack, useColorModeValue } from '@chakra-ui/react'
-import Footer from '../../../../../../shared/components/Footer/FooterPhotography'
-import Header from '../../../../../../shared/components/Header/HeaderPhotography'
+import Footer from '../../../Shared/FooterPhotography'
+import Header from '../../../Shared/Header/Desktop'
 import ImageGallery from './ImageGallery'
 
 const BosniaAlbum = () => {

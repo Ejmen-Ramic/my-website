@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { ExtendedIconProps } from '../../IconWrapper/IconViewBox'
-import IconWrapper from '../../IconWrapper'
+import { ExtendedIconProps } from '../../../../../shared/components/IconWrapper/IconViewBox'
+import IconWrapper from '../../../../../shared/components/IconWrapper'
 
 const variants = {
   default: (

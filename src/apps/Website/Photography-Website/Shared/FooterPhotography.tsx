@@ -20,7 +20,7 @@ import { ReactNode } from 'react'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import { BiMailSend } from 'react-icons/bi'
-import FadeInView from '../Hooks/FadeInView'
+import FadeInView from '../../../../shared/components/Hooks/FadeInView'
 import { t, Trans } from '@lingui/macro'
 
 const Logo = (props: any) => {

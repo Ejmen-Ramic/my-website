@@ -4,8 +4,8 @@ import HeaderMobile from './Mobile'
 import { Link } from 'react-router-dom'
 import ColorMode from '../Color-Mode/ColorMode'
 import AccountButton from '../../../apps/Website/Resume-Website/pages/Account/Button/AccountButton'
-import DropDownHobbies from './MenuButton/DropDownHobbies'
-import LanguageMenu from './MenuButton/LanguageMenu'
+import DropDownHobbies from './Desktop/DropDownHobbies'
+import LanguageMenu from './Desktop/LanguageMenu'
 import { Trans } from '@lingui/macro'
 
 const Header = () => {

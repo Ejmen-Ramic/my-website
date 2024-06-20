@@ -2,9 +2,9 @@ import React from 'react'
 import { Stack, SimpleGrid, Text, useColorModeValue, Image, Box } from '@chakra-ui/react'
 import { itemProps } from './Props'
 import { Link } from 'react-router-dom'
-import HeaderPhotography from '../../../../../shared/components/Header/HeaderPhotography'
+import HeaderPhotography from '../../Shared/Header/Desktop'
 import FadeInView from '../../../../../shared/components/Hooks/FadeInView'
-import FooterPhotography from '../../../../../shared/components/Footer/FooterPhotography'
+import FooterPhotography from '../../Shared/FooterPhotography'
 
 const PhotographyHome = () => {
   return (

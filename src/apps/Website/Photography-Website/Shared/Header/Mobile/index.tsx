@@ -18,11 +18,11 @@ import {
 
 import { Link } from 'react-router-dom'
 import { IoBriefcaseOutline, IoHomeOutline, IoPersonOutline, IoFileTrayFullOutline, IoCodeSlash } from 'react-icons/io5'
-import MenuContainerMobile from '../MenuButton/DropDownMenuMobile'
+import MenuContainerMobile from './DropDownMenuMobile'
 import { IconType } from 'react-icons'
 import HeaderForm from './Form'
-import IconBurgerMobile from '../../../../icons/IconBurgerMobile'
-import IconBurger from '../../../../icons/IconBurger'
+import IconBurgerMobile from '../../../../../../shared/icons/IconBurgerMobile'
+import IconBurger from '../../../../../../shared/icons/IconBurger'
 import { t, Trans } from '@lingui/macro'
 
 type MenuItemLink = {

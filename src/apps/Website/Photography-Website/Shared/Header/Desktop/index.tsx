@@ -1,11 +1,11 @@
 import { Box, Button, Flex, HStack, Show, useColorModeValue } from '@chakra-ui/react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import DropDownMenu from './MenuButton/DropDownMenu'
-import HeaderMobile from './HeaderMobilePhoto '
-import ColorModePhoto from './ColorModePhoto'
+import DropDownMenu from './DropDownMenu'
+import HeaderMobile from '../Mobile'
+import ColorModePhoto from '../ColorModePhoto'
 import AccountButtonPhoto from './AccountButtonPhoto'
-import EjmenSignature from './EjmenSignature'
+import EjmenSignature from '../EjmenSignature'
 import { Trans } from '@lingui/macro'
 
 const Header = () => {
