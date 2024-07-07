@@ -7,7 +7,7 @@ import FadeInView from '../../../../../shared/components/Hooks/FadeInView'
 import FooterPhotography from '../../Shared/FooterPhotography'
 import { colors } from '../../../../../shared/components/Hooks/color'
 
-const PhotographyHome = () => {
+const PhotographyHome: React.FC = () => {
   return (
     <Stack w={'full'} bgColor={useColorModeValue('#ede9e3', '#2b333d')}>
       <HeaderPhotography />

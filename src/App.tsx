@@ -17,6 +17,7 @@ import PhotographyHome from './apps/Website/Photography-Website/pages/Home'
 import { i18n } from '@lingui/core'
 import { fromNavigator, fromStorage, fromUrl, multipleDetect } from '@lingui/detect-locale'
 import BosniaAlbum from './apps/Website/Photography-Website/pages/Photography/Bosnia'
+import AboutPhotogrphy from './apps/Website/Photography-Website/pages/About'
 
 const breakpoints = {
   sm: '30em',
@@ -85,6 +86,7 @@ const App: React.FC = () => {
           {/* Photography */}
           <Route path='/photography' element={<PhotographyHome />} />
           <Route path='/bosnia-and-herzegovina' element={<BosniaAlbum />} />
+          <Route path='/about-me' element={<AboutPhotogrphy />} />
         </Routes>
         <ScrollToTopButton />
       </Suspense>
