@@ -7,8 +7,6 @@ import {
   Stack,
   Text,
   VisuallyHidden,
-  Input,
-  IconButton,
   useColorModeValue,
   Button,
   Menu,
@@ -19,10 +17,10 @@ import {
 import { ReactNode } from 'react'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
-import { BiMailSend } from 'react-icons/bi'
 import FadeInView from '../Hooks/FadeInView'
-import { t, Trans } from '@lingui/macro'
+import { Trans } from '@lingui/macro'
 import { colors } from '../Hooks/color'
+import SubscribeForm from '../Newsletter'
 
 const Logo = (props: any) => {
   return (
@@ -80,7 +78,11 @@ const SocialButton = ({
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
-    <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
+    <Text
+      fontWeight={'500'}
+      fontSize={'lg'}
+      mb={2}
+    >
       {children}
     </Text>
   )
@@ -97,8 +99,17 @@ const Footer = () => {
       left={'0'}
       right={'0'}
     >
-      <Container as={Stack} py={10} px={{ base: '20px', md: '40px', lg: '0px' }} maxW={'6xl'} align='center'>
-        <SimpleGrid templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 2fr' }} spacing={20}>
+      <Container
+        as={Stack}
+        py={10}
+        px={{ base: '20px', md: '40px', lg: '0px' }}
+        maxW={'6xl'}
+        align='center'
+      >
+        <SimpleGrid
+          templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 2fr' }}
+          spacing={20}
+        >
           <Stack spacing={6}>
             <Box>
               <Logo color={useColorModeValue('gray.700', colors.white)} />
@@ -115,24 +126,48 @@ const Footer = () => {
                   free to view my resume and work. <br /> <br />
                   Powered by
                 </Trans>{' '}
-                <Link href='https://react.dev/' isExternal>
-                  <Box as='span' color='#02bece'>
+                <Link
+                  href='https://react.dev/'
+                  isExternal
+                >
+                  <Box
+                    as='span'
+                    color='#02bece'
+                  >
                     React
                   </Box>
                 </Link>
-                <Box as={'span'} color={useColorModeValue('#2b333d', colors.white)}>
+                <Box
+                  as={'span'}
+                  color={useColorModeValue('#2b333d', colors.white)}
+                >
                   {''} • {''}
                 </Box>
-                <Link href='https://www.typescriptlang.org/' isExternal>
-                  <Box as='span' color='#02bece'>
+                <Link
+                  href='https://www.typescriptlang.org/'
+                  isExternal
+                >
+                  <Box
+                    as='span'
+                    color='#02bece'
+                  >
                     Typescript
                   </Box>
                 </Link>
-                <Box as={'span'} color={useColorModeValue('#2b333d', colors.white)}>
+                <Box
+                  as={'span'}
+                  color={useColorModeValue('#2b333d', colors.white)}
+                >
                   {''} • {''}
                 </Box>
-                <Link href='https://chakra-ui.com/' isExternal>
-                  <Box as='span' color='#02bece'>
+                <Link
+                  href='https://chakra-ui.com/'
+                  isExternal
+                >
+                  <Box
+                    as='span'
+                    color='#02bece'
+                  >
                     Chakra UI
                   </Box>
                 </Link>
@@ -144,7 +179,10 @@ const Footer = () => {
               </Text>
             </FadeInView>
             <FadeInView delay={0.1}>
-              <Stack direction={'row'} spacing={6}>
+              <Stack
+                direction={'row'}
+                spacing={6}
+              >
                 <SocialButton
                   label={'GitHub'}
                   href={'https://github.com/Ejmen-Ramic/'}
@@ -154,7 +192,12 @@ const Footer = () => {
                   <FaGithub />
                 </SocialButton>
 
-                <SocialButton label={'X'} href={'https://x.com/EjmenRamic'} color={'#00aced'} hoverColor={'#657786'}>
+                <SocialButton
+                  label={'X'}
+                  href={'https://x.com/EjmenRamic'}
+                  color={'#00aced'}
+                  hoverColor={'#657786'}
+                >
                   <FaXTwitter />
                 </SocialButton>
 
@@ -177,7 +220,12 @@ const Footer = () => {
               </Stack>
             </FadeInView>
           </Stack>
-          <Stack align={'flex-start'} mt={{ base: '5px' }} mb={{ base: '5%', md: '0%' }} fontFamily={'inherit'}>
+          <Stack
+            align={'flex-start'}
+            mt={{ base: '5px' }}
+            mb={{ base: '5%', md: '0%' }}
+            fontFamily={'inherit'}
+          >
             <FadeInView delay={0.1}>
               <Text
                 mb={{ md: '20px' }}
@@ -265,27 +313,7 @@ const Footer = () => {
                 <Trans>Stay up to date</Trans>
               </ListHeader>
             </FadeInView>
-            <FadeInView delay={0.1}>
-              <Stack direction={'row'}>
-                <Input
-                  placeholder={t`Your email address`}
-                  bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-                  border={0}
-                  _focus={{
-                    bg: 'whiteAlpha.300',
-                  }}
-                />
-                <IconButton
-                  bg={useColorModeValue('green.400', 'green.800')}
-                  color={useColorModeValue(colors.white, 'gray.800')}
-                  _hover={{
-                    bg: 'green.600',
-                  }}
-                  aria-label='Subscribe'
-                  icon={<BiMailSend />}
-                />
-              </Stack>
-            </FadeInView>
+            <SubscribeForm />
           </Stack>
         </SimpleGrid>
       </Container>

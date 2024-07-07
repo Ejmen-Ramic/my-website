@@ -36,7 +36,13 @@ const Header = () => {
         </Link>
       </HStack>
       <Show above={'lg'}>
-        <HStack mr={'40px'} fontSize={'12px'} fontFamily={'revert-layer'} cursor={'pointer'} h={'100%'}>
+        <HStack
+          mr={'40px'}
+          fontSize={'12px'}
+          fontFamily={'revert-layer'}
+          cursor={'pointer'}
+          h={'100%'}
+        >
           <Link to={'/photography'}>
             <Box
               h={'100%'}
@@ -67,7 +73,7 @@ const Header = () => {
             </Box>
           </Link>
 
-          <Link to={'/about'}>
+          <Link to={'/about-me'}>
             <Box
               h={'100%'}
               borderColor={aboutHovered ? '#817e7e' : '#2b333d'}
@@ -149,7 +155,11 @@ const Header = () => {
         </HStack>
       </Show>
       <Show below={'lg'}>
-        <Flex justifyContent={'flex-end'} w={'full'} mr={'15px'}>
+        <Flex
+          justifyContent={'flex-end'}
+          w={'full'}
+          mr={'15px'}
+        >
           <ColorModePhoto />
         </Flex>
       </Show>
