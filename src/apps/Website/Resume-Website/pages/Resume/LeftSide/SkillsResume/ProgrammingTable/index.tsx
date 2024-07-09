@@ -65,6 +65,10 @@ const getItems = () => {
       level: ['Novice', 'Beginner', 'Intermediate'],
     },
     {
+      name: 'Jest',
+      level: ['Novice', 'Beginner', 'Intermediate'],
+    },
+    {
       name: 'SQL',
       level: ['Novice', 'Beginner'],
     },
@@ -90,7 +94,10 @@ const ProgrammingTable: FC = () => {
     base: [
       {
         name: (
-          <Text textTransform={'capitalize'} color={useColorModeValue('#0B3948', '#98BED5')}>
+          <Text
+            textTransform={'capitalize'}
+            color={useColorModeValue('#0B3948', '#98BED5')}
+          >
             <Trans>Programming</Trans>
           </Text>
         ),
@@ -119,10 +126,22 @@ const ProgrammingTable: FC = () => {
           ))}
         </Tr>
       </Thead>
-      <Tbody gap={'24px'} alignItems={'start'}>
+      <Tbody
+        gap={'24px'}
+        alignItems={'start'}
+      >
         {items.map(({ name, level }: Item, i) => (
-          <Tr key={i} border={0}>
-            <Td fontSize={'12px'} fontWeight={600} color={nameColor} border={0} p={'0px'}>
+          <Tr
+            key={i}
+            border={0}
+          >
+            <Td
+              fontSize={'12px'}
+              fontWeight={600}
+              color={nameColor}
+              border={0}
+              p={'0px'}
+            >
               {name}
             </Td>
             {skillLevel.map((skill, j) => {
@@ -139,9 +158,17 @@ const ProgrammingTable: FC = () => {
                   style={{ lineHeight: 0 }}
                 >
                   {isCheck ? (
-                    <FaCircle color={skillColor} size={'13px'} style={{ margin: '0px', display: 'inline-block' }} />
+                    <FaCircle
+                      color={skillColor}
+                      size={'13px'}
+                      style={{ margin: '0px', display: 'inline-block' }}
+                    />
                   ) : (
-                    <FaCircle color={noSkillColor} size={'13px'} style={{ margin: '0px', display: 'inline-block' }} />
+                    <FaCircle
+                      color={noSkillColor}
+                      size={'13px'}
+                      style={{ margin: '0px', display: 'inline-block' }}
+                    />
                   )}
                 </Td>
               )
