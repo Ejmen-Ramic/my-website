@@ -1,31 +1,38 @@
-import { t } from '@lingui/macro'
+import { t } from "@lingui/macro";
 
 export type stepsItems = {
-  title: string
-  description: string
-  image: string
-}
+	id: number;
+	title: string;
+	description: string;
+	image: string;
+	sideTitle?: string;
+	sideDescription?: string;
+};
 
 export const steps: stepsItems[] = [
-  {
-    title: t`Deans List`,
-    description: t`Semester 1, 2019/2020`,
-    image: './Website/Resume/AboutMe/deans-list-1.jpg',
-  },
-  {
-    title: t`Deans List`,
-    description: t`Semester 1, 2020/2021`,
-    image: './Website/Resume/AboutMe/deans-list-2.jpg',
-  },
+	{
+		id: 1,
+		title: t`Deans List`,
+		description: t`Semester 1, 2019/2020`,
+		image: "./Website/Resume/AboutMe/deans-list-1.jpg",
+		sideTitle: t`Deans List`,
+		sideDescription: t`Semester 1, 2019/2020`,
+	},
+	{
+		id: 2,
+		title: t`Deans List`,
+		description: t`Semester 1, 2020/2021`,
+		image: "./Website/Resume/AboutMe/deans-list-2.jpg",
+		sideTitle: t`Deans List`,
+		sideDescription: t`Semester 1, 2020/2021`,
+	},
 
-  {
-    title: t`Bachelor's Diploma`,
-    description: t`Information and Communication Technology`,
-    image: '',
-  },
-  {
-    title: 'First',
-    description: 'Contact Info',
-    image: '',
-  },
-]
+	{
+		id: 3,
+		title: t`Bachelor's Diploma`,
+		description: t`Information and Communication Technology`,
+		image: "",
+		sideTitle: t`Bachelor's Diploma`,
+		sideDescription: t`Information and Communication Technology`,
+	},
+];
