@@ -41,8 +41,7 @@ const Example = () => {
 		<Box>
 			<Stepper size="lg" index={activeStep}>
 				{steps.map((step, index) => (
-					// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-					<Step key={index} onClick={() => setActiveStep(index)}>
+					<Step key={step.title} onClick={() => setActiveStep(index)}>
 						<StepIndicator>
 							<StepStatus
 								complete={<StepIcon />}
