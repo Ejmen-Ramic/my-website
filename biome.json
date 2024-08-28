@@ -1,0 +1,63 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"files": {
+		"include": [
+			"apps/**/*.ts",
+			"apps/**/*.js",
+			"apps/**/*.mjs",
+			"apps/**/*.tsx",
+			"packages/*/src/**/*.ts",
+			"shared/*/src/**/*.ts",
+			"shared/*/src/**/*.tsx",
+			"shared/dump/**/*.ts",
+			"shared/dump/**/*.tsx",
+			"internal/**/*.ts",
+			"internal/**/*.mjs",
+			"internal/**/*.js",
+			"**/*.json"
+		],
+		"ignore": [
+			"**/package.json",
+			"packages/utils/src/**/*",
+			"dist/**/*",
+			".vscode/**/*",
+			".git/**/*",
+			"internal/run/executables/**/*",
+			"internal/tmp/**/*",
+			"internal/output/**/*",
+			"node_modules/**/*",
+			".next/**/*",
+			"coverage/**/*",
+			"public/**/*"
+		]
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"noUnusedImports": "error",
+				"useHookAtTopLevel": "error"
+			},
+			"style": {
+				"noNonNullAssertion": "warn",
+				"useImportType": "error"
+			},
+			"suspicious": {
+				"noExplicitAny": "warn"
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"indentStyle": "tab",
+			"indentWidth": 2,
+			"quoteStyle": "single",
+			"semicolons": "asNeeded",
+			"enabled": true
+		}
+	}
+}
