@@ -96,7 +96,7 @@ const ContactForm: FC = () => {
 			align={'center'}
 			justify={'center'}
 			css={{
-				backgroundImage: useColorModeValue('', ''),
+				backgroundImage: useColorModeValue(CONFETTI_LIGHT, CONFETTI_DARK),
 				backgroundAttachment: 'fixed',
 			}}
 			id={'contact'}

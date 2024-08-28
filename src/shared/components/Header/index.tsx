@@ -106,7 +106,7 @@ const Header = () => {
               </Button>
             </Box>
           </Link>
-          <Box
+          {/* <Box
             h={'100%'}
             borderColor={hobbiesHovered ? '#02bece' : '#2b333d'}
             borderTopWidth={hobbiesHovered ? '4px' : '0px'}
@@ -123,7 +123,7 @@ const Header = () => {
             boxSizing='border-box'
           >
             <DropDownHobbies />
-          </Box>
+          </Box> */}
           <Link to={'/about'}>
             <Box
               h={'100%'}
@@ -202,7 +202,7 @@ const Header = () => {
           >
             <LanguageMenu />
           </Box>
-          <AccountButton />
+          {/* <AccountButton /> */}
           <ColorMode />
         </HStack>
       </Show>

@@ -1,8 +1,6 @@
-import { Center } from "@chakra-ui/react";
-import { Stack } from "@chakra-ui/react";
-import ContactForm from "./ContactForm";
-import HeaderPhotography from "../../Shared/Header/Desktop";
-import FooterPhotography from "../../Shared/FooterPhotography";
+import ContactForm from './ContactForm'
+import HeaderPhotography from '../../Shared/Header/Desktop'
+import FooterPhotography from '../../Shared/FooterPhotography'
 const ContactPhotography = () => {
 	return (
 		<>
@@ -10,7 +8,7 @@ const ContactPhotography = () => {
 			<ContactForm />
 			<FooterPhotography />
 		</>
-	);
-};
+	)
+}
 
-export default ContactPhotography;
+export default ContactPhotography
