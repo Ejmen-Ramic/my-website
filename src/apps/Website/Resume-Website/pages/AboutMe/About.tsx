@@ -4,10 +4,11 @@ import Milestones from './Milestone'
 import Header from '../../../../../shared/components/Header'
 import Footer from '../../../../../shared/components/Footer/Footer'
 import AboutIntro from './Intro/AboutIntro'
-import { VStack } from '@chakra-ui/react'
+import { useColorModeValue, VStack } from '@chakra-ui/react'
 import SchoolCertificates from './SchoolCertificates'
 
 const About: React.FC = () => {
+ 
   return (
     <>
       <Header />

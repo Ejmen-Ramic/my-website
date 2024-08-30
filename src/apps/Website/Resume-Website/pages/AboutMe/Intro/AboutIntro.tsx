@@ -34,7 +34,7 @@ const AboutIntro: FC = () => {
               <Text>
                 <Trans>
                   As a young adult, growing up in a beautiful city of Bosnia and Herzegovina, I always admired the great
-                  developers who managed to make something new from an empty page wether its a computer software of a
+                  developers who managed to make something new from an empty page wether its a computer software or a
                   basic web page. Bosnia at the time was not well developed so I had to pursue my studies in Malaysia as
                   a software engineer. Further down the road I have found my interest in software engineering. Wether
                   its difficult or not my passion grew. Iv'e met many people who shared the same interest as me and
