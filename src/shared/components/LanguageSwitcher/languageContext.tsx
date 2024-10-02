@@ -1,13 +1,11 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { dynamicActivate } from './dynamicActivate';
 
-// Create the context
 const LanguageContext = createContext({
   locale: 'en', 
   changeLanguage: (locale: string) => {}
 });
 
-// Create a provider component
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [locale, setLocale] = useState('en');
 
@@ -29,5 +27,4 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   );
 };
 
-// Create a custom hook to use the language context
 export const useLanguage = () => useContext(LanguageContext);

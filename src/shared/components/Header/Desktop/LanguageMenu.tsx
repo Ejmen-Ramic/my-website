@@ -50,8 +50,6 @@ interface LanguageMenuProps {
 const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
   const linkColor = '#02bece'
   const { onOpen, onClose, isOpen } = useDisclosure()
-
-  // Get locale and changeLanguage from the global context
   const { locale, changeLanguage } = useLanguage()
 
   return (
@@ -108,7 +106,7 @@ const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
                 name={option.name}
                 locale={option.locale}
                 linkColor={linkColor}
-                changeLanguage={changeLanguage}  // Use changeLanguage from context
+                changeLanguage={changeLanguage}
                 onClose={onClose}
               />
             ))}

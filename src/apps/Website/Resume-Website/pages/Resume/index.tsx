@@ -11,7 +11,7 @@ import PDFFEtcher from './PDF/PDFFetcher';
 import { useLanguage } from '../../../../../shared/components/LanguageSwitcher/languageContext';
 
 const Resume: React.FC<{}> = () => {
-  const { locale, changeLanguage } = useLanguage();  // Access the context
+  const { locale, changeLanguage } = useLanguage();  
 
   return (
     <Stack w={'full'} spacing={'0px'}>

@@ -3,8 +3,6 @@ import { useState } from 'react'
 import HeaderMobile from './Mobile'
 import { Link } from 'react-router-dom'
 import ColorMode from '../Color-Mode/ColorMode'
-import AccountButton from '../../../apps/Website/Resume-Website/pages/Account/Button/AccountButton'
-import DropDownHobbies from './Desktop/DropDownHobbies'
 import LanguageMenu from './Desktop/LanguageMenu'
 import { Trans } from '@lingui/macro'
 import { colors } from '../Hooks/color'
@@ -12,7 +10,6 @@ import { colors } from '../Hooks/color'
 const Header = () => {
   const [homeHovered, setHomeHovered] = useState(false)
   const [resumeHovered, setResumeHovered] = useState(false)
-  const [hobbiesHovered, setHobbiesHovered] = useState(false)
   const [aboutHovered, setAboutHovered] = useState(false)
   const [contactHovered, setContactHovered] = useState(false)
   const [languageHovered, setLanguageHovered] = useState(false)

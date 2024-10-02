@@ -5,7 +5,7 @@ const PDFFEtcher = () => {
   const toast = useToast()
 
   const onButtonClick = () => {
-    fetch('/Website/pdf-example.pdf') // Adjusted path
+    fetch('/Website/pdf-example.pdf')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok')
@@ -37,7 +37,7 @@ const PDFFEtcher = () => {
     <Button
       variant="ghost"
       onClick={onButtonClick}
-      color={useColorModeValue('blue.800', 'blue.300')} // Using Chakra theme colors
+      color={useColorModeValue('blue.800', 'blue.300')}
     >
       <BsFillPrinterFill />
     </Button>
