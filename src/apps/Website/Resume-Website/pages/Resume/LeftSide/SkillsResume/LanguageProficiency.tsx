@@ -19,6 +19,10 @@ const languages: LanguageProps[] = [
     language: t`German`,
     level: t`Intermediate`,
   },
+  {
+    language: t`Russian`,
+    level: t`Intermediate`,
+  },
 ]
 
 const LanguageProficiency = () => {
