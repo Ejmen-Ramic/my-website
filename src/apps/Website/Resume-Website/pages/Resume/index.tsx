@@ -1,23 +1,27 @@
-import React from 'react'
-import Header from '../../../../../shared/components/Header'
-import Footer from '../../../../../shared/components/Footer/Footer'
-import { Center, Stack, HStack, VStack, Button, Text, Heading, Link, useColorModeValue } from '@chakra-ui/react'
-import { BsGithub } from 'react-icons/bs'
-import { GrLanguage } from 'react-icons/gr'
-import ResumeLeftSide from './LeftSide/ResumeLeftSide'
-import ResumeRightSide from './RightSide'
-import { Trans } from '@lingui/macro'
-import PDFFEtcher from './PDF/PDFFetcher'
+import React from 'react';
+import Header from '../../../../../shared/components/Header';
+import Footer from '../../../../../shared/components/Footer/Footer';
+import { Center, Stack, HStack, VStack, Button, Text, Heading, Link, useColorModeValue } from '@chakra-ui/react';
+import { BsGithub } from 'react-icons/bs';
+import { GrLanguage } from 'react-icons/gr';
+import ResumeLeftSide from './LeftSide/ResumeLeftSide';
+import ResumeRightSide from './RightSide';
+import { Trans } from '@lingui/macro';
+import PDFFEtcher from './PDF/PDFFetcher';
+import { useLanguage } from '../../../../../shared/components/LanguageSwitcher/languageContext';
+
 const Resume: React.FC<{}> = () => {
+  const { locale, changeLanguage } = useLanguage();  // Access the context
+
   return (
     <Stack w={'full'} spacing={'0px'}>
       <Header />
       <Center w={'full'}>
         <VStack maxW={'800px'} w={'full'} my={{ md: '5px', lg: '50px' }} mb={{ lg: '100px' }} spacing={'0px'}>
           <HStack w={'full'} h={'70px'} justify={'space-between'} px={{ md: '10px', lg: '0px' }}>
-            <Button variant={'ghost'} color={useColorModeValue('#0B3948', '#98bed5')}>
+            <Button variant={'ghost'} color={useColorModeValue('#0B3948', '#98bed5')} onClick={() => changeLanguage(locale === 'en' ? 'ba' : 'en')}>
               <GrLanguage style={{ marginRight: '10px' }} />
-              <Trans>View in Bosnian</Trans>
+              <Trans>{locale === 'en' ? 'View in Bosnian' : 'View in English'}</Trans>
             </Button>
             <HStack>
               <Link href={'https://github.com/Ejmen-Ramic/my-website/tree/master/src/pages/Resume'}>
@@ -66,7 +70,7 @@ const Resume: React.FC<{}> = () => {
       </Center>
       <Footer />
     </Stack>
-  )
-}
+  );
+};
 
-export default Resume
+export default Resume;

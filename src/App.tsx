@@ -24,6 +24,7 @@ import {
 import BosniaAlbum from "./apps/Website/Photography-Website/pages/Photography/Bosnia";
 import AboutPhotography from "./apps/Website/Photography-Website/pages/About";
 import ContactPhotography from "./apps/Website/Photography-Website/pages/Contacts";
+import { LanguageProvider } from "./shared/components/LanguageSwitcher/languageContext";
 
 const breakpoints = {
 	sm: "30em",
@@ -84,6 +85,7 @@ const App: React.FC = () => {
 
 	return (
 		<ChakraProvider theme={theme}>
+			<LanguageProvider>
 			{/* Fallback is basically when the word cant change what should it display, 
       instead of null you can add 'Loading...' */}
 			<Suspense fallback={null}>
@@ -107,6 +109,7 @@ const App: React.FC = () => {
 				</Routes>
 				<ScrollToTopButton />
 			</Suspense>
+			</LanguageProvider>
 		</ChakraProvider>
 	);
 };

@@ -16,8 +16,8 @@ import {
 import { FaChevronDown } from 'react-icons/fa'
 import { t, Trans } from '@lingui/macro'
 import { IoLanguageOutline } from 'react-icons/io5'
-import { dynamicActivate } from '../../LanguageSwitcher/dynamicActivate'
 import { colors } from '../../Hooks/color'
+import { useLanguage } from '../../LanguageSwitcher/languageContext'
 
 const languageOptions = [
   {
@@ -51,10 +51,8 @@ const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
   const linkColor = '#02bece'
   const { onOpen, onClose, isOpen } = useDisclosure()
 
-  const changeLanguage = async (locale: string) => {
-    await dynamicActivate(locale)
-    localStorage.setItem('locale', locale)
-  }
+  // Get locale and changeLanguage from the global context
+  const { locale, changeLanguage } = useLanguage()
 
   return (
     <Stack direction={'row'} spacing={4}>
@@ -110,7 +108,7 @@ const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
                 name={option.name}
                 locale={option.locale}
                 linkColor={linkColor}
-                changeLanguage={changeLanguage}
+                changeLanguage={changeLanguage}  // Use changeLanguage from context
                 onClose={onClose}
               />
             ))}
@@ -131,7 +129,7 @@ const LanguageItem = ({
   return (
     <Link
       onClick={() => {
-        changeLanguage(locale!)
+        changeLanguage(locale!)  // Update language using context function
         onClose()
       }}
       display={'block'}
