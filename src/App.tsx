@@ -13,7 +13,6 @@ import ForgotPassword from "./apps/Website/Resume-Website/pages/Account/Password
 import Hobbies from "./apps/Website/Resume-Website/pages/Hobbies";
 import Resume from "./apps/Website/Resume-Website/pages/Resume";
 import PhotographyHome from "./apps/Website/Photography-Website/pages/Home";
-// import NotFound from "./pages/Not Found/NewNotFound";
 import { i18n } from "@lingui/core";
 import {
 	fromNavigator,
@@ -36,6 +35,10 @@ const breakpoints = {
 
 export const theme = extendTheme({
 	breakpoints,
+	config: {
+		initialColorMode: "system", 
+		useSystemColorMode: true,
+	},
 });
 
 const App: React.FC = () => {
