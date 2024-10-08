@@ -11,6 +11,7 @@ const Header = () => {
   const [homeHovered, setHomeHovered] = useState(false)
   const [resumeHovered, setResumeHovered] = useState(false)
   const [aboutHovered, setAboutHovered] = useState(false)
+  const [codeHovered, setCodeHovered] = useState(false)
   const [contactHovered, setContactHovered] = useState(false)
   const [languageHovered, setLanguageHovered] = useState(false)
 
@@ -148,6 +149,36 @@ const Header = () => {
                 p={'50px'}
               >
                 <Trans>About Me</Trans>
+              </Button>
+            </Box>
+          </Link>
+          <Link to={'/my-code'}>
+            <Box
+              h={'100%'}
+              borderColor={codeHovered ? '#02bece' : '#2b333d'}
+              borderTopWidth={codeHovered ? '8px' : '0px'}
+              borderTopColor='#02bece'
+              transition='all 0.1s ease-in-out'
+              onMouseEnter={() => setCodeHovered(true)}
+              onMouseLeave={() => setCodeHovered(false)}
+              overflow='hidden'
+              justifyItems={'center'}
+              boxSizing='border-box'
+            >
+              <Button
+                variant={'link'}
+                border={'none'}
+                _hover={{ color: '#02bece' }}
+                color={useColorModeValue('#2b333d', colors.white)}
+                fontWeight={'light'}
+                fontSize={'18px'}
+                letterSpacing={'1px'}
+                textTransform={'capitalize'}
+                pl={'10px'}
+                pr={'10px'}
+                p={'50px'}
+              >
+                <Trans>Free Code</Trans>
               </Button>
             </Box>
           </Link>
