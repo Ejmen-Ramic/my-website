@@ -24,6 +24,7 @@ import BosniaAlbum from "./apps/Website/Photography-Website/pages/Photography/Bo
 import AboutPhotography from "./apps/Website/Photography-Website/pages/About";
 import ContactPhotography from "./apps/Website/Photography-Website/pages/Contacts";
 import { LanguageProvider } from "./shared/components/LanguageSwitcher/languageContext";
+import MyCode from "./apps/Website/Resume-Website/pages/MyCode";
 
 const breakpoints = {
 	sm: "30em",
@@ -100,6 +101,7 @@ const App: React.FC = () => {
 					<Route path="/resume" element={<Resume />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/test" element={<Test />} />
+					<Route path="/my-code" element={<MyCode />} />
 					<Route path="/signin" element={<SignIn />} />
 					<Route path="/signup" element={<SignUp />} />
 					<Route path="/passwordreset" element={<ForgotPassword />} />
