@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../../../../../shared/components/Header'
-import Footer from '../../../../../shared/components/Footer/Footer'
+import Footer from '../../../../../shared/components/PageComponent/Footer/Footer'
 
 import MakeMoney from './MakeMoney/MakeMoney'
 import JoinOurTeam from './JoinOurTeam/JoinOurTeam'

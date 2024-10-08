@@ -17,10 +17,10 @@ import {
 import { ReactNode } from 'react'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
-import FadeInView from '../Hooks/FadeInView'
+import FadeInView from '../../Hooks/FadeInView'
 import { Trans } from '@lingui/macro'
-import { colors } from '../Hooks/color'
-import SubscribeForm from '../Newsletter'
+import { colors } from '../../Hooks/color'
+import SubscribeForm from '../../Newsletter'
 
 const Logo = (props: any) => {
   return (

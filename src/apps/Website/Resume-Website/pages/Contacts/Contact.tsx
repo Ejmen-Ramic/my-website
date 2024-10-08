@@ -3,7 +3,7 @@ import type React from 'react'
 import { Stack } from '@chakra-ui/react'
 import ContactForm from './ContactForm/ContactForm '
 import Header from '../../../../../shared/components/Header'
-import Footer from '../../../../../shared/components/Footer/Footer'
+import Footer from '../../../../../shared/components/PageComponent/Footer/Footer'
 
 const Contact: React.FC = () => {
 	return (

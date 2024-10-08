@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../../../../shared/components/Header';
-import Footer from '../../../../../shared/components/Footer/Footer';
+import Footer from '../../../../../shared/components/PageComponent/Footer/Footer';
 import { Center, Stack, HStack, VStack, Button, Text, Heading, Link, useColorModeValue } from '@chakra-ui/react';
 import { BsGithub } from 'react-icons/bs';
 import { GrLanguage } from 'react-icons/gr';

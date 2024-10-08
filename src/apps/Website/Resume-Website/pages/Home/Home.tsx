@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../../../../../shared/components/Header'
-import Footer from '../../../../../shared/components/Footer/Footer'
+import Footer from '../../../../../shared/components/PageComponent/Footer/Footer'
 import Welcome from './Welcome/WelcomePart'
 import ChooseToLearn from './TechnicalExpertise./TechnicalExpertise'
 import ReasonsToChoose from './ReasonsToCount/ReasonsToChoose'
