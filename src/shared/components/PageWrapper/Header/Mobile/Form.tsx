@@ -1,6 +1,6 @@
 import { Box, Heading, Input, Button, useColorModeValue } from '@chakra-ui/react'
 import { t, Trans } from '@lingui/macro'
-import { colors } from '../../Hooks/color'
+import { colors } from '../../../Hooks/color'
 
 const HeaderForm = () => {
   return (

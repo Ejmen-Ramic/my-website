@@ -3,8 +3,9 @@ import { Flex, Text, Icon, Menu, MenuButton, MenuList, MenuItem, useColorModeVal
 import { BiChevronDown } from 'react-icons/bi'
 import { IoLanguageOutline } from 'react-icons/io5'
 import { t, Trans } from '@lingui/macro'
-import { dynamicActivate } from '../../LanguageSwitcher/dynamicActivate'
-import { colors } from '../../Hooks/color'
+import { dynamicActivate } from '../../../LanguageSwitcher/dynamicActivate'
+import { colors } from '../../../Hooks/color'
+
 
 const LanguageDropDown: React.FC = () => {
   return (

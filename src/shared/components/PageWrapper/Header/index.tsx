@@ -2,10 +2,10 @@ import { Box, Button, Flex, Heading, HStack, Show, useColorModeValue } from '@ch
 import { useState } from 'react'
 import HeaderMobile from './Mobile'
 import { Link } from 'react-router-dom'
-import ColorMode from '../Color-Mode/ColorMode'
 import LanguageMenu from './Desktop/LanguageMenu'
 import { Trans } from '@lingui/macro'
-import { colors } from '../Hooks/color'
+import { colors } from '../../Hooks/color'
+import ColorMode from '../../Color-Mode/ColorMode'
 
 const Header = () => {
   const [homeHovered, setHomeHovered] = useState(false)

@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react'
 import { FaChevronDown } from 'react-icons/fa'
 import { t, Trans } from '@lingui/macro'
-import { colors } from '../../Hooks/color'
+import { colors } from '../../../Hooks/color'
 
 const menuData = [
   {

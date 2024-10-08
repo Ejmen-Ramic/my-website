@@ -15,16 +15,17 @@ import {
   Text,
   Flex,
 } from '@chakra-ui/react'
-import IconBurger from '../../../icons/IconBurger'
-import IconBurgerMobile from '../../../icons/IconBurgerMobile'
+
 import { Link } from 'react-router-dom'
 import { IoBriefcaseOutline, IoHomeOutline, IoPersonOutline, IoFileTrayFullOutline, IoCodeSlash } from 'react-icons/io5'
 import MenuContainerMobile from './DropDownHobbies'
 import { IconType } from 'react-icons'
 import HeaderForm from './Form'
-import LanguageDropDown from '../Mobile/LanguageMenuMobile'
+import LanguageDropDown from './LanguageMenuMobile'
 import { t, Trans } from '@lingui/macro'
-import { colors } from '../../Hooks/color'
+import IconBurgerMobile from '../../../../icons/IconBurgerMobile'
+import IconBurger from '../../../../icons/IconBurger'
+import { colors } from '../../../Hooks/color'
 
 type MenuItemLink = {
   label: string

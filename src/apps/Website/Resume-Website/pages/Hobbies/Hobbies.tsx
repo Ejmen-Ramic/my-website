@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from '../../../../../shared/components/Header'
-import Footer from '../../../../../shared/components/PageComponent/Footer/Footer'
+import Footer from '../../../../../shared/components/PageWrapper/Footer/Footer'
 
 import MakeMoney from './MakeMoney/MakeMoney'
 import JoinOurTeam from './JoinOurTeam/JoinOurTeam'
 import WorkersTestimonial from './WorkersReview/WorkersTestimonial'
+import Header from '../../../../../shared/components/PageWrapper/Header'
 
 const Hobbies: React.FC<{}> = () => {
   return (
