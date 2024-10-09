@@ -1,6 +1,5 @@
 import React from 'react';
-import Header from '../../../../../shared/components/Header';
-import Footer from '../../../../../shared/components/Footer/Footer';
+import Footer from '../../../../../shared/components/PageWrapper/Footer/Footer';
 import { Center, Stack, HStack, VStack, Button, Text, Heading, Link, useColorModeValue } from '@chakra-ui/react';
 import { BsGithub } from 'react-icons/bs';
 import { GrLanguage } from 'react-icons/gr';
@@ -9,6 +8,7 @@ import ResumeRightSide from './RightSide';
 import { Trans } from '@lingui/macro';
 import PDFFEtcher from './PDF/PDFFetcher';
 import { useLanguage } from '../../../../../shared/components/LanguageSwitcher/languageContext';
+import Header from '../../../../../shared/components/PageWrapper/Header';
 
 const Resume: React.FC<{}> = () => {
   const { locale, changeLanguage } = useLanguage();  

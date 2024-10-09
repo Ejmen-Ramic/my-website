@@ -1,8 +1,8 @@
 import { Box, Heading, Text, Button, VStack } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-import Header from '../../../../../shared/components/Header'
-import Footer from '../../../../../shared/components/Footer/Footer'
+import Footer from '../../../../../shared/components/PageWrapper/Footer/Footer'
 import { colors } from '../../../../../shared/components/Hooks/color'
+import Header from '../../../../../shared/components/PageWrapper/Header'
 
 const NotFound = () => {
   return (

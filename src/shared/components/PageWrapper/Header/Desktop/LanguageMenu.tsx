@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   Stack,
   Flex,
@@ -16,8 +15,9 @@ import {
 import { FaChevronDown } from 'react-icons/fa'
 import { t, Trans } from '@lingui/macro'
 import { IoLanguageOutline } from 'react-icons/io5'
-import { colors } from '../../Hooks/color'
-import { useLanguage } from '../../LanguageSwitcher/languageContext'
+import { useLanguage } from '../../../LanguageSwitcher/languageContext'
+import { colors } from '../../../Hooks/color'
+
 
 const languageOptions = [
   {
@@ -50,7 +50,7 @@ interface LanguageMenuProps {
 const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
   const linkColor = '#02bece'
   const { onOpen, onClose, isOpen } = useDisclosure()
-  const { locale, changeLanguage } = useLanguage()
+  const { changeLanguage } = useLanguage()
 
   return (
     <Stack direction={'row'} spacing={4}>

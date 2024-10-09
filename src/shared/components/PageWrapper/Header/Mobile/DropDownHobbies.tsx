@@ -2,7 +2,7 @@ import { Flex, Text, Icon, Menu, MenuButton, MenuList, MenuItem, useColorModeVal
 import { t, Trans } from '@lingui/macro'
 import { BiChevronDown } from 'react-icons/bi'
 import { IoCameraOutline } from 'react-icons/io5'
-import { colors } from '../../Hooks/color'
+import { colors } from '../../../Hooks/color'
 
 const MenuContainerMobile = () => {
   return (

@@ -1,5 +1,5 @@
-import Header from '../../../../../../shared/components/Header'
-import Footer from '../../../../../../shared/components/Footer/Footer'
+import Footer from '../../../../../../shared/components/PageWrapper/Footer/Footer'
+import Header from '../../../../../../shared/components/PageWrapper/Header'
 import BoxClass from './BoxClass/BoxClass'
 
 const Photography = () => {
