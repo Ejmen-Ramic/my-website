@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   Stack,
   Flex,
@@ -51,7 +50,7 @@ interface LanguageMenuProps {
 const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
   const linkColor = '#02bece'
   const { onOpen, onClose, isOpen } = useDisclosure()
-  const { locale, changeLanguage } = useLanguage()
+  const { changeLanguage } = useLanguage()
 
   return (
     <Stack direction={'row'} spacing={4}>
