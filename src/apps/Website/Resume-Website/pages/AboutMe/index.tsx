@@ -1,22 +1,26 @@
-import { Box } from "@chakra-ui/react"
-import About from "./About"
+import { VStack } from "@chakra-ui/react"
+import PageWrapper from "../../../../../shared/components/Hooks/PageWrapper"
+import Header from "../../../../../shared/components/PageWrapper/Header"
+import Footer from "../../../../../shared/components/PageWrapper/Footer/Footer"
+import AboutIntro from "./Intro/AboutIntro"
+import SchoolCertificates from "./SchoolCertificates"
+import OurProgress from "./OurProgress/OurProgress"
+import Milestones from "./Milestone"
+import Page from "../../../../../shared/components/PageWrapper"
 
 const AboutPage = () => {
-//  const CONFETTI_LIGHT = ``; // add svg here
-//   const CONFETTI_DARK = ``; // add svg here
 
-  // const backgroundImage = useColorModeValue(
-  //   `url('data:image/svg+xml;utf8,${encodeURIComponent(CONFETTI_LIGHT)}')`,
-  //   `url('data:image/svg+xml;utf8,${encodeURIComponent(CONFETTI_DARK)}')`
-  // );
   return (
-    <Box
-      h={"full"}
-      w={"full"}
-      id={"contact"}
-    >
-      <About />
-    </Box>
+    <Page>
+      <VStack spacing={{ base: '100px', md: '100px', lg: '150px' }} px={{ base: '35px', lg: '0px' }}>
+        <AboutIntro />
+        <SchoolCertificates />
+        <OurProgress />
+        {/* <TestimonialEjmen /> */}
+        <Milestones />
+        {/* <AboutCarousel /> */}
+      </VStack>
+    </Page>
   )
 }
 
