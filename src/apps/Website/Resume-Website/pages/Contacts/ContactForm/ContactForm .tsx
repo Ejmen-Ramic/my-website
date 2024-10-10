@@ -20,13 +20,13 @@ import {
 } from '@chakra-ui/react'
 import { BsGithub, BsLinkedin, BsPerson, BsTwitterX } from 'react-icons/bs'
 import { MdEmail, MdOutlineEmail } from 'react-icons/md'
-
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { t, Trans } from '@lingui/macro'
 import { colors } from '../../../../../../shared/components/Hooks/color'
 import type React from 'react'
 import { type FC, useState } from 'react'
 import emailjs from '@emailjs/browser'
+
 const confetti = {
 	light: {
 		primary: '4299E1', // blue.400

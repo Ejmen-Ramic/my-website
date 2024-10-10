@@ -1,11 +1,11 @@
-import { Center } from '@chakra-ui/react'
-import Contact from './Contact'
+import ContactForm from './ContactForm/ContactForm '
+import Page from '../../../../../shared/components/PageWrapper'
 
 const ContactPage = () => {
   return (
-    <Center>
-      <Contact />
-    </Center>
+    <Page>
+      <ContactForm />
+    </Page>
   )
 }
 

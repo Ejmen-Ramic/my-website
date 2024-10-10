@@ -4,7 +4,6 @@ import { extendTheme, ChakraProvider } from "@chakra-ui/react";
 import ScrollToTopButton from "./shared/components/Back-To-Top/BackToTopButton";
 import About from "./apps/Website/Resume-Website/pages/AboutMe/index";
 import HomePage from "./apps/Website/Resume-Website/pages/Home";
-import Contact from "./apps/Website/Resume-Website/pages/Contacts/Contact";
 import NotFound from "./apps/Website/Resume-Website/pages/NotFound/NotFound";
 import Test from "./apps/Website/test";
 import SignIn from "./apps/Website/Resume-Website/pages/Account/SignIn/SignIn";
@@ -24,6 +23,7 @@ import BosniaAlbum from "./apps/Website/Photography-Website/pages/Photography/Bo
 import AboutPhotography from "./apps/Website/Photography-Website/pages/About";
 import ContactPhotography from "./apps/Website/Photography-Website/pages/Contacts";
 import { LanguageProvider } from "./shared/components/LanguageSwitcher/languageContext";
+import ContactPage from "./apps/Website/Resume-Website/pages/Contacts";
 
 const breakpoints = {
 	sm: "30em",
@@ -98,7 +98,7 @@ const App: React.FC = () => {
 					<Route path="/about" element={<About />} />
 					<Route path="/hobbies" element={<Hobbies />} />
 					<Route path="/resume" element={<Resume />} />
-					<Route path="/contact" element={<Contact />} />
+					<Route path="/contact" element={<ContactPage />} />
 					<Route path="/test" element={<Test />} />
 					<Route path="/signin" element={<SignIn />} />
 					<Route path="/signup" element={<SignUp />} />
