@@ -9,13 +9,13 @@ import { Trans } from '@lingui/macro';
 import PDFFEtcher from './PDF/PDFFetcher';
 import { useLanguage } from '../../../../../shared/components/LanguageSwitcher/languageContext';
 import Header from '../../../../../shared/components/PageWrapper/Header';
+import Page from '../../../../../shared/components/PageWrapper';
 
 const Resume: React.FC<{}> = () => {
   const { locale, changeLanguage } = useLanguage();  
 
   return (
-    <Stack w={'full'} spacing={'0px'}>
-      <Header />
+    <Page w={'full'} spacing={'0px'}>
       <Center w={'full'}>
         <VStack maxW={'800px'} w={'full'} my={{ md: '5px', lg: '50px' }} mb={{ lg: '100px' }} spacing={'0px'}>
           <HStack w={'full'} h={'70px'} justify={'space-between'} px={{ md: '10px', lg: '0px' }}>
@@ -68,8 +68,7 @@ const Resume: React.FC<{}> = () => {
           </Stack>
         </VStack>
       </Center>
-      <Footer />
-    </Stack>
+    </Page>
   );
 };
 

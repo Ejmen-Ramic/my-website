@@ -1,11 +1,14 @@
 import Footer from "./Footer/Footer"
 import Header from "./Header"
 import PageWrapper from "../Hooks/PageWrapper"
-import { Box } from "@chakra-ui/react"
+import { Box, BoxProps, StackProps } from "@chakra-ui/react"
 
+interface PageWrapperProps extends StackProps {
+    children: React.ReactNode
 
+}
 
-const Page = ({children}: {children: React.ReactNode}) => {
+const Page = ({children}: PageWrapperProps) => {
     return(
         <PageWrapper display={'flex'} flexDirection={'column'} minH={'100vh'}>
         <Header/>
