@@ -1,11 +1,22 @@
 import Footer from "./Footer/Footer"
 import Header from "./Header"
+import PageWrapper from "../Hooks/PageWrapper"
+import { Box, StackProps } from "@chakra-ui/react"
 
-const Page = () => {
+interface PageWrapperProps extends StackProps {
+    children: React.ReactNode
+    isFooterDisabled?: boolean
+    isHeaderDisabled?: boolean
+}
+
+const Page = ({children, isFooterDisabled = true, isHeaderDisabled = true}: PageWrapperProps) => {
     return(
-        <>
-        <Header></Header>
-        <Footer></Footer>
-        </>
+        <PageWrapper display={'flex'} flexDirection={'column'} minH={'100vh'}>
+        {isHeaderDisabled && <Header isStickyHeader={true}/>}
+        <Box flex={'1'}>{children}</Box>
+        {isFooterDisabled && <Footer />}
+        </PageWrapper>
     )
 }
+
+export default Page

@@ -57,7 +57,7 @@ const getItems = () => {
       level: ['Novice', 'Beginner', 'Intermediate'],
     },
     {
-      name: 'NodeJS',
+      name: 'Next.JS',
       level: ['Novice', 'Beginner', 'Intermediate'],
     },
     {
