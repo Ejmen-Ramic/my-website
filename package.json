@@ -48,12 +48,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "react-scripts eject",
-    "extract": "lingui extract",
-    "compile": "lingui compile --typescript"
+    "start": "bun run react-scripts start",
+    "build": "bun run react-scripts build",
+    "test": "bun run react-scripts test",
+    "eject": "bun run react-scripts eject",
+    "extract": "bun run lingui extract",
+    "compile": "bun run lingui compile --typescript"
   },
   "eslintConfig": {
     "extends": [
@@ -80,7 +80,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.5",
-    "@craco/craco": "^7.1.0",
     "@lingui/cli": "^4.10.0",
     "@lingui/loader": "^4.10.1",
     "@lingui/macro": "^4.10.0",
