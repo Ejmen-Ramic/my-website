@@ -7,7 +7,11 @@ import { Trans } from '@lingui/macro'
 import { colors } from '../../Hooks/color'
 import ColorMode from '../../Color-Mode/ColorMode'
 
-const Header = () => {
+
+interface HeaderProps {
+  isStickyHeader?: boolean
+}
+const Header = ({ isStickyHeader = false }: HeaderProps = {}) => {
   const [homeHovered, setHomeHovered] = useState(false)
   const [resumeHovered, setResumeHovered] = useState(false)
   const [aboutHovered, setAboutHovered] = useState(false)
@@ -20,7 +24,7 @@ const Header = () => {
       w={'full'}
       bg={useColorModeValue('gray.100', '#2b333d')}
       justifyContent={'space-between'}
-      top={0}
+      top={isStickyHeader ? '0' : '-58px'}
     >
       <HStack w={'full'}>
         <Link to={'/'}>

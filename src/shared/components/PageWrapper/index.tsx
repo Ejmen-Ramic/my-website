@@ -12,7 +12,7 @@ interface PageWrapperProps extends StackProps {
 const Page = ({children, isFooterDisabled = true, isHeaderDisabled = true}: PageWrapperProps) => {
     return(
         <PageWrapper display={'flex'} flexDirection={'column'} minH={'100vh'}>
-        {isHeaderDisabled && <Header/>}
+        {isHeaderDisabled && <Header isStickyHeader={true}/>}
         <Box flex={'1'}>{children}</Box>
         {isFooterDisabled && <Footer />}
         </PageWrapper>
