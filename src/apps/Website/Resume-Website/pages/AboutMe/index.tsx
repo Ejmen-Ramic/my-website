@@ -1,7 +1,4 @@
 import { VStack } from "@chakra-ui/react"
-import PageWrapper from "../../../../../shared/components/Hooks/PageWrapper"
-import Header from "../../../../../shared/components/PageWrapper/Header"
-import Footer from "../../../../../shared/components/PageWrapper/Footer/Footer"
 import AboutIntro from "./Intro/AboutIntro"
 import SchoolCertificates from "./SchoolCertificates"
 import OurProgress from "./OurProgress/OurProgress"
