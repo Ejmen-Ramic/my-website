@@ -6,9 +6,9 @@ import reportWebVitals from './reportWebVitals'
 import { ChakraProvider, theme } from '@chakra-ui/react'
 import { BrowserRouter } from 'react-router-dom'
 
-import { i18n } from '@lingui/core'
 import { I18nProvider } from '@lingui/react'
 import { messages } from './locales/en/messages'
+import { i18n } from '@lingui/core'
 
 i18n.load('en', messages)
 i18n.activate('en')

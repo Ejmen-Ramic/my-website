@@ -6,7 +6,7 @@ import { FC } from "react"
 
 const SideMenu:FC = () => {
     return(
-        <VStack>
+        <VStack w={'full'} alignItems={'start'}>
             {menuItems.map(({icon, title, link}) => (
                 <Link key={title} to={link}>
                 <HStack as="button">
