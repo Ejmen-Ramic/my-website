@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/core": "^7.16.0",
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
     "@emailjs/browser": "^4.4.1",
@@ -17,7 +16,9 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@lingui/core": "^4.12.0",
     "@lingui/detect-locale": "^4.11.0",
+    "@lingui/macro": "^4.12.0",
     "@lingui/react": "^4.10.0",
     "@lingui/swc-plugin": "^4.0.6",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
@@ -34,7 +35,6 @@
     "axios": "^1.7.5",
     "babel-jest": "^27.4.2",
     "babel-loader": "^8.2.3",
-    "babel-plugin-macros": "^3.1.0",
     "babel-plugin-named-asset-import": "^0.3.8",
     "babel-preset-react-app": "^10.0.1",
     "bfj": "^7.0.2",
@@ -127,7 +127,6 @@
     "@babel/core": "^7.24.5",
     "@lingui/cli": "^4.10.0",
     "@lingui/loader": "^4.10.1",
-    "@lingui/macro": "^4.10.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-plugin-macros": "^3.1.0"
   },
