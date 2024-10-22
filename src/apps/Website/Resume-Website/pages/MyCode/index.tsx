@@ -9,7 +9,7 @@ import {
 import Page from '../../../../../shared/components/PageWrapper';
 import SideMenu from './SideMenu';
 import Component from './MainContent/Component';
-import HookComponent from './MainContent/HookComponent';
+import HookComponent from './MainContent/HookComponents';
 
 const MyCode = () => {
   return (
