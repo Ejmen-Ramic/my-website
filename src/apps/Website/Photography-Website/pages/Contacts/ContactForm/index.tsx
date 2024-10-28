@@ -138,7 +138,7 @@ const ContactForm = () => {
                   shadow={'base'}
                 >
                   <VStack gap={5}>
-                    <FormControl isRequired>
+                    <FormControl required>
                       <FormLabel>
                         <Trans>Name</Trans>
                       </FormLabel>
@@ -154,7 +154,7 @@ const ContactForm = () => {
                       </InputGroup>
                     </FormControl>
 
-                    <FormControl isRequired>
+                    <FormControl required>
                       <FormLabel>
                         <Trans>Email</Trans>
                       </FormLabel>
@@ -170,7 +170,7 @@ const ContactForm = () => {
                       </InputGroup>
                     </FormControl>
 
-                    <FormControl isRequired>
+                    <FormControl required>
                       <FormLabel>
                         <Trans>Message</Trans>
                       </FormLabel>

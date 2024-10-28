@@ -51,7 +51,7 @@ const SignUp = () => {
             <Stack gap={4}>
               <HStack>
                 <Box>
-                  <FormControl id={'firstName'} isRequired>
+                  <FormControl id={'firstName'} required>
                     <FormLabel>First Name</FormLabel>
                     <Input type={'text'} />
                   </FormControl>
@@ -63,11 +63,11 @@ const SignUp = () => {
                   </FormControl>
                 </Box>
               </HStack>
-              <FormControl id={'email'} isRequired>
+              <FormControl id={'email'} required>
                 <FormLabel>Email address</FormLabel>
                 <Input type={'email'} />
               </FormControl>
-              <FormControl id={'password'} isRequired>
+              <FormControl id={'password'} required>
                 <FormLabel>Password</FormLabel>
                 <InputGroup>
                   <Input type={showPassword ? 'text' : 'password'} />

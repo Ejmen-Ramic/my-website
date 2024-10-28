@@ -205,7 +205,7 @@ const ContactForm: FC = () => {
                 >
                   <form onSubmit={handleSubmit} className={'emailForm'}>
                     <VStack gap={5}>
-                      <FormControl isRequired>
+                      <FormControl required>
                         <FormLabel>
                           <Trans>Name</Trans>
                         </FormLabel>
@@ -223,7 +223,7 @@ const ContactForm: FC = () => {
                         </InputGroup>
                       </FormControl>
 
-                      <FormControl isRequired>
+                      <FormControl required>
                         <FormLabel>
                           <Trans>Email</Trans>
                         </FormLabel>
@@ -241,7 +241,7 @@ const ContactForm: FC = () => {
                         </InputGroup>
                       </FormControl>
 
-                      <FormControl isRequired>
+                      <FormControl required>
                         <FormLabel>
                           <Trans>Message</Trans>
                         </FormLabel>

@@ -1,6 +1,12 @@
-import { Box, Heading, Input, Button, useColorModeValue } from '@chakra-ui/react'
-import { t, Trans } from '@lingui/macro'
-import { colors } from '../../../Hooks/color'
+import {
+  Box,
+  Heading,
+  Input,
+  Button,
+  useColorModeValue,
+} from '@chakra-ui/react';
+import { t, Trans } from '@lingui/macro';
+import { colors } from '../../../Hooks/color';
 
 const HeaderForm = () => {
   return (
@@ -11,8 +17,8 @@ const HeaderForm = () => {
       <form action={'#'}>
         <Box position={'relative'}>
           <Input
+            required
             type={'email'}
-            isRequired
             name={'entry.1808449400'}
             px={'25px'}
             height={'50px'}
@@ -41,7 +47,7 @@ const HeaderForm = () => {
         </Box>
       </form>
     </Box>
-  )
-}
+  );
+};
 
-export default HeaderForm
+export default HeaderForm;
