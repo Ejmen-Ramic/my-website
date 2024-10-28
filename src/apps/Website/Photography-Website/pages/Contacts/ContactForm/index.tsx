@@ -77,7 +77,7 @@ const ContactForm = () => {
                         color: useColorModeValue(colors.white, 'gray.700'),
                       }}
                       onClick={onCopy}
-                      isRound
+                      rounded={'full'}
                     >
                       <MdEmail />
                     </IconButton>
@@ -93,7 +93,7 @@ const ContactForm = () => {
                         bg: 'blue.500',
                         color: useColorModeValue(colors.white, 'gray.700'),
                       }}
-                      isRound
+                      rounded={'full'}
                     >
                       <BsGithub />
                     </IconButton>
@@ -108,7 +108,7 @@ const ContactForm = () => {
                         bg: 'blue.500',
                         color: useColorModeValue(colors.white, 'gray.700'),
                       }}
-                      isRound
+                      rounded={'full'}
                     >
                       <BsTwitterX size='28px' />
                     </IconButton>
@@ -123,7 +123,7 @@ const ContactForm = () => {
                         bg: 'blue.500',
                         color: useColorModeValue(colors.white, 'gray.700'),
                       }}
-                      isRound
+                      rounded={'full'}
                     >
                       <BsLinkedin size='28px' />
                     </IconButton>
