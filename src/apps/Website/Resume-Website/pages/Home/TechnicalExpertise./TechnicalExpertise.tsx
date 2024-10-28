@@ -73,9 +73,6 @@ const TechnicalExpertise: React.FC = () => {
                             w={{ base: '100%', md: '100%', lg: '100%' }}
                             h={'62px'}
                             _hover={zoomInStyles}
-                            leftIcon={
-                              <ItemIcon size={'28'} color={'#1A202C'} />
-                            }
                             fontSize={'20px'}
                             fontFamily={'body'}
                             letterSpacing={'1px'}
@@ -89,7 +86,7 @@ const TechnicalExpertise: React.FC = () => {
                             }}
                             pl={{ lg: '15%' }}
                           >
-                            {name}
+                            <ItemIcon size={'28'} color={'#1A202C'} /> {name}
                           </Button>
                         </Link>
                       </VStack>

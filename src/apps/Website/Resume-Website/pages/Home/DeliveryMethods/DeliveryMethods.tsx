@@ -63,7 +63,6 @@ const DeliveryMethods = () => {
                 </Text>
                 <Link href={link}>
                   <Button
-                    rightIcon={<Icon as={BsArrowRight} boxSize={6} />}
                     fontSize={'17px'}
                     fontFamily={'body'}
                     letterSpacing={'1px'}
@@ -74,7 +73,7 @@ const DeliveryMethods = () => {
                     _hover={{ bg: 'transparent', color: '#02bece' }}
                     _active={{ bg: 'transparent' }}
                   >
-                    Enquire Now
+                    Enquire Now <Icon as={BsArrowRight} boxSize={6} />
                   </Button>
                 </Link>
               </VStack>
