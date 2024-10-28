@@ -313,8 +313,9 @@ const FooterPhotography = () => {
                     bg: 'green.600',
                   }}
                   aria-label='Subscribe'
-                  icon={<BiMailSend />}
-                />
+                >
+                  <BiMailSend />
+                </IconButton>
               </Stack>
             </FadeInView>
           </Stack>

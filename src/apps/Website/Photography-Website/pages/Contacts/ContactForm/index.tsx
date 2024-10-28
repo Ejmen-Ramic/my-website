@@ -72,14 +72,15 @@ const ContactForm = () => {
                       variant={'ghost'}
                       size={'lg'}
                       fontSize={'3xl'}
-                      icon={<MdEmail />}
                       _hover={{
                         bg: 'blue.500',
                         color: useColorModeValue(colors.white, 'gray.700'),
                       }}
                       onClick={onCopy}
                       isRound
-                    />
+                    >
+                      <MdEmail />
+                    </IconButton>
                   </Tooltip>
 
                   <Link href='https://www.facebook.com/profile.php?id=100092716802936'>
@@ -88,13 +89,14 @@ const ContactForm = () => {
                       variant={'ghost'}
                       size={'lg'}
                       fontSize='3xl'
-                      icon={<BsGithub />}
                       _hover={{
                         bg: 'blue.500',
                         color: useColorModeValue(colors.white, 'gray.700'),
                       }}
                       isRound
-                    />
+                    >
+                      <BsGithub />
+                    </IconButton>
                   </Link>
 
                   <Link href='https://x.com/EjmenRamic'>
@@ -102,13 +104,14 @@ const ContactForm = () => {
                       aria-label='x'
                       variant={'ghost'}
                       size={'lg'}
-                      icon={<BsTwitterX size='28px' />}
                       _hover={{
                         bg: 'blue.500',
                         color: useColorModeValue(colors.white, 'gray.700'),
                       }}
                       isRound
-                    />
+                    >
+                      <BsTwitterX size='28px' />
+                    </IconButton>
                   </Link>
 
                   <Link href='https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'>
@@ -116,13 +119,14 @@ const ContactForm = () => {
                       aria-label={'linkedin'}
                       variant={'ghost'}
                       size={'lg'}
-                      icon={<BsLinkedin size='28px' />}
                       _hover={{
                         bg: 'blue.500',
                         color: useColorModeValue(colors.white, 'gray.700'),
                       }}
                       isRound
-                    />
+                    >
+                      <BsLinkedin size='28px' />
+                    </IconButton>
                   </Link>
                 </Stack>
 

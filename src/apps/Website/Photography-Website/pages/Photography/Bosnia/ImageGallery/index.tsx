@@ -20,7 +20,7 @@ import FadeInView from '../../../../../../../shared/components/Hooks/FadeInView'
 import { colors } from '../../../../../../../shared/components/Hooks/color';
 
 const ImageGallery: React.FC = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { open, onOpen, onClose } = useDisclosure();
   const [currentImageIndex, setCurrentImageIndex] = useState<number | null>(
     null
   );
@@ -46,7 +46,7 @@ const ImageGallery: React.FC = () => {
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (isOpen) {
+      if (open) {
         if (event.key === 'ArrowRight') {
           nextImage();
         } else if (event.key === 'ArrowLeft') {
@@ -60,7 +60,7 @@ const ImageGallery: React.FC = () => {
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isOpen, nextImage, prevImage]);
+  }, [open, nextImage, prevImage]);
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => nextImage(),
@@ -110,7 +110,7 @@ const ImageGallery: React.FC = () => {
       </SimpleGrid>
 
       {currentImageIndex !== null && (
-        <Modal isOpen={isOpen} onClose={onClose} size={'full'}>
+        <Modal isOpen={open} onClose={onClose} size={'full'}>
           <ModalOverlay opacity='0.4' />
           <ModalContent {...swipeHandlers}>
             <ModalBody
@@ -133,12 +133,13 @@ const ImageGallery: React.FC = () => {
                 _hover={{ '> button': { opacity: 1 } }}
               >
                 <IconButton
-                  icon={<ArrowBackIcon />}
                   onClick={prevImage}
                   opacity={0}
                   transition='opacity 0.3s'
                   aria-label={'Previous Image'}
-                />
+                >
+                  <ArrowBackIcon />
+                </IconButton>
               </Box>
               <Image
                 src={images[currentImageIndex].src}
@@ -159,15 +160,15 @@ const ImageGallery: React.FC = () => {
                 _hover={{ '> button': { opacity: 1 } }}
               >
                 <IconButton
-                  icon={<ArrowForwardIcon />}
                   onClick={nextImage}
                   opacity={0}
                   transition={'opacity 0.3s'}
                   aria-label={'Next Image'}
-                />
+                >
+                  <ArrowForwardIcon />
+                </IconButton>
               </Box>
               <IconButton
-                icon={<CloseIcon />}
                 onClick={onClose}
                 position={'absolute'}
                 top={10}
@@ -179,7 +180,10 @@ const ImageGallery: React.FC = () => {
                   transform: 'scale(1.2)',
                   transition: 'transform 0.3s ease',
                 }}
-              />
+              >
+                <CloseIcon />
+              </IconButton>
+
               <Box
                 display={['block', 'block', 'block', 'none']}
                 p={4}
@@ -196,17 +200,19 @@ const ImageGallery: React.FC = () => {
                   justifyContent={'space-between'}
                 >
                   <IconButton
-                    icon={<ArrowBackIcon />}
                     onClick={prevImage}
                     aria-label={'Previous Image'}
                     mx={2}
-                  />
+                  >
+                    <ArrowBackIcon />
+                  </IconButton>
                   <IconButton
-                    icon={<ArrowForwardIcon />}
                     onClick={nextImage}
                     aria-label={'Next Image'}
                     mx={2}
-                  />
+                  >
+                    <ArrowForwardIcon />
+                  </IconButton>
                 </HStack>
               </Box>
             </ModalBody>

@@ -1,32 +1,32 @@
-import { ArrowUpIcon } from '@chakra-ui/icons'
-import { Box, IconButton, Icon } from '@chakra-ui/react'
-import { useState, useEffect } from 'react'
-import { colors } from '../Hooks/color'
+import { ArrowUpIcon } from '@chakra-ui/icons';
+import { Box, IconButton, Icon } from '@chakra-ui/react';
+import { useState, useEffect } from 'react';
+import { colors } from '../Hooks/color';
 
 const ScrollToTopButton = () => {
-  const [showButton, setShowButton] = useState(false)
+  const [showButton, setShowButton] = useState(false);
 
   const handleScroll = () => {
     if (window.pageYOffset > 100) {
-      setShowButton(true)
+      setShowButton(true);
     } else {
-      setShowButton(false)
+      setShowButton(false);
     }
-  }
+  };
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
-    })
-  }
+    });
+  };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <Box
@@ -40,7 +40,6 @@ const ScrollToTopButton = () => {
     >
       <IconButton
         aria-label={'Scroll to Top'}
-        icon={<Icon as={ArrowUpIcon} />}
         borderRadius={'50%'}
         width={'40px'}
         height={'40px'}
@@ -48,9 +47,11 @@ const ScrollToTopButton = () => {
         color={colors.white}
         _hover={{ bgColor: colors.white, color: colors.black }}
         onClick={scrollToTop}
-      />
+      >
+        <Icon as={ArrowUpIcon} />
+      </IconButton>
     </Box>
-  )
-}
+  );
+};
 
-export default ScrollToTopButton
+export default ScrollToTopButton;

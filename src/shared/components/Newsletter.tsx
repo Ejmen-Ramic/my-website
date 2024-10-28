@@ -1,23 +1,30 @@
-import React, { useState } from 'react'
-import { Stack, Input, IconButton, useColorModeValue, Box, Text } from '@chakra-ui/react'
-import { BiMailSend } from 'react-icons/bi'
-import * as Sentry from '@sentry/browser'
-import { colors } from './Hooks/color'
-import FadeInView from './Hooks/FadeInView'
+import React, { useState } from 'react';
+import {
+  Stack,
+  Input,
+  IconButton,
+  useColorModeValue,
+  Box,
+  Text,
+} from '@chakra-ui/react';
+import { BiMailSend } from 'react-icons/bi';
+import * as Sentry from '@sentry/browser';
+import { colors } from './Hooks/color';
+import FadeInView from './Hooks/FadeInView';
 
 const SubscribeForm: React.FC = () => {
-  const [email, setEmail] = useState('')
-  const [status, setStatus] = useState<'IDLE' | 'SUCCESS' | 'ERROR'>('IDLE')
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'IDLE' | 'SUCCESS' | 'ERROR'>('IDLE');
 
-  const SUBSCRIBE_URL = `subscribe API URL, we will describe it in a sec`
+  const SUBSCRIBE_URL = `subscribe API URL, we will describe it in a sec`;
 
   const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault()
+    event.preventDefault();
 
     const payload = JSON.stringify({
       email,
       api_key: process.env.GATSBY_CONVERTKIT_PUBLIC_API_KEY,
-    })
+    });
 
     try {
       const response = await fetch(SUBSCRIBE_URL, {
@@ -27,32 +34,29 @@ const SubscribeForm: React.FC = () => {
           Accept: 'application/json; charset=utf-8',
           'Content-Type': 'application/json',
         },
-      })
+      });
 
-      const json = await response.json()
+      const json = await response.json();
 
       if (json?.subscription?.id) {
-        setStatus('SUCCESS')
-        return
+        setStatus('SUCCESS');
+        return;
       }
 
-      setStatus('ERROR')
+      setStatus('ERROR');
       Sentry.captureMessage('Error subscribing to newsletter', {
         extra: json,
-      })
+      });
     } catch (err) {
-      setStatus('ERROR')
-      console.error(err)
-      Sentry.captureException(err)
+      setStatus('ERROR');
+      console.error(err);
+      Sentry.captureException(err);
     }
-  }
+  };
 
   return (
     <FadeInView delay={0.1}>
-      <Box
-        as='form'
-        onSubmit={handleSubmit}
-      >
+      <Box as='form' onSubmit={handleSubmit}>
         <Stack direction={'row'}>
           <Input
             placeholder='Your email address'
@@ -73,28 +77,23 @@ const SubscribeForm: React.FC = () => {
               bg: 'green.600',
             }}
             aria-label='Subscribe'
-            icon={<BiMailSend />}
-          />
+          >
+            <BiMailSend />
+          </IconButton>
         </Stack>
         {status === 'SUCCESS' && (
-          <Text
-            mt={2}
-            color='green.500'
-          >
+          <Text mt={2} color='green.500'>
             Subscription successful!
           </Text>
         )}
         {status === 'ERROR' && (
-          <Text
-            mt={2}
-            color='red.500'
-          >
+          <Text mt={2} color='red.500'>
             Subscription failed. Please try again.
           </Text>
         )}
       </Box>
     </FadeInView>
-  )
-}
+  );
+};
 
-export default SubscribeForm
+export default SubscribeForm;
