@@ -32,7 +32,7 @@ const NotFound = () => {
           </Text>
           <Link to={'/'}>
             <Button
-              colorScheme={'teal'}
+              colorPalette={'teal'}
               bgGradient={'linear(to-r, teal.400, teal.500, teal.600)'}
               color={colors.white}
               variant={'solid'}

@@ -65,7 +65,7 @@ const LoginModal: React.FC = () => {
           size={'md'}
         />
       </Box>
-      <Button colorScheme={'blue'} onClick={handleLogin2}>
+      <Button colorPalette={'blue'} onClick={handleLogin2}>
         <Trans>Login</Trans>
       </Button>
       {message && <Text>{message}</Text>}

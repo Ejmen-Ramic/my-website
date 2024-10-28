@@ -152,7 +152,7 @@ const Welcome = () => {
                   _hover={{ pt: 0, pb: '10px' }}
                   transition={'0.2s'}
                 >
-                  <Button colorScheme={'linkedin'}>
+                  <Button colorPalette={'linkedin'}>
                     <FontAwesomeIcon icon={faLinkedin} />
                   </Button>
                 </Box>
@@ -166,7 +166,7 @@ const Welcome = () => {
                   _hover={{ pt: 0, pb: '10px' }}
                   transition={'0.2s'}
                 >
-                  <Button colorScheme={'purple'}>
+                  <Button colorPalette={'purple'}>
                     <FontAwesomeIcon icon={faInstagram} />
                   </Button>
                 </Box>

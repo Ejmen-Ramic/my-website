@@ -88,7 +88,7 @@ const MakeMoneyPart = () => {
               position={'relative'}
             >
               <Button
-                colorScheme={'green'}
+                colorPalette={'green'}
                 bg={'green.400'}
                 rounded={'full'}
                 w={'200px'}
@@ -101,7 +101,7 @@ const MakeMoneyPart = () => {
               >
                 Get Started
               </Button>
-              <Button variant={'link'} colorScheme={'blue'} size={'md'}>
+              <Button variant={'link'} colorPalette={'blue'} size={'md'}>
                 Learn more
               </Button>
               <Box>

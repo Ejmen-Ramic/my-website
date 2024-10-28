@@ -253,7 +253,7 @@ const ContactForm: FC = () => {
                       </FormControl>
 
                       <Button
-                        colorScheme={'blue'}
+                        colorPalette={'blue'}
                         bg={'blue.400'}
                         color={colors.white}
                         _hover={{

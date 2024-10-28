@@ -44,7 +44,7 @@ const ResumeLeftSide = () => {
           <Button
             variant={'none'}
             onClick={() => handleContactClick('mailto:ejmenramic5@gmail.com')}
-            colorScheme={'blue'}
+            colorPalette={'blue'}
             fontSize={'12px'}
             paddingX={0}
             paddingY={0}
@@ -62,7 +62,7 @@ const ResumeLeftSide = () => {
               _hover={{ textDecoration: 'underline' }}
               fontSize={'12px'}
               onClick={() => handleContactClick(item.link)}
-              colorScheme={'blue'}
+              colorPalette={'blue'}
               h={'23px'}
             >
               <item.icon style={{ marginRight: '10px' }} size={'15px'} />{' '}

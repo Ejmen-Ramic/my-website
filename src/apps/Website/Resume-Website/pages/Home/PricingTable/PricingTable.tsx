@@ -85,7 +85,7 @@ const ThreeTierPricing = () => {
               </ListItem>
             </List>
             <Box w='80%' pt={7}>
-              <Button w='full' colorScheme='red' variant='outline'>
+              <Button w='full' colorPalette='red' variant='outline'>
                 Start trial
               </Button>
             </Box>
@@ -157,7 +157,7 @@ const ThreeTierPricing = () => {
                 </ListItem>
               </List>
               <Box w='80%' pt={7}>
-                <Button w='full' colorScheme='red'>
+                <Button w='full' colorPalette='red'>
                   Start trial
                 </Button>
               </Box>
@@ -201,7 +201,7 @@ const ThreeTierPricing = () => {
               </ListItem>
             </List>
             <Box w='80%' pt={7}>
-              <Button w='full' colorScheme='red' variant='outline'>
+              <Button w='full' colorPalette='red' variant='outline'>
                 Start trial
               </Button>
             </Box>

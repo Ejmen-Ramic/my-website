@@ -70,16 +70,16 @@
 
 //               <Flex justifyContent="space-between">
 //                 <HStack gap={2}>
-//                   <Tag size="sm" variant="outline" colorScheme="green">
+//                   <Tag size="sm" variant="outline" colorPalette="green">
 //                     User: {post.userId}
 //                   </Tag>
-//                   <Tag size="sm" variant="outline" colorScheme="cyan">
+//                   <Tag size="sm" variant="outline" colorPalette="cyan">
 //                     Post: {post.id - 5}
 //                   </Tag>
 //                 </HStack>
 //                 <Button
 //                   onClick={() => alert(`Post ${post.id - 5} clicked`)}
-//                   colorScheme="green"
+//                   colorPalette="green"
 //                   fontWeight="bold"
 //                   color="gray.900"
 //                   size="sm"
