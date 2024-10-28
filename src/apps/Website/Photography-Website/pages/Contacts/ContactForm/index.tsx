@@ -14,7 +14,6 @@ import {
   Textarea,
   Tooltip,
   useClipboard,
-  useColorModeValue,
   VStack,
 } from '@chakra-ui/react';
 import { BsGithub, BsLinkedin, BsPerson, BsTwitterX } from 'react-icons/bs';
@@ -23,6 +22,7 @@ import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
 import { t, Trans } from '@lingui/macro';
 import { colors } from '../../../../../../shared/components/Hooks/color';
 import ContactBackground from './Assets/contact-image.jpg';
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 
 const ContactForm = () => {
   const { hasCopied, onCopy } = useClipboard('ejmenramic5@gmail.com');
@@ -43,7 +43,7 @@ const ContactForm = () => {
           p={{ base: 5, lg: 16 }}
         >
           <Box>
-            <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
+            <VStack gap={{ base: 4, md: 8, lg: 20 }}>
               <Heading
                 fontSize={{
                   base: '4xl',
@@ -54,7 +54,7 @@ const ContactForm = () => {
               </Heading>
 
               <Stack
-                spacing={{ base: 4, md: 8, lg: 20 }}
+                gap={{ base: 4, md: 8, lg: 20 }}
                 direction={{ base: 'column', md: 'row' }}
               >
                 <Stack
@@ -133,7 +133,7 @@ const ContactForm = () => {
                   color={useColorModeValue('gray.700', 'whiteAlpha.900')}
                   shadow={'base'}
                 >
-                  <VStack spacing={5}>
+                  <VStack gap={5}>
                     <FormControl isRequired>
                       <FormLabel>
                         <Trans>Name</Trans>

@@ -13,9 +13,9 @@ import {
   useBreakpointValue,
   IconProps,
   Icon,
-} from '@chakra-ui/react'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+} from '@chakra-ui/react';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 
 const avatars = [
   {
@@ -38,7 +38,7 @@ const avatars = [
     name: 'Christian Nwamba',
     url: 'https://bit.ly/code-beast',
   },
-]
+];
 
 const JoinOurTeam = () => {
   return (
@@ -48,18 +48,26 @@ const JoinOurTeam = () => {
           as={SimpleGrid}
           maxW={'7xl'}
           columns={{ base: 1, md: 2 }}
-          spacing={{ base: 10, lg: 32 }}
+          gap={{ base: 10, lg: 32 }}
           py={{ base: 10, sm: 20, lg: 32 }}
         >
-          <Stack spacing={{ base: 10, md: 20 }}>
-            <Heading zIndex={100} lineHeight={1.1} fontSize={{ base: '3xl', sm: '4xl', md: '5xl', lg: '6xl' }}>
+          <Stack gap={{ base: 10, md: 20 }}>
+            <Heading
+              zIndex={100}
+              lineHeight={1.1}
+              fontSize={{ base: '3xl', sm: '4xl', md: '5xl', lg: '6xl' }}
+            >
               Senior web designers{' '}
-              <Text as={'span'} bgGradient='linear(to-r, red.400,pink.400)' bgClip='text'>
+              <Text
+                as={'span'}
+                bgGradient='linear(to-r, red.400,pink.400)'
+                bgClip='text'
+              >
                 &
               </Text>{' '}
               Full-Stack Developers
             </Heading>
-            <Stack direction={'row'} spacing={4} align={'center'}>
+            <Stack direction={'row'} gap={4} align={'center'}>
               <AvatarGroup>
                 {avatars.map((avatar) => (
                   <Avatar
@@ -83,7 +91,10 @@ const JoinOurTeam = () => {
                   />
                 ))}
               </AvatarGroup>
-              <Text fontFamily={'heading'} fontSize={{ base: '4xl', md: '6xl' }}>
+              <Text
+                fontFamily={'heading'}
+                fontSize={{ base: '4xl', md: '6xl' }}
+              >
                 +
               </Text>
               <Flex
@@ -114,21 +125,35 @@ const JoinOurTeam = () => {
               </Flex>
             </Stack>
           </Stack>
-          <Stack bg={'gray.50'} rounded={'xl'} p={{ base: 4, sm: 6, md: 8 }} spacing={{ base: 8 }} maxW={{ lg: 'lg' }}>
-            <Stack spacing={4}>
-              <Heading color={'gray.800'} lineHeight={1.1} fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}>
+          <Stack
+            bg={'gray.50'}
+            rounded={'xl'}
+            p={{ base: 4, sm: 6, md: 8 }}
+            gap={{ base: 8 }}
+            maxW={{ lg: 'lg' }}
+          >
+            <Stack gap={4}>
+              <Heading
+                color={'gray.800'}
+                lineHeight={1.1}
+                fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
+              >
                 Join our team
-                <Text as={'span'} bgGradient='linear(to-r, red.400,pink.400)' bgClip='text'>
+                <Text
+                  as={'span'}
+                  bgGradient='linear(to-r, red.400,pink.400)'
+                  bgClip='text'
+                >
                   !
                 </Text>
               </Heading>
               <Text color={'gray.500'} fontSize={{ base: 'sm', sm: 'md' }}>
-                We’re looking for amazing engineers just like you! Become a part of our rockstar engineering team and
-                skyrocket your career!
+                We’re looking for amazing engineers just like you! Become a part
+                of our rockstar engineering team and skyrocket your career!
               </Text>
             </Stack>
             <Box as={'form'} mt={10}>
-              <Stack spacing={4}>
+              <Stack gap={4}>
                 <Input
                   placeholder='Firstname'
                   bg={'gray.100'}
@@ -156,7 +181,11 @@ const JoinOurTeam = () => {
                     color: 'gray.500',
                   }}
                 />
-                <Button fontFamily={'heading'} bg={'gray.200'} color={'gray.800'}>
+                <Button
+                  fontFamily={'heading'}
+                  bg={'gray.200'}
+                  color={'gray.800'}
+                >
                   Upload CV
                 </Button>
               </Stack>
@@ -177,15 +206,20 @@ const JoinOurTeam = () => {
             form
           </Stack>
         </Container>
-        <Blur position={'absolute'} top={-10} left={-10} style={{ filter: 'blur(70px)' }} />
+        <Blur
+          position={'absolute'}
+          top={-10}
+          left={-10}
+          style={{ filter: 'blur(70px)' }}
+        />
       </Box>
     </FadeInView>
-  )
-}
+  );
+};
 
 export const Blur = (props: IconProps) => {
-  const width = useBreakpointValue({ base: '100%', md: '40vw', lg: '30vw' })
-  const zIndex = useBreakpointValue({ base: -1, md: -1, lg: 0 })
+  const width = useBreakpointValue({ base: '100%', md: '40vw', lg: '30vw' });
+  const zIndex = useBreakpointValue({ base: -1, md: -1, lg: 0 });
   return (
     <Icon
       width={width}
@@ -204,7 +238,7 @@ export const Blur = (props: IconProps) => {
       <circle cx='70.5' cy='458.5' r='101.5' fill='#48BB78' />
       <circle cx='426.5' cy='-0.5' r='101.5' fill='#4299E1' />
     </Icon>
-  )
-}
+  );
+};
 
-export default JoinOurTeam
+export default JoinOurTeam;

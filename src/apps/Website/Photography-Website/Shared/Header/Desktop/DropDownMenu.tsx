@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   Stack,
   Flex,
@@ -11,10 +11,10 @@ import {
   PopoverContent,
   useDisclosure,
   useColorModeValue,
-} from '@chakra-ui/react'
-import { FaChevronDown } from 'react-icons/fa'
-import { t, Trans } from '@lingui/macro'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+} from '@chakra-ui/react';
+import { FaChevronDown } from 'react-icons/fa';
+import { t, Trans } from '@lingui/macro';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 
 const menuData = [
   {
@@ -27,33 +27,41 @@ const menuData = [
   //   label: "Become a Tutor",
   //   href: "/hobbies",
   // },
-]
+];
 
 const MenuContainer = () => {
   return (
     <Flex h={'100%'}>
-      <DropDownMenu menuData={menuData} linkColor={useColorModeValue('#817e7e', '#02bece')} />
+      <DropDownMenu
+        menuData={menuData}
+        linkColor={useColorModeValue('#817e7e', '#02bece')}
+      />
     </Flex>
-  )
-}
+  );
+};
 
 interface MenuData {
-  id: number
-  label: string
-  href: string
+  id: number;
+  label: string;
+  href: string;
 }
 
 interface MenuDataProps {
-  menuData: MenuData[]
-  linkColor: string
+  menuData: MenuData[];
+  linkColor: string;
 }
 
 const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
-  const { onOpen, onClose, isOpen } = useDisclosure()
+  const { onOpen, onClose, isOpen } = useDisclosure();
 
   return (
-    <Stack direction={'row'} spacing={4}>
-      <Popover trigger={'hover'} placement={'bottom-start'} onOpen={onOpen} onClose={onClose}>
+    <Stack direction={'row'} gap={4}>
+      <Popover
+        trigger={'hover'}
+        placement={'bottom-start'}
+        onOpen={onOpen}
+        onClose={onClose}
+      >
         <PopoverTrigger>
           <HStack alignItems={'center'} cursor={'pointer'} role={'group'}>
             <Link
@@ -101,10 +109,14 @@ const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
         </PopoverContent>
       </Popover>
     </Stack>
-  )
-}
+  );
+};
 
-const DropDownItem = ({ label, href, linkColor }: MenuData & { linkColor: string }) => {
+const DropDownItem = ({
+  label,
+  href,
+  linkColor,
+}: MenuData & { linkColor: string }) => {
   return (
     <Link
       href={href!}
@@ -122,7 +134,7 @@ const DropDownItem = ({ label, href, linkColor }: MenuData & { linkColor: string
         </Text>
       </Stack>
     </Link>
-  )
-}
+  );
+};
 
-export default MenuContainer
+export default MenuContainer;

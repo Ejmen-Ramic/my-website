@@ -1,14 +1,19 @@
-import { Box, Heading, Text, Button, VStack } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
-import Footer from '../../../../../shared/components/PageWrapper/Footer/Footer'
-import { colors } from '../../../../../shared/components/Hooks/color'
-import Header from '../../../../../shared/components/PageWrapper/Header'
+import { Box, Heading, Text, Button, VStack } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
+import Footer from '../../../../../shared/components/PageWrapper/Footer/Footer';
+import { colors } from '../../../../../shared/components/Hooks/color';
+import Header from '../../../../../shared/components/PageWrapper/Header';
 
 const NotFound = () => {
   return (
     <>
       <Header />
-      <VStack spacing={'50px'} minH={'700px'} width={'full'} justifyContent={'center'}>
+      <VStack
+        gap={'50px'}
+        minH={'700px'}
+        width={'full'}
+        justifyContent={'center'}
+      >
         <Box textAlign='center' py={10} px={6}>
           <Heading
             display={'inline-block'}
@@ -39,7 +44,7 @@ const NotFound = () => {
       </VStack>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default NotFound
+export default NotFound;

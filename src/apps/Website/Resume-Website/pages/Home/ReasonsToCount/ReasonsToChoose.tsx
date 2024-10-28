@@ -1,23 +1,34 @@
-import React from 'react'
-import { Box, Button, GridItem, Heading, HStack, Icon, Image, SimpleGrid, Text, Stack } from '@chakra-ui/react'
-import { BsFillInfoCircleFill, BsSpeedometer } from 'react-icons/bs'
-import { IoThumbsUp } from 'react-icons/io5'
-import { GiStairsGoal } from 'react-icons/gi'
-import { FaHandshakeSimple } from 'react-icons/fa6'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { Link } from 'react-router-dom'
-import { t, Trans } from '@lingui/macro'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+import React from 'react';
+import {
+  Box,
+  Button,
+  GridItem,
+  Heading,
+  HStack,
+  Icon,
+  Image,
+  SimpleGrid,
+  Text,
+  Stack,
+} from '@chakra-ui/react';
+import { BsFillInfoCircleFill, BsSpeedometer } from 'react-icons/bs';
+import { IoThumbsUp } from 'react-icons/io5';
+import { GiStairsGoal } from 'react-icons/gi';
+import { FaHandshakeSimple } from 'react-icons/fa6';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { Link } from 'react-router-dom';
+import { t, Trans } from '@lingui/macro';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 
-const lightModeColor = colors.white
-const darkModeColor = '#171923'
+const lightModeColor = colors.white;
+const darkModeColor = '#171923';
 
 type ReasonItem = {
-  icon: React.ReactElement
-  number: string
-  title: string
-  description: string
-}
+  icon: React.ReactElement;
+  number: string;
+  title: string;
+  description: string;
+};
 
 const ReasonsToChoose = () => {
   const reasons: ReasonItem[] = [
@@ -45,7 +56,7 @@ const ReasonsToChoose = () => {
       title: t`Team Collaboration`,
       description: t`I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished.`,
     },
-  ]
+  ];
 
   return (
     <FadeInView>
@@ -53,7 +64,7 @@ const ReasonsToChoose = () => {
         w={'full'}
         minH={{ base: '900px', md: '450px', lg: '500px' }}
         maxW={{ base: 'full', md: '90%', lg: '1600px' }}
-        spacing={0}
+        gap={0}
         mx={'auto'}
         mt={{ base: '15px', lg: '0px' }}
         py={{ lg: '120px' }}
@@ -88,7 +99,11 @@ const ReasonsToChoose = () => {
             left={0}
             zIndex={0}
           />
-          <Box position={'relative'} py={{ base: '20px', lg: '80px' }} zIndex={1}>
+          <Box
+            position={'relative'}
+            py={{ base: '20px', lg: '80px' }}
+            zIndex={1}
+          >
             <FadeInView delay={0.1}>
               <Heading color={colors.white}>
                 <Trans>
@@ -103,18 +118,24 @@ const ReasonsToChoose = () => {
             <FadeInView delay={0.1}>
               <Text mt={'20px'} color={colors.white}>
                 <Trans>
-                  Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to
-                  continuous learning. My experience collaborating with diverse teams has equipped me with strong
-                  communication and interpersonal skills, fostering an environment of creativity and innovation.
-                  Additionally, I have a proven track record of meeting tight deadlines while maintaining a high
-                  standard of quality. With a proactive mindset and a drive to excel, I am poised to make significant
+                  Beyond delivering clean, readable code, I bring a passion for
+                  problem-solving and a commitment to continuous learning. My
+                  experience collaborating with diverse teams has equipped me
+                  with strong communication and interpersonal skills, fostering
+                  an environment of creativity and innovation. Additionally, I
+                  have a proven track record of meeting tight deadlines while
+                  maintaining a high standard of quality. With a proactive
+                  mindset and a drive to excel, I am poised to make significant
                   contributions to any project or team.
                 </Trans>
               </Text>
             </FadeInView>
             <FadeInView delay={0.1}>
               <Link to={'/about'}>
-                <Button mt={'20px'} leftIcon={<Icon as={BsFillInfoCircleFill} boxSize={4} />}>
+                <Button
+                  mt={'20px'}
+                  leftIcon={<Icon as={BsFillInfoCircleFill} boxSize={4} />}
+                >
                   <Trans>Need More Information</Trans>
                 </Button>
               </Link>
@@ -136,8 +157,13 @@ const ReasonsToChoose = () => {
                   borderWidth={'1px'}
                   borderColor={'#E4E4E4'}
                   borderLeft={{ lg: 0 }}
-                  borderStartEndRadius={{ lg: index === 1 || index === 1 ? '20px' : '0px' }}
-                  borderEndStartRadius={{ md: index === 2 || index === 2 ? '20px' : '0px', lg: '0px' }}
+                  borderStartEndRadius={{
+                    lg: index === 1 || index === 1 ? '20px' : '0px',
+                  }}
+                  borderEndStartRadius={{
+                    md: index === 2 || index === 2 ? '20px' : '0px',
+                    lg: '0px',
+                  }}
                   borderEndEndRadius={{
                     md: index === 3 || index === 3 ? '20px' : '0px',
                     lg: index === 3 || index === 3 ? '20px' : '0px',
@@ -175,7 +201,12 @@ const ReasonsToChoose = () => {
                     </FadeInView>
                   </HStack>
                   <FadeInView delay={0.2}>
-                    <Heading mt={'20px'} fontSize={'l'} fontWeight={'extrabold'} color={colors.black}>
+                    <Heading
+                      mt={'20px'}
+                      fontSize={'l'}
+                      fontWeight={'extrabold'}
+                      color={colors.black}
+                    >
                       {reason.title}
                     </Heading>
                   </FadeInView>
@@ -191,7 +222,7 @@ const ReasonsToChoose = () => {
         </GridItem>
       </Stack>
     </FadeInView>
-  )
-}
+  );
+};
 
-export default ReasonsToChoose
+export default ReasonsToChoose;

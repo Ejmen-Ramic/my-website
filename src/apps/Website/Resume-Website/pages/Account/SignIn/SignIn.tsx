@@ -12,20 +12,25 @@ import {
   useColorModeValue,
   InputGroup,
   InputRightElement,
-} from '@chakra-ui/react'
-import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
-import { Link } from 'react-router-dom'
-import { useState } from 'react'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { Trans } from '@lingui/macro'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+} from '@chakra-ui/react';
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { Trans } from '@lingui/macro';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 
 const SignIn = () => {
-  const [showPassword, setShowPassword] = useState(false)
+  const [showPassword, setShowPassword] = useState(false);
   return (
-    <Flex minH={'100vh'} align={'center'} justify={'center'} bg={useColorModeValue('gray.50', 'gray.800')}>
+    <Flex
+      minH={'100vh'}
+      align={'center'}
+      justify={'center'}
+      bg={useColorModeValue('gray.50', 'gray.800')}
+    >
       <FadeInView>
-        <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+        <Stack gap={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
           <Stack align={'center'}>
             <Heading fontSize={'4xl'}>
               <Trans>Sign in to your account</Trans>
@@ -38,8 +43,13 @@ const SignIn = () => {
               ✌️
             </Text>
           </Stack>
-          <Box rounded={'lg'} bg={useColorModeValue(colors.white, 'gray.700')} boxShadow={'lg'} p={8}>
-            <Stack spacing={4}>
+          <Box
+            rounded={'lg'}
+            bg={useColorModeValue(colors.white, 'gray.700')}
+            boxShadow={'lg'}
+            p={8}
+          >
+            <Stack gap={4}>
               <FormControl id={'email'}>
                 <FormLabel>
                   <Trans>Email address</Trans>
@@ -53,14 +63,23 @@ const SignIn = () => {
                 <InputGroup>
                   <Input type={showPassword ? 'text' : 'password'} />
                   <InputRightElement h={'full'}>
-                    <Button variant={'ghost'} onClick={() => setShowPassword((showPassword) => !showPassword)}>
+                    <Button
+                      variant={'ghost'}
+                      onClick={() =>
+                        setShowPassword((showPassword) => !showPassword)
+                      }
+                    >
                       {showPassword ? <ViewIcon /> : <ViewOffIcon />}
                     </Button>
                   </InputRightElement>
                 </InputGroup>
               </FormControl>
-              <Stack spacing={10}>
-                <Stack direction={{ base: 'column', sm: 'row' }} align={'start'} justify={'space-between'}>
+              <Stack gap={10}>
+                <Stack
+                  direction={{ base: 'column', sm: 'row' }}
+                  align={'start'}
+                  justify={'space-between'}
+                >
                   <Checkbox>
                     <Trans>Remember me</Trans>
                   </Checkbox>
@@ -91,7 +110,7 @@ const SignIn = () => {
         </Stack>
       </FadeInView>
     </Flex>
-  )
-}
+  );
+};
 
-export default SignIn
+export default SignIn;

@@ -1,26 +1,39 @@
-import { VStack, Box, Heading, HStack, Text, useColorModeValue, Stack } from '@chakra-ui/react'
-import { FaCalendarAlt } from 'react-icons/fa'
-import { FaGraduationCap, FaLocationDot } from 'react-icons/fa6'
-import { itemProps } from './Props'
-import { Trans } from '@lingui/macro'
+import {
+  VStack,
+  Box,
+  Heading,
+  HStack,
+  Text,
+  useColorModeValue,
+  Stack,
+} from '@chakra-ui/react';
+import { FaCalendarAlt } from 'react-icons/fa';
+import { FaGraduationCap, FaLocationDot } from 'react-icons/fa6';
+import { itemProps } from './Props';
+import { Trans } from '@lingui/macro';
 
 const Education = () => {
-  const colorMode = useColorModeValue('#000000', '#ECEFF4')
+  const colorMode = useColorModeValue('#000000', '#ECEFF4');
 
   return (
     <VStack w={'full'} alignItems={'start'}>
-      <HStack w={'full'} spacing={'10px'}>
+      <HStack w={'full'} gap={'10px'}>
         <FaGraduationCap size={'22px'} color={colorMode} />
-        <Heading textTransform={'uppercase'} lineHeight={'12px'} fontSize={'18px'} color={colorMode}>
+        <Heading
+          textTransform={'uppercase'}
+          lineHeight={'12px'}
+          fontSize={'18px'}
+          color={colorMode}
+        >
           <Trans>Education</Trans>
         </Heading>
       </HStack>
 
       <Box bgColor={colorMode} height={'2px'} w={'full'}></Box>
       {itemProps.map(({ year, location, experience, description }, i) => (
-        <VStack w={'full'} spacing={'10px'} alignItems={'start'} key={i}>
+        <VStack w={'full'} gap={'10px'} alignItems={'start'} key={i}>
           <HStack w={'full'}>
-            <VStack w={'full'} spacing={'0px'}>
+            <VStack w={'full'} gap={'0px'}>
               <HStack w={'full'}>
                 <FaCalendarAlt size={'12px'} color={colorMode} />
                 <Text fontSize={'12px'} color={colorMode}>
@@ -34,7 +47,13 @@ const Education = () => {
                 </Text>
               </HStack>
             </VStack>
-            <Stack w={'full'} alignItems={'end'} fontSize={'16px'} fontWeight={400} textAlign={'end'}>
+            <Stack
+              w={'full'}
+              alignItems={'end'}
+              fontSize={'16px'}
+              fontWeight={400}
+              textAlign={'end'}
+            >
               <Text color={colorMode}>{experience}</Text>
             </Stack>
           </HStack>
@@ -44,7 +63,7 @@ const Education = () => {
         </VStack>
       ))}
     </VStack>
-  )
-}
+  );
+};
 
-export default Education
+export default Education;

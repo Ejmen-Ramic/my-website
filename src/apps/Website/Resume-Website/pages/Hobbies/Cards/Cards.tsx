@@ -1,5 +1,5 @@
-import { Stack, SimpleGrid, HStack } from '@chakra-ui/react'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+import { Stack, SimpleGrid, HStack } from '@chakra-ui/react';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 
 const Cards = () => {
   const zoomInStyles = {
@@ -9,11 +9,11 @@ const Cards = () => {
       boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
     },
     transform: 'scale(0.1)',
-  }
+  };
 
   return (
     <HStack display='flex' justifyContent='center' minH={'800px'} my={'100px'}>
-      <SimpleGrid columns={[1, 2, 4]} spacing={10} minH={'500px'} minW={'1200px'}>
+      <SimpleGrid columns={[1, 2, 4]} gap={10} minH={'500px'} minW={'1200px'}>
         <Stack
           w={'100%'}
           h={'100%'}
@@ -52,7 +52,7 @@ const Cards = () => {
         ></Stack>
       </SimpleGrid>
     </HStack>
-  )
-}
+  );
+};
 
-export default Cards
+export default Cards;

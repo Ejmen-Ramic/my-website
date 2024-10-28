@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   Stack,
   Flex,
@@ -12,10 +12,10 @@ import {
   PopoverContent,
   useDisclosure,
   useColorModeValue,
-} from '@chakra-ui/react'
-import { FaChevronDown } from 'react-icons/fa'
-import { t, Trans } from '@lingui/macro'
-import { colors } from '../../../Hooks/color'
+} from '@chakra-ui/react';
+import { FaChevronDown } from 'react-icons/fa';
+import { t, Trans } from '@lingui/macro';
+import { colors } from '../../../Hooks/color';
 
 const menuData = [
   {
@@ -28,34 +28,39 @@ const menuData = [
   //   label: "Become a Tutor",
   //   href: "/hobbies",
   // },
-]
+];
 
 const MenuContainer = () => {
   return (
     <Flex h={'100%'}>
       <DropDownHobbies menuData={menuData} />
     </Flex>
-  )
-}
+  );
+};
 
 interface MenuData {
-  id: number
-  label: string
-  href: string
-  linkColor?: string
+  id: number;
+  label: string;
+  href: string;
+  linkColor?: string;
 }
 
 interface MenuDataProps {
-  menuData: MenuData[]
+  menuData: MenuData[];
 }
 
 const DropDownHobbies = ({ menuData }: MenuDataProps) => {
-  const linkColor = '#02bece'
-  const { onOpen, onClose, isOpen } = useDisclosure()
+  const linkColor = '#02bece';
+  const { onOpen, onClose, isOpen } = useDisclosure();
 
   return (
-    <Stack direction={'row'} spacing={4}>
-      <Popover trigger={'hover'} placement={'bottom-start'} onOpen={onOpen} onClose={onClose}>
+    <Stack direction={'row'} gap={4}>
+      <Popover
+        trigger={'hover'}
+        placement={'bottom-start'}
+        onOpen={onOpen}
+        onClose={onClose}
+      >
         <PopoverTrigger>
           <HStack alignItems={'center'} cursor={'pointer'} role={'group'}>
             <Link
@@ -104,8 +109,8 @@ const DropDownHobbies = ({ menuData }: MenuDataProps) => {
         </PopoverContent>
       </Popover>
     </Stack>
-  )
-}
+  );
+};
 
 const DropDownItem = ({ label, href, linkColor }: MenuData) => {
   return (
@@ -125,7 +130,7 @@ const DropDownItem = ({ label, href, linkColor }: MenuData) => {
         </Box>
       </Stack>
     </Link>
-  )
-}
+  );
+};
 
-export default MenuContainer
+export default MenuContainer;

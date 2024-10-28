@@ -344,7 +344,7 @@
 //   return (
 //     <>
 //       {itemWidth && (
-//         <VStack ref={node} spacing={5} alignItems="stretch">
+//         <VStack ref={node} gap={5} alignItems="stretch">
 //           <MotionFlex
 //             dragConstraints={node}
 //             onDragStart={handleDragStart}
@@ -411,7 +411,7 @@
 // };
 
 // export default ChakraCarousel;
-import { Box } from "@chakra-ui/react";
+import { Box } from '@chakra-ui/react';
 
 const Delete = () => {
   return <Box></Box>;

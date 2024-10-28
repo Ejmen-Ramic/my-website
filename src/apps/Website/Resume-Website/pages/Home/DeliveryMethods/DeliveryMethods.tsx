@@ -1,7 +1,18 @@
-import { Button, Flex, Heading, Hide, Icon, Link, SimpleGrid, Text, VStack, Image } from '@chakra-ui/react'
-import { BsArrowRight } from 'react-icons/bs'
-import items from './Props'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import {
+  Button,
+  Flex,
+  Heading,
+  Hide,
+  Icon,
+  Link,
+  SimpleGrid,
+  Text,
+  VStack,
+  Image,
+} from '@chakra-ui/react';
+import { BsArrowRight } from 'react-icons/bs';
+import items from './Props';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
 
 // interface DMProps {
 //   title: string;
@@ -14,20 +25,27 @@ import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 const DeliveryMethods = () => {
   return (
     <FadeInView>
-      <VStack spacing={'180px'} textAlign={'center'} w={'full'} mx={'auto'} justifyContent={'center'}>
+      <VStack
+        gap={'180px'}
+        textAlign={'center'}
+        w={'full'}
+        mx={'auto'}
+        justifyContent={'center'}
+      >
         <VStack w={'full'} px={'25px'}>
           <Heading>Our Available Delivery Methods</Heading>
           <Text>
-            The Knowledge Academy is World's Leading Organization for training professionals. The Knowledge Academy
-            provides training in 490+{' '}
+            The Knowledge Academy is World's Leading Organization for training
+            professionals. The Knowledge Academy provides training in 490+{' '}
             <Hide below='lg'>
               <br />
             </Hide>
-            locations in around 221+ countries, covering 3000 subjects with the following delivery methods:
+            locations in around 221+ countries, covering 3000 subjects with the
+            following delivery methods:
           </Text>
         </VStack>
 
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={'32px'}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={'32px'}>
           {items.map(({ title, alt, image, text, link }, i) => (
             <Flex
               key={i}
@@ -37,7 +55,7 @@ const DeliveryMethods = () => {
               borderWidth={'1px'}
               borderColor={'gray'}
             >
-              <VStack spacing={'20px'} w={'full'}>
+              <VStack gap={'20px'} w={'full'}>
                 <Heading fontSize={'20px'}>{title}</Heading>
                 <Image src={image} alt={alt} />
                 <Text mt={'20px'} mb={'20px'}>
@@ -65,7 +83,7 @@ const DeliveryMethods = () => {
         </SimpleGrid>
       </VStack>
     </FadeInView>
-  )
-}
+  );
+};
 
-export default DeliveryMethods
+export default DeliveryMethods;

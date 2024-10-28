@@ -15,14 +15,14 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-} from '@chakra-ui/react'
-import { ReactNode } from 'react'
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
-import { FaXTwitter } from 'react-icons/fa6'
-import { BiMailSend } from 'react-icons/bi'
-import FadeInView from '../../../../shared/components/Hooks/FadeInView'
-import { t, Trans } from '@lingui/macro'
-import { colors } from '../../../../shared/components/Hooks/color'
+} from '@chakra-ui/react';
+import { ReactNode } from 'react';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { BiMailSend } from 'react-icons/bi';
+import FadeInView from '../../../../shared/components/Hooks/FadeInView';
+import { t, Trans } from '@lingui/macro';
+import { colors } from '../../../../shared/components/Hooks/color';
 
 const Logo = (props: any) => {
   return (
@@ -37,8 +37,8 @@ const Logo = (props: any) => {
         Ejmen Ramic
       </Text>
     </FadeInView>
-  )
-}
+  );
+};
 
 const SocialButton = ({
   children,
@@ -46,11 +46,11 @@ const SocialButton = ({
   href,
   hoverColor,
 }: {
-  children: ReactNode
-  label: string
-  href: string
-  color: string
-  hoverColor: string
+  children: ReactNode;
+  label: string;
+  href: string;
+  color: string;
+  hoverColor: string;
 }) => {
   return (
     <chakra.button
@@ -75,19 +75,19 @@ const SocialButton = ({
       </FadeInView>
       <FadeInView delay={0.1}>{children}</FadeInView>
     </chakra.button>
-  )
-}
+  );
+};
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
     <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
       {children}
     </Text>
-  )
-}
+  );
+};
 
 const FooterPhotography = () => {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
   return (
     <Box
       bg={useColorModeValue('#d1cec7', '#2b333d')}
@@ -97,9 +97,18 @@ const FooterPhotography = () => {
       left={'0'}
       right={'0'}
     >
-      <Container as={Stack} py={10} px={{ base: '20px', md: '40px', lg: '0px' }} maxW={'6xl'} align='center'>
-        <SimpleGrid templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 2fr' }} spacing={20}>
-          <Stack spacing={6}>
+      <Container
+        as={Stack}
+        py={10}
+        px={{ base: '20px', md: '40px', lg: '0px' }}
+        maxW={'6xl'}
+        align='center'
+      >
+        <SimpleGrid
+          templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 2fr' }}
+          gap={20}
+        >
+          <Stack gap={6}>
             <Box>
               <Logo color={useColorModeValue('gray.700', colors.white)} />
             </Box>
@@ -111,8 +120,9 @@ const FooterPhotography = () => {
                 color={useColorModeValue('#2b333d', colors.white)}
               >
                 <Trans>
-                  Welcome to my website! I am a software engineer and photographer based in Bosnia and Herzegovina. Feel
-                  free to view my resume and work. <br /> <br />
+                  Welcome to my website! I am a software engineer and
+                  photographer based in Bosnia and Herzegovina. Feel free to
+                  view my resume and work. <br /> <br />
                   Powered by
                 </Trans>{' '}
                 <Link href='https://react.dev/' isExternal>
@@ -120,7 +130,10 @@ const FooterPhotography = () => {
                     React
                   </Box>
                 </Link>
-                <Box as={'span'} color={useColorModeValue('#2b333d', colors.white)}>
+                <Box
+                  as={'span'}
+                  color={useColorModeValue('#2b333d', colors.white)}
+                >
                   {''} • {''}
                 </Box>
                 <Link href='https://www.typescriptlang.org/' isExternal>
@@ -128,7 +141,10 @@ const FooterPhotography = () => {
                     Typescript
                   </Box>
                 </Link>
-                <Box as={'span'} color={useColorModeValue('#2b333d', colors.white)}>
+                <Box
+                  as={'span'}
+                  color={useColorModeValue('#2b333d', colors.white)}
+                >
                   {''} • {''}
                 </Box>
                 <Link href='https://chakra-ui.com/' isExternal>
@@ -140,11 +156,12 @@ const FooterPhotography = () => {
             </FadeInView>
             <FadeInView delay={0.1}>
               <Text fontSize={'sm'}>
-                <Trans>Copyright</Trans> ©{year} EjmenRamic. <Trans>All rights reserved</Trans>
+                <Trans>Copyright</Trans> ©{year} EjmenRamic.{' '}
+                <Trans>All rights reserved</Trans>
               </Text>
             </FadeInView>
             <FadeInView delay={0.1}>
-              <Stack direction={'row'} spacing={6}>
+              <Stack direction={'row'} gap={6}>
                 <SocialButton
                   label={'GitHub'}
                   href={'https://github.com/Ejmen-Ramic/'}
@@ -154,13 +171,20 @@ const FooterPhotography = () => {
                   <FaGithub />
                 </SocialButton>
 
-                <SocialButton label={'X'} href={'https://x.com/EjmenRamic'} color={'#00aced'} hoverColor={'#657786'}>
+                <SocialButton
+                  label={'X'}
+                  href={'https://x.com/EjmenRamic'}
+                  color={'#00aced'}
+                  hoverColor={'#657786'}
+                >
                   <FaXTwitter />
                 </SocialButton>
 
                 <SocialButton
                   label={'LinkedIn'}
-                  href={'https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'}
+                  href={
+                    'https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'
+                  }
                   color={'#0077b5'}
                   hoverColor={'#0A66C2'}
                 >
@@ -177,7 +201,12 @@ const FooterPhotography = () => {
               </Stack>
             </FadeInView>
           </Stack>
-          <Stack align={'flex-start'} mt={{ base: '5px' }} mb={{ base: '5%', md: '0%' }} fontFamily={'inherit'}>
+          <Stack
+            align={'flex-start'}
+            mt={{ base: '5px' }}
+            mb={{ base: '5%', md: '0%' }}
+            fontFamily={'inherit'}
+          >
             <FadeInView delay={0.1}>
               <Text
                 mb={{ md: '20px' }}
@@ -217,7 +246,9 @@ const FooterPhotography = () => {
                   border={'none'}
                   color={useColorModeValue('#02bece', '#02bece')}
                   _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
-                  _expanded={{ color: useColorModeValue('#2b333d', colors.white) }}
+                  _expanded={{
+                    color: useColorModeValue('#2b333d', colors.white),
+                  }}
                   fontWeight={400}
                   fontSize={'16px'}
                   textTransform={'capitalize'}
@@ -290,7 +321,7 @@ const FooterPhotography = () => {
         </SimpleGrid>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default FooterPhotography
+export default FooterPhotography;

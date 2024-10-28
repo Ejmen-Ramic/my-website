@@ -69,7 +69,7 @@
 //               </VStack>
 
 //               <Flex justifyContent="space-between">
-//                 <HStack spacing={2}>
+//                 <HStack gap={2}>
 //                   <Tag size="sm" variant="outline" colorScheme="green">
 //                     User: {post.userId}
 //                   </Tag>
@@ -98,7 +98,7 @@
 // const rootElement = document.getElementById("root");
 // ReactDOM.render(<App />, rootElement);
 
-import { Box } from "@chakra-ui/react";
+import { Box } from '@chakra-ui/react';
 
 const Delete = () => {
   return <Box></Box>;

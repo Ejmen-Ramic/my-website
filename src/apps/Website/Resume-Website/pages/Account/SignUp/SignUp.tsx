@@ -12,19 +12,24 @@ import {
   Heading,
   Text,
   useColorModeValue,
-} from '@chakra-ui/react'
-import { useState } from 'react'
-import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
-import { Link } from 'react-router-dom'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+} from '@chakra-ui/react';
+import { useState } from 'react';
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { Link } from 'react-router-dom';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 
 const SignUp = () => {
-  const [showPassword, setShowPassword] = useState(false)
+  const [showPassword, setShowPassword] = useState(false);
   return (
-    <Flex minH={'100vh'} align={'center'} justify={'center'} bg={useColorModeValue('gray.50', 'gray.800')}>
+    <Flex
+      minH={'100vh'}
+      align={'center'}
+      justify={'center'}
+      bg={useColorModeValue('gray.50', 'gray.800')}
+    >
       <FadeInView>
-        <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+        <Stack gap={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
           <Stack align={'center'}>
             <Heading fontSize={'4xl'} textAlign={'center'}>
               Sign up
@@ -37,8 +42,13 @@ const SignUp = () => {
               ✌️
             </Text>
           </Stack>
-          <Box rounded={'lg'} bg={useColorModeValue(colors.white, 'gray.700')} boxShadow={'lg'} p={8}>
-            <Stack spacing={4}>
+          <Box
+            rounded={'lg'}
+            bg={useColorModeValue(colors.white, 'gray.700')}
+            boxShadow={'lg'}
+            p={8}
+          >
+            <Stack gap={4}>
               <HStack>
                 <Box>
                   <FormControl id={'firstName'} isRequired>
@@ -62,13 +72,18 @@ const SignUp = () => {
                 <InputGroup>
                   <Input type={showPassword ? 'text' : 'password'} />
                   <InputRightElement h={'full'}>
-                    <Button variant={'ghost'} onClick={() => setShowPassword((showPassword) => !showPassword)}>
+                    <Button
+                      variant={'ghost'}
+                      onClick={() =>
+                        setShowPassword((showPassword) => !showPassword)
+                      }
+                    >
                       {showPassword ? <ViewIcon /> : <ViewOffIcon />}
                     </Button>
                   </InputRightElement>
                 </InputGroup>
               </FormControl>
-              <Stack spacing={10} pt={2}>
+              <Stack gap={10} pt={2}>
                 <Button
                   loadingText={'Submitting'}
                   size={'lg'}
@@ -94,7 +109,7 @@ const SignUp = () => {
         </Stack>
       </FadeInView>
     </Flex>
-  )
-}
+  );
+};
 
-export default SignUp
+export default SignUp;

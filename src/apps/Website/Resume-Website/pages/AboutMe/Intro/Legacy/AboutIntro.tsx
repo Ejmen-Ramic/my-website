@@ -1,6 +1,16 @@
-import { chakra, Stack, HStack, Text, Box, Flex, Link, Icon, useColorModeValue } from '@chakra-ui/react'
-import { FaGithub } from 'react-icons/fa'
-import { colors } from '../../../../../../../shared/components/Hooks/color'
+import {
+  chakra,
+  Stack,
+  HStack,
+  Text,
+  Box,
+  Flex,
+  Link,
+  Icon,
+  useColorModeValue,
+} from '@chakra-ui/react';
+import { FaGithub } from 'react-icons/fa';
+import { colors } from '../../../../../../../shared/components/Hooks/color';
 
 const AboutIntro = () => {
   return (
@@ -29,8 +39,20 @@ const AboutIntro = () => {
         zIndex={'0'}
         opacity={'0.8'}
       ></Box>
-      <Stack pos={'relative'} zIndex={1} direction={'column'} justifyContent={'center'} spacing={6} maxW={'550px'}>
-        <chakra.h1 fontSize={{ base: '3xl', sm: '5xl' }} lineHeight={1} fontWeight={'bold'} textAlign={'left'}>
+      <Stack
+        pos={'relative'}
+        zIndex={1}
+        direction={'column'}
+        justifyContent={'center'}
+        gap={6}
+        maxW={'550px'}
+      >
+        <chakra.h1
+          fontSize={{ base: '3xl', sm: '5xl' }}
+          lineHeight={1}
+          fontWeight={'bold'}
+          textAlign={'left'}
+        >
           Explore TemplatesKart <br />
         </chakra.h1>
         <Text
@@ -40,10 +62,11 @@ const AboutIntro = () => {
           fontWeight={'400'}
           color={useColorModeValue('gray.500', 'gray.700')}
         >
-          TemplatesKart is a set of more than 100 responsive components built with chakraUI. All components support
-          dark/light color scheme and chakraUI theme customizations. TemplatesKart is free for everyone.
+          TemplatesKart is a set of more than 100 responsive components built
+          with chakraUI. All components support dark/light color scheme and
+          chakraUI theme customizations. TemplatesKart is free for everyone.
         </Text>
-        <HStack spacing={{ base: 0, sm: 2 }} flexWrap={'wrap'}>
+        <HStack gap={{ base: 0, sm: 2 }} flexWrap={'wrap'}>
           <chakra.button
             h={10}
             px={6}
@@ -76,7 +99,7 @@ const AboutIntro = () => {
         </HStack>
       </Stack>
     </Stack>
-  )
-}
+  );
+};
 
-export default AboutIntro
+export default AboutIntro;

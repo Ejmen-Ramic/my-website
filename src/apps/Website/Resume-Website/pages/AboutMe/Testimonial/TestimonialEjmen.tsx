@@ -1,13 +1,21 @@
-import { Container, Text, VStack, Stack, Avatar, Icon, useColorModeValue } from '@chakra-ui/react'
+import {
+  Container,
+  Text,
+  VStack,
+  Stack,
+  Avatar,
+  Icon,
+  useColorModeValue,
+} from '@chakra-ui/react';
 // Here we have used react-icons package for the icon
-import { FaQuoteRight } from 'react-icons/fa'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+import { FaQuoteRight } from 'react-icons/fa';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 interface TestimonialAttributes {
-  username: string
-  position: string
-  company: string
-  content: string
-  image: string
+  username: string;
+  position: string;
+  company: string;
+  content: string;
+  image: string;
 }
 
 const testimonial: TestimonialAttributes = {
@@ -18,13 +26,13 @@ const testimonial: TestimonialAttributes = {
   content: `Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
       rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
       risus at semper`,
-}
+};
 
 const TestimonialCard = () => {
   return (
     <Container maxW={'5xl'} p={{ base: 10, md: 14 }}>
       <VStack
-        spacing={3}
+        gap={3}
         p={4}
         bg={useColorModeValue(colors.white, 'blackAlpha.600')}
         border={'3px solid'}
@@ -43,10 +51,15 @@ const TestimonialCard = () => {
           position={'absolute'}
           top={'-1.5rem'}
         />
-        <Stack direction={'column'} spacing={5}>
+        <Stack direction={'column'} gap={5}>
           <Text color={'gray.500'}></Text>
           <Text color={'gray.500'}></Text>
-          <Text fontWeight={'bold'} fontSize={'lg'} align={'right'} mr={'3rem !important'}>
+          <Text
+            fontWeight={'bold'}
+            fontSize={'lg'}
+            align={'right'}
+            mr={'3rem !important'}
+          >
             {testimonial.username}
           </Text>
         </Stack>
@@ -63,7 +76,7 @@ const TestimonialCard = () => {
         />
       </VStack>
     </Container>
-  )
-}
+  );
+};
 
-export default TestimonialCard
+export default TestimonialCard;

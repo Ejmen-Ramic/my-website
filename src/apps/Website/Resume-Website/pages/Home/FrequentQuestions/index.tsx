@@ -1,14 +1,20 @@
-import { FC, ReactNode } from 'react'
-import FAQDesktop from './FAQDesktop'
-import FAQMobile from './FAQMobile'
-import { Heading, VStack, Text, useBreakpointValue, Box } from '@chakra-ui/react'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { t, Trans } from '@lingui/macro'
+import { FC, ReactNode } from 'react';
+import FAQDesktop from './FAQDesktop';
+import FAQMobile from './FAQMobile';
+import {
+  Heading,
+  VStack,
+  Text,
+  useBreakpointValue,
+  Box,
+} from '@chakra-ui/react';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { t, Trans } from '@lingui/macro';
 
 export type FAQItem = {
-  title: ReactNode
-  description: ReactNode
-}
+  title: ReactNode;
+  description: ReactNode;
+};
 
 const items: FAQItem[] = [
   {
@@ -20,11 +26,14 @@ const items: FAQItem[] = [
     description: (
       <Box>
         <Trans>
-          One of my greatest strengths is my ability to learn quickly and adapt to new technologies. For instance, I
-          picked up Chakra UI on my own and have been able to integrate it seamlessly into my projects.
+          One of my greatest strengths is my ability to learn quickly and adapt
+          to new technologies. For instance, I picked up Chakra UI on my own and
+          have been able to integrate it seamlessly into my projects.
           <br />
-          <br /> On the flip side, a weakness of mine is that I can be a bit of a perfectionist. Sometimes I spend too
-          much time tweaking small details. I'm working on balancing my attention to detail with efficiency.
+          <br /> On the flip side, a weakness of mine is that I can be a bit of
+          a perfectionist. Sometimes I spend too much time tweaking small
+          details. I'm working on balancing my attention to detail with
+          efficiency.
         </Trans>
       </Box>
     ),
@@ -58,15 +67,19 @@ const items: FAQItem[] = [
     description: (
       <Box>
         <Trans>
-          I worked on an e-commerce platform where we used React, TypeScript, and Chakra UI for the frontend, Next.js
-          for the backend, MongoDB and Prisma for the database, and Playwright for writing tests. I implemented features
-          like user authentication, product listings, and a checkout page. Using TypeScript, I ensured type safety and
-          reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very
-          user-friendly.
+          I worked on an e-commerce platform where we used React, TypeScript,
+          and Chakra UI for the frontend, Next.js for the backend, MongoDB and
+          Prisma for the database, and Playwright for writing tests. I
+          implemented features like user authentication, product listings, and a
+          checkout page. Using TypeScript, I ensured type safety and reduced
+          bugs. We also used Chakra UI to create a cohesive and responsive
+          design, which made the site very user-friendly.
           <br />
-          <br /> Additionally, I collaborated closely with backend developers to integrate the frontend with the
-          server-side logic seamlessly, resulting in a smooth and efficient user experience. The project was a great
-          success, improving user engagement and increasing sales for the platform.
+          <br /> Additionally, I collaborated closely with backend developers to
+          integrate the frontend with the server-side logic seamlessly,
+          resulting in a smooth and efficient user experience. The project was a
+          great success, improving user engagement and increasing sales for the
+          platform.
         </Trans>
       </Box>
     ),
@@ -75,15 +88,15 @@ const items: FAQItem[] = [
     title: t`10. Tell us about a time when you had to learn something new quickly.`,
     description: t`When we decided to switch from JavaScript and CSS to TypeScript and Chakra UI in my previous job, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team.`,
   },
-]
+];
 
 const FAQ: FC = () => {
-  const isMobile = useBreakpointValue({ base: true, md: false })
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
     <FadeInView>
       <Box my={{ base: '60px', lg: '120px' }}>
-        <VStack w={'full'} spacing={'30px'} textAlign={'center'} px={'16px'}>
+        <VStack w={'full'} gap={'30px'} textAlign={'center'} px={'16px'}>
           <Box px={{ base: '10px', md: '0px' }}>
             <Heading>
               <Trans>Frequently Asked Questions</Trans>
@@ -91,17 +104,21 @@ const FAQ: FC = () => {
           </Box>
           <Text>
             <Trans>
-              The following list of frequently asked questions by employers that may also assist you in getting your
-              questions answered:
+              The following list of frequently asked questions by employers that
+              may also assist you in getting your questions answered:
             </Trans>
           </Text>
         </VStack>
         <VStack mt={'50px'} px={{ base: '20px', md: '50px', lg: '300px' }}>
-          {isMobile ? <FAQMobile items={items} /> : <FAQDesktop items={items} />}
+          {isMobile ? (
+            <FAQMobile items={items} />
+          ) : (
+            <FAQDesktop items={items} />
+          )}
         </VStack>
       </Box>
     </FadeInView>
-  )
-}
+  );
+};
 
-export default FAQ
+export default FAQ;

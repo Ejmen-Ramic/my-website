@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
-import { Box, Button, Input, Text, VStack } from '@chakra-ui/react'
-import { error } from 'console'
-import { t, Trans } from '@lingui/macro'
+import React, { useState } from 'react';
+import { Box, Button, Input, Text, VStack } from '@chakra-ui/react';
+import { error } from 'console';
+import { t, Trans } from '@lingui/macro';
 
 const LoginModal: React.FC = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [message, setMessage] = useState('')
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
   const fakeDatabase = [
     { email: 'Ejmen', password: '123' },
     { email: 'Muhamed', password: '321' },
-  ]
+  ];
 
   const handleLogin2 = async () => {
     const result = await fetch('https://dummyjson.com/auth/login', {
@@ -22,32 +22,39 @@ const LoginModal: React.FC = () => {
         // expiresInMins: 60, // optional
       }),
     }).then((res) => {
-      res.json()
+      res.json();
       if (res.ok) {
-        setMessage('Login Successful')
+        setMessage('Login Successful');
       } else {
-        setMessage('Credentials are incorrect')
+        setMessage('Credentials are incorrect');
       }
-    })
-  }
+    });
+  };
 
   const handleLogin = () => {
-    const user = fakeDatabase.find((user) => user.email === email && user.password === password)
+    const user = fakeDatabase.find(
+      (user) => user.email === email && user.password === password
+    );
 
     if (user) {
-      setMessage('Login Successful')
+      setMessage('Login Successful');
     } else {
-      setMessage('Credentials are incorrect')
+      setMessage('Credentials are incorrect');
     }
-  }
+  };
 
   return (
-    <VStack spacing={4}>
+    <VStack gap={4}>
       <Text fontSize={'2xl'}>
         <Trans>Login</Trans>
       </Text>
       <Box>
-        <Input placeholder={t`Email`} value={email} onChange={(e) => setEmail(e.target.value)} size={'md'} />
+        <Input
+          placeholder={t`Email`}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          size={'md'}
+        />
       </Box>
       <Box>
         <Input
@@ -63,10 +70,10 @@ const LoginModal: React.FC = () => {
       </Button>
       {message && <Text>{message}</Text>}
     </VStack>
-  )
-}
+  );
+};
 
-export default LoginModal
+export default LoginModal;
 
 // Grab the values from the dummyAPI Halit gave.
 // Display the information from that array to display it on the test page as a table.

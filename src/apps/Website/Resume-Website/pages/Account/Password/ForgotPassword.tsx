@@ -1,7 +1,16 @@
-import { Button, FormControl, Flex, Heading, Input, Stack, Text, useColorModeValue } from '@chakra-ui/react'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { t, Trans } from '@lingui/macro'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+import {
+  Button,
+  FormControl,
+  Flex,
+  Heading,
+  Input,
+  Stack,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { t, Trans } from '@lingui/macro';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 
 // type ForgotPasswordFormInputs = {
 //   email: string;
@@ -9,10 +18,15 @@ import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const ForgotPassword = (): JSX.Element => {
   return (
-    <Flex minH={'100vh'} align={'center'} justify={'center'} bg={useColorModeValue('gray.50', 'gray.800')}>
+    <Flex
+      minH={'100vh'}
+      align={'center'}
+      justify={'center'}
+      bg={useColorModeValue('gray.50', 'gray.800')}
+    >
       <FadeInView>
         <Stack
-          spacing={4}
+          gap={4}
           w={'full'}
           maxW={'md'}
           bg={useColorModeValue(colors.white, 'gray.700')}
@@ -24,13 +38,20 @@ const ForgotPassword = (): JSX.Element => {
           <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl' }}>
             <Trans>Forgot your password?</Trans>
           </Heading>
-          <Text fontSize={{ base: 'sm', sm: 'md' }} color={useColorModeValue('gray.800', 'gray.400')}>
+          <Text
+            fontSize={{ base: 'sm', sm: 'md' }}
+            color={useColorModeValue('gray.800', 'gray.400')}
+          >
             <Trans>You&apos;ll get an email with a reset link</Trans>
           </Text>
           <FormControl id={'email'}>
-            <Input placeholder={t`your-email@example.com`} _placeholder={{ color: 'gray.500' }} type={'email'} />
+            <Input
+              placeholder={t`your-email@example.com`}
+              _placeholder={{ color: 'gray.500' }}
+              type={'email'}
+            />
           </FormControl>
-          <Stack spacing={6}>
+          <Stack gap={6}>
             <Button
               bg={'blue.400'}
               color={colors.white}
@@ -44,7 +65,7 @@ const ForgotPassword = (): JSX.Element => {
         </Stack>
       </FadeInView>
     </Flex>
-  )
-}
+  );
+};
 
-export default ForgotPassword
+export default ForgotPassword;

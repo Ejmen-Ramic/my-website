@@ -1,15 +1,33 @@
-import { Fragment } from 'react'
-import { chakra, Container, Stack, Text, useColorModeValue, Link, Icon, Flex, Box, Show } from '@chakra-ui/react'
+import { Fragment } from 'react';
+import {
+  chakra,
+  Container,
+  Stack,
+  Text,
+  useColorModeValue,
+  Link,
+  Icon,
+  Flex,
+  Box,
+  Show,
+} from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
-import { FaGithub } from 'react-icons/fa'
-import { colors } from '../../../../../../../shared/components/Hooks/color'
+import { FaGithub } from 'react-icons/fa';
+import { colors } from '../../../../../../../shared/components/Hooks/color';
 
 const features = [
   {
     title: 'Free and open source',
     detail: 'All components have MIT license, you can use in any project',
     icon: (
-      <svg aria-hidden='true' role='img' viewBox='0 0 24 24' width='28' height='28' fill='currentColor'>
+      <svg
+        aria-hidden='true'
+        role='img'
+        viewBox='0 0 24 24'
+        width='28'
+        height='28'
+        fill='currentColor'
+      >
         <path
           fillRule='evenodd'
           d={`M12.75 2.75a.75.75 0 00-1.5 0V4.5H9.276a1.75 1.75 0 00-.985.303L6.596 5.957A.25.25 0 016.455 
@@ -28,9 +46,17 @@ const features = [
   },
   {
     title: 'TypeScript based',
-    detail: 'Build type safe applications, all components and hooks export types',
+    detail:
+      'Build type safe applications, all components and hooks export types',
     icon: (
-      <svg aria-hidden='true' role='img' viewBox='0 0 24 24' width='28' height='28' fill='currentColor'>
+      <svg
+        aria-hidden='true'
+        role='img'
+        viewBox='0 0 24 24'
+        width='28'
+        height='28'
+        fill='currentColor'
+      >
         <path
           fillRule='evenodd'
           d={`M3 3a2 2 0 012-2h9.982a2 2 0 011.414.586l4.018 4.018A2 2 0 0121 7.018V21a2 2 0 01-2 2H4.75a.75.75 
@@ -47,9 +73,17 @@ const features = [
   },
   {
     title: 'Easy to customize',
-    detail: 'Build type safe applications, all components and hooks export types',
+    detail:
+      'Build type safe applications, all components and hooks export types',
     icon: (
-      <svg aria-hidden='true' role='img' viewBox='0 0 24 24' width='28' height='28' fill='currentColor'>
+      <svg
+        aria-hidden='true'
+        role='img'
+        viewBox='0 0 24 24'
+        width='28'
+        height='28'
+        fill='currentColor'
+      >
         <path
           fillRule='evenodd'
           d={`M10.157 1.154a11.07 11.07 0 013.686 0 .75.75 0 01-.25 1.479 9.568 9.568 0 00-3.186 0 .75.75 0 
@@ -66,16 +100,24 @@ const features = [
       </svg>
     ),
   },
-]
+];
 const HeroSection = () => {
   return (
     <Fragment>
       <Container maxW={'max-content'} pr={{ base: 6, md: 10 }} py={14}>
         <Stack direction={{ base: 'column', md: 'row' }}>
-          <Stack direction={'column'} spacing={10}>
-            <chakra.h1 fontSize={'5xl'} lineHeight={1} fontWeight={'bold'} textAlign={'left'}>
+          <Stack direction={'column'} gap={10}>
+            <chakra.h1
+              fontSize={'5xl'}
+              lineHeight={1}
+              fontWeight={'bold'}
+              textAlign={'left'}
+            >
               Production-ready
-              <chakra.span bgGradient={'linear(to-br, #228be6, #15aabf)'} bgClip={'text'}>
+              <chakra.span
+                bgGradient={'linear(to-br, #228be6, #15aabf)'}
+                bgClip={'text'}
+              >
                 {' '}
                 Projects and Components{' '}
               </chakra.span>{' '}
@@ -88,12 +130,21 @@ const HeroSection = () => {
               fontWeight={'400'}
               maxW={'700px'}
             >
-              Build fully functional accessible web applications faster than ever – TemplatesKart includes more than 80
-              customizable components and hooks to cover you in any situation
+              Build fully functional accessible web applications faster than
+              ever – TemplatesKart includes more than 80 customizable components
+              and hooks to cover you in any situation
             </Text>
-            <Stack direction={{ base: 'column', md: 'row' }} spacing={{ base: 5, md: 10 }} flexWrap={'wrap'}>
+            <Stack
+              direction={{ base: 'column', md: 'row' }}
+              gap={{ base: 5, md: 10 }}
+              flexWrap={'wrap'}
+            >
               {features.map((feature, index) => (
-                <Stack key={index} direction={{ base: 'row', md: 'column' }} spacing={2}>
+                <Stack
+                  key={index}
+                  direction={{ base: 'row', md: 'column' }}
+                  gap={2}
+                >
                   <Flex
                     p={3}
                     maxH={'52px'}
@@ -104,18 +155,26 @@ const HeroSection = () => {
                   >
                     {feature.icon}
                   </Flex>
-                  <Stack direction={'column'} spacing={2}>
+                  <Stack direction={'column'} gap={2}>
                     <Text fontSize={'md'} fontWeight={'500'}>
                       {feature.title}
                     </Text>
-                    <Text fontSize={'sm'} color={'gray.400'} maxW={{ base: '100%', md: '200px' }}>
+                    <Text
+                      fontSize={'sm'}
+                      color={'gray.400'}
+                      maxW={{ base: '100%', md: '200px' }}
+                    >
                       {feature.detail}
                     </Text>
                   </Stack>
                 </Stack>
               ))}
             </Stack>
-            <Stack direction={{ base: 'column', sm: 'row' }} spacing={{ base: 0, sm: 2 }} flexWrap={'wrap'}>
+            <Stack
+              direction={{ base: 'column', sm: 'row' }}
+              gap={{ base: 0, sm: 2 }}
+              flexWrap={'wrap'}
+            >
               <chakra.button
                 h={12}
                 px={6}
@@ -169,7 +228,7 @@ const HeroSection = () => {
         </Box>
       </Show>
     </Fragment>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
