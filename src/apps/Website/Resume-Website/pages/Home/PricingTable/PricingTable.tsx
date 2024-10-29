@@ -8,8 +8,8 @@ import {
   VStack,
   List,
   ListItem,
-  ListIcon,
   Button,
+  Icon,
 } from '@chakra-ui/react';
 import { FaCheckCircle } from 'react-icons/fa';
 import { useColorModeValue } from '../../../../../../components/ui/color-mode';
@@ -70,20 +70,20 @@ const ThreeTierPricing = () => {
             py={4}
             borderBottomRadius={'xl'}
           >
-            <List gap={3} textAlign='start' px={12}>
+            <Box gap={3} textAlign='start' px={12}>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color='green.500' />
+                <Icon as={FaCheckCircle} color='green.500' />
                 unlimited build minutes
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color='green.500' />
+                <Icon as={FaCheckCircle} color='green.500' />
                 Lorem, ipsum dolor.
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color='green.500' />
+                <Icon as={FaCheckCircle} color='green.500' />
                 5TB Lorem, ipsum dolor.
               </ListItem>
-            </List>
+            </Box>
             <Box w='80%' pt={7}>
               <Button w='full' colorPalette='red' variant='outline'>
                 Start trial
@@ -134,28 +134,28 @@ const ThreeTierPricing = () => {
               py={4}
               borderBottomRadius={'xl'}
             >
-              <List gap={3} textAlign='start' px={12}>
+              <Box gap={3} textAlign='start' px={12}>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color='green.500' />
+                  <Icon as={FaCheckCircle} color='green.500' />
                   unlimited build minutes
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color='green.500' />
+                  <Icon as={FaCheckCircle} color='green.500' />
                   Lorem, ipsum dolor.
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color='green.500' />
+                  <Icon as={FaCheckCircle} color='green.500' />
                   5TB Lorem, ipsum dolor.
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color='green.500' />
+                  <Icon as={FaCheckCircle} color='green.500' />
                   5TB Lorem, ipsum dolor.
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color='green.500' />
+                  <Icon as={FaCheckCircle} color='green.500' />
                   5TB Lorem, ipsum dolor.
                 </ListItem>
-              </List>
+              </Box>
               <Box w='80%' pt={7}>
                 <Button w='full' colorPalette='red'>
                   Start trial
@@ -186,20 +186,20 @@ const ThreeTierPricing = () => {
             py={4}
             borderBottomRadius={'xl'}
           >
-            <List gap={3} textAlign='start' px={12}>
+            <Box gap={3} textAlign='start' px={12}>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color='green.500' />
+                <Icon as={FaCheckCircle} color='green.500' />
                 unlimited build minutes
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color='green.500' />
+                <Icon as={FaCheckCircle} color='green.500' />
                 Lorem, ipsum dolor.
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color='green.500' />
+                <Icon as={FaCheckCircle} color='green.500' />
                 5TB Lorem, ipsum dolor.
               </ListItem>
-            </List>
+            </Box>
             <Box w='80%' pt={7}>
               <Button w='full' colorPalette='red' variant='outline'>
                 Start trial

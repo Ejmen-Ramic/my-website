@@ -1,23 +1,27 @@
-import { Accordion } from '@chakra-ui/react'
-import { FC } from 'react'
-import FAQItemBox from './FAQItemBox'
-import { FAQItem } from '.'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { Accordion, AccordionRoot } from '@chakra-ui/react';
+import { FC } from 'react';
+import FAQItemBox from './FAQItemBox';
+import { FAQItem } from '.';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
 
 type Props = {
-  items: FAQItem[]
-}
+  items: FAQItem[];
+};
 
 const FAQMobile: FC<Props> = ({ items }) => {
   return (
-    <Accordion w={'full'} allowToggle>
+    <AccordionRoot w={'full'} allowToggle>
       {items.map(({ title, description }, t) => (
         <FadeInView delay={0.1}>
-          <FAQItemBox key={`mobile_item_${t}`} title={title} description={description} />
+          <FAQItemBox
+            key={`mobile_item_${t}`}
+            title={title}
+            description={description}
+          />
         </FadeInView>
       ))}
-    </Accordion>
-  )
-}
+    </AccordionRoot>
+  );
+};
 
-export default FAQMobile
+export default FAQMobile;

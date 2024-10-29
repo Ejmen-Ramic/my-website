@@ -2,7 +2,6 @@ import {
   Button,
   Flex,
   Heading,
-  Hide,
   Icon,
   Link,
   SimpleGrid,
@@ -37,9 +36,9 @@ const DeliveryMethods = () => {
           <Text>
             The Knowledge Academy is World's Leading Organization for training
             professionals. The Knowledge Academy provides training in 490+{' '}
-            <Hide below='lg'>
-              <br />
-            </Hide>
+            {/* <Hide below='lg'> */}
+            <br />
+            {/* </Hide> */}
             locations in around 221+ countries, covering 3000 subjects with the
             following delivery methods:
           </Text>

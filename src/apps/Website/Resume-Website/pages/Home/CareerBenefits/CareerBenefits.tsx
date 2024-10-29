@@ -2,7 +2,6 @@ import {
   Box,
   HStack,
   Heading,
-  Hide,
   VStack,
   Text,
   Button,

@@ -3,7 +3,6 @@ import {
   Button,
   HStack,
   Heading,
-  Tooltip,
   VStack,
   Image,
   Text,
@@ -18,6 +17,7 @@ import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
 import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { colors } from '../../../../../../shared/components/Hooks/color';
+import { Tooltip } from '../../../../../../components/ui/tooltip';
 
 const Welcome = () => {
   // const { t } = useTranslation(["home"])
@@ -152,7 +152,7 @@ const Welcome = () => {
                   _hover={{ pt: 0, pb: '10px' }}
                   transition={'0.2s'}
                 >
-                  <Button colorPalette={'linkedin'}>
+                  <Button colorScheme={'linkedin'}>
                     <FontAwesomeIcon icon={faLinkedin} />
                   </Button>
                 </Box>
@@ -166,7 +166,7 @@ const Welcome = () => {
                   _hover={{ pt: 0, pb: '10px' }}
                   transition={'0.2s'}
                 >
-                  <Button colorPalette={'purple'}>
+                  <Button colorScheme={'purple'}>
                     <FontAwesomeIcon icon={faInstagram} />
                   </Button>
                 </Box>
