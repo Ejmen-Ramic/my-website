@@ -1,16 +1,16 @@
 import { Suspense, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import ScrollToTopButton from './shared/components/Back-To-Top/BackToTopButton';
-import About from './apps/Website/Resume-Website/pages/AboutMe/index';
+// import About from './apps/Website/Resume-Website/pages/AboutMe/index';
 import HomePage from './apps/Website/Resume-Website/pages/Home';
 import NotFound from './apps/Website/Resume-Website/pages/NotFound/NotFound';
 // import Test from './apps/Website/test';
-import SignIn from './apps/Website/Resume-Website/pages/Account/SignIn/SignIn';
-import SignUp from './apps/Website/Resume-Website/pages/Account/SignUp/SignUp';
-import ForgotPassword from './apps/Website/Resume-Website/pages/Account/Password/ForgotPassword';
-import Hobbies from './apps/Website/Resume-Website/pages/Hobbies';
-import Resume from './apps/Website/Resume-Website/pages/Resume';
-import PhotographyHome from './apps/Website/Photography-Website/pages/Home';
+// import SignIn from './apps/Website/Resume-Website/pages/Account/SignIn/SignIn';
+// import SignUp from './apps/Website/Resume-Website/pages/Account/SignUp/SignUp';
+// import ForgotPassword from './apps/Website/Resume-Website/pages/Account/Password/ForgotPassword';
+// import Hobbies from './apps/Website/Resume-Website/pages/Hobbies';
+// import Resume from './apps/Website/Resume-Website/pages/Resume';
+// import PhotographyHome from './apps/Website/Photography-Website/pages/Home';
 import { i18n } from '@lingui/core';
 import {
   fromNavigator,
@@ -18,12 +18,12 @@ import {
   fromUrl,
   multipleDetect,
 } from '@lingui/detect-locale';
-import BosniaAlbum from './apps/Website/Photography-Website/pages/Photography/Bosnia';
-import AboutPhotography from './apps/Website/Photography-Website/pages/About';
-import ContactPhotography from './apps/Website/Photography-Website/pages/Contacts';
+// import BosniaAlbum from './apps/Website/Photography-Website/pages/Photography/Bosnia';
+// import AboutPhotography from './apps/Website/Photography-Website/pages/About';
+// import ContactPhotography from './apps/Website/Photography-Website/pages/Contacts';
 import { LanguageProvider } from './shared/components/LanguageSwitcher/languageContext';
-import ContactPage from './apps/Website/Resume-Website/pages/Contacts';
-import { system } from './theme';
+// import ContactPage from './apps/Website/Resume-Website/pages/Contacts';
+// import { system } from './theme';
 import { Provider } from './components/ui/provider';
 
 const App: React.FC = () => {
@@ -80,20 +80,20 @@ const App: React.FC = () => {
           <Routes>
             {/* Resume */}
             <Route path='/' element={<HomePage />} />
-            {/* <Route path='/about' element={<About />} />
-            <Route path='/hobbies' element={<Hobbies />} />
-            <Route path='/resume' element={<Resume />} />
-            <Route path='/contact' element={<ContactPage />} />
-            <Route path='/test' element={<Test />} />
-            <Route path='/signin' element={<SignIn />} />
-            <Route path='/signup' element={<SignUp />} />
-            <Route path='/passwordreset' element={<ForgotPassword />} />
-            <Route path='*' element={<NotFound />} /> */}
+            {/* <Route path='/about' element={<About />} />*/}
+            {/*<Route path='/hobbies' element={<Hobbies />} />*/}
+            {/*<Route path='/resume' element={<Resume />} />*/}
+            {/*<Route path='/contact' element={<ContactPage />} />*/}
+            {/*<Route path='/test' element={<Test />} />*/}
+            {/*<Route path='/signin' element={<SignIn />} />*/}
+            {/*<Route path='/signup' element={<SignUp />} />*/}
+            {/*<Route path='/passwordreset' element={<ForgotPassword />} />*/}
+            <Route path='*' element={<NotFound />} />
             {/* Photography */}
-            {/* <Route path='/photography' element={<PhotographyHome />} />
-            <Route path='/bosnia-and-herzegovina' element={<BosniaAlbum />} />
-            <Route path='/about-me' element={<AboutPhotography />} />
-            <Route path='/contact-us' element={<ContactPhotography />} /> */}
+            {/* <Route path='/photography' element={<PhotographyHome />} /> */}
+            {/*<Route path='/bosnia-and-herzegovina' element={<BosniaAlbum />} /> */}
+            {/*<Route path='/about-me' element={<AboutPhotography />} /> */}
+            {/*<Route path='/contact-us' element={<ContactPhotography />} /> */}
           </Routes>
           <ScrollToTopButton />
         </Suspense>
