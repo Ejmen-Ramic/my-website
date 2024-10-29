@@ -4,20 +4,20 @@ import {
   Image,
   SimpleGrid,
   useDisclosure,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalBody,
+  DialogContent,
+  DialogBody,
   IconButton,
   Text,
   HStack,
-  useColorModeValue,
+  DialogRoot,
+  DialogBackdrop,
 } from '@chakra-ui/react';
 import { ArrowBackIcon, ArrowForwardIcon, CloseIcon } from '@chakra-ui/icons';
 import { useSwipeable } from 'react-swipeable';
 import { images } from './Props';
 import FadeInView from '../../../../../../../shared/components/Hooks/FadeInView';
 import { colors } from '../../../../../../../shared/components/Hooks/color';
+import { useColorModeValue } from '../../../../../../../components/ui/color-mode';
 
 const ImageGallery: React.FC = () => {
   const { open, onOpen, onClose } = useDisclosure();
@@ -110,10 +110,10 @@ const ImageGallery: React.FC = () => {
       </SimpleGrid>
 
       {currentImageIndex !== null && (
-        <Modal isOpen={open} onClose={onClose} size={'full'}>
-          <ModalOverlay opacity='0.4' />
-          <ModalContent {...swipeHandlers}>
-            <ModalBody
+        <DialogRoot isOpen={open} onClose={onClose} size={'full'} opacity='0.4'>
+          ={' '}
+          <DialogContent {...swipeHandlers}>
+            <DialogBody
               display={'flex'}
               alignItems={'center'}
               justifyContent={'center'}
@@ -130,7 +130,7 @@ const ImageGallery: React.FC = () => {
                 display={['none', 'none', 'none', 'flex']}
                 alignItems={'center'}
                 justifyContent={'center'}
-                _hover={{ '> button': { opacity: 1 } }}
+                _hover={{ opacity: 1 }}
               >
                 <IconButton
                   onClick={prevImage}
@@ -157,7 +157,7 @@ const ImageGallery: React.FC = () => {
                 display={['none', 'none', 'none', 'flex']}
                 alignItems={'center'}
                 justifyContent={'center'}
-                _hover={{ '> button': { opacity: 1 } }}
+                _hover={{ opacity: 1 }}
               >
                 <IconButton
                   onClick={nextImage}
@@ -215,9 +215,9 @@ const ImageGallery: React.FC = () => {
                   </IconButton>
                 </HStack>
               </Box>
-            </ModalBody>
-          </ModalContent>
-        </Modal>
+            </DialogBody>
+          </DialogContent>
+        </DialogRoot>
       )}
     </Box>
   );
