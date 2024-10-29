@@ -210,7 +210,7 @@
 //           bg="base.d100"
 //           flex={1}
 //           h="3px"
-//           sx={{
+//           css={{
 //             "> div": {
 //               backgroundColor: "gray.400",
 //             },

@@ -28,14 +28,14 @@ const AboutAlbum: FC = () => {
             <Image
               src={'./Website/Resume/AboutMe/about-me-1.jpg'}
               alt={'About Img 1'}
-              sx={zoomInStyles}
+              css={zoomInStyles}
             />
           </FadeInView>{' '}
           <FadeInView delay={0.1}>
             <Image
               src={'./Website/Resume/AboutMe/about-me-2.jpg'}
               alt={'About Img 2'}
-              sx={zoomInStyles}
+              css={zoomInStyles}
             />
           </FadeInView>
         </VStack>
@@ -49,7 +49,7 @@ const AboutAlbum: FC = () => {
             <Image
               src={'./Website/Resume/AboutMe/about-me-3.jpg'}
               alt={'About Img 3'}
-              sx={zoomInStyles}
+              css={zoomInStyles}
             />
           </FadeInView>
         </Box>
