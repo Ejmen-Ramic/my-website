@@ -36,7 +36,7 @@ const ResumeLeftSide = () => {
         ></Box>
         <VStack w={'full'} gap={'0px'} alignItems={'start'}>
           <Button
-            variant={'none'}
+            variant={'plain'}
             onClick={() => handleContactClick('mailto:ejmenramic5@gmail.com')}
             colorPalette={'blue'}
             fontSize={'12px'}
@@ -52,7 +52,7 @@ const ResumeLeftSide = () => {
             <Button
               key={i}
               padding={0}
-              variant={'none'}
+              variant={'plain'}
               _hover={{ textDecoration: 'underline' }}
               fontSize={'12px'}
               onClick={() => handleContactClick(item.link)}

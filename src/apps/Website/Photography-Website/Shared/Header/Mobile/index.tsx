@@ -9,8 +9,6 @@ import {
   Stack,
   Box,
   useDisclosure,
-  Show,
-  Hide,
   Text,
   Flex,
 } from '@chakra-ui/react';
@@ -60,7 +58,7 @@ const HeaderMobile = () => {
       <Box mr={'20px'}>
         <Button
           onClick={onOpen}
-          variant={'unstyled'}
+          variant={'plain'}
           fontSize={'15px'}
           mt={{ base: '30%', md: '43%', lg: '25%' }}
         >
@@ -70,7 +68,8 @@ const HeaderMobile = () => {
           {/* <Show below={'md'}> */}
           <Box
             as={IconBurgerMobile}
-            size={'20px'}
+            w={'20px'}
+            h={'20px'}
             _hover={{ color: '#02bece' }}
           />
           {/* </Show> */}
@@ -103,9 +102,8 @@ const HeaderMobile = () => {
                     {isMenuItemLink(item) ? (
                       <Link to={item.to}>
                         <Button
-                          variant={'link'}
                           border={'none'}
-                          _hover={{ color: '#02bece' }}
+                          _hover={{ textDecor: 'underline', color: '#02bece' }}
                           color={color}
                           fontWeight={'light'}
                           fontSize={'18px'}

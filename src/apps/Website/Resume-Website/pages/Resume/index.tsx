@@ -39,7 +39,7 @@ const Resume: React.FC<{}> = () => {
             px={{ md: '10px', lg: '0px' }}
           >
             <Button
-              variant={'ghost'}
+              variant={'plain'}
               color={useColorModeValue('#0B3948', '#98bed5')}
               onClick={() => changeLanguage(locale === 'en' ? 'ba' : 'en')}
             >
@@ -55,7 +55,7 @@ const Resume: React.FC<{}> = () => {
                 }
               >
                 <Button
-                  variant={'ghost'}
+                  variant={'plain'}
                   color={useColorModeValue('#0B3948', '#98bed5')}
                 >
                   <BsGithub style={{ marginRight: '10px' }} />

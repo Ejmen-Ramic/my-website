@@ -51,7 +51,7 @@ const ExtraCurriculum = () => {
             {itemProps.map(({ icon, text }, i) => (
               <HStack w={'full'} key={i}>
                 <Box color={colorMode}> {icon}</Box>
-                <Text color={colorMode} variant={'none'} p={'0px'}>
+                <Text color={colorMode} p={'0px'}>
                   {text}
                 </Text>
                 <FaLink size={'12px'} color={colorLink} />

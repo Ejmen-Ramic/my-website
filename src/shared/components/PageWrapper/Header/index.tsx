@@ -67,9 +67,8 @@ const Header = ({ isStickyHeader = false }: HeaderProps = {}) => {
             boxSizing='border-box'
           >
             <Button
-              variant={'link'}
               border={'none'}
-              _hover={{ color: '#02bece' }}
+              _hover={{ textDecor: 'underline', color: '#02bece' }}
               color={useColorModeValue('#2b333d', colors.white)}
               fontWeight={'light'}
               fontSize={'18px'}
@@ -97,9 +96,8 @@ const Header = ({ isStickyHeader = false }: HeaderProps = {}) => {
             boxSizing='border-box'
           >
             <Button
-              variant={'link'}
               border={'none'}
-              _hover={{ color: '#02bece' }}
+              _hover={{ textDecor: 'underline', color: '#02bece' }}
               color={useColorModeValue('#2b333d', colors.white)}
               fontWeight={'light'}
               fontSize={'18px'}
@@ -145,9 +143,8 @@ const Header = ({ isStickyHeader = false }: HeaderProps = {}) => {
             boxSizing='border-box'
           >
             <Button
-              variant={'link'}
               border={'none'}
-              _hover={{ color: '#02bece' }}
+              _hover={{ textDecor: 'underline', color: '#02bece' }}
               color={useColorModeValue('#2b333d', colors.white)}
               fontWeight={'light'}
               fontSize={'18px'}
@@ -175,9 +172,8 @@ const Header = ({ isStickyHeader = false }: HeaderProps = {}) => {
             boxSizing='border-box'
           >
             <Button
-              variant={'link'}
               border={'none'}
-              _hover={{ color: '#02bece' }}
+              _hover={{ textDecor: 'underline', color: '#02bece' }}
               color={useColorModeValue('#2b333d', colors.white)}
               fontWeight={'light'}
               fontSize={'18px'}

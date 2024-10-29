@@ -57,9 +57,11 @@ const Header = () => {
             boxSizing={'border-box'}
           >
             <Button
-              variant={'link'}
               border={'none'}
-              _hover={{ color: useColorModeValue('#817e7e', '#02bece') }}
+              _hover={{
+                textDecor: 'underline',
+                color: useColorModeValue('#817e7e', '#02bece'),
+              }}
               color={useColorModeValue('#2b333d', colors.white)}
               fontWeight={'light'}
               letterSpacing={'1px'}
@@ -87,9 +89,11 @@ const Header = () => {
             boxSizing={'border-box'}
           >
             <Button
-              variant={'link'}
               border={'none'}
-              _hover={{ color: useColorModeValue('#817e7e', '#02bece') }}
+              _hover={{
+                textDecor: 'underline',
+                color: useColorModeValue('#817e7e', '#02bece'),
+              }}
               color={useColorModeValue('#2b333d', colors.white)}
               fontWeight={'light'}
               letterSpacing={'1px'}
@@ -135,9 +139,11 @@ const Header = () => {
             mr={'20px'}
           >
             <Button
-              variant={'link'}
               border={'none'}
-              _hover={{ color: useColorModeValue('#817e7e', '#02bece') }}
+              _hover={{
+                textDecor: 'underline',
+                color: useColorModeValue('#817e7e', '#02bece'),
+              }}
               color={useColorModeValue('#2b333d', colors.white)}
               fontWeight={'light'}
               letterSpacing={'1px'}
@@ -154,14 +160,14 @@ const Header = () => {
         <ColorModePhoto />
       </HStack>
       {/* </Show> */}
-      {/* <Show below={'lg'}> */}
+      {/* <Show below={"lg"}> */}
       <Flex justifyContent={'flex-end'} w={'full'} mr={'15px'}>
         <ColorModePhoto />
       </Flex>
       {/* </Show> */}
-      {/* // <Show below={'lg'}> */}
+      {/* // <Show below={"lg"}> */}
       <HeaderMobile />
-      {/* // </Show> */}
+      {/* </Show> */}
     </Flex>
   );
 };

@@ -101,7 +101,11 @@ const MakeMoneyPart = () => {
               >
                 Get Started
               </Button>
-              <Button variant={'link'} colorPalette={'blue'} size={'md'}>
+              <Button
+                _hover={{ textDecor: 'underline' }}
+                colorPalette={'blue'}
+                size={'md'}
+              >
                 Learn more
               </Button>
               <Box>

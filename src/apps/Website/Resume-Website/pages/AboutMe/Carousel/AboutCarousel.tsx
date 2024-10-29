@@ -72,7 +72,7 @@ const AboutCarousel = () => {
       />
       <IconButton
         aria-label={'left-arrow'}
-        variant={'ghost'}
+        variant={'plain'}
         position={'absolute'}
         left={side}
         top={top}
@@ -84,7 +84,7 @@ const AboutCarousel = () => {
       </IconButton>
       <IconButton
         aria-label={'right-arrow'}
-        variant={'ghost'}
+        variant={'plain'}
         position={'absolute'}
         right={side}
         top={top}

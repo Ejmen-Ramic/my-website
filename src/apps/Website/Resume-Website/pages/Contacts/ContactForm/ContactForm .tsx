@@ -135,7 +135,7 @@ const ContactForm: FC = () => {
                   >
                     <IconButton
                       aria-label={'email'}
-                      variant={'ghost'}
+                      variant={'plain'}
                       size={'lg'}
                       fontSize={'3xl'}
                       _hover={{
@@ -152,7 +152,7 @@ const ContactForm: FC = () => {
                   <Link href='https://www.facebook.com/profile.php?id=100092716802936'>
                     <IconButton
                       aria-label={'github'}
-                      variant={'ghost'}
+                      variant={'plain'}
                       size={'lg'}
                       fontSize='3xl'
                       _hover={{
@@ -168,7 +168,7 @@ const ContactForm: FC = () => {
                   <Link href='https://x.com/EjmenRamic'>
                     <IconButton
                       aria-label={'x'}
-                      variant={'ghost'}
+                      variant={'plain'}
                       size={'lg'}
                       _hover={{
                         bg: 'blue.500',
@@ -183,7 +183,7 @@ const ContactForm: FC = () => {
                   <Link href='https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'>
                     <IconButton
                       aria-label={'linkedin'}
-                      variant={'ghost'}
+                      variant={'plain'}
                       size={'lg'}
                       _hover={{
                         bg: 'blue.500',

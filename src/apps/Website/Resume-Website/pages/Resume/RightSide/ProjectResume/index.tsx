@@ -45,7 +45,7 @@ const Projects = () => {
               <Link href={link}>
                 <Button
                   color={colorLink}
-                  variant={'none'}
+                  variant={'plain'}
                   p={'0px'}
                   _hover={{ textDecoration: 'underline' }}
                 >

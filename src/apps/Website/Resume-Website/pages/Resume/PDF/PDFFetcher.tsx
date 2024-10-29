@@ -39,7 +39,7 @@ const PDFFEtcher = () => {
 
   return (
     <Button
-      variant='ghost'
+      variant={'ghost'}
       onClick={onButtonClick}
       color={useColorModeValue('blue.800', 'blue.300')}
     >

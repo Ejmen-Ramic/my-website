@@ -64,7 +64,7 @@ const SignIn = () => {
                   <Input type={showPassword ? 'text' : 'password'} />
                   <InputRightElement h={'full'}>
                     <Button
-                      variant={'ghost'}
+                      variant={'plain'}
                       onClick={() =>
                         setShowPassword((showPassword) => !showPassword)
                       }

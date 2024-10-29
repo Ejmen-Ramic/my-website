@@ -67,7 +67,7 @@ const DeliveryMethods = () => {
                     fontFamily={'body'}
                     letterSpacing={'1px'}
                     justifyContent={{ base: 'center', lg: 'flex-start' }}
-                    variant={'ghost'}
+                    variant={'plain'}
                     color={'#EF562D'}
                     bg={'transparent'}
                     _hover={{ bg: 'transparent', color: '#02bece' }}
