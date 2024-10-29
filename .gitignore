@@ -22,3 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Ignore Photography-Website folder
+src/apps/Photography-Website/
