@@ -9,7 +9,7 @@ import SignIn from './apps/Website/Resume-Website/pages/Account/SignIn/SignIn';
 import SignUp from './apps/Website/Resume-Website/pages/Account/SignUp/SignUp';
 import ForgotPassword from './apps/Website/Resume-Website/pages/Account/Password/ForgotPassword';
 import Hobbies from './apps/Website/Resume-Website/pages/Hobbies';
-import Resume from './apps/Website/Resume-Website/pages/IgnoredFolders/Resume';
+import Resume from './apps/Website/Resume-Website/pages/Resume';
 import PhotographyHome from './apps/Website/Photography-Website/pages/Home';
 import { i18n } from '@lingui/core';
 import {

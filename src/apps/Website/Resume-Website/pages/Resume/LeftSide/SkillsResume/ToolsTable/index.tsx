@@ -12,14 +12,14 @@ import {
 import { Trans } from '@lingui/macro';
 import { FC, ReactNode } from 'react';
 import { FaCircle } from 'react-icons/fa6';
-import { useColorModeValue } from '../../../../../../../../../components/ui/color-mode';
+import { useColorModeValue } from '../../../../../../../../components/ui/color-mode';
 
 type Header = {
   name?: ReactNode;
   style?: ChakraProps;
 };
 
-const usageLevel = [
+const skillLevel = [
   'Novice',
   'Beginner',
   'Intermediate',
@@ -29,28 +29,28 @@ const usageLevel = [
 
 type Item = {
   name: string;
-  level: (typeof usageLevel)[number][];
+  level: (typeof skillLevel)[number][];
 };
 
 const getItems = () => {
   const items: Item[] = [
     {
-      name: 'Windows',
+      name: 'GitHub',
       level: ['Novice', 'Beginner', 'Intermediate', 'Proficient', 'Advanced'],
     },
     {
-      name: 'Linux',
+      name: 'Wordpress',
       level: ['Novice', 'Beginner', 'Intermediate', 'Proficient', 'Advanced'],
     },
     {
-      name: 'Mac',
+      name: 'MongoDB',
       level: ['Novice', 'Beginner', 'Intermediate'],
     },
   ];
   return items;
 };
 
-const OSTable: FC = () => {
+const ToolsTable: FC = () => {
   const nameColor = useColorModeValue('#000000', '#ECEFF4');
   const skillColor = useColorModeValue('#0b3948', '#98bed5');
   const noSkillColor = useColorModeValue('#8d9da7', '#303c40');
@@ -63,7 +63,7 @@ const OSTable: FC = () => {
             textTransform={'capitalize'}
             color={useColorModeValue('#0B3948', '#98BED5')}
           >
-            <Trans>Operative Sytem</Trans>
+            <Trans>Tools</Trans>
           </Text>
         ),
       },
@@ -103,7 +103,7 @@ const OSTable: FC = () => {
             >
               {name}
             </Td>
-            {usageLevel.map((skill, j) => {
+            {skillLevel.map((skill, j) => {
               const isCheck = level.includes(skill);
               return (
                 <Td
@@ -139,4 +139,4 @@ const OSTable: FC = () => {
   );
 };
 
-export default OSTable;
+export default ToolsTable;

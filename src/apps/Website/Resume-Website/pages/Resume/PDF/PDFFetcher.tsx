@@ -1,6 +1,6 @@
 import { Button, useToast } from '@chakra-ui/react';
 import { BsFillPrinterFill } from 'react-icons/bs';
-import { useColorModeValue } from '../../../../../../../components/ui/color-mode';
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 const PDFFEtcher = () => {
   const toast = useToast();
 
