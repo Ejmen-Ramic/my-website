@@ -7,14 +7,14 @@ import {
   Stack,
   Container,
   Avatar,
-  useColorModeValue,
+  ,
   VStack,
 } from '@chakra-ui/react';
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
 import items from './Props';
 import { Trans } from '@lingui/macro';
 import { colors } from '../../../../../../shared/components/Hooks/color';
-
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 const Testimonial = ({ children }: { children: ReactNode }) => {
   return <Box>{children}</Box>;
 };

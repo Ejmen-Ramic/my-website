@@ -9,7 +9,6 @@ import {
   Stack,
   Box,
   useDisclosure,
-  useColorModeValue,
   Show,
   Hide,
   Text,
@@ -32,6 +31,7 @@ import { t, Trans } from '@lingui/macro';
 import IconBurgerMobile from '../../../../icons/IconBurgerMobile';
 import IconBurger from '../../../../icons/IconBurger';
 import { colors } from '../../../Hooks/color';
+import { useColorModeValue } from '../../../../../components/ui/color-mode';
 
 type MenuItemLink = {
   label: string;

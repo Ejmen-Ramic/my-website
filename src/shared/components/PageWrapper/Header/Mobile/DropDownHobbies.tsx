@@ -1,21 +1,31 @@
-import { Flex, Text, Icon, Menu, MenuButton, MenuList, MenuItem, useColorModeValue, chakra } from '@chakra-ui/react'
-import { t, Trans } from '@lingui/macro'
-import { BiChevronDown } from 'react-icons/bi'
-import { IoCameraOutline } from 'react-icons/io5'
-import { colors } from '../../../Hooks/color'
+import {
+  Flex,
+  Text,
+  Icon,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  chakra,
+} from '@chakra-ui/react';
+import { t, Trans } from '@lingui/macro';
+import { BiChevronDown } from 'react-icons/bi';
+import { IoCameraOutline } from 'react-icons/io5';
+import { colors } from '../../../Hooks/color';
+import { useColorModeValue } from '../../../../../components/ui/color-mode';
 
 const MenuContainerMobile = () => {
   return (
     <Flex h={'full'}>
       <DropDownMenuMobile />
     </Flex>
-  )
-}
+  );
+};
 
 interface MenuLinkProps {
-  name: string
-  path: string
-  onClose: () => void
+  name: string;
+  path: string;
+  onClose: () => void;
 }
 
 const MenuLink = ({ name, path, onClose }: MenuLinkProps) => {
@@ -32,8 +42,8 @@ const MenuLink = ({ name, path, onClose }: MenuLinkProps) => {
         <Text>{name}</Text>
       </MenuItem>
     </chakra.a>
-  )
-}
+  );
+};
 const dropdownLinks = [
   {
     name: t`Photography (dev)`,
@@ -43,10 +53,10 @@ const dropdownLinks = [
   //   name: "Become a Tutor",
   //   path: "/hobbies",
   // },
-]
+];
 
 const DropDownMenuMobile = () => {
-  const color = useColorModeValue('#2b333d', colors.white)
+  const color = useColorModeValue('#2b333d', colors.white);
 
   return (
     <Menu autoSelect={false} isLazy>
@@ -78,13 +88,18 @@ const DropDownMenuMobile = () => {
           </MenuButton>
           <MenuList fontSize={''}>
             {dropdownLinks.map((link, index) => (
-              <MenuLink key={index} name={link.name} path={link.path} onClose={onClose} />
+              <MenuLink
+                key={index}
+                name={link.name}
+                path={link.path}
+                onClose={onClose}
+              />
             ))}
           </MenuList>
         </>
       )}
     </Menu>
-  )
-}
+  );
+};
 
-export default MenuContainerMobile
+export default MenuContainerMobile;

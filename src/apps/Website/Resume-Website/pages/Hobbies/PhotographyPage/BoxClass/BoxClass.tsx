@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import {
   Button,
   Stack,
-  useColorModeValue,
   Text,
   Box,
   Image,
@@ -14,6 +13,7 @@ import {
 import items from './Props';
 import FadeInView from '../../../../../../../shared/components/Hooks/FadeInView';
 import { colors } from '../../../../../../../shared/components/Hooks/color';
+import { useColorModeValue } from '../../../../../../../components/ui/color-mode';
 
 interface BoxClassProps {
   languageimage: string;

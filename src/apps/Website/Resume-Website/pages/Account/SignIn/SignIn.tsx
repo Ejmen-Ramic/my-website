@@ -9,7 +9,6 @@ import {
   Button,
   Heading,
   Text,
-  useColorModeValue,
   InputGroup,
   InputRightElement,
 } from '@chakra-ui/react';
@@ -19,6 +18,7 @@ import { useState } from 'react';
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
 import { Trans } from '@lingui/macro';
 import { colors } from '../../../../../../shared/components/Hooks/color';
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);

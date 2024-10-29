@@ -9,7 +9,6 @@ import {
   VisuallyHidden,
   Input,
   IconButton,
-  useColorModeValue,
   Button,
   Menu,
   MenuButton,
@@ -23,7 +22,7 @@ import { BiMailSend } from 'react-icons/bi';
 import FadeInView from '../../../../shared/components/Hooks/FadeInView';
 import { t, Trans } from '@lingui/macro';
 import { colors } from '../../../../shared/components/Hooks/color';
-
+import { useColorModeValue } from '../../../../components/ui/color-mode';
 const Logo = (props: any) => {
   return (
     <FadeInView delay={0.1}>

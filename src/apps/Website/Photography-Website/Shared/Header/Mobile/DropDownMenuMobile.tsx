@@ -6,13 +6,13 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  useColorModeValue,
   chakra,
 } from '@chakra-ui/react';
 import { t, Trans } from '@lingui/macro';
 import { BiChevronDown } from 'react-icons/bi';
 import { IoCameraOutline } from 'react-icons/io5';
 import { colors } from '../../../../../../shared/components/Hooks/color';
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 
 const MenuContainerMobile = () => {
   return (

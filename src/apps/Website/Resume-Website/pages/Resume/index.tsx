@@ -8,7 +8,6 @@ import {
   Text,
   Heading,
   Link,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import { BsGithub } from 'react-icons/bs';
 import { GrLanguage } from 'react-icons/gr';
@@ -18,6 +17,7 @@ import { Trans } from '@lingui/macro';
 import PDFFEtcher from './PDF/PDFFetcher';
 import { useLanguage } from '../../../../../shared/components/LanguageSwitcher/languageContext';
 import Page from '../../../../../shared/components/PageWrapper';
+import { useColorModeValue } from '../../../../../components/ui/color-mode';
 
 const Resume: React.FC<{}> = () => {
   const { locale, changeLanguage } = useLanguage();

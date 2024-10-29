@@ -1,16 +1,9 @@
-import {
-  VStack,
-  Box,
-  Heading,
-  HStack,
-  Text,
-  useColorModeValue,
-  Stack,
-} from '@chakra-ui/react';
+import { VStack, Box, Heading, HStack, Text, Stack } from '@chakra-ui/react';
 import { FaCalendarAlt } from 'react-icons/fa';
 import { FaGraduationCap, FaLocationDot } from 'react-icons/fa6';
 import { itemProps } from './Props';
 import { Trans } from '@lingui/macro';
+import { useColorModeValue } from '../../../../../../../components/ui/color-mode';
 
 const Education = () => {
   const colorMode = useColorModeValue('#000000', '#ECEFF4');

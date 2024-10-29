@@ -10,13 +10,13 @@ import {
   PopoverTrigger,
   PopoverContent,
   useDisclosure,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import { FaChevronDown } from 'react-icons/fa';
 import { t, Trans } from '@lingui/macro';
 import { IoLanguageOutline } from 'react-icons/io5';
 import { useLanguage } from '../../../LanguageSwitcher/languageContext';
 import { colors } from '../../../Hooks/color';
+import { useColorModeValue } from '../../../../../components/ui/color-mode';
 
 const languageOptions = [
   {

@@ -1,28 +1,41 @@
-import React from 'react'
-import { Flex, Text, Icon, Menu, MenuButton, MenuList, MenuItem, useColorModeValue } from '@chakra-ui/react'
-import { BiChevronDown } from 'react-icons/bi'
-import { IoLanguageOutline } from 'react-icons/io5'
-import { t, Trans } from '@lingui/macro'
-import { dynamicActivate } from '../../../LanguageSwitcher/dynamicActivate'
-import { colors } from '../../../Hooks/color'
-
+import React from 'react';
+import {
+  Flex,
+  Text,
+  Icon,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+} from '@chakra-ui/react';
+import { BiChevronDown } from 'react-icons/bi';
+import { IoLanguageOutline } from 'react-icons/io5';
+import { t, Trans } from '@lingui/macro';
+import { dynamicActivate } from '../../../LanguageSwitcher/dynamicActivate';
+import { colors } from '../../../Hooks/color';
+import { useColorModeValue } from '../../../../../components/ui/color-mode';
 
 const LanguageDropDown: React.FC = () => {
   return (
     <Flex h={'full'}>
       <LanguageMenuMobile />
     </Flex>
-  )
-}
+  );
+};
 
 interface MenuLinkProps {
-  name: string
-  locale: string
-  onClose: () => void
-  changeLanguage: (locale: string) => void
+  name: string;
+  locale: string;
+  onClose: () => void;
+  changeLanguage: (locale: string) => void;
 }
 
-const MenuLink: React.FC<MenuLinkProps> = ({ name, locale, onClose, changeLanguage }) => {
+const MenuLink: React.FC<MenuLinkProps> = ({
+  name,
+  locale,
+  onClose,
+  changeLanguage,
+}) => {
   return (
     <MenuItem
       fontSize={'16px'}
@@ -32,14 +45,14 @@ const MenuLink: React.FC<MenuLinkProps> = ({ name, locale, onClose, changeLangua
         bg: useColorModeValue('gray.100', 'gray.900'),
       }}
       onClick={() => {
-        changeLanguage(locale)
-        onClose()
+        changeLanguage(locale);
+        onClose();
       }}
     >
       <Text>{name}</Text>
     </MenuItem>
-  )
-}
+  );
+};
 
 const dropdownLinks = [
   {
@@ -50,15 +63,15 @@ const dropdownLinks = [
     name: t`Bosnian`,
     locale: 'ba',
   },
-]
+];
 
 const LanguageMenuMobile: React.FC = () => {
-  const color = useColorModeValue('#2b333d', colors.white)
+  const color = useColorModeValue('#2b333d', colors.white);
 
   const changeLanguage = async (locale: string) => {
-    await dynamicActivate(locale)
-    localStorage.setItem('locale', locale)
-  }
+    await dynamicActivate(locale);
+    localStorage.setItem('locale', locale);
+  };
 
   return (
     <Menu autoSelect={false} isLazy>
@@ -101,7 +114,7 @@ const LanguageMenuMobile: React.FC = () => {
         </>
       )}
     </Menu>
-  )
-}
+  );
+};
 
-export default LanguageDropDown
+export default LanguageDropDown;

@@ -1,11 +1,11 @@
-import { VStack, Box, Heading, useColorModeValue } from '@chakra-ui/react';
+import { VStack, Box, Heading } from '@chakra-ui/react';
 import ProgrammingTable from './ProgrammingTable';
 import ToolsTable from './ToolsTable';
 import OSTable from './OSTable';
 import LanguageProficiency from './LanguageProficiency';
 import DesignTable from './DesignTable';
 import { Trans } from '@lingui/macro';
-
+import { useColorModeValue } from '../../../../../../../components/ui/color-mode';
 const SkillsResume = () => {
   return (
     <VStack w={'full'} alignItems={'start'}>

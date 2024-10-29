@@ -1,16 +1,10 @@
 import React from 'react';
-import {
-  VStack,
-  Box,
-  Heading,
-  Button,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { VStack, Box, Heading, Button } from '@chakra-ui/react';
 import { IoMailOutline } from 'react-icons/io5';
 import { resumeItems } from './items';
 import SkillsResume from './SkillsResume';
 import { Trans } from '@lingui/macro';
-
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 const ResumeLeftSide = () => {
   const handleContactClick = (link: string) => {
     window.location.href = link;

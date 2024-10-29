@@ -1,15 +1,9 @@
-import {
-  Container,
-  Text,
-  VStack,
-  Stack,
-  Avatar,
-  Icon,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { Container, Text, VStack, Stack, Avatar, Icon } from '@chakra-ui/react';
 // Here we have used react-icons package for the icon
 import { FaQuoteRight } from 'react-icons/fa';
 import { colors } from '../../../../../../shared/components/Hooks/color';
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
+
 interface TestimonialAttributes {
   username: string;
   position: string;

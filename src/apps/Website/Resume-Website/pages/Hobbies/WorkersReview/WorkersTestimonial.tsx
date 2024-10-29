@@ -1,15 +1,9 @@
-import {
-  Avatar,
-  Box,
-  chakra,
-  Flex,
-  SimpleGrid,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { Avatar, Box, chakra, Flex, SimpleGrid } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { colors } from '../../../../../../shared/components/Hooks/color';
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 
 const testimonials = [
   {

@@ -6,11 +6,11 @@ import {
   Input,
   Stack,
   Text,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
 import { t, Trans } from '@lingui/macro';
 import { colors } from '../../../../../../shared/components/Hooks/color';
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 
 // type ForgotPasswordFormInputs = {
 //   email: string;

@@ -6,12 +6,11 @@ import {
   HStack,
   VStack,
   Flex,
-  useColorModeValue,
   useBreakpointValue,
 } from '@chakra-ui/react';
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
 import { t, Trans } from '@lingui/macro';
-
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 type CardProps = {
   id: number;
   title: string;

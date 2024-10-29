@@ -7,7 +7,6 @@ import {
   Stack,
   Text,
   VisuallyHidden,
-  useColorModeValue,
   Button,
   Menu,
   MenuButton,
@@ -21,6 +20,7 @@ import FadeInView from '../../Hooks/FadeInView';
 import { Trans } from '@lingui/macro';
 import { colors } from '../../Hooks/color';
 import SubscribeForm from '../../Newsletter';
+import { useColorModeValue } from '../../../../components/ui/color-mode';
 
 const Logo = (props: any) => {
   return (

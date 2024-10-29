@@ -1,8 +1,8 @@
-import { Button, ButtonProps, Flex, useColorModeValue } from '@chakra-ui/react'
-import { MdOutlineAccountCircle } from 'react-icons/md'
-import { Link } from 'react-router-dom'
-import { colors } from '../../../../../../shared/components/Hooks/color'
-
+import { Button, ButtonProps, Flex } from '@chakra-ui/react';
+import { MdOutlineAccountCircle } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import { colors } from '../../../../../../shared/components/Hooks/color';
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 const AccountButton = (props: ButtonProps) => {
   return (
     <Flex justifyContent={'center'} alignItems={'center'}>
@@ -17,7 +17,7 @@ const AccountButton = (props: ButtonProps) => {
         </Button>
       </Link>
     </Flex>
-  )
-}
+  );
+};
 
-export default AccountButton
+export default AccountButton;

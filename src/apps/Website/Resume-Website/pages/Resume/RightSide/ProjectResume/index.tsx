@@ -5,7 +5,6 @@ import {
   HStack,
   Text,
   Button,
-  useColorModeValue,
   Link,
 } from '@chakra-ui/react';
 import { FaCalendarAlt, FaLink } from 'react-icons/fa';
@@ -13,6 +12,7 @@ import { FaLocationDot } from 'react-icons/fa6';
 import { FaPaintBrush } from 'react-icons/fa';
 import { itemProps } from './Props';
 import { Trans } from '@lingui/macro';
+import { useColorModeValue } from '../../../../../../../components/ui/color-mode';
 
 const Projects = () => {
   const colorMode = useColorModeValue('#000000', '#ECEFF4');

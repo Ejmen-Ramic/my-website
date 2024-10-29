@@ -1,22 +1,22 @@
-import { Box, Button, Flex, Heading, HStack, Show, useColorModeValue } from '@chakra-ui/react'
-import { useState } from 'react'
-import HeaderMobile from './Mobile'
-import { Link } from 'react-router-dom'
-import LanguageMenu from './Desktop/LanguageMenu'
-import { Trans } from '@lingui/macro'
-import { colors } from '../../Hooks/color'
-import ColorMode from '../../Color-Mode/ColorMode'
-
+import { Box, Button, Flex, Heading, HStack, Show } from '@chakra-ui/react';
+import { useState } from 'react';
+import HeaderMobile from './Mobile';
+import { Link } from 'react-router-dom';
+import LanguageMenu from './Desktop/LanguageMenu';
+import { Trans } from '@lingui/macro';
+import { colors } from '../../Hooks/color';
+import ColorMode from '../../Color-Mode/ColorMode';
+import { useColorModeValue } from '../../../../components/ui/color-mode';
 
 interface HeaderProps {
-  isStickyHeader?: boolean
+  isStickyHeader?: boolean;
 }
 const Header = ({ isStickyHeader = false }: HeaderProps = {}) => {
-  const [homeHovered, setHomeHovered] = useState(false)
-  const [resumeHovered, setResumeHovered] = useState(false)
-  const [aboutHovered, setAboutHovered] = useState(false)
-  const [contactHovered, setContactHovered] = useState(false)
-  const [languageHovered, setLanguageHovered] = useState(false)
+  const [homeHovered, setHomeHovered] = useState(false);
+  const [resumeHovered, setResumeHovered] = useState(false);
+  const [aboutHovered, setAboutHovered] = useState(false);
+  const [contactHovered, setContactHovered] = useState(false);
+  const [languageHovered, setLanguageHovered] = useState(false);
 
   return (
     <Flex
@@ -46,7 +46,13 @@ const Header = ({ isStickyHeader = false }: HeaderProps = {}) => {
         </Link>
       </HStack>
       <Show above={'lg'}>
-        <HStack mr={'40px'} fontSize={'18px'} fontFamily={'revert-layer'} cursor={'pointer'} h={'100%'}>
+        <HStack
+          mr={'40px'}
+          fontSize={'18px'}
+          fontFamily={'revert-layer'}
+          cursor={'pointer'}
+          h={'100%'}
+        >
           <Link to={'/'}>
             <Box
               h={'100%'}
@@ -192,10 +198,10 @@ const Header = ({ isStickyHeader = false }: HeaderProps = {}) => {
             borderTopColor='#02bece'
             transition='all 0.1s ease-in-out'
             onMouseEnter={() => {
-              setLanguageHovered(true)
+              setLanguageHovered(true);
             }}
             onMouseLeave={() => {
-              setLanguageHovered(false)
+              setLanguageHovered(false);
             }}
             overflow='hidden'
             justifyItems={'center'}
@@ -216,7 +222,7 @@ const Header = ({ isStickyHeader = false }: HeaderProps = {}) => {
         <HeaderMobile />
       </Show>
     </Flex>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -14,7 +14,6 @@ import {
   Textarea,
   Tooltip,
   useClipboard,
-  useColorModeValue,
   useToast,
   VStack,
 } from '@chakra-ui/react';
@@ -26,6 +25,7 @@ import { colors } from '../../../../../../shared/components/Hooks/color';
 import type React from 'react';
 import { type FC, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 
 const confetti = {
   light: {

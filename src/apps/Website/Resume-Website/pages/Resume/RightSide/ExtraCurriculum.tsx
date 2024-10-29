@@ -1,14 +1,8 @@
-import {
-  VStack,
-  Box,
-  Heading,
-  HStack,
-  Text,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { VStack, Box, Heading, HStack, Text } from '@chakra-ui/react';
 import { t, Trans } from '@lingui/macro';
 import { ReactNode } from 'react';
 import { FaLink, FaRunning, FaShapes } from 'react-icons/fa';
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 
 type Props = {
   text: string;

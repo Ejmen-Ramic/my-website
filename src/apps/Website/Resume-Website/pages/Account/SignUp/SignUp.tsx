@@ -11,13 +11,13 @@ import {
   Button,
   Heading,
   Text,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom';
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
 import { colors } from '../../../../../../shared/components/Hooks/color';
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);

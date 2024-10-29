@@ -1,9 +1,9 @@
-import { useColorModeValue, VStack } from '@chakra-ui/react';
+import { VStack } from '@chakra-ui/react';
 import Education from './Education';
 import ProExperience from './ProExperience';
 import Projects from './ProjectResume';
 import ExtraCurriculum from './ExtraCurriculum';
-
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 const ResumeRightSide = () => {
   return (
     <VStack

@@ -11,11 +11,11 @@ import {
   PopoverTrigger,
   PopoverContent,
   useDisclosure,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import { FaChevronDown } from 'react-icons/fa';
 import { t, Trans } from '@lingui/macro';
 import { colors } from '../../../Hooks/color';
+import { useColorModeValue } from '../../../../../components/ui/color-mode';
 
 const menuData = [
   {

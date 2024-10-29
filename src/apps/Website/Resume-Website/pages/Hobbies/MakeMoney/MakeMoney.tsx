@@ -6,12 +6,12 @@ import {
   Button,
   Stack,
   Icon,
-  useColorModeValue,
   createIcon,
 } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 
 const MakeMoneyPart = () => {
   const Arrow = createIcon({

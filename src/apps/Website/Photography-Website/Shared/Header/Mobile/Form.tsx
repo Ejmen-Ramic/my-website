@@ -1,13 +1,7 @@
-import {
-  Box,
-  Heading,
-  Input,
-  Button,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { Box, Heading, Input, Button } from '@chakra-ui/react';
 import { t, Trans } from '@lingui/macro';
 import { colors } from '../../../../../../shared/components/Hooks/color';
-
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 const HeaderForm = () => {
   return (
     <Box mt={'auto'} bottom={0}>

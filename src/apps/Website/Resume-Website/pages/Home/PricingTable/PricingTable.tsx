@@ -6,13 +6,13 @@ import {
   Heading,
   Text,
   VStack,
-  useColorModeValue,
   List,
   ListItem,
   ListIcon,
   Button,
 } from '@chakra-ui/react';
 import { FaCheckCircle } from 'react-icons/fa';
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 
 function PriceWrapper({ children }: { children: ReactNode }) {
   return (

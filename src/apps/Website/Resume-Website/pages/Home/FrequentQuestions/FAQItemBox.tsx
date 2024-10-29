@@ -1,10 +1,17 @@
-import { AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, useColorModeValue } from '@chakra-ui/react'
-import { FC } from 'react'
-import { FAQItem } from '.'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+import {
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Box,
+} from '@chakra-ui/react';
+import { FC } from 'react';
+import { FAQItem } from '.';
+import { colors } from '../../../../../../shared/components/Hooks/color';
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 
 const FAQItemBox: FC<FAQItem> = ({ title, description }) => {
-  const ColorModeValueFAQ = useColorModeValue(colors.black, colors.white)
+  const ColorModeValueFAQ = useColorModeValue(colors.black, colors.white);
   return (
     <AccordionItem w={'full'} overflow={'none'} border={'0px'}>
       {() => (
@@ -30,7 +37,7 @@ const FAQItemBox: FC<FAQItem> = ({ title, description }) => {
         </>
       )}
     </AccordionItem>
-  )
-}
+  );
+};
 
-export default FAQItemBox
+export default FAQItemBox;
