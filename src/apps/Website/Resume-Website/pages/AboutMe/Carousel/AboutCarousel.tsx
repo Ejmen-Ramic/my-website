@@ -106,7 +106,7 @@ const AboutCarousel = () => {
             backgroundImage={`url(${card.image})`}
           >
             <Container
-              size={'container.lg'}
+              // size={'container.lg'}
               height={'600px'}
               position={'relative'}
             >

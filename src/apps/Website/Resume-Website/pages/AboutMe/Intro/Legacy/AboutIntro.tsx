@@ -7,11 +7,10 @@ import {
   Flex,
   Link,
   Icon,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import { FaGithub } from 'react-icons/fa';
 import { colors } from '../../../../../../../shared/components/Hooks/color';
-
+import { useColorModeValue } from '../../../../../../../components/ui/color-mode';
 const AboutIntro = () => {
   return (
     <Stack
