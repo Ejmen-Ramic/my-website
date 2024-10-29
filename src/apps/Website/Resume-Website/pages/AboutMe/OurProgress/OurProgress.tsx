@@ -3,10 +3,9 @@ import {
   chakra,
   Flex,
   SimpleGrid,
-  Stat,
   StatLabel,
-  StatNumber,
-  useColorModeValue,
+  StatRoot,
+  StatValueText,
   VStack,
 } from '@chakra-ui/react';
 import { useState, useEffect, ReactNode } from 'react';
@@ -15,6 +14,7 @@ import { FaAddressCard, FaCamera } from 'react-icons/fa6';
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
 import { t, Trans } from '@lingui/macro';
 import { colors } from '../../../../../../shared/components/Hooks/color';
+import { useColorModeValue } from '../../../../../../components/ui/color-mode';
 
 interface StatsCardProps {
   title: string;
@@ -54,7 +54,7 @@ function StatsCard(props: StatsCardProps) {
 
   return (
     <FadeInView delay={0.2}>
-      <Stat
+      <StatRoot
         px={{ base: 4, md: 8 }}
         py={'5'}
         shadow={'xl'}
@@ -72,9 +72,9 @@ function StatsCard(props: StatsCardProps) {
               <StatLabel fontWeight={'medium'} truncate>
                 {title}
               </StatLabel>
-              <StatNumber fontSize={'2xl'} fontWeight={'medium'}>
+              <StatValueText fontSize={'2xl'} fontWeight={'medium'}>
                 {count.toLocaleString()}
-              </StatNumber>
+              </StatValueText>
             </Box>
             <Box
               my={'auto'}
@@ -85,7 +85,7 @@ function StatsCard(props: StatsCardProps) {
             </Box>
           </Flex>
         </FadeInView>
-      </Stat>
+      </StatRoot>
     </FadeInView>
   );
 }
