@@ -1,20 +1,20 @@
-import { motion } from "framer-motion"
-import React from "react"
+import { motion } from 'framer-motion';
+import React from 'react';
 
 type FadeInViewProps = {
-  children: React.ReactNode
-  direction?: "top" | "bottom" | "left" | "right"
-  threshold?: number
-  duration?: number
-  delay?: number
-  easing?: [number, number, number, number]
-  scale?: number
-  rotate?: number
-}
+  children: React.ReactNode;
+  direction?: 'top' | 'bottom' | 'left' | 'right';
+  threshold?: number;
+  duration?: number;
+  delay?: number;
+  easing?: [number, number, number, number];
+  scale?: number;
+  rotate?: number;
+};
 
 const FadeInView: React.FC<FadeInViewProps> = ({
   children,
-  direction = "bottom",
+  direction = 'bottom',
   threshold = 0.2,
   duration = 0.3,
   delay = 0,
@@ -25,19 +25,19 @@ const FadeInView: React.FC<FadeInViewProps> = ({
   const fadeInVariants = {
     hidden: {
       opacity: 0,
-      y: direction === "top" ? -20 : direction === "bottom" ? 20 : 0,
-      x: direction === "left" ? -20 : direction === "right" ? 20 : 0,
+      y: direction === 'top' ? -20 : direction === 'bottom' ? 20 : 0,
+      x: direction === 'left' ? -20 : direction === 'right' ? 20 : 0,
     },
     visible: {
       opacity: 1,
       y: 0,
       x: 0,
     },
-  }
+  };
 
   return (
     <motion.div
-      initial="hidden"
+      initial='hidden'
       variants={fadeInVariants}
       viewport={{
         once: true,
@@ -54,7 +54,7 @@ const FadeInView: React.FC<FadeInViewProps> = ({
     >
       {children}
     </motion.div>
-  )
-}
+  );
+};
 
-export default FadeInView
+export default FadeInView;

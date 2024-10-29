@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
-import {
-  Stack,
-  Input,
-  IconButton,
-  useColorModeValue,
-  Box,
-  Text,
-} from '@chakra-ui/react';
+import { Stack, Input, IconButton, Box, Text } from '@chakra-ui/react';
 import { BiMailSend } from 'react-icons/bi';
 import * as Sentry from '@sentry/browser';
 import { colors } from './Hooks/color';
 import FadeInView from './Hooks/FadeInView';
-
+import { useColorModeValue } from '../../components/ui/color-mode';
 const SubscribeForm: React.FC = () => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'IDLE' | 'SUCCESS' | 'ERROR'>('IDLE');

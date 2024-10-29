@@ -1,8 +1,12 @@
-import { Button, ButtonProps, Flex, useColorMode, useColorModeValue } from '@chakra-ui/react'
-import { BsSun, BsMoonStarsFill } from 'react-icons/bs'
+import { Button, ButtonProps, Flex } from '@chakra-ui/react';
+import { BsSun, BsMoonStarsFill } from 'react-icons/bs';
+import {
+  useColorMode,
+  useColorModeValue,
+} from '../../../components/ui/color-mode';
 
 const ColorMode = (props: ButtonProps) => {
-  const { colorMode, toggleColorMode } = useColorMode()
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     /**
      * Note: Usually, only the button component should be used (without Flex).
@@ -20,7 +24,7 @@ const ColorMode = (props: ButtonProps) => {
         {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />}
       </Button>
     </Flex>
-  )
-}
+  );
+};
 
-export default ColorMode
+export default ColorMode;

@@ -1,9 +1,9 @@
-import { useColorModeValue } from '@chakra-ui/react'
-import React from 'react'
-import { colors } from '../components/Hooks/color'
+import React from 'react';
+import { colors } from '../components/Hooks/color';
+import { useColorModeValue } from '../../components/ui/color-mode';
 
 interface IconBurgerProps extends React.SVGProps<SVGSVGElement> {
-  size?: string
+  size?: string;
 }
 
 //   base?: string
@@ -52,7 +52,7 @@ const IconBurgerMobile = ({ size, ...props }: IconBurgerProps) => {
         strokeLinecap={'round'}
       />
     </svg>
-  )
-}
+  );
+};
 
-export default IconBurgerMobile
+export default IconBurgerMobile;

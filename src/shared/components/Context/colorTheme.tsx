@@ -1,10 +1,19 @@
-import { extendTheme, ThemeConfig } from '@chakra-ui/react';
+import { createSystem, defaultConfig } from '@chakra-ui/react';
 
-const config: ThemeConfig = {
-  initialColorMode: 'system', 
-  useSystemColorMode: true,   
+const breakpoints = {
+  sm: '30em',
+  md: '48em',
+  lg: '62em',
+  xl: '80em',
+  '2xl': '96em',
 };
 
-const theme = extendTheme({ config });
-
-export default theme;
+export const system = createSystem(defaultConfig, {
+  conditions: {
+    initialColorMode: 'system',
+    useSystemColorMode: true,
+  },
+  theme: {
+    breakpoints,
+  },
+});

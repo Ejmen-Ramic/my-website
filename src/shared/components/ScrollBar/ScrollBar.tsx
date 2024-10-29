@@ -1,6 +1,4 @@
-import { extendTheme } from '@chakra-ui/react'
-
-const ScrollBar = extendTheme({
+const ScrollBar = {
   styles: {
     global: {
       '::-webkit-scrollbar': {
@@ -18,6 +16,6 @@ const ScrollBar = extendTheme({
       },
     },
   },
-})
+};
 
-export default ScrollBar
+export default ScrollBar;

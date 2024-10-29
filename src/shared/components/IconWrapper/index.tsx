@@ -1,20 +1,27 @@
-import { Icon, type IconProps as ChakraIconProps, type ResponsiveValue } from '@chakra-ui/react'
-import { FC, ReactNode } from 'react'
-import { IconViewBox } from './IconViewBox'
-import { StyleUnit } from './types'
+import { Icon, type IconProps as ChakraIconProps } from '@chakra-ui/react';
+import { FC, ReactNode } from 'react';
+import { IconViewBox, ResponsiveValue } from './IconViewBox';
+import { StyleUnit } from './types';
 
 export type IconWrapperProps = {
   /** icon name */
-  name?: string
+  name?: string;
   /** the element of the icon */
-  element?: ReactNode
+  element?: ReactNode;
   /** to determine the view size of the icon */
-  viewBox?: IconViewBox
+  viewBox?: IconViewBox;
   /** to determine the size of the icon */
-  size?: ResponsiveValue<StyleUnit> | StyleUnit
-} & ChakraIconProps
+  size?: ResponsiveValue<StyleUnit> | StyleUnit;
+} & ChakraIconProps;
 
-const IconWrapper: FC<IconWrapperProps> = ({ size, element, fill, color, h, ...props }) => (
+const IconWrapper: FC<IconWrapperProps> = ({
+  size,
+  element,
+  fill,
+  color,
+  h,
+  ...props
+}) => (
   <Icon
     border={0}
     color={fill || color}
@@ -25,6 +32,6 @@ const IconWrapper: FC<IconWrapperProps> = ({ size, element, fill, color, h, ...p
   >
     {element}
   </Icon>
-)
+);
 
-export default IconWrapper
+export default IconWrapper;

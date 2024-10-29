@@ -1,4 +1,5 @@
 import { createSystem, defaultConfig } from '@chakra-ui/react';
+import ScrollBar from './shared/components/ScrollBar/ScrollBar';
 
 const breakpoints = {
   sm: '30em',
@@ -8,15 +9,13 @@ const breakpoints = {
   '2xl': '96em',
 };
 
-const initialColorMode = 'system';
-const useSystemColorMode = true;
-
 export const system = createSystem(defaultConfig, {
   conditions: {
     initialColorMode: 'system',
     useSystemColorMode: true,
   },
   theme: {
+    ...ScrollBar,
     breakpoints,
   },
 });
