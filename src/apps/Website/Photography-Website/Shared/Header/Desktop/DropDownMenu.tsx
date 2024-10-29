@@ -52,7 +52,7 @@ interface MenuDataProps {
 }
 
 const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
-  const { onOpen, onClose, isOpen } = useDisclosure();
+  const { onOpen, onClose, open } = useDisclosure();
 
   return (
     <Stack direction={'row'} gap={4}>
@@ -87,7 +87,7 @@ const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
                 color: linkColor,
               }}
               transition={'all .25s ease-in-out'}
-              transform={isOpen ? 'rotate(180deg)' : ''}
+              transform={open ? 'rotate(180deg)' : ''}
             />
           </HStack>
         </PopoverTrigger>

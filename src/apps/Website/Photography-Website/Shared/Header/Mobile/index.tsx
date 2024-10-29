@@ -14,32 +14,38 @@ import {
   Hide,
   Text,
   Flex,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 
-import { Link } from 'react-router-dom'
-import { IoBriefcaseOutline, IoHomeOutline, IoPersonOutline, IoFileTrayFullOutline, IoCodeSlash } from 'react-icons/io5'
-import MenuContainerMobile from './DropDownMenuMobile'
-import { IconType } from 'react-icons'
-import HeaderForm from './Form'
-import IconBurgerMobile from '../../../../../../shared/icons/IconBurgerMobile'
-import IconBurger from '../../../../../../shared/icons/IconBurger'
-import { t, Trans } from '@lingui/macro'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+import { Link } from 'react-router-dom';
+import {
+  IoBriefcaseOutline,
+  IoHomeOutline,
+  IoPersonOutline,
+  IoFileTrayFullOutline,
+  IoCodeSlash,
+} from 'react-icons/io5';
+import MenuContainerMobile from './DropDownMenuMobile';
+import { IconType } from 'react-icons';
+import HeaderForm from './Form';
+import IconBurgerMobile from '../../../../../../shared/icons/IconBurgerMobile';
+import IconBurger from '../../../../../../shared/icons/IconBurger';
+import { t, Trans } from '@lingui/macro';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 
 type MenuItemLink = {
-  label: string
-  icon?: IconType
-  to: string
-}
+  label: string;
+  icon?: IconType;
+  to: string;
+};
 
 const HeaderMobile = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const color = useColorModeValue('#2b333d', colors.white)
-  const year = new Date().getFullYear()
+  const { open, onOpen, onClose } = useDisclosure();
+  const color = useColorModeValue('#2b333d', colors.white);
+  const year = new Date().getFullYear();
 
   const isMenuItemLink = (item: any): item is MenuItemLink => {
-    return (item as MenuItemLink).to !== undefined
-  }
+    return (item as MenuItemLink).to !== undefined;
+  };
   const menuItems: (MenuItemLink | React.ReactElement)[] = [
     { label: t`Home`, icon: IoHomeOutline, to: '/' },
     { label: t`Resume`, icon: IoBriefcaseOutline, to: '/resume' },
@@ -47,23 +53,34 @@ const HeaderMobile = () => {
     { label: t`About Me`, icon: IoCodeSlash, to: '/about' },
     { label: t`Contacts`, icon: IoFileTrayFullOutline, to: '/contact' },
     { label: t`My Account`, icon: IoPersonOutline, to: '/signin' },
-  ]
+  ];
 
   return (
     <Box>
       <Box mr={'20px'}>
-        <Button onClick={onOpen} variant={'unstyled'} fontSize={'15px'} mt={{ base: '30%', md: '43%', lg: '25%' }}>
+        <Button
+          onClick={onOpen}
+          variant={'unstyled'}
+          fontSize={'15px'}
+          mt={{ base: '30%', md: '43%', lg: '25%' }}
+        >
           <Hide below={'md'}>
             <IconBurger size={'30px'} />
           </Hide>
           <Show below={'md'}>
-            <Box as={IconBurgerMobile} size={'20px'} _hover={{ color: '#02bece' }} />
+            <Box
+              as={IconBurgerMobile}
+              size={'20px'}
+              _hover={{ color: '#02bece' }}
+            />
           </Show>
         </Button>
       </Box>
-      <Drawer isOpen={isOpen} placement={'left'} onClose={onClose}>
+      <Drawer open={open} placement={'left'} onClose={onClose}>
         <DrawerOverlay />
-        <DrawerContent backgroundColor={useColorModeValue(colors.white, '#2b333d')}>
+        <DrawerContent
+          backgroundColor={useColorModeValue(colors.white, '#2b333d')}
+        >
           <DrawerCloseButton
             size={'20px'}
             color={useColorModeValue('#2b333d', colors.white)}
@@ -71,7 +88,11 @@ const HeaderMobile = () => {
             mr={'20px'}
             _hover={{ color: '#02bece' }}
           />
-          <DrawerHeader color={useColorModeValue('#2b333d', colors.white)} fontSize={'25px'} letterSpacing={'2px'}>
+          <DrawerHeader
+            color={useColorModeValue('#2b333d', colors.white)}
+            fontSize={'25px'}
+            letterSpacing={'2px'}
+          >
             <Trans>Main Menu</Trans>
           </DrawerHeader>
           <DrawerBody>
@@ -92,7 +113,12 @@ const HeaderMobile = () => {
                           textTransform={'capitalize'}
                           ml={'7.5%'}
                         >
-                          {item.icon && <item.icon size={30} style={{ marginRight: '12px' }} />}
+                          {item.icon && (
+                            <item.icon
+                              size={30}
+                              style={{ marginRight: '12px' }}
+                            />
+                          )}
                           {item.label}
                         </Button>
                       </Link>
@@ -104,14 +130,15 @@ const HeaderMobile = () => {
               </Stack>
               <HeaderForm />
               <Text bottom={'0'} fontSize={'sm'} mb={'40px'} mt={'40px'}>
-                <Trans>Copyright</Trans> ©{year} EjmenRamic. <Trans>All rights reserved</Trans>
+                <Trans>Copyright</Trans> ©{year} EjmenRamic.{' '}
+                <Trans>All rights reserved</Trans>
               </Text>
             </Flex>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
     </Box>
-  )
-}
+  );
+};
 
-export default HeaderMobile
+export default HeaderMobile;

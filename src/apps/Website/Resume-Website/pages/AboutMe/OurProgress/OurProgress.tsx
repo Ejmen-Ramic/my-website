@@ -69,7 +69,7 @@ function StatsCard(props: StatsCardProps) {
               pl={{ base: 2, md: 4 }}
               color={useColorModeValue('gray.800', colors.white)}
             >
-              <StatLabel fontWeight={'medium'} isTruncated>
+              <StatLabel fontWeight={'medium'} truncate>
                 {title}
               </StatLabel>
               <StatNumber fontSize={'2xl'} fontWeight={'medium'}>
