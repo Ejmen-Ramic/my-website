@@ -1,9 +1,7 @@
 import {
   Button,
   Drawer,
-  DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
   DrawerHeader,
   DrawerBody,
   Stack,
@@ -11,6 +9,8 @@ import {
   useDisclosure,
   Text,
   Flex,
+  DrawerRoot,
+  DrawerCloseTrigger,
 } from '@chakra-ui/react';
 
 import { Link } from 'react-router-dom';
@@ -77,18 +77,21 @@ const HeaderMobile = () => {
           {/* </Show> */}
         </Button>
       </Box>
-      <Drawer open={open} placement={'left'} onClose={onClose}>
-        <DrawerOverlay />
+      <DrawerRoot open={open} placement={'start'} onClose={onClose}>
+        {/* <DrawerOverlay /> */}
         <DrawerContent
-          backgroundColor={useColorModeValue(colors.white, '#2b333d')}
+        // backgroundColor={useColorModeValue(colors.white, '#2b333d')}
         >
-          <DrawerCloseButton
-            size={'20px'}
-            color={useColorModeValue('#2b333d', colors.white)}
-            mt={'20px'}
-            mr={'20px'}
-            _hover={{ color: '#02bece' }}
-          />
+          <DrawerCloseTrigger>
+            <Button
+              w={'20px'}
+              h={'20px'}
+              color={useColorModeValue('#2b333d', colors.white)}
+              mt={'20px'}
+              mr={'20px'}
+              _hover={{ color: '#02bece' }}
+            />
+          </DrawerCloseTrigger>
           <DrawerHeader
             color={useColorModeValue('#2b333d', colors.white)}
             fontSize={'25px'}
@@ -136,7 +139,7 @@ const HeaderMobile = () => {
             </Flex>
           </DrawerBody>
         </DrawerContent>
-      </Drawer>
+      </DrawerRoot>
     </Box>
   );
 };

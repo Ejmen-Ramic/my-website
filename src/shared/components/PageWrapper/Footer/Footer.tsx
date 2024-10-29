@@ -8,10 +8,9 @@ import {
   Text,
   VisuallyHidden,
   Button,
-  Menu,
-  MenuButton,
   MenuItem,
-  MenuList,
+  MenuRoot,
+  MenuContent,
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
@@ -21,6 +20,7 @@ import { Trans } from '@lingui/macro';
 import { colors } from '../../Hooks/color';
 import SubscribeForm from '../../Newsletter';
 import { useColorModeValue } from '../../../../components/ui/color-mode';
+import { LinkButton } from '../../../../components/ui/link-button';
 
 const Logo = (props: any) => {
   return (
@@ -51,7 +51,7 @@ const SocialButton = ({
   hoverColor: string;
 }) => {
   return (
-    <chakra.button
+    <LinkButton
       bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
       rounded={'full'}
       w={8}
@@ -72,7 +72,7 @@ const SocialButton = ({
         <VisuallyHidden>{label}</VisuallyHidden>
       </FadeInView>
       <FadeInView delay={0.1}>{children}</FadeInView>
-    </chakra.button>
+    </LinkButton>
   );
 };
 
@@ -100,7 +100,7 @@ const Footer = () => {
         py={10}
         px={{ base: '20px', md: '40px', lg: '0px' }}
         maxW={'6xl'}
-        align='center'
+        alignItems={'center'}
       >
         <SimpleGrid
           templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 2fr' }}
@@ -123,7 +123,11 @@ const Footer = () => {
                   view my resume and work. <br /> <br />
                   Powered by
                 </Trans>{' '}
-                <Link href='https://react.dev/' isExternal>
+                <Link
+                  href='https://react.dev/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   <Box as='span' color='#02bece'>
                     React
                   </Box>
@@ -134,7 +138,11 @@ const Footer = () => {
                 >
                   {''} • {''}
                 </Box>
-                <Link href='https://www.typescriptlang.org/' isExternal>
+                <Link
+                  href='https://www.typescriptlang.org/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   <Box as='span' color='#02bece'>
                     Typescript
                   </Box>
@@ -145,7 +153,11 @@ const Footer = () => {
                 >
                   {''} • {''}
                 </Box>
-                <Link href='https://chakra-ui.com/' isExternal>
+                <Link
+                  href='https://chakra-ui.com/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   <Box as='span' color='#02bece'>
                     Chakra UI
                   </Box>
@@ -237,13 +249,15 @@ const Footer = () => {
               </Link>
             </FadeInView>
             <FadeInView delay={0.1}>
-              <Menu>
-                <MenuButton
+              <MenuRoot>
+                <Button
                   as={Button}
-                  variant={'link'}
                   border={'none'}
                   color={useColorModeValue('#02bece', '#02bece')}
-                  _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
+                  _hover={{
+                    textDecor: 'underline',
+                    color: useColorModeValue('#2b333d', colors.white),
+                  }}
                   _expanded={{
                     color: useColorModeValue('#2b333d', colors.white),
                   }}
@@ -252,20 +266,22 @@ const Footer = () => {
                   textTransform={'capitalize'}
                 >
                   <Trans>Hobbies</Trans>
-                </MenuButton>
-                <MenuList borderRadius={'3px'}>
+                </Button>
+                <MenuContent
+                // borderRadius={'3px'}
+                >
                   <MenuItem
-                    _hover={{
-                      color: '#02bece',
-                      bg: useColorModeValue('gray.100', 'gray.900'),
-                    }}
+                  // _hover={{
+                  //   color: '#02bece',
+                  //   bg: useColorModeValue('gray.100', 'gray.900'),
+                  // }}
                   >
                     <Link href={'/photography'}>
                       <Trans>Photography</Trans>
                     </Link>
                   </MenuItem>
-                </MenuList>
-              </Menu>
+                </MenuContent>
+              </MenuRoot>
             </FadeInView>
             <FadeInView delay={0.1}>
               <Link

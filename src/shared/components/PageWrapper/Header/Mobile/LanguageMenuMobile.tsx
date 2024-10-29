@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Flex,
-  Text,
-  Icon,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-} from '@chakra-ui/react';
+import { Flex, Text, Icon, MenuItem, MenuRoot } from '@chakra-ui/react';
 import { BiChevronDown } from 'react-icons/bi';
 import { IoLanguageOutline } from 'react-icons/io5';
 import { t, Trans } from '@lingui/macro';
@@ -38,16 +30,16 @@ const MenuLink: React.FC<MenuLinkProps> = ({
 }) => {
   return (
     <MenuItem
-      fontSize={'16px'}
-      letterSpacing={'1px'}
-      _hover={{
-        color: '#02bece',
-        bg: useColorModeValue('gray.100', 'gray.900'),
-      }}
-      onClick={() => {
-        changeLanguage(locale);
-        onClose();
-      }}
+    // fontSize={'16px'}
+    // letterSpacing={'1px'}
+    // _hover={{
+    //   color: '#02bece',
+    //   bg: useColorModeValue('gray.100', 'gray.900'),
+    // }}
+    // onClick={() => {
+    //   changeLanguage(locale);
+    //   onClose();
+    // }}
     >
       <Text>{name}</Text>
     </MenuItem>
@@ -74,8 +66,8 @@ const LanguageMenuMobile: React.FC = () => {
   };
 
   return (
-    <Menu autoSelect={false} isLazy>
-      {({ isOpen, onClose }) => (
+    <MenuRoot autoSelect={false} isLazy children={undefined}>
+      {/* {({ open, onClose }) => (
         <>
           <MenuButton
             _hover={{ color: '#02bece' }}
@@ -96,7 +88,7 @@ const LanguageMenuMobile: React.FC = () => {
                 as={BiChevronDown}
                 h={'100%'}
                 transition={'all .25s ease-in-out'}
-                transform={isOpen ? 'rotate(180deg)' : ''}
+                transform={open ? 'rotate(180deg)' : ''}
               />
             </Flex>
           </MenuButton>
@@ -112,8 +104,8 @@ const LanguageMenuMobile: React.FC = () => {
             ))}
           </MenuList>
         </>
-      )}
-    </Menu>
+      )} */}
+    </MenuRoot>
   );
 };
 

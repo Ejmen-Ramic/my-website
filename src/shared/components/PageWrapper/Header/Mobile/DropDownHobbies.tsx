@@ -1,13 +1,4 @@
-import {
-  Flex,
-  Text,
-  Icon,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  chakra,
-} from '@chakra-ui/react';
+import { Flex, Text, Icon, MenuItem, chakra, MenuRoot } from '@chakra-ui/react';
 import { t, Trans } from '@lingui/macro';
 import { BiChevronDown } from 'react-icons/bi';
 import { IoCameraOutline } from 'react-icons/io5';
@@ -31,15 +22,17 @@ interface MenuLinkProps {
 const MenuLink = ({ name, path, onClose }: MenuLinkProps) => {
   return (
     <chakra.a href={path} onClick={() => onClose()}>
-      <MenuItem
-        fontSize={'16px'}
-        letterSpacing={'1px'}
-        _hover={{
-          color: '#02bece',
-          bg: useColorModeValue('gray.100', 'gray.900'),
-        }}
-      >
-        <Text>{name}</Text>
+      <MenuItem>
+        <Text
+          fontSize={'16px'}
+          letterSpacing={'1px'}
+          _hover={{
+            color: '#02bece',
+            bg: useColorModeValue('gray.100', 'gray.900'),
+          }}
+        >
+          {name}
+        </Text>
       </MenuItem>
     </chakra.a>
   );
@@ -59,8 +52,9 @@ const DropDownMenuMobile = () => {
   const color = useColorModeValue('#2b333d', colors.white);
 
   return (
-    <Menu autoSelect={false} isLazy>
-      {({ isOpen, onClose }) => (
+    <MenuRoot autoSelect={false} isLazy>
+      <></>
+      {/* {({ isOpen, onClose }) => (
         <>
           <MenuButton
             _hover={{ color: '#02bece' }}
@@ -97,8 +91,8 @@ const DropDownMenuMobile = () => {
             ))}
           </MenuList>
         </>
-      )}
-    </Menu>
+      )} */}
+    </MenuRoot>
   );
 };
 

@@ -10,6 +10,8 @@ import {
   PopoverTrigger,
   PopoverContent,
   useDisclosure,
+  PopoverRoot,
+  PopoverBody,
 } from '@chakra-ui/react';
 import { FaChevronDown } from 'react-icons/fa';
 import { t, Trans } from '@lingui/macro';
@@ -53,7 +55,7 @@ const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
 
   return (
     <Stack direction={'row'} gap={4}>
-      <Popover
+      <PopoverRoot
         trigger={'hover'}
         placement={'bottom-start'}
         onOpen={onOpen}
@@ -94,29 +96,31 @@ const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
           </HStack>
         </PopoverTrigger>
 
-        <PopoverContent
-          border={0}
-          mt={'-7px'}
-          zIndex={1}
-          bg={useColorModeValue(colors.white, 'gray.800')}
-          p={3}
-          rounded={'lg'}
-          maxW={'200px'}
-        >
-          <Stack>
-            {languageOptions.map((option, index) => (
-              <LanguageItem
-                key={index}
-                name={option.name}
-                locale={option.locale}
-                linkColor={linkColor}
-                changeLanguage={changeLanguage}
-                onClose={onClose}
-              />
-            ))}
-          </Stack>
+        <PopoverContent>
+          <PopoverBody
+            border={0}
+            mt={'-7px'}
+            zIndex={1}
+            bg={useColorModeValue(colors.white, 'gray.800')}
+            p={3}
+            rounded={'lg'}
+            maxW={'200px'}
+          >
+            <Stack>
+              {languageOptions.map((option, index) => (
+                <LanguageItem
+                  key={index}
+                  name={option.name}
+                  locale={option.locale}
+                  linkColor={linkColor}
+                  changeLanguage={changeLanguage}
+                  onClose={onClose}
+                />
+              ))}
+            </Stack>
+          </PopoverBody>
         </PopoverContent>
-      </Popover>
+      </PopoverRoot>
     </Stack>
   );
 };

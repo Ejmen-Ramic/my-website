@@ -11,6 +11,8 @@ import {
   PopoverTrigger,
   PopoverContent,
   useDisclosure,
+  PopoverRoot,
+  PopoverBody,
 } from '@chakra-ui/react';
 import { FaChevronDown } from 'react-icons/fa';
 import { t, Trans } from '@lingui/macro';
@@ -55,7 +57,7 @@ const DropDownHobbies = ({ menuData }: MenuDataProps) => {
 
   return (
     <Stack direction={'row'} gap={4}>
-      <Popover
+      <PopoverRoot
         trigger={'hover'}
         placement={'bottom-start'}
         onOpen={onOpen}
@@ -91,23 +93,25 @@ const DropDownHobbies = ({ menuData }: MenuDataProps) => {
           </HStack>
         </PopoverTrigger>
 
-        <PopoverContent
-          maxW={'200px'}
-          p={3}
-          mt={'-7px'}
-          border={'1px'}
-          borderColor={useColorModeValue('transparent', colors.white)}
-          rounded={'lg'}
-          bg={useColorModeValue(colors.white, 'gray.800')}
-          zIndex={1}
-        >
-          <Stack>
-            {menuData.map((data) => (
-              <DropDownItem key={data.id} linkColor={linkColor} {...data} />
-            ))}
-          </Stack>
+        <PopoverContent>
+          <PopoverBody
+            maxW={'200px'}
+            p={3}
+            mt={'-7px'}
+            border={'1px'}
+            borderColor={useColorModeValue('transparent', colors.white)}
+            rounded={'lg'}
+            bg={useColorModeValue(colors.white, 'gray.800')}
+            zIndex={1}
+          >
+            <Stack>
+              {menuData.map((data) => (
+                <DropDownItem key={data.id} linkColor={linkColor} {...data} />
+              ))}
+            </Stack>
+          </PopoverBody>
         </PopoverContent>
-      </Popover>
+      </PopoverRoot>
     </Stack>
   );
 };
