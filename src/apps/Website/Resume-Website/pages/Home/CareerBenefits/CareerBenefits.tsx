@@ -58,9 +58,9 @@ const CareerBenefits = () => {
                 industries.
                 <br /> • To get a better understanding of technology.
                 <br /> • To enhance problem-solving skills.
-                <Hide below={'lg'}>
-                  <br />
-                </Hide>
+                {/* <Hide below={'lg'}> */}
+                <br />
+                {/* </Hide> */}
               </Text>
               {/* <Button
                     bgGradient={'linear(to right, #FFBB88, #FF6000)'}

@@ -64,16 +64,16 @@ const HeaderMobile = () => {
           fontSize={'15px'}
           mt={{ base: '30%', md: '43%', lg: '25%' }}
         >
-          <Hide below={'md'}>
-            <IconBurger size={'30px'} />
-          </Hide>
-          <Show below={'md'}>
-            <Box
-              as={IconBurgerMobile}
-              size={'20px'}
-              _hover={{ color: '#02bece' }}
-            />
-          </Show>
+          {/* <Hide below={'md'}> */}
+          <IconBurger size={'30px'} />
+          {/* </Hide> */}
+          {/* <Show below={'md'}> */}
+          <Box
+            as={IconBurgerMobile}
+            size={'20px'}
+            _hover={{ color: '#02bece' }}
+          />
+          {/* </Show> */}
         </Button>
       </Box>
       <Drawer open={open} placement={'left'} onClose={onClose}>

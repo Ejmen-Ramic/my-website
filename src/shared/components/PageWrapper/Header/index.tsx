@@ -45,75 +45,75 @@ const Header = ({ isStickyHeader = false }: HeaderProps = {}) => {
           </Heading>
         </Link>
       </HStack>
-      <Show above={'lg'}>
-        <HStack
-          mr={'40px'}
-          fontSize={'18px'}
-          fontFamily={'revert-layer'}
-          cursor={'pointer'}
-          h={'100%'}
-        >
-          <Link to={'/'}>
-            <Box
-              h={'100%'}
-              borderColor={homeHovered ? '#02bece' : '#2b333d'}
-              borderTopWidth={homeHovered ? '8px' : '0px'}
-              borderTopColor='#02bece'
-              transition='all 0.1s ease-in-out'
-              onMouseEnter={() => setHomeHovered(true)}
-              onMouseLeave={() => setHomeHovered(false)}
-              overflow='hidden'
-              justifyItems={'center'}
-              boxSizing='border-box'
+      {/* <Show above={'lg'}> */}
+      <HStack
+        mr={'40px'}
+        fontSize={'18px'}
+        fontFamily={'revert-layer'}
+        cursor={'pointer'}
+        h={'100%'}
+      >
+        <Link to={'/'}>
+          <Box
+            h={'100%'}
+            borderColor={homeHovered ? '#02bece' : '#2b333d'}
+            borderTopWidth={homeHovered ? '8px' : '0px'}
+            borderTopColor='#02bece'
+            transition='all 0.1s ease-in-out'
+            onMouseEnter={() => setHomeHovered(true)}
+            onMouseLeave={() => setHomeHovered(false)}
+            overflow='hidden'
+            justifyItems={'center'}
+            boxSizing='border-box'
+          >
+            <Button
+              variant={'link'}
+              border={'none'}
+              _hover={{ color: '#02bece' }}
+              color={useColorModeValue('#2b333d', colors.white)}
+              fontWeight={'light'}
+              fontSize={'18px'}
+              letterSpacing={'1px'}
+              textTransform={'capitalize'}
+              pl={'10px'}
+              pr={'10px'}
+              p={'50px'}
             >
-              <Button
-                variant={'link'}
-                border={'none'}
-                _hover={{ color: '#02bece' }}
-                color={useColorModeValue('#2b333d', colors.white)}
-                fontWeight={'light'}
-                fontSize={'18px'}
-                letterSpacing={'1px'}
-                textTransform={'capitalize'}
-                pl={'10px'}
-                pr={'10px'}
-                p={'50px'}
-              >
-                <Trans>Home</Trans>
-              </Button>
-            </Box>
-          </Link>
-          <Link to={'/resume'}>
-            <Box
-              h={'100%'}
-              borderColor={resumeHovered ? '#02bece' : '#2b333d'}
-              borderTopWidth={resumeHovered ? '8px' : '0px'}
-              borderTopColor='#02bece'
-              transition='all 0.1s ease-in-out'
-              onMouseEnter={() => setResumeHovered(true)}
-              onMouseLeave={() => setResumeHovered(false)}
-              overflow='hidden'
-              justifyItems={'center'}
-              boxSizing='border-box'
+              <Trans>Home</Trans>
+            </Button>
+          </Box>
+        </Link>
+        <Link to={'/resume'}>
+          <Box
+            h={'100%'}
+            borderColor={resumeHovered ? '#02bece' : '#2b333d'}
+            borderTopWidth={resumeHovered ? '8px' : '0px'}
+            borderTopColor='#02bece'
+            transition='all 0.1s ease-in-out'
+            onMouseEnter={() => setResumeHovered(true)}
+            onMouseLeave={() => setResumeHovered(false)}
+            overflow='hidden'
+            justifyItems={'center'}
+            boxSizing='border-box'
+          >
+            <Button
+              variant={'link'}
+              border={'none'}
+              _hover={{ color: '#02bece' }}
+              color={useColorModeValue('#2b333d', colors.white)}
+              fontWeight={'light'}
+              fontSize={'18px'}
+              letterSpacing={'1px'}
+              textTransform={'capitalize'}
+              pl={'10px'}
+              pr={'10px'}
+              p={'50px'}
             >
-              <Button
-                variant={'link'}
-                border={'none'}
-                _hover={{ color: '#02bece' }}
-                color={useColorModeValue('#2b333d', colors.white)}
-                fontWeight={'light'}
-                fontSize={'18px'}
-                letterSpacing={'1px'}
-                textTransform={'capitalize'}
-                pl={'10px'}
-                pr={'10px'}
-                p={'50px'}
-              >
-                <Trans>Resume</Trans>
-              </Button>
-            </Box>
-          </Link>
-          {/* <Box
+              <Trans>Resume</Trans>
+            </Button>
+          </Box>
+        </Link>
+        {/* <Box
             h={'100%'}
             borderColor={hobbiesHovered ? '#02bece' : '#2b333d'}
             borderTopWidth={hobbiesHovered ? '4px' : '0px'}
@@ -131,96 +131,96 @@ const Header = ({ isStickyHeader = false }: HeaderProps = {}) => {
           >
             <DropDownHobbies />
           </Box> */}
-          <Link to={'/about'}>
-            <Box
-              h={'100%'}
-              borderColor={aboutHovered ? '#02bece' : '#2b333d'}
-              borderTopWidth={aboutHovered ? '8px' : '0px'}
-              borderTopColor='#02bece'
-              transition='all 0.1s ease-in-out'
-              onMouseEnter={() => setAboutHovered(true)}
-              onMouseLeave={() => setAboutHovered(false)}
-              overflow='hidden'
-              justifyItems={'center'}
-              boxSizing='border-box'
-            >
-              <Button
-                variant={'link'}
-                border={'none'}
-                _hover={{ color: '#02bece' }}
-                color={useColorModeValue('#2b333d', colors.white)}
-                fontWeight={'light'}
-                fontSize={'18px'}
-                letterSpacing={'1px'}
-                textTransform={'capitalize'}
-                pl={'10px'}
-                pr={'10px'}
-                p={'50px'}
-              >
-                <Trans>About Me</Trans>
-              </Button>
-            </Box>
-          </Link>
-          <Link to={'/contact'}>
-            <Box
-              h={'100%'}
-              borderColor={contactHovered ? '#02bece' : '#2b333d'}
-              borderTopWidth={contactHovered ? '8px' : '0px'}
-              borderTopColor='#02bece'
-              transition='all 0.1s ease-in-out'
-              onMouseEnter={() => setContactHovered(true)}
-              onMouseLeave={() => setContactHovered(false)}
-              overflow='hidden'
-              justifyItems={'center'}
-              boxSizing='border-box'
-            >
-              <Button
-                variant={'link'}
-                border={'none'}
-                _hover={{ color: '#02bece' }}
-                color={useColorModeValue('#2b333d', colors.white)}
-                fontWeight={'light'}
-                fontSize={'18px'}
-                letterSpacing={'1px'}
-                textTransform={'capitalize'}
-                pl={'10px'}
-                pr={'10px'}
-                p={'50px'}
-              >
-                <Trans>Contacts</Trans>
-              </Button>
-            </Box>
-          </Link>
+        <Link to={'/about'}>
           <Box
             h={'100%'}
-            borderColor={languageHovered ? '#02bece' : '#2b333d'}
-            borderTopWidth={languageHovered ? '4px' : '0px'}
+            borderColor={aboutHovered ? '#02bece' : '#2b333d'}
+            borderTopWidth={aboutHovered ? '8px' : '0px'}
             borderTopColor='#02bece'
             transition='all 0.1s ease-in-out'
-            onMouseEnter={() => {
-              setLanguageHovered(true);
-            }}
-            onMouseLeave={() => {
-              setLanguageHovered(false);
-            }}
+            onMouseEnter={() => setAboutHovered(true)}
+            onMouseLeave={() => setAboutHovered(false)}
             overflow='hidden'
             justifyItems={'center'}
             boxSizing='border-box'
           >
-            <LanguageMenu />
+            <Button
+              variant={'link'}
+              border={'none'}
+              _hover={{ color: '#02bece' }}
+              color={useColorModeValue('#2b333d', colors.white)}
+              fontWeight={'light'}
+              fontSize={'18px'}
+              letterSpacing={'1px'}
+              textTransform={'capitalize'}
+              pl={'10px'}
+              pr={'10px'}
+              p={'50px'}
+            >
+              <Trans>About Me</Trans>
+            </Button>
           </Box>
-          {/* <AccountButton /> */}
-          <ColorMode />
-        </HStack>
-      </Show>
-      <Show below={'lg'}>
-        <Flex justifyContent={'flex-end'} w={'full'} mr={'15px'}>
-          <ColorMode />
-        </Flex>
-      </Show>
-      <Show below={'lg'}>
-        <HeaderMobile />
-      </Show>
+        </Link>
+        <Link to={'/contact'}>
+          <Box
+            h={'100%'}
+            borderColor={contactHovered ? '#02bece' : '#2b333d'}
+            borderTopWidth={contactHovered ? '8px' : '0px'}
+            borderTopColor='#02bece'
+            transition='all 0.1s ease-in-out'
+            onMouseEnter={() => setContactHovered(true)}
+            onMouseLeave={() => setContactHovered(false)}
+            overflow='hidden'
+            justifyItems={'center'}
+            boxSizing='border-box'
+          >
+            <Button
+              variant={'link'}
+              border={'none'}
+              _hover={{ color: '#02bece' }}
+              color={useColorModeValue('#2b333d', colors.white)}
+              fontWeight={'light'}
+              fontSize={'18px'}
+              letterSpacing={'1px'}
+              textTransform={'capitalize'}
+              pl={'10px'}
+              pr={'10px'}
+              p={'50px'}
+            >
+              <Trans>Contacts</Trans>
+            </Button>
+          </Box>
+        </Link>
+        <Box
+          h={'100%'}
+          borderColor={languageHovered ? '#02bece' : '#2b333d'}
+          borderTopWidth={languageHovered ? '4px' : '0px'}
+          borderTopColor='#02bece'
+          transition='all 0.1s ease-in-out'
+          onMouseEnter={() => {
+            setLanguageHovered(true);
+          }}
+          onMouseLeave={() => {
+            setLanguageHovered(false);
+          }}
+          overflow='hidden'
+          justifyItems={'center'}
+          boxSizing='border-box'
+        >
+          <LanguageMenu />
+        </Box>
+        {/* <AccountButton /> */}
+        <ColorMode />
+      </HStack>
+      {/* </Show> */}
+      {/* <Show below={'lg'}> */}
+      <Flex justifyContent={'flex-end'} w={'full'} mr={'15px'}>
+        <ColorMode />
+      </Flex>
+      {/* </Show> */}
+      {/* <Show below={'lg'}> */}
+      <HeaderMobile />
+      {/* </Show> */}
     </Flex>
   );
 };
