@@ -12,14 +12,14 @@ import {
 import { Trans } from '@lingui/macro';
 import { FC, ReactNode } from 'react';
 import { FaCircle } from 'react-icons/fa6';
-import { useColorModeValue } from '../../../../../../../../components/ui/color-mode';
+import { useColorModeValue } from '../../../../../../../../../components/ui/color-mode';
 
 type Header = {
   name?: ReactNode;
   style?: ChakraProps;
 };
 
-const skillLevel = [
+const usageLevel = [
   'Novice',
   'Beginner',
   'Intermediate',
@@ -29,28 +29,28 @@ const skillLevel = [
 
 type Item = {
   name: string;
-  level: (typeof skillLevel)[number][];
+  level: (typeof usageLevel)[number][];
 };
 
 const getItems = () => {
   const items: Item[] = [
     {
-      name: 'GitHub',
+      name: 'Windows',
       level: ['Novice', 'Beginner', 'Intermediate', 'Proficient', 'Advanced'],
     },
     {
-      name: 'Wordpress',
+      name: 'Linux',
       level: ['Novice', 'Beginner', 'Intermediate', 'Proficient', 'Advanced'],
     },
     {
-      name: 'MongoDB',
+      name: 'Mac',
       level: ['Novice', 'Beginner', 'Intermediate'],
     },
   ];
   return items;
 };
 
-const ToolsTable: FC = () => {
+const OSTable: FC = () => {
   const nameColor = useColorModeValue('#000000', '#ECEFF4');
   const skillColor = useColorModeValue('#0b3948', '#98bed5');
   const noSkillColor = useColorModeValue('#8d9da7', '#303c40');
@@ -63,7 +63,7 @@ const ToolsTable: FC = () => {
             textTransform={'capitalize'}
             color={useColorModeValue('#0B3948', '#98BED5')}
           >
-            <Trans>Tools</Trans>
+            <Trans>Operative Sytem</Trans>
           </Text>
         ),
       },
@@ -103,7 +103,7 @@ const ToolsTable: FC = () => {
             >
               {name}
             </Td>
-            {skillLevel.map((skill, j) => {
+            {usageLevel.map((skill, j) => {
               const isCheck = level.includes(skill);
               return (
                 <Td
@@ -139,4 +139,4 @@ const ToolsTable: FC = () => {
   );
 };
 
-export default ToolsTable;
+export default OSTable;

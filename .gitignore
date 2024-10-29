@@ -24,3 +24,4 @@ yarn-error.log*
 
 # Ignore Photography-Website folder
 src/apps/Photography-Website/
+src/apps/Resume-Website/pages/IgnoredFolders

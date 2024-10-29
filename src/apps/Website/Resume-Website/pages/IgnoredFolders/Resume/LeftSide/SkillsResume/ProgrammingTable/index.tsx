@@ -12,7 +12,7 @@ import {
 import { Trans } from '@lingui/macro';
 import { FC, ReactNode } from 'react';
 import { FaCircle } from 'react-icons/fa6';
-import { useColorModeValue } from '../../../../../../../../components/ui/color-mode';
+import { useColorModeValue } from '../../../../../../../../../components/ui/color-mode';
 
 type Header = {
   name?: ReactNode;

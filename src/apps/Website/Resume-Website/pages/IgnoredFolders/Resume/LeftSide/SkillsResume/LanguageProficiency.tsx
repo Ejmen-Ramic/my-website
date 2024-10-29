@@ -1,6 +1,6 @@
 import { Heading, HStack, Text, VStack } from '@chakra-ui/react';
 import { t, Trans } from '@lingui/macro';
-import { useColorModeValue } from '../../../../../../../components/ui/color-mode';
+import { useColorModeValue } from '../../../../../../../../components/ui/color-mode';
 
 type LanguageProps = {
   language: string;

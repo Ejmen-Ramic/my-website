@@ -5,7 +5,7 @@ import OSTable from './OSTable';
 import LanguageProficiency from './LanguageProficiency';
 import DesignTable from './DesignTable';
 import { Trans } from '@lingui/macro';
-import { useColorModeValue } from '../../../../../../../components/ui/color-mode';
+import { useColorModeValue } from '../../../../../../../../components/ui/color-mode';
 const SkillsResume = () => {
   return (
     <VStack w={'full'} alignItems={'start'}>
