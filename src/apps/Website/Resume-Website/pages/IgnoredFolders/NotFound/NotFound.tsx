@@ -1,5 +1,4 @@
 import Footer from '../../../../../shared/components/PageWrapper/Footer/Footer';
-
 import {
   Box,
   Button,
