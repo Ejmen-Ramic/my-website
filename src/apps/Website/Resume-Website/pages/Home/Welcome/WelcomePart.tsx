@@ -1,5 +1,18 @@
-import { Box, Button, HStack, Heading, Tooltip, VStack, Image, Text } from '@chakra-ui/react'
-import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import {
+  Box,
+  Button,
+  HStack,
+  Heading,
+  Tooltip,
+  VStack,
+  Image,
+  Text,
+} from '@chakra-ui/react'
+import {
+  faGithub,
+  faInstagram,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { Link } from 'react-router-dom'
@@ -10,7 +23,13 @@ const Welcome = () => {
   // const { t } = useTranslation(["home"])
 
   return (
-    <Box position={'relative'} minHeight={'100vh'} display={'flex'} bgColor={'#051721'} w={'full'}>
+    <Box
+      position={'relative'}
+      minHeight={'100vh'}
+      display={'flex'}
+      bgColor={'#051721'}
+      w={'full'}
+    >
       {/* Container For the Image Text */}
 
       <Box
@@ -53,7 +72,7 @@ const Welcome = () => {
             lineHeight={'1em'}
             textTransform={'uppercase'}
           >
-            <Trans>Neversettle</Trans>
+            <Trans>Developer</Trans>
           </Text>
         </FadeInView>
         <FadeInView direction={'left'} delay={0.2}>
@@ -75,11 +94,17 @@ const Welcome = () => {
           </Heading>
         </FadeInView>
         <FadeInView direction={'left'} delay={0.3}>
-          <Text color={colors.white} fontSize={{ md: '1.0em', lg: '1.1em' }} fontWeight={'400'} maxWidth={'700px'}>
+          <Text
+            color={colors.white}
+            fontSize={{ md: '1.0em', lg: '1.1em' }}
+            fontWeight={'400'}
+            maxWidth={'700px'}
+          >
             <Trans>
-              Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina and this is my web resume. Here
-              you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore my
-              website and my photo gallery.
+              Hi. My name is Ejmen. I'm a software engineer from Bosnia and
+              Herzegovina and this is my web resume. Here you can see my
+              capabilities and skills as a software engineer and a photographer.
+              Feel free to explore my website and my photo gallery.
             </Trans>
           </Text>
         </FadeInView>
@@ -107,7 +132,12 @@ const Welcome = () => {
           <HStack>
             <Tooltip label={'GitHub'}>
               <a href='https://github.com/Ejmen-Ramic/'>
-                <Box p={0} pt={'10px'} _hover={{ pt: 0, pb: '10px' }} transition={'0.2s'}>
+                <Box
+                  p={0}
+                  pt={'10px'}
+                  _hover={{ pt: 0, pb: '10px' }}
+                  transition={'0.2s'}
+                >
                   <Button>
                     <FontAwesomeIcon icon={faGithub} />
                   </Button>
@@ -116,8 +146,13 @@ const Welcome = () => {
             </Tooltip>
             <Tooltip label={'LinkedIn'}>
               <a href='https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'>
-                <Box p={0} pt={'10px'} _hover={{ pt: 0, pb: '10px' }} transition={'0.2s'}>
-                  <Button colorScheme={'linkedin'}>
+                <Box
+                  p={0}
+                  pt={'10px'}
+                  _hover={{ pt: 0, pb: '10px' }}
+                  transition={'0.2s'}
+                >
+                  <Button colorScheme={'gray'}>
                     <FontAwesomeIcon icon={faLinkedin} />
                   </Button>
                 </Box>
@@ -125,7 +160,12 @@ const Welcome = () => {
             </Tooltip>
             <Tooltip label={'Instagram'}>
               <a href='https://www.instagram.com/ejmenramic/'>
-                <Box p={0} pt={'10px'} _hover={{ pt: 0, pb: '10px' }} transition={'0.2s'}>
+                <Box
+                  p={0}
+                  pt={'10px'}
+                  _hover={{ pt: 0, pb: '10px' }}
+                  transition={'0.2s'}
+                >
                   <Button colorScheme={'purple'}>
                     <FontAwesomeIcon icon={faInstagram} />
                   </Button>
