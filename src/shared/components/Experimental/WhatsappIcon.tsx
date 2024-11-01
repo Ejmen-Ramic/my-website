@@ -1,6 +1,7 @@
-import { Box, keyframes } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import { FaWhatsapp } from 'react-icons/fa'
 import { colors } from '../Hooks/color'
+import { keyframes } from '@emotion/react'
 
 // Define the keyframes for the circle animation
 const circle = keyframes`
@@ -37,7 +38,11 @@ const WhatsappIcon = () => {
         justifyContent={'center'}
         alignItems={'center'}
       >
-        <FaWhatsapp size={'30px'} color='#ffffff' style={{ marginRight: '35px' }} />
+        <FaWhatsapp
+          size={'30px'}
+          color='#ffffff'
+          style={{ marginRight: '35px' }}
+        />
         <Box
           width={'30px'}
           height={'30px'}
