@@ -43,15 +43,15 @@ const SchoolCertificates = () => {
 
   const getStepHeight = () => {
     if (breakpoint === 'base') {
-      return '700px'
+      return 'auto'
     }
     if (breakpoint === 'md') {
-      return '600px'
+      return 'auto'
     }
     if (breakpoint === 'lg') {
-      return '800px'
+      return 'auto'
     }
-    return '400px'
+    return 'auto'
   }
 
   return (
@@ -82,16 +82,32 @@ const SchoolCertificates = () => {
                 />
               </StepIndicator>
 
-              <Box flexShrink={'0'} style={{ paddingBottom: '50px' }}>
-                <StepTitle>{step.title}</StepTitle>
+              <Box
+                flexShrink={0}
+                pb={{ base: '30px', md: '40px', lg: '50px' }}
+                h={'auto'}
+              >
+                <StepTitle whiteSpace={'normal'} maxW={'300px'}>
+                  {step.title}
+                </StepTitle>
                 <HStack w={'full'}>
-                  <StepDescription>{step.description}</StepDescription>
+                  <StepDescription
+                    whiteSpace={'normal'}
+                    maxW={'300px'}
+                    overflow={'visible'}
+                  >
+                    {step.description}
+                  </StepDescription>
                 </HStack>
                 {activeStep === index && step.image && (
-                  <Stack w={'full'} direction={{ base: 'column', lg: 'row' }}>
+                  <Stack
+                    w={'full'}
+                    direction={{ base: 'column', lg: 'row' }}
+                    spacing={{ base: 4, md: 6, lg: 8 }}
+                  >
                     <Box
-                      w={{ base: '260px', md: '400px', lg: '850px' }}
-                      h={{ lg: '750px' }}
+                      w={{ base: '280px', md: '400px', lg: '850px' }}
+                      h={{ base: 'auto', lg: '750px' }}
                       ml={{ lg: '100px' }}
                       mt={'10px'}
                       mb={'10px'}
@@ -99,21 +115,27 @@ const SchoolCertificates = () => {
                       src={step.image}
                       alt={step.title}
                       boxShadow={'md'}
+                      objectFit='contain'
                     />
                     <VStack
                       w={'full'}
                       alignItems={'center'}
                       justifyContent={'center'}
                       px={'5%'}
-                      spacing={'35px'}
+                      spacing={{ base: '10px', md: '20px', lg: '35px' }}
+                      mt={{ base: 4, lg: 0 }}
                     >
-                      <Heading>
+                      <Heading size={{ base: 'md', md: 'lg' }}>
                         <Trans>{step.sideTitle}</Trans>
                       </Heading>
-                      <Text w={'full'} maxW={{ base: '300px', lg: '550px' }}>
+                      <Text
+                        w={'full'}
+                        maxW={{ base: '100%', md: '400px', lg: '550px' }}
+                        fontSize={{ base: 'sm', md: 'md' }}
+                      >
                         <Trans>{step.sideDescription}</Trans>
                       </Text>
-                      <Box mt={4}>
+                      <Box mt={{ base: '10px', lg: 4 }}>
                         {activeStep > 0 && (
                           <Button
                             onClick={(e) => {
