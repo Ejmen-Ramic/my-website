@@ -11,7 +11,7 @@ import ColorMode from '../../Color-Mode/ColorMode'
 interface HeaderProps {
   isStickyHeader?: boolean
 }
-const Header = ({ isStickyHeader = false }: HeaderProps = {}) => {
+const Header = ({ isStickyHeader }: HeaderProps = {}) => {
   const [homeHovered, setHomeHovered] = useState(false)
   const [resumeHovered, setResumeHovered] = useState(false)
   const [aboutHovered, setAboutHovered] = useState(false)

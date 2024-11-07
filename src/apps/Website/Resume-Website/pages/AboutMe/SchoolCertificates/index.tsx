@@ -87,14 +87,11 @@ const SchoolCertificates = () => {
                 pb={{ base: '30px', md: '40px', lg: '50px' }}
                 h={'auto'}
               >
-                <StepTitle whiteSpace={'normal'} maxW={'300px'}>
+                <StepTitle>
                   {step.title}
                 </StepTitle>
                 <HStack w={'full'}>
                   <StepDescription
-                    whiteSpace={'normal'}
-                    maxW={'300px'}
-                    overflow={'visible'}
                   >
                     {step.description}
                   </StepDescription>

@@ -11,11 +11,11 @@ const FAQItemBox: FC<FAQItem> = ({ title, description }) => {
         <>
           <AccordionButton
             display={'flex'}
-            padding={'12px'}
+            p={'12px'}
             border={`1px solid ${ColorModeValueFAQ}`}
             borderRadius={'4px'}
-            marginBottom={'16px'}
-            height={'48px'}
+            mb={'16px'}
+            h={{base:'62px', lg:'48px'}}
             w={'full'}
           >
             <Box as={'span'} flex={'1'} textAlign={'left'} w={'full'}>

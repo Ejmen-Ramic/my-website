@@ -44,7 +44,7 @@ const HeaderMobile = () => {
   const menuItems: (MenuItemLink | React.ReactElement)[] = [
     { label: t`Home`, icon: IoHomeOutline, to: '/' },
     { label: t`Resume`, icon: IoBriefcaseOutline, to: '/resume' },
-    <MenuContainerMobile />,
+      // <MenuContainerMobile />,
     { label: t`About Me`, icon: IoCodeSlash, to: '/about' },
     { label: t`Contacts`, icon: IoFileTrayFullOutline, to: '/contact' },
     { label: t`My Account`, icon: IoPersonOutline, to: '/signin' },
