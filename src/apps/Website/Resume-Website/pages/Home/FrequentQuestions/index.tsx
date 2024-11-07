@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react'
 import FAQDesktop from './FAQDesktop'
 import FAQMobile from './FAQMobile'
-import { Heading, VStack, Text, useBreakpointValue, Box } from '@chakra-ui/react'
+import { Heading, VStack, Text, useBreakpointValue, Box, Center, Stack } from '@chakra-ui/react'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { t, Trans } from '@lingui/macro'
 
@@ -82,8 +82,13 @@ const FAQ: FC = () => {
 
   return (
     <FadeInView>
-      <Box my={{ base: '60px', lg: '120px' }}>
-        <VStack w={'full'} spacing={'30px'} textAlign={'center'} px={'16px'}>
+      <Stack 
+        my={{ base: '60px', lg: '120px' }} 
+        mx={"auto"}
+        maxW={{ base: 'full', lg: '1200px' }}
+        w={"full"}
+      >
+        <VStack w={'full'} spacing={'30px'} textAlign={'center'} px={{base:'16px', md:'44px' }}>
           <Box px={{ base: '10px', md: '0px' }}>
             <Heading>
               <Trans>Frequently Asked Questions</Trans>
@@ -96,10 +101,10 @@ const FAQ: FC = () => {
             </Trans>
           </Text>
         </VStack>
-        <VStack mt={'50px'} px={{ base: '20px', md: '50px', lg: '300px' }}>
+        <VStack mt={'50px'} px={{ base: '20px', md:'30px', lg: '300px' }} maxW={{ base: 'full', lg: '1200px' }}>
           {isMobile ? <FAQMobile items={items} /> : <FAQDesktop items={items} />}
         </VStack>
-      </Box>
+      </Stack>
     </FadeInView>
   )
 }
