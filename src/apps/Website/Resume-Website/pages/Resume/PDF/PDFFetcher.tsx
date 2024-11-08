@@ -1,11 +1,10 @@
 import { Button, useColorModeValue, useToast } from '@chakra-ui/react'
 import { BsFillPrinterFill } from 'react-icons/bs'
-
 const PDFFEtcher = () => {
   const toast = useToast()
 
   const onButtonClick = () => {
-    fetch('/Website/pdf-example.pdf')
+    fetch('/Website/Resume/PDF/ejmen-ramic-resume.pdf')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok')
@@ -16,16 +15,20 @@ const PDFFEtcher = () => {
         const fileURL = window.URL.createObjectURL(blob)
         const alink = document.createElement('a')
         alink.href = fileURL
-        alink.download = 'pdf-example.pdf'
+        alink.download = 'ejmen-ramic-resume.pdf'
         document.body.appendChild(alink)
         alink.click()
         document.body.removeChild(alink)
       })
       .catch((error) => {
-        console.error('There has been a problem with your fetch operation:', error)
+        console.error(
+          'There has been a problem with your fetch operation:',
+          error
+        )
         toast({
           title: 'Error fetching PDF',
-          description: 'There was an error downloading the PDF. Please try again.',
+          description:
+            'There was an error downloading the PDF. Please try again.',
           status: 'error',
           duration: 5000,
           isClosable: true,
@@ -35,7 +38,7 @@ const PDFFEtcher = () => {
 
   return (
     <Button
-      variant="ghost"
+      variant='ghost'
       onClick={onButtonClick}
       color={useColorModeValue('blue.800', 'blue.300')}
     >
