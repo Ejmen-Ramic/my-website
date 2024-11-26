@@ -28,9 +28,8 @@ import { IconType } from 'react-icons'
 import HeaderForm from './Form'
 import LanguageDropDown from './LanguageMenuMobile'
 import { t, Trans } from '@lingui/macro'
-import IconBurgerMobile from '../../../../icons/IconBurgerMobile'
-import IconBurger from '../../../../icons/IconBurger'
 import { colors } from '../../../Hooks/color'
+import HamburgerIcon from './HamburgerIcon'
 
 type MenuItemLink = {
   label: string
@@ -63,17 +62,18 @@ const HeaderMobile = () => {
           onClick={onOpen}
           variant={'unstyled'}
           fontSize={'15px'}
-          mt={{ base: '30%', md: '37%', lg: '25%' }}
+          mt={{ base: '25%', md: '37%', lg: '25%' }}
+          alignItems={'center'}
+          justifyContent={'center'}
+          display={'flex'}
+          flexDirection={'column'}
+          textAlign={'center'}
         >
           <Hide below={'md'}>
-            <IconBurger size={'30px'} />
+            <HamburgerIcon isOpen={isOpen} color={color} size='30px' />
           </Hide>
           <Show below={'md'}>
-            <Box
-              as={IconBurgerMobile}
-              size={'20px'}
-              _hover={{ color: '#02bece' }}
-            />
+            <HamburgerIcon isOpen={isOpen} color={color} size='20px' />
           </Show>
         </Button>
       </Box>
