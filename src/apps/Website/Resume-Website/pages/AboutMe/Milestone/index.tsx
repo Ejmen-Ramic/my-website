@@ -24,12 +24,12 @@ const milestones = [
     id: 1,
     date: t`February 2, 2018`,
     title: t`Started my studies`,
-    description: t`Kick off my academic journey at the International Islamic University Malaysia (IIUM), marking the beginning of my studies.`,
+    description: t`Kicked off my academic journey at the International Islamic University Malaysia (IIUM), marking the beginning of my studies.`,
   },
   {
     id: 2,
     date: t`April 15, 2022 - January 15, 2023`,
-    title: t`Internship at IMTM`,
+    title: t`Internship at IMTM - Maldives`,
     description: t`Engaged in a valuable internship experience as a Web Coordinator at International Maldives Travel Market (IMTM), where I gained practical skills and insights into Travel and Tourism.`,
   },
   {
@@ -41,13 +41,13 @@ const milestones = [
   {
     id: 4,
     date: t`January 28, 2023`,
-    title: t`Internship at FLUX`,
+    title: t`Internship at FLUX - Malaysia`,
     description: t`During my time at FLUX, I had the opportunity to dive into the world of frontend web development. Working hands-on with Chakra UI, TypeScript, React, Next.js, JavaScript, and CSS, I contributed to several projects, learning and growing every step of the way. It was an invaluable experience that helped me refine my skills and solidify my passion for creating dynamic and user-friendly web applications.`,
   },
   {
     id: 5,
     date: t`July 28, 2023`,
-    title: t`Promotion - Software & QA Engineer`,
+    title: t`Promotion - Software & QA Engineer - Malaysia`,
     description: t`Promoted to the role of Junior Software & QA Engineer, I embraced new challenges and expanded my expertise. Alongside my existing skills in frontend development, I delved into the learning of backend with MongoDB, automated testing with Playwright, and deployment with Vercel server. This journey not only elevated my technical capabilities but also deepened my understanding of software development and quality assurance practices, allowing me to contribute effectively to the team's projects and objectives.`,
   },
 ]
@@ -57,9 +57,18 @@ const Milestones = () => {
   const isDesktop = useBreakpointValue({ base: false, md: true })
 
   return (
-    <Container maxWidth={'7xl'} p={{ base: 2, sm: 1, lg: 10 }} mb={{ base: '50px', lg: '100px' }}>
+    <Container
+      maxWidth={'7xl'}
+      p={{ base: 2, sm: 1, lg: 10 }}
+      mb={{ base: '50px', lg: '100px' }}
+    >
       <FadeInView delay={0.1}>
-        <chakra.h3 fontSize={'36px'} fontWeight={'bold'} mb={18} textAlign={'center'}>
+        <chakra.h3
+          fontSize={'36px'}
+          fontWeight={'bold'}
+          mb={18}
+          textAlign={'center'}
+        >
           <Trans>Milestones</Trans>
         </chakra.h3>
       </FadeInView>
@@ -125,7 +134,10 @@ const Card = ({ id, title, description, date }: CardProps) => {
         content: `""`,
         w: '0',
         h: '0',
-        borderColor: `transparent ${useColorModeValue('#edf2f6', '#1a202c')} transparent`,
+        borderColor: `transparent ${useColorModeValue(
+          '#edf2f6',
+          '#1a202c'
+        )} transparent`,
         borderStyle: 'solid',
         borderWidth: borderWidthValue,
         position: 'absolute',
@@ -141,7 +153,12 @@ const Card = ({ id, title, description, date }: CardProps) => {
           </Text>
 
           <VStack spacing={2} mb={3} textAlign={'left'}>
-            <chakra.h1 fontSize={'2xl'} lineHeight={1.2} fontWeight={'bold'} w={'100%'}>
+            <chakra.h1
+              fontSize={'2xl'}
+              lineHeight={1.2}
+              fontWeight={'bold'}
+              w={'100%'}
+            >
               {title}
             </chakra.h1>
             <Text fontSize={'md'}>{description}</Text>
@@ -154,7 +171,12 @@ const Card = ({ id, title, description, date }: CardProps) => {
 
 const LineWithDot = () => {
   return (
-    <Flex pos={'relative'} alignItems={'center'} mr={{ base: '40px', md: '40px' }} ml={{ base: '0', md: '40px' }}>
+    <Flex
+      pos={'relative'}
+      alignItems={'center'}
+      mr={{ base: '40px', md: '40px' }}
+      ml={{ base: '0', md: '40px' }}
+    >
       <chakra.span
         position={'absolute'}
         left={'50%'}
@@ -186,7 +208,13 @@ const LineWithDot = () => {
 }
 
 const EmptyCard = () => {
-  return <Box flex={{ base: 0, md: 1 }} p={{ base: 0, md: 6 }} bg={'transparent'}></Box>
+  return (
+    <Box
+      flex={{ base: 0, md: 1 }}
+      p={{ base: 0, md: 6 }}
+      bg={'transparent'}
+    ></Box>
+  )
 }
 
 export default Milestones

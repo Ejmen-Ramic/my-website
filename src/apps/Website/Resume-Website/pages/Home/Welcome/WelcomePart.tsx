@@ -67,7 +67,7 @@ const Welcome = () => {
         <FadeInView direction={'left'} delay={0.1}>
           <Text
             color={colors.white}
-            fontSize={{ base: '', md: '2em', lg: '2em' }}
+            fontSize={{ base: '', md: '20px', lg: '2em' }}
             fontWeight={'800'}
             lineHeight={'1em'}
             textTransform={'uppercase'}
@@ -102,9 +102,10 @@ const Welcome = () => {
           >
             <Trans>
               Hi. My name is Ejmen. I'm a software engineer from Bosnia and
-              Herzegovina and this is my web resume. Here you can see my
-              capabilities and skills as a software engineer and a photographer.
-              Feel free to explore my website and my photo gallery.
+              Herzegovina, and this is my web resume. Here, you can see my
+              capabilities and skills as a software engineer and as a
+              photographer. Feel free to explore my website and my photo
+              gallery.
             </Trans>
           </Text>
         </FadeInView>
@@ -152,7 +153,7 @@ const Welcome = () => {
                   _hover={{ pt: 0, pb: '10px' }}
                   transition={'0.2s'}
                 >
-                  <Button colorScheme={'gray'}>
+                  <Button colorScheme={'linkedin'}>
                     <FontAwesomeIcon icon={faLinkedin} />
                   </Button>
                 </Box>

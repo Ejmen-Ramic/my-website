@@ -29,10 +29,10 @@ export const steps: stepsItems[] = [
 
   {
     id: 3,
-    title: t`Bachelor's Diploma`,
+    title: t`Bachelor's Degree`,
     description: t`Information and Communication Technology`,
     image: './Website/Resume/AboutMe/deans-list-2.jpg',
-    sideTitle: t`Bachelor's Diploma`,
+    sideTitle: t`Bachelor's Degree`,
     sideDescription: t`Information and Communication Technology`,
   },
 ]

@@ -1,5 +1,16 @@
 import React from 'react'
-import { Box, Button, GridItem, Heading, HStack, Icon, Image, SimpleGrid, Text, Stack } from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  GridItem,
+  Heading,
+  HStack,
+  Icon,
+  Image,
+  SimpleGrid,
+  Text,
+  Stack,
+} from '@chakra-ui/react'
 import { BsFillInfoCircleFill, BsSpeedometer } from 'react-icons/bs'
 import { IoThumbsUp } from 'react-icons/io5'
 import { GiStairsGoal } from 'react-icons/gi'
@@ -37,7 +48,7 @@ const ReasonsToChoose = () => {
       icon: <Icon as={GiStairsGoal} boxSize={9} color={darkModeColor} />,
       number: '03',
       title: t`Highly Experienced`,
-      description: t`I've developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team.`,
+      description: t`I have developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team.`,
     },
     {
       icon: <Icon as={FaHandshakeSimple} boxSize={9} color={darkModeColor} />,
@@ -88,7 +99,11 @@ const ReasonsToChoose = () => {
             left={0}
             zIndex={0}
           />
-          <Box position={'relative'} py={{ base: '20px', lg: '80px' }} zIndex={1}>
+          <Box
+            position={'relative'}
+            py={{ base: '20px', lg: '80px' }}
+            zIndex={1}
+          >
             <FadeInView delay={0.1}>
               <Heading color={colors.white}>
                 <Trans>
@@ -103,18 +118,24 @@ const ReasonsToChoose = () => {
             <FadeInView delay={0.1}>
               <Text mt={'20px'} color={colors.white}>
                 <Trans>
-                  Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to
-                  continuous learning. My experience collaborating with diverse teams has equipped me with strong
-                  communication and interpersonal skills, fostering an environment of creativity and innovation.
-                  Additionally, I have a proven track record of meeting tight deadlines while maintaining a high
-                  standard of quality. With a proactive mindset and a drive to excel, I am poised to make significant
-                  contributions to any project or team.
+                  I take pride in crafting clean, readable code while bringing a
+                  passion for problem-solving and a commitment to continuous
+                  growth. My experience working with diverse teams has honed my
+                  communication and interpersonal skills, fostering a
+                  collaborative environment that drives creativity and
+                  innovation. With a proven ability to meet tight deadlines
+                  without compromising quality, I approach every challenge with
+                  a proactive mindset and a dedication to excellence, ready to
+                  make meaningful contributions to any team or project.
                 </Trans>
               </Text>
             </FadeInView>
             <FadeInView delay={0.1}>
               <Link to={'/about'}>
-                <Button mt={'20px'} leftIcon={<Icon as={BsFillInfoCircleFill} boxSize={4} />}>
+                <Button
+                  mt={'20px'}
+                  leftIcon={<Icon as={BsFillInfoCircleFill} boxSize={4} />}
+                >
                   <Trans>Need More Information</Trans>
                 </Button>
               </Link>
@@ -136,8 +157,13 @@ const ReasonsToChoose = () => {
                   borderWidth={'1px'}
                   borderColor={'#E4E4E4'}
                   borderLeft={{ lg: 0 }}
-                  borderStartEndRadius={{ lg: index === 1 || index === 1 ? '20px' : '0px' }}
-                  borderEndStartRadius={{ md: index === 2 || index === 2 ? '20px' : '0px', lg: '0px' }}
+                  borderStartEndRadius={{
+                    lg: index === 1 || index === 1 ? '20px' : '0px',
+                  }}
+                  borderEndStartRadius={{
+                    md: index === 2 || index === 2 ? '20px' : '0px',
+                    lg: '0px',
+                  }}
                   borderEndEndRadius={{
                     md: index === 3 || index === 3 ? '20px' : '0px',
                     lg: index === 3 || index === 3 ? '20px' : '0px',
@@ -175,7 +201,12 @@ const ReasonsToChoose = () => {
                     </FadeInView>
                   </HStack>
                   <FadeInView delay={0.2}>
-                    <Heading mt={'20px'} fontSize={'l'} fontWeight={'extrabold'} color={colors.black}>
+                    <Heading
+                      mt={'20px'}
+                      fontSize={'l'}
+                      fontWeight={'extrabold'}
+                      color={colors.black}
+                    >
                       {reason.title}
                     </Heading>
                   </FadeInView>

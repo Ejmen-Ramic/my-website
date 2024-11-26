@@ -87,14 +87,9 @@ const SchoolCertificates = () => {
                 pb={{ base: '30px', md: '40px', lg: '50px' }}
                 h={'auto'}
               >
-                <StepTitle>
-                  {step.title}
-                </StepTitle>
+                <StepTitle>{step.title}</StepTitle>
                 <HStack w={'full'}>
-                  <StepDescription
-                  >
-                    {step.description}
-                  </StepDescription>
+                  <StepDescription>{step.description}</StepDescription>
                 </HStack>
                 {activeStep === index && step.image && (
                   <Stack
@@ -164,7 +159,6 @@ const SchoolCertificates = () => {
           ))}
         </Stepper>
       </Stack>
-      <Box h={{ md: '200px' }} />
     </VStack>
   )
 }

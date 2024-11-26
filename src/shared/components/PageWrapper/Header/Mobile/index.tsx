@@ -63,7 +63,7 @@ const HeaderMobile = () => {
           onClick={onOpen}
           variant={'unstyled'}
           fontSize={'15px'}
-          mt={{ base: '30%', md: '43%', lg: '25%' }}
+          mt={{ base: '30%', md: '37%', lg: '25%' }}
         >
           <Hide below={'md'}>
             <IconBurger size={'30px'} />

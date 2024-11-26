@@ -1,25 +1,26 @@
-import { FC, ReactNode } from 'react';
-import FAQDesktop from './FAQDesktop';
-import FAQMobile from './FAQMobile';
+import { FC, ReactNode } from 'react'
+import FAQDesktop from './FAQDesktop'
+import FAQMobile from './FAQMobile'
 import {
   Heading,
   VStack,
   Text,
   useBreakpointValue,
   Box,
-} from '@chakra-ui/react';
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
-import { t, Trans } from '@lingui/macro';
+  Stack,
+} from '@chakra-ui/react'
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { t, Trans } from '@lingui/macro'
 
 export type FAQItem = {
-  title: ReactNode;
-  description: ReactNode;
-};
+  title: ReactNode
+  description: ReactNode
+}
 
 const items: FAQItem[] = [
   {
     title: t`1. Tell me about yourself.`,
-    description: t`I'm a software developer with a passion for creating intuitive and efficient user experiences. I've been working with latest languages, frameworks and testing tools for the past few years, and I love how these tools enable me to build scalable and maintainable applications. Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed.`,
+    description: t`I am a software developer with a passion for creating intuitive and efficient user experiences. I have been working with latest languages, frameworks and testing tools for the past few years, and I love how these tools enable me to build scalable and maintainable applications. Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed.`,
   },
   {
     title: t`2. What are your greatest strengths and weaknesses?`,
@@ -32,7 +33,7 @@ const items: FAQItem[] = [
           <br />
           <br /> On the flip side, a weakness of mine is that I can be a bit of
           a perfectionist. Sometimes I spend too much time tweaking small
-          details. I'm working on balancing my attention to detail with
+          details. I am working on balancing my attention to detail with
           efficiency.
         </Trans>
       </Box>
@@ -40,11 +41,11 @@ const items: FAQItem[] = [
   },
   {
     title: t`3. Where do you see yourself in five years?`,
-    description: t`In five years, I see myself taking on more leadership responsibilities, possibly leading a development team. I'd like to continue honing my technical skills while also mentoring junior developers. I'm also interested in exploring more about system architecture and design, contributing to larger strategic decisions.`,
+    description: t`In five years, I see myself taking on more leadership responsibilities, possibly leading a development team. I would like to continue honing my technical skills while also mentoring junior developers. I am also interested in exploring more about system architecture and design, contributing to larger strategic decisions.`,
   },
   {
     title: t`4. Describe a challenging situation at work and how you handled it?`,
-    description: t`In one of my projects, we had a major issue right before a product launch where our application wasn't scaling properly under load. I led a small team to identify the bottlenecks. We optimized our database queries and introduced caching mechanisms, which significantly improved performance. It was a stressful situation, but it taught me a lot about teamwork and problem-solving under pressure`,
+    description: t`In one of my projects, we had a major issue, right before a product launch where our application was not scaling properly under load. I led a small team to identify the bottlenecks. We optimized our database queries and introduced caching mechanisms, which significantly improved performance. It was a stressful situation, but it taught me a lot about teamwork and problem-solving under pressure`,
   },
   {
     title: t`5. Give me an example of a time when you worked as part of a team.`,
@@ -85,13 +86,13 @@ const items: FAQItem[] = [
     ),
   },
   {
-    title: t`10. Tell us about a time when you had to learn something new quickly.`,
-    description: t`When we decided to switch from JavaScript and CSS to TypeScript and Chakra UI in my previous job, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team.`,
+    title: t`10. What do you like to do on your free time?`,
+    description: t`I love hiking, exploring new places and photographing landscapes, which helps me stay creative and refreshed. I also enjoy working on side projects that involve enginnering.`,
   },
-];
+]
 
 const FAQ: FC = () => {
-  const isMobile = useBreakpointValue({ base: true, md: false });
+  const isMobile = useBreakpointValue({ base: true, md: false })
 
   return (
     <FadeInView>
@@ -102,17 +103,17 @@ const FAQ: FC = () => {
         w={'full'}
       >
         <VStack w={'full'} spacing={'30px'} textAlign={'center'} px={'16px'}>
-          <Box px={{ base: '10px', md: '0px' }}>
+          <Stack spacing={'20px'} px={{ base: '10px', md: '40px', lg: '0px' }}>
             <Heading>
               <Trans>Frequently Asked Questions</Trans>
             </Heading>
-          </Box>
-          <Text>
-            <Trans>
-              The following list of frequently asked questions by employers that
-              may also assist you in getting your questions answered:
-            </Trans>
-          </Text>
+            <Text>
+              <Trans>
+                The following list of frequently asked questions by employers
+                that may also assist you in getting your questions answered:
+              </Trans>
+            </Text>
+          </Stack>
         </VStack>
         <VStack mt={'50px'} px={{ base: '20px', md: '50px' }}>
           {isMobile ? (
@@ -123,7 +124,7 @@ const FAQ: FC = () => {
         </VStack>
       </Box>
     </FadeInView>
-  );
-};
+  )
+}
 
-export default FAQ;
+export default FAQ
