@@ -1,7 +1,7 @@
 import { VStack } from '@chakra-ui/react'
 import AboutIntro from './Intro/AboutIntro'
-import SchoolCertificates from './SchoolCertificates'
-import OurProgress from './OurProgress/OurProgress'
+// import SchoolCertificates from './SchoolCertificates'
+// import OurProgress from './OurProgress/OurProgress'
 import Milestones from './Milestone'
 import Page from '../../../../../shared/components/PageWrapper'
 
