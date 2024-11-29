@@ -20,8 +20,6 @@ import { Trans } from '@lingui/macro'
 import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const Welcome = () => {
-  // const { t } = useTranslation(["home"])
-
   return (
     <Box
       position={'relative'}
