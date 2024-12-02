@@ -809,7 +809,7 @@ msgstr "Kada je riječ o brzom kodiranju, težim ka efikasnosti bez žrtvovanja 
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:109
 msgid "When we decided to switch to <0>TypeScript</0> at one of the companies I worked for, I had to get up to speed quickly as I was one of the <1>key developers</1> on the team. I took an online course, read the documentation, and started <2>refactoring</2> small parts of our codebase. Within a <3>few weeks</3>, I was comfortable enough to lead the transition for our entire frontend team."
-msgstr ""
+msgstr "Kada smo odlučili da pređemo na <0>TypeScript</0> u jednoj od firmi u kojoj sam radio, morao sam brzo da se usavršim jer sam bio jedan od <1>ključnih developera</1> na timu. Pohađao sam online kurs, pročitao dokumentaciju i počeo da <2>refaktorišem</2> male delove našeg koda. Za <3>nekoliko nedelja</3>, bio sam dovoljno siguran da vodim prelazak za ceo naš frontend tim."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:46
 #~ msgid "When we decided to switch to TypeScript at one of the companies I worked for, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
