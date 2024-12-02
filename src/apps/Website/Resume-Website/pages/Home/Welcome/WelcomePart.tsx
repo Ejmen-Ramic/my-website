@@ -5,19 +5,19 @@ import {
   Heading,
   Tooltip,
   VStack,
-  Image,
   Text,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 import {
   faGithub,
   faInstagram,
   faLinkedin,
-} from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { Link } from 'react-router-dom'
-import { Trans } from '@lingui/macro'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { Link } from 'react-router-dom';
+import { Trans } from '@lingui/macro';
+import { colors } from '../../../../../../shared/components/Hooks/color';
+import ParticlesBackground from './Particles';
 
 const Welcome = () => {
   return (
@@ -39,9 +39,9 @@ const Welcome = () => {
         zIndex={1}
         backgroundImage='linear-gradient(to top, rgba(5,23,33,2) 0%, rgba(5,23,33,0) 100%)'
       >
-        <Image
-          src={'./Website/Resume/Home/hero.jpg'}
-          alt={'Background'}
+        <Box
+          // src={'./Website/Resume/Home/hero.jpg'}
+          // alt={'Background'}
           objectFit={'cover'}
           position={'absolute'}
           top={0}
@@ -50,7 +50,9 @@ const Welcome = () => {
           width={'100%'}
           height={'100%'}
           filter={{ base: 'brightness(0.3)', lg: 'brightness(0.6)' }}
-        />
+        >
+          <ParticlesBackground />
+        </Box>
       </Box>
 
       {/* Welcome Text */}
@@ -175,7 +177,7 @@ const Welcome = () => {
         </FadeInView>
       </VStack>
     </Box>
-  )
-}
+  );
+};
 
-export default Welcome
+export default Welcome;
