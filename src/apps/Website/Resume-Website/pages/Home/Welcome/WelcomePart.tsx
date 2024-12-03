@@ -6,6 +6,7 @@ import {
   Tooltip,
   VStack,
   Text,
+  Image,
 } from '@chakra-ui/react';
 import {
   faGithub,
@@ -39,9 +40,9 @@ const Welcome = () => {
         zIndex={1}
         backgroundImage='linear-gradient(to top, rgba(5,23,33,2) 0%, rgba(5,23,33,0) 100%)'
       >
-        <Box
-          // src={'./Website/Resume/Home/hero.jpg'}
-          // alt={'Background'}
+        <Image
+          src={'./Website/Resume/Home/hero.jpg'}
+          alt={'Background'}
           objectFit={'cover'}
           position={'absolute'}
           top={0}
@@ -51,8 +52,8 @@ const Welcome = () => {
           height={'100%'}
           filter={{ base: 'brightness(0.3)', lg: 'brightness(0.6)' }}
         >
-          <ParticlesBackground />
-        </Box>
+          {/* <ParticlesBackground /> */}
+        </Image>
       </Box>
 
       {/* Welcome Text */}
