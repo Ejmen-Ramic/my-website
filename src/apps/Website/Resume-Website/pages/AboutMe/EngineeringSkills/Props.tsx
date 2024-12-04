@@ -1,31 +1,39 @@
 import { Stack, Text } from '@chakra-ui/react';
 import { t, Trans } from '@lingui/macro';
+import { FaCode, FaDatabase, FaPaintBrush, FaTools } from 'react-icons/fa';
+import { SiFramework } from 'react-icons/si';
 
 type Props = {
   title: string;
+  icon?: React.ReactNode;
   detail: string | JSX.Element;
 };
 
 export const itemsTechSkills: Props[] = [
   {
     title: t`Languages`,
+    icon: <FaCode />,
     detail:
       'TypeScript, JavaScript, CSS, Chakra UI, ShadCn UI, Tailwind, Framer Motion',
   },
   {
     title: t`Frameworks`,
+    icon: <SiFramework />,
     detail: 'React, Node.js, Wordpress, Next.js',
   },
   {
     title: t`Tools`,
+    icon: <FaTools />,
     detail: 'Git, Jest, Cypress, Playwright, Jira, Trello, Notion, Slack',
   },
   {
     title: t`Databases`,
+    icon: <FaDatabase />,
     detail: 'MongoDB, MySQL, Prisma',
   },
   {
     title: t`Graphics Design`,
+    icon: <FaPaintBrush />,
     detail: 'Adobe Photoshop, Premier, Lightroom, Figma',
   },
 ];
