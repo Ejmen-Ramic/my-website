@@ -1,17 +1,17 @@
-import { Box, Flex, Heading, Stack, Text, VStack } from '@chakra-ui/react'
-import { FC } from 'react'
-import AboutAlbum from './AboutAlbum'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { Trans } from '@lingui/macro'
+import { Box, Flex, Heading, Stack, Text, VStack } from '@chakra-ui/react';
+import { FC } from 'react';
+import AboutAlbum from './AboutAlbum';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { Trans } from '@lingui/macro';
 
 const AboutIntro: FC = () => {
   return (
     <FadeInView>
       <VStack
-        spacing={'100px'}
-        px={{ lg: '150px' }}
-        mt={{ base: '50', md: '100px', lg: '150px' }}
         w={'full'}
+        px={{ base: '35px', lg: '150px' }}
+        spacing={'100px'}
+        mt={{ base: '50', md: '100px', lg: '150px' }}
       >
         <Flex w={'full'} direction={{ base: 'column', lg: 'row' }}>
           <Stack
@@ -66,7 +66,7 @@ const AboutIntro: FC = () => {
         <AboutAlbum />
       </VStack>
     </FadeInView>
-  )
-}
+  );
+};
 
-export default AboutIntro
+export default AboutIntro;

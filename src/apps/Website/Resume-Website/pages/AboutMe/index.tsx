@@ -9,10 +9,7 @@ import EngineeringSKills from './EngineeringSkills';
 const AboutPage = () => {
   return (
     <Page>
-      <VStack
-        spacing={{ base: '100px', md: '100px', lg: '150px' }}
-        px={{ base: '35px', lg: '0px' }}
-      >
+      <VStack spacing={{ base: '100px', md: '100px', lg: '150px' }}>
         <AboutIntro />
         {/* <SchoolCertificates /> */}
         {/* <OurProgress /> */}

@@ -18,7 +18,7 @@ import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
 import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { colors } from '../../../../../../shared/components/Hooks/color';
-import ParticlesBackground from './Particles';
+// import ParticlesBackground from './Particles';
 
 const Welcome = () => {
   return (

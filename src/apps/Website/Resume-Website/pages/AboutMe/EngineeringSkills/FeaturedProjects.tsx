@@ -21,12 +21,12 @@ const FeaturedProjects: FC = () => {
         bg={GridColor}
         p={'32px'}
         spacing={'20px'}
-        border={'1px solid #ECEFF4'}
-        borderRadius={'10px'}
+        borderRadius={{ md: '10px' }}
+        border={{ base: 'none', lg: '1px solid #ECEFF4' }}
       >
         <FadeInView delay={0.1}>
           <Heading>
-            <Trans>Technical Skills</Trans>
+            <Trans>Featured Projects</Trans>
           </Heading>
         </FadeInView>
 
@@ -39,6 +39,8 @@ const FeaturedProjects: FC = () => {
             <FadeInView key={i} delay={0.2}>
               <Stack
                 w={'full'}
+                h={'full'}
+                minH={'450px'}
                 bg={StackColor}
                 spacing={'20px'}
                 p={'32px'}

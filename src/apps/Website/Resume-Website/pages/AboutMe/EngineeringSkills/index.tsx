@@ -1,4 +1,5 @@
 import {
+  Divider,
   Heading,
   Stack,
   Text,
@@ -18,38 +19,49 @@ const EngineeringSKills: FC = () => {
       <VStack
         w={'full'}
         px={{ lg: '150px' }}
-        py={{ lg: '100px' }}
-        bg={useColorModeValue('gray.100', 'gray.700')}
-        spacing={'40px'}
+        py={{ base: '50px', lg: '100px' }}
+        bg={{ md: useColorModeValue('gray.100', 'gray.700') }}
+        divider={<Divider display={{ base: 'block', md: 'none' }} />}
       >
-        {/* About Me Section */}
-        <Stack
-          w={'full'}
-          bg={useColorModeValue(colors.white, 'gray.800')}
-          spacing={'20px'}
-          p={'32px'}
-          border={'1px solid #ECEFF4'}
-          borderRadius={'10px'}
-        >
-          <FadeInView delay={0.1}>
-            <Heading>
-              <Trans>About Me</Trans>
-            </Heading>
-          </FadeInView>
+        <VStack spacing={'40px'}>
+          {/* About Me Section */}
+          <Stack
+            w={'full'}
+            bg={useColorModeValue(colors.white, 'gray.800')}
+            spacing={'20px'}
+            p={'32px'}
+            borderRadius={{ md: '10px' }}
+            border={{ base: 'none', md: '1px solid #ECEFF4' }}
+          >
+            <FadeInView delay={0.1}>
+              <Heading>
+                <Trans>About Me</Trans>
+              </Heading>
+            </FadeInView>
 
-          <FadeInView delay={0.2}>
-            <Text>
-              <Trans>
-                With over 8 years of experience in software development, I
-                specialize in building scalable web applications and
-                microservices. I'm passionate about clean code, performance
-                optimization, and creating exceptional user experiences.
-              </Trans>
-            </Text>
-          </FadeInView>
-        </Stack>
-        <TechnicalSkills />
-        <FeaturedProjects />
+            <FadeInView delay={0.2}>
+              <Text>
+                <Trans>
+                  <b>•</b> With over <b>4 years</b> of experience in software
+                  development, I specialize in building scalable{' '}
+                  <b>web applications</b> and
+                  <b>microservices</b>. I'm passionate about clean code,
+                  performance optimization, and creating exceptional user
+                  experiences.
+                  <br />
+                  <br />
+                  <b>•</b> Currently I work as a <b>QA</b> &{' '}
+                  <b>FullStack Engineer</b> at <b>FLUX</b> Malaysia. I cover
+                  most of the production development of the website. From
+                  managing the QA team to developing new features and optimizing
+                  the performance of the website.
+                </Trans>
+              </Text>
+            </FadeInView>
+          </Stack>
+          <TechnicalSkills />
+          <FeaturedProjects />
+        </VStack>
       </VStack>
     </FadeInView>
   );

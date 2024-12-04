@@ -8,16 +8,16 @@ import {
   Flex,
   useColorModeValue,
   useBreakpointValue,
-} from '@chakra-ui/react'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { t, Trans } from '@lingui/macro'
+} from '@chakra-ui/react';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { t, Trans } from '@lingui/macro';
 
 type CardProps = {
-  id: number
-  title: string
-  description: string
-  date: string
-}
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+};
 
 const milestones = [
   {
@@ -50,14 +50,15 @@ const milestones = [
     title: t`Promotion - Software & QA Engineer - Malaysia`,
     description: t`Promoted to the role of Junior Software & QA Engineer, I embraced new challenges and expanded my expertise. Alongside my existing skills in frontend development, I delved into the learning of backend with MongoDB, automated testing with Playwright, and deployment with Vercel server. This journey not only elevated my technical capabilities but also deepened my understanding of software development and quality assurance practices, allowing me to contribute effectively to the team's projects and objectives.`,
   },
-]
+];
 
 const Milestones = () => {
-  const isMobile = useBreakpointValue({ base: true, md: false })
-  const isDesktop = useBreakpointValue({ base: false, md: true })
+  const isMobile = useBreakpointValue({ base: true, md: false });
+  const isDesktop = useBreakpointValue({ base: false, md: true });
 
   return (
     <Container
+      px={{ base: '35px', lg: '150px' }}
       maxWidth={'7xl'}
       p={{ base: 2, sm: 1, lg: 10 }}
       mb={{ base: '50px', lg: '100px' }}
@@ -105,20 +106,20 @@ const Milestones = () => {
         ))}
       </FadeInView>
     </Container>
-  )
-}
+  );
+};
 
 const Card = ({ id, title, description, date }: CardProps) => {
-  const isEvenId = id % 2 === 0
-  let borderWidthValue = isEvenId ? '15px 15px 15px 0' : '15px 0 15px 15px'
-  let leftValue = isEvenId ? '-15px' : 'unset'
-  let rightValue = isEvenId ? 'unset' : '-15px'
+  const isEvenId = id % 2 === 0;
+  let borderWidthValue = isEvenId ? '15px 15px 15px 0' : '15px 0 15px 15px';
+  let leftValue = isEvenId ? '-15px' : 'unset';
+  let rightValue = isEvenId ? 'unset' : '-15px';
 
-  const isMobile = useBreakpointValue({ base: true, md: false })
+  const isMobile = useBreakpointValue({ base: true, md: false });
   if (isMobile) {
-    leftValue = '-15px'
-    rightValue = 'unset'
-    borderWidthValue = '15px 15px 15px 0'
+    leftValue = '-15px';
+    rightValue = 'unset';
+    borderWidthValue = '15px 15px 15px 0';
   }
 
   return (
@@ -166,8 +167,8 @@ const Card = ({ id, title, description, date }: CardProps) => {
         </Box>
       </FadeInView>
     </HStack>
-  )
-}
+  );
+};
 
 const LineWithDot = () => {
   return (
@@ -204,8 +205,8 @@ const LineWithDot = () => {
         ></Box>
       </Box>
     </Flex>
-  )
-}
+  );
+};
 
 const EmptyCard = () => {
   return (
@@ -214,7 +215,7 @@ const EmptyCard = () => {
       p={{ base: 0, md: 6 }}
       bg={'transparent'}
     ></Box>
-  )
-}
+  );
+};
 
-export default Milestones
+export default Milestones;
