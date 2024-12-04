@@ -1,11 +1,11 @@
-import { Divider, HStack, VStack } from "@chakra-ui/react";
-import { useState } from "react";
-import ProgressBar from "./ProgressBar";
-import QuestionCard from "./QuestionCard";
-import { Questions } from "./Questions";
-import QuizButton from "./QuizButton";
-import ResultCard from "./ResultCard";
-import StartScreen from "./StartCard";
+import { Divider, HStack, VStack } from '@chakra-ui/react';
+import { useState } from 'react';
+import ProgressBar from './ProgressBar';
+import QuestionCard from './QuestionCard';
+import { Questions } from './Questions';
+import QuizButton from './QuizButton';
+import ResultCard from './ResultCard';
+import StartScreen from './StartCard';
 
 const InitialAnswers = Array(Questions.length).fill(undefined);
 
@@ -25,16 +25,16 @@ const Quiz = () => {
   const sumCorrectAnswers = () => {
     let count = 0;
     for (const answer of userAnswers) {
-      if (answer.includes("correct")) count++;
+      if (answer.includes('correct')) count++;
     }
     return count;
   };
   return (
-    <VStack w={"500px"} h={"500px"}>
+    <VStack w={'500px'} h={'500px'}>
       {isQuizStarted && (
         <ProgressBar current={currentQuestion + 1} total={Questions.length} />
       )}
-      <VStack w={"100%"} p={"10px"} border={`1px solid #DFDFDF`}>
+      <VStack w={'100%'} p={'10px'} border={`1px solid #DFDFDF`}>
         {/** When start button is pressed this will be triggered resulting in questions being shown.  */}
         {!isQuizStarted && !isResult && (
           <StartScreen
@@ -64,7 +64,7 @@ const Quiz = () => {
               {/** When this button is pressed it the isQuizStarted will be triggered and will display the ResultCard  */}
               {currentQuestion === Questions.length - 1 ? (
                 <QuizButton
-                  text="RESULTS"
+                  text={'RESULTS'}
                   onClick={() => {
                     setIsQuizStarted(false);
                     setIsResult(true);
@@ -74,7 +74,7 @@ const Quiz = () => {
                 /** This is a button to go onto the previous question */
                 <QuizButton
                   disabled={currentQuestion === 0}
-                  text="PREVIOUS"
+                  text={'PREVIOUS'}
                   onClick={() => {
                     const prevQuestion = currentQuestion - 1;
                     if (prevQuestion >= 0) {
@@ -91,7 +91,7 @@ const Quiz = () => {
               {/**This is a button and when pressed it changes to next question if the user has selected the right answer. The button disappears when it is on last question. */}
               {currentQuestion === Questions.length - 1 ? null : (
                 <QuizButton
-                  text="NEXT"
+                  text='NEXT'
                   disabled={!userAnswers[currentQuestion]}
                   onClick={() => {
                     const nextQuestion = currentQuestion + 1;

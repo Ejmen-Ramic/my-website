@@ -1,53 +1,53 @@
-import { useState, useEffect } from 'react'
-import { Heading } from '@chakra-ui/react'
+import { useState, useEffect } from 'react';
+import { Heading } from '@chakra-ui/react';
 
 const WelcomeMessage = () => {
-  const [welcomeText, setWelcomeText] = useState<string>('Welcome')
-  const [fontWeights, setFontWeights] = useState<number[]>([])
-  const [fontFamilies, setFontFamilies] = useState<string[]>([])
+  const [welcomeText, setWelcomeText] = useState<string>('Welcome');
+  const [fontWeights, setFontWeights] = useState<number[]>([]);
+  const [fontFamilies, setFontFamilies] = useState<string[]>([]);
 
   useEffect(() => {
-    let interval: NodeJS.Timeout | null = null
-    let counter = 0
+    let interval: NodeJS.Timeout | null = null;
+    let counter = 0;
 
-    const fontWeightsList: number[] = [400, 600, 700, 800, 900]
+    const fontWeightsList: number[] = [400, 600, 700, 800, 900];
     const fontFamiliesList: string[] = [
       'Helvetica',
       'Georgia',
       'Courier',
       'Arial',
       'SimSun',
-    ]
+    ];
 
     const updateWelcomeText = () => {
       if (counter < welcomeText.length) {
-        const newFontWeights = [...fontWeights]
-        const newFontFamilies = [...fontFamilies]
+        const newFontWeights = [...fontWeights];
+        const newFontFamilies = [...fontFamilies];
 
         newFontWeights[counter] =
-          fontWeightsList[Math.floor(Math.random() * fontWeightsList.length)]
+          fontWeightsList[Math.floor(Math.random() * fontWeightsList.length)];
         newFontFamilies[counter] =
-          fontFamiliesList[Math.floor(Math.random() * fontFamiliesList.length)]
+          fontFamiliesList[Math.floor(Math.random() * fontFamiliesList.length)];
 
-        setFontWeights(newFontWeights)
-        setFontFamilies(newFontFamilies)
+        setFontWeights(newFontWeights);
+        setFontFamilies(newFontFamilies);
 
-        counter++
+        counter++;
       }
-    }
+    };
 
     interval = setInterval(() => {
-      updateWelcomeText()
-      if (counter === welcomeText.length) clearInterval(interval!)
-    }, 500)
+      updateWelcomeText();
+      if (counter === welcomeText.length) clearInterval(interval!);
+    }, 500);
 
     return () => {
-      clearInterval(interval!)
-    }
-  }, [])
+      clearInterval(interval!);
+    };
+  }, []);
 
   return (
-    <Heading size="2xl">
+    <Heading size={'2xl'}>
       {welcomeText.split('').map((letter, index) => (
         <span
           key={index}
@@ -59,7 +59,7 @@ const WelcomeMessage = () => {
         </span>
       ))}
     </Heading>
-  )
-}
+  );
+};
 
-export default WelcomeMessage
+export default WelcomeMessage;
