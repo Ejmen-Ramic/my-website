@@ -4,6 +4,8 @@ import {
   Grid,
   Text,
   useColorModeValue,
+  HStack,
+  Icon,
 } from '@chakra-ui/react';
 import { Trans } from '@lingui/macro';
 import { FC } from 'react';
@@ -47,9 +49,15 @@ const FeaturedProjects: FC = () => {
                 border={'1px solid #ECEFF4'}
                 borderRadius={'10px'}
               >
-                <FadeInView delay={0.3}>
-                  <Heading size='md'>{item.title}</Heading>
-                </FadeInView>
+                <HStack w={'full'} justify={'space-between'}>
+                  <FadeInView delay={0.3}>
+                    <Heading size={'md'}>{item.title}</Heading>
+                  </FadeInView>
+
+                  <FadeInView delay={0.3} direction={'right'}>
+                    <Icon fontSize={'22px'}>{item.icon}</Icon>
+                  </FadeInView>
+                </HStack>
 
                 <FadeInView delay={0.3}>
                   <Text>{item.detail}</Text>

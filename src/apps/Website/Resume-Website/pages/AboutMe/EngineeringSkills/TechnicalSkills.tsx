@@ -59,6 +59,7 @@ const TechnicalSkills: FC = () => {
                   <Stack
                     as={'button'}
                     w={'full'}
+                    textAlign={'left'}
                     minH={'190px'}
                     bg={StackColor}
                     spacing={'20px'}

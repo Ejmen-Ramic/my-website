@@ -1,7 +1,15 @@
 import { Stack, Text } from '@chakra-ui/react';
 import { t, Trans } from '@lingui/macro';
-import { FaCode, FaDatabase, FaPaintBrush, FaTools } from 'react-icons/fa';
-import { SiFramework } from 'react-icons/si';
+import {
+  FaCode,
+  FaCubes,
+  FaDatabase,
+  FaPaintBrush,
+  FaTools,
+} from 'react-icons/fa';
+import { SiChakraui, SiFramework } from 'react-icons/si';
+import { RiAdminFill } from 'react-icons/ri';
+import { SiTailwindcss } from 'react-icons/si';
 
 type Props = {
   title: string;
@@ -13,13 +21,17 @@ export const itemsTechSkills: Props[] = [
   {
     title: t`Languages`,
     icon: <FaCode />,
-    detail:
-      'TypeScript, JavaScript, CSS, Chakra UI, ShadCn UI, Tailwind, Framer Motion',
+    detail: 'TypeScript, JavaScript, CSS',
+  },
+  {
+    title: t`Libraries`,
+    icon: <FaCubes />,
+    detail: 'Chakra UI, ShadCN UI, Tailwind, Framer Motion',
   },
   {
     title: t`Frameworks`,
     icon: <SiFramework />,
-    detail: 'React, Node.js, Wordpress, Next.js',
+    detail: 'React, Node.js, WordPress, Next.js',
   },
   {
     title: t`Tools`,
@@ -32,15 +44,16 @@ export const itemsTechSkills: Props[] = [
     detail: 'MongoDB, MySQL, Prisma',
   },
   {
-    title: t`Graphics Design`,
+    title: t`Graphic Design`,
     icon: <FaPaintBrush />,
-    detail: 'Adobe Photoshop, Premier, Lightroom, Figma',
+    detail: 'Adobe Photoshop, Premiere, Lightroom, Figma',
   },
 ];
 
 export const itemsFeatureProjects: Props[] = [
   {
     title: t`Migration to Chakra UI`,
+    icon: <SiChakraui />,
     detail: (
       <Text>
         <Trans>
@@ -58,6 +71,7 @@ export const itemsFeatureProjects: Props[] = [
   },
   {
     title: t`Admin Dashboard Development`,
+    icon: <RiAdminFill />,
     detail: (
       <Text>
         <Trans>
@@ -73,6 +87,7 @@ export const itemsFeatureProjects: Props[] = [
   },
   {
     title: t`Migration to ShadCn UI`,
+    icon: <SiTailwindcss />,
     detail: (
       <Stack>
         <Text>
