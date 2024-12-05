@@ -14,46 +14,46 @@ import {
   Hide,
   Text,
   Flex,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import {
   IoBriefcaseOutline,
   IoHomeOutline,
-  IoPersonOutline,
+  // IoPersonOutline,
   IoFileTrayFullOutline,
   IoCodeSlash,
-} from 'react-icons/io5'
-import { IconType } from 'react-icons'
-import HeaderForm from './Form'
-import LanguageDropDown from './LanguageMenuMobile'
-import { t, Trans } from '@lingui/macro'
-import { colors } from '../../../Hooks/color'
-import HamburgerIcon from './HamburgerIcon'
+} from 'react-icons/io5';
+import { IconType } from 'react-icons';
+import HeaderForm from './Form';
+import LanguageDropDown from './LanguageMenuMobile';
+import { t, Trans } from '@lingui/macro';
+import { colors } from '../../../Hooks/color';
+import HamburgerIcon from './HamburgerIcon';
 
 type MenuItemLink = {
-  label: string
-  icon?: IconType
-  to: string
-}
+  label: string;
+  icon?: IconType;
+  to: string;
+};
 
 const HeaderMobile = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const color = useColorModeValue('#2b333d', colors.white)
-  const year = new Date().getFullYear()
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const color = useColorModeValue('#2b333d', colors.white);
+  const year = new Date().getFullYear();
 
   const isMenuItemLink = (item: any): item is MenuItemLink => {
-    return (item as MenuItemLink).to !== undefined
-  }
+    return (item as MenuItemLink).to !== undefined;
+  };
   const menuItems: (MenuItemLink | React.ReactElement)[] = [
     { label: t`Home`, icon: IoHomeOutline, to: '/' },
     { label: t`Resume`, icon: IoBriefcaseOutline, to: '/resume' },
     // <MenuContainerMobile />,
     { label: t`About Me`, icon: IoCodeSlash, to: '/about' },
     { label: t`Contacts`, icon: IoFileTrayFullOutline, to: '/contact' },
-    { label: t`My Account`, icon: IoPersonOutline, to: '/signin' },
+    // { label: t`My Account`, icon: IoPersonOutline, to: '/signin' },
     <LanguageDropDown />,
-  ]
+  ];
 
   return (
     <Box>
@@ -139,7 +139,7 @@ const HeaderMobile = () => {
         </DrawerContent>
       </Drawer>
     </Box>
-  )
-}
+  );
+};
 
-export default HeaderMobile
+export default HeaderMobile;

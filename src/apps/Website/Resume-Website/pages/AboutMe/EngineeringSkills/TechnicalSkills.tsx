@@ -13,9 +13,11 @@ import {
   PopoverHeader,
   PopoverBody,
   PopoverContent,
+  Hide,
 } from '@chakra-ui/react';
 import { Trans } from '@lingui/macro';
-import { FC, useState } from 'react';
+import { FC, useRef, useState } from 'react';
+import { useOutsideClick } from '@chakra-ui/react';
 import { colors } from '../../../../../../shared/components/Hooks/color';
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
 import { itemsTechSkills } from './Props';
@@ -40,6 +42,14 @@ const TechnicalSkills: FC = () => {
     setOpenPopoverIndex((prev) => (prev === index ? null : index));
   };
 
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Close popover on outside click
+  useOutsideClick({
+    ref: containerRef,
+    handler: () => setOpenPopoverIndex(null),
+  });
+
   return (
     <FadeInView>
       <Stack
@@ -49,6 +59,7 @@ const TechnicalSkills: FC = () => {
         spacing={'20px'}
         borderRadius={{ md: '10px' }}
         border={{ base: 'none', lg: '1px solid #ECEFF4' }}
+        ref={containerRef} // Attach ref to the container
       >
         <FadeInView delay={0.1}>
           <Heading>
@@ -66,6 +77,7 @@ const TechnicalSkills: FC = () => {
               <Popover
                 isOpen={openPopoverIndex === i}
                 onClose={() => setOpenPopoverIndex(null)}
+                closeOnBlur={false} // Disable default outside click behavior
               >
                 <PopoverTrigger>
                   <Stack
@@ -111,11 +123,13 @@ const TechnicalSkills: FC = () => {
 
                 <PopoverContent
                   w={'full'}
-                  maxW={'500px'}
+                  maxW={{ base: '320px', lg: '500px' }}
                   boxShadow={popoverShadow}
                 >
                   <PopoverArrow />
-                  <PopoverCloseButton />
+                  <Hide below={'md'}>
+                    <PopoverCloseButton />
+                  </Hide>
                   <PopoverHeader fontWeight={'bold'}>
                     {item.popoverHeader}
                   </PopoverHeader>
