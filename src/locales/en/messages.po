@@ -20,7 +20,7 @@ msgstr ""
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/index.tsx:121
 #: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/index.tsx:128
-#: src/apps/Website/Resume-Website/pages/Resume/index.tsx:22
+#: src/apps/Website/Resume-Website/pages/Resume/index.tsx:47
 msgid "{0}"
 msgstr "{0}"
 
@@ -39,6 +39,34 @@ msgstr "• Creating and maintaining automated test scripts<0/>• Front and Bac
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:19
 msgid "• Maintain the company's website, design, and create new content<0/> • Handling customers and providing the best packages and locations based on the requirements set out by them in the Maldives<1/> • Creating invoices for the customers<2/> • Successfully connected luxury hotels in Bosnia & Herzegovina with IMTM to create affordable tourist packages for Maldivians to experience the Balkan region especially during the winter season"
 msgstr "• Maintain the company's website, design, and create new content<0/> • Handling customers and providing the best packages and locations based on the requirements set out by them in the Maldives<1/> • Creating invoices for the customers<2/> • Successfully connected luxury hotels in Bosnia & Herzegovina with IMTM to create affordable tourist packages for Maldivians to experience the Balkan region especially during the winter season"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/index.tsx:48
+msgid "<0>•</0> With over <1>4 years</1> of experience in software development, I specialize in building scalable <2>web applications</2> and <3>microservices</3>. I'm passionate about clean code, performance optimization, and creating exceptional user experiences.<4/><5/><6>•</6> Currently I work as a <7>QA</7> & <8>FullStack Engineer</8> at <9>FLUX</9> Malaysia. I cover most of the production development of the website. From <10>managing</10> the QA team to developing new features and optimizing the performance of the website."
+msgstr "<0>•</0> With over <1>4 years</1> of experience in software development, I specialize in building scalable <2>web applications</2> and <3>microservices</3>. I'm passionate about clean code, performance optimization, and creating exceptional user experiences.<4/><5/><6>•</6> Currently I work as a <7>QA</7> & <8>FullStack Engineer</8> at <9>FLUX</9> Malaysia. I cover most of the production development of the website. From <10>managing</10> the QA team to developing new features and optimizing the performance of the website."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:254
+msgid "<0>•</0><1><2> Adobe Photoshop: </2></1>Creates custom assets, icons, and graphics for web interfaces.<3/><4/><5>•</5><6><7> Adobe Premiere: </7></6> Edits promotional videos or UI demonstration clips for apps.<8/><9/><10>•</10><11><12> Adobe Lightroom: </12></11> Enhances photos for web content or marketing visuals.<13/><14/><15>•</15><16><17> Figma: </17></16> Designs wireframe, prototypes, and collaborative UI/UX workflows for web apps."
+msgstr "<0>•</0><1><2> Adobe Photoshop: </2></1>Creates custom assets, icons, and graphics for web interfaces.<3/><4/><5>•</5><6><7> Adobe Premiere: </7></6> Edits promotional videos or UI demonstration clips for apps.<8/><9/><10>•</10><11><12> Adobe Lightroom: </12></11> Enhances photos for web content or marketing visuals.<13/><14/><15>•</15><16><17> Figma: </17></16> Designs wireframe, prototypes, and collaborative UI/UX workflows for web apps."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:65
+msgid "<0>•</0><1><2> Chakra UI: </2></1>Provides pre-built, accessible UI components and theming capabilities for rapid development. Used to create consistent and polished designs.<3/><4/><5>•</5><6><7> ShadCN UI: </7></6>A customizable design system built with Tailwind CSS, ideal for modern web app interfaces.<8/><9/><10>•</10><11><12> Tailwind CSS: </12></11>Utility-first CSS framework for building responsive layouts and customizing UI components with minimal effort.<13/><14/><15>•</15><16><17> Framer Motion: </17></16>Adds smooth animations and transitions to web applications, improving user experience and interactivity."
+msgstr "<0>•</0><1><2> Chakra UI: </2></1>Provides pre-built, accessible UI components and theming capabilities for rapid development. Used to create consistent and polished designs.<3/><4/><5>•</5><6><7> ShadCN UI: </7></6>A customizable design system built with Tailwind CSS, ideal for modern web app interfaces.<8/><9/><10>•</10><11><12> Tailwind CSS: </12></11>Utility-first CSS framework for building responsive layouts and customizing UI components with minimal effort.<13/><14/><15>•</15><16><17> Framer Motion: </17></16>Adds smooth animations and transitions to web applications, improving user experience and interactivity."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:150
+msgid "<0>•</0><1><2> Git: </2></1> Version control for managing codebase changes and collaboration among teams.<3/><4/><5>•</5><6><7> Jest: </7></6>Framework for unit testing, ensuring the reliability of code logic.<8/><9/><10>•</10><11><12> Cypress: </12> </11>End-to-end testing for user flows and UI interactions.<13/><14/><15>•</15><16><17> Playwright: </17></16> Automated testing across browsers for consistent app behavior.<18/><19/><20>•</20><21><22> Jira: </22></21> Tracks project tasks, bugs, and progress in development workflows.<23/><24/><25>•</25><26><27> Trello: </27></26>Manages development tasks and organizes sprints visually.<28/><29/><30>•</30><31><32> Notion: </32></31> Documents and collaborates on web app development processes.<33/><34/><35>•</35><36><37> Slack: </37></36> Facilitates team communication and integrations with development tools.<38/><39/>"
+msgstr "<0>•</0><1><2> Git: </2></1> Version control for managing codebase changes and collaboration among teams.<3/><4/><5>•</5><6><7> Jest: </7></6>Framework for unit testing, ensuring the reliability of code logic.<8/><9/><10>•</10><11><12> Cypress: </12> </11>End-to-end testing for user flows and UI interactions.<13/><14/><15>•</15><16><17> Playwright: </17></16> Automated testing across browsers for consistent app behavior.<18/><19/><20>•</20><21><22> Jira: </22></21> Tracks project tasks, bugs, and progress in development workflows.<23/><24/><25>•</25><26><27> Trello: </27></26>Manages development tasks and organizes sprints visually.<28/><29/><30>•</30><31><32> Notion: </32></31> Documents and collaborates on web app development processes.<33/><34/><35>•</35><36><37> Slack: </37></36> Facilitates team communication and integrations with development tools.<38/><39/>"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:220
+msgid "<0>•</0><1><2> MongoDB: </2></1> NoSQL database for flexible, schema-less storage of application data, ideal for real-time apps.<3/><4/><5>•</5><6><7> MySQL: </7></6> Relational database used for structured data and complex queries in web applications.<8/><9/><10>•</10><11><12> Prisma: </12></11> Simplifies database access and management with an ORM tailored for modern TypeScript-based applications."
+msgstr "<0>•</0><1><2> MongoDB: </2></1> NoSQL database for flexible, schema-less storage of application data, ideal for real-time apps.<3/><4/><5>•</5><6><7> MySQL: </7></6> Relational database used for structured data and complex queries in web applications.<8/><9/><10>•</10><11><12> Prisma: </12></11> Simplifies database access and management with an ORM tailored for modern TypeScript-based applications."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:107
+msgid "<0>•</0><1><2> React: </2></1>Builds interactive, component-based UIs efficiently with reusable logic. Core to creating dynamic web applications.<3/><4/><5>•</5><6><7> Node.js: </7></6>Handles server-side logic, RESTful APIs, and real-time functionalities in web applications.<8/><9/><10>•</10><11><12> WordPress: </12></11>Useful for creating CMS-driven web apps with custom themes and plugins.<13/><14/><15>•</15><16><17> Next.js: </17></16>Extends React with server-side rendering (SSR), static site generation (SSG), and API routes for performance and SEO optimization."
+msgstr "<0>•</0><1><2> React: </2></1>Builds interactive, component-based UIs efficiently with reusable logic. Core to creating dynamic web applications.<3/><4/><5>•</5><6><7> Node.js: </7></6>Handles server-side logic, RESTful APIs, and real-time functionalities in web applications.<8/><9/><10>•</10><11><12> WordPress: </12></11>Useful for creating CMS-driven web apps with custom themes and plugins.<13/><14/><15>•</15><16><17> Next.js: </17></16>Extends React with server-side rendering (SSR), static site generation (SSG), and API routes for performance and SEO optimization."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:30
+msgid "<0>•</0><1><2> TypeScript: </2></1>Enhances JavaScript with static typing, ensuring better maintainability and catching bugs early during development. Commonly used with React and Next.js for creating scalable web apps.<3/><4/><5>•</5><6><7> JavaScript: </7></6>Core language for implementing interactivity, handling user events, and integrating APIs in web apps.<8/><9/><10>•</10><11><12> CSS: </12></11>Used to style components and ensure responsive, visually appealing user interfaces."
+msgstr "<0>•</0><1><2> TypeScript: </2></1>Enhances JavaScript with static typing, ensuring better maintainability and catching bugs early during development. Commonly used with React and Next.js for creating scalable web apps.<3/><4/><5>•</5><6><7> JavaScript: </7></6>Core language for implementing interactivity, handling user events, and integrating APIs in web apps.<8/><9/><10>•</10><11><12> CSS: </12></11>Used to style components and ensure responsive, visually appealing user interfaces."
 
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:19
 msgid "<0>•</0>Cummulative Grade Point's Average(CGPA): 3.44/4.0<1/><2>•</2>The Dean's List for academic excellence in <3>Semester2, 2019/2020 </3> Session<4/><5>•</5>The Dean's List for academic excellence in <6>Semester2, 2020/2021 </6>Session<7/><8>•</8>Final Year Project (FYP) promising projects 2021 (System Development Category)"
@@ -91,11 +119,16 @@ msgstr "9. Can you walk me through a project you worked on?"
 #: src/apps/Website/Photography-Website/Shared/FooterPhotography.tsx:248
 #: src/apps/Website/Photography-Website/Shared/Header/Desktop/index.tsx:108
 #: src/apps/Website/Photography-Website/Shared/Header/Mobile/index.tsx:47
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/index.tsx:42
 #: src/shared/components/PageWrapper/Footer/Footer.tsx:296
 #: src/shared/components/PageWrapper/Header/index.tsx:154
 #: src/shared/components/PageWrapper/Header/Mobile/index.tsx:52
 msgid "About Me"
 msgstr "About Me"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:312
+msgid "Admin Dashboard Development"
+msgstr "Admin Dashboard Development"
 
 #: src/apps/Website/Photography-Website/Shared/FooterPhotography.tsx:143
 #: src/apps/Website/Photography-Website/Shared/Header/Mobile/index.tsx:107
@@ -178,6 +211,10 @@ msgstr "Copyright"
 msgid "Crypto Charity"
 msgstr "Crypto Charity"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:214
+msgid "Databases"
+msgstr "Databases"
+
 #: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:15
 #: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:23
 #: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:26
@@ -197,7 +234,7 @@ msgid "Design Projects 3"
 msgstr "Design Projects 3"
 
 #: src/apps/Website/Photography-Website/Shared/FooterPhotography.tsx:235
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:73
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:76
 msgid "Developer"
 msgstr "Developer"
 
@@ -250,7 +287,7 @@ msgstr "English"
 msgid "Enter your email"
 msgstr "Enter your email"
 
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:84
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:87
 msgid "Explore <0>my</0><1/>limitless possibilities"
 msgstr "Explore <0>my</0><1/>limitless possibilities"
 
@@ -265,6 +302,10 @@ msgstr "Extra Curriculum"
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:38
 msgid "Fast development"
 msgstr "Fast development"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/FeaturedProjects.tsx:32
+msgid "Featured Projects"
+msgstr "Featured Projects"
 
 #: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:36
 msgid "features"
@@ -298,6 +339,10 @@ msgstr "Forgot password?"
 msgid "Forgot your password?"
 msgstr "Forgot your password?"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:101
+msgid "Frameworks"
+msgstr "Frameworks"
+
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:199
 msgid "Frequently Asked Questions"
 msgstr "Frequently Asked Questions"
@@ -305,6 +350,10 @@ msgstr "Frequently Asked Questions"
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:19
 msgid "German"
 msgstr "German"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:248
+msgid "Graphic Design"
+msgstr "Graphic Design"
 
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/DesignTable/index.tsx:61
 msgid "Graphics Design"
@@ -318,7 +367,7 @@ msgstr "Guaranteed Quality"
 #~ msgid "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina and this is my web resume. Here you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore my website and my photo gallery."
 #~ msgstr "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina and this is my web resume. Here you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore my website and my photo gallery."
 
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:101
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:104
 msgid "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina, and this is my web resume. Here, you can see my capabilities and skills as a software engineer and as a photographer. Feel free to explore my website and my photo gallery."
 msgstr "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina, and this is my web resume. Here, you can see my capabilities and skills as a software engineer and as a photographer. Feel free to explore my website and my photo gallery."
 
@@ -484,6 +533,7 @@ msgstr "Kicked off my academic journey at the International Islamic University M
 msgid "Kuala Lumpur, Malaysia"
 msgstr "Kuala Lumpur, Malaysia"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:24
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:35
 #: src/shared/components/PageWrapper/Header/Desktop/LanguageMenu.tsx:74
 #: src/shared/components/PageWrapper/Header/Mobile/LanguageMenuMobile.tsx:80
@@ -493,6 +543,10 @@ msgstr "Languages"
 #: src/Inbox.js:33
 #~ msgid "Last login on {0}."
 #~ msgstr "Last login on {0}."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:59
+msgid "Libraries"
+msgstr "Libraries"
 
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:23
 msgid "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project’s significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
@@ -531,18 +585,33 @@ msgstr "Message"
 #~ msgid "Message Inbox"
 #~ msgstr "Message Inbox"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:72
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:295
+msgid "Migrated a complex web application from JavaScript and CSS to Typescript and Chakra UI. Not only did we achieve a more modern and user-friendly interface, but we also improved the overall performance of the application by building custom shared components that reused across multiple pages.<0/><1/><2>Tech:</2> React, TypeScript, Chakra UI"
+msgstr "Migrated a complex web application from JavaScript and CSS to Typescript and Chakra UI. Not only did we achieve a more modern and user-friendly interface, but we also improved the overall performance of the application by building custom shared components that reused across multiple pages.<0/><1/><2>Tech:</2> React, TypeScript, Chakra UI"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:291
+msgid "Migration to Chakra UI"
+msgstr "Migration to Chakra UI"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:331
+msgid "Migration to ShadCn UI"
+msgstr "Migration to ShadCn UI"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:73
 msgid "Milestones"
 msgstr "Milestones"
 
 #: src/apps/Website/Photography-Website/Shared/Header/Mobile/index.tsx:49
-#: src/shared/components/PageWrapper/Header/Mobile/index.tsx:54
 msgid "My Account"
 msgstr "My Account"
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:45
 msgid "My coding style goes beyond just speed. I prioritize writing clean, readable code that ensures responsiveness across all devices."
 msgstr "My coding style goes beyond just speed. I prioritize writing clean, readable code that ensures responsiveness across all devices."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:316
+msgid "My team and I worked on a project where we had to develop a complex admin dashboard for the company. I was responsible for the development of tools that are used by finance, operations marketing team.<0/><1/><2>Tech:</2> React, TypeScript, Chakra UI, Next.js, Prisma, MongoDB,"
+msgstr "My team and I worked on a project where we had to develop a complex admin dashboard for the company. I was responsible for the development of tools that are used by finance, operations marketing team.<0/><1/><2>Tech:</2> React, TypeScript, Chakra UI, Next.js, Prisma, MongoDB,"
 
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/items.tsx:35
 msgid "My Website"
@@ -617,7 +686,7 @@ msgstr "Professional Experience"
 msgid "Programming"
 msgstr "Programming"
 
-#: src/apps/Website/Resume-Website/pages/Resume/index.tsx:52
+#: src/apps/Website/Resume-Website/pages/Resume/index.tsx:95
 msgid "Programming Enthusiast. Software & Quality Assurance Engineer."
 msgstr "Programming Enthusiast. Software & Quality Assurance Engineer."
 
@@ -667,7 +736,7 @@ msgstr "Request Reset"
 
 #: src/apps/Website/Photography-Website/Shared/FooterPhotography.tsx:209
 #: src/apps/Website/Photography-Website/Shared/Header/Mobile/index.tsx:45
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:126
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:129
 #: src/shared/components/PageWrapper/Footer/Footer.tsx:257
 #: src/shared/components/PageWrapper/Header/index.tsx:106
 #: src/shared/components/PageWrapper/Header/Mobile/index.tsx:50
@@ -733,7 +802,7 @@ msgstr "So, you want to know how"
 msgid "Software and QA Engineer at FLUX"
 msgstr "Software and QA Engineer at FLUX"
 
-#: src/apps/Website/Resume-Website/pages/Resume/index.tsx:28
+#: src/apps/Website/Resume-Website/pages/Resume/index.tsx:61
 msgid "Source code"
 msgstr "Source code"
 
@@ -768,6 +837,10 @@ msgstr "Team Collaboration"
 msgid "Technical Expertise"
 msgstr "Technical Expertise"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/TechnicalSkills.tsx:66
+msgid "Technical Skills"
+msgstr "Technical Skills"
+
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:16
 msgid "The \"Blockchain Charity\" project is a web application designed to ensure safe and transparent charitable donations via blockchain. It includes smart contract testing for donation and withdrawal transactions, and features for managing and monitoring donations and thresholds. The app uses tools like Truffle, Ganache, and MetaMask to securely handle and display transactions, helping to prevent fraud and money laundering while ensuring funds reach the intended recipients."
 msgstr "The \"Blockchain Charity\" project is a web application designed to ensure safe and transparent charitable donations via blockchain. It includes smart contract testing for donation and withdrawal transactions, and features for managing and monitoring donations and thresholds. The app uses tools like Truffle, Ganache, and MetaMask to securely handle and display transactions, helping to prevent fraud and money laundering while ensuring funds reach the intended recipients."
@@ -786,6 +859,7 @@ msgstr "The project board is an exclusive resource for contract work. It's perfe
 msgid "to enjoy all of the cool"
 msgstr "to enjoy all of the cool"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:143
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/ToolsTable/index.tsx:57
 msgid "Tools"
 msgstr "Tools"
@@ -809,6 +883,10 @@ msgstr "We had a data-heavy application that was experiencing slow load times. I
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:54
 #~ msgid "We had a data-heavy application that was experiencing slow load times. I optimized the code by implementing lazy loading for components and using React.memo to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced indexing. These changes improved the application's performance significantly, reducing load times by about 40%."
 #~ msgstr "We had a data-heavy application that was experiencing slow load times. I optimized the code by implementing lazy loading for components and using React.memo to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced indexing. These changes improved the application's performance significantly, reducing load times by about 40%."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:336
+msgid "We wanted more speed and simplicity in our application, so we migrated it from Chakra UI to ShadCn UI. The result was a faster and more responsive application with a clean and modern design. Not only did we drastically reduced the size of our repository but also have simplified and sped up our development workflow by building our own library with ShadCn UI.<0/><1/><2>Tech:</2> ShadCn UI, Tailwind, React, Typescript<3/><4/>"
+msgstr "We wanted more speed and simplicity in our application, so we migrated it from Chakra UI to ShadCn UI. The result was a faster and more responsive application with a clean and modern design. Not only did we drastically reduced the size of our repository but also have simplified and sped up our development workflow by building our own library with ShadCn UI.<0/><1/><2>Tech:</2> ShadCn UI, Tailwind, React, Typescript<3/><4/>"
 
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:16
 msgid "Web Coordinator at International Maldives Travel Market (IMTM)"
