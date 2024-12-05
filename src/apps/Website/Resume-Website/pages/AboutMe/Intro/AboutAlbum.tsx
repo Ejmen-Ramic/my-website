@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
-import { Box, Flex, VStack, Image, HStack } from '@chakra-ui/react'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import React, { FC } from 'react';
+import { Box, Flex, VStack, Image, HStack } from '@chakra-ui/react';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
 
 const zoomInStyles = {
   transition: 'transform 0.3s',
@@ -9,7 +9,7 @@ const zoomInStyles = {
     zIndex: 1,
   },
   zIndex: 0,
-}
+};
 
 const AboutAlbum: FC = () => {
   return (
@@ -30,6 +30,7 @@ const AboutAlbum: FC = () => {
               src={'./Website/Resume/AboutMe/about-me-1.jpg'}
               alt={'About Img 1'}
               sx={zoomInStyles}
+              borderRadius={'10px'}
             />
           </FadeInView>{' '}
           <FadeInView delay={0.1}>
@@ -37,6 +38,7 @@ const AboutAlbum: FC = () => {
               src={'./Website/Resume/AboutMe/about-me-2.jpg'}
               alt={'About Img 2'}
               sx={zoomInStyles}
+              borderRadius={'10px'}
             />
           </FadeInView>
         </VStack>
@@ -51,12 +53,13 @@ const AboutAlbum: FC = () => {
               src={'./Website/Resume/AboutMe/about-me-3.jpg'}
               alt={'About Img 3'}
               sx={zoomInStyles}
+              borderRadius={'10px'}
             />
           </FadeInView>
         </Box>
       </Flex>
     </HStack>
-  )
-}
+  );
+};
 
-export default AboutAlbum
+export default AboutAlbum;
