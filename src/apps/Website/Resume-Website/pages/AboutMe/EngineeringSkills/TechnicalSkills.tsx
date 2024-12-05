@@ -15,21 +15,30 @@ import {
   PopoverContent,
 } from '@chakra-ui/react';
 import { Trans } from '@lingui/macro';
-import { FC } from 'react';
-import { itemsTechSkills } from './Props';
+import { FC, useState } from 'react';
 import { colors } from '../../../../../../shared/components/Hooks/color';
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { itemsTechSkills } from './Props';
 
 const TechnicalSkills: FC = () => {
   const GridColor = useColorModeValue(colors.white, 'gray.800');
   const StackColor = useColorModeValue(colors.white, '#2D3748');
-
   const hoverShadowLight = useColorModeValue(
     '0 8px 16px rgba(0, 0, 0, 0.2)',
     '0 12px 24px rgba(0, 0, 0, 0.3)'
   );
-
+  const popoverShadow = useColorModeValue(
+    '0 16px 32px rgba(0, 0, 0, 0.15)',
+    '0 20px 40px rgba(0, 0, 0, 0.3)'
+  );
   const transformScale = useColorModeValue('scale(1)', 'scale(1.03)');
+  const HeaderPopColor = useColorModeValue('teal.400', 'blue.400');
+
+  const [openPopoverIndex, setOpenPopoverIndex] = useState<number | null>(null);
+
+  const handleTogglePopover = (index: number) => {
+    setOpenPopoverIndex((prev) => (prev === index ? null : index));
+  };
 
   return (
     <FadeInView>
@@ -54,7 +63,10 @@ const TechnicalSkills: FC = () => {
         >
           {itemsTechSkills.map((item, i) => (
             <FadeInView key={i} delay={0.2}>
-              <Popover>
+              <Popover
+                isOpen={openPopoverIndex === i}
+                onClose={() => setOpenPopoverIndex(null)}
+              >
                 <PopoverTrigger>
                   <Stack
                     as={'button'}
@@ -67,11 +79,15 @@ const TechnicalSkills: FC = () => {
                     border={'1px solid #ECEFF4'}
                     borderRadius={'10px'}
                     boxShadow={'0 8px 12px rgba(0, 0, 0, 0.1)'}
-                    transition={'box-shadow 0.3s ease, transform 0.3s ease'}
+                    transition={
+                      'box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s'
+                    }
                     _hover={{
                       boxShadow: hoverShadowLight,
                       transform: transformScale,
+                      borderColor: 'blue.400',
                     }}
+                    onClick={() => handleTogglePopover(i)}
                   >
                     <HStack w={'full'} justify={'space-between'}>
                       <FadeInView delay={0.3}>
@@ -84,16 +100,29 @@ const TechnicalSkills: FC = () => {
                     </HStack>
 
                     <FadeInView delay={0.3}>
-                      <Text>{item.detail}</Text>
+                      <Text>
+                        {typeof item.detail === 'function'
+                          ? item.detail(HeaderPopColor)
+                          : item.detail}
+                      </Text>
                     </FadeInView>
                   </Stack>
                 </PopoverTrigger>
-                <PopoverContent>
+
+                <PopoverContent
+                  w={'full'}
+                  maxW={'500px'}
+                  boxShadow={popoverShadow}
+                >
                   <PopoverArrow />
                   <PopoverCloseButton />
-                  <PopoverHeader>Confirmation!</PopoverHeader>
-                  <PopoverBody>
-                    Are you sure you want to have that milkshake?
+                  <PopoverHeader fontWeight={'bold'}>
+                    {item.popoverHeader}
+                  </PopoverHeader>
+                  <PopoverBody py={'15px'}>
+                    {typeof item.popoverBody === 'function'
+                      ? item.popoverBody(HeaderPopColor)
+                      : item.popoverBody}
                   </PopoverBody>
                 </PopoverContent>
               </Popover>

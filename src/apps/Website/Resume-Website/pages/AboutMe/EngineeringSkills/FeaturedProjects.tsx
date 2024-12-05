@@ -9,13 +9,14 @@ import {
 } from '@chakra-ui/react';
 import { Trans } from '@lingui/macro';
 import { FC } from 'react';
-import { itemsFeatureProjects } from './Props';
 import { colors } from '../../../../../../shared/components/Hooks/color';
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { itemsFeatureProjects } from './Props';
 
 const FeaturedProjects: FC = () => {
   const GridColor = useColorModeValue(colors.white, 'gray.800');
   const StackColor = useColorModeValue(colors.white, '#2D3748');
+  const HeaderPopColor = useColorModeValue('teal.400', 'blue.400');
   return (
     <FadeInView>
       <Stack
@@ -60,7 +61,11 @@ const FeaturedProjects: FC = () => {
                 </HStack>
 
                 <FadeInView delay={0.3}>
-                  <Text>{item.detail}</Text>
+                  <Text>
+                    {typeof item.detail === 'function'
+                      ? item.detail(HeaderPopColor)
+                      : item.detail}
+                  </Text>
                 </FadeInView>
               </Stack>
             </FadeInView>
