@@ -331,26 +331,24 @@ export const itemsFeatureProjects: Props[] = [
     title: t`Migration to ShadCn UI`,
     icon: <SiTailwindcss />,
     detail: (color: string) => (
-      <Stack>
-        <Text>
-          <Trans>
-            We wanted more speed and simplicity in our application, so we
-            migrated it from Chakra UI to ShadCn UI. The result was a faster and
-            more responsive application with a clean and modern design. Not only
-            did we drastically reduced the size of our repository but also have
-            simplified and sped up our development workflow by building our own
-            library with ShadCn UI.
-            <br />
-            <br />
-            <Box as={'span'} fontWeight={'bold'} color={color}>
-              Tech:
-            </Box>{' '}
-            ShadCn UI, Tailwind, React, Typescript
-            <br />
-            <br />
-          </Trans>
-        </Text>
-      </Stack>
+      <Text>
+        <Trans>
+          We wanted more speed and simplicity in our application, so we migrated
+          it from Chakra UI to ShadCn UI. The result was a faster and more
+          responsive application with a clean and modern design. Not only did we
+          drastically reduced the size of our repository but also have
+          simplified and sped up our development workflow by building our own
+          library with ShadCn UI.
+          <br />
+          <br />
+          <Box as={'span'} fontWeight={'bold'} color={color}>
+            Tech:
+          </Box>{' '}
+          ShadCn UI, Tailwind, React, Typescript
+          <br />
+          <br />
+        </Trans>
+      </Text>
     ),
   },
 ];
