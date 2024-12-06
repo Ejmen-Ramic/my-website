@@ -6,21 +6,22 @@ import {
   useColorModeValue,
   HStack,
   Icon,
-} from '@chakra-ui/react';
-import { Trans } from '@lingui/macro';
-import { FC } from 'react';
-import { colors } from '../../../../../../shared/components/Hooks/color';
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
-import { itemsFeatureProjects } from './Props';
+} from '@chakra-ui/react'
+import { Trans } from '@lingui/macro'
+import { FC } from 'react'
+import { colors } from '../../../../../../shared/components/Hooks/color'
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { itemsFeatureProjects } from './Props'
 
 const FeaturedProjects: FC = () => {
-  const GridColor = useColorModeValue(colors.white, 'gray.800');
-  const StackColor = useColorModeValue(colors.white, '#2D3748');
-  const HeaderPopColor = useColorModeValue('teal.400', 'blue.400');
+  const GridColor = useColorModeValue(colors.white, 'gray.800')
+  const StackColor = useColorModeValue(colors.white, '#2D3748')
+  const HeaderPopColor = useColorModeValue('teal.400', 'blue.400')
   return (
     <FadeInView>
       <Stack
         w={'full'}
+        maxW={'1400px'}
         bg={GridColor}
         p={'32px'}
         spacing={'20px'}
@@ -73,7 +74,7 @@ const FeaturedProjects: FC = () => {
         </Grid>
       </Stack>
     </FadeInView>
-  );
-};
+  )
+}
 
-export default FeaturedProjects;
+export default FeaturedProjects
