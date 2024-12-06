@@ -1,23 +1,23 @@
-import { Box, Stack, Text } from '@chakra-ui/react';
-import { t, Trans } from '@lingui/macro';
+import { Box, Text } from '@chakra-ui/react'
+import { t, Trans } from '@lingui/macro'
 import {
   FaCode,
   FaCubes,
   FaDatabase,
   FaPaintBrush,
   FaTools,
-} from 'react-icons/fa';
-import { SiChakraui, SiFramework } from 'react-icons/si';
-import { RiAdminFill } from 'react-icons/ri';
-import { SiTailwindcss } from 'react-icons/si';
+} from 'react-icons/fa'
+import { SiChakraui, SiFramework } from 'react-icons/si'
+import { RiAdminFill } from 'react-icons/ri'
+import { SiTailwindcss } from 'react-icons/si'
 
 type Props = {
-  title: string;
-  icon?: React.ReactNode;
-  detail?: string | JSX.Element | ((color: string) => JSX.Element);
-  popoverHeader?: string;
-  popoverBody?: string | JSX.Element | ((color: string) => JSX.Element);
-};
+  title: string
+  icon?: React.ReactNode
+  detail?: string | JSX.Element | ((color: string) => JSX.Element)
+  popoverHeader?: string
+  popoverBody?: string | JSX.Element | ((color: string) => JSX.Element)
+}
 
 export const itemsTechSkills: Props[] = [
   {
@@ -283,7 +283,7 @@ export const itemsTechSkills: Props[] = [
       </Text>
     ),
   },
-];
+]
 
 // Items for Feature Projects
 export const itemsFeatureProjects: Props[] = [
@@ -351,4 +351,4 @@ export const itemsFeatureProjects: Props[] = [
       </Text>
     ),
   },
-];
+]
