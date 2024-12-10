@@ -20,7 +20,7 @@ import { FaXTwitter } from 'react-icons/fa6'
 import FadeInView from '../../Hooks/FadeInView'
 import { Trans } from '@lingui/macro'
 import { colors } from '../../Hooks/color'
-import SubscribeForm from '../../Newsletter'
+import SubscribeForm from '../../NewsLetter'
 
 const Logo = (props: any) => {
   return (
@@ -78,11 +78,7 @@ const SocialButton = ({
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
-    <Text
-      fontWeight={'500'}
-      fontSize={'lg'}
-      mb={2}
-    >
+    <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
       {children}
     </Text>
   )
@@ -122,18 +118,13 @@ const Footer = () => {
                 color={useColorModeValue('#2b333d', colors.white)}
               >
                 <Trans>
-                  Welcome to my website! I am a software engineer and photographer based in Bosnia and Herzegovina. Feel
-                  free to view my resume and work. <br /> <br />
+                  Welcome to my website! I am a software engineer and
+                  photographer based in Bosnia and Herzegovina. Feel free to
+                  view my resume and work. <br /> <br />
                   Powered by
                 </Trans>{' '}
-                <Link
-                  href='https://react.dev/'
-                  isExternal
-                >
-                  <Box
-                    as='span'
-                    color='#02bece'
-                  >
+                <Link href='https://react.dev/' isExternal>
+                  <Box as='span' color='#02bece'>
                     React
                   </Box>
                 </Link>
@@ -143,14 +134,8 @@ const Footer = () => {
                 >
                   {''} • {''}
                 </Box>
-                <Link
-                  href='https://www.typescriptlang.org/'
-                  isExternal
-                >
-                  <Box
-                    as='span'
-                    color='#02bece'
-                  >
+                <Link href='https://www.typescriptlang.org/' isExternal>
+                  <Box as='span' color='#02bece'>
                     Typescript
                   </Box>
                 </Link>
@@ -160,14 +145,8 @@ const Footer = () => {
                 >
                   {''} • {''}
                 </Box>
-                <Link
-                  href='https://chakra-ui.com/'
-                  isExternal
-                >
-                  <Box
-                    as='span'
-                    color='#02bece'
-                  >
+                <Link href='https://chakra-ui.com/' isExternal>
+                  <Box as='span' color='#02bece'>
                     Chakra UI
                   </Box>
                 </Link>
@@ -175,14 +154,12 @@ const Footer = () => {
             </FadeInView>
             <FadeInView delay={0.1}>
               <Text fontSize={'sm'}>
-                <Trans>Copyright</Trans> ©{year} EjmenRamic. <Trans>All rights reserved</Trans>
+                <Trans>Copyright</Trans> ©{year} EjmenRamic.{' '}
+                <Trans>All rights reserved</Trans>
               </Text>
             </FadeInView>
             <FadeInView delay={0.1}>
-              <Stack
-                direction={'row'}
-                spacing={6}
-              >
+              <Stack direction={'row'} spacing={6}>
                 <SocialButton
                   label={'GitHub'}
                   href={'https://github.com/Ejmen-Ramic/'}
@@ -203,7 +180,9 @@ const Footer = () => {
 
                 <SocialButton
                   label={'LinkedIn'}
-                  href={'https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'}
+                  href={
+                    'https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'
+                  }
                   color={'#0077b5'}
                   hoverColor={'#0A66C2'}
                 >
@@ -265,7 +244,9 @@ const Footer = () => {
                   border={'none'}
                   color={useColorModeValue('#02bece', '#02bece')}
                   _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
-                  _expanded={{ color: useColorModeValue('#2b333d', colors.white) }}
+                  _expanded={{
+                    color: useColorModeValue('#2b333d', colors.white),
+                  }}
                   fontWeight={400}
                   fontSize={'16px'}
                   textTransform={'capitalize'}
