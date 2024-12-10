@@ -21,6 +21,7 @@
     "@lingui/macro": "4.12.0",
     "@lingui/react": "4.12.0",
     "@lingui/swc-plugin": "^4.0.6",
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@sentry/browser": "^8.15.0",
     "@svgr/webpack": "^5.5.0",
@@ -105,7 +106,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "extract": "lingui extract",
-    "compile": "lingui compile --typescript"
+    "compile": "lingui compile --typescript",
+    "start-backend": "ts-node-dev src/backend/server.ts"
   },
   "eslintConfig": {
     "extends": [
@@ -134,8 +136,10 @@
     "@babel/core": "^7.24.5",
     "@lingui/cli": "4.12.0",
     "@lingui/loader": "^4.10.1",
+    "@types/cors": "^2.8.17",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-plugin-macros": "^3.1.0"
+    "babel-plugin-macros": "^3.1.0",
+    "ts-node-dev": "^2.0.0"
   },
   "jest": {
     "roots": [

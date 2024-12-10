@@ -11,37 +11,46 @@ import { BiMailSend } from 'react-icons/bi';
 import * as Sentry from '@sentry/browser';
 import { colors } from './Hooks/color';
 import FadeInView from './Hooks/FadeInView';
-import emailjs from '@emailjs/browser';
+
+type Status = 'IDLE' | 'SUCCESS' | 'ERROR';
+
+interface SubscribeResponse {
+  message: string;
+  data?: any;
+  error?: string;
+  [key: string]: any;
+}
 
 const SubscribeForm: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'IDLE' | 'SUCCESS' | 'ERROR'>('IDLE');
+  const [email, setEmail] = useState<string>('');
+  const [status, setStatus] = useState<Status>('IDLE');
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    setLoading(true);
 
     try {
-      // Send email using EmailJS
-      const response = await emailjs.send(
-        process.env.GATSBY_EMAILJS_SERVICE_ID!,
-        process.env.GATSBY_EMAILJS_TEMPLATE_ID!,
-        {
-          email,
-          to_email: email, // This will be used in the EmailJS template
-          // You can add more template variables here
+      const response = await fetch('http://localhost:5000/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        process.env.GATSBY_EMAILJS_PUBLIC_KEY
-      );
+        body: JSON.stringify({ email }),
+      });
 
-      if (response.status === 200) {
+      const data: SubscribeResponse = await response.json();
+
+      if (response.ok) {
         setStatus('SUCCESS');
         setEmail(''); // Clear the input after successful subscription
       } else {
         setStatus('ERROR');
         Sentry.captureMessage('Error subscribing to newsletter', {
           extra: {
-            status: response.status,
-            text: response.text,
+            message: data.message,
+            error: data.error,
+            data: data.data,
           },
         });
       }
@@ -49,6 +58,8 @@ const SubscribeForm: React.FC = () => {
       setStatus('ERROR');
       console.error(err);
       Sentry.captureException(err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -66,7 +77,7 @@ const SubscribeForm: React.FC = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            type='email' // Add email type for better validation
+            type='email'
           />
           <IconButton
             type='submit'
@@ -77,6 +88,7 @@ const SubscribeForm: React.FC = () => {
             }}
             aria-label='Subscribe'
             icon={<BiMailSend />}
+            isLoading={loading}
           />
         </Stack>
         {status === 'SUCCESS' && (
