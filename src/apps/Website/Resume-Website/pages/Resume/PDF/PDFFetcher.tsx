@@ -1,27 +1,31 @@
-import { Button, useColorModeValue, useToast } from '@chakra-ui/react';
+import {
+  Button,
+  useColorModeValue,
+  useToast,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+} from '@chakra-ui/react';
 import { BsFillPrinterFill } from 'react-icons/bs';
-import { useLingui } from '@lingui/react';
+import { ChevronDownIcon } from '@chakra-ui/icons';
+import { Trans } from '@lingui/macro';
 
-// Define supported languages type
 type SupportedLanguages = 'en' | 'bs';
-
-// Define PDF paths type
 type PDFPaths = {
   [key in SupportedLanguages]: string;
 };
 
 const PDFFEtcher = () => {
   const toast = useToast();
-  const { i18n } = useLingui();
 
   const pdfPaths: PDFPaths = {
     en: '/Website/Resume/PDF/ejmen-ramic-resume-en.pdf',
     bs: '/Website/Resume/PDF/ejmen-ramic-resume-bs.pdf',
   };
 
-  const onButtonClick = () => {
-    const currentLang = i18n.locale as SupportedLanguages;
-    const pdfPath = pdfPaths[currentLang] || pdfPaths.en;
+  const handleDownload = (selectedLang: SupportedLanguages) => {
+    const pdfPath = pdfPaths[selectedLang];
 
     fetch(pdfPath)
       .then((response) => {
@@ -34,7 +38,7 @@ const PDFFEtcher = () => {
         const fileURL = window.URL.createObjectURL(blob);
         const alink = document.createElement('a');
         alink.href = fileURL;
-        alink.download = `ejmen-ramic-resume-${currentLang}.pdf`;
+        alink.download = `ejmen-ramic-resume-${selectedLang}.pdf`;
         document.body.appendChild(alink);
         alink.click();
         document.body.removeChild(alink);
@@ -56,13 +60,24 @@ const PDFFEtcher = () => {
   };
 
   return (
-    <Button
-      variant={'ghost'}
-      onClick={onButtonClick}
-      color={useColorModeValue('blue.800', 'blue.300')}
-    >
-      <BsFillPrinterFill />
-    </Button>
+    <Menu>
+      <MenuButton
+        as={Button}
+        variant={'ghost'}
+        color={useColorModeValue('blue.800', 'blue.300')}
+        rightIcon={<ChevronDownIcon />}
+      >
+        <BsFillPrinterFill />
+      </MenuButton>
+      <MenuList minW={'200px'}>
+        <MenuItem onClick={() => handleDownload('en')}>
+          <Trans>English Version</Trans>
+        </MenuItem>
+        <MenuItem onClick={() => handleDownload('bs')}>
+          <Trans>Bosnian Version</Trans>
+        </MenuItem>
+      </MenuList>
+    </Menu>
   );
 };
 
