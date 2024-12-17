@@ -13,6 +13,7 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+<<<<<<< Updated upstream
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
@@ -21,6 +22,16 @@ import FadeInView from '../../Hooks/FadeInView';
 import { Trans } from '@lingui/macro';
 import { colors } from '../../Hooks/color';
 import SubscribeForm from '../../Newsletter';
+=======
+} from '@chakra-ui/react'
+import { ReactNode } from 'react'
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
+import FadeInView from '../../Hooks/FadeInView'
+import { Trans } from '@lingui/macro'
+import { colors } from '../../Hooks/color'
+import SubscribeForm from './Newsletter'
+>>>>>>> Stashed changes
 
 const Logo = (props: any) => {
   return (
@@ -123,8 +134,13 @@ const Footer = () => {
                   view my resume and work. <br /> <br />
                   Powered by
                 </Trans>{' '}
+<<<<<<< Updated upstream
                 <Link href={'https://react.dev/'} isExternal>
                   <Box as={'span'} color={'#02bece'}>
+=======
+                <Link href='https://react.dev/' isExternal>
+                  <Box as='span' color='#02bece'>
+>>>>>>> Stashed changes
                     React
                   </Box>
                 </Link>
@@ -134,8 +150,13 @@ const Footer = () => {
                 >
                   {''} • {''}
                 </Box>
+<<<<<<< Updated upstream
                 <Link href={'https://www.typescriptlang.org/'} isExternal>
                   <Box as={'span'} color={'#02bece'}>
+=======
+                <Link href='https://www.typescriptlang.org/' isExternal>
+                  <Box as='span' color='#02bece'>
+>>>>>>> Stashed changes
                     Typescript
                   </Box>
                 </Link>
@@ -145,8 +166,13 @@ const Footer = () => {
                 >
                   {''} • {''}
                 </Box>
+<<<<<<< Updated upstream
                 <Link href={'https://chakra-ui.com/'} isExternal>
                   <Box as={'span'} color={'#02bece'}>
+=======
+                <Link href='https://chakra-ui.com/' isExternal>
+                  <Box as='span' color='#02bece'>
+>>>>>>> Stashed changes
                     Chakra UI
                   </Box>
                 </Link>

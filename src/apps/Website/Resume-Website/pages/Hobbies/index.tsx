@@ -1,17 +1,9 @@
-import Page from "../../../../../shared/components/PageWrapper"
-import MakeMoney from "./MakeMoney/MakeMoney"
-import WorkersTestimonial from "./WorkersReview/WorkersTestimonial"
-import JoinOurTeam from "./JoinOurTeam/JoinOurTeam"
-import { FC } from "react"
+import Page from '../../../../../shared/components/PageWrapper'
 
-const HobbiesPage:FC = () => {
-  return (
-    <Page>
-      <MakeMoney />
-      <WorkersTestimonial />
-      <JoinOurTeam />
-    </Page>
-  )
+import { FC } from 'react'
+
+const HobbiesPage: FC = () => {
+  return <Page children={undefined} />
 }
 
 export default HobbiesPage

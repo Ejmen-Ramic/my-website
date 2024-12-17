@@ -1,13 +1,15 @@
-import { Button, ButtonProps, Flex, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import {
+  Button,
+  ButtonProps,
+  Flex,
+  useColorMode,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import { BsSun, BsMoonStarsFill } from 'react-icons/bs'
 
 const ColorMode = (props: ButtonProps) => {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
-    /**
-     * Note: Usually, only the button component should be used (without Flex).
-     * Props compatible with <Button /> are supported.
-     */
     <Flex justifyContent={'center'} alignItems={'center'}>
       <Button
         bg={useColorModeValue('gray.300', '#FFFFFF14')}

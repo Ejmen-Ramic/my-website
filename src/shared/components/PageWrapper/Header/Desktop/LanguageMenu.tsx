@@ -18,7 +18,6 @@ import { IoLanguageOutline } from 'react-icons/io5'
 import { useLanguage } from '../../../LanguageSwitcher/languageContext'
 import { colors } from '../../../Hooks/color'
 
-
 const languageOptions = [
   {
     name: t`English`,
@@ -54,7 +53,12 @@ const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
 
   return (
     <Stack direction={'row'} spacing={4}>
-      <Popover trigger={'hover'} placement={'bottom-start'} onOpen={onOpen} onClose={onClose}>
+      <Popover
+        trigger={'hover'}
+        placement={'bottom-start'}
+        onOpen={onOpen}
+        onClose={onClose}
+      >
         <PopoverTrigger>
           <HStack alignItems={'center'} cursor={'pointer'} role={'group'}>
             <Link
@@ -123,11 +127,15 @@ const LanguageItem = ({
   linkColor,
   changeLanguage,
   onClose,
-}: MenuData & { linkColor: string; changeLanguage: (locale: string) => void; onClose: () => void }) => {
+}: MenuData & {
+  linkColor: string
+  changeLanguage: (locale: string) => void
+  onClose: () => void
+}) => {
   return (
     <Link
       onClick={() => {
-        changeLanguage(locale!)  // Update language using context function
+        changeLanguage(locale!)
         onClose()
       }}
       display={'block'}
