@@ -10,17 +10,10 @@ import {
   Avatar,
   Heading,
   Skeleton,
-<<<<<<< Updated upstream
 } from '@chakra-ui/react';
 import items from './Props';
 import FadeInView from '../../../../../../../shared/components/Hooks/FadeInView';
 import { colors } from '../../../../../../../shared/components/Hooks/color';
-=======
-} from '@chakra-ui/react'
-import items from './Props'
-import FadeInView from '../../../../../../../shared/components/Hooks/FadeInView'
-import { colors } from '../../../../../../../shared/components/Hooks/color'
->>>>>>> Stashed changes
 
 interface BoxClassProps {
   languageimage: string;
@@ -187,15 +180,9 @@ const BoxClass = () => {
             (_, i) => (
               <Skeleton
                 key={i}
-<<<<<<< Updated upstream
                 height={'370px'}
                 width={'350px'}
                 borderRadius={'md'}
-=======
-                height='370px' // Adjust the height to match your design
-                width='350px' // Adjust the width to match your design
-                borderRadius='md'
->>>>>>> Stashed changes
               />
             )
           )}
