@@ -144,7 +144,7 @@ const Newsletter: React.FC = () => {
         pb={{ base: '60px', md: 0 }}
       >
         <Stack direction={'row'} spacing={2}>
-          <Popover trigger={'hover'} placement={'top-start'}>
+          <Popover trigger={'click'} placement={'top-start'}>
             <PopoverTrigger>
               <Input
                 placeholder={'Enter your email address'}
