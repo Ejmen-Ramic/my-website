@@ -4,7 +4,8 @@ import bodyParser from 'body-parser'
 import mailchimp from '@mailchimp/mailchimp_marketing'
 import dotenv from 'dotenv'
 
-dotenv.config()
+// Load environment variables from .env.local
+dotenv.config({ path: '.env.local' })
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -12,14 +13,23 @@ const PORT = process.env.PORT || 5000
 app.use(cors())
 app.use(bodyParser.json())
 
-// When needed remove to test
-// console.log('Environment variables loaded:', process.env)
-// console.log('Audience ID:', process.env.REACT_APP_MAILCHIMP_AUDIENCE_ID)
-// console.log('Server Prefix:', process.env.REACT_APP_MAILCHIMP_SERVER_PREFIX)
+// Validate required environment variables
+const requiredEnvVars = [
+  'MAILCHIMP_API_KEY',
+  'MAILCHIMP_SERVER_PREFIX',
+  'MAILCHIMP_AUDIENCE_ID'
+]
 
+requiredEnvVars.forEach(varName => {
+  if (!process.env[varName]) {
+    throw new Error(`Missing required environment variable: ${varName}`)
+  }
+})
+
+// Configure Mailchimp with environment variables (only once)
 mailchimp.setConfig({
-  apiKey: process.env.REACT_APP_MAILCHIMP_API_KEY as string,
-  server: process.env.REACT_APP_MAILCHIMP_SERVER_PREFIX as string,
+  apiKey: process.env.MAILCHIMP_API_KEY as string,
+  server: process.env.MAILCHIMP_SERVER_PREFIX as string,
 })
 
 interface SubscribeRequestBody {
@@ -36,7 +46,7 @@ app.post(
     }
 
     try {
-      const audienceId = process.env.REACT_APP_MAILCHIMP_AUDIENCE_ID
+      const audienceId = process.env.MAILCHIMP_AUDIENCE_ID
       if (!audienceId) {
         throw new Error('Mailchimp Audience ID is not configured')
       }
