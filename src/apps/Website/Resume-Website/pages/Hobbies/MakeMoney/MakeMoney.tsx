@@ -50,7 +50,7 @@ const MakeMoneyPart = () => {
     <>
       <motion.div
         ref={ref}
-        initial='hidden'
+        initial={'hidden'}
         animate={controls}
         variants={fadeInVariants}
       >

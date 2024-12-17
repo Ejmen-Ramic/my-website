@@ -7,17 +7,17 @@ import {
   VStack,
   Text,
   Image,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 import {
   faGithub,
   faInstagram,
   faLinkedin,
-} from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { Link } from 'react-router-dom'
-import { Trans } from '@lingui/macro'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { Link } from 'react-router-dom';
+import { Trans } from '@lingui/macro';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 // import ParticlesBackground from './Particles';
 
 const Welcome = () => {
@@ -32,13 +32,15 @@ const Welcome = () => {
       {/* Container For the Image Text */}
 
       <Box
-        position='absolute'
+        position={'absolute'}
         top={0}
         left={0}
-        width='100%'
-        height='100%'
+        width={'100%'}
+        height={'100%'}
         zIndex={1}
-        backgroundImage='linear-gradient(to top, rgba(5,23,33,2) 0%, rgba(5,23,33,0) 100%)'
+        backgroundImage={
+          'linear-gradient(to top, rgba(5,23,33,2) 0%, rgba(5,23,33,0) 100%)'
+        }
       >
         <Image
           src={'./Website/Resume/Home/hero.jpg'}
@@ -133,7 +135,7 @@ const Welcome = () => {
         <FadeInView direction={'left'} delay={0.5}>
           <HStack>
             <Tooltip label={'GitHub'}>
-              <a href='https://github.com/Ejmen-Ramic/'>
+              <a href={'https://github.com/Ejmen-Ramic/'}>
                 <Box
                   p={0}
                   pt={'10px'}
@@ -147,7 +149,11 @@ const Welcome = () => {
               </a>
             </Tooltip>
             <Tooltip label={'LinkedIn'}>
-              <a href='https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'>
+              <a
+                href={
+                  'https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'
+                }
+              >
                 <Box
                   p={0}
                   pt={'10px'}
@@ -161,7 +167,7 @@ const Welcome = () => {
               </a>
             </Tooltip>
             <Tooltip label={'Instagram'}>
-              <a href='https://www.instagram.com/ejmenramic/'>
+              <a href={'https://www.instagram.com/ejmenramic/'}>
                 <Box
                   p={0}
                   pt={'10px'}
@@ -178,7 +184,7 @@ const Welcome = () => {
         </FadeInView>
       </VStack>
     </Box>
-  )
-}
+  );
+};
 
-export default Welcome
+export default Welcome;

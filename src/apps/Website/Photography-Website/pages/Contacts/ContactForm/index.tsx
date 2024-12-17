@@ -82,12 +82,16 @@ const ContactForm = () => {
                     />
                   </Tooltip>
 
-                  <Link href='https://www.facebook.com/profile.php?id=100092716802936'>
+                  <Link
+                    href={
+                      'https://www.facebook.com/profile.php?id=100092716802936'
+                    }
+                  >
                     <IconButton
                       aria-label={'github'}
                       variant={'ghost'}
                       size={'lg'}
-                      fontSize='3xl'
+                      fontSize={'3xl'}
                       icon={<BsGithub />}
                       _hover={{
                         bg: 'blue.500',
@@ -97,12 +101,12 @@ const ContactForm = () => {
                     />
                   </Link>
 
-                  <Link href='https://x.com/EjmenRamic'>
+                  <Link href={'https://x.com/EjmenRamic'}>
                     <IconButton
-                      aria-label='x'
+                      aria-label={'x'}
                       variant={'ghost'}
                       size={'lg'}
-                      icon={<BsTwitterX size='28px' />}
+                      icon={<BsTwitterX size={'28px'} />}
                       _hover={{
                         bg: 'blue.500',
                         color: useColorModeValue(colors.white, 'gray.700'),
@@ -111,12 +115,16 @@ const ContactForm = () => {
                     />
                   </Link>
 
-                  <Link href='https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'>
+                  <Link
+                    href={
+                      'https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'
+                    }
+                  >
                     <IconButton
                       aria-label={'linkedin'}
                       variant={'ghost'}
                       size={'lg'}
-                      icon={<BsLinkedin size='28px' />}
+                      icon={<BsLinkedin size={'28px'} />}
                       _hover={{
                         bg: 'blue.500',
                         color: useColorModeValue(colors.white, 'gray.700'),

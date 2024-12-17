@@ -70,10 +70,10 @@ const HeaderMobile = () => {
           textAlign={'center'}
         >
           <Hide below={'md'}>
-            <HamburgerIcon isOpen={isOpen} color={color} size='30px' />
+            <HamburgerIcon isOpen={isOpen} color={color} size={'30px'} />
           </Hide>
           <Show below={'md'}>
-            <HamburgerIcon isOpen={isOpen} color={color} size='20px' />
+            <HamburgerIcon isOpen={isOpen} color={color} size={'20px'} />
           </Show>
         </Button>
       </Box>

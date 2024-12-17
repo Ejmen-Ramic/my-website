@@ -1,22 +1,29 @@
-import { Box, Button, Flex, Heading, HStack, Show, useColorModeValue } from '@chakra-ui/react'
-import { useState } from 'react'
-import HeaderMobile from './Mobile'
-import { Link } from 'react-router-dom'
-import LanguageMenu from './Desktop/LanguageMenu'
-import { Trans } from '@lingui/macro'
-import { colors } from '../../Hooks/color'
-import ColorMode from '../../Color-Mode/ColorMode'
-
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  HStack,
+  Show,
+  useColorModeValue,
+} from '@chakra-ui/react';
+import { useState } from 'react';
+import HeaderMobile from './Mobile';
+import { Link } from 'react-router-dom';
+import LanguageMenu from './Desktop/LanguageMenu';
+import { Trans } from '@lingui/macro';
+import { colors } from '../../Hooks/color';
+import ColorMode from '../../Color-Mode/ColorMode';
 
 interface HeaderProps {
-  isStickyHeader?: boolean
+  isStickyHeader?: boolean;
 }
 const Header = ({ isStickyHeader }: HeaderProps = {}) => {
-  const [homeHovered, setHomeHovered] = useState(false)
-  const [resumeHovered, setResumeHovered] = useState(false)
-  const [aboutHovered, setAboutHovered] = useState(false)
-  const [contactHovered, setContactHovered] = useState(false)
-  const [languageHovered, setLanguageHovered] = useState(false)
+  const [homeHovered, setHomeHovered] = useState(false);
+  const [resumeHovered, setResumeHovered] = useState(false);
+  const [aboutHovered, setAboutHovered] = useState(false);
+  const [contactHovered, setContactHovered] = useState(false);
+  const [languageHovered, setLanguageHovered] = useState(false);
 
   return (
     <Flex
@@ -46,19 +53,25 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
         </Link>
       </HStack>
       <Show above={'lg'}>
-        <HStack mr={'40px'} fontSize={'18px'} fontFamily={'revert-layer'} cursor={'pointer'} h={'100%'}>
+        <HStack
+          mr={'40px'}
+          fontSize={'18px'}
+          fontFamily={'revert-layer'}
+          cursor={'pointer'}
+          h={'100%'}
+        >
           <Link to={'/'}>
             <Box
               h={'100%'}
               borderColor={homeHovered ? '#02bece' : '#2b333d'}
               borderTopWidth={homeHovered ? '8px' : '0px'}
-              borderTopColor='#02bece'
-              transition='all 0.1s ease-in-out'
+              borderTopColor={'#02bece'}
+              transition={'all 0.1s ease-in-out'}
               onMouseEnter={() => setHomeHovered(true)}
               onMouseLeave={() => setHomeHovered(false)}
-              overflow='hidden'
+              overflow={'hidden'}
               justifyItems={'center'}
-              boxSizing='border-box'
+              boxSizing={'border-box'}
             >
               <Button
                 variant={'link'}
@@ -82,13 +95,13 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
               h={'100%'}
               borderColor={resumeHovered ? '#02bece' : '#2b333d'}
               borderTopWidth={resumeHovered ? '8px' : '0px'}
-              borderTopColor='#02bece'
-              transition='all 0.1s ease-in-out'
+              borderTopColor={'#02bece'}
+              transition={'all 0.1s ease-in-out'}
               onMouseEnter={() => setResumeHovered(true)}
               onMouseLeave={() => setResumeHovered(false)}
-              overflow='hidden'
+              overflow={'hidden'}
               justifyItems={'center'}
-              boxSizing='border-box'
+              boxSizing={'border-box'}
             >
               <Button
                 variant={'link'}
@@ -111,17 +124,17 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
             h={'100%'}
             borderColor={hobbiesHovered ? '#02bece' : '#2b333d'}
             borderTopWidth={hobbiesHovered ? '4px' : '0px'}
-            borderTopColor='#02bece'
-            transition='all 0.1s ease-in-out'
+            borderTopColor={'#02bece'}
+            transition={'all 0.1s ease-in-out'}
             onMouseEnter={() => {
               setHobbiesHovered(true)
             }}
             onMouseLeave={() => {
               setHobbiesHovered(false)
             }}
-            overflow='hidden'
+            overflow={'hidden'}
             justifyItems={'center'}
-            boxSizing='border-box'
+            boxSizing={'border-box'}
           >
             <DropDownHobbies />
           </Box> */}
@@ -130,13 +143,13 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
               h={'100%'}
               borderColor={aboutHovered ? '#02bece' : '#2b333d'}
               borderTopWidth={aboutHovered ? '8px' : '0px'}
-              borderTopColor='#02bece'
-              transition='all 0.1s ease-in-out'
+              borderTopColor={'#02bece'}
+              transition={'all 0.1s ease-in-out'}
               onMouseEnter={() => setAboutHovered(true)}
               onMouseLeave={() => setAboutHovered(false)}
-              overflow='hidden'
+              overflow={'hidden'}
               justifyItems={'center'}
-              boxSizing='border-box'
+              boxSizing={'border-box'}
             >
               <Button
                 variant={'link'}
@@ -160,13 +173,13 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
               h={'100%'}
               borderColor={contactHovered ? '#02bece' : '#2b333d'}
               borderTopWidth={contactHovered ? '8px' : '0px'}
-              borderTopColor='#02bece'
-              transition='all 0.1s ease-in-out'
+              borderTopColor={'#02bece'}
+              transition={'all 0.1s ease-in-out'}
               onMouseEnter={() => setContactHovered(true)}
               onMouseLeave={() => setContactHovered(false)}
-              overflow='hidden'
+              overflow={'hidden'}
               justifyItems={'center'}
-              boxSizing='border-box'
+              boxSizing={'border-box'}
             >
               <Button
                 variant={'link'}
@@ -189,17 +202,17 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
             h={'100%'}
             borderColor={languageHovered ? '#02bece' : '#2b333d'}
             borderTopWidth={languageHovered ? '4px' : '0px'}
-            borderTopColor='#02bece'
-            transition='all 0.1s ease-in-out'
+            borderTopColor={'#02bece'}
+            transition={'all 0.1s ease-in-out'}
             onMouseEnter={() => {
-              setLanguageHovered(true)
+              setLanguageHovered(true);
             }}
             onMouseLeave={() => {
-              setLanguageHovered(false)
+              setLanguageHovered(false);
             }}
-            overflow='hidden'
+            overflow={'hidden'}
             justifyItems={'center'}
-            boxSizing='border-box'
+            boxSizing={'border-box'}
           >
             <LanguageMenu />
           </Box>
@@ -216,7 +229,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
         <HeaderMobile />
       </Show>
     </Flex>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

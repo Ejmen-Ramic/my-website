@@ -91,7 +91,7 @@ const Quiz = () => {
               {/**This is a button and when pressed it changes to next question if the user has selected the right answer. The button disappears when it is on last question. */}
               {currentQuestion === Questions.length - 1 ? null : (
                 <QuizButton
-                  text='NEXT'
+                  text={'NEXT'}
                   disabled={!userAnswers[currentQuestion]}
                   onClick={() => {
                     const nextQuestion = currentQuestion + 1;

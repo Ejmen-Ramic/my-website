@@ -1,56 +1,55 @@
-// components/HamburgerIcon.tsx
-import { Box } from '@chakra-ui/react'
-import { motion } from 'framer-motion'
+import { Box } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 
 interface HamburgerIconProps {
-  isOpen: boolean
-  color?: string
-  size?: string
+  isOpen: boolean;
+  color?: string;
+  size?: string;
 }
 
-const MotionBox = motion(Box)
+const MotionBox = motion(Box);
 
 const HamburgerIcon = ({
   isOpen,
   color = 'currentColor',
   size = '30px',
 }: HamburgerIconProps) => {
-  const lineHeight = '2px'
-  const transition = { duration: 0.3 }
+  const lineHeight = '2px';
+  const transition = { duration: 0.3 };
 
   return (
     <Box
       h={size}
       w={size}
-      position='relative'
-      cursor='pointer'
-      display='flex'
-      alignItems='center'
-      justifyContent='center'
+      position={'relative'}
+      cursor={'pointer'}
+      display={'flex'}
+      alignItems={'center'}
+      justifyContent={'center'}
     >
-      <Box position='relative' w='24px' h='16px'>
+      <Box position={'relative'} w={'24px'} h={'16px'}>
         {/* Top line */}
         <MotionBox
-          position='absolute'
-          top='0'
-          left='0'
+          position={'absolute'}
+          top={'0'}
+          left={'0'}
           height={lineHeight}
           bg={color}
-          transformOrigin='left center'
+          transformOrigin={'left center'}
           animate={{
             rotate: isOpen ? -46 : 0,
             width: isOpen ? '10px' : '24px',
             y: isOpen ? '7px' : 0,
-            x: isOpen ? '-1px' : 0, // Shift slightly left when open
+            x: isOpen ? '-1px' : 0,
           }}
           transition={transition}
         />
 
         {/* Middle line */}
         <MotionBox
-          position='absolute'
-          top='7px'
-          left='0'
+          position={'absolute'}
+          top={'7px'}
+          left={'0'}
           height={lineHeight}
           bg={color}
           animate={{
@@ -63,23 +62,23 @@ const HamburgerIcon = ({
 
         {/* Bottom line */}
         <MotionBox
-          position='absolute'
-          bottom='0'
-          left='0'
+          position={'absolute'}
+          bottom={'0'}
+          left={'0'}
           height={lineHeight}
           bg={color}
-          transformOrigin='left center'
+          transformOrigin={'left center'}
           animate={{
             rotate: isOpen ? 46 : 0,
             width: isOpen ? '10px' : '24px',
             y: isOpen ? '-7px' : 0,
-            x: isOpen ? '-1px' : 0, // Shift slightly left when open
+            x: isOpen ? '-1px' : 0,
           }}
           transition={transition}
         />
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default HamburgerIcon
+export default HamburgerIcon;

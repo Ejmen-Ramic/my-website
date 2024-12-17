@@ -17,42 +17,42 @@ import {
   VStack,
   Text,
   Button,
-} from '@chakra-ui/react'
-import { steps } from './items'
-import { Trans } from '@lingui/macro'
+} from '@chakra-ui/react';
+import { steps } from './items';
+import { Trans } from '@lingui/macro';
 
 const SchoolCertificates = () => {
   const { activeStep, setActiveStep } = useSteps({
     index: 0,
     count: steps.length,
-  })
+  });
 
   const handleNext = () => {
     if (activeStep < steps.length - 1) {
-      setActiveStep(activeStep + 1)
+      setActiveStep(activeStep + 1);
     }
-  }
+  };
 
   const handlePrevious = () => {
     if (activeStep > 0) {
-      setActiveStep(activeStep - 1)
+      setActiveStep(activeStep - 1);
     }
-  }
+  };
 
-  const breakpoint = useBreakpointValue({ base: 'base', md: 'md', lg: 'lg' })
+  const breakpoint = useBreakpointValue({ base: 'base', md: 'md', lg: 'lg' });
 
   const getStepHeight = () => {
     if (breakpoint === 'base') {
-      return 'auto'
+      return 'auto';
     }
     if (breakpoint === 'md') {
-      return 'auto'
+      return 'auto';
     }
     if (breakpoint === 'lg') {
-      return 'auto'
+      return 'auto';
     }
-    return 'auto'
-  }
+    return 'auto';
+  };
 
   return (
     <VStack w={'full'} px={{ md: '100px', lg: '5%' }}>
@@ -107,7 +107,7 @@ const SchoolCertificates = () => {
                       src={step.image}
                       alt={step.title}
                       boxShadow={'md'}
-                      objectFit='contain'
+                      objectFit={'contain'}
                     />
                     <VStack
                       w={'full'}
@@ -131,8 +131,8 @@ const SchoolCertificates = () => {
                         {activeStep > 0 && (
                           <Button
                             onClick={(e) => {
-                              e.stopPropagation()
-                              handlePrevious()
+                              e.stopPropagation();
+                              handlePrevious();
                             }}
                             mr={4}
                           >
@@ -142,8 +142,8 @@ const SchoolCertificates = () => {
                         {activeStep !== steps.length - 1 && (
                           <Button
                             onClick={(e) => {
-                              e.stopPropagation()
-                              handleNext()
+                              e.stopPropagation();
+                              handleNext();
                             }}
                           >
                             Next
@@ -160,7 +160,7 @@ const SchoolCertificates = () => {
         </Stepper>
       </Stack>
     </VStack>
-  )
-}
+  );
+};
 
-export default SchoolCertificates
+export default SchoolCertificates;

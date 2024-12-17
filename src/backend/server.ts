@@ -4,7 +4,6 @@ import bodyParser from 'body-parser'
 import mailchimp from '@mailchimp/mailchimp_marketing'
 import dotenv from 'dotenv'
 
-// Load environment variables from .env.local
 dotenv.config({ path: '.env.local' })
 
 const app = express()
@@ -13,7 +12,6 @@ const PORT = process.env.PORT || 5000
 app.use(cors())
 app.use(bodyParser.json())
 
-// Validate required environment variables
 const requiredEnvVars = [
   'MAILCHIMP_API_KEY',
   'MAILCHIMP_SERVER_PREFIX',
@@ -26,7 +24,6 @@ requiredEnvVars.forEach(varName => {
   }
 })
 
-// Configure Mailchimp with environment variables (only once)
 mailchimp.setConfig({
   apiKey: process.env.MAILCHIMP_API_KEY as string,
   server: process.env.MAILCHIMP_SERVER_PREFIX as string,
