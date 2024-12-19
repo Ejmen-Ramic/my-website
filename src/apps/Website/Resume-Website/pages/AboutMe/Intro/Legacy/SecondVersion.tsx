@@ -11,7 +11,6 @@ import {
   Box,
   Show,
 } from '@chakra-ui/react';
-// Here we have used react-icons package for the icons
 import { FaGithub } from 'react-icons/fa';
 import { colors } from '../../../../../../../shared/components/Hooks/color';
 

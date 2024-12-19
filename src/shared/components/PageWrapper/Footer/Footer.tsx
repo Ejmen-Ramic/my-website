@@ -8,11 +8,6 @@ import {
   Text,
   VisuallyHidden,
   useColorModeValue,
-  Button,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
@@ -236,7 +231,7 @@ const Footer = () => {
                 <Trans>Resume</Trans>
               </Link>
             </FadeInView>
-            <FadeInView delay={0.1}>
+            {/* <FadeInView delay={0.1}>
               <Menu>
                 <MenuButton
                   as={Button}
@@ -266,7 +261,7 @@ const Footer = () => {
                   </MenuItem>
                 </MenuList>
               </Menu>
-            </FadeInView>
+            </FadeInView> */}
             <FadeInView delay={0.1}>
               <Link
                 href={'/about'}
