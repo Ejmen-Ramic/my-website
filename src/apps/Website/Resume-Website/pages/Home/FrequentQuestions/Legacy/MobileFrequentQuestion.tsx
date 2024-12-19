@@ -49,7 +49,7 @@ const MobileFrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
@@ -75,7 +75,7 @@ const MobileFrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
@@ -102,7 +102,7 @@ const MobileFrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
@@ -129,7 +129,7 @@ const MobileFrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
@@ -155,7 +155,7 @@ const MobileFrequentQuestions = () => {
                       padding: '12px',
                       border: '1px solid #000',
                       borderRadius: '4px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
@@ -188,7 +188,7 @@ const MobileFrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
@@ -214,7 +214,7 @@ const MobileFrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
@@ -240,7 +240,7 @@ const MobileFrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
@@ -266,7 +266,7 @@ const MobileFrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
@@ -293,7 +293,7 @@ const MobileFrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>

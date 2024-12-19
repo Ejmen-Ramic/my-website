@@ -3,7 +3,6 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { colors } from '../Hooks/color';
 import { keyframes } from '@emotion/react';
 
-// Define the keyframes for the circle animation
 const circle = keyframes`
   0% {
     transform: rotate(0deg) translate(-50px) rotate(0deg);
@@ -32,8 +31,8 @@ const WhatsappIcon = () => {
         bgColor={'#25D366'}
         borderRadius={'50%'}
         position={'absolute'}
-        top={'60%'} // Position below the middle of the screen
-        right={'-50px'} // Half of the circle off the right side of the screen
+        top={'60%'}
+        right={'-50px'}
         display={'flex'}
         justifyContent={'center'}
         alignItems={'center'}

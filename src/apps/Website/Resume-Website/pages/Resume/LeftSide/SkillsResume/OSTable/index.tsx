@@ -9,22 +9,28 @@ import {
   Tbody,
   Td,
   useColorModeValue,
-} from '@chakra-ui/react'
-import { Trans } from '@lingui/macro'
-import { FC, ReactNode } from 'react'
-import { FaCircle } from 'react-icons/fa6'
+} from '@chakra-ui/react';
+import { Trans } from '@lingui/macro';
+import { FC, ReactNode } from 'react';
+import { FaCircle } from 'react-icons/fa6';
 
 type Header = {
-  name?: ReactNode
-  style?: ChakraProps
-}
+  name?: ReactNode;
+  style?: ChakraProps;
+};
 
-const usageLevel = ['Novice', 'Beginner', 'Intermediate', 'Proficient', 'Advanced'] as const
+const usageLevel = [
+  'Novice',
+  'Beginner',
+  'Intermediate',
+  'Proficient',
+  'Advanced',
+] as const;
 
 type Item = {
-  name: string
-  level: (typeof usageLevel)[number][]
-}
+  name: string;
+  level: (typeof usageLevel)[number][];
+};
 
 const getItems = () => {
   const items: Item[] = [
@@ -40,28 +46,31 @@ const getItems = () => {
       name: 'Mac',
       level: ['Novice', 'Beginner', 'Intermediate'],
     },
-  ]
-  return items
-}
+  ];
+  return items;
+};
 
 const OSTable: FC = () => {
-  const nameColor = useColorModeValue('#000000', '#ECEFF4')
-  const skillColor = useColorModeValue('#0b3948', '#98bed5')
-  const noSkillColor = useColorModeValue('#8d9da7', '#303c40')
-  const columnWidth = useBreakpointValue({ base: '0px', md: '0px' })
+  const nameColor = useColorModeValue('#000000', '#ECEFF4');
+  const skillColor = useColorModeValue('#0b3948', '#98bed5');
+  const noSkillColor = useColorModeValue('#8d9da7', '#303c40');
+  const columnWidth = useBreakpointValue({ base: '0px', md: '0px' });
   const headers = useBreakpointValue({
     base: [
       {
         name: (
-          <Text textTransform={'capitalize'} color={useColorModeValue('#0B3948', '#98BED5')}>
-            <Trans>Operative Sytem</Trans>
+          <Text
+            textTransform={'capitalize'}
+            color={useColorModeValue('#0B3948', '#98BED5')}
+          >
+            <Trans>Operative System</Trans>
           </Text>
         ),
       },
     ],
-  }) as Header[]
+  }) as Header[];
 
-  const items = getItems()
+  const items = getItems();
 
   return (
     <Table border={'none'}>
@@ -85,11 +94,17 @@ const OSTable: FC = () => {
       <Tbody gap={'24px'} alignItems={'start'}>
         {items.map(({ name, level }: Item, i) => (
           <Tr key={i} border={0}>
-            <Td fontSize={'12px'} fontWeight={600} color={nameColor} border={0} p={'0px'}>
+            <Td
+              fontSize={'12px'}
+              fontWeight={600}
+              color={nameColor}
+              border={0}
+              p={'0px'}
+            >
               {name}
             </Td>
             {usageLevel.map((skill, j) => {
-              const isCheck = level.includes(skill)
+              const isCheck = level.includes(skill);
               return (
                 <Td
                   key={j}
@@ -102,18 +117,26 @@ const OSTable: FC = () => {
                   style={{ lineHeight: 0 }}
                 >
                   {isCheck ? (
-                    <FaCircle color={skillColor} size={'13px'} style={{ margin: '0px', display: 'inline-block' }} />
+                    <FaCircle
+                      color={skillColor}
+                      size={'13px'}
+                      style={{ margin: '0px', display: 'inline-block' }}
+                    />
                   ) : (
-                    <FaCircle color={noSkillColor} size={'13px'} style={{ margin: '0px', display: 'inline-block' }} />
+                    <FaCircle
+                      color={noSkillColor}
+                      size={'13px'}
+                      style={{ margin: '0px', display: 'inline-block' }}
+                    />
                   )}
                 </Td>
-              )
+              );
             })}
           </Tr>
         ))}
       </Tbody>
     </Table>
-  )
-}
+  );
+};
 
-export default OSTable
+export default OSTable;

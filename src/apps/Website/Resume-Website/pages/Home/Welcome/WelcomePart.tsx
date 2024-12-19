@@ -30,7 +30,6 @@ const Welcome = () => {
       w={'full'}
     >
       {/* Container For the Image Text */}
-
       <Box
         position={'absolute'}
         top={0}
