@@ -72,7 +72,7 @@ msgstr "<0>•</0><1><2> TypeScript: </2></1>Enhances JavaScript with static typ
 #~ msgid "<0>•</0>Cummulative Grade Point's Average(CGPA): 3.44/4.0<1/><2>•</2>The Dean's List for academic excellence in <3>Semester2, 2019/2020 </3> Session<4/><5>•</5>The Dean's List for academic excellence in <6>Semester2, 2020/2021 </6>Session<7/><8>•</8>Final Year Project (FYP) promising projects 2021 (System Development Category)"
 #~ msgstr "<0>•</0>Cummulative Grade Point's Average(CGPA): 3.44/4.0<1/><2>•</2>The Dean's List for academic excellence in <3>Semester2, 2019/2020 </3> Session<4/><5>•</5>The Dean's List for academic excellence in <6>Semester2, 2020/2021 </6>Session<7/><8>•</8>Final Year Project (FYP) promising projects 2021 (System Development Category)"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:19
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:21
 msgid "<0>•</0>Cumulative Grade Point's Average(CGPA): 3.44/4.0<1/><2>•</2>The Dean's List for academic excellence in <3>Semester2, 2019/2020 </3> Session<4/><5>•</5>The Dean's List for academic excellence in <6>Semester2, 2020/2021 </6>Session<7/><8>•</8>Final Year Project (FYP) promising projects 2021 (System Development Category)"
 msgstr "<0>•</0>Cumulative Grade Point's Average(CGPA): 3.44/4.0<1/><2>•</2>The Dean's List for academic excellence in <3>Semester2, 2019/2020 </3> Session<4/><5>•</5>The Dean's List for academic excellence in <6>Semester2, 2020/2021 </6>Session<7/><8>•</8>Final Year Project (FYP) promising projects 2021 (System Development Category)"
 
@@ -173,7 +173,7 @@ msgstr "Bachelor's Degree"
 #~ msgid "Bachelor's Diploma"
 #~ msgstr "Bachelor's Diploma"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:16
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:17
 msgid "Bachelor's in Information and Communication Technology"
 msgstr "Bachelor's in Information and Communication Technology"
 

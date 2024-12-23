@@ -59,7 +59,7 @@ msgstr "<0>•</0><1><2> TypeScript: </2></1> Poboljšava JavaScript sa statičk
 #~ msgid "<0>•</0>Cummulative Grade Point's Average(CGPA): 3.44/4.0<1/><2>•</2>The Dean's List for academic excellence in <3>Semester2, 2019/2020 </3> Session<4/><5>•</5>The Dean's List for academic excellence in <6>Semester2, 2020/2021 </6>Session<7/><8>•</8>Final Year Project (FYP) promising projects 2021 (System Development Category)"
 #~ msgstr "<0>•</0>Prosječna ocjena (CGPA): 3.44/4.0<1/><2>•</2>Lista dekana za akademsku izvrsnost u <3>semestru 2, 2019/2020</3> sesija<4/><5>•</5>Lista dekana za akademsku izvrsnost u <6>semestru 2, 2020/2021</6> sesija<7/><8>•</8>Finalni projekt (FYP) obećavajući projekti 2021 (Kategorija razvoja sistema)"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:19
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:21
 msgid "<0>•</0>Cumulative Grade Point's Average(CGPA): 3.44/4.0<1/><2>•</2>The Dean's List for academic excellence in <3>Semester2, 2019/2020 </3> Session<4/><5>•</5>The Dean's List for academic excellence in <6>Semester2, 2020/2021 </6>Session<7/><8>•</8>Final Year Project (FYP) promising projects 2021 (System Development Category)"
 msgstr "<0>•</0>Prosječni zbir ocjena (CGPA): 3.44/4.0<1/><2>•</2>Lista dekana za akademsku izvrsnost u <3>2. semestru, 2019/2020 </3> akademskoj godini<4/><5>•</5>Lista dekana za akademsku izvrsnost u <6>2. semestru, 2020/2021 </6>akademskoj godini<7/><8>•</8>Završni projekt (FYP) perspektivni projekti 2021 (Kategorija razvoja sistema)"
 
@@ -160,7 +160,7 @@ msgstr "Diploma prvog ciklusa studija"
 #~ msgid "Bachelor's Diploma"
 #~ msgstr "Diploma Prvostupnika"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:16
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:17
 msgid "Bachelor's in Information and Communication Technology"
 msgstr "Diplomirani inženjer informacijskih i komunikacijskih tehnologija"
 
@@ -894,7 +894,7 @@ msgstr "Hvala što ste se pretplatili!"
 
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:17
 msgid "The \"Blockchain Charity\" project is a web application designed to ensure safe and transparent charitable donations via blockchain. It includes smart contract testing for donation and withdrawal transactions, and features for managing and monitoring donations and thresholds. The app uses tools like Truffle, Ganache, and MetaMask to securely handle and display transactions, helping to prevent fraud and money laundering while ensuring funds reach the intended recipients."
-msgstr "Projekt \"Blockchain Charity\" je web aplikacija dizajnirana za osiguravanje sigurnih i transparentnih dobrotvornih donacija putem blockchaina. Uključuje testiranje pametnih ugovora za transakcije donacija i povlačenja, te značajke za upravljanje i praćenje donacija i pragova. Aplikacija koristi alate poput Truffle-a, Ganache-a i MetaMask-a za sigurno rukovanje i prikazivanje transakcija, pomažući u sprječavanju prijevara i pranja novca, osiguravajući da sredstva stignu do namijenjenih primatelja."
+msgstr "Projekt \"Blockchain Charity\" je web aplikacija dizajnirana za osiguravanje sigurnih i transparentnih dobrotvornih donacija putem blockchaina. Uključuje testiranje pametnih ugovora za transakcije donacija i povlačenja, te značajke za upravljanje i praćenje donacija i pragova. Aplikacija koristi alate poput Truffle-a, Ganache-a i MetaMask-a za sigurno rukovanje i prikazivanje transakcija, pomažući u sprječavanju prevara i pranja novca, osiguravajući da sredstva stignu do namijenjenih primatelja."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:202
 msgid "The following list of frequently asked questions by employers that may also assist you in getting your questions answered:"
