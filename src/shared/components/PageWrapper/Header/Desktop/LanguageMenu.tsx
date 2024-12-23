@@ -11,45 +11,45 @@ import {
   PopoverContent,
   useDisclosure,
   useColorModeValue,
-} from '@chakra-ui/react'
-import { FaChevronDown } from 'react-icons/fa'
-import { t, Trans } from '@lingui/macro'
-import { IoLanguageOutline } from 'react-icons/io5'
-import { useLanguage } from '../../../LanguageSwitcher/languageContext'
-import { colors } from '../../../Hooks/color'
+} from '@chakra-ui/react';
+import { FaChevronDown } from 'react-icons/fa';
+import { Trans } from '@lingui/macro';
+import { IoLanguageOutline } from 'react-icons/io5';
+import { useLanguage } from '../../../LanguageSwitcher/languageContext';
+import { colors } from '../../../Hooks/color';
+
+interface MenuData {
+  name: string | JSX.Element;
+  locale?: string;
+}
+
+interface LanguageMenuProps {
+  languageOptions: MenuData[];
+}
 
 const languageOptions = [
   {
-    name: t`English`,
+    name: <Trans>English</Trans>,
     locale: 'en',
   },
   {
-    name: t`Bosnian`,
+    name: <Trans>Bosnian</Trans>,
     locale: 'ba',
   },
-]
+];
 
 const MenuContainer = () => {
   return (
     <Flex h={'100%'}>
       <LanguageMenu languageOptions={languageOptions} />
     </Flex>
-  )
-}
-
-interface MenuData {
-  name: string
-  locale?: string
-}
-
-interface LanguageMenuProps {
-  languageOptions: MenuData[]
-}
+  );
+};
 
 const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
-  const linkColor = '#02bece'
-  const { onOpen, onClose, isOpen } = useDisclosure()
-  const { changeLanguage } = useLanguage()
+  const linkColor = '#02bece';
+  const { onOpen, onClose, isOpen } = useDisclosure();
+  const { changeLanguage } = useLanguage();
 
   return (
     <Stack direction={'row'} spacing={4}>
@@ -118,8 +118,8 @@ const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
         </PopoverContent>
       </Popover>
     </Stack>
-  )
-}
+  );
+};
 
 const LanguageItem = ({
   name,
@@ -128,15 +128,15 @@ const LanguageItem = ({
   changeLanguage,
   onClose,
 }: MenuData & {
-  linkColor: string
-  changeLanguage: (locale: string) => void
-  onClose: () => void
+  linkColor: string;
+  changeLanguage: (locale: string) => void;
+  onClose: () => void;
 }) => {
   return (
     <Link
       onClick={() => {
-        changeLanguage(locale!)
-        onClose()
+        changeLanguage(locale!);
+        onClose();
       }}
       display={'block'}
       p={2}
@@ -152,7 +152,7 @@ const LanguageItem = ({
         </Box>
       </Stack>
     </Link>
-  )
-}
+  );
+};
 
-export default MenuContainer
+export default MenuContainer;

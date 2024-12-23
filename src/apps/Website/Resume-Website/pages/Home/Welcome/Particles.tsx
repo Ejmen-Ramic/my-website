@@ -7,7 +7,6 @@ import {
   OutMode,
 } from '@tsparticles/engine';
 import { loadSlim } from '@tsparticles/slim';
-import { Box } from '@chakra-ui/react';
 
 const ParticlesBackground = () => {
   const [init, setInit] = useState(false);
@@ -104,20 +103,11 @@ const ParticlesBackground = () => {
 
   if (init) {
     return (
-      <div
-        style={{
-          maxHeight: '100vh',
-          width: '100%',
-          height: '500px',
-          overflow: 'hidden',
-        }}
-      >
-        <Particles
-          id={'tsparticles'}
-          particlesLoaded={particlesLoaded}
-          options={options}
-        />
-      </div>
+      <Particles
+        id={'tsparticles'}
+        particlesLoaded={particlesLoaded}
+        options={options}
+      />
     );
   }
 
