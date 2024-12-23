@@ -12,7 +12,7 @@ import { RiAdminFill } from 'react-icons/ri'
 import { SiTailwindcss } from 'react-icons/si'
 
 type Props = {
-  title: string
+  title: string | JSX.Element
   icon?: React.ReactNode
   detail?: string | JSX.Element | ((color: string) => JSX.Element)
   popoverHeader?: string
@@ -21,7 +21,7 @@ type Props = {
 
 export const itemsTechSkills: Props[] = [
   {
-    title: t`Languages`,
+    title: <Trans>Languages</Trans>,
     icon: <FaCode />,
     detail: 'TypeScript, JavaScript, CSS',
     popoverHeader: 'TypeScript, JavaScript, CSS',
@@ -56,7 +56,7 @@ export const itemsTechSkills: Props[] = [
     ),
   },
   {
-    title: t`Libraries`,
+    title: <Trans>Libraries</Trans>,
     icon: <FaCubes />,
     detail: 'Chakra UI, ShadCN UI, Tailwind, Framer Motion',
     popoverHeader: 'Chakra UI, ShadCN UI, Tailwind, Framer Motion',
@@ -98,7 +98,7 @@ export const itemsTechSkills: Props[] = [
     ),
   },
   {
-    title: t`Frameworks`,
+    title: <Trans>Frameworks</Trans>,
     icon: <SiFramework />,
     detail: 'React, Node.js, WordPress, Next.js',
     popoverHeader: 'React, Node.js, WordPress, Next.js',
@@ -140,7 +140,7 @@ export const itemsTechSkills: Props[] = [
     ),
   },
   {
-    title: t`Tools`,
+    title: <Trans>Tools</Trans>,
     icon: <FaTools />,
     detail: 'Git, Jest, Cypress, Playwright, Jira, Trello, Notion, Slack',
     popoverHeader:
@@ -211,7 +211,7 @@ export const itemsTechSkills: Props[] = [
     ),
   },
   {
-    title: t`Databases`,
+    title: <Trans>Databases</Trans>,
     icon: <FaDatabase />,
     detail: 'MongoDB, MySQL, Prisma',
     popoverHeader: 'MongoDB, MySQL, Prisma',
@@ -245,7 +245,7 @@ export const itemsTechSkills: Props[] = [
     ),
   },
   {
-    title: t`Graphic Design`,
+    title: <Trans>Graphic Design</Trans>,
     icon: <FaPaintBrush />,
     detail: 'Adobe Photoshop, Premiere, Lightroom, Figma',
     popoverHeader: 'Adobe Photoshop, Premiere, Lightroom, Figma',
@@ -288,7 +288,7 @@ export const itemsTechSkills: Props[] = [
 // Items for Feature Projects
 export const itemsFeatureProjects: Props[] = [
   {
-    title: t`Migration to Chakra UI`,
+    title: <Trans>Migration to Chakra UI</Trans>,
     icon: <SiChakraui />,
     detail: (color: string) => (
       <Text>
@@ -309,7 +309,7 @@ export const itemsFeatureProjects: Props[] = [
     ),
   },
   {
-    title: t`Admin Dashboard Development`,
+    title: <Trans>Admin Dashboard Development</Trans>,
     icon: <RiAdminFill />,
     detail: (color: string) => (
       <Text>
@@ -328,7 +328,7 @@ export const itemsFeatureProjects: Props[] = [
     ),
   },
   {
-    title: t`Migration to ShadCn UI`,
+    title: <Trans>Migration to ShadCn UI</Trans>,
     icon: <SiTailwindcss />,
     detail: (color: string) => (
       <Text>

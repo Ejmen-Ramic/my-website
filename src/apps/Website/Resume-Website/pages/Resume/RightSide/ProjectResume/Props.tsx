@@ -10,7 +10,7 @@ export type Props = {
 
 export const itemProps = [
   {
-    name: t`Crypto Charity`,
+    name: <Trans>Crypto Charity</Trans>,
     year: '2022',
     location: <Trans>IIUM, Malaysia</Trans>,
     description: (
@@ -27,7 +27,7 @@ export const itemProps = [
     link: 'https://github.com/Ejmen-Ramic/Blockchain-Charity',
   },
   {
-    name: t`Final Year Project`,
+    name: <Trans>Final Year Project</Trans>,
     year: '2021 - 2022',
     location: <Trans>IIUM, Malaysia</Trans>,
     description: (
@@ -45,7 +45,7 @@ export const itemProps = [
     link: 'https://github.com/Ejmen-Ramic/Ejmen-Ramic-1723715--FYP-2/tree/main/Website%20FYP',
   },
   {
-    name: t`Project V4`,
+    name: <Trans>Project V4</Trans>,
     year: '2023',
     location: <Trans>FLUX, Malaysia</Trans>,
     description: (

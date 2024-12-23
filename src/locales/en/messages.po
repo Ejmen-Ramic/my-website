@@ -148,7 +148,7 @@ msgstr "All rights reserved."
 msgid "An error occurred while subscribing."
 msgstr "An error occurred while subscribing."
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:31
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:37
 msgid "April 15, 2022 - January 15, 2023"
 msgstr "April 15, 2022 - January 15, 2023"
 
@@ -182,7 +182,7 @@ msgstr "Bachelor's in Information and Communication Technology"
 #~ msgstr "Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to continuous learning. My experience collaborating with diverse teams has equipped me with strong communication and interpersonal skills, fostering an environment of creativity and innovation. Additionally, I have a proven track record of meeting tight deadlines while maintaining a high standard of quality. With a proactive mindset and a drive to excel, I am poised to make significant contributions to any project or team."
 
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:17
-#: src/shared/components/PageWrapper/Header/Desktop/LanguageMenu.tsx:27
+#: src/shared/components/PageWrapper/Header/Desktop/LanguageMenu.tsx:36
 #: src/shared/components/PageWrapper/Header/Mobile/LanguageMenuMobile.tsx:50
 msgid "Bosnian"
 msgstr "Bosnian"
@@ -191,7 +191,7 @@ msgstr "Bosnian"
 msgid "Bosnian Version"
 msgstr "Bosnian Version"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:24
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:38
 msgid "Chief Technology Officer at Sense Malaysia"
 msgstr "Chief Technology Officer at Sense Malaysia"
 
@@ -199,7 +199,7 @@ msgstr "Chief Technology Officer at Sense Malaysia"
 #~ msgid "Chief Technology Officer at Sense Sdn. Bhd."
 #~ msgstr "Chief Technology Officer at Sense Sdn. Bhd."
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:31
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:54
 msgid "Co-founder of AfterFund USA"
 msgstr "Co-founder of AfterFund USA"
 
@@ -258,7 +258,7 @@ msgid "Design Projects 3"
 msgstr "Design Projects 3"
 
 #: src/apps/Website/Photography-Website/Shared/FooterPhotography.tsx:266
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:76
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:77
 msgid "Developer"
 msgstr "Developer"
 
@@ -266,7 +266,7 @@ msgstr "Developer"
 #~ msgid "Director at Islamic Development Bank (IsDB)"
 #~ msgstr "Director at Islamic Development Bank (IsDB)"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:45
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:64
 msgid "During my time at FLUX, I had the opportunity to dive into the world of frontend web development. Working hands-on with Chakra UI, TypeScript, React, Next.js, JavaScript, and CSS, I contributed to several projects, learning and growing every step of the way. It was an invaluable experience that helped me refine my skills and solidify my passion for creating dynamic and user-friendly web applications."
 msgstr "During my time at FLUX, I had the opportunity to dive into the world of frontend web development. Working hands-on with Chakra UI, TypeScript, React, Next.js, JavaScript, and CSS, I contributed to several projects, learning and growing every step of the way. It was an invaluable experience that helped me refine my skills and solidify my passion for creating dynamic and user-friendly web applications."
 
@@ -274,11 +274,11 @@ msgstr "During my time at FLUX, I had the opportunity to dive into the world of 
 msgid "Education"
 msgstr "Education"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:21
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:29
 msgid "Ejmen brings a rare mix of technical expertise and innovative thinking. His approach to software engineering reflects a deep understanding of modern development practices, paired with a unique ability to simplify complex problems. He's a true asset to any team."
 msgstr "Ejmen brings a rare mix of technical expertise and innovative thinking. His approach to software engineering reflects a deep understanding of modern development practices, paired with a unique ability to simplify complex problems. He's a true asset to any team."
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:28
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:43
 msgid "Ejmen is a diligent and gifted coder, but what stuck out to me is his integrity. I've seen him operate in several contexts. In each case, he demonstrated incredible character and professionalism. Especially if you're not in the IT field yourself and not sure how things work, having someone who you can trust to do things right--and do right by you--is invaluable. I recommend him without reservation."
 msgstr "Ejmen is a diligent and gifted coder, but what stuck out to me is his integrity. I've seen him operate in several contexts. In each case, he demonstrated incredible character and professionalism. Especially if you're not in the IT field yourself and not sure how things work, having someone who you can trust to do things right--and do right by you--is invaluable. I recommend him without reservation."
 
@@ -299,16 +299,16 @@ msgstr "Email"
 msgid "Email address"
 msgstr "Email address"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:154
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:153
 msgid "Endorsement"
 msgstr "Endorsement"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:33
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:40
 msgid "Engaged in a valuable internship experience as a Web Coordinator at International Maldives Travel Market (IMTM), where I gained practical skills and insights into Travel and Tourism."
 msgstr "Engaged in a valuable internship experience as a Web Coordinator at International Maldives Travel Market (IMTM), where I gained practical skills and insights into Travel and Tourism."
 
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:21
-#: src/shared/components/PageWrapper/Header/Desktop/LanguageMenu.tsx:23
+#: src/shared/components/PageWrapper/Header/Desktop/LanguageMenu.tsx:32
 #: src/shared/components/PageWrapper/Header/Mobile/LanguageMenuMobile.tsx:46
 msgid "English"
 msgstr "English"
@@ -322,7 +322,7 @@ msgstr "English Version"
 msgid "Enter your email"
 msgstr "Enter your email"
 
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:87
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:88
 msgid "Explore <0>my</0><1/>limitless possibilities"
 msgstr "Explore <0>my</0><1/>limitless possibilities"
 
@@ -346,7 +346,7 @@ msgstr "Featured Projects"
 msgid "features"
 msgstr "features"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:25
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:26
 msgid "February 2, 2018"
 msgstr "February 2, 2018"
 
@@ -406,7 +406,7 @@ msgstr "Guaranteed Quality"
 #~ msgid "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina and this is my web resume. Here you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore my website and my photo gallery."
 #~ msgstr "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina and this is my web resume. Here you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore my website and my photo gallery."
 
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:104
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:105
 msgid "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina, and this is my web resume. Here, you can see my capabilities and skills as a software engineer and as a photographer. Feel free to explore my website and my photo gallery."
 msgstr "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina, and this is my web resume. Here, you can see my capabilities and skills as a software engineer and as a photographer. Feel free to explore my website and my photo gallery."
 
@@ -529,6 +529,10 @@ msgstr "In one of my projects, we had a major issue, right before a product laun
 msgid "Information and Communication Technology"
 msgstr "Information and Communication Technology"
 
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:27
+msgid "Innovative Architect"
+msgstr "Innovative Architect"
+
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:26
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:30
 msgid "Intermediate"
@@ -538,7 +542,7 @@ msgstr "Intermediate"
 #~ msgid "Internship at FLUX"
 #~ msgstr "Internship at FLUX"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:44
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:62
 msgid "Internship at FLUX - Malaysia"
 msgstr "Internship at FLUX - Malaysia"
 
@@ -546,7 +550,7 @@ msgstr "Internship at FLUX - Malaysia"
 #~ msgid "Internship at IMTM"
 #~ msgstr "Internship at IMTM"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:32
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:38
 msgid "Internship at IMTM - Maldives"
 msgstr "Internship at IMTM - Maldives"
 
@@ -554,11 +558,11 @@ msgstr "Internship at IMTM - Maldives"
 msgid "Invalid email"
 msgstr "Invalid email"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:43
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:61
 msgid "January 28, 2023"
 msgstr "January 28, 2023"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:49
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:76
 msgid "July 28, 2023"
 msgstr "July 28, 2023"
 
@@ -566,7 +570,7 @@ msgstr "July 28, 2023"
 #~ msgid "Kick off my academic journey at the International Islamic University Malaysia (IIUM), marking the beginning of my studies."
 #~ msgstr "Kick off my academic journey at the International Islamic University Malaysia (IIUM), marking the beginning of my studies."
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:27
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:29
 msgid "Kicked off my academic journey at the International Islamic University Malaysia (IIUM), marking the beginning of my studies."
 msgstr "Kicked off my academic journey at the International Islamic University Malaysia (IIUM), marking the beginning of my studies."
 
@@ -643,7 +647,7 @@ msgstr "Migration to Chakra UI"
 msgid "Migration to ShadCn UI"
 msgstr "Migration to ShadCn UI"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:73
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:111
 msgid "Milestones"
 msgstr "Milestones"
 
@@ -684,6 +688,10 @@ msgstr "Need More Information"
 #: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:55
 #~ msgid "Neversettle"
 #~ msgstr "Neversettle"
+
+#: src/shared/components/PageWrapper/Footer/Newsletter.tsx:175
+msgid "Newsletter Subscription"
+msgstr "Newsletter Subscription"
 
 #: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:83
 msgid "Not a user?"
@@ -750,7 +758,7 @@ msgstr "Project V4"
 msgid "Projects"
 msgstr "Projects"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:51
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:79
 msgid "Promoted to the role of Junior Software & QA Engineer, I embraced new challenges and expanded my expertise. Alongside my existing skills in frontend development, I delved into the learning of backend with MongoDB, automated testing with Playwright, and deployment with Vercel server. This journey not only elevated my technical capabilities but also deepened my understanding of software development and quality assurance practices, allowing me to contribute effectively to the team's projects and objectives."
 msgstr "Promoted to the role of Junior Software & QA Engineer, I embraced new challenges and expanded my expertise. Alongside my existing skills in frontend development, I delved into the learning of backend with MongoDB, automated testing with Playwright, and deployment with Vercel server. This journey not only elevated my technical capabilities but also deepened my understanding of software development and quality assurance practices, allowing me to contribute effectively to the team's projects and objectives."
 
@@ -758,15 +766,15 @@ msgstr "Promoted to the role of Junior Software & QA Engineer, I embraced new ch
 #~ msgid "Promotion - Software & QA Engineer"
 #~ msgstr "Promotion - Software & QA Engineer"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:50
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:77
 msgid "Promotion - Software & QA Engineer - Malaysia"
 msgstr "Promotion - Software & QA Engineer - Malaysia"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:88
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:87
 msgid "Read less"
 msgstr "Read less"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:88
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:87
 msgid "Read more"
 msgstr "Read more"
 
@@ -775,8 +783,12 @@ msgid "Reasons to <0>Count</0> on Me"
 msgstr "Reasons to <0>Count</0> on Me"
 
 #: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:159
-msgid "Recommendation from top employers in Malaysia and Bosnia"
-msgstr "Recommendation from top employers in Malaysia and Bosnia"
+#~ msgid "Recommendation from top employers in Malaysia and Bosnia"
+#~ msgstr "Recommendation from top employers in Malaysia and Bosnia"
+
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:158
+msgid "Recommendation from top employers in USA, Malaysia and Bosnia"
+msgstr "Recommendation from top employers in USA, Malaysia and Bosnia"
 
 #: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:85
 msgid "Register"
@@ -796,7 +808,7 @@ msgstr "Request Reset"
 
 #: src/apps/Website/Photography-Website/Shared/FooterPhotography.tsx:238
 #: src/apps/Website/Photography-Website/Shared/Header/Mobile/index.tsx:45
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:129
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:130
 #: src/shared/components/PageWrapper/Footer/Footer.tsx:231
 #: src/shared/components/PageWrapper/Header/index.tsx:119
 #: src/shared/components/PageWrapper/Header/Mobile/index.tsx:50
@@ -814,6 +826,10 @@ msgstr "Russian"
 #: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/index.tsx:65
 msgid "School Achievements"
 msgstr "School Achievements"
+
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:13
+msgid "Seamless Problem-Solver"
+msgstr "Seamless Problem-Solver"
 
 #: src/apps/Website/Resume-Website/pages/Home/ClientsThoughts/Props.tsx:31
 #~ msgid "Secret Coder"
@@ -838,11 +854,11 @@ msgstr "Semester 1, 2020/2021"
 msgid "Send Message"
 msgstr "Send Message"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:17
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:24
 msgid "Senior Full Stack Developer at Flux Malaysia"
 msgstr "Senior Full Stack Developer at Flux Malaysia"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:37
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:49
 msgid "September 25, 2022"
 msgstr "September 25, 2022"
 
@@ -874,7 +890,7 @@ msgstr "Source code"
 msgid "started coding, huh?"
 msgstr "started coding, huh?"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:26
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:27
 msgid "Started my studies"
 msgstr "Started my studies"
 
@@ -883,6 +899,10 @@ msgstr "Started my studies"
 #: src/shared/components/PageWrapper/Header/Mobile/Form.tsx:120
 msgid "Stay up to date"
 msgstr "Stay up to date"
+
+#: src/shared/components/PageWrapper/Footer/Newsletter.tsx:178
+msgid "Stay updated with my latest news and updates! By subscribing, you agree to receive my newsletter."
+msgstr "Stay updated with my latest news and updates! By subscribing, you agree to receive my newsletter."
 
 #: src/apps/Website/Photography-Website/Shared/Header/Mobile/Form.tsx:39
 #: src/shared/components/PageWrapper/Header/Mobile/Form.tsx:153
@@ -905,7 +925,7 @@ msgstr "Subscription failed. Please try again."
 msgid "Success!"
 msgstr "Success!"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:39
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:52
 msgid "Successfully completed my academic journey at the International Islamic University Malaysia (IIUM), earning a degree in Information and Communication Technologies."
 msgstr "Successfully completed my academic journey at the International Islamic University Malaysia (IIUM), earning a degree in Information and Communication Technologies."
 
@@ -920,6 +940,10 @@ msgstr "Technical Expertise"
 #: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/TechnicalSkills.tsx:66
 msgid "Technical Skills"
 msgstr "Technical Skills"
+
+#: src/shared/components/PageWrapper/Footer/Newsletter.tsx:202
+msgid "Thank you for subscribing to my newsletter!"
+msgstr "Thank you for subscribing to my newsletter!"
 
 #: src/shared/components/PageWrapper/Header/Mobile/Form.tsx:158
 msgid "Thank you for subscribing!"
@@ -948,11 +972,19 @@ msgstr "to enjoy all of the cool"
 msgid "Tools"
 msgstr "Tools"
 
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:41
+msgid "Trustworthy Expert"
+msgstr "Trustworthy Expert"
+
 #: src/shared/components/PageWrapper/Header/Mobile/Form.tsx:100
 msgid "Unable to connect to the subscription service. Please try again later."
 msgstr "Unable to connect to the subscription service. Please try again later."
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:38
+#: src/shared/components/PageWrapper/Footer/Newsletter.tsx:208
+msgid "Unable to subscribe. Please try again later."
+msgstr "Unable to subscribe. Please try again later."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/Milestone/index.tsx:50
 msgid "University Graduation"
 msgstr "University Graduation"
 
@@ -971,6 +1003,10 @@ msgstr "We had a data-heavy application that was experiencing slow load times. I
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:54
 #~ msgid "We had a data-heavy application that was experiencing slow load times. I optimized the code by implementing lazy loading for components and using React.memo to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced indexing. These changes improved the application's performance significantly, reducing load times by about 40%."
 #~ msgstr "We had a data-heavy application that was experiencing slow load times. I optimized the code by implementing lazy loading for components and using React.memo to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced indexing. These changes improved the application's performance significantly, reducing load times by about 40%."
+
+#: src/shared/components/PageWrapper/Footer/Newsletter.tsx:218
+msgid "We respect your privacy and will never share your information."
+msgstr "We respect your privacy and will never share your information."
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:335
 msgid "We wanted more speed and simplicity in our application, so we migrated it from Chakra UI to ShadCn UI. The result was a faster and more responsive application with a clean and modern design. Not only did we drastically reduced the size of our repository but also have simplified and sped up our development workflow by building our own library with ShadCn UI.<0/><1/><2>Tech:</2> ShadCn UI, Tailwind, React, Typescript<3/><4/>"
@@ -1005,7 +1041,7 @@ msgstr "When we decided to switch to <0>TypeScript</0> at one of the companies I
 #~ msgid "When we decided to switch to TypeScript at one of the companies I worked for, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
 #~ msgstr "When we decided to switch to TypeScript at one of the companies I worked for, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:14
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:15
 msgid "Working with Ejmen has been a game-changer. His ability to identify, analyze, and resolve issues efficiently is remarkable. Whether it's backend optimization or creating user-friendly interfaces, his contributions consistently elevate the project."
 msgstr "Working with Ejmen has been a game-changer. His ability to identify, analyze, and resolve issues efficiently is remarkable. Whether it's backend optimization or creating user-friendly interfaces, his contributions consistently elevate the project."
 
