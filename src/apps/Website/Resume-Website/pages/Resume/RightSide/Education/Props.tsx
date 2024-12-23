@@ -1,19 +1,21 @@
-import { ReactNode } from 'react';
-import { Box, Text } from '@chakra-ui/react';
-import { t, Trans } from '@lingui/macro';
+import { ReactNode } from 'react'
+import { Box, Text } from '@chakra-ui/react'
+import { t, Trans } from '@lingui/macro'
 
 export type Props = {
-  year: string;
-  location: string;
-  experience: string;
-  description: ReactNode;
-};
+  year: string
+  location: string | JSX.Element
+  experience: string | JSX.Element
+  description: ReactNode
+}
 
 export const itemProps: Props[] = [
   {
     year: '2018 - 2022',
-    location: t`Kuala Lumpur, Malaysia`,
-    experience: t`Bachelor's in Information and Communication Technology`,
+    location: <Trans>Kuala Lumpur, Malaysia</Trans>,
+    experience: (
+      <Trans>Bachelor's in Information and Communication Technology</Trans>
+    ),
     description: (
       <Text>
         <Trans>
@@ -49,4 +51,4 @@ export const itemProps: Props[] = [
       </Text>
     ),
   },
-];
+]
