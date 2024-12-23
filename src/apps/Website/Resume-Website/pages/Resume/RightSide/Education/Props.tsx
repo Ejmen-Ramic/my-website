@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import { Box, Text } from '@chakra-ui/react'
-import { t, Trans } from '@lingui/macro'
+import { Trans } from '@lingui/macro'
 
 export type Props = {
   year: string
