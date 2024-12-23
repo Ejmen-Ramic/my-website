@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import {
   Stack,
   Input,
@@ -14,33 +14,34 @@ import {
   PopoverContent,
   PopoverHeader,
   PopoverTrigger,
-} from '@chakra-ui/react'
-import { BiMailSend } from 'react-icons/bi'
-import * as Sentry from '@sentry/browser'
-import { colors } from '../../Hooks/color'
-import FadeInView from '../../Hooks/FadeInView'
+} from '@chakra-ui/react';
+import { BiMailSend } from 'react-icons/bi';
+import * as Sentry from '@sentry/browser';
+import { colors } from '../../Hooks/color';
+import FadeInView from '../../Hooks/FadeInView';
+import { Trans } from '@lingui/macro';
 
-type Status = 'IDLE' | 'SUCCESS' | 'ERROR'
+type Status = 'IDLE' | 'SUCCESS' | 'ERROR';
 
 interface SubscribeResponse {
-  message: string
-  data?: any
-  error?: string
+  message: string;
+  data?: any;
+  error?: string;
 }
 
 const Newsletter: React.FC = () => {
-  const [email, setEmail] = useState<string>('')
-  const [status, setStatus] = useState<Status>('IDLE')
-  const [loading, setLoading] = useState<boolean>(false)
-  const toast = useToast()
+  const [email, setEmail] = useState<string>('');
+  const [status, setStatus] = useState<Status>('IDLE');
+  const [loading, setLoading] = useState<boolean>(false);
+  const toast = useToast();
 
   const validateEmail = (email: string): boolean => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    return emailRegex.test(email)
-  }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault()
+    event.preventDefault();
 
     if (!validateEmail(email)) {
       toast({
@@ -49,12 +50,12 @@ const Newsletter: React.FC = () => {
         status: 'error',
         duration: 3000,
         isClosable: true,
-      })
-      return
+      });
+      return;
     }
 
-    setLoading(true)
-    setStatus('IDLE')
+    setLoading(true);
+    setStatus('IDLE');
 
     try {
       const response = await fetch(
@@ -66,13 +67,13 @@ const Newsletter: React.FC = () => {
           },
           body: JSON.stringify({ email }),
         }
-      )
+      );
 
-      const data: SubscribeResponse = await response.json()
+      const data: SubscribeResponse = await response.json();
 
       if (response.ok) {
-        setStatus('SUCCESS')
-        setEmail('')
+        setStatus('SUCCESS');
+        setEmail('');
         toast({
           title: 'Success!',
           description:
@@ -80,16 +81,16 @@ const Newsletter: React.FC = () => {
           status: 'success',
           duration: 5000,
           isClosable: true,
-        })
+        });
       } else {
-        setStatus('ERROR')
+        setStatus('ERROR');
         toast({
           title: 'Subscription failed',
           description: data.error || 'An error occurred while subscribing.',
           status: 'error',
           duration: 5000,
           isClosable: true,
-        })
+        });
 
         Sentry.captureMessage('Newsletter subscription failed', {
           extra: {
@@ -98,11 +99,11 @@ const Newsletter: React.FC = () => {
             response: data,
           },
           level: 'error',
-        })
+        });
       }
     } catch (err) {
-      setStatus('ERROR')
-      console.error('Newsletter subscription error:', err)
+      setStatus('ERROR');
+      console.error('Newsletter subscription error:', err);
 
       toast({
         title: 'Connection Error',
@@ -111,27 +112,27 @@ const Newsletter: React.FC = () => {
         status: 'error',
         duration: 5000,
         isClosable: true,
-      })
+      });
 
       Sentry.captureException(err, {
         extra: {
           email,
           context: 'Newsletter subscription',
         },
-      })
+      });
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
-  const inputBgColor = useColorModeValue('blackAlpha.100', 'whiteAlpha.100')
+  const inputBgColor = useColorModeValue('blackAlpha.100', 'whiteAlpha.100');
   const inputFocusBgColor = useColorModeValue(
     'blackAlpha.200',
     'whiteAlpha.200'
-  )
-  const buttonBgColor = useColorModeValue('green.400', 'green.800')
-  const buttonColor = useColorModeValue(colors.white, 'gray.800')
-  const buttonHoverBgColor = 'green.600'
+  );
+  const buttonBgColor = useColorModeValue('green.400', 'green.800');
+  const buttonColor = useColorModeValue(colors.white, 'gray.800');
+  const buttonHoverBgColor = 'green.600';
 
   return (
     <FadeInView delay={0.1}>
@@ -170,10 +171,14 @@ const Newsletter: React.FC = () => {
             <PopoverContent>
               <PopoverArrow />
               <PopoverCloseButton />
-              <PopoverHeader>Newsletter Subscription</PopoverHeader>
+              <PopoverHeader>
+                <Trans>Newsletter Subscription</Trans>
+              </PopoverHeader>
               <PopoverBody>
-                Stay updated with my latest news and updates! By subscribing,
-                you agree to receive my newsletter.
+                <Trans>
+                  Stay updated with my latest news and updates! By subscribing,
+                  you agree to receive my newsletter.
+                </Trans>
               </PopoverBody>
             </PopoverContent>
           </Popover>
@@ -194,13 +199,13 @@ const Newsletter: React.FC = () => {
 
         {status === 'SUCCESS' && (
           <Text mt={2} color={'green.500'} textAlign={'center'} fontSize={'sm'}>
-            Thank you for subscribing to my newsletter!
+            <Trans>Thank you for subscribing to my newsletter!</Trans>
           </Text>
         )}
 
         {status === 'ERROR' && (
           <Text mt={2} color={'red.500'} textAlign={'center'} fontSize={'sm'}>
-            Unable to subscribe. Please try again later.
+            <Trans>Unable to subscribe. Please try again later.</Trans>
           </Text>
         )}
 
@@ -210,11 +215,13 @@ const Newsletter: React.FC = () => {
           fontSize={'xs'}
           textAlign={'center'}
         >
-          We respect your privacy and will never share your information.
+          <Trans>
+            We respect your privacy and will never share your information.
+          </Trans>
         </Text>
       </Box>
     </FadeInView>
-  )
-}
+  );
+};
 
-export default Newsletter
+export default Newsletter;

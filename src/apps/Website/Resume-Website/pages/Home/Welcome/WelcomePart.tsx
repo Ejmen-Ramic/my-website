@@ -6,18 +6,18 @@ import {
   Tooltip,
   VStack,
   Text,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 import {
   faGithub,
   faInstagram,
   faLinkedin,
-} from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { Link } from 'react-router-dom'
-import { Trans } from '@lingui/macro'
-import { colors } from '../../../../../../shared/components/Hooks/color'
-import ParticlesBackground from './Particles'
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { Link } from 'react-router-dom';
+import { Trans } from '@lingui/macro';
+import { colors } from '../../../../../../shared/components/Hooks/color';
+import ParticlesBackground from './Particles';
 
 const Welcome = () => {
   return (
@@ -48,8 +48,9 @@ const Welcome = () => {
           top={0}
           left={0}
           zIndex={0}
-          width={'100%'}
-          height={'100%'}
+          w={'100%'}
+          h={'full'}
+          maxH={'100%'}
           filter={{ base: 'brightness(0.3)', lg: 'brightness(0.6)' }}
         >
           <ParticlesBackground />
@@ -182,7 +183,7 @@ const Welcome = () => {
         </FadeInView>
       </VStack>
     </Box>
-  )
-}
+  );
+};
 
-export default Welcome
+export default Welcome;
