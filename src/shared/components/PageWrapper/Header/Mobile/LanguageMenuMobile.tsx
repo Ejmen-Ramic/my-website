@@ -1,11 +1,19 @@
 import React from 'react'
-import { Flex, Text, Icon, Menu, MenuButton, MenuList, MenuItem, useColorModeValue } from '@chakra-ui/react'
+import {
+  Flex,
+  Text,
+  Icon,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import { BiChevronDown } from 'react-icons/bi'
 import { IoLanguageOutline } from 'react-icons/io5'
 import { t, Trans } from '@lingui/macro'
 import { dynamicActivate } from '../../../LanguageSwitcher/dynamicActivate'
 import { colors } from '../../../Hooks/color'
-
 
 const LanguageDropDown: React.FC = () => {
   return (
@@ -16,13 +24,18 @@ const LanguageDropDown: React.FC = () => {
 }
 
 interface MenuLinkProps {
-  name: string
+  name: string | JSX.Element
   locale: string
   onClose: () => void
   changeLanguage: (locale: string) => void
 }
 
-const MenuLink: React.FC<MenuLinkProps> = ({ name, locale, onClose, changeLanguage }) => {
+const MenuLink: React.FC<MenuLinkProps> = ({
+  name,
+  locale,
+  onClose,
+  changeLanguage,
+}) => {
   return (
     <MenuItem
       fontSize={'16px'}
@@ -43,11 +56,11 @@ const MenuLink: React.FC<MenuLinkProps> = ({ name, locale, onClose, changeLangua
 
 const dropdownLinks = [
   {
-    name: t`English`,
+    name: <Trans>English</Trans>,
     locale: 'en',
   },
   {
-    name: t`Bosnian`,
+    name: <Trans>Bosnian</Trans>,
     locale: 'ba',
   },
 ]
