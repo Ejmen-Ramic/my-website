@@ -19,11 +19,11 @@ msgstr ""
 msgid "{0}"
 msgstr ""
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:36
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:41
 msgid "• Creating and maintaining automated test scripts<0/>• Front and Backend development of the website<1/>• Database design, modeling, data import and migration"
 msgstr "• Kreiranje i održavanje automatizovanih test skripti<0/>• Frontend i Backend razvoj web stranice<1/>• Dizajn baze podataka, modeliranje, unos podataka i migracija"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:19
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:23
 msgid "• Maintain the company's website, design, and create new content<0/> • Handling customers and providing the best packages and locations based on the requirements set out by them in the Maldives<1/> • Creating invoices for the customers<2/> • Successfully connected luxury hotels in Bosnia & Herzegovina with IMTM to create affordable tourist packages for Maldivians to experience the Balkan region especially during the winter season"
 msgstr "• Održavanje web stranice kompanije, dizajniranje i kreiranje novog sadržaja<0/> • Rad sa klijentima i pružanje najboljih paketa i lokacija prema njihovim zahtjevima na Maldivima<1/> • Kreiranje faktura za klijente<2/> • Uspješno povezivanje luksuznih hotela u Bosni i Hercegovini sa IMTM-om kako bi se kreirali pristupačni turistički paketi za Maldivce da dožive balkansku regiju, posebno tokom zimske sezone"
 
@@ -168,7 +168,7 @@ msgstr "Diplomirani inženjer informacijskih i komunikacijskih tehnologija"
 #~ msgid "Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to continuous learning. My experience collaborating with diverse teams has equipped me with strong communication and interpersonal skills, fostering an environment of creativity and innovation. Additionally, I have a proven track record of meeting tight deadlines while maintaining a high standard of quality. With a proactive mindset and a drive to excel, I am poised to make significant contributions to any project or team."
 #~ msgstr "Osim isporuke čistog, čitljivog koda, donosim strast za rješavanjem problema i posvećenost kontinuiranom učenju. Moje iskustvo u suradnji s različitim timovima opremilo me snažnim komunikacijskim i interpersonalnim vještinama, potičući okruženje kreativnosti i inovacija. Dodatno, imam dokazane rezultate u ispunjavanju strogih rokova uz održavanje visokih standarda kvaliteta. S proaktivnim načinom razmišljanja i željom za izvrsnošću, spreman sam dati značajan doprinos bilo kojem projektu ili timu."
 
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:11
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:17
 #: src/shared/components/PageWrapper/Header/Desktop/LanguageMenu.tsx:27
 #: src/shared/components/PageWrapper/Header/Mobile/LanguageMenuMobile.tsx:50
 msgid "Bosnian"
@@ -290,7 +290,7 @@ msgstr "Preporuka"
 msgid "Engaged in a valuable internship experience as a Web Coordinator at International Maldives Travel Market (IMTM), where I gained practical skills and insights into Travel and Tourism."
 msgstr "Učestvovao sam u vrednom iskustvu prakse kao web koordinator na International Maldives Travel Market (IMTM), gde sam stekao praktične veštine i uvide u putovanja i turizam."
 
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:15
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:21
 #: src/shared/components/PageWrapper/Header/Desktop/LanguageMenu.tsx:23
 #: src/shared/components/PageWrapper/Header/Mobile/LanguageMenuMobile.tsx:46
 msgid "English"
@@ -313,7 +313,7 @@ msgstr "Istražite <0>moje</0><1/>neograničene mogućnosti"
 msgid "Explore my proficiency in web development tools, programming languages, QA testing frameworks, and MongoDB database management."
 msgstr "Istražite moje vještine u alatima za razvoj weba, programskim jezicima, QA okvirima za testiranje i upravljanju MongoDB bazom podataka."
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:31
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:47
 msgid "Extra Curriculum"
 msgstr "Vanredne aktivnosti"
 
@@ -333,7 +333,7 @@ msgstr "značajke"
 msgid "February 2, 2018"
 msgstr "2. Februar 2018."
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:31
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:36
 msgid "February, 2023 - Present"
 msgstr "Februar, 2023 - Sada"
 
@@ -341,7 +341,7 @@ msgstr "Februar, 2023 - Sada"
 msgid "Final Year Project"
 msgstr "Završni Projekat Godine"
 
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:16
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:22
 msgid "Fluent"
 msgstr "Tečno"
 
@@ -365,7 +365,7 @@ msgstr "Framework"
 msgid "Frequently Asked Questions"
 msgstr "Često postavljana pitanja"
 
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:19
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:25
 msgid "German"
 msgstr "Njemački"
 
@@ -430,7 +430,7 @@ msgstr "Razvio sam svoje vještine zahvaljujući velikoj posvećenosti i naporno
 msgid "I love <0>hiking</0>, <1>exploring</1> new places and <2>photographing</2> landscapes, which helps me stay <3>creative</3> and refreshed. I also enjoy working on side projects that involve <4>engineering</4>."
 msgstr "Volim <0>planinarenje</0>, <1>istraživanje</1> novih mjesta i <2>fotografisanje</2> pejzaža, što mi pomaže da ostanem <3>kreativan</3> i osvježen. Također uživam raditi na dodatnim projektima koji uključuju <4>inženjering</4>."
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:17
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:27
 msgid "I love running."
 msgstr "Volim trčanje."
 
@@ -474,7 +474,7 @@ msgstr "Radio sam na e-commerce platformi gdje smo koristili <0>React</0>, <1>Ty
 #~ msgid "I'm a software developer with a passion for creating intuitive and efficient user experiences. I've been working with latest languages, frameworks and testing tools for the past few years, and I love how these tools enable me to build scalable and maintainable applications. Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
 #~ msgstr "Ja sam softverski developer sa strašću za kreiranje intuitivnih i efikasnih korisničkih iskustava. Posljednjih nekoliko godina radim s najnovijim jezicima, frameworkovima i alatima za testiranje, i volim kako mi ovi alati omogućavaju da gradim skalabilne i održive aplikacije. Izvan posla, uživam u planinarenju i istraživanju novih mjesta, što mi pomaže da ostanem kreativan i osvježen."
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:13
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:22
 msgid "I'm a web developer."
 msgstr "Ja sam web programer."
 
@@ -512,8 +512,8 @@ msgstr "U jednom od mojih projekata imali smo veliki problem, neposredno prije l
 msgid "Information and Communication Technology"
 msgstr "Informacione i komunikacione tehnologije"
 
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:20
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:24
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:26
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:30
 msgid "Intermediate"
 msgstr "Srednji"
 
@@ -554,12 +554,12 @@ msgid "Kicked off my academic journey at the International Islamic University Ma
 msgstr "Započeo sam svoje akademsko putovanje na Međunarodnom islamskom univerzitetu u Maleziji (IIUM), označavajući početak svojih studija."
 
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:15
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:32
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:37
 msgid "Kuala Lumpur, Malaysia"
 msgstr "Kuala Lumpur, Malezija"
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:24
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:35
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:45
 #: src/shared/components/PageWrapper/Header/Desktop/LanguageMenu.tsx:78
 #: src/shared/components/PageWrapper/Header/Mobile/LanguageMenuMobile.tsx:80
 msgid "Languages"
@@ -572,6 +572,10 @@ msgstr "Biblioteke"
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:23
 msgid "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project’s significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
 msgstr "LifeLine, sistem profiliranja siromaštva, ima za cilj optimizaciju distribucije donacija koristeći rudarenje podataka kako bi se predvidjele i riješile potrebe na efikasan način. Razvijen od strane Ejmena Ramica, projekat se fokusira na smanjenje nepotrebnih donacija, pružajući detaljne informacije o potrebama i predviđajući buduće krize. Cilja svakoga ko želi boriti se protiv siromaštva, koristeći JavaScript i RapidMiner za svoju web platformu. Značaj projekta leži u njegovoj sposobnosti da poboljša uticaj donacija i podigne svijest o globalnim problemima siromaštva."
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/items.tsx:30
+#~ msgid "LinkedIn"
+#~ msgstr "LinkedIn"
 
 #: src/shared/components/Experimental/Examples/FetchPostAPI.tsx:47
 #: src/shared/components/Experimental/Examples/FetchPostAPI.tsx:62
@@ -639,7 +643,7 @@ msgstr "Moja web stranica"
 msgid "Name"
 msgstr "Ime"
 
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:12
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:18
 msgid "Native"
 msgstr "Materinski"
 
@@ -766,7 +770,7 @@ msgstr "Zatraži reset"
 msgid "Resume"
 msgstr "Rezime"
 
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:23
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:29
 msgid "Russian"
 msgstr "Ruski"
 
@@ -821,7 +825,7 @@ msgstr "Vještine"
 msgid "So, you want to know how"
 msgstr "Dakle, želite da znate kako"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:33
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:38
 msgid "Software and QA Engineer at FLUX"
 msgstr "Softverski i QA inženjer u FLUX-u"
 
@@ -939,7 +943,7 @@ msgstr "Imali smo aplikaciju koja je radila sa velikim količinama podataka i im
 msgid "We wanted more speed and simplicity in our application, so we migrated it from Chakra UI to ShadCn UI. The result was a faster and more responsive application with a clean and modern design. Not only did we drastically reduced the size of our repository but also have simplified and sped up our development workflow by building our own library with ShadCn UI.<0/><1/><2>Tech:</2> ShadCn UI, Tailwind, React, Typescript<3/><4/>"
 msgstr "Željeli smo više brzine i jednostavnosti u našoj aplikaciji, pa smo je migrirali s Chakra UI na ShadCn UI. Rezultat je bila brža i responzivnija aplikacija s čistim i modernim dizajnom. Ne samo da smo drastično smanjili veličinu našeg repozitorija, već smo također pojednostavili i ubrzali naš razvojni tijek izradom vlastite biblioteke s ShadCn UI.<0/><1/><2>Tehnologije:</2> ShadCn UI, Tailwind, React, TypeScript<3/><4/>"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:16
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:17
 msgid "Web Coordinator at International Maldives Travel Market (IMTM)"
 msgstr "Web koordinator na Internacionalnom Maldivskom sajmu putovanja (IMTM)"
 

@@ -32,11 +32,11 @@ msgstr "{0}"
 #~ msgid "{null, plural,}"
 #~ msgstr "{null, plural,}"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:36
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:41
 msgid "• Creating and maintaining automated test scripts<0/>• Front and Backend development of the website<1/>• Database design, modeling, data import and migration"
 msgstr "• Creating and maintaining automated test scripts<0/>• Front and Backend development of the website<1/>• Database design, modeling, data import and migration"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:19
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:23
 msgid "• Maintain the company's website, design, and create new content<0/> • Handling customers and providing the best packages and locations based on the requirements set out by them in the Maldives<1/> • Creating invoices for the customers<2/> • Successfully connected luxury hotels in Bosnia & Herzegovina with IMTM to create affordable tourist packages for Maldivians to experience the Balkan region especially during the winter season"
 msgstr "• Maintain the company's website, design, and create new content<0/> • Handling customers and providing the best packages and locations based on the requirements set out by them in the Maldives<1/> • Creating invoices for the customers<2/> • Successfully connected luxury hotels in Bosnia & Herzegovina with IMTM to create affordable tourist packages for Maldivians to experience the Balkan region especially during the winter season"
 
@@ -181,7 +181,7 @@ msgstr "Bachelor's in Information and Communication Technology"
 #~ msgid "Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to continuous learning. My experience collaborating with diverse teams has equipped me with strong communication and interpersonal skills, fostering an environment of creativity and innovation. Additionally, I have a proven track record of meeting tight deadlines while maintaining a high standard of quality. With a proactive mindset and a drive to excel, I am poised to make significant contributions to any project or team."
 #~ msgstr "Beyond delivering clean, readable code, I bring a passion for problem-solving and a commitment to continuous learning. My experience collaborating with diverse teams has equipped me with strong communication and interpersonal skills, fostering an environment of creativity and innovation. Additionally, I have a proven track record of meeting tight deadlines while maintaining a high standard of quality. With a proactive mindset and a drive to excel, I am poised to make significant contributions to any project or team."
 
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:11
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:17
 #: src/shared/components/PageWrapper/Header/Desktop/LanguageMenu.tsx:27
 #: src/shared/components/PageWrapper/Header/Mobile/LanguageMenuMobile.tsx:50
 msgid "Bosnian"
@@ -307,7 +307,7 @@ msgstr "Endorsement"
 msgid "Engaged in a valuable internship experience as a Web Coordinator at International Maldives Travel Market (IMTM), where I gained practical skills and insights into Travel and Tourism."
 msgstr "Engaged in a valuable internship experience as a Web Coordinator at International Maldives Travel Market (IMTM), where I gained practical skills and insights into Travel and Tourism."
 
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:15
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:21
 #: src/shared/components/PageWrapper/Header/Desktop/LanguageMenu.tsx:23
 #: src/shared/components/PageWrapper/Header/Mobile/LanguageMenuMobile.tsx:46
 msgid "English"
@@ -330,7 +330,7 @@ msgstr "Explore <0>my</0><1/>limitless possibilities"
 msgid "Explore my proficiency in web development tools, programming languages, QA testing frameworks, and MongoDB database management."
 msgstr "Explore my proficiency in web development tools, programming languages, QA testing frameworks, and MongoDB database management."
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:31
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:47
 msgid "Extra Curriculum"
 msgstr "Extra Curriculum"
 
@@ -350,7 +350,7 @@ msgstr "features"
 msgid "February 2, 2018"
 msgstr "February 2, 2018"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:31
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:36
 msgid "February, 2023 - Present"
 msgstr "February, 2023 - Present"
 
@@ -358,7 +358,7 @@ msgstr "February, 2023 - Present"
 msgid "Final Year Project"
 msgstr "Final Year Project"
 
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:16
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:22
 msgid "Fluent"
 msgstr "Fluent"
 
@@ -382,7 +382,7 @@ msgstr "Frameworks"
 msgid "Frequently Asked Questions"
 msgstr "Frequently Asked Questions"
 
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:19
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:25
 msgid "German"
 msgstr "German"
 
@@ -447,7 +447,7 @@ msgstr "I have developed my skills through sheer dedication and hard work, inves
 msgid "I love <0>hiking</0>, <1>exploring</1> new places and <2>photographing</2> landscapes, which helps me stay <3>creative</3> and refreshed. I also enjoy working on side projects that involve <4>engineering</4>."
 msgstr "I love <0>hiking</0>, <1>exploring</1> new places and <2>photographing</2> landscapes, which helps me stay <3>creative</3> and refreshed. I also enjoy working on side projects that involve <4>engineering</4>."
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:17
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:27
 msgid "I love running."
 msgstr "I love running."
 
@@ -491,7 +491,7 @@ msgstr "I worked on an e-commerce platform where we used <0>React</0>, <1>TypeSc
 #~ msgid "I'm a software developer with a passion for creating intuitive and efficient user experiences. I've been working with latest languages, frameworks and testing tools for the past few years, and I love how these tools enable me to build scalable and maintainable applications. Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
 #~ msgstr "I'm a software developer with a passion for creating intuitive and efficient user experiences. I've been working with latest languages, frameworks and testing tools for the past few years, and I love how these tools enable me to build scalable and maintainable applications. Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:13
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ExtraCurriculum.tsx:22
 msgid "I'm a web developer."
 msgstr "I'm a web developer."
 
@@ -525,8 +525,8 @@ msgstr "In one of my projects, we had a major issue, right before a product laun
 msgid "Information and Communication Technology"
 msgstr "Information and Communication Technology"
 
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:20
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:24
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:26
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:30
 msgid "Intermediate"
 msgstr "Intermediate"
 
@@ -567,12 +567,12 @@ msgid "Kicked off my academic journey at the International Islamic University Ma
 msgstr "Kicked off my academic journey at the International Islamic University Malaysia (IIUM), marking the beginning of my studies."
 
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/Education/Props.tsx:15
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:32
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:37
 msgid "Kuala Lumpur, Malaysia"
 msgstr "Kuala Lumpur, Malaysia"
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:24
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:35
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:45
 #: src/shared/components/PageWrapper/Header/Desktop/LanguageMenu.tsx:78
 #: src/shared/components/PageWrapper/Header/Mobile/LanguageMenuMobile.tsx:80
 msgid "Languages"
@@ -589,6 +589,10 @@ msgstr "Libraries"
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:23
 msgid "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project’s significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
 msgstr "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project’s significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
+
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/items.tsx:30
+#~ msgid "LinkedIn"
+#~ msgstr "LinkedIn"
 
 #: src/shared/components/Experimental/Examples/FetchPostAPI.tsx:47
 #: src/shared/components/Experimental/Examples/FetchPostAPI.tsx:62
@@ -660,7 +664,7 @@ msgstr "My Website"
 msgid "Name"
 msgstr "Name"
 
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:12
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:18
 msgid "Native"
 msgstr "Native"
 
@@ -787,7 +791,7 @@ msgstr "Request Reset"
 msgid "Resume"
 msgstr "Resume"
 
-#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:23
+#: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:29
 msgid "Russian"
 msgstr "Russian"
 
@@ -846,7 +850,7 @@ msgstr "Skills"
 msgid "So, you want to know how"
 msgstr "So, you want to know how"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:33
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:38
 msgid "Software and QA Engineer at FLUX"
 msgstr "Software and QA Engineer at FLUX"
 
@@ -960,7 +964,7 @@ msgstr "We had a data-heavy application that was experiencing slow load times. I
 msgid "We wanted more speed and simplicity in our application, so we migrated it from Chakra UI to ShadCn UI. The result was a faster and more responsive application with a clean and modern design. Not only did we drastically reduced the size of our repository but also have simplified and sped up our development workflow by building our own library with ShadCn UI.<0/><1/><2>Tech:</2> ShadCn UI, Tailwind, React, Typescript<3/><4/>"
 msgstr "We wanted more speed and simplicity in our application, so we migrated it from Chakra UI to ShadCn UI. The result was a faster and more responsive application with a clean and modern design. Not only did we drastically reduced the size of our repository but also have simplified and sped up our development workflow by building our own library with ShadCn UI.<0/><1/><2>Tech:</2> ShadCn UI, Tailwind, React, Typescript<3/><4/>"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:16
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:17
 msgid "Web Coordinator at International Maldives Travel Market (IMTM)"
 msgstr "Web Coordinator at International Maldives Travel Market (IMTM)"
 

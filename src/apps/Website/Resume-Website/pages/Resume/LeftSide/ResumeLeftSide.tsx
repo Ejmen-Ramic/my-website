@@ -1,20 +1,20 @@
-import React from 'react'
+import React from 'react';
 import {
   VStack,
   Box,
   Heading,
   Button,
   useColorModeValue,
-} from '@chakra-ui/react'
-import { IoMailOutline } from 'react-icons/io5'
-import { resumeItems } from './items'
-import SkillsResume from './SkillsResume'
-import { Trans } from '@lingui/macro'
+} from '@chakra-ui/react';
+import { IoMailOutline } from 'react-icons/io5';
+import { resumeItems } from './items';
+import SkillsResume from './SkillsResume';
+import { Trans } from '@lingui/macro';
 
 const ResumeLeftSide = () => {
   const handleContactClick = (link: string) => {
-    window.location.href = link
-  }
+    window.location.href = link;
+  };
 
   return (
     <VStack
@@ -61,7 +61,7 @@ const ResumeLeftSide = () => {
               variant={'none'}
               _hover={{ textDecoration: 'underline' }}
               fontSize={'12px'}
-              onClick={() => handleContactClick(item.link)}
+              onClick={() => item.link && handleContactClick(item.link)}
               colorScheme={'blue'}
               h={'23px'}
             >
@@ -73,7 +73,7 @@ const ResumeLeftSide = () => {
       </VStack>
       <SkillsResume />
     </VStack>
-  )
-}
+  );
+};
 
-export default ResumeLeftSide
+export default ResumeLeftSide;
