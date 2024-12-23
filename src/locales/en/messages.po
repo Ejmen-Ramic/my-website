@@ -258,7 +258,7 @@ msgid "Design Projects 3"
 msgstr "Design Projects 3"
 
 #: src/apps/Website/Photography-Website/Shared/FooterPhotography.tsx:266
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:77
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:76
 msgid "Developer"
 msgstr "Developer"
 
@@ -299,7 +299,7 @@ msgstr "Email"
 msgid "Email address"
 msgstr "Email address"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:153
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:154
 msgid "Endorsement"
 msgstr "Endorsement"
 
@@ -322,7 +322,7 @@ msgstr "English Version"
 msgid "Enter your email"
 msgstr "Enter your email"
 
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:88
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:87
 msgid "Explore <0>my</0><1/>limitless possibilities"
 msgstr "Explore <0>my</0><1/>limitless possibilities"
 
@@ -406,7 +406,7 @@ msgstr "Guaranteed Quality"
 #~ msgid "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina and this is my web resume. Here you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore my website and my photo gallery."
 #~ msgstr "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina and this is my web resume. Here you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore my website and my photo gallery."
 
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:105
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:104
 msgid "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina, and this is my web resume. Here, you can see my capabilities and skills as a software engineer and as a photographer. Feel free to explore my website and my photo gallery."
 msgstr "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina, and this is my web resume. Here, you can see my capabilities and skills as a software engineer and as a photographer. Feel free to explore my website and my photo gallery."
 
@@ -762,11 +762,19 @@ msgstr "Promoted to the role of Junior Software & QA Engineer, I embraced new ch
 msgid "Promotion - Software & QA Engineer - Malaysia"
 msgstr "Promotion - Software & QA Engineer - Malaysia"
 
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:88
+msgid "Read less"
+msgstr "Read less"
+
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:88
+msgid "Read more"
+msgstr "Read more"
+
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:109
 msgid "Reasons to <0>Count</0> on Me"
 msgstr "Reasons to <0>Count</0> on Me"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:158
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:159
 msgid "Recommendation from top employers in Malaysia and Bosnia"
 msgstr "Recommendation from top employers in Malaysia and Bosnia"
 
@@ -788,7 +796,7 @@ msgstr "Request Reset"
 
 #: src/apps/Website/Photography-Website/Shared/FooterPhotography.tsx:238
 #: src/apps/Website/Photography-Website/Shared/Header/Mobile/index.tsx:45
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:130
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:129
 #: src/shared/components/PageWrapper/Footer/Footer.tsx:231
 #: src/shared/components/PageWrapper/Header/index.tsx:119
 #: src/shared/components/PageWrapper/Header/Mobile/index.tsx:50

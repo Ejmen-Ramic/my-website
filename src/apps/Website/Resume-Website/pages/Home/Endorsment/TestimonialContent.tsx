@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode, useState } from 'react'
 import {
   Box,
   Flex,
@@ -10,38 +10,38 @@ import {
   useColorModeValue,
   VStack,
   Button,
-} from '@chakra-ui/react';
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
-import items from './Props';
-import { Trans } from '@lingui/macro';
-import { colors } from '../../../../../../shared/components/Hooks/color';
+} from '@chakra-ui/react'
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import items from './Props'
+import { t, Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const Testimonial = ({ children }: { children: ReactNode }) => {
-  return <Box>{children}</Box>;
-};
+  return <Box>{children}</Box>
+}
 
 const TestimonialContent = ({
   title,
   description,
   children,
 }: {
-  title: string;
-  description: string;
-  children: ReactNode;
+  title: string
+  description: string
+  children: ReactNode
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const wordLimit = 19;
+  const [isExpanded, setIsExpanded] = useState(false)
+  const wordLimit = 19
 
-  const borderTopColor = useColorModeValue(colors.white, 'gray.800');
-  const buttonColor = useColorModeValue('blue.500', 'blue.300');
-  const cardBg = useColorModeValue(colors.white, 'gray.800');
+  const borderTopColor = useColorModeValue(colors.white, 'gray.800')
+  const buttonColor = useColorModeValue('blue.500', 'blue.300')
+  const cardBg = useColorModeValue(colors.white, 'gray.800')
 
-  const words = description.split(' ');
-  const shouldShowReadMore = words.length > wordLimit;
+  const words = description.split(' ')
+  const shouldShowReadMore = words.length > wordLimit
 
   const displayText = isExpanded
     ? description
-    : words.slice(0, wordLimit).join(' ') + (shouldShowReadMore ? '...' : '');
+    : words.slice(0, wordLimit).join(' ') + (shouldShowReadMore ? '...' : '')
 
   return (
     <FadeInView delay={0.1}>
@@ -83,8 +83,9 @@ const TestimonialContent = ({
                 color={buttonColor}
                 ml={2}
                 onClick={() => setIsExpanded(!isExpanded)}
+                size={'sm'}
               >
-                {isExpanded ? 'Read less' : 'Read more'}
+                {isExpanded ? t`Read less` : t`Read more`}
               </Button>
             )}
           </TestimonialText>
@@ -92,36 +93,36 @@ const TestimonialContent = ({
         <FadeInView delay={0.1}>{children}</FadeInView>
       </Stack>
     </FadeInView>
-  );
-};
+  )
+}
 
 const TestimonialHeading = ({ children }: { children: ReactNode }) => {
   return (
     <Heading as={'h3'} fontSize={'xl'}>
       {children}
     </Heading>
-  );
-};
+  )
+}
 
 const TestimonialText = ({ children }: { children: ReactNode }) => {
-  const textColor = useColorModeValue('gray.600', 'gray.400');
+  const textColor = useColorModeValue('gray.600', 'gray.400')
   return (
     <Text textAlign={'center'} color={textColor} fontSize={'sm'}>
       {children}
     </Text>
-  );
-};
+  )
+}
 
 const TestimonialAvatar = ({
   src,
   name,
   title,
 }: {
-  src: string;
-  name: string;
-  title: string;
+  src: string
+  name: string
+  title: string
 }) => {
-  const textColor = useColorModeValue('gray.600', 'gray.400');
+  const textColor = useColorModeValue('gray.600', 'gray.400')
   return (
     <Flex align={'center'} mt={8} direction={'column'}>
       <FadeInView delay={0.1}>
@@ -138,11 +139,11 @@ const TestimonialAvatar = ({
         </FadeInView>
       </Stack>
     </Flex>
-  );
-};
+  )
+}
 
 export default function WithSpeechBubbles() {
-  const bg = useColorModeValue('gray.100', 'gray.700');
+  const bg = useColorModeValue('gray.100', 'gray.700')
   return (
     <VStack bg={bg} w={'full'}>
       <FadeInView>
@@ -182,5 +183,5 @@ export default function WithSpeechBubbles() {
         </Container>
       </FadeInView>
     </VStack>
-  );
+  )
 }

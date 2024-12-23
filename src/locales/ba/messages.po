@@ -245,7 +245,7 @@ msgid "Design Projects 3"
 msgstr "Dizajnerski Projekti 3"
 
 #: src/apps/Website/Photography-Website/Shared/FooterPhotography.tsx:266
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:77
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:76
 msgid "Developer"
 msgstr "Developer"
 
@@ -282,7 +282,7 @@ msgstr "Email"
 msgid "Email address"
 msgstr "Email adresa"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:153
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:154
 msgid "Endorsement"
 msgstr "Preporuka"
 
@@ -305,7 +305,7 @@ msgstr "Engleska Verzija"
 msgid "Enter your email"
 msgstr "Vaša email adresa"
 
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:88
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:87
 msgid "Explore <0>my</0><1/>limitless possibilities"
 msgstr "Istražite <0>moje</0><1/>neograničene mogućnosti"
 
@@ -389,7 +389,7 @@ msgstr "Zajamčena kvaliteta"
 #~ msgid "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina and this is my web resume. Here you can see my capabilities and skills as a software engineer and a photographer. Feel free to explore my website and my photo gallery."
 #~ msgstr "Zdravo. Moje ime je Ejmen. Ja sam softverski inženjer iz Bosne i Hercegovine i ovo je moj web životopis. Ovdje možete vidjeti moje sposobnosti i vještine kao softverskog inženjera i fotografa. Slobodno istražite moju web stranicu i moju foto galeriju."
 
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:105
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:104
 msgid "Hi. My name is Ejmen. I'm a software engineer from Bosnia and Herzegovina, and this is my web resume. Here, you can see my capabilities and skills as a software engineer and as a photographer. Feel free to explore my website and my photo gallery."
 msgstr "Zdravo. Moje ime je Ejmen. Ja sam softverski inženjer iz Bosne i Hercegovine, i ovo je moj online rezime. Ovdje možete vidjeti moje sposobnosti i vještine kao softverskog inženjera i fotografa. Slobodno istražite moju web stranicu i galeriju fotografija."
 
@@ -741,11 +741,19 @@ msgstr "Promovisan u ulogu Junior Softverskog i QA inženjera, prihvatio sam nov
 msgid "Promotion - Software & QA Engineer - Malaysia"
 msgstr "Promocija - Softverski i QA inženjer - Malezija"
 
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:88
+msgid "Read less"
+msgstr "Pročitaj manje"
+
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:88
+msgid "Read more"
+msgstr "Pročitaj više"
+
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:109
 msgid "Reasons to <0>Count</0> on Me"
 msgstr "Razlozi za <0>Računanje</0> na Mene"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:158
+#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:159
 msgid "Recommendation from top employers in Malaysia and Bosnia"
 msgstr "Preporuka od vodećih poslodavaca u Maleziji i Bosni"
 
@@ -767,7 +775,7 @@ msgstr "Zatraži reset"
 
 #: src/apps/Website/Photography-Website/Shared/FooterPhotography.tsx:238
 #: src/apps/Website/Photography-Website/Shared/Header/Mobile/index.tsx:45
-#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:130
+#: src/apps/Website/Resume-Website/pages/Home/Welcome/WelcomePart.tsx:129
 #: src/shared/components/PageWrapper/Footer/Footer.tsx:231
 #: src/shared/components/PageWrapper/Header/index.tsx:119
 #: src/shared/components/PageWrapper/Header/Mobile/index.tsx:50
