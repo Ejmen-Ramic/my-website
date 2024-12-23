@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { BiChevronDown } from 'react-icons/bi'
 import { IoLanguageOutline } from 'react-icons/io5'
-import { t, Trans } from '@lingui/macro'
+import { Trans } from '@lingui/macro'
 import { dynamicActivate } from '../../../LanguageSwitcher/dynamicActivate'
 import { colors } from '../../../Hooks/color'
 

@@ -1,5 +1,5 @@
 import { Box, Text } from '@chakra-ui/react'
-import { t, Trans } from '@lingui/macro'
+import { Trans } from '@lingui/macro'
 import {
   FaCode,
   FaCubes,
