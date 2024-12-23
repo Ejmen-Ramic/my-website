@@ -354,7 +354,7 @@ msgstr "February 2, 2018"
 msgid "February, 2023 - Present"
 msgstr "February, 2023 - Present"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:20
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:30
 msgid "Final Year Project"
 msgstr "Final Year Project"
 
@@ -363,8 +363,12 @@ msgid "Fluent"
 msgstr "Fluent"
 
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:29
-msgid "FLUX Sdn. Bhd., Malaysia"
-msgstr "FLUX Sdn. Bhd., Malaysia"
+#~ msgid "FLUX Sdn. Bhd., Malaysia"
+#~ msgstr "FLUX Sdn. Bhd., Malaysia"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:50
+msgid "FLUX, Malaysia"
+msgstr "FLUX, Malaysia"
 
 #: src/apps/Website/Resume-Website/pages/Account/SignIn/SignIn.tsx:68
 msgid "Forgot password?"
@@ -467,7 +471,7 @@ msgstr "I use a combination of prioritization techniques like the <0>Eisenhower 
 #~ msgid "I use a combination of prioritization techniques like the Eisenhower Matrix to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like Trello or Notion to keep track of progress. This helps me stay organized and ensures that I focus on the most critical tasks first."
 #~ msgstr "I use a combination of prioritization techniques like the Eisenhower Matrix to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like Trello or Notion to keep track of progress. This helps me stay organized and ensures that I focus on the most critical tasks first."
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:30
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:52
 msgid "I worked on a project called Project V4, where my role as a software engineer involved converting and rewriting old JavaScript code and outdated packages into the latest TypeScript, React, Chakra UI and improved server side rendering of Next.js. I managed this project alongside one colleague, and together we completed it within three months. The project was a success, requiring us to write thousands of lines of code to achieve our goals. Currently FLUX website is the fastest in Asia."
 msgstr "I worked on a project called Project V4, where my role as a software engineer involved converting and rewriting old JavaScript code and outdated packages into the latest TypeScript, React, Chakra UI and improved server side rendering of Next.js. I managed this project alongside one colleague, and together we completed it within three months. The project was a success, requiring us to write thousands of lines of code to achieve our goals. Currently FLUX website is the fastest in Asia."
 
@@ -500,7 +504,7 @@ msgstr "I'm a web developer."
 #~ msgstr "I've developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team."
 
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:15
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:22
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:32
 msgid "IIUM, Malaysia"
 msgstr "IIUM, Malaysia"
 
@@ -586,7 +590,7 @@ msgstr "Languages"
 msgid "Libraries"
 msgstr "Libraries"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:23
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:34
 msgid "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project’s significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
 msgstr "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project’s significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
 
@@ -738,7 +742,7 @@ msgstr "Programming"
 msgid "Programming Enthusiast. Software & Quality Assurance Engineer."
 msgstr "Programming Enthusiast. Software & Quality Assurance Engineer."
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:27
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:48
 msgid "Project V4"
 msgstr "Project V4"
 
@@ -913,7 +917,7 @@ msgstr "Technical Skills"
 msgid "Thank you for subscribing!"
 msgstr "Thank you for subscribing!"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:16
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:17
 msgid "The \"Blockchain Charity\" project is a web application designed to ensure safe and transparent charitable donations via blockchain. It includes smart contract testing for donation and withdrawal transactions, and features for managing and monitoring donations and thresholds. The app uses tools like Truffle, Ganache, and MetaMask to securely handle and display transactions, helping to prevent fraud and money laundering while ensuring funds reach the intended recipients."
 msgstr "The \"Blockchain Charity\" project is a web application designed to ensure safe and transparent charitable donations via blockchain. It includes smart contract testing for donation and withdrawal transactions, and features for managing and monitoring donations and thresholds. The app uses tools like Truffle, Ganache, and MetaMask to securely handle and display transactions, helping to prevent fraud and money laundering while ensuring funds reach the intended recipients."
 
