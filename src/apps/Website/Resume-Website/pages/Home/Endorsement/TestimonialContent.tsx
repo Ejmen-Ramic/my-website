@@ -165,7 +165,7 @@ export default function WithSpeechBubbles() {
             direction={{ base: 'column', md: 'row' }}
             spacing={{ base: 10, md: 4, lg: 10 }}
           >
-            {items.map(
+            {/* {items.map(
               ({ title, description, image, name, jobTitle }, index) => (
                 <Testimonial key={index}>
                   <TestimonialContent title={title} description={description}>
@@ -177,7 +177,7 @@ export default function WithSpeechBubbles() {
                   </TestimonialContent>
                 </Testimonial>
               )
-            )}
+            )} */}
           </Stack>
         </Container>
       </FadeInView>

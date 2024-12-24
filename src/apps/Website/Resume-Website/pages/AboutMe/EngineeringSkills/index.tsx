@@ -23,7 +23,7 @@ const EngineeringSKills: FC = () => {
         <VStack
           w={'full'}
           px={{ lg: '120px' }}
-          py={{ base: '50px', lg: '100px' }}
+          py={{ lg: '100px' }}
           divider={<Divider display={{ base: 'block', md: 'none' }} />}
         >
           <VStack w={'full'} spacing={'40px'}>

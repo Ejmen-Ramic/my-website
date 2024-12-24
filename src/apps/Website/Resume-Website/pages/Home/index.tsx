@@ -6,6 +6,7 @@ import TestimonialContent from './Endorsement/TestimonialContent'
 import HostFAQ from './FrequentQuestions'
 import { VStack } from '@chakra-ui/react'
 import { FC } from 'react'
+import Endorsement from './Endorsement'
 const HomePage: FC = () => {
   return (
     <Page>
@@ -13,7 +14,8 @@ const HomePage: FC = () => {
         <Welcome />
         <ChooseToLearn />
         <ReasonsToChoose />
-        <TestimonialContent />
+        {/* <TestimonialContent /> */}
+        <Endorsement />
       </VStack>
       <HostFAQ />
     </Page>

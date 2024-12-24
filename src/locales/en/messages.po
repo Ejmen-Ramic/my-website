@@ -32,6 +32,10 @@ msgstr "{0}"
 #~ msgid "{null, plural,}"
 #~ msgstr "{null, plural,}"
 
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/TruncatedText.tsx:23
+msgid "{truncatedText}"
+msgstr "{truncatedText}"
+
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProExperience/Props.tsx:41
 msgid "• Creating and maintaining automated test scripts<0/>• Front and Backend development of the website<1/>• Database design, modeling, data import and migration"
 msgstr "• Creating and maintaining automated test scripts<0/>• Front and Backend development of the website<1/>• Database design, modeling, data import and migration"
@@ -84,39 +88,39 @@ msgstr "1. Tell me about yourself."
 #~ msgid "10. Tell us about a time when you had to learn something new quickly."
 #~ msgstr "10. Tell us about a time when you had to learn something new quickly."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:172
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:181
 msgid "10. What do you like to do on your free time?"
 msgstr "10. What do you like to do on your free time?"
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:40
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:38
 msgid "2. What are your greatest strengths and weaknesses?"
 msgstr "2. What are your greatest strengths and weaknesses?"
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:58
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:54
 msgid "3. Where do you see yourself in five years?"
 msgstr "3. Where do you see yourself in five years?"
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:75
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:70
 msgid "4. Describe a challenging situation at work and how you handled it?"
 msgstr "4. Describe a challenging situation at work and how you handled it?"
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:90
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:88
 msgid "5. Give me an example of a time when you worked as part of a team."
 msgstr "5. Give me an example of a time when you worked as part of a team."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:106
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:108
 msgid "6. Tell me about a time when you had to learn something new quickly."
 msgstr "6. Tell me about a time when you had to learn something new quickly."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:121
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:125
 msgid "7. How do you prioritize your tasks when you have multiple deadlines?"
 msgstr "7. How do you prioritize your tasks when you have multiple deadlines?"
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:135
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:143
 msgid "8. A time when you optimized an application for better performance."
 msgstr "8. A time when you optimized an application for better performance."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:150
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:160
 msgid "9. Can you walk me through a project you worked on?"
 msgstr "9. Can you walk me through a project you worked on?"
 
@@ -183,7 +187,7 @@ msgstr "Bachelor's in Information and Communication Technology"
 
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:17
 #: src/shared/components/PageWrapper/Header/Desktop/LanguageMenu.tsx:36
-#: src/shared/components/PageWrapper/Header/Mobile/LanguageMenuMobile.tsx:50
+#: src/shared/components/PageWrapper/Header/Mobile/LanguageMenuMobile.tsx:63
 msgid "Bosnian"
 msgstr "Bosnian"
 
@@ -191,7 +195,7 @@ msgstr "Bosnian"
 msgid "Bosnian Version"
 msgstr "Bosnian Version"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:38
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:51
 msgid "Chief Technology Officer at Sense Malaysia"
 msgstr "Chief Technology Officer at Sense Malaysia"
 
@@ -199,7 +203,7 @@ msgstr "Chief Technology Officer at Sense Malaysia"
 #~ msgid "Chief Technology Officer at Sense Sdn. Bhd."
 #~ msgstr "Chief Technology Officer at Sense Sdn. Bhd."
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:54
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:73
 msgid "Co-founder of AfterFund USA"
 msgstr "Co-founder of AfterFund USA"
 
@@ -274,13 +278,21 @@ msgstr "During my time at FLUX, I had the opportunity to dive into the world of 
 msgid "Education"
 msgstr "Education"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:29
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:42
 msgid "Ejmen brings a rare mix of technical expertise and innovative thinking. His approach to software engineering reflects a deep understanding of modern development practices, paired with a unique ability to simplify complex problems. He's a true asset to any team."
 msgstr "Ejmen brings a rare mix of technical expertise and innovative thinking. His approach to software engineering reflects a deep understanding of modern development practices, paired with a unique ability to simplify complex problems. He's a true asset to any team."
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:43
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:36
+msgid "Ejmen brings a rare mix of technical expertise and innovative thinking. His approach to software engineering..."
+msgstr "Ejmen brings a rare mix of technical expertise and innovative thinking. His approach to software engineering..."
+
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:62
 msgid "Ejmen is a diligent and gifted coder, but what stuck out to me is his integrity. I've seen him operate in several contexts. In each case, he demonstrated incredible character and professionalism. Especially if you're not in the IT field yourself and not sure how things work, having someone who you can trust to do things right--and do right by you--is invaluable. I recommend him without reservation."
 msgstr "Ejmen is a diligent and gifted coder, but what stuck out to me is his integrity. I've seen him operate in several contexts. In each case, he demonstrated incredible character and professionalism. Especially if you're not in the IT field yourself and not sure how things work, having someone who you can trust to do things right--and do right by you--is invaluable. I recommend him without reservation."
+
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:56
+msgid "Ejmen is a diligent and gifted coder, but what stuck out to me is his integrity. I've seen him operate in several..."
+msgstr "Ejmen is a diligent and gifted coder, but what stuck out to me is his integrity. I've seen him operate in several..."
 
 #: src/shared/components/Header/index.tsx:215
 #~ msgid "Ejmen Ramic"
@@ -289,6 +301,10 @@ msgstr "Ejmen is a diligent and gifted coder, but what stuck out to me is his in
 #: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:18
 msgid "Ejmen Test"
 msgstr "Ejmen Test"
+
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:16
+msgid "Ejmen's ability to identify, analyze, and resolve issues efficiently is remarkable. Whether it's backend optimization or..."
+msgstr "Ejmen's ability to identify, analyze, and resolve issues efficiently is remarkable. Whether it's backend optimization or..."
 
 #: src/apps/Website/Photography-Website/pages/Contacts/ContactForm/index.tsx:163
 #: src/apps/Website/Resume-Website/pages/Contacts/ContactForm/ContactForm .tsx:223
@@ -299,7 +315,8 @@ msgstr "Email"
 msgid "Email address"
 msgstr "Email address"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:153
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/index.tsx:57
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/TestimonialContent.tsx:153
 msgid "Endorsement"
 msgstr "Endorsement"
 
@@ -309,7 +326,7 @@ msgstr "Engaged in a valuable internship experience as a Web Coordinator at Inte
 
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:21
 #: src/shared/components/PageWrapper/Header/Desktop/LanguageMenu.tsx:32
-#: src/shared/components/PageWrapper/Header/Mobile/LanguageMenuMobile.tsx:46
+#: src/shared/components/PageWrapper/Header/Mobile/LanguageMenuMobile.tsx:59
 msgid "English"
 msgstr "English"
 
@@ -382,7 +399,7 @@ msgstr "Forgot your password?"
 msgid "Frameworks"
 msgstr "Frameworks"
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:199
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:207
 msgid "Frequently Asked Questions"
 msgstr "Frequently Asked Questions"
 
@@ -440,14 +457,18 @@ msgid "I"
 msgstr "I"
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:25
-msgid "I am a <0>software developer</0> with a passion for creating <1>intuitive</1> and <2>efficient user experiences</2>. I have been working with <3>latest languages, frameworks and testing tools</3> for the past few years, and I love how these tools enable me to build <4>scalable</4> and <5>maintainable</5> applications.<6/><7/> Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
-msgstr "I am a <0>software developer</0> with a passion for creating <1>intuitive</1> and <2>efficient user experiences</2>. I have been working with <3>latest languages, frameworks and testing tools</3> for the past few years, and I love how these tools enable me to build <4>scalable</4> and <5>maintainable</5> applications.<6/><7/> Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
+#~ msgid "I am a <0>software developer</0> with a passion for creating <1>intuitive</1> and <2>efficient user experiences</2>. I have been working with <3>latest languages, frameworks and testing tools</3> for the past few years, and I love how these tools enable me to build <4>scalable</4> and <5>maintainable</5> applications.<6/><7/> Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
+#~ msgstr "I am a <0>software developer</0> with a passion for creating <1>intuitive</1> and <2>efficient user experiences</2>. I have been working with <3>latest languages, frameworks and testing tools</3> for the past few years, and I love how these tools enable me to build <4>scalable</4> and <5>maintainable</5> applications.<6/><7/> Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:24
+msgid "I am a <0>software developer</0> with a passion for creating<1>intuitive</1> and<2>efficient user experiences</2>. I have been working with<3>latest languages, frameworks and testing tools</3> for the past few years, and I love how these tools enable me to build <4>scalable</4>and <5>maintainable</5> applications.<6/><7/> Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
+msgstr "I am a <0>software developer</0> with a passion for creating<1>intuitive</1> and<2>efficient user experiences</2>. I have been working with<3>latest languages, frameworks and testing tools</3> for the past few years, and I love how these tools enable me to build <4>scalable</4>and <5>maintainable</5> applications.<6/><7/> Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:51
 msgid "I have developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team."
 msgstr "I have developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:175
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:183
 msgid "I love <0>hiking</0>, <1>exploring</1> new places and <2>photographing</2> landscapes, which helps me stay <3>creative</3> and refreshed. I also enjoy working on side projects that involve <4>engineering</4>."
 msgstr "I love <0>hiking</0>, <1>exploring</1> new places and <2>photographing</2> landscapes, which helps me stay <3>creative</3> and refreshed. I also enjoy working on side projects that involve <4>engineering</4>."
 
@@ -464,8 +485,12 @@ msgid "I thrive in collaborative environments, where I can learn, grow, and exch
 msgstr "I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:124
-msgid "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like <1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
-msgstr "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like <1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
+#~ msgid "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like <1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
+#~ msgstr "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like <1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:130
+msgid "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like<1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
+msgstr "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like<1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:50
 #~ msgid "I use a combination of prioritization techniques like the Eisenhower Matrix to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like Trello or Notion to keep track of progress. This helps me stay organized and ensures that I focus on the most critical tasks first."
@@ -476,16 +501,24 @@ msgid "I worked on a project called Project V4, where my role as a software engi
 msgstr "I worked on a project called Project V4, where my role as a software engineer involved converting and rewriting old JavaScript code and outdated packages into the latest TypeScript, React, Chakra UI and improved server side rendering of Next.js. I managed this project alongside one colleague, and together we completed it within three months. The project was a success, requiring us to write thousands of lines of code to achieve our goals. Currently FLUX website is the fastest in Asia."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:93
-msgid "I worked on a project where we had to develop a <0>complex admin dashboard</0> for the company. I was responsible for the frontend using <1>React</1> and <2>Chakra UI</2> and wrote tests using the <3>Playwright</3> testing tool, while my teammates handled the backend. We had regular sync-ups to ensure our components integrated <4>smoothly</4>. This collaboration not only helped us <5>meet our deadlines</5> but also <6>improved</6> the overall quality of the product."
-msgstr "I worked on a project where we had to develop a <0>complex admin dashboard</0> for the company. I was responsible for the frontend using <1>React</1> and <2>Chakra UI</2> and wrote tests using the <3>Playwright</3> testing tool, while my teammates handled the backend. We had regular sync-ups to ensure our components integrated <4>smoothly</4>. This collaboration not only helped us <5>meet our deadlines</5> but also <6>improved</6> the overall quality of the product."
+#~ msgid "I worked on a project where we had to develop a <0>complex admin dashboard</0> for the company. I was responsible for the frontend using <1>React</1> and <2>Chakra UI</2> and wrote tests using the <3>Playwright</3> testing tool, while my teammates handled the backend. We had regular sync-ups to ensure our components integrated <4>smoothly</4>. This collaboration not only helped us <5>meet our deadlines</5> but also <6>improved</6> the overall quality of the product."
+#~ msgstr "I worked on a project where we had to develop a <0>complex admin dashboard</0> for the company. I was responsible for the frontend using <1>React</1> and <2>Chakra UI</2> and wrote tests using the <3>Playwright</3> testing tool, while my teammates handled the backend. We had regular sync-ups to ensure our components integrated <4>smoothly</4>. This collaboration not only helped us <5>meet our deadlines</5> but also <6>improved</6> the overall quality of the product."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:93
+msgid "I worked on a project where we had to develop a <0>complex admin dashboard</0> for the company. I was responsible for the frontend using<1>React</1> and <2>Chakra UI</2> and wrote tests using the <3>Playwright</3> testing tool, while my teammates handled the backend. We had regular sync-ups to ensure our components integrated <4>smoothly</4>. This collaboration not only helped us <5>meet our deadlines</5> but also <6>improved</6> the overall quality of the product."
+msgstr "I worked on a project where we had to develop a <0>complex admin dashboard</0> for the company. I was responsible for the frontend using<1>React</1> and <2>Chakra UI</2> and wrote tests using the <3>Playwright</3> testing tool, while my teammates handled the backend. We had regular sync-ups to ensure our components integrated <4>smoothly</4>. This collaboration not only helped us <5>meet our deadlines</5> but also <6>improved</6> the overall quality of the product."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:42
 #~ msgid "I worked on a project where we had to develop a complex admin dashboard for the company. I was responsible for the frontend using React and Chakra UI and wrote tests using the Playwright testing tool, while my teammates handled the backend. We had regular sync-ups to ensure our components integrated smoothly. This collaboration not only helped us meet our deadlines but also improved the overall quality of the product."
 #~ msgstr "I worked on a project where we had to develop a complex admin dashboard for the company. I was responsible for the frontend using React and Chakra UI and wrote tests using the Playwright testing tool, while my teammates handled the backend. We had regular sync-ups to ensure our components integrated smoothly. This collaboration not only helped us meet our deadlines but also improved the overall quality of the product."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:153
-msgid "I worked on an e-commerce platform where we used <0>React</0>, <1>TypeScript</1>, and <2>Chakra UI</2> for the frontend, <3>Next.js</3> for the backend, <4>MongoDB</4> and <5>Prisma</5> for the database, and <6>Playwright</6> for writing tests. I implemented features like user <7>authentication</7>, <8>product listings</8>, and a <9>checkout page</9>. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<10/><11/> Additionally, I <12>collaborated</12> closely with backend developers to integrate the frontend with the server-side logic <13>seamlessly</13>, resulting in a smooth and efficient user experience. The project was a great <14>success</14>, improving user engagement and <15>increasing sales</15> for the platform."
-msgstr "I worked on an e-commerce platform where we used <0>React</0>, <1>TypeScript</1>, and <2>Chakra UI</2> for the frontend, <3>Next.js</3> for the backend, <4>MongoDB</4> and <5>Prisma</5> for the database, and <6>Playwright</6> for writing tests. I implemented features like user <7>authentication</7>, <8>product listings</8>, and a <9>checkout page</9>. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<10/><11/> Additionally, I <12>collaborated</12> closely with backend developers to integrate the frontend with the server-side logic <13>seamlessly</13>, resulting in a smooth and efficient user experience. The project was a great <14>success</14>, improving user engagement and <15>increasing sales</15> for the platform."
+#~ msgid "I worked on an e-commerce platform where we used <0>React</0>, <1>TypeScript</1>, and <2>Chakra UI</2> for the frontend, <3>Next.js</3> for the backend, <4>MongoDB</4> and <5>Prisma</5> for the database, and <6>Playwright</6> for writing tests. I implemented features like user <7>authentication</7>, <8>product listings</8>, and a <9>checkout page</9>. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<10/><11/> Additionally, I <12>collaborated</12> closely with backend developers to integrate the frontend with the server-side logic <13>seamlessly</13>, resulting in a smooth and efficient user experience. The project was a great <14>success</14>, improving user engagement and <15>increasing sales</15> for the platform."
+#~ msgstr "I worked on an e-commerce platform where we used <0>React</0>, <1>TypeScript</1>, and <2>Chakra UI</2> for the frontend, <3>Next.js</3> for the backend, <4>MongoDB</4> and <5>Prisma</5> for the database, and <6>Playwright</6> for writing tests. I implemented features like user <7>authentication</7>, <8>product listings</8>, and a <9>checkout page</9>. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<10/><11/> Additionally, I <12>collaborated</12> closely with backend developers to integrate the frontend with the server-side logic <13>seamlessly</13>, resulting in a smooth and efficient user experience. The project was a great <14>success</14>, improving user engagement and <15>increasing sales</15> for the platform."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:162
+msgid "I worked on an e-commerce platform where we used <0>React</0>, <1>TypeScript</1>, and <2>Chakra UI</2> for the frontend, <3>Next.js</3> for the backend, <4>MongoDB</4> and<5>Prisma</5> for the database, and <6>Playwright</6> for writing tests. I implemented features like user <7>authentication</7>, <8>product listings</8>, and a<9>checkout page</9>. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<10/><11/> Additionally, I <12>collaborated</12> closely with backend developers to integrate the frontend with the server-side logic <13>seamlessly</13>, resulting in a smooth and efficient user experience. The project was a great <14>success</14>, improving user engagement and <15>increasing sales</15> for the platform."
+msgstr "I worked on an e-commerce platform where we used <0>React</0>, <1>TypeScript</1>, and <2>Chakra UI</2> for the frontend, <3>Next.js</3> for the backend, <4>MongoDB</4> and<5>Prisma</5> for the database, and <6>Playwright</6> for writing tests. I implemented features like user <7>authentication</7>, <8>product listings</8>, and a<9>checkout page</9>. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<10/><11/> Additionally, I <12>collaborated</12> closely with backend developers to integrate the frontend with the server-side logic <13>seamlessly</13>, resulting in a smooth and efficient user experience. The project was a great <14>success</14>, improving user engagement and <15>increasing sales</15> for the platform."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:60
 #~ msgid "I worked on an e-commerce platform where we used React, TypeScript, and Chakra UI for the frontend, Next.js for the backend, MongoDB and Prisma for the database, and Playwright for writing tests. I implemented features like user authentication, product listings, and a checkout page. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<0/><1/> Additionally, I collaborated closely with backend developers to integrate the frontend with the server-side logic seamlessly, resulting in a smooth and efficient user experience. The project was a great success, improving user engagement and increasing sales for the platform."
@@ -509,18 +542,22 @@ msgid "IIUM, Malaysia"
 msgstr "IIUM, Malaysia"
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:61
-msgid "In five years, I see myself taking on more <0>leadership responsibilities</0>, possibly <1>leading</1> a development team. I would like to continue honing my <2>technical skills</2> while also <3>mentoring</3> junior developers.<4/><5/> I am also interested in <6>exploring</6> more about system architecture and design, <7>contributing</7> to larger strategic decisions."
-msgstr "In five years, I see myself taking on more <0>leadership responsibilities</0>, possibly <1>leading</1> a development team. I would like to continue honing my <2>technical skills</2> while also <3>mentoring</3> junior developers.<4/><5/> I am also interested in <6>exploring</6> more about system architecture and design, <7>contributing</7> to larger strategic decisions."
+#~ msgid "In five years, I see myself taking on more <0>leadership responsibilities</0>, possibly <1>leading</1> a development team. I would like to continue honing my <2>technical skills</2> while also <3>mentoring</3> junior developers.<4/><5/> I am also interested in <6>exploring</6> more about system architecture and design, <7>contributing</7> to larger strategic decisions."
+#~ msgstr "In five years, I see myself taking on more <0>leadership responsibilities</0>, possibly <1>leading</1> a development team. I would like to continue honing my <2>technical skills</2> while also <3>mentoring</3> junior developers.<4/><5/> I am also interested in <6>exploring</6> more about system architecture and design, <7>contributing</7> to larger strategic decisions."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:34
 #~ msgid "In five years, I see myself taking on more leadership responsibilities, possibly leading a development team. I'd like to continue honing my technical skills while also mentoring junior developers. I'm also interested in exploring more about system architecture and design, contributing to larger strategic decisions."
 #~ msgstr "In five years, I see myself taking on more leadership responsibilities, possibly leading a development team. I'd like to continue honing my technical skills while also mentoring junior developers. I'm also interested in exploring more about system architecture and design, contributing to larger strategic decisions."
 
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:56
+msgid "In five years, I see myself taking on more<0>leadership responsibilities</0>, possibly <1>leading</1> a development team. I would like to continue honing my<2>technical skills</2> while also <3>mentoring</3> junior developers.<4/><5/> I am also interested in <6>exploring</6> more about system architecture and design, <7>contributing</7> to larger strategic decisions."
+msgstr "In five years, I see myself taking on more<0>leadership responsibilities</0>, possibly <1>leading</1> a development team. I would like to continue honing my<2>technical skills</2> while also <3>mentoring</3> junior developers.<4/><5/> I am also interested in <6>exploring</6> more about system architecture and design, <7>contributing</7> to larger strategic decisions."
+
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:38
 #~ msgid "In one of my projects, we had a major issue right before a product launch where our application wasn't scaling properly under load. I led a small team to identify the bottlenecks. We optimized our database queries and introduced caching mechanisms, which significantly improved performance. It was a stressful situation, but it taught me a lot about teamwork and problem-solving under pressure"
 #~ msgstr "In one of my projects, we had a major issue right before a product launch where our application wasn't scaling properly under load. I led a small team to identify the bottlenecks. We optimized our database queries and introduced caching mechanisms, which significantly improved performance. It was a stressful situation, but it taught me a lot about teamwork and problem-solving under pressure"
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:78
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:75
 msgid "In one of my projects, we had a major issue, right before a product launch where our application was not scaling properly under load. <0>I led</0> a small team to identify the bottlenecks. <1>We optimized</1> our database queries and <2>introduced</2> caching mechanisms, which significantly <3>improved</3> performance. It was a stressful situation, but it taught me a lot about <4>teamwork</4> and <5>problem-solving</5> under pressure."
 msgstr "In one of my projects, we had a major issue, right before a product launch where our application was not scaling properly under load. <0>I led</0> a small team to identify the bottlenecks. <1>We optimized</1> our database queries and <2>introduced</2> caching mechanisms, which significantly <3>improved</3> performance. It was a stressful situation, but it taught me a lot about <4>teamwork</4> and <5>problem-solving</5> under pressure."
 
@@ -529,7 +566,7 @@ msgstr "In one of my projects, we had a major issue, right before a product laun
 msgid "Information and Communication Technology"
 msgstr "Information and Communication Technology"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:27
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:34
 msgid "Innovative Architect"
 msgstr "Innovative Architect"
 
@@ -582,7 +619,7 @@ msgstr "Kuala Lumpur, Malaysia"
 #: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:24
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:45
 #: src/shared/components/PageWrapper/Header/Desktop/LanguageMenu.tsx:78
-#: src/shared/components/PageWrapper/Header/Mobile/LanguageMenuMobile.tsx:80
+#: src/shared/components/PageWrapper/Header/Mobile/LanguageMenuMobile.tsx:93
 msgid "Languages"
 msgstr "Languages"
 
@@ -698,8 +735,12 @@ msgid "Not a user?"
 msgstr "Not a user?"
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:43
-msgid "One of my greatest strengths is my ability to <0>learn quickly</0> and <1>adapt</1> to new technologies. For instance, I picked up Chakra UI on my own and have been able to <2>integrate it seamlessly</2> into my projects.<3/><4/> On the flip side, a weakness of mine is that I can be a bit of a <5>perfectionist</5>. Sometimes I spend too much time tweaking small details. I am working on balancing my attention to detail with efficiency."
-msgstr "One of my greatest strengths is my ability to <0>learn quickly</0> and <1>adapt</1> to new technologies. For instance, I picked up Chakra UI on my own and have been able to <2>integrate it seamlessly</2> into my projects.<3/><4/> On the flip side, a weakness of mine is that I can be a bit of a <5>perfectionist</5>. Sometimes I spend too much time tweaking small details. I am working on balancing my attention to detail with efficiency."
+#~ msgid "One of my greatest strengths is my ability to <0>learn quickly</0> and <1>adapt</1> to new technologies. For instance, I picked up Chakra UI on my own and have been able to <2>integrate it seamlessly</2> into my projects.<3/><4/> On the flip side, a weakness of mine is that I can be a bit of a <5>perfectionist</5>. Sometimes I spend too much time tweaking small details. I am working on balancing my attention to detail with efficiency."
+#~ msgstr "One of my greatest strengths is my ability to <0>learn quickly</0> and <1>adapt</1> to new technologies. For instance, I picked up Chakra UI on my own and have been able to <2>integrate it seamlessly</2> into my projects.<3/><4/> On the flip side, a weakness of mine is that I can be a bit of a <5>perfectionist</5>. Sometimes I spend too much time tweaking small details. I am working on balancing my attention to detail with efficiency."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:40
+msgid "One of my greatest strengths is my ability to <0>learn quickly</0> and<1>adapt</1>to new technologies. For instance, I picked up Chakra UI on my own and have been able to <2>integrate it seamlessly</2> into my projects.<3/><4/> On the flip side, a weakness of mine is that I can be a bit of a <5>perfectionist</5>. Sometimes I spend too much time tweaking small details. I am working on balancing my attention to detail with efficiency."
+msgstr "One of my greatest strengths is my ability to <0>learn quickly</0> and<1>adapt</1>to new technologies. For instance, I picked up Chakra UI on my own and have been able to <2>integrate it seamlessly</2> into my projects.<3/><4/> On the flip side, a weakness of mine is that I can be a bit of a <5>perfectionist</5>. Sometimes I spend too much time tweaking small details. I am working on balancing my attention to detail with efficiency."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:22
 #~ msgid "One of my greatest strengths is my ability to learn quickly and adapt to new technologies. For instance, I picked up Chakra UI on my own and have been able to integrate it seamlessly into my projects.<0/><1/> On the flip side, a weakness of mine is that I can be a bit of a perfectionist. Sometimes I spend too much time tweaking small details. I'm working on balancing my attention to detail with efficiency."
@@ -771,22 +812,26 @@ msgid "Promotion - Software & QA Engineer - Malaysia"
 msgstr "Promotion - Software & QA Engineer - Malaysia"
 
 #: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:87
-msgid "Read less"
-msgstr "Read less"
+#~ msgid "Read less"
+#~ msgstr "Read less"
 
 #: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:87
-msgid "Read more"
-msgstr "Read more"
+#~ msgid "Read more"
+#~ msgstr "Read more"
+
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/index.tsx:131
+msgid "Read More"
+msgstr "Read More"
 
 #: src/apps/Website/Resume-Website/pages/Home/ReasonsToCount/ReasonsToChoose.tsx:109
 msgid "Reasons to <0>Count</0> on Me"
 msgstr "Reasons to <0>Count</0> on Me"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:159
-#~ msgid "Recommendation from top employers in Malaysia and Bosnia"
-#~ msgstr "Recommendation from top employers in Malaysia and Bosnia"
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/TestimonialContent.tsx:158
+msgid "Recommendation from top employers in Malaysia and Bosnia"
+msgstr "Recommendation from top employers in Malaysia and Bosnia"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:158
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/index.tsx:67
 msgid "Recommendation from top employers in USA, Malaysia and Bosnia"
 msgstr "Recommendation from top employers in USA, Malaysia and Bosnia"
 
@@ -827,7 +872,7 @@ msgstr "Russian"
 msgid "School Achievements"
 msgstr "School Achievements"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:13
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:14
 msgid "Seamless Problem-Solver"
 msgstr "Seamless Problem-Solver"
 
@@ -854,7 +899,7 @@ msgstr "Semester 1, 2020/2021"
 msgid "Send Message"
 msgstr "Send Message"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:24
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:31
 msgid "Senior Full Stack Developer at Flux Malaysia"
 msgstr "Senior Full Stack Developer at Flux Malaysia"
 
@@ -953,7 +998,7 @@ msgstr "Thank you for subscribing!"
 msgid "The \"Blockchain Charity\" project is a web application designed to ensure safe and transparent charitable donations via blockchain. It includes smart contract testing for donation and withdrawal transactions, and features for managing and monitoring donations and thresholds. The app uses tools like Truffle, Ganache, and MetaMask to securely handle and display transactions, helping to prevent fraud and money laundering while ensuring funds reach the intended recipients."
 msgstr "The \"Blockchain Charity\" project is a web application designed to ensure safe and transparent charitable donations via blockchain. It includes smart contract testing for donation and withdrawal transactions, and features for managing and monitoring donations and thresholds. The app uses tools like Truffle, Ganache, and MetaMask to securely handle and display transactions, helping to prevent fraud and money laundering while ensuring funds reach the intended recipients."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:202
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:210
 msgid "The following list of frequently asked questions by employers that may also assist you in getting your questions answered:"
 msgstr "The following list of frequently asked questions by employers that may also assist you in getting your questions answered:"
 
@@ -972,7 +1017,7 @@ msgstr "to enjoy all of the cool"
 msgid "Tools"
 msgstr "Tools"
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:41
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:54
 msgid "Trustworthy Expert"
 msgstr "Trustworthy Expert"
 
@@ -997,8 +1042,12 @@ msgid "Visitors"
 msgstr "Visitors"
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:138
-msgid "We had a data-heavy application that was experiencing slow load times. I <0>optimized</0> the code by implementing lazy loading for components and using <1>React.memo</1> to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced <2>indexing</2>. These changes <3>improved</3> the application's <4>performance</4> significantly, reducing load times by about <5>40%</5>."
-msgstr "We had a data-heavy application that was experiencing slow load times. I <0>optimized</0> the code by implementing lazy loading for components and using <1>React.memo</1> to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced <2>indexing</2>. These changes <3>improved</3> the application's <4>performance</4> significantly, reducing load times by about <5>40%</5>."
+#~ msgid "We had a data-heavy application that was experiencing slow load times. I <0>optimized</0> the code by implementing lazy loading for components and using <1>React.memo</1> to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced <2>indexing</2>. These changes <3>improved</3> the application's <4>performance</4> significantly, reducing load times by about <5>40%</5>."
+#~ msgstr "We had a data-heavy application that was experiencing slow load times. I <0>optimized</0> the code by implementing lazy loading for components and using <1>React.memo</1> to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced <2>indexing</2>. These changes <3>improved</3> the application's <4>performance</4> significantly, reducing load times by about <5>40%</5>."
+
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:148
+msgid "We had a data-heavy application that was experiencing slow load times. I <0>optimized</0> the code by implementing lazy loading for components and using <1>React.memo</1> to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced <2>indexing</2>. These changes<3>improved</3> the application's <4>performance</4> significantly, reducing load times by about <5>40%</5>."
+msgstr "We had a data-heavy application that was experiencing slow load times. I <0>optimized</0> the code by implementing lazy loading for components and using <1>React.memo</1> to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced <2>indexing</2>. These changes<3>improved</3> the application's <4>performance</4> significantly, reducing load times by about <5>40%</5>."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:54
 #~ msgid "We had a data-heavy application that was experiencing slow load times. I optimized the code by implementing lazy loading for components and using React.memo to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced indexing. These changes improved the application's performance significantly, reducing load times by about 40%."
@@ -1033,7 +1082,7 @@ msgstr "When it comes to coding swiftly, I aim for efficiency without sacrificin
 #~ msgid "When we decided to switch from JavaScript and CSS to TypeScript and Chakra UI in my previous job, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
 #~ msgstr "When we decided to switch from JavaScript and CSS to TypeScript and Chakra UI in my previous job, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:109
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:113
 msgid "When we decided to switch to <0>TypeScript</0> at one of the companies I worked for, I had to get up to speed quickly as I was one of the <1>key developers</1> on the team. I took an online course, read the documentation, and started <2>refactoring</2> small parts of our codebase. Within a <3>few weeks</3>, I was comfortable enough to lead the transition for our entire frontend team."
 msgstr "When we decided to switch to <0>TypeScript</0> at one of the companies I worked for, I had to get up to speed quickly as I was one of the <1>key developers</1> on the team. I took an online course, read the documentation, and started <2>refactoring</2> small parts of our codebase. Within a <3>few weeks</3>, I was comfortable enough to lead the transition for our entire frontend team."
 
@@ -1041,7 +1090,7 @@ msgstr "When we decided to switch to <0>TypeScript</0> at one of the companies I
 #~ msgid "When we decided to switch to TypeScript at one of the companies I worked for, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
 #~ msgstr "When we decided to switch to TypeScript at one of the companies I worked for, I had to get up to speed quickly as I was one of the key developers on the team. I took an online course, read the documentation, and started refactoring small parts of our codebase. Within a few weeks, I was comfortable enough to lead the transition for our entire frontend team."
 
-#: src/apps/Website/Resume-Website/pages/Home/Endorsment/Props.tsx:15
+#: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:22
 msgid "Working with Ejmen has been a game-changer. His ability to identify, analyze, and resolve issues efficiently is remarkable. Whether it's backend optimization or creating user-friendly interfaces, his contributions consistently elevate the project."
 msgstr "Working with Ejmen has been a game-changer. His ability to identify, analyze, and resolve issues efficiently is remarkable. Whether it's backend optimization or creating user-friendly interfaces, his contributions consistently elevate the project."
 
