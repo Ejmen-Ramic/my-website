@@ -1,13 +1,13 @@
-import { Trans } from '@lingui/macro'
+import { Trans } from '@lingui/macro';
 
 type TestimonialProps = {
-  title: string | JSX.Element
-  halfDescription: string | JSX.Element
-  description: string | JSX.Element
-  image: string
-  name: string
-  jobTitle: string | JSX.Element
-}
+  title: string | JSX.Element;
+  halfDescription: string | JSX.Element;
+  description: string | JSX.Element;
+  image: string;
+  name: string;
+  jobTitle: string | JSX.Element;
+};
 
 export const items: TestimonialProps[] = [
   {
@@ -27,7 +27,7 @@ export const items: TestimonialProps[] = [
       </Trans>
     ),
     image: './Website/Resume/Home/aladin.jpg',
-    name: 'Aladin Bouzerd',
+    name: 'Aladdin Bouzerd',
     jobTitle: <Trans>Senior Full Stack Developer at Flux Malaysia</Trans>,
   },
   {
@@ -72,6 +72,6 @@ export const items: TestimonialProps[] = [
     name: 'Omar Yunus',
     jobTitle: <Trans>Co-founder of AfterFund USA</Trans>,
   },
-]
+];
 
-export default items
+export default items;
