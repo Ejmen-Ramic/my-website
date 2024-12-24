@@ -75,7 +75,7 @@ msgstr "1. Recite mi nešto o sebi."
 #~ msgid "10. Tell us about a time when you had to learn something new quickly."
 #~ msgstr "10. Recite nam o vremenu kada ste morali brzo naučiti nešto novo."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:181
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:180
 msgid "10. What do you like to do on your free time?"
 msgstr "10. Šta voliš da radiš u slobodno vreme?"
 
@@ -103,11 +103,11 @@ msgstr "6. Recite mi o vremenu kada ste morali brzo naučiti nešto novo."
 msgid "7. How do you prioritize your tasks when you have multiple deadlines?"
 msgstr "7. Kako prioritizirate svoje zadatke kada imate više rokova?"
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:143
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:142
 msgid "8. A time when you optimized an application for better performance."
 msgstr "8. Vrijeme kada ste optimizirali aplikaciju za bolje performanse."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:160
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:159
 msgid "9. Can you walk me through a project you worked on?"
 msgstr "9. Možete li me provesti kroz projekt na kojem ste radili?"
 
@@ -382,7 +382,7 @@ msgstr "Zaboravili ste lozinku?"
 msgid "Frameworks"
 msgstr "Framework"
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:207
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:206
 msgid "Frequently Asked Questions"
 msgstr "Često postavljana pitanja"
 
@@ -451,7 +451,7 @@ msgstr "Ja sam <0>softverski programer</0> sa strašću za kreiranje<1>intuitivn
 msgid "I have developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team."
 msgstr "Razvio sam svoje vještine zahvaljujući velikoj posvećenosti i napornom radu, ulažući nebrojene sate u kodiranje i blisku saradnju s proizvodnim timom."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:183
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:182
 msgid "I love <0>hiking</0>, <1>exploring</1> new places and <2>photographing</2> landscapes, which helps me stay <3>creative</3> and refreshed. I also enjoy working on side projects that involve <4>engineering</4>."
 msgstr "Volim <0>planinarenje</0>, <1>istraživanje</1> novih mjesta i <2>fotografisanje</2> pejzaža, što mi pomaže da ostanem <3>kreativan</3> i osvježen. Također uživam raditi na dodatnim projektima koji uključuju <4>inženjering</4>."
 
@@ -467,13 +467,13 @@ msgstr "Ponosim se pisanjem čistog i čitljivog koda, dok donosim strast prema 
 msgid "I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished."
 msgstr "Uspijevam u suradničkim okruženjima, gdje mogu učiti, rasti i razmjenjivati iskustva s drugima. Čvrsto vjerujem da se s timskim radom svaki projekt može ostvariti."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:124
-#~ msgid "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like <1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
-#~ msgstr "Koristim kombinaciju tehnika prioritizacije poput <0>Eisenhowerove matrice</0> za kategorizaciju zadataka prema hitnosti i važnosti. Također razlažem veće zadatke na manje, upravljive dijelove i koristim alate poput <1>Trella</1> ili <2>Notiona</2> za praćenje napretka. Ovo mi pomaže da <3>ostanem organiziran</3> i osigurava da se fokusiram na najkritičnije zadatke prvo."
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:130
+msgid "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like <1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
+msgstr "Koristim kombinaciju tehnika prioritizacije poput <0>Eisenhowerove matrice</0> za kategorizaciju zadataka prema hitnosti i važnosti. Također razlažem veće zadatke na manje, upravljive dijelove i koristim alate poput <1>Trella</1> ili <2>Notiona</2> za praćenje napretka. Ovo mi pomaže da <3>ostanem organiziran</3> i osigurava da se fokusiram na najkritičnije zadatke prvo."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:130
-msgid "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like<1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
-msgstr "Koristim kombinaciju tehnika za postavljanje prioriteta poput <0>Eisenhower matrice</0> za kategorizaciju zadataka prema hitnosti i važnosti. Također razlažem veće zadatke na manje, upravljive dijelove i koristim alate poput<1>Trella</1> ili <2>Notiona</2> za praćenje napretka. Ovo mi pomaže da <3>ostanem organizovan</3> i osigurava da se fokusiram na najvažnije zadatke prvo."
+#~ msgid "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like<1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
+#~ msgstr "Koristim kombinaciju tehnika za postavljanje prioriteta poput <0>Eisenhower matrice</0> za kategorizaciju zadataka prema hitnosti i važnosti. Također razlažem veće zadatke na manje, upravljive dijelove i koristim alate poput<1>Trella</1> ili <2>Notiona</2> za praćenje napretka. Ovo mi pomaže da <3>ostanem organizovan</3> i osigurava da se fokusiram na najvažnije zadatke prvo."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:50
 #~ msgid "I use a combination of prioritization techniques like the Eisenhower Matrix to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like Trello or Notion to keep track of progress. This helps me stay organized and ensures that I focus on the most critical tasks first."
@@ -499,7 +499,7 @@ msgstr "Radio sam na projektu gdje smo trebali razviti <0>složeni administrator
 #~ msgid "I worked on an e-commerce platform where we used <0>React</0>, <1>TypeScript</1>, and <2>Chakra UI</2> for the frontend, <3>Next.js</3> for the backend, <4>MongoDB</4> and <5>Prisma</5> for the database, and <6>Playwright</6> for writing tests. I implemented features like user <7>authentication</7>, <8>product listings</8>, and a <9>checkout page</9>. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<10/><11/> Additionally, I <12>collaborated</12> closely with backend developers to integrate the frontend with the server-side logic <13>seamlessly</13>, resulting in a smooth and efficient user experience. The project was a great <14>success</14>, improving user engagement and <15>increasing sales</15> for the platform."
 #~ msgstr "Radio sam na e-commerce platformi gdje smo koristili <0>React</0>, <1>TypeScript</1> i <2>Chakra UI</2> za frontend, <3>Next.js</3> za backend, <4>MongoDB</4> i <5>Prisma</5> za bazu podataka, te <6>Playwright</6> za pisanje testova. Implementirao sam značajke poput <7>autentifikacije korisnika</7>, <8>popisa proizvoda</8> i <9>stranice za naplatu</9>. Korištenjem TypeScript-a osigurao sam sigurnost tipova i smanjio greške. Također smo koristili Chakra UI za stvaranje kohezivnog i responzivnog dizajna, što je web stranicu učinilo vrlo user-friendly.<10/><11/> Osim toga, <12>surađivao</12> sam usko s backend developerima kako bi integrirali frontend sa server-side logikom <13>besprijekorno</13>, što je rezultiralo glatkim i učinkovitim korisničkim iskustvom. Projekt je bio veliki <14>uspjeh</14>, poboljšavajući angažman korisnika i <15>povećavajući prodaju</15> na platformi."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:162
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:161
 msgid "I worked on an e-commerce platform where we used <0>React</0>, <1>TypeScript</1>, and <2>Chakra UI</2> for the frontend, <3>Next.js</3> for the backend, <4>MongoDB</4> and<5>Prisma</5> for the database, and <6>Playwright</6> for writing tests. I implemented features like user <7>authentication</7>, <8>product listings</8>, and a<9>checkout page</9>. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<10/><11/> Additionally, I <12>collaborated</12> closely with backend developers to integrate the frontend with the server-side logic <13>seamlessly</13>, resulting in a smooth and efficient user experience. The project was a great <14>success</14>, improving user engagement and <15>increasing sales</15> for the platform."
 msgstr "Radio sam na platformi za e-trgovinu gdje smo koristili <0>React</0>, <1>TypeScript</1> i <2>Chakra UI</2> za frontend, <3>Next.js</3> za backend, <4>MongoDB</4> i <5>Prisma</5> za bazu podataka te <6>Playwright</6> za pisanje testova. Implementirao sam funkcionalnosti poput <7>autentifikacije korisnika</7>, <8>prikaza proizvoda</8> i <9>stranice za plaćanje</9>. Koristeći TypeScript, osigurao sam sigurnost tipova i smanjio greške. Također smo koristili Chakra UI za kreiranje kohezivnog i responzivnog dizajna, što je učinilo web-lokaciju vrlo jednostavnom za korištenje.<10/><11/> Osim toga, <12>sarađivao</12> sam usko s backend programerima kako bismo <13>besprijekorno</13> integrisali frontend sa serverskom logikom, što je rezultiralo glatkim i efikasnim korisničkim iskustvom. Projekt je bio veliki <14>uspjeh</14>, poboljšavajući angažman korisnika i <15>povećavajući prodaju</15> na platformi."
 
@@ -973,7 +973,7 @@ msgstr "Hvala što ste se pretplatili!"
 msgid "The \"Blockchain Charity\" project is a web application designed to ensure safe and transparent charitable donations via blockchain. It includes smart contract testing for donation and withdrawal transactions, and features for managing and monitoring donations and thresholds. The app uses tools like Truffle, Ganache, and MetaMask to securely handle and display transactions, helping to prevent fraud and money laundering while ensuring funds reach the intended recipients."
 msgstr "Projekt \"Blockchain Charity\" je web aplikacija dizajnirana za osiguravanje sigurnih i transparentnih dobrotvornih donacija putem blockchaina. Uključuje testiranje pametnih ugovora za transakcije donacija i povlačenja, te značajke za upravljanje i praćenje donacija i pragova. Aplikacija koristi alate poput Truffle-a, Ganache-a i MetaMask-a za sigurno rukovanje i prikazivanje transakcija, pomažući u sprječavanju prevara i pranja novca, osiguravajući da sredstva stignu do namijenjenih primatelja."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:210
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:209
 msgid "The following list of frequently asked questions by employers that may also assist you in getting your questions answered:"
 msgstr "Sljedeća lista često postavljanih pitanja od strane poslodavaca također vam može pomoći da dobijete odgovore na svoja pitanja:"
 
@@ -1020,7 +1020,7 @@ msgstr "Posjetitelji"
 #~ msgid "We had a data-heavy application that was experiencing slow load times. I <0>optimized</0> the code by implementing lazy loading for components and using <1>React.memo</1> to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced <2>indexing</2>. These changes <3>improved</3> the application's <4>performance</4> significantly, reducing load times by about <5>40%</5>."
 #~ msgstr "Imali smo aplikaciju koja je radila sa velikim količinama podataka i imala sporo učitavanje. <0>Optimizovao</0> sam kod implementacijom lenjog učitavanja za komponente i korišćenjem <1>React.memo</1> kako bih sprečio nepotrebna ponovna renderovanja. Na backendu sam optimizovao naše upite u bazi podataka i uveo <2>indeksiranje</2>. Ove promene su <3>poboljšale</3> performanse aplikacije, smanjujući vreme učitavanja za oko <5>40%</5>."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:148
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:147
 msgid "We had a data-heavy application that was experiencing slow load times. I <0>optimized</0> the code by implementing lazy loading for components and using <1>React.memo</1> to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced <2>indexing</2>. These changes<3>improved</3> the application's <4>performance</4> significantly, reducing load times by about <5>40%</5>."
 msgstr "Imali smo aplikaciju s puno podataka koja je imala problema s dugim vremenima učitavanja. <0>Optimizirao</0> sam kod implementacijom lijenog učitavanja komponenti i korištenjem <1>React.memo</1> kako bih spriječio nepotrebna ponovna renderiranja. Na pozadinskoj strani, optimizirao sam upite prema bazi podataka i uveo <2>indeksiranje</2>. Ove promjene su značajno <3>poboljšale</3> <4>performanse</4> aplikacije, smanjujući vrijeme učitavanja za oko <5>40%</5>."
 

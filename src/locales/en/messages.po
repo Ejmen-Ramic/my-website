@@ -88,7 +88,7 @@ msgstr "1. Tell me about yourself."
 #~ msgid "10. Tell us about a time when you had to learn something new quickly."
 #~ msgstr "10. Tell us about a time when you had to learn something new quickly."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:181
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:180
 msgid "10. What do you like to do on your free time?"
 msgstr "10. What do you like to do on your free time?"
 
@@ -116,11 +116,11 @@ msgstr "6. Tell me about a time when you had to learn something new quickly."
 msgid "7. How do you prioritize your tasks when you have multiple deadlines?"
 msgstr "7. How do you prioritize your tasks when you have multiple deadlines?"
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:143
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:142
 msgid "8. A time when you optimized an application for better performance."
 msgstr "8. A time when you optimized an application for better performance."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:160
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:159
 msgid "9. Can you walk me through a project you worked on?"
 msgstr "9. Can you walk me through a project you worked on?"
 
@@ -399,7 +399,7 @@ msgstr "Forgot your password?"
 msgid "Frameworks"
 msgstr "Frameworks"
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:207
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:206
 msgid "Frequently Asked Questions"
 msgstr "Frequently Asked Questions"
 
@@ -468,7 +468,7 @@ msgstr "I am a <0>software developer</0> with a passion for creating<1>intuitive
 msgid "I have developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team."
 msgstr "I have developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:183
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:182
 msgid "I love <0>hiking</0>, <1>exploring</1> new places and <2>photographing</2> landscapes, which helps me stay <3>creative</3> and refreshed. I also enjoy working on side projects that involve <4>engineering</4>."
 msgstr "I love <0>hiking</0>, <1>exploring</1> new places and <2>photographing</2> landscapes, which helps me stay <3>creative</3> and refreshed. I also enjoy working on side projects that involve <4>engineering</4>."
 
@@ -484,13 +484,13 @@ msgstr "I take pride in crafting clean, readable code while bringing a passion f
 msgid "I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished."
 msgstr "I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:124
-#~ msgid "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like <1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
-#~ msgstr "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like <1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:130
+msgid "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like <1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
+msgstr "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like <1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:130
-msgid "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like<1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
-msgstr "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like<1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
+#~ msgid "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like<1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
+#~ msgstr "I use a combination of prioritization techniques like the <0>Eisenhower Matrix</0> to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like<1>Trello</1> or <2>Notion</2> to keep track of progress. This helps me <3>stay organized</3> and ensures that I focus on the most critical tasks first."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:50
 #~ msgid "I use a combination of prioritization techniques like the Eisenhower Matrix to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like Trello or Notion to keep track of progress. This helps me stay organized and ensures that I focus on the most critical tasks first."
@@ -516,7 +516,7 @@ msgstr "I worked on a project where we had to develop a <0>complex admin dashboa
 #~ msgid "I worked on an e-commerce platform where we used <0>React</0>, <1>TypeScript</1>, and <2>Chakra UI</2> for the frontend, <3>Next.js</3> for the backend, <4>MongoDB</4> and <5>Prisma</5> for the database, and <6>Playwright</6> for writing tests. I implemented features like user <7>authentication</7>, <8>product listings</8>, and a <9>checkout page</9>. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<10/><11/> Additionally, I <12>collaborated</12> closely with backend developers to integrate the frontend with the server-side logic <13>seamlessly</13>, resulting in a smooth and efficient user experience. The project was a great <14>success</14>, improving user engagement and <15>increasing sales</15> for the platform."
 #~ msgstr "I worked on an e-commerce platform where we used <0>React</0>, <1>TypeScript</1>, and <2>Chakra UI</2> for the frontend, <3>Next.js</3> for the backend, <4>MongoDB</4> and <5>Prisma</5> for the database, and <6>Playwright</6> for writing tests. I implemented features like user <7>authentication</7>, <8>product listings</8>, and a <9>checkout page</9>. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<10/><11/> Additionally, I <12>collaborated</12> closely with backend developers to integrate the frontend with the server-side logic <13>seamlessly</13>, resulting in a smooth and efficient user experience. The project was a great <14>success</14>, improving user engagement and <15>increasing sales</15> for the platform."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:162
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:161
 msgid "I worked on an e-commerce platform where we used <0>React</0>, <1>TypeScript</1>, and <2>Chakra UI</2> for the frontend, <3>Next.js</3> for the backend, <4>MongoDB</4> and<5>Prisma</5> for the database, and <6>Playwright</6> for writing tests. I implemented features like user <7>authentication</7>, <8>product listings</8>, and a<9>checkout page</9>. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<10/><11/> Additionally, I <12>collaborated</12> closely with backend developers to integrate the frontend with the server-side logic <13>seamlessly</13>, resulting in a smooth and efficient user experience. The project was a great <14>success</14>, improving user engagement and <15>increasing sales</15> for the platform."
 msgstr "I worked on an e-commerce platform where we used <0>React</0>, <1>TypeScript</1>, and <2>Chakra UI</2> for the frontend, <3>Next.js</3> for the backend, <4>MongoDB</4> and<5>Prisma</5> for the database, and <6>Playwright</6> for writing tests. I implemented features like user <7>authentication</7>, <8>product listings</8>, and a<9>checkout page</9>. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<10/><11/> Additionally, I <12>collaborated</12> closely with backend developers to integrate the frontend with the server-side logic <13>seamlessly</13>, resulting in a smooth and efficient user experience. The project was a great <14>success</14>, improving user engagement and <15>increasing sales</15> for the platform."
 
@@ -998,7 +998,7 @@ msgstr "Thank you for subscribing!"
 msgid "The \"Blockchain Charity\" project is a web application designed to ensure safe and transparent charitable donations via blockchain. It includes smart contract testing for donation and withdrawal transactions, and features for managing and monitoring donations and thresholds. The app uses tools like Truffle, Ganache, and MetaMask to securely handle and display transactions, helping to prevent fraud and money laundering while ensuring funds reach the intended recipients."
 msgstr "The \"Blockchain Charity\" project is a web application designed to ensure safe and transparent charitable donations via blockchain. It includes smart contract testing for donation and withdrawal transactions, and features for managing and monitoring donations and thresholds. The app uses tools like Truffle, Ganache, and MetaMask to securely handle and display transactions, helping to prevent fraud and money laundering while ensuring funds reach the intended recipients."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:210
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:209
 msgid "The following list of frequently asked questions by employers that may also assist you in getting your questions answered:"
 msgstr "The following list of frequently asked questions by employers that may also assist you in getting your questions answered:"
 
@@ -1045,7 +1045,7 @@ msgstr "Visitors"
 #~ msgid "We had a data-heavy application that was experiencing slow load times. I <0>optimized</0> the code by implementing lazy loading for components and using <1>React.memo</1> to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced <2>indexing</2>. These changes <3>improved</3> the application's <4>performance</4> significantly, reducing load times by about <5>40%</5>."
 #~ msgstr "We had a data-heavy application that was experiencing slow load times. I <0>optimized</0> the code by implementing lazy loading for components and using <1>React.memo</1> to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced <2>indexing</2>. These changes <3>improved</3> the application's <4>performance</4> significantly, reducing load times by about <5>40%</5>."
 
-#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:148
+#: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:147
 msgid "We had a data-heavy application that was experiencing slow load times. I <0>optimized</0> the code by implementing lazy loading for components and using <1>React.memo</1> to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced <2>indexing</2>. These changes<3>improved</3> the application's <4>performance</4> significantly, reducing load times by about <5>40%</5>."
 msgstr "We had a data-heavy application that was experiencing slow load times. I <0>optimized</0> the code by implementing lazy loading for components and using <1>React.memo</1> to prevent unnecessary re-renders. On the backend, I optimized our database queries and introduced <2>indexing</2>. These changes<3>improved</3> the application's <4>performance</4> significantly, reducing load times by about <5>40%</5>."
 

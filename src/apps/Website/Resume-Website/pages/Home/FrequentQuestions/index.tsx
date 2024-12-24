@@ -131,10 +131,9 @@ const items: FAQItem[] = [
         I use a combination of prioritization techniques like the{' '}
         <b>Eisenhower Matrix</b> to categorize tasks by urgency and importance.
         I also break down larger tasks into smaller, manageable chunks and use
-        tools like
-        <b>Trello</b> or <b>Notion</b> to keep track of progress. This helps me{' '}
-        <b>stay organized</b> and ensures that I focus on the most critical
-        tasks first.
+        tools like <b>Trello</b> or <b>Notion</b> to keep track of progress.
+        This helps me <b>stay organized</b> and ensures that I focus on the most
+        critical tasks first.
       </Trans>
     ),
   },
