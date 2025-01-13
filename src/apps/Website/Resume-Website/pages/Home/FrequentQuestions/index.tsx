@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC } from 'react'
 import FAQDesktop from './FAQDesktop'
 import FAQMobile from './FAQMobile'
 import {

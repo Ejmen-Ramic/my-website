@@ -11,18 +11,14 @@ import {
   Popover,
   PopoverArrow,
   PopoverBody,
-  PopoverCloseButton,
   PopoverContent,
-  PopoverHeader,
   PopoverTrigger,
 } from '@chakra-ui/react'
 import { Trans } from '@lingui/macro'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { colors } from '../../../../../../shared/components/Hooks/color'
-import { FC, ReactNode, useEffect, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import items from './Props'
-import TruncatedText from './TruncatedText'
-import { tl } from '../../../../../../locales/lingui/tl'
 
 const Endorsement: FC = () => {
   const textColor = useColorModeValue('gray.600', 'gray.400')
