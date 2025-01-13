@@ -23,6 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 node_modules/
 /test-results/
-/playwright-report/
+/src/playwright/playwright-report/
 /blob-report/
 /playwright/.cache/
