@@ -6,27 +6,28 @@ import {
   HStack,
   Show,
   useColorModeValue,
-} from '@chakra-ui/react';
-import { useState } from 'react';
-import HeaderMobile from './Mobile';
-import { Link } from 'react-router-dom';
-import LanguageMenu from './Desktop/LanguageMenu';
-import { Trans } from '@lingui/macro';
-import { colors } from '../../Hooks/color';
-import ColorMode from '../../Color-Mode/ColorMode';
+} from '@chakra-ui/react'
+import { useState } from 'react'
+import HeaderMobile from './Mobile'
+import { Link } from 'react-router-dom'
+import LanguageMenu from './Desktop/LanguageMenu'
+import { Trans } from '@lingui/macro'
+import { colors } from '../../Hooks/color'
+import ColorMode from '../../Color-Mode/ColorMode'
 
 interface HeaderProps {
-  isStickyHeader?: boolean;
+  isStickyHeader?: boolean
 }
 const Header = ({ isStickyHeader }: HeaderProps = {}) => {
-  const [homeHovered, setHomeHovered] = useState(false);
-  const [resumeHovered, setResumeHovered] = useState(false);
-  const [aboutHovered, setAboutHovered] = useState(false);
-  const [contactHovered, setContactHovered] = useState(false);
-  const [languageHovered, setLanguageHovered] = useState(false);
+  const [homeHovered, setHomeHovered] = useState(false)
+  const [resumeHovered, setResumeHovered] = useState(false)
+  const [aboutHovered, setAboutHovered] = useState(false)
+  const [contactHovered, setContactHovered] = useState(false)
+  const [languageHovered, setLanguageHovered] = useState(false)
 
   return (
     <Flex
+      data-testid={'header'}
       h={{ base: '58px', md: '67px', lg: '120px' }}
       w={'full'}
       bg={useColorModeValue('gray.100', '#2b333d')}
@@ -34,7 +35,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
       top={isStickyHeader ? '0' : '-58px'}
     >
       <HStack w={'full'}>
-        <Link to={'/'}>
+        <Link to={'/'} data-testid={'signature-home-link'}>
           <Heading
             w={{ base: 'max-content', md: 'fit-content' }}
             ml={{ base: '20px', md: '40px' }}
@@ -60,7 +61,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
           cursor={'pointer'}
           h={'100%'}
         >
-          <Link to={'/'}>
+          <Link to={'/'} data-testid={'home-link'}>
             <Box
               h={'100%'}
               borderColor={homeHovered ? '#02bece' : '#2b333d'}
@@ -90,7 +91,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
               </Button>
             </Box>
           </Link>
-          <Link to={'/resume'}>
+          <Link to={'/resume'} data-testid={'resume-link'}>
             <Box
               h={'100%'}
               borderColor={resumeHovered ? '#02bece' : '#2b333d'}
@@ -138,7 +139,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
           >
             <DropDownHobbies />
           </Box> */}
-          <Link to={'/about'}>
+          <Link to={'/about'} data-testid={'about-link'}>
             <Box
               h={'100%'}
               borderColor={aboutHovered ? '#02bece' : '#2b333d'}
@@ -168,7 +169,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
               </Button>
             </Box>
           </Link>
-          <Link to={'/contact'}>
+          <Link to={'/contact'} data-testid={'contact-link'}>
             <Box
               h={'100%'}
               borderColor={contactHovered ? '#02bece' : '#2b333d'}
@@ -205,10 +206,10 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
             borderTopColor={'#02bece'}
             transition={'all 0.1s ease-in-out'}
             onMouseEnter={() => {
-              setLanguageHovered(true);
+              setLanguageHovered(true)
             }}
             onMouseLeave={() => {
-              setLanguageHovered(false);
+              setLanguageHovered(false)
             }}
             overflow={'hidden'}
             justifyItems={'center'}
@@ -229,7 +230,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
         <HeaderMobile />
       </Show>
     </Flex>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
