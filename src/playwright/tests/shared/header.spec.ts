@@ -76,11 +76,12 @@ test.describe('test header mobile', async () => {
       //   await button.click()
       //   await expect(page).toHaveURL(item.expectedUrl)
       //   await burger.click()
+
       const button = page.getByRole('button', { name: label })
       await expect(button).toBeVisible()
       await button.click()
-      await expect(page).toHaveURL(`http://localhost:3000/${path}`)
-      // Reopen drawer for next iteration
+      await expect(page).toHaveURL(`http://localhost:3000${path}`)
+
       await page.locator('[data-testid="burger-button"]').click()
     }
 
