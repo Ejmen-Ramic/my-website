@@ -62,38 +62,27 @@ test.describe('test header mobile', async () => {
 
     await page.waitForTimeout(1000)
 
-    // await expect(page.locator('[data-testid="drawer"]')).toBeVisible()
+    await expect(page.locator('[data-testid="drawer"]')).toBeVisible()
+    const menuItems = [
+      { path: '/', label: 'Home' },
+      { path: '/resume', label: 'Resume' },
+      { path: '/about', label: 'About Me' },
+      { path: '/contact', label: 'Contacts' },
+    ]
 
-    // const menuItems = [
-    //   {
-    //     to: '/',
-    //     testId: 'drawer-home-link',
-    //     expectedUrl: 'http://localhost:3000/',
-    //   },
-    //   {
-    //     to: '/resume',
-    //     testId: 'drawer-resume-link',
-    //     expectedUrl: 'http://localhost:3000/resume',
-    //   },
-    //   {
-    //     to: '/about',
-    //     testId: 'drawer-about-link',
-    //     expectedUrl: 'http://localhost:3000/about',
-    //   },
-    //   {
-    //     to: '/contact',
-    //     testId: 'drawer-contact-link',
-    //     expectedUrl: 'http://localhost:3000/contact',
-    //   },
-    // ]
-
-    // for (const item of menuItems) {
-    //   const button = page.locator(`[data-testId=${item.testId}]`)
-    //   await expect(button).toBeVisible()
-    //   await button.click()
-    //   await expect(page).toHaveURL(item.expectedUrl)
-    //   await burger.click()
-    // }
+    for (const { path, label } of menuItems) {
+      //   const button = page.locator(`[data-testId=${item.testId}]`)
+      //   await expect(button).toBeVisible()
+      //   await button.click()
+      //   await expect(page).toHaveURL(item.expectedUrl)
+      //   await burger.click()
+      const button = page.getByRole('button', { name: label })
+      await expect(button).toBeVisible()
+      await button.click()
+      await expect(page).toHaveURL(`http://localhost:3000/${path}`)
+      // Reopen drawer for next iteration
+      await page.locator('[data-testid="burger-button"]').click()
+    }
 
     const drawerCloseButton = page.locator(
       '[data-testid="drawer-close-button"]'

@@ -105,7 +105,10 @@ const HeaderMobile = () => {
                 {menuItems.map((item, index) => (
                   <Box key={index} transition={'all 0.1s ease-in-out'}>
                     {isMenuItemLink(item) ? (
-                      <Link to={item.to}>
+                      <Link
+                        to={item.to}
+                        data-testid={`drawer-${item.to.toLowerCase()}-link`}
+                      >
                         <Button
                           variant={'link'}
                           border={'none'}
@@ -116,6 +119,7 @@ const HeaderMobile = () => {
                           letterSpacing={'1px'}
                           textTransform={'capitalize'}
                           ml={'7.5%'}
+                          data-testid={`drawer-${item.label.toLowerCase()}-link`}
                         >
                           {item.icon && (
                             <item.icon
