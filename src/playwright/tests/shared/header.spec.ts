@@ -9,41 +9,20 @@ test.describe('test header desktop', async () => {
     const header = page.locator('[data-testid="header"]')
     await expect(header).toBeVisible()
 
-    // Verify the navigation links are visible using their testIDs
-    const signatureHomeLink = page.locator(
-      '[data-testid="signature-home-link"]'
-    )
-    const homeLink = page.locator('[data-testid="home-link"]')
-    const resumeLink = page.locator('[data-testid="resume-link"]')
-    const aboutLink = page.locator('[data-testid="about-link"]')
-    const contactLink = page.locator('[data-testid="contact-link"]')
+    // Verify the navigation links are visible using their testIDs and navigate to the correct pages
+    const menuItems = [
+      { testId: 'home-link', href: '/' },
+      { testId: 'resume-link', href: '/resume' },
+      { testId: 'about-link', href: '/about' },
+      { testId: 'contact-link', href: '/contact' },
+    ]
 
-    await expect(signatureHomeLink).toBeVisible()
-    await expect(homeLink).toBeVisible()
-    await expect(resumeLink).toBeVisible()
-    await expect(aboutLink).toBeVisible()
-    await expect(contactLink).toBeVisible()
-  })
-
-  test('should navigate to the correct page when links are clicked', async ({
-    page,
-  }) => {
-    await page.goto('http://localhost:3000/')
-
-    await page.click('[data-testid="signature-home-link"]')
-    await expect(page).toHaveURL('http://localhost:3000/')
-
-    await page.click('[data-testid="home-link"]')
-    await expect(page).toHaveURL('http://localhost:3000/')
-
-    await page.click('[data-testid="resume-link"]')
-    await expect(page).toHaveURL('http://localhost:3000/resume')
-
-    await page.click('[data-testid="about-link"]')
-    await expect(page).toHaveURL('http://localhost:3000/about')
-
-    await page.click('[data-testid="contact-link"]')
-    await expect(page).toHaveURL('http://localhost:3000/contact')
+    for (const { testId, href } of menuItems) {
+      const link = page.locator(`[data-testid="${testId}"]`)
+      await expect(link).toBeVisible()
+      await link.click()
+      await expect(page).toHaveURL(`http://localhost:3000${href}`)
+    }
   })
 })
 
@@ -51,7 +30,7 @@ test.describe('test header desktop', async () => {
 test.describe('test header mobile', async () => {
   test.use({ viewport: { width: 390, height: 844 } })
   test('should display header with navigation links', async ({ page }) => {
-    await page.goto('http://localhost:3000/')
+    await page.goto('http://localhost:3000/about')
 
     const header = page.locator('[data-testid="header-mobile"]')
     await expect(header).toBeVisible()
@@ -64,19 +43,13 @@ test.describe('test header mobile', async () => {
 
     await expect(page.locator('[data-testid="drawer"]')).toBeVisible()
     const menuItems = [
-      { path: '/', label: 'Home' },
       { path: '/resume', label: 'Resume' },
       { path: '/about', label: 'About Me' },
       { path: '/contact', label: 'Contacts' },
+      { path: '/', label: 'Home' },
     ]
 
     for (const { path, label } of menuItems) {
-      //   const button = page.locator(`[data-testId=${item.testId}]`)
-      //   await expect(button).toBeVisible()
-      //   await button.click()
-      //   await expect(page).toHaveURL(item.expectedUrl)
-      //   await burger.click()
-
       const button = page.getByRole('button', { name: label })
       await expect(button).toBeVisible()
       await button.click()
