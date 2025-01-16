@@ -1,10 +1,11 @@
 import test, { expect } from '@playwright/test'
 
 test.describe('test header desktop', async () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('http://localhost:3000/')
+  })
   // Header desktop
   test('should display header with navigation links', async ({ page }) => {
-    await page.goto('http://localhost:3000/')
-
     // Wait for the header to appear and check visibility
     const header = page.locator('[data-testid="header"]')
     await expect(header).toBeVisible()
@@ -25,8 +26,6 @@ test.describe('test header desktop', async () => {
     }
   })
   test('should test language switcher destkop', async ({ page }) => {
-    await page.goto('http://localhost:3000/')
-
     // Test English
     await page.locator('[data-testid="language-switcher-desktop"]').hover()
     await page.locator('[data-testid="desktop-language-option-en"]').click()
@@ -42,7 +41,6 @@ test.describe('test header desktop', async () => {
     await expect(heroTextBosnian).toHaveText('Rezime')
   })
   test('should test color mode', async ({ page }) => {
-    await page.goto('http://localhost:3000/')
     const colorModeButton = page.locator('[data-testid="color-mode-toggle"]')
     const header = page.locator('[data-testid="header"]')
 

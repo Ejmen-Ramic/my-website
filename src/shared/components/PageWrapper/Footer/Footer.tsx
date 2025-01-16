@@ -161,6 +161,7 @@ const Footer = () => {
                   href={'https://github.com/Ejmen-Ramic/'}
                   color={'#333333'}
                   hoverColor={'gray'}
+                  data-testid={'footer-github-link'}
                 >
                   <FaGithub />
                 </SocialButton>
@@ -170,6 +171,7 @@ const Footer = () => {
                   href={'https://x.com/EjmenRamic'}
                   color={'#00aced'}
                   hoverColor={'#657786'}
+                  data-testid={'footer-x-link'}
                 >
                   <FaXTwitter />
                 </SocialButton>
@@ -181,6 +183,7 @@ const Footer = () => {
                   }
                   color={'#0077b5'}
                   hoverColor={'#0A66C2'}
+                  data-testid={'footer-linkedin-link'}
                 >
                   <FaLinkedin />
                 </SocialButton>
@@ -189,6 +192,7 @@ const Footer = () => {
                   href={'https://www.instagram.com/ejmenramic/'}
                   color={'#0077b5'}
                   hoverColor={'#C13584'}
+                  data-testid={'footer-instagram-link'}
                 >
                   <FaInstagram />
                 </SocialButton>
