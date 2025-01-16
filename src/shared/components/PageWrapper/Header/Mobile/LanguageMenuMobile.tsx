@@ -48,7 +48,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({
         changeLanguage(locale)
         onClose()
       }}
-      data-testid={`desktop-language-option-${locale}`}
+      data-testid={`mobile-language-option-${locale}`}
     >
       <Text>{name}</Text>
     </MenuItem>

@@ -98,7 +98,7 @@ test.describe('test header mobile', async () => {
     // Test English
     await page.locator('[data-testid="burger-button"]').click()
     await page.locator('[data-testid="language-switcher-mobile"]').click()
-    await page.locator('[data-testid="language-option-en"]').click()
+    await page.locator('[data-testid="mobile-language-option-en"]').click()
     await page.locator('[data-testid="drawer-close-button"]').click()
     const heroTextEnglish = page.locator('[data-testid="resume-text"]')
     await expect(heroTextEnglish).toBeVisible()
@@ -107,7 +107,7 @@ test.describe('test header mobile', async () => {
     // Test Bosnian
     await page.locator('[data-testid="burger-button"]').click()
     await page.locator('[data-testid="language-switcher-mobile"]').click()
-    await page.locator('[data-testid="language-option-ba"]').click()
+    await page.locator('[data-testid="mobile-language-option-ba"]').click()
     await page.locator('[data-testid="drawer-close-button"]').click()
     const heroTextBosnian = page.locator('[data-testid="resume-text"]')
     await expect(heroTextBosnian).toBeVisible()
