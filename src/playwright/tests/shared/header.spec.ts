@@ -24,6 +24,23 @@ test.describe('test header desktop', async () => {
       await expect(page).toHaveURL(`http://localhost:3000${href}`)
     }
   })
+  test('should test language switcher destkop', async ({ page }) => {
+    await page.goto('http://localhost:3000/')
+
+    // Test English
+    await page.locator('[data-testid="language-switcher-desktop"]').hover()
+    await page.locator('[data-testid="desktop-language-option-en"]').click()
+    const heroTextEnglish = page.locator('[data-testid="resume-text"]')
+    await expect(heroTextEnglish).toBeVisible()
+    await expect(heroTextEnglish).toHaveText('Resume')
+
+    // Test Bosnian
+    await page.locator('[data-testid="language-switcher-desktop"]').hover()
+    await page.locator('[data-testid="desktop-language-option-ba"]').click()
+    const heroTextBosnian = page.locator('[data-testid="resume-text"]')
+    await expect(heroTextBosnian).toBeVisible()
+    await expect(heroTextBosnian).toHaveText('Rezime')
+  })
 })
 
 // Header mobile
