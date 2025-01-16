@@ -41,6 +41,39 @@ test.describe('test header desktop', async () => {
     await expect(heroTextBosnian).toBeVisible()
     await expect(heroTextBosnian).toHaveText('Rezime')
   })
+  test('should test color mode', async ({ page }) => {
+    await page.goto('http://localhost:3000/')
+    const colorModeButton = page.locator('[data-testid="color-mode-toggle"]')
+    const header = page.locator('[data-testid="header"]')
+
+    await expect(colorModeButton).toBeVisible()
+    await expect(header).toBeVisible()
+    // Test light mode
+    let headerBg = await header.evaluate(
+      (el) => window.getComputedStyle(el).backgroundColor
+    )
+    expect(headerBg).toBe('rgb(237, 242, 247)')
+
+    let moonIcon = await colorModeButton.locator('svg').first()
+    await expect(moonIcon).toBeVisible()
+
+    // Test dark mode
+    await colorModeButton.click()
+    headerBg = await header.evaluate(
+      (el) => window.getComputedStyle(el).backgroundColor
+    )
+    expect(headerBg).toBe('rgb(43, 51, 61)')
+
+    let sunIcon = await colorModeButton.locator('svg').first()
+    await expect(sunIcon).toBeVisible()
+
+    // Test light mode again
+    await colorModeButton.click()
+    headerBg = await header.evaluate(
+      (el) => window.getComputedStyle(el).backgroundColor
+    )
+    expect(headerBg).toBe('rgb(237, 242, 247)')
+  })
 })
 
 // Header mobile
