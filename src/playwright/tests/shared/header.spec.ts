@@ -1,4 +1,4 @@
-import test, { devices, expect } from '@playwright/test'
+import test, { expect } from '@playwright/test'
 
 test.describe('test header desktop', async () => {
   // Header desktop
@@ -29,19 +29,36 @@ test.describe('test header desktop', async () => {
 // Header mobile
 test.describe('test header mobile', async () => {
   test.use({ viewport: { width: 390, height: 844 } })
-  test('should display header with navigation links', async ({ page }) => {
+  test('should display drawer and close it', async ({ page }) => {
     await page.goto('http://localhost:3000/about')
 
     const header = page.locator('[data-testid="header-mobile"]')
     await expect(header).toBeVisible()
 
+    // Tests if burger opens the drawer
     const burger = page.locator('[data-testid="burger-button"]')
     await expect(burger).toBeVisible()
     await burger.click()
 
     await page.waitForTimeout(1000)
 
+    // Tests the drawer close button
+    const drawerCloseButton = page.locator(
+      '[data-testid="drawer-close-button"]'
+    )
+    await expect(drawerCloseButton).toBeVisible()
+    await drawerCloseButton.click()
+    await expect(
+      page.locator('[data-testid="drawer-close-button"]')
+    ).not.toBeVisible()
+  })
+
+  test('should display header with navigation links', async ({ page }) => {
+    await page.goto('http://localhost:3000/about')
+
+    await page.locator('[data-testid="burger-button"]').click()
     await expect(page.locator('[data-testid="drawer"]')).toBeVisible()
+
     const menuItems = [
       { path: '/resume', label: 'Resume' },
       { path: '/about', label: 'About Me' },
@@ -57,14 +74,5 @@ test.describe('test header mobile', async () => {
 
       await page.locator('[data-testid="burger-button"]').click()
     }
-
-    const drawerCloseButton = page.locator(
-      '[data-testid="drawer-close-button"]'
-    )
-    await expect(drawerCloseButton).toBeVisible()
-    await drawerCloseButton.click()
-    await expect(
-      page.locator('[data-testid="drawer-close-button"]')
-    ).not.toBeVisible()
   })
 })
