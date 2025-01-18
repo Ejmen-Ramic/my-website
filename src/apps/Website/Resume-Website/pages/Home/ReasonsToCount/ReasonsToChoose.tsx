@@ -131,7 +131,7 @@ const ReasonsToChoose = () => {
               </Text>
             </FadeInView>
             <FadeInView delay={0.1}>
-              <Link to={'/about'}>
+              <Link to={'/about'} data-testid={'need-more-info-link'}>
                 <Button
                   mt={'20px'}
                   leftIcon={<Icon as={BsFillInfoCircleFill} boxSize={4} />}

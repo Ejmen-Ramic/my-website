@@ -120,7 +120,7 @@ const Endorsement: FC = () => {
                             variant={'link'}
                             color={buttonColor}
                             onClick={(e) => {
-                              e.stopPropagation() // Prevent the click from bubbling up
+                              e.stopPropagation()
                               setOpenPopoverId(`popover-${name}`)
                             }}
                           >

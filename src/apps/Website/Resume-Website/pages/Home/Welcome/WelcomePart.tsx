@@ -112,7 +112,7 @@ const Welcome = () => {
           </Text>
         </FadeInView>
         <FadeInView direction={'left'} delay={0.4}>
-          <Link to={'/resume'}>
+          <Link to={'/resume'} data-testid={'resume-link-home'}>
             <Button
               textTransform={'uppercase'}
               borderRadius={'0px'}
