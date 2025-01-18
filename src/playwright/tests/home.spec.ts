@@ -1,5 +1,6 @@
 import test, { expect } from '@playwright/test'
 import { beforeEach } from 'node:test'
+import { faqItems, testimonialItems } from './models/homePage'
 
 test.describe('Home Page', () => {
   test.beforeEach(async ({ page }) => {
@@ -28,25 +29,52 @@ test.describe('Home Page', () => {
     await page.goto('http://localhost:3000/')
 
     // Test read more button on
-    const testimonialItems = [
-      {
-        id: '[id="popover-trigger-\\:rf\\:"]',
-        text: '[id="popover-body-\\:rf\\:"]',
-      },
-      {
-        id: '[id="popover-trigger-\\:rj\\:"]',
-        text: '[id="popover-body-\\:rj\\:"]',
-      },
-      {
-        id: '[id="popover-trigger-\\:rn\\:"]',
-        text: '[id="popover-body-\\:rn\\:"]',
-      },
-    ]
     for (const { id, text } of testimonialItems) {
       const readMoreButton = page.locator(id)
       await readMoreButton.click()
       const popover = page.locator(text)
       await expect(popover).toBeVisible()
+    }
+  })
+  test('test FAQ', async ({ page }) => {
+    const faq = page.locator('[data-testid="faq-component"]')
+    await expect(faq).toBeVisible()
+
+    for (const { id, text } of faqItems) {
+      const faqAccordion = page.getByRole('button', { name: id })
+      await faqAccordion.click()
+      const accordionItem = page.getByLabel(text)
+      await expect(accordionItem).toBeVisible()
+      await faqAccordion.click()
+    }
+  })
+  test('test FAQ mobile', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 })
+
+    const faq = page.locator('[data-testid="faq-component"]')
+    await expect(faq).toBeVisible()
+
+    // Open first accordion and verify it's visible
+    const firstAccordion = page.getByRole('button', { name: faqItems[0].id })
+    const firstContent = page.getByLabel(faqItems[0].text)
+    await firstAccordion.click()
+    await expect(firstContent).toBeVisible()
+
+    // Click second accordion and verify:
+    // 1. First accordion content is now hidden
+    // 2. Second accordion content is visible
+    const secondAccordion = page.getByRole('button', { name: faqItems[1].id })
+    const secondContent = page.getByLabel(faqItems[1].text)
+    await secondAccordion.click()
+    await expect(firstContent).toBeHidden()
+    await expect(secondContent).toBeVisible()
+
+    if (faqItems.length > 2) {
+      const thirdAccordion = page.getByRole('button', { name: faqItems[2].id })
+      const thirdContent = page.getByLabel(faqItems[2].text)
+      await thirdAccordion.click()
+      await expect(secondContent).toBeHidden()
+      await expect(thirdContent).toBeVisible()
     }
   })
 })

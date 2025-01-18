@@ -196,6 +196,7 @@ const FAQ: FC = () => {
         mx={'auto'}
         maxW={{ base: 'full', lg: '1300px' }}
         w={'full'}
+        data-testid={'faq-component'}
       >
         <VStack w={'full'} spacing={'30px'} textAlign={'center'} px={'16px'}>
           <Stack spacing={'20px'} px={{ base: '10px', md: '40px', lg: '0px' }}>
