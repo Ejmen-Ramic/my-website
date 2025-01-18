@@ -12,6 +12,7 @@ test.describe('test header desktop', async () => {
 
     // Verify the navigation links are visible using their testIDs and navigate to the correct pages
     const menuItems = [
+      { testId: 'signature-home-link', href: '/' },
       { testId: 'home-link', href: '/' },
       { testId: 'resume-link', href: '/resume' },
       { testId: 'about-link', href: '/about' },
@@ -102,6 +103,11 @@ test.describe('test header mobile', async () => {
   })
 
   test('should display header with navigation links', async ({ page }) => {
+    await page.goto('http://localhost:3000/')
+    const signature = page.locator('[data-testid="signature-home-link"]')
+    await expect(signature).toBeVisible()
+    await expect(signature).toHaveAttribute('href', '/')
+
     await page.goto('http://localhost:3000/about')
 
     await page.locator('[data-testid="burger-button"]').click()
