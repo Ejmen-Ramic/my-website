@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   Box,
   Button,
@@ -10,25 +10,25 @@ import {
   SimpleGrid,
   Text,
   Stack,
-} from '@chakra-ui/react'
-import { BsFillInfoCircleFill, BsSpeedometer } from 'react-icons/bs'
-import { IoThumbsUp } from 'react-icons/io5'
-import { GiStairsGoal } from 'react-icons/gi'
-import { FaHandshakeSimple } from 'react-icons/fa6'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { Link } from 'react-router-dom'
-import { t, Trans } from '@lingui/macro'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+} from '@chakra-ui/react';
+import { BsFillInfoCircleFill, BsSpeedometer } from 'react-icons/bs';
+import { IoThumbsUp } from 'react-icons/io5';
+import { GiStairsGoal } from 'react-icons/gi';
+import { FaHandshakeSimple } from 'react-icons/fa6';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { Link } from 'react-router-dom';
+import { t, Trans } from '@lingui/macro';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 
-const lightModeColor = colors.white
-const darkModeColor = '#171923'
+const lightModeColor = colors.white;
+const darkModeColor = '#171923';
 
 type ReasonItem = {
-  icon: React.ReactElement
-  number: string
-  title: string
-  description: string
-}
+  icon: React.ReactElement;
+  number: string;
+  title: string;
+  description: string;
+};
 
 const ReasonsToChoose = () => {
   const reasons: ReasonItem[] = [
@@ -56,7 +56,7 @@ const ReasonsToChoose = () => {
       title: t`Team Collaboration`,
       description: t`I thrive in collaborative environments, where I can learn, grow, and exchange experiences with others. I firmly believe that with teamwork, any project can be accomplished.`,
     },
-  ]
+  ];
 
   return (
     <FadeInView>
@@ -70,6 +70,7 @@ const ReasonsToChoose = () => {
         py={{ lg: '120px' }}
         mb={{ md: '120px', lg: '0px' }}
         direction={{ base: 'column', lg: 'row' }}
+        data-testid={'reasons-to-choose-component'}
       >
         <Stack
           w={'full'}
@@ -222,7 +223,7 @@ const ReasonsToChoose = () => {
         </GridItem>
       </Stack>
     </FadeInView>
-  )
-}
+  );
+};
 
-export default ReasonsToChoose
+export default ReasonsToChoose;

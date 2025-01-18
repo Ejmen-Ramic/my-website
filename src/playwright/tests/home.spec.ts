@@ -11,6 +11,22 @@ test.describe('Home Page', () => {
     // Verify the page loaded successfully
     await expect(page).toHaveURL('http://localhost:3000/')
   })
+  test('test if all components are visible', async ({ page }) => {
+    const hero = page.locator('[data-testid="welcome-component"]')
+    await expect(hero).toBeVisible()
+
+    const chooseToLearn = page.locator('[data-testid="choose-to-learn-component"]')
+    await expect(chooseToLearn).toBeVisible()
+
+    const reasonsToChoose = page.locator('[data-testid="reasons-to-choose-component"]')
+    await expect(reasonsToChoose).toBeVisible()
+
+    const endorsement = page.locator('[data-testid="endorsement-component"]')
+    await expect(endorsement).toBeVisible()
+
+    const faq = page.locator('[data-testid="faq-component"]')
+    await expect(faq).toBeVisible()
+  })
   test('test all buttons', async ({ page }) => {
     // Resume button on hero component
     const resumeButton = page.locator('[data-testid="resume-link-home"]')
