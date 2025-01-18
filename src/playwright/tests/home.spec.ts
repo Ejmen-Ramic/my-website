@@ -10,7 +10,7 @@ test.describe('Home Page', () => {
     // Verify the page loaded successfully
     await expect(page).toHaveURL('http://localhost:3000/')
   })
-  test('test all buttons on Hero and WelcomePart', async ({ page }) => {
+  test('test all buttons', async ({ page }) => {
     // Resume button on hero component
     const resumeButton = page.locator('[data-testid="resume-link-home"]')
     await resumeButton.click()
@@ -18,7 +18,7 @@ test.describe('Home Page', () => {
 
     await page.goto('http://localhost:3000/')
 
-    // Test on Need More Info button on WelcomePart component and Testimonial component
+    // Need More Info button on WelcomePart component
     const needMoreInfoButton = page.locator(
       '[data-testid="need-more-info-link"]'
     )
@@ -27,7 +27,7 @@ test.describe('Home Page', () => {
 
     await page.goto('http://localhost:3000/')
 
-    // Testimonial component
+    // Test read more button on
     const testimonialItems = [
       {
         id: '[id="popover-trigger-\\:rf\\:"]',
