@@ -1,4 +1,5 @@
 import test, { expect } from "@playwright/test"
+import { CommonTest } from "../models/commonTest"
 
 test.describe('Resume Page', () => {
     test.beforeEach(async ({ page }) => {
@@ -10,19 +11,38 @@ test.describe('Resume Page', () => {
       await expect(page).toHaveURL('http://localhost:3000/resume')
     })
     test('test if all components are visible', async ({ page }) => {
-      const hero = page.locator('[data-testid="welcome-component"]')
-      await expect(hero).toBeVisible()
+      const commonTestElements = new CommonTest(page);
+      await commonTestElements.checkAllElements();
+
+      const resume = page.locator('[data-testid="resume-component"]')
+      await expect(resume).toBeVisible()
   
-      const chooseToLearn = page.locator('[data-testid="choose-to-learn-component"]')
-      await expect(chooseToLearn).toBeVisible()
+      const languageSwitcherResume = page.locator('[data-testid="language-switcher-resume"]')
+      await expect(languageSwitcherResume).toBeVisible()
   
-      const reasonsToChoose = page.locator('[data-testid="reasons-to-choose-component"]')
-      await expect(reasonsToChoose).toBeVisible()
+      const sourceCode = page.locator('[data-testid="source-code"]')
+      await expect(sourceCode).toBeVisible()
   
-      const endorsement = page.locator('[data-testid="endorsement-component"]')
-      await expect(endorsement).toBeVisible()
-  
-      const faq = page.locator('[data-testid="faq-component"]')
-      await expect(faq).toBeVisible()
+      const pdfFetcher = page.locator('[data-testid="pdfFetcher"]')
+      await expect(pdfFetcher).toBeVisible()
+    })
+    test('language switcher resume', async ({ page }) => {
+      const languageSwitcherResume = page.locator('[data-testid="language-switcher-resume"]')
+      await expect(languageSwitcherResume).toBeVisible()
+
+      // Test Bosnian
+      await page.locator('[data-testid="language-switcher-resume"]').click()
+      const heroTextBosnian = page.locator('[data-testid="education-text"]')
+      await expect(heroTextBosnian).toBeVisible()
+      await expect(heroTextBosnian).toHaveText('Edukacija')
+      
+      // Test English
+      await page.locator('[data-testid="language-switcher-resume"]').click()
+      const heroTextEnglish = page.locator('[data-testid="education-text"]')
+      await expect(heroTextEnglish).toBeVisible()
+      await expect(heroTextEnglish).toHaveText('Education')
+
+      
+
     })
   })
