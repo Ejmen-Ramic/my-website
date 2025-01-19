@@ -1,6 +1,7 @@
 import test, { expect } from '@playwright/test'
 import { beforeEach } from 'node:test'
-import { faqItems, testimonialItems } from './models/homePage'
+import { faqItems, testimonialItems } from '../models/homePage'
+import { CommonTest } from '../models/commonTest'
 
 test.describe('Home Page', () => {
   test.beforeEach(async ({ page }) => {
@@ -12,6 +13,9 @@ test.describe('Home Page', () => {
     await expect(page).toHaveURL('http://localhost:3000/')
   })
   test('test if all components are visible', async ({ page }) => {
+    const testCommonElements = new CommonTest(page);
+    await testCommonElements.checkAllElements();
+
     const hero = page.locator('[data-testid="welcome-component"]')
     await expect(hero).toBeVisible()
 
