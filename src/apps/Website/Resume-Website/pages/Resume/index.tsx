@@ -42,6 +42,7 @@ const Resume: React.FC<{}> = () => {
               variant={'ghost'}
               color={useColorModeValue('#0B3948', '#98bed5')}
               onClick={() => changeLanguage(locale === 'en' ? 'ba' : 'en')}
+              data-testid={'language-switcher-resume'}
             >
               <GrLanguage style={{ marginRight: '10px' }} />
               <Trans>
@@ -56,6 +57,7 @@ const Resume: React.FC<{}> = () => {
                 <Button
                   variant={'ghost'}
                   color={useColorModeValue('#0B3948', '#98bed5')}
+                  data-testid={'source-code'}
                 >
                   <BsGithub style={{ marginRight: '10px' }} />
                   <Trans>Source code</Trans>
@@ -70,6 +72,7 @@ const Resume: React.FC<{}> = () => {
             px={{ md: '0px', lg: '0px' }}
             mb={{ md: '30px', lg: '0px' }}
             boxShadow={'0px 4px 10px rgba(0, 0, 0, 0.3)'}
+            data-testid={'resume-component'}
           >
             {/* Header */}
             <VStack

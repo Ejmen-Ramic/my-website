@@ -18,7 +18,11 @@ const EngineeringSKills: FC = () => {
   const HighlightColor = useColorModeValue('blue.400', 'teal.400')
 
   return (
-    <Stack w={'full'} bg={{ md: useColorModeValue('gray.100', 'gray.700') }}>
+    <Stack
+      w={'full'}
+      bg={{ md: useColorModeValue('gray.100', 'gray.700') }}
+      data-testid={'engineering-skills-component'}
+    >
       <FadeInView>
         <VStack
           w={'full'}

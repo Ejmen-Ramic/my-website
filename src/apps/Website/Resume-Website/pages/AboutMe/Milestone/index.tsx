@@ -8,17 +8,17 @@ import {
   Flex,
   useColorModeValue,
   useBreakpointValue,
-} from '@chakra-ui/react';
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
-import { Trans } from '@lingui/macro';
-import React from 'react';
+} from '@chakra-ui/react'
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { Trans } from '@lingui/macro'
+import React from 'react'
 
 type CardProps = {
-  id: number;
-  title: string | React.ReactElement;
-  description: string | React.ReactElement;
-  date: string | React.ReactElement;
-};
+  id: number
+  title: string | React.ReactElement
+  description: string | React.ReactElement
+  date: string | React.ReactElement
+}
 
 const milestones = [
   {
@@ -88,11 +88,11 @@ const milestones = [
       </Trans>
     ),
   },
-];
+]
 
 const Milestones = () => {
-  const isMobile = useBreakpointValue({ base: true, md: false });
-  const isDesktop = useBreakpointValue({ base: false, md: true });
+  const isMobile = useBreakpointValue({ base: true, md: false })
+  const isDesktop = useBreakpointValue({ base: false, md: true })
 
   return (
     <Container
@@ -100,6 +100,7 @@ const Milestones = () => {
       maxWidth={'7xl'}
       p={{ base: 2, sm: 1, lg: 10 }}
       mb={{ base: '50px', lg: '100px' }}
+      data-testid={'milestones-component'}
     >
       <FadeInView delay={0.1}>
         <chakra.h3
@@ -143,20 +144,20 @@ const Milestones = () => {
         ))}
       </FadeInView>
     </Container>
-  );
-};
+  )
+}
 
 const Card = ({ id, title, description, date }: CardProps) => {
-  const isEvenId = id % 2 === 0;
-  let borderWidthValue = isEvenId ? '15px 15px 15px 0' : '15px 0 15px 15px';
-  let leftValue = isEvenId ? '-15px' : 'unset';
-  let rightValue = isEvenId ? 'unset' : '-15px';
+  const isEvenId = id % 2 === 0
+  let borderWidthValue = isEvenId ? '15px 15px 15px 0' : '15px 0 15px 15px'
+  let leftValue = isEvenId ? '-15px' : 'unset'
+  let rightValue = isEvenId ? 'unset' : '-15px'
 
-  const isMobile = useBreakpointValue({ base: true, md: false });
+  const isMobile = useBreakpointValue({ base: true, md: false })
   if (isMobile) {
-    leftValue = '-15px';
-    rightValue = 'unset';
-    borderWidthValue = '15px 15px 15px 0';
+    leftValue = '-15px'
+    rightValue = 'unset'
+    borderWidthValue = '15px 15px 15px 0'
   }
 
   return (
@@ -204,8 +205,8 @@ const Card = ({ id, title, description, date }: CardProps) => {
         </Box>
       </FadeInView>
     </HStack>
-  );
-};
+  )
+}
 
 const LineWithDot = () => {
   return (
@@ -242,8 +243,8 @@ const LineWithDot = () => {
         ></Box>
       </Box>
     </Flex>
-  );
-};
+  )
+}
 
 const EmptyCard = () => {
   return (
@@ -252,7 +253,7 @@ const EmptyCard = () => {
       p={{ base: 0, md: 6 }}
       bg={'transparent'}
     ></Box>
-  );
-};
+  )
+}
 
-export default Milestones;
+export default Milestones

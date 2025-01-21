@@ -66,6 +66,7 @@ const PDFFEtcher = () => {
         variant={'ghost'}
         color={useColorModeValue('blue.800', 'blue.300')}
         rightIcon={<ChevronDownIcon />}
+        data-testid={'pdfFetcher'}
       >
         <BsFillPrinterFill />
       </MenuButton>

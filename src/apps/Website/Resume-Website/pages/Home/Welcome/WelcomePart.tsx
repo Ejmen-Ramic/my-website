@@ -27,6 +27,7 @@ const Welcome = () => {
       display={'flex'}
       bgColor={'#051721'}
       w={'full'}
+      data-testid={'welcome-component'}
     >
       {/* Container For the Image Text */}
       <Box
@@ -112,7 +113,7 @@ const Welcome = () => {
           </Text>
         </FadeInView>
         <FadeInView direction={'left'} delay={0.4}>
-          <Link to={'/resume'}>
+          <Link to={'/resume'} data-testid={'resume-link-home'}>
             <Button
               textTransform={'uppercase'}
               borderRadius={'0px'}
@@ -126,6 +127,7 @@ const Welcome = () => {
               letterSpacing={'2px'}
               _hover={{ letterSpacing: '7px' }}
               transition={'0.2s'}
+              data-testid={'resume-text'}
             >
               <Trans>Resume</Trans>
             </Button>

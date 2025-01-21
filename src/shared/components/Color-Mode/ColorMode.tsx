@@ -18,6 +18,7 @@ const ColorMode = (props: ButtonProps) => {
         _focus={{ boxShadow: 'none' }}
         w={'fit-content'}
         {...props}
+        data-testid={'color-mode-toggle'}
       >
         {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />}
       </Button>

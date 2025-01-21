@@ -48,6 +48,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({
         changeLanguage(locale)
         onClose()
       }}
+      data-testid={`mobile-language-option-${locale}`}
     >
       <Text>{name}</Text>
     </MenuItem>
@@ -86,6 +87,7 @@ const LanguageMenuMobile: React.FC = () => {
             letterSpacing={'1px'}
             ml={'7%'}
             mb={'5px'}
+            data-testid={'language-switcher-mobile'}
           >
             <Flex alignItems={'center'}>
               <IoLanguageOutline size={33} style={{ marginRight: '12px' }} />

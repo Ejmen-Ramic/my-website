@@ -11,37 +11,33 @@ import {
   Popover,
   PopoverArrow,
   PopoverBody,
-  PopoverCloseButton,
   PopoverContent,
-  PopoverHeader,
   PopoverTrigger,
-} from '@chakra-ui/react'
-import { Trans } from '@lingui/macro'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { colors } from '../../../../../../shared/components/Hooks/color'
-import { FC, ReactNode, useEffect, useState } from 'react'
-import items from './Props'
-import TruncatedText from './TruncatedText'
-import { tl } from '../../../../../../locales/lingui/tl'
+} from '@chakra-ui/react';
+import { Trans } from '@lingui/macro';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { colors } from '../../../../../../shared/components/Hooks/color';
+import { FC, useEffect, useState } from 'react';
+import items from './Props';
 
 const Endorsement: FC = () => {
-  const textColor = useColorModeValue('gray.600', 'gray.400')
-  const bg = useColorModeValue('gray.100', 'gray.700')
-  const borderTopColor = useColorModeValue(colors.white, 'gray.800')
-  const cardBg = useColorModeValue(colors.white, 'gray.800')
-  const buttonColor = useColorModeValue('blue.500', 'blue.300')
+  const textColor = useColorModeValue('gray.600', 'gray.400');
+  const bg = useColorModeValue('gray.100', 'gray.700');
+  const borderTopColor = useColorModeValue(colors.white, 'gray.800');
+  const cardBg = useColorModeValue(colors.white, 'gray.800');
+  const buttonColor = useColorModeValue('blue.500', 'blue.300');
 
-  const [openPopoverId, setOpenPopoverId] = useState<string | null>(null)
+  const [openPopoverId, setOpenPopoverId] = useState<string | null>(null);
   useEffect(() => {
     const handleClickOutside = () => {
-      setOpenPopoverId(null)
-    }
+      setOpenPopoverId(null);
+    };
 
-    document.addEventListener('click', handleClickOutside)
+    document.addEventListener('click', handleClickOutside);
     return () => {
-      document.removeEventListener('click', handleClickOutside)
-    }
-  }, [])
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
   return (
     <VStack
       w={'full'}
@@ -49,6 +45,7 @@ const Endorsement: FC = () => {
       spacing={10}
       py={'100px'}
       px={{ base: '16px', md: '50px' }}
+      data-testid={'endorsement-component'}
     >
       {/* Title and subtitle */}
       <Stack spacing={0} align={'center'}>
@@ -124,8 +121,8 @@ const Endorsement: FC = () => {
                             variant={'link'}
                             color={buttonColor}
                             onClick={(e) => {
-                              e.stopPropagation() // Prevent the click from bubbling up
-                              setOpenPopoverId(`popover-${name}`)
+                              e.stopPropagation();
+                              setOpenPopoverId(`popover-${name}`);
                             }}
                           >
                             <Trans>Read More</Trans>
@@ -162,7 +159,7 @@ const Endorsement: FC = () => {
         )}
       </Stack>
     </VStack>
-  )
-}
+  );
+};
 
-export default Endorsement
+export default Endorsement;
