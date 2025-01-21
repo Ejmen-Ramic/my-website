@@ -14,40 +14,40 @@ import {
   PopoverBody,
   PopoverContent,
   Hide,
-} from '@chakra-ui/react';
-import { Trans } from '@lingui/macro';
-import { FC, useRef, useState } from 'react';
-import { useOutsideClick } from '@chakra-ui/react';
-import { colors } from '../../../../../../shared/components/Hooks/color';
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
-import { itemsTechSkills } from './Props';
+} from '@chakra-ui/react'
+import { Trans } from '@lingui/macro'
+import { FC, useRef, useState } from 'react'
+import { useOutsideClick } from '@chakra-ui/react'
+import { colors } from '../../../../../../shared/components/Hooks/color'
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { itemsTechSkills } from './Props'
 
 const TechnicalSkills: FC = () => {
-  const GridColor = useColorModeValue(colors.white, 'gray.800');
-  const StackColor = useColorModeValue(colors.white, '#2D3748');
+  const GridColor = useColorModeValue(colors.white, 'gray.800')
+  const StackColor = useColorModeValue(colors.white, '#2D3748')
   const hoverShadowLight = useColorModeValue(
     '0 8px 16px rgba(0, 0, 0, 0.2)',
     '0 12px 24px rgba(0, 0, 0, 0.3)'
-  );
+  )
   const popoverShadow = useColorModeValue(
     '0 16px 32px rgba(0, 0, 0, 0.15)',
     '0 20px 40px rgba(0, 0, 0, 0.3)'
-  );
-  const transformScale = useColorModeValue('scale(1)', 'scale(1.03)');
-  const HeaderPopColor = useColorModeValue('teal.400', 'blue.400');
+  )
+  const transformScale = useColorModeValue('scale(1)', 'scale(1.03)')
+  const HeaderPopColor = useColorModeValue('teal.400', 'blue.400')
 
-  const [openPopoverIndex, setOpenPopoverIndex] = useState<number | null>(null);
+  const [openPopoverIndex, setOpenPopoverIndex] = useState<number | null>(null)
 
   const handleTogglePopover = (index: number) => {
-    setOpenPopoverIndex((prev) => (prev === index ? null : index));
-  };
+    setOpenPopoverIndex((prev) => (prev === index ? null : index))
+  }
 
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null)
 
   useOutsideClick({
     ref: containerRef,
     handler: () => setOpenPopoverIndex(null),
-  });
+  })
 
   return (
     <FadeInView>
@@ -78,6 +78,7 @@ const TechnicalSkills: FC = () => {
                 isOpen={openPopoverIndex === i}
                 onClose={() => setOpenPopoverIndex(null)}
                 closeOnBlur={false}
+                data-testid={'engineering-skills-popover'}
               >
                 <PopoverTrigger>
                   <Stack
@@ -125,6 +126,7 @@ const TechnicalSkills: FC = () => {
                   w={'full'}
                   maxW={{ base: '320px', lg: '500px' }}
                   boxShadow={popoverShadow}
+                  data-testid={'engineering-skills-popover-content'}
                 >
                   <PopoverArrow />
                   <Hide below={'md'}>
@@ -145,7 +147,7 @@ const TechnicalSkills: FC = () => {
         </Grid>
       </Stack>
     </FadeInView>
-  );
-};
+  )
+}
 
-export default TechnicalSkills;
+export default TechnicalSkills
