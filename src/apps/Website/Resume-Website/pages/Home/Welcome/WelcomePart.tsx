@@ -161,8 +161,8 @@ const Welcome = () => {
                   _hover={{ pt: 0, pb: '10px' }}
                   transition={'0.2s'}
                 >
-                  <Button colorScheme={'linkedin'}>
-                    <FontAwesomeIcon icon={faLinkedin} />
+                  <Button bgColor={'#0077B5 '}>
+                    <FontAwesomeIcon icon={faLinkedin} color={'white'} />
                   </Button>
                 </Box>
               </a>
