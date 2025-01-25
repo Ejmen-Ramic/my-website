@@ -1,26 +1,26 @@
 export const aboutPageItems = [
   {
-    id: 'about-laguage',
+    id: 'Languages TypeScript',
     text: 'Tell me about yourself.',
   },
   {
-    id: 'about-libraries',
+    id: 'Libraries Chakra UI, ShadCN',
     text: '2. What are your greatest',
   },
   {
-    id: 'about-framework',
+    id: 'Frameworks React, Node.js',
     text: '3. Where do you see yourself',
   },
   {
-    id: 'about-tools',
+    id: 'Tools Git, Jest, Cypress,',
     text: '4. Describe a challenging',
   },
   {
-    id: 'about-database',
+    id: 'Databases MongoDB, MySQL,',
     text: '5. What are your greatest',
   },
   {
-    id: 'about-graphic-design',
+    id: 'Graphic Design Adobe',
     text: '6. Where do you see yourself',
   },
 ]

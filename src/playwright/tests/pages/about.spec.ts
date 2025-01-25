@@ -24,7 +24,7 @@ test.describe('Test for About Page', async () => {
     await expect(engineeringSkills).toBeVisible()
 
     const milestonesComponent = page.locator(
-      '{data-testid="milestones-component"]'
+      '[data-testid="milestones-component"]'
     )
     await expect(milestonesComponent).toBeVisible()
   })
@@ -39,7 +39,7 @@ test.describe('Test for About Page', async () => {
       '[data-testid="engineering-skills-popover"]'
     )
     for (const { id, text } of aboutPageItems) {
-      await page.locator(id).click()
+      await page.getByRole('button', { name: id }).click()
       await expect(popoverTest).toHaveId(
         '[data-testid="engineering-skills-popover"]'
       )
