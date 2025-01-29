@@ -68,5 +68,17 @@ test.describe('Test for About Page', async () => {
       }
     });
     
+    test('should test milestones component', async ({ page }) => {
+      // Wait for at least one milestone to load
+      await page.waitForSelector('[data-testid^="milestone-date-"]');
+    
+      const milestonesCount = await page.locator('[data-testid^="milestone-date-"]').count();
+    
+      for (let i = 1; i <= milestonesCount; i++) {
+        await expect(page.locator(`[data-testid="milestone-date-${i}"]`)).toBeVisible();
+        await expect(page.locator(`[data-testid="milestone-title-${i}"]`)).toBeVisible();
+        await expect(page.locator(`[data-testid="milestone-description-${i}"]`)).toBeVisible();
+      }
+    });
   })
     
