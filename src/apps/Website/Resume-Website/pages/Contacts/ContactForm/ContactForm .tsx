@@ -100,7 +100,7 @@ const ContactForm: FC = () => {
         backgroundAttachment: 'fixed',
       }}
       id={'contact'}
-      data-testid={'contact-component'}
+      data-testid={'contact-form'}
     >
       <FadeInView>
         <Box
@@ -116,6 +116,7 @@ const ContactForm: FC = () => {
                   base: '4xl',
                   md: '5xl',
                 }}
+                data-testid={'contact-title'}
               >
                 Get in Touch
               </Heading>
@@ -133,6 +134,7 @@ const ContactForm: FC = () => {
                     label={hasCopied ? 'Email Copied!' : 'Copy Email'}
                     closeOnClick={false}
                     hasArrow
+                    data-testid={'email-tooltip'}
                   >
                     <IconButton
                       aria-label={'email'}
@@ -146,10 +148,14 @@ const ContactForm: FC = () => {
                       }}
                       onClick={onCopy}
                       isRound
+                      data-testid={'email-button'}
                     />
                   </Tooltip>
 
-                  <Link href='https://www.facebook.com/profile.php?id=100092716802936'>
+                  <Link
+                    href={'https://github.com/Ejmen-Ramic/'}
+                    data-testid={'github-link'}
+                  >
                     <IconButton
                       aria-label={'github'}
                       variant={'ghost'}
@@ -161,10 +167,14 @@ const ContactForm: FC = () => {
                         color: useColorModeValue(colors.white, 'gray.700'),
                       }}
                       isRound
+                      data-testid={'github-icon'}
                     />
                   </Link>
 
-                  <Link href={'https://x.com/EjmenRamic'}>
+                  <Link
+                    href={'https://x.com/EjmenRamic'}
+                    data-testid={'x-link'}
+                  >
                     <IconButton
                       aria-label={'x'}
                       variant={'ghost'}
@@ -175,10 +185,16 @@ const ContactForm: FC = () => {
                         color: useColorModeValue(colors.white, 'gray.700'),
                       }}
                       isRound
+                      data-testid={'x-icon'}
                     />
                   </Link>
 
-                  <Link href='https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'>
+                  <Link
+                    href={
+                      'https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'
+                    }
+                    data-testid={'linkedin-link'}
+                  >
                     <IconButton
                       aria-label={'linkedin'}
                       variant={'ghost'}
@@ -189,6 +205,7 @@ const ContactForm: FC = () => {
                         color: useColorModeValue(colors.white, 'gray.700'),
                       }}
                       isRound
+                      data-testid={'linkedin-icon'}
                     />
                   </Link>
                 </Stack>
