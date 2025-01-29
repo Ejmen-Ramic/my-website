@@ -15,6 +15,16 @@ test.describe('Test for Contact Page', async () => {
     const contactForm = page.locator('[data-testid="contact-form"]')
     await expect(contactForm).toBeVisible()
   })
+  test('test copy email button', async ({ page }) => {
+    const emailButton = page.getByTestId('email-button')
+    const tooltip = page.getByTestId('email-tooltip')
+
+    await emailButton.hover()
+    await expect(tooltip).toHaveText('Copy Email')
+
+    await emailButton.click()
+    await expect(tooltip).toHaveText('Email Copied!')
+  })
   test('should test social media buttons', async ({ page }) => {
     const socialMediaItems = [
       {
@@ -36,6 +46,7 @@ test.describe('Test for Contact Page', async () => {
 
     for (const { id, href, icon } of socialMediaItems) {
       const button = page.locator(id)
+      await button.hover()
       await expect(button).toBeVisible()
       await expect(button).toHaveAttribute('href', href)
       const iconLocator = page.locator(`[data-testid="${icon}"]`)
