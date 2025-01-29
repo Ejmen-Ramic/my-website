@@ -56,5 +56,17 @@ test.describe('Test for About Page', async () => {
       }
     }
   });
+  test('should test featured projects component', async({page})=>{
   
-})
+      const projectsCount = await page.locator('[data-testid^="technical-skills-content-"]').count();
+  
+      for (let i = 0; i < projectsCount; i++) {
+        await expect(page.locator(`[data-testid="technical-skills-content-${i}"]`)).toBeVisible();
+        await expect(page.locator(`[data-testid="technical-skills-title-${i}"]`)).toBeVisible();
+        await expect(page.locator(`[data-testid="technical-skills-text-${i}"]`)).toBeVisible();
+        await expect(page.locator(`[data-testid="technical-skills-icon-${i}"]`)).toBeVisible();
+      }
+    });
+    
+  })
+    

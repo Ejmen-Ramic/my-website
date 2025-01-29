@@ -56,19 +56,30 @@ const FeaturedProjects: FC = () => {
                 border={'1px solid #ECEFF4'}
                 borderRadius={'10px'}
                 boxShadow={popoverShadow}
+                data-testid={`technical-skills-content-${i}`}
               >
                 <HStack w={'full'} justify={'space-between'}>
                   <FadeInView delay={0.3}>
-                    <Heading size={'md'}>{item.title}</Heading>
+                    <Heading
+                      size={'md'}
+                      data-testid={`technical-skills-title-${i}`}
+                    >
+                      {item.title}
+                    </Heading>
                   </FadeInView>
 
                   <FadeInView delay={0.3} direction={'right'}>
-                    <Icon fontSize={'22px'}>{item.icon}</Icon>
+                    <Icon
+                      fontSize={'22px'}
+                      data-testid={`technical-skills-icon-${i}`}
+                    >
+                      {item.icon}
+                    </Icon>
                   </FadeInView>
                 </HStack>
 
                 <FadeInView delay={0.3}>
-                  <Text>
+                  <Text data-testid={`technical-skills-text-${i}`}>
                     {typeof item.detail === 'function'
                       ? item.detail(HeaderPopColor)
                       : item.detail}
