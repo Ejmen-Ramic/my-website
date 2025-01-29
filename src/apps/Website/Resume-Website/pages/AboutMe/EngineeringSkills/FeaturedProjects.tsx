@@ -31,6 +31,7 @@ const FeaturedProjects: FC = () => {
         spacing={'20px'}
         borderRadius={{ md: '10px' }}
         border={{ base: 'none', lg: '1px solid #ECEFF4' }}
+        data-testid={'featured-projects-component'}
       >
         <FadeInView delay={0.1}>
           <Heading>

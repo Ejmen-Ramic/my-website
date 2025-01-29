@@ -50,7 +50,7 @@ const TechnicalSkills: FC = () => {
   });
 
   return (
-    <FadeInView>
+    <FadeInView data-testid={'engineering-skills-component'}>
       <Stack
         w={'full'}
         maxW={'1400px'}
