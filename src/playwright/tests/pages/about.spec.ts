@@ -1,6 +1,5 @@
 import test, { expect } from '@playwright/test'
 import { CommonTest } from '../models/commonTest'
-import { aboutPageItems } from '../models/aboutPage'
 
 test.describe('Test for About Page', async () => {
   test.beforeEach(async ({ page }) => {
