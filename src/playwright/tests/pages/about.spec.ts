@@ -32,15 +32,29 @@ test.describe('Test for About Page', async () => {
     await expect(milestonesComponent).toBeVisible()
   })
 
-  test('test technical skills ui elements', async ({ page }) => {
-    for (const {triggerId, contentId} of aboutPageItems) {
-      const trigger = page.locator(`[data-testid="${triggerId}"]`)
-      await expect(trigger).toBeVisible()
+  test('should open and close popovers correctly', async ({ page }) => {
+    const triggerSelector = (index: number) => `[data-testid="engineering-skills-trigger-${index}"]`;
+    const popoverContentSelector = (index: number) => `[data-testid="engineering-skills-popover-content-${index}"]`
+    const popoverHeader = (index: number) => `[data-testid="engineering-skills-popover-header-${index}"]`;
+    const popoverBody = (index: number) => `[data-testid="engineering-skills-popover-body-${index}"]`;
 
-      const popover = page.locator(`[data-testid="${contentId}"]`)
-      await expect(popover).toBeVisible()
-    
+    const skillsCount = await page.locator('[data-testid^="engineering-skills-trigger-"]').count();
+  
+    for (let i = 0; i < skillsCount; i++) {
+      const trigger = page.locator(triggerSelector(i));
+      
+      // Click trigger and verify popover is visible
+      await trigger.click();
+      await expect(page.locator(popoverContentSelector(i))).toBeVisible();
+      await expect(page.locator(popoverBody(i))).toBeVisible();
+      await expect(page.locator(popoverHeader(i))).toBeVisible();
+  
+      // Click next trigger and verify previous popover is closed
+      if (i > 0) {
+        const previousPopover = page.locator(popoverContentSelector(i - 1));
+        await expect(previousPopover).not.toBeVisible();
+      }
     }
-  })
-
+  });
+  
 })

@@ -132,10 +132,16 @@ const TechnicalSkills: FC = () => {
                   <Hide below={'md'}>
                     <PopoverCloseButton />
                   </Hide>
-                  <PopoverHeader fontWeight={'bold'}>
+                  <PopoverHeader
+                    fontWeight={'bold'}
+                    data-testid={`engineering-skills-popover-header-${i}`}
+                  >
                     {item.popoverHeader}
                   </PopoverHeader>
-                  <PopoverBody py={'15px'}>
+                  <PopoverBody
+                    py={'15px'}
+                    data-testid={`engineering-skills-popover-body-${i}`}
+                  >
                     {typeof item.popoverBody === 'function'
                       ? item.popoverBody(HeaderPopColor)
                       : item.popoverBody}
