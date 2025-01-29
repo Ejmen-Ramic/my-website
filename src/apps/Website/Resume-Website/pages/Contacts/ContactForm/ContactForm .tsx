@@ -100,6 +100,7 @@ const ContactForm: FC = () => {
         backgroundAttachment: 'fixed',
       }}
       id={'contact'}
+      data-testid={'contact-component'}
     >
       <FadeInView>
         <Box
