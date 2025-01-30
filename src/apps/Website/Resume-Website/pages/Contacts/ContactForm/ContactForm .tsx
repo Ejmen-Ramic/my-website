@@ -54,9 +54,9 @@ const ContactForm: FC = () => {
   const [message, setMessage] = useState<string>('')
   const toast = useToast()
 
-  useEffect(() => {
-    emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY as string)
-  }, [])
+  // useEffect(() => {
+  //   emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY as string)
+  // }, [])
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
