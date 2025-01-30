@@ -54,13 +54,17 @@ const ContactForm: FC = () => {
   const [message, setMessage] = useState<string>('')
   const toast = useToast()
 
-  //
+  // Initialize EmailJS
   // useEffect(() => {
   //   emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY as string)
   // }, [])
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
+    const serviceId = 'service_25b7wwi'
+    const templateId = 'template_40wpmxs'
+    const publicKey = 'mkinhrjV6ln7wW-mz'
 
     const templateParams = {
       from_name: name,
