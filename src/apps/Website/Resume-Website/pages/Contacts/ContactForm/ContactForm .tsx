@@ -26,6 +26,7 @@ import { colors } from '../../../../../../shared/components/Hooks/color';
 import type React from 'react';
 import { type FC, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { publicKey, serviceId, templateId } from './apiContactForm';
 
 const confetti = {
   light: {
@@ -51,10 +52,6 @@ const ContactForm: FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    const serviceId = 'service_25b7wwi';
-    const templateId = 'template_40wpmxs';
-    const publicKey = 'mkinhrjV6ln7wW-mz';
 
     const templateParams = {
       from_name: name,
@@ -217,7 +214,11 @@ const ContactForm: FC = () => {
                   color={useColorModeValue('gray.700', 'whiteAlpha.900')}
                   shadow={'base'}
                 >
-                  <form onSubmit={handleSubmit} className={'emailForm'}>
+                  <form
+                    onSubmit={handleSubmit}
+                    className={'emailForm'}
+                    data-testid={'success-message'}
+                  >
                     <VStack spacing={5}>
                       <FormControl isRequired data-testid={'name-input'}>
                         <FormLabel>
@@ -276,6 +277,7 @@ const ContactForm: FC = () => {
                           bg: 'blue.500',
                         }}
                         type='submit'
+                        data-testid={'send-button'}
                       >
                         <Trans>Send Message</Trans>
                       </Button>
