@@ -26,11 +26,11 @@ import { colors } from '../../../../../../shared/components/Hooks/color'
 import type React from 'react'
 import { type FC, useEffect, useState } from 'react'
 import emailjs from '@emailjs/browser'
-// import {
-//   publicKey,
-//   serviceId,
-//   templateId,
-// } from '../../../../../../backend/api-contact-form'
+import {
+  publicKey,
+  serviceId,
+  templateId,
+} from '../../../../../../backend/api-contact-form'
 
 const confetti = {
   light: {
@@ -53,16 +53,14 @@ const ContactForm: FC = () => {
   const [email, setEmail] = useState<string>('')
   const [message, setMessage] = useState<string>('')
   const toast = useToast()
-  // Adding comment
-  // useEffect(() => {
-  //   emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY as string)
-  // }, [])
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const serviceId = 'service_25b7wwi'
-    const templateId = 'template_40wpmxs'
-    const publicKey = 'mkinhrjV6ln7wW-mz'
+
+    useEffect(() => {
+      emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY as string)
+    }, [])
+
     const templateParams = {
       from_name: name,
       from_email: email,
