@@ -60,7 +60,9 @@ const ContactForm: FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-
+    const serviceId = 'service_25b7wwi'
+    const templateId = 'template_40wpmxs'
+    const publicKey = 'mkinhrjV6ln7wW-mz'
     const templateParams = {
       from_name: name,
       from_email: email,
@@ -69,30 +71,30 @@ const ContactForm: FC = () => {
     }
 
     emailjs
-    // .send(serviceId, templateId, templateParams, publicKey)
-    // .then((response) => {
-    //   toast({
-    //     title: 'Message Sent!',
-    //     description: 'Your message has been sent successfully.',
-    //     status: 'success',
-    //     duration: 5000,
-    //     isClosable: true,
-    //   })
-    //   setName('')
-    //   setEmail('')
-    //   setMessage('')
-    // })
-    // .catch((error) => {
-    //   toast({
-    //     title: 'Message Not Sent!',
-    //     description:
-    //       'There was an error sending your message. Please try again.',
-    //     status: 'error',
-    //     duration: 5000,
-    //     isClosable: true,
-    //   })
-    //   console.error('Email not sent!', error)
-    // })
+      .send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        toast({
+          title: 'Message Sent!',
+          description: 'Your message has been sent successfully.',
+          status: 'success',
+          duration: 5000,
+          isClosable: true,
+        })
+        setName('')
+        setEmail('')
+        setMessage('')
+      })
+      .catch((error) => {
+        toast({
+          title: 'Message Not Sent!',
+          description:
+            'There was an error sending your message. Please try again.',
+          status: 'error',
+          duration: 5000,
+          isClosable: true,
+        })
+        console.error('Email not sent!', error)
+      })
   }
 
   return (
