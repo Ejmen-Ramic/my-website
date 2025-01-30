@@ -5,5 +5,10 @@ declare namespace NodeJS {
       MAILCHIMP_AUDIENCE_ID: string;
       PORT?: string;
       NODE_ENV: 'development' | 'production' | 'test';
+
+      //Email-JS
+        EMAILJS_SERVICE_ID: string;
+        EMAILJS_TEMPLATE_ID: string;
+        EMAILJS_PUBLIC_KEY: string;
     }
-  }
+    }
