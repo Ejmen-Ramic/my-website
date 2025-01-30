@@ -26,11 +26,11 @@ import { colors } from '../../../../../../shared/components/Hooks/color'
 import type React from 'react'
 import { type FC, useEffect, useState } from 'react'
 import emailjs from '@emailjs/browser'
-import {
-  publicKey,
-  serviceId,
-  templateId,
-} from '../../../../../../backend/api-contact-form'
+// import {
+//   publicKey,
+//   serviceId,
+//   templateId,
+// } from '../../../../../../backend/api-contact-form'
 
 const confetti = {
   light: {
@@ -54,9 +54,9 @@ const ContactForm: FC = () => {
   const [message, setMessage] = useState<string>('')
   const toast = useToast()
   // Adding comment
-  useEffect(() => {
-    emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY as string)
-  }, [])
+  // useEffect(() => {
+  //   emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY as string)
+  // }, [])
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -69,30 +69,30 @@ const ContactForm: FC = () => {
     }
 
     emailjs
-      .send(serviceId, templateId, templateParams, publicKey)
-      .then((response) => {
-        toast({
-          title: 'Message Sent!',
-          description: 'Your message has been sent successfully.',
-          status: 'success',
-          duration: 5000,
-          isClosable: true,
-        })
-        setName('')
-        setEmail('')
-        setMessage('')
-      })
-      .catch((error) => {
-        toast({
-          title: 'Message Not Sent!',
-          description:
-            'There was an error sending your message. Please try again.',
-          status: 'error',
-          duration: 5000,
-          isClosable: true,
-        })
-        console.error('Email not sent!', error)
-      })
+    // .send(serviceId, templateId, templateParams, publicKey)
+    // .then((response) => {
+    //   toast({
+    //     title: 'Message Sent!',
+    //     description: 'Your message has been sent successfully.',
+    //     status: 'success',
+    //     duration: 5000,
+    //     isClosable: true,
+    //   })
+    //   setName('')
+    //   setEmail('')
+    //   setMessage('')
+    // })
+    // .catch((error) => {
+    //   toast({
+    //     title: 'Message Not Sent!',
+    //     description:
+    //       'There was an error sending your message. Please try again.',
+    //     status: 'error',
+    //     duration: 5000,
+    //     isClosable: true,
+    //   })
+    //   console.error('Email not sent!', error)
+    // })
   }
 
   return (
