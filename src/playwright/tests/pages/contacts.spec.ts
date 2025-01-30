@@ -53,4 +53,58 @@ test.describe('Test for Contact Page', async () => {
       await expect(iconLocator).toBeVisible()
     }
   })
+  test('should test the filling of the contact form', async ({ page }) => {
+    const contactForm = page.locator('[data-testid="contact-form"]')
+    await expect(contactForm).toBeVisible()
+
+    const contactFormTitle = contactForm.locator('[data-testid="contact-form-title"]')
+    await expect(contactFormTitle).toBeVisible()
+     
+    const contactItems = [
+      { testId: 'name-input', formName: 'Name', fill:'Test' },
+      { testId: 'email-input', formName: 'Email', fill:'test@example.com' },
+      { testId: 'subject-input', formName: 'Subject', fill:'Test' },
+      { testId: 'message-input', formName: 'Message', fill:'This is a test message from Playwright' },
+    ]
+
+    for (const {testId, formName, fill} of contactItems) {
+      const input = contactForm.locator(`[data-testid="${testId}"]`)
+      await expect(input).toBeVisible()
+      await expect(input).toHaveAttribute('placeholder', formName)
+      await input.fill(fill)
+      const submitButton = contactForm.locator('[data-testid="submit-button"]')
+      await expect(submitButton).toBeVisible()
+      await submitButton.click()
+    }
+  })
+  test('should test the filling of the contact form 2', async ({ page }) => {
+    const contactForm = page.locator('[data-testid="contact-form"]');
+    await expect(contactForm).toBeVisible();
+  
+    const contactItems = [
+      { testId: 'name-input', formLabel: 'Name', placeholder: 'Your Name', fill: 'Test' },
+      { testId: 'email-input', formLabel: 'Email', placeholder: 'Your Email', fill: 'test@example.com' },
+      { testId: 'message-input', formLabel: 'Message', placeholder: 'Your Message', fill: 'This is a test message from Playwright' },
+    ];
+  
+    for (const { testId, formLabel, placeholder, fill } of contactItems) {
+      const input = contactForm.locator(`[data-testid="${testId}"] input`);
+      await expect(input).toBeVisible();
+      await expect(input).toHaveAttribute('placeholder', placeholder);
+  
+      const label = contactForm.locator(`label[for="${testId}"]`);
+      await expect(label).toHaveText(formLabel);
+  
+      await input.fill(fill);
+    }
+  
+    const submitButton = contactForm.locator('[data-testid="submit-button"]');
+    await expect(submitButton).toBeVisible();
+    await submitButton.click();
+  
+    const successMessage = page.locator('[data-testid="success-message"]');
+    await expect(successMessage).toBeVisible();
+  });
+  
+  
 })
