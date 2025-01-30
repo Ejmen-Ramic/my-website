@@ -24,7 +24,7 @@ import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
 import { t, Trans } from '@lingui/macro';
 import { colors } from '../../../../../../shared/components/Hooks/color';
 import type React from 'react';
-import { type FC, useState } from 'react';
+import { type FC, useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import {
   publicKey,
@@ -53,6 +53,10 @@ const ContactForm: FC = () => {
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
   const toast = useToast();
+
+  useEffect(() => {
+    emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY as string);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
