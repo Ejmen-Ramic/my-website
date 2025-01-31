@@ -76,16 +76,21 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
   })
 
   const ColorDetails = useColorModeValue(colors.black, colors.white)
-  const ToolTipColor = useColorModeValue(colors.black, colors.white)
-  const GalleryIconColor = useColorModeValue('#ed2496', '#02bece')
+  const ToolTipColor = useColorModeValue(colors.white, colors.black)
+  const GalleryIconColor = useColorModeValue('#02bece', '#ed2496')
   return (
     <Box>
-      <Tooltip label={<Text color={ToolTipColor}>Gallery</Text>}>
+      <Tooltip
+        bg={useColorModeValue('#0B3948', '#98bed5')}
+        borderRadius={'5px'}
+        label={<Text color={ToolTipColor}>Gallery</Text>}
+      >
         <Button
-          leftIcon={<GrGallery />}
+          leftIcon={<GrGallery fontSize={'17px'} />}
           onClick={openGallery}
           variant={'ghost'}
           p={0}
+          color={useColorModeValue('#0b3948', 'teal.400')}
           _hover={{
             bg: 'transparent',
             color: GalleryIconColor,
