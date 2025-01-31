@@ -1,4 +1,6 @@
 import { Trans } from '@lingui/macro'
+import ImageGallery from './ImageGallery'
+import { imagesV4 } from './ImageGallery/Props'
 
 export type Props = {
   name: string
@@ -6,6 +8,7 @@ export type Props = {
   location: string | JSX.Element
   description: string | JSX.Element
   link: string
+  gallery?: JSX.Element
 }
 
 export const itemProps = [
@@ -61,5 +64,6 @@ export const itemProps = [
       </Trans>
     ),
     link: 'https://driveflux.com/?gad_source=1&gclid=Cj0KCQjwsaqzBhDdARIsAK2gqnf2PVMfSxxcXp7uwY_aOgNpoaY7jhjSYuKAhxG3hTbmgF3zfiPDOmYaAi8QEALw_wcB',
+    gallery: <ImageGallery images={imagesV4} />,
   },
 ]
