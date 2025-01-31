@@ -12,6 +12,7 @@ import {
   HStack,
   useColorModeValue,
   Button,
+  Tooltip,
 } from '@chakra-ui/react'
 import { ArrowBackIcon, ArrowForwardIcon, CloseIcon } from '@chakra-ui/icons'
 import { GrGallery } from 'react-icons/gr'
@@ -75,17 +76,24 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
   })
 
   const ColorDetails = useColorModeValue(colors.black, colors.white)
-
+  const ToolTipColor = useColorModeValue(colors.black, colors.white)
+  const GalleryIconColor = useColorModeValue('#ed2496', '#02bece')
   return (
     <Box>
-      <Button
-        leftIcon={<GrGallery />}
-        onClick={openGallery}
-        variant={'ghost'}
-        _hover={{ bg: 'transparent', transform: 'scale(1.1)' }}
-        transition={'all 0.2s'}
-      />
-
+      <Tooltip label={<Text color={ToolTipColor}>Gallery</Text>}>
+        <Button
+          leftIcon={<GrGallery />}
+          onClick={openGallery}
+          variant={'ghost'}
+          p={0}
+          _hover={{
+            bg: 'transparent',
+            color: GalleryIconColor,
+            transform: 'scale(1.1)',
+          }}
+          transition={'all 0.2s'}
+        />
+      </Tooltip>
       {currentImageIndex !== null && (
         <Modal isOpen={isOpen} onClose={onClose} size={'full'}>
           <ModalOverlay opacity={'0.4'} />

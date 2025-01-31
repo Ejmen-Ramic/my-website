@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
-import ImageGallery from './ImageGallery'
-import { imagesV4 } from './ImageGallery/Props'
+import ImageGallery from './ProjectGallery'
+import { imagesV4 } from './ProjectGallery/Props'
 
 export type Props = {
   name: string

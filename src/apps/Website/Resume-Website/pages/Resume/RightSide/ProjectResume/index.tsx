@@ -36,7 +36,7 @@ const Projects = () => {
         ({ name, year, location, description, link, gallery }, i) => (
           <VStack w={'full'} spacing={'10px'} alignItems={'start'} key={i}>
             <HStack w={'full'}>
-              <VStack
+              <HStack
                 w={'full'}
                 alignItems={'start'}
                 fontSize={'16px'}
@@ -54,8 +54,8 @@ const Projects = () => {
                     <FaLink style={{ marginLeft: '8px' }} />
                   </Button>
                 </Link>
-                {gallery && <Box ml={4}>{gallery}</Box>}
-              </VStack>
+                {gallery && <Box>{gallery}</Box>}
+              </HStack>
               <VStack w={{ md: '300px' }} spacing={'0px'}>
                 <HStack w={'full'}>
                   <FaCalendarAlt size={'12px'} />
