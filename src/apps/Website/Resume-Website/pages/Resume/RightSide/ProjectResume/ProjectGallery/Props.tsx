@@ -26,10 +26,7 @@ export const imagesV4 = [
     src: './Website/Resume/Resume/v4/home-5.png',
     details: '',
   },
-  {
-    src: './Website/Resume/Resume/v4/home-6.png',
-    details: '',
-  },
+
   {
     src: './Website/Resume/Resume/v4/bcp-1.png',
     details: '',
