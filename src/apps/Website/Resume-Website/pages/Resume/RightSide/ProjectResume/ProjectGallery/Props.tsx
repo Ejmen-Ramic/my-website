@@ -31,11 +31,11 @@ export const imagesV4 = [
     details: '',
   },
   {
-    src: './Website/Resume/Resume/v4/home-6.png',
+    src: './Website/Resume/Resume/v4/bcp-1.png',
     details: '',
   },
   {
-    src: './Website/Resume/Resume/v4/bcp-1.png',
+    src: './Website/Resume/Resume/v4/bcp-2.png',
     details: '',
   },
 ]
