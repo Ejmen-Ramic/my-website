@@ -46,39 +46,39 @@ export const imagesV4 = [
 
 export const imagesV6 = [
   {
-    src: './Website/Resume/Resume/v4/home-v5-1.png',
+    src: './Website/Resume/Resume/v6/home-v5-1.png',
     details: '',
   },
   {
-    src: './Website/Resume/Resume/v4/home-v5-2.png',
+    src: './Website/Resume/Resume/v6/home-v5-2.png',
     details: '',
   },
   {
-    src: './Website/Resume/Resume/v4/home-v5-3.png',
+    src: './Website/Resume/Resume/v6/home-v5-3.png',
     details: '',
   },
   {
-    src: './Website/Resume/Resume/v4/home-v5-4.png',
+    src: './Website/Resume/Resume/v6/home-v5-4.png',
     details: '',
   },
   {
-    src: './Website/Resume/Resume/v4/home-v5-5.png',
+    src: './Website/Resume/Resume/v6/home-v5-5.png',
     details: '',
   },
   {
-    src: './Website/Resume/Resume/v4/bcp-v6-1.png',
+    src: './Website/Resume/Resume/v6/bcp-v6-1.png',
     details: '',
   },
   {
-    src: './Website/Resume/Resume/v4/checkout-v6-1.png',
+    src: './Website/Resume/Resume/v6/checkout-v6-1.png',
     details: '',
   },
   {
-    src: './Website/Resume/Resume/v4/checkout-v6-2.png',
+    src: './Website/Resume/Resume/v6/checkout-v6-2.png',
     details: '',
   },
   {
-    src: './Website/Resume/Resume/v4/checkout-v6-3.png',
+    src: './Website/Resume/Resume/v6/checkout-v6-3.png',
     details: '',
   },
 ]
