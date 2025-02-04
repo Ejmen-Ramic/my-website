@@ -222,7 +222,7 @@ msgstr "Kontakti"
 msgid "Copyright"
 msgstr "Autorsko pravo"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:13
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:16
 msgid "Crypto Charity"
 msgstr "Kripto dobrotvorna organizacija"
 
@@ -354,7 +354,7 @@ msgstr "2. Februar 2018."
 msgid "February, 2023 - Present"
 msgstr "Februar, 2023 - Sada"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:30
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:33
 msgid "Final Year Project"
 msgstr "Završni Projekat Godine"
 
@@ -366,7 +366,8 @@ msgstr "Tečno"
 #~ msgid "FLUX Sdn. Bhd., Malaysia"
 #~ msgstr "FLUX Sdn. Bhd., Malezija"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:50
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:53
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:72
 msgid "FLUX, Malaysia"
 msgstr "FLUX, Malezija"
 
@@ -483,7 +484,7 @@ msgstr "Koristim kombinaciju tehnika prioritizacije poput <0>Eisenhowerove matri
 #~ msgid "I use a combination of prioritization techniques like the Eisenhower Matrix to categorize tasks by urgency and importance. I also break down larger tasks into smaller, manageable chunks and use tools like Trello or Notion to keep track of progress. This helps me stay organized and ensures that I focus on the most critical tasks first."
 #~ msgstr "Koristim kombinaciju tehnika za prioritizaciju kao što je Eisenhower Matrix za kategorizaciju zadataka po hitnosti i važnosti. Također, razdvajam veće zadatke u manje, upravljive dijelove i koristim alate poput Trello ili Notion za praćenje napretka. To mi pomaže da ostanem organiziran i osiguram da se fokusiram na najvažnije zadatke prvo."
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:52
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:55
 msgid "I worked on a project called Project V4, where my role as a software engineer involved converting and rewriting old JavaScript code and outdated packages into the latest TypeScript, React, Chakra UI and improved server side rendering of Next.js. I managed this project alongside one colleague, and together we completed it within three months. The project was a success, requiring us to write thousands of lines of code to achieve our goals. Currently FLUX website is the fastest in Asia."
 msgstr "Radio na projektu nazvanom Projekt V4, gde je moja uloga kao softverskog inženjera uključivala konvertovanje i prepravku starog JavaScript koda i zastarelih paketa u najnoviji TypeScript, React, Chakra UI i poboljšanje server-side renderinga Next.js. Upravljao sam ovim projektom zajedno s jednim kolegom, i zajedno smo ga završili u roku od tri meseca. Projekat je bio uspešan, zahtevajući da napišemo hiljade linija koda kako bismo postigli naše ciljeve. Trenutno je FLUX-ov web sajt najbrži u Aziji."
 
@@ -511,6 +512,10 @@ msgstr "Radio sam na e-commerce platformi gdje smo koristili <0>React</0>, <1>Ty
 #~ msgid "I worked on an e-commerce platform where we used React, TypeScript, and Chakra UI for the frontend, Next.js for the backend, MongoDB and Prisma for the database, and Playwright for writing tests. I implemented features like user authentication, product listings, and a checkout page. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<0/><1/> Additionally, I collaborated closely with backend developers to integrate the frontend with the server-side logic seamlessly, resulting in a smooth and efficient user experience. The project was a great success, improving user engagement and increasing sales for the platform."
 #~ msgstr "Radio sam na e-commerce platformi gdje smo koristili React, TypeScript i Chakra UI za frontend, Next.js za backend, MongoDB i Prisma za bazu podataka, i Playwright za pisanje testova. Implementirao sam funkcije kao što su autentifikacija korisnika, liste proizvoda i stranicu za naplatu. Koristeći TypeScript, osigurao sam sigurnost tipova i smanjio greške. Također smo koristili Chakra UI za stvaranje kohezivnog i responzivnog dizajna, što je učinilo sajt vrlo korisnički prijatnim.<0/><1/> Dodatno, blisko sam sarađivao sa backend programerima da integriramo frontend sa logikom na strani servera, što je rezultiralo glatkim i efikasnim korisničkim iskustvom. Projekat je bio veliki uspjeh, poboljšavajući angažman korisnika i povećavajući prodaju za platformu."
 
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:74
+msgid "I worked on Project V6, where my role as a software engineer involved a complete restructuring of our library and repository. We rebuilt the entire component and function library from scratch using ShadCN and Tailwind CSS, creating a fully custom solution. Additionally, we restructured the operation of Next.js within our repository, improving its architecture and performance. We also enhanced our commit, push and type checking security processes, which significantly reduced errors and bugs. As a result of these efforts, we achieved a 2x increase in website speed and overall performance."
+msgstr "Radio sam na projektu V6, gdje je moja uloga kao softverskog inženjera uključivala potpunu restrukturizaciju naše biblioteke i repozitorija. Ponovno smo izgradili cijelu biblioteku komponenti i funkcija od nule koristeći ShadCN i Tailwind CSS, stvarajući potpuno prilagođeno rješenje. Dodatno, restrukturirali smo način rada Next.js unutar našeg repozitorija, poboljšavajući njegovu arhitekturu i performanse. Također smo unaprijedili sigurnosne procese za commit, push i provjeru tipova, što je značajno smanjilo greške i bugove. Kao rezultat ovih napora, postigli smo dvostruko povećanje brzine web stranice i ukupnih performansi."  
+
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:16
 #~ msgid "I'm a software developer with a passion for creating intuitive and efficient user experiences. I've been working with latest languages, frameworks and testing tools for the past few years, and I love how these tools enable me to build scalable and maintainable applications. Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
 #~ msgstr "Ja sam softverski developer sa strašću za kreiranje intuitivnih i efikasnih korisničkih iskustava. Posljednjih nekoliko godina radim s najnovijim jezicima, frameworkovima i alatima za testiranje, i volim kako mi ovi alati omogućavaju da gradim skalabilne i održive aplikacije. Izvan posla, uživam u planinarenju i istraživanju novih mjesta, što mi pomaže da ostanem kreativan i osvježen."
@@ -523,8 +528,8 @@ msgstr "Ja sam web programer."
 #~ msgid "I've developed my skills through sheer dedication and hard work, investing countless hours into coding and collaborating closely with the product team."
 #~ msgstr "Razvio sam svoje vještine kroz potpunu posvećenost i naporan rad, ulažući bezbroj sati u kodiranje i blisku saradnju s timom za proizvod."
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:15
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:32
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:18
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:35
 msgid "IIUM, Malaysia"
 msgstr "IIUM Malezija"
 
@@ -618,7 +623,7 @@ msgstr "Jezici"
 msgid "Libraries"
 msgstr "Biblioteke"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:34
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:37
 msgid "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project’s significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
 msgstr "LifeLine, sistem profiliranja siromaštva, ima za cilj optimizaciju distribucije donacija koristeći rudarenje podataka kako bi se predvidjele i riješile potrebe na efikasan način. Razvijen od strane Ejmena Ramica, projekat se fokusira na smanjenje nepotrebnih donacija, pružajući detaljne informacije o potrebama i predviđajući buduće krize. Cilja svakoga ko želi boriti se protiv siromaštva, koristeći JavaScript i RapidMiner za svoju web platformu. Značaj projekta leži u njegovoj sposobnosti da poboljša uticaj donacija i podigne svijest o globalnim problemima siromaštva."
 
@@ -774,11 +779,15 @@ msgstr "Programiranje"
 msgid "Programming Enthusiast. Software & Quality Assurance Engineer."
 msgstr "Entuzijasta za programiranje. Inženjer softvera i osiguranja kvaliteta."
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:48
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:51
 msgid "Project V4"
 msgstr "Projekat V4"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/index.tsx:16
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:70
+msgid "Project V6"
+msgstr "Projekat V6"
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/index.tsx:30
 msgid "Projects"
 msgstr "Projekti"
 
@@ -973,7 +982,7 @@ msgstr "Hvala vam što ste se pretplatili na moj bilten!"
 msgid "Thank you for subscribing!"
 msgstr "Hvala što ste se pretplatili!"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:17
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:20
 msgid "The \"Blockchain Charity\" project is a web application designed to ensure safe and transparent charitable donations via blockchain. It includes smart contract testing for donation and withdrawal transactions, and features for managing and monitoring donations and thresholds. The app uses tools like Truffle, Ganache, and MetaMask to securely handle and display transactions, helping to prevent fraud and money laundering while ensuring funds reach the intended recipients."
 msgstr "Projekt \"Blockchain Charity\" je web aplikacija dizajnirana za osiguravanje sigurnih i transparentnih dobrotvornih donacija putem blockchaina. Uključuje testiranje pametnih ugovora za transakcije donacija i povlačenja, te značajke za upravljanje i praćenje donacija i pragova. Aplikacija koristi alate poput Truffle-a, Ganache-a i MetaMask-a za sigurno rukovanje i prikazivanje transakcija, pomažući u sprječavanju prevara i pranja novca, osiguravajući da sredstva stignu do namijenjenih primatelja."
 
