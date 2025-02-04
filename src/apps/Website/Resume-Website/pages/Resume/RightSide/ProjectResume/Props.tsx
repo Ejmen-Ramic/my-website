@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
 import ImageGallery from './ProjectGallery'
-import { imagesV4 } from './ProjectGallery/Props'
+import { imagesV4, imagesV6 } from './ProjectGallery/Props'
 
 export type Props = {
   name: string
@@ -65,5 +65,25 @@ export const itemProps = [
     ),
     link: 'https://driveflux.com/?gad_source=1&gclid=Cj0KCQjwsaqzBhDdARIsAK2gqnf2PVMfSxxcXp7uwY_aOgNpoaY7jhjSYuKAhxG3hTbmgF3zfiPDOmYaAi8QEALw_wcB',
     gallery: <ImageGallery images={imagesV4} />,
+  },
+  {
+    name: <Trans>Project V6</Trans>,
+    year: '2024',
+    location: <Trans>FLUX, Malaysia</Trans>,
+    description: (
+      <Trans>
+        I worked on Project V6, where my role as a software engineer involved a
+        complete restructuring of our library and repository. We rebuilt the
+        entire component and function library from scratch using ShadCN and
+        Tailwind CSS, creating a fully custom solution. Additionally, we
+        restructured the operation of Next.js within our repository, improving
+        its architecture and performance. We also enhanced our commit, push and
+        type checking security processes, which significantly reduced errors and
+        bugs. As a result of these efforts, we achieved a 2x increase in website
+        speed and overall performance.
+      </Trans>
+    ),
+    link: 'https://driveflux.com/?gad_source=1&gclid=Cj0KCQjwsaqzBhDdARIsAK2gqnf2PVMfSxxcXp7uwY_aOgNpoaY7jhjSYuKAhxG3hTbmgF3zfiPDOmYaAi8QEALw_wcB',
+    gallery: <ImageGallery images={imagesV6} />,
   },
 ]
