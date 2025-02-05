@@ -44,6 +44,29 @@ export const imagesV4 = [
   },
 ]
 
+export const admin = [
+  {
+    src: './Website/Resume/Resume/admin/admin-1.png',
+    details: '',
+  },
+  {
+    src: './Website/Resume/Resume/admin/admin-2.png',
+    details: '',
+  },
+  {
+    src: './Website/Resume/Resume/admin/admin-3.png',
+    details: '',
+  },
+  {
+    src: './Website/Resume/Resume/admin/admin-4.png',
+    details: '',
+  },
+  {
+    src: './Website/Resume/Resume/admin/admin-5.png',
+    details: '',
+  },
+]
+
 export const imagesV6 = [
   {
     src: './Website/Resume/Resume/v6/home-v6-1.png',
