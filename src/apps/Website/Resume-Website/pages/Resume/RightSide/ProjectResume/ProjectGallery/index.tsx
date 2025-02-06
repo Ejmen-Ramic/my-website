@@ -79,6 +79,18 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
   const ToolTipColor = useColorModeValue(colors.white, colors.black);
   const GalleryIconColor = useColorModeValue('#02bece', '#ed2496');
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   return (
     <Box>
       <Tooltip
