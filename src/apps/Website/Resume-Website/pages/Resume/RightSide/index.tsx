@@ -1,13 +1,14 @@
-import { useColorModeValue, VStack } from '@chakra-ui/react'
-import Education from './Education'
-import ProExperience from './ProExperience'
-import Projects from './ProjectResume'
-import ExtraCurriculum from './ExtraCurriculum'
+import { useColorModeValue, VStack } from '@chakra-ui/react';
+import Education from './Education';
+import ProExperience from './ProExperience';
+import Projects from './ProjectResume';
+import ExtraCurriculum from './ExtraCurriculum';
 
 const ResumeRightSide = () => {
   return (
     <VStack
       w={'full'}
+      maxW={{ lg: '540px' }}
       maxH={'full'}
       spacing={'40px'}
       bgColor={useColorModeValue('#FFFFFF', '#1b1b1b')}
@@ -21,7 +22,7 @@ const ResumeRightSide = () => {
       <Projects />
       <ExtraCurriculum />
     </VStack>
-  )
-}
+  );
+};
 
-export default ResumeRightSide
+export default ResumeRightSide;
