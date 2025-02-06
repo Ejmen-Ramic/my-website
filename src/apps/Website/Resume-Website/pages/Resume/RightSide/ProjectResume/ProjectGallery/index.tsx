@@ -148,7 +148,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
                 alt={`Image ${currentImageIndex + 1}`}
                 maxH={'95vh'}
                 maxW={'100vw'}
-                px={'120px'}
+                px={{ lg: '120px' }}
               />
               <Box
                 pl={{ lg: '190px' }}
