@@ -4,7 +4,7 @@ import bodyParser from 'body-parser'
 import mailchimp from '@mailchimp/mailchimp_marketing'
 import dotenv from 'dotenv'
 
-dotenv.config({ path: '.env.local' })
+dotenv.config()
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -68,3 +68,7 @@ app.post(
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`)
 })
+
+console.log("MAILCHIMP_SERVER_PREFIX:", process.env.MAILCHIMP_SERVER_PREFIX);
+console.log("MAILCHIMP_AUDIENCE_ID:", process.env.MAILCHIMP_AUDIENCE_ID);
+console.log("MAILCHIMP_API_KEY:", process.env.MAILCHIMP_API_KEY ? "Exists" : "Missing");
