@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react'
 import {
   Box,
   Image,
@@ -13,83 +13,83 @@ import {
   useColorModeValue,
   Button,
   Tooltip,
-} from '@chakra-ui/react';
-import { ArrowBackIcon, ArrowForwardIcon, CloseIcon } from '@chakra-ui/icons';
-import { GrGallery } from 'react-icons/gr';
-import { useSwipeable } from 'react-swipeable';
-import { colors } from '../../../../../../../../shared/components/Hooks/color';
+} from '@chakra-ui/react'
+import { ArrowBackIcon, ArrowForwardIcon, CloseIcon } from '@chakra-ui/icons'
+import { GrGallery } from 'react-icons/gr'
+import { useSwipeable } from 'react-swipeable'
+import { colors } from '../../../../../../../../shared/components/Hooks/color'
 
 interface ImageGalleryProps {
   images: Array<{
-    src: string;
-    details: string;
-  }>;
+    src: string
+    details: string
+  }>
 }
 
 const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { open, onOpen, onClose } = useDisclosure()
   const [currentImageIndex, setCurrentImageIndex] = useState<number | null>(
     null
-  );
+  )
 
   const openGallery = () => {
-    setCurrentImageIndex(0);
-    onOpen();
-  };
+    setCurrentImageIndex(0)
+    onOpen()
+  }
 
   const nextImage = useCallback(() => {
     if (currentImageIndex !== null) {
-      setCurrentImageIndex((currentImageIndex + 1) % images.length);
+      setCurrentImageIndex((currentImageIndex + 1) % images.length)
     }
-  }, [currentImageIndex, images.length]);
+  }, [currentImageIndex, images.length])
 
   const prevImage = useCallback(() => {
     if (currentImageIndex !== null) {
       setCurrentImageIndex(
         (currentImageIndex - 1 + images.length) % images.length
-      );
+      )
     }
-  }, [currentImageIndex, images.length]);
+  }, [currentImageIndex, images.length])
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (isOpen) {
+      if (open) {
         if (event.key === 'ArrowRight') {
-          nextImage();
+          nextImage()
         } else if (event.key === 'ArrowLeft') {
-          prevImage();
+          prevImage()
         }
       }
-    };
+    }
 
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown)
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [isOpen, nextImage, prevImage]);
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [open, nextImage, prevImage])
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => nextImage(),
     onSwipedRight: () => prevImage(),
     preventScrollOnSwipe: true,
     trackMouse: true,
-  });
+  })
 
-  const ColorDetails = useColorModeValue(colors.black, colors.white);
-  const ToolTipColor = useColorModeValue(colors.white, colors.black);
-  const GalleryIconColor = useColorModeValue('#02bece', '#ed2496');
+  const ColorDetails = useColorModeValue(colors.black, colors.white)
+  const ToolTipColor = useColorModeValue(colors.white, colors.black)
+  const GalleryIconColor = useColorModeValue('#02bece', '#ed2496')
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
+    if (open) {
+      document.body.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = 'unset'
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
+      document.body.style.overflow = 'unset'
+    }
+  }, [open])
 
   return (
     <Box>
@@ -113,7 +113,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
         />
       </Tooltip>
       {currentImageIndex !== null && (
-        <Modal isOpen={isOpen} onClose={onClose} size={'full'}>
+        <Modal open={open} onClose={onClose} size={'full'}>
           <ModalOverlay opacity={'0.4'} />
           <ModalContent {...swipeHandlers}>
             <ModalBody
@@ -218,7 +218,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
         </Modal>
       )}
     </Box>
-  );
-};
+  )
+}
 
-export default ImageGallery;
+export default ImageGallery

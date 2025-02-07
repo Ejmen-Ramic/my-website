@@ -51,11 +51,16 @@ interface MenuDataProps {
 
 const DropDownHobbies = ({ menuData }: MenuDataProps) => {
   const linkColor = '#02bece'
-  const { onOpen, onClose, isOpen } = useDisclosure()
+  const { onOpen, onClose, open } = useDisclosure()
 
   return (
     <Stack direction={'row'} spacing={4}>
-      <Popover trigger={'hover'} placement={'bottom-start'} onOpen={onOpen} onClose={onClose}>
+      <Popover
+        trigger={'hover'}
+        placement={'bottom-start'}
+        onOpen={onOpen}
+        onClose={onClose}
+      >
         <PopoverTrigger>
           <HStack alignItems={'center'} cursor={'pointer'} role={'group'}>
             <Link
@@ -81,7 +86,7 @@ const DropDownHobbies = ({ menuData }: MenuDataProps) => {
                 color: linkColor,
               }}
               transition={'all .25s ease-in-out'}
-              transform={isOpen ? 'rotate(180deg)' : ''}
+              transform={open ? 'rotate(180deg)' : ''}
             />
           </HStack>
         </PopoverTrigger>

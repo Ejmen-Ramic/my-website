@@ -32,7 +32,10 @@ const menuData = [
 const MenuContainer = () => {
   return (
     <Flex h={'100%'}>
-      <DropDownMenu menuData={menuData} linkColor={useColorModeValue('#817e7e', '#02bece')} />
+      <DropDownMenu
+        menuData={menuData}
+        linkColor={useColorModeValue('#817e7e', '#02bece')}
+      />
     </Flex>
   )
 }
@@ -49,11 +52,16 @@ interface MenuDataProps {
 }
 
 const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
-  const { onOpen, onClose, isOpen } = useDisclosure()
+  const { onOpen, onClose, open } = useDisclosure()
 
   return (
     <Stack direction={'row'} spacing={4}>
-      <Popover trigger={'hover'} placement={'bottom-start'} onOpen={onOpen} onClose={onClose}>
+      <Popover
+        trigger={'hover'}
+        placement={'bottom-start'}
+        onOpen={onOpen}
+        onClose={onClose}
+      >
         <PopoverTrigger>
           <HStack alignItems={'center'} cursor={'pointer'} role={'group'}>
             <Link
@@ -79,7 +87,7 @@ const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
                 color: linkColor,
               }}
               transition={'all .25s ease-in-out'}
-              transform={isOpen ? 'rotate(180deg)' : ''}
+              transform={open ? 'rotate(180deg)' : ''}
             />
           </HStack>
         </PopoverTrigger>
@@ -104,7 +112,11 @@ const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
   )
 }
 
-const DropDownItem = ({ label, href, linkColor }: MenuData & { linkColor: string }) => {
+const DropDownItem = ({
+  label,
+  href,
+  linkColor,
+}: MenuData & { linkColor: string }) => {
   return (
     <Link
       href={href!}

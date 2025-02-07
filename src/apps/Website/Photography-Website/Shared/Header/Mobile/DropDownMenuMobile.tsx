@@ -1,4 +1,14 @@
-import { Flex, Text, Icon, Menu, MenuButton, MenuList, MenuItem, useColorModeValue, chakra } from '@chakra-ui/react'
+import {
+  Flex,
+  Text,
+  Icon,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  useColorModeValue,
+  chakra,
+} from '@chakra-ui/react'
 import { t, Trans } from '@lingui/macro'
 import { BiChevronDown } from 'react-icons/bi'
 import { IoCameraOutline } from 'react-icons/io5'
@@ -50,7 +60,7 @@ const DropDownMenuMobile = () => {
 
   return (
     <Menu autoSelect={false} isLazy>
-      {({ isOpen, onClose }) => (
+      {({ open, onClose }) => (
         <>
           <MenuButton
             _hover={{ color: '#02bece' }}
@@ -72,13 +82,18 @@ const DropDownMenuMobile = () => {
                 as={BiChevronDown}
                 h={'100%'}
                 transition={'all .25s ease-in-out'}
-                transform={isOpen ? 'rotate(180deg)' : ''}
+                transform={open ? 'rotate(180deg)' : ''}
               />
             </Flex>
           </MenuButton>
           <MenuList fontSize={''}>
             {dropdownLinks.map((link, index) => (
-              <MenuLink key={index} name={link.name} path={link.path} onClose={onClose} />
+              <MenuLink
+                key={index}
+                name={link.name}
+                path={link.path}
+                onClose={onClose}
+              />
             ))}
           </MenuList>
         </>

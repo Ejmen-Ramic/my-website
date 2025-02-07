@@ -76,7 +76,7 @@ const LanguageMenuMobile: React.FC = () => {
 
   return (
     <Menu autoSelect={false} isLazy>
-      {({ isOpen, onClose }) => (
+      {({ open, onClose }) => (
         <>
           <MenuButton
             _hover={{ color: '#02bece' }}
@@ -98,7 +98,7 @@ const LanguageMenuMobile: React.FC = () => {
                 as={BiChevronDown}
                 h={'100%'}
                 transition={'all .25s ease-in-out'}
-                transform={isOpen ? 'rotate(180deg)' : ''}
+                transform={open ? 'rotate(180deg)' : ''}
               />
             </Flex>
           </MenuButton>

@@ -48,7 +48,7 @@ const MenuContainer = () => {
 
 const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
   const linkColor = '#02bece'
-  const { onOpen, onClose, isOpen } = useDisclosure()
+  const { onOpen, onClose, open } = useDisclosure()
   const { changeLanguage } = useLanguage()
 
   return (
@@ -91,7 +91,7 @@ const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
                     color: linkColor,
                   }}
                   transition={'all .25s ease-in-out'}
-                  transform={isOpen ? 'rotate(180deg)' : ''}
+                  transform={open ? 'rotate(180deg)' : ''}
                 />
               </Flex>
             </Link>

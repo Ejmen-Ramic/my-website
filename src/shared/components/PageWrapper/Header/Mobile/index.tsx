@@ -38,7 +38,7 @@ type MenuItemLink = {
 }
 
 const HeaderMobile = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { open, onOpen, onClose } = useDisclosure()
   const color = useColorModeValue('#2b333d', colors.white)
   const year = new Date().getFullYear()
 
@@ -71,14 +71,14 @@ const HeaderMobile = () => {
           data-testid={'burger-button'}
         >
           <Hide below={'md'}>
-            <HamburgerIcon isOpen={isOpen} color={color} size={'30px'} />
+            <HamburgerIcon open={open} color={color} size={'30px'} />
           </Hide>
           <Show below={'md'}>
-            <HamburgerIcon isOpen={isOpen} color={color} size={'20px'} />
+            <HamburgerIcon open={open} color={color} size={'20px'} />
           </Show>
         </Button>
       </Box>
-      <Drawer isOpen={isOpen} placement={'left'} onClose={onClose}>
+      <Drawer open={open} placement={'left'} onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent
           backgroundColor={useColorModeValue(colors.white, '#2b333d')}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react'
 import {
   Box,
   Image,
@@ -12,64 +12,64 @@ import {
   Text,
   HStack,
   useColorModeValue,
-} from '@chakra-ui/react';
-import { ArrowBackIcon, ArrowForwardIcon, CloseIcon } from '@chakra-ui/icons';
-import { useSwipeable } from 'react-swipeable';
-import { images } from './Props';
-import FadeInView from '../../../../../../../shared/components/Hooks/FadeInView';
-import { colors } from '../../../../../../../shared/components/Hooks/color';
+} from '@chakra-ui/react'
+import { ArrowBackIcon, ArrowForwardIcon, CloseIcon } from '@chakra-ui/icons'
+import { useSwipeable } from 'react-swipeable'
+import { images } from './Props'
+import FadeInView from '../../../../../../../shared/components/Hooks/FadeInView'
+import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 const ImageGallery: React.FC = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { open, onOpen, onClose } = useDisclosure()
   const [currentImageIndex, setCurrentImageIndex] = useState<number | null>(
     null
-  );
+  )
 
   const openImage = (index: number) => {
-    setCurrentImageIndex(index);
-    onOpen();
-  };
+    setCurrentImageIndex(index)
+    onOpen()
+  }
 
   const nextImage = useCallback(() => {
     if (currentImageIndex !== null) {
-      setCurrentImageIndex((currentImageIndex + 1) % images.length);
+      setCurrentImageIndex((currentImageIndex + 1) % images.length)
     }
-  }, [currentImageIndex]);
+  }, [currentImageIndex])
 
   const prevImage = useCallback(() => {
     if (currentImageIndex !== null) {
       setCurrentImageIndex(
         (currentImageIndex - 1 + images.length) % images.length
-      );
+      )
     }
-  }, [currentImageIndex]);
+  }, [currentImageIndex])
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (isOpen) {
+      if (open) {
         if (event.key === 'ArrowRight') {
-          nextImage();
+          nextImage()
         } else if (event.key === 'ArrowLeft') {
-          prevImage();
+          prevImage()
         }
       }
-    };
+    }
 
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown)
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [isOpen, nextImage, prevImage]);
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [open, nextImage, prevImage])
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => nextImage(),
     onSwipedRight: () => prevImage(),
     preventScrollOnSwipe: true,
     trackMouse: true,
-  });
+  })
 
-  const ColorDetails = useColorModeValue(colors.black, colors.white);
+  const ColorDetails = useColorModeValue(colors.black, colors.white)
 
   return (
     <Box
@@ -110,7 +110,7 @@ const ImageGallery: React.FC = () => {
       </SimpleGrid>
 
       {currentImageIndex !== null && (
-        <Modal isOpen={isOpen} onClose={onClose} size={'full'}>
+        <Modal open={open} onClose={onClose} size={'full'}>
           <ModalOverlay opacity={'0.4'} />
           <ModalContent {...swipeHandlers}>
             <ModalBody
@@ -214,7 +214,7 @@ const ImageGallery: React.FC = () => {
         </Modal>
       )}
     </Box>
-  );
-};
+  )
+}
 
-export default ImageGallery;
+export default ImageGallery
