@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { i18n } from '@lingui/core'
 import { I18nProvider } from '@lingui/react'
 import { messages } from './locales/en/messages'
-import { Provider } from '@chakra-ui/react/dist/types/provider/provider'
+import { Provider } from './components/ui/provider'
 
 i18n.load('en', messages)
 i18n.activate('en')
