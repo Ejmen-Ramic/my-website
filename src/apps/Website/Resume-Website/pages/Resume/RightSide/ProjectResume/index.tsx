@@ -43,17 +43,29 @@ const Projects = () => {
                 fontWeight={400}
                 textAlign={'start'}
               >
-                <Link href={link}>
+                {link ? (
+                  <Link href={link}>
+                    <Button
+                      color={colorLink}
+                      variant={'none'}
+                      p={'0px'}
+                      _hover={{ textDecoration: 'underline' }}
+                    >
+                      {name}
+                      <FaLink style={{ marginLeft: '8px' }} />
+                    </Button>
+                  </Link>
+                ) : (
                   <Button
                     color={colorLink}
                     variant={'none'}
                     p={'0px'}
-                    _hover={{ textDecoration: 'underline' }}
+                    cursor={'text'}
+                    _hover={{ cursor: 'text' }}
                   >
                     {name}
-                    {link && <FaLink style={{ marginLeft: '8px' }} />}
                   </Button>
-                </Link>
+                )}
                 {gallery && <Box>{gallery}</Box>}
               </HStack>
               <VStack w={{ md: '300px' }} spacing={'0px'}>
