@@ -134,6 +134,10 @@ msgstr "9. Can you walk me through a project you worked on?"
 msgid "About Me"
 msgstr "About Me"
 
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:70
+msgid "Admin Dashboard"
+msgstr "Admin Dashboard"
+
 #: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:313
 msgid "Admin Dashboard Development"
 msgstr "Admin Dashboard Development"
@@ -385,6 +389,7 @@ msgstr "Fluent"
 
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:53
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:72
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:91
 msgid "FLUX, Malaysia"
 msgstr "FLUX, Malaysia"
 
@@ -529,9 +534,13 @@ msgstr "I worked on an e-commerce platform where we used <0>React</0>, <1>TypeSc
 #~ msgid "I worked on an e-commerce platform where we used React, TypeScript, and Chakra UI for the frontend, Next.js for the backend, MongoDB and Prisma for the database, and Playwright for writing tests. I implemented features like user authentication, product listings, and a checkout page. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<0/><1/> Additionally, I collaborated closely with backend developers to integrate the frontend with the server-side logic seamlessly, resulting in a smooth and efficient user experience. The project was a great success, improving user engagement and increasing sales for the platform."
 #~ msgstr "I worked on an e-commerce platform where we used React, TypeScript, and Chakra UI for the frontend, Next.js for the backend, MongoDB and Prisma for the database, and Playwright for writing tests. I implemented features like user authentication, product listings, and a checkout page. Using TypeScript, I ensured type safety and reduced bugs. We also used Chakra UI to create a cohesive and responsive design, which made the site very user-friendly.<0/><1/> Additionally, I collaborated closely with backend developers to integrate the frontend with the server-side logic seamlessly, resulting in a smooth and efficient user experience. The project was a great success, improving user engagement and increasing sales for the platform."
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:74
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:93
 msgid "I worked on Project V6, where my role as a software engineer involved a complete restructuring of our library and repository. We rebuilt the entire component and function library from scratch using ShadCN and Tailwind CSS, creating a fully custom solution. Additionally, we restructured the operation of Next.js within our repository, improving its architecture and performance. We also enhanced our commit, push and type checking security processes, which significantly reduced errors and bugs. As a result of these efforts, we achieved a 2x increase in website speed and overall performance."
 msgstr "I worked on Project V6, where my role as a software engineer involved a complete restructuring of our library and repository. We rebuilt the entire component and function library from scratch using ShadCN and Tailwind CSS, creating a fully custom solution. Additionally, we restructured the operation of Next.js within our repository, improving its architecture and performance. We also enhanced our commit, push and type checking security processes, which significantly reduced errors and bugs. As a result of these efforts, we achieved a 2x increase in website speed and overall performance."
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:74
+msgid "I worked on the Admin Dashboard for Car Subscription, a comprehensive platform designed to manage vehicle subscriptions efficiently. The dashboard serves as the central hub for administrators to oversee subscriptions, logistics, payments, and customer interactions and much more. We have optimized API interactions, implemented secure authentication, and enhanced data-fetching strategies, leading to improved performance and usability. The result was a more efficient, responsive, and user-friendly admin system, helping FLUX manage car subscriptions and hosts seamlessly and scale its operations effectively."
+msgstr "I worked on the Admin Dashboard for Car Subscription, a comprehensive platform designed to manage vehicle subscriptions efficiently. The dashboard serves as the central hub for administrators to oversee subscriptions, logistics, payments, and customer interactions and much more. We have optimized API interactions, implemented secure authentication, and enhanced data-fetching strategies, leading to improved performance and usability. The result was a more efficient, responsive, and user-friendly admin system, helping FLUX manage car subscriptions and hosts seamlessly and scale its operations effectively."
 
 #: src/apps/Website/Resume-Website/pages/Home/FrequentQuestions/index.tsx:16
 #~ msgid "I'm a software developer with a passion for creating intuitive and efficient user experiences. I've been working with latest languages, frameworks and testing tools for the past few years, and I love how these tools enable me to build scalable and maintainable applications. Outside of work, I enjoy hiking and exploring new places, which helps me stay creative and refreshed."
@@ -641,8 +650,12 @@ msgid "Libraries"
 msgstr "Libraries"
 
 #: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:37
-msgid "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project’s significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
-msgstr "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project’s significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
+msgid "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project's significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
+msgstr "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project's significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
+
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:37
+#~ msgid "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project’s significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
+#~ msgstr "LifeLine, a Poverty Profiling System, aims to optimize donation distribution using data mining to predict and address needs efficiently. Developed by Ejmen Ramic, the project focuses on reducing unnecessary donations, providing detailed information on needs, and predicting future crises. It targets anyone wishing to combat poverty, leveraging JavaScript and RapidMiner for its web platform. The project’s significance lies in its potential to enhance the impact of donations and raise awareness about global poverty issues."
 
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/items.tsx:30
 #~ msgid "LinkedIn"
@@ -804,7 +817,7 @@ msgstr "Programming Enthusiast. Software & Quality Assurance Engineer."
 msgid "Project V4"
 msgstr "Project V4"
 
-#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:70
+#: src/apps/Website/Resume-Website/pages/Resume/RightSide/ProjectResume/Props.tsx:89
 msgid "Project V6"
 msgstr "Project V6"
 
