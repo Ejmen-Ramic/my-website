@@ -103,6 +103,6 @@ export const itemProps = [
       </Trans>
     ),
     link: 'https://driveflux.com/?gad_source=1&gclid=Cj0KCQjwsaqzBhDdARIsAK2gqnf2PVMfSxxcXp7uwY_aOgNpoaY7jhjSYuKAhxG3hTbmgF3zfiPDOmYaAi8QEALw_wcB',
-    gallery: <ImageGallery images={imagesV6} />,
+    // gallery: <ImageGallery images={imagesV6} />,
   },
 ]
