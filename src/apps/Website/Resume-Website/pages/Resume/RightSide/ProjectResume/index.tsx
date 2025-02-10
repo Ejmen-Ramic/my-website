@@ -51,7 +51,7 @@ const Projects = () => {
                     _hover={{ textDecoration: 'underline' }}
                   >
                     {name}
-                    <FaLink style={{ marginLeft: '8px' }} />
+                    {link && <FaLink style={{ marginLeft: '8px' }} />}
                   </Button>
                 </Link>
                 {gallery && <Box>{gallery}</Box>}

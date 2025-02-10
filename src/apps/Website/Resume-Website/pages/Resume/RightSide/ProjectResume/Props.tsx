@@ -7,7 +7,7 @@ export type Props = {
   year: string
   location: string | JSX.Element
   description: string | JSX.Element
-  link: string
+  link?: string
   gallery?: JSX.Element
 }
 
@@ -40,7 +40,7 @@ export const itemProps = [
         Developed by Ejmen Ramic, the project focuses on reducing unnecessary
         donations, providing detailed information on needs, and predicting
         future crises. It targets anyone wishing to combat poverty, leveraging
-        JavaScript and RapidMiner for its web platform. The project’s
+        JavaScript and RapidMiner for its web platform. The project's
         significance lies in its potential to enhance the impact of donations
         and raise awareness about global poverty issues.
       </Trans>
