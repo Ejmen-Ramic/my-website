@@ -34,7 +34,13 @@ const Projects = () => {
       <Box bgColor={colorMode} height={'2px'} w={'full'}></Box>
       {itemProps.map(
         ({ name, year, location, description, link, gallery }, i) => (
-          <VStack w={'full'} spacing={'10px'} alignItems={'start'} key={i}>
+          <VStack
+            w={'full'}
+            pt={{ md: '13px' }}
+            spacing={'10px'}
+            alignItems={'start'}
+            key={i}
+          >
             <HStack w={'full'}>
               <HStack
                 w={'full'}
