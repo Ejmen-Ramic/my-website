@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
 import ImageGallery from './ProjectGallery'
-import { imagesV4, imagesV6 } from './ProjectGallery/Props'
+import { adminImages, imagesV4, imagesV6 } from './ProjectGallery/Props'
 
 export type Props = {
   name: string
@@ -65,6 +65,25 @@ export const itemProps = [
     ),
     link: 'https://driveflux.com/?gad_source=1&gclid=Cj0KCQjwsaqzBhDdARIsAK2gqnf2PVMfSxxcXp7uwY_aOgNpoaY7jhjSYuKAhxG3hTbmgF3zfiPDOmYaAi8QEALw_wcB',
     gallery: <ImageGallery images={imagesV4} />,
+  },
+  {
+    name: <Trans>Admin Dashboard</Trans>,
+    year: '2023',
+    location: <Trans>FLUX, Malaysia</Trans>,
+    description: (
+      <Trans>
+        I worked on the Admin Dashboard for Car Subscription, a comprehensive
+        platform designed to manage vehicle subscriptions efficiently. The
+        dashboard serves as the central hub for administrators to oversee
+        subscriptions, logistics, payments, and customer interactions and much
+        more. We have optimized API interactions, implemented secure
+        authentication, and enhanced data-fetching strategies, leading to
+        improved performance and usability. The result was a more efficient,
+        responsive, and user-friendly admin system, helping FLUX manage car
+        subscriptions and hosts seamlessly and scale its operations effectively.
+      </Trans>
+    ),
+    gallery: <ImageGallery images={adminImages} />,
   },
   {
     name: <Trans>Project V6</Trans>,
