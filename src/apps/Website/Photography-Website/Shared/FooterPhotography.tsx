@@ -126,7 +126,7 @@ const FooterPhotography = () => {
                   Powered by
                 </Trans>{' '}
                 <Link href={'https://react.dev/'} isExternal>
-                  <Box as={'span'} color={'#02bece'}>
+                  <Box as={'span'} color={colors.links}>
                     React
                   </Box>
                 </Link>
@@ -137,7 +137,7 @@ const FooterPhotography = () => {
                   {''} • {''}
                 </Box>
                 <Link href={'https://www.typescriptlang.org/'} isExternal>
-                  <Box as={'span'} color={'#02bece'}>
+                  <Box as={'span'} color={colors.links}>
                     Typescript
                   </Box>
                 </Link>
@@ -148,7 +148,7 @@ const FooterPhotography = () => {
                   {''} • {''}
                 </Box>
                 <Link href={'https://chakra-ui.com/'} isExternal>
-                  <Box as={'span'} color={'#02bece'}>
+                  <Box as={'span'} color={colors.links}>
                     Chakra UI
                   </Box>
                 </Link>
@@ -221,7 +221,7 @@ const FooterPhotography = () => {
             <FadeInView delay={0.1}>
               <Link
                 href={'/'}
-                color={useColorModeValue('#02bece', '#02bece')}
+                color={useColorModeValue(colors.links, colors.links)}
                 _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
                 fontSize={'16px'}
               >
@@ -231,7 +231,7 @@ const FooterPhotography = () => {
             <FadeInView delay={0.1}>
               <Link
                 href={'/resume'}
-                color={useColorModeValue('#02bece', '#02bece')}
+                color={useColorModeValue(colors.links, colors.links)}
                 _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
                 fontSize={'16px'}
               >
@@ -244,7 +244,7 @@ const FooterPhotography = () => {
                   as={Button}
                   variant={'link'}
                   border={'none'}
-                  color={useColorModeValue('#02bece', '#02bece')}
+                  color={useColorModeValue(colors.links, colors.links)}
                   _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
                   _expanded={{
                     color: useColorModeValue('#2b333d', colors.white),
@@ -258,7 +258,7 @@ const FooterPhotography = () => {
                 <MenuList borderRadius={'3px'}>
                   <MenuItem
                     _hover={{
-                      color: '#02bece',
+                      color: colors.links,
                       bg: useColorModeValue('gray.100', 'gray.900'),
                     }}
                   >
@@ -272,7 +272,7 @@ const FooterPhotography = () => {
             <FadeInView delay={0.1}>
               <Link
                 href={'/about'}
-                color={useColorModeValue('#02bece', '#02bece')}
+                color={useColorModeValue(colors.links, colors.links)}
                 _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
                 fontSize={'16px'}
               >
@@ -282,7 +282,7 @@ const FooterPhotography = () => {
             <FadeInView delay={0.1}>
               <Link
                 href={'/contact'}
-                color={useColorModeValue('#02bece', '#02bece')}
+                color={useColorModeValue(colors.links, colors.links)}
                 _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
                 fontSize={'16px'}
               >
