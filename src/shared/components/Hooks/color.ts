@@ -26,9 +26,9 @@ export const colors = {
   accent4: "#E55867",
 
   /**
-   * #50C8E8 Blue
+   * #02bece Blue
    */
-  links: "#50C8E8",
+  links: "#02bece",
 
   /**
    * #E24657 Red
