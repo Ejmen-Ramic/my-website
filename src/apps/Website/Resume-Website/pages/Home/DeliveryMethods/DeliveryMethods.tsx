@@ -13,6 +13,7 @@ import {
 import { BsArrowRight } from 'react-icons/bs';
 import items from './Props';
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 
 // interface DMProps {
 //   title: string;
@@ -71,7 +72,7 @@ const DeliveryMethods = () => {
                     variant={'ghost'}
                     color={'#EF562D'}
                     bg={'transparent'}
-                    _hover={{ bg: 'transparent', color: '#02bece' }}
+                    _hover={{ bg: 'transparent', color: colors.links }}
                     _active={{ bg: 'transparent' }}
                   >
                     Enquire Now

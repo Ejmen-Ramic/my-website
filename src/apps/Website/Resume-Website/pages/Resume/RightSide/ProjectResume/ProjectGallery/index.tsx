@@ -77,7 +77,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
 
   const ColorDetails = useColorModeValue(colors.black, colors.white);
   const ToolTipColor = useColorModeValue(colors.white, colors.black);
-  const GalleryIconColor = useColorModeValue('#02bece', '#ed2496');
+  const GalleryIconColor = useColorModeValue(colors.links, '#ed2496');
 
   useEffect(() => {
     if (isOpen) {
