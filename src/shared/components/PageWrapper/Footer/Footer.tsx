@@ -8,14 +8,14 @@ import {
   Text,
   VisuallyHidden,
   useColorModeValue,
-} from '@chakra-ui/react'
-import { ReactNode } from 'react'
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
-import { FaXTwitter } from 'react-icons/fa6'
-import FadeInView from '../../Hooks/FadeInView'
-import { Trans } from '@lingui/macro'
-import { colors } from '../../Hooks/color'
-import SubscribeForm from './Newsletter'
+} from '@chakra-ui/react';
+import { ReactNode } from 'react';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import FadeInView from '../../Hooks/FadeInView';
+import { Trans } from '@lingui/macro';
+import { colors } from '../../Hooks/color';
+import SubscribeForm from './Newsletter';
 
 const Logo = (props: any) => {
   return (
@@ -30,8 +30,8 @@ const Logo = (props: any) => {
         Ejmen Ramic
       </Text>
     </FadeInView>
-  )
-}
+  );
+};
 
 const SocialButton = ({
   children,
@@ -39,11 +39,11 @@ const SocialButton = ({
   href,
   hoverColor,
 }: {
-  children: ReactNode
-  label: string
-  href: string
-  color: string
-  hoverColor: string
+  children: ReactNode;
+  label: string;
+  href: string;
+  color: string;
+  hoverColor: string;
 }) => {
   return (
     <chakra.button
@@ -68,19 +68,19 @@ const SocialButton = ({
       </FadeInView>
       <FadeInView delay={0.1}>{children}</FadeInView>
     </chakra.button>
-  )
-}
+  );
+};
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
     <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
       {children}
     </Text>
-  )
-}
+  );
+};
 
 const Footer = () => {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
   return (
     <Box
       bg={useColorModeValue('gray.100', '#2b333d')}
@@ -120,7 +120,7 @@ const Footer = () => {
                   Powered by
                 </Trans>{' '}
                 <Link href={'https://react.dev/'} isExternal>
-                  <Box as={'span'} color={'#02bece'}>
+                  <Box as={'span'} color={colors.links}>
                     React
                   </Box>
                 </Link>
@@ -131,7 +131,7 @@ const Footer = () => {
                   {''} • {''}
                 </Box>
                 <Link href={'https://www.typescriptlang.org/'} isExternal>
-                  <Box as={'span'} color={'#02bece'}>
+                  <Box as={'span'} color={colors.links}>
                     Typescript
                   </Box>
                 </Link>
@@ -142,7 +142,7 @@ const Footer = () => {
                   {''} • {''}
                 </Box>
                 <Link href={'https://chakra-ui.com/'} isExternal>
-                  <Box as={'span'} color={'#02bece'}>
+                  <Box as={'span'} color={colors.links}>
                     Chakra UI
                   </Box>
                 </Link>
@@ -219,7 +219,7 @@ const Footer = () => {
             <FadeInView delay={0.1}>
               <Link
                 href={'/'}
-                color={useColorModeValue('#02bece', '#02bece')}
+                color={useColorModeValue(colors.links, colors.links)}
                 _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
                 fontSize={'16px'}
                 data-testid={'footer-home-link'}
@@ -230,7 +230,7 @@ const Footer = () => {
             <FadeInView delay={0.1}>
               <Link
                 href={'/resume'}
-                color={useColorModeValue('#02bece', '#02bece')}
+                color={useColorModeValue(colors.links, colors.links)}
                 _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
                 fontSize={'16px'}
                 data-testid={'footer-resume-link'}
@@ -244,7 +244,7 @@ const Footer = () => {
                   as={Button}
                   variant={'link'}
                   border={'none'}
-                  color={useColorModeValue('#02bece', '#02bece')}
+                  color={useColorModeValue(colors.links, colors.links)}
                   _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
                   _expanded={{
                     color: useColorModeValue('#2b333d', colors.white),
@@ -258,7 +258,7 @@ const Footer = () => {
                 <MenuList borderRadius={'3px'}>
                   <MenuItem
                     _hover={{
-                      color: '#02bece',
+                      color: colors.links,
                       bg: useColorModeValue('gray.100', 'gray.900'),
                     }}
                   >
@@ -272,7 +272,7 @@ const Footer = () => {
             <FadeInView delay={0.1}>
               <Link
                 href={'/about'}
-                color={useColorModeValue('#02bece', '#02bece')}
+                color={useColorModeValue(colors.links, colors.links)}
                 _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
                 fontSize={'16px'}
                 data-testid={'footer-about-link'}
@@ -283,7 +283,7 @@ const Footer = () => {
             <FadeInView delay={0.1}>
               <Link
                 href={'/contact'}
-                color={useColorModeValue('#02bece', '#02bece')}
+                color={useColorModeValue(colors.links, colors.links)}
                 _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
                 fontSize={'16px'}
                 data-testid={'footer-contact-link'}
@@ -303,7 +303,7 @@ const Footer = () => {
         </SimpleGrid>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

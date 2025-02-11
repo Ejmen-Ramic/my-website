@@ -45,7 +45,7 @@ const ScrollToTopButton = () => {
         borderRadius={'50%'}
         width={'40px'}
         height={'40px'}
-        bgColor={'#02bece'}
+        bgColor={colors.links}
         color={colors.white}
         _hover={{ bgColor: colors.white, color: colors.black }}
         onClick={scrollToTop}
