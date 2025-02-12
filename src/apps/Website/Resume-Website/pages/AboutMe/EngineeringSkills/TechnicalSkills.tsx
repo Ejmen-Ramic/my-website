@@ -88,7 +88,7 @@ const TechnicalSkills: FC = () => {
                     bg={StackColor}
                     spacing={'20px'}
                     p={'32px'}
-                    border={'1px solid #ECEFF4'}
+                    border={`1px solid ${colors.iceGray}`}
                     borderRadius={'10px'}
                     boxShadow={'0 8px 12px rgba(0, 0, 0, 0.1)'}
                     transition={
