@@ -84,7 +84,7 @@ const Resume: React.FC<{}> = () => {
               alignItems={'start'}
             >
               <Heading
-                color={useColorModeValue('#FFFFFF', colors.iceGray)}
+                color={useColorModeValue(colors.white, colors.iceGray)}
                 fontWeight={700}
                 fontSize={'25px'}
                 textTransform={'uppercase'}
@@ -92,7 +92,7 @@ const Resume: React.FC<{}> = () => {
                 Ejmen Ramic
               </Heading>
               <Text
-                color={useColorModeValue('#FFFFFF', colors.iceGray)}
+                color={useColorModeValue(colors.white, colors.iceGray)}
                 fontWeight={600}
                 fontSize={'12px'}
               >
