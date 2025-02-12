@@ -13,9 +13,10 @@ import { FaLocationDot } from 'react-icons/fa6'
 import { FaPaintBrush } from 'react-icons/fa'
 import { itemProps } from './Props'
 import { Trans } from '@lingui/macro'
+import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 const Projects = () => {
-  const colorMode = useColorModeValue('#000000', '#ECEFF4')
+  const colorMode = useColorModeValue('#000000', colors.iceGray)
   const colorLink = useColorModeValue('#0B3948', '#98bed5')
   return (
     <VStack w={'full'} alignItems={'start'} color={colorMode}>
