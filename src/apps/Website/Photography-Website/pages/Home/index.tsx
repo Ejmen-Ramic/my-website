@@ -16,7 +16,10 @@ import { colors } from '../../../../../shared/components/Hooks/color'
 
 const PhotographyHome: React.FC = () => {
   return (
-    <Stack w={'full'} bgColor={useColorModeValue(colors.primary1, '#2b333d')}>
+    <Stack
+      w={'full'}
+      bgColor={useColorModeValue(colors.primary1, colors.primary4)}
+    >
       <HeaderPhotography />
       <SimpleGrid
         columns={{ base: 1, lg: 2 }}

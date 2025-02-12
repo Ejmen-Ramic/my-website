@@ -6,7 +6,7 @@ import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const BosniaAlbum = () => {
   return (
-    <Stack w={'full'} bg={useColorModeValue(colors.primary1, '#2b333d')}>
+    <Stack w={'full'} bg={useColorModeValue(colors.primary1, colors.primary4)}>
       <Header />
       <ImageGallery />
       <Footer />

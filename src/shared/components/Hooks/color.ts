@@ -8,22 +8,27 @@ export const colors = {
   /**
    * #CACACA Gray
    */
-  primary2: '#CACACA',
+  primary2: '#CACACA', // not used
 
   /**
    * #585858 Dark Gray
    */
-  primary3: '#585858',
+  primary3: '#585858', // not used
+
+  /**
+   * #2b333d Dark Slate Blue
+   */
+  primary4: '#2b333d',
 
   /**
    * #191919 Soft Black
    */
-  primary4: '#191919',
+  primary5: '#191919', // not used
 
   /**
    * #E55867 Red
    */
-  accent4: '#E55867',
+  accent4: '#E55867', // not used
 
   /**
    * #02bece Blue
@@ -33,32 +38,32 @@ export const colors = {
   /**
    * #E24657 Red
    */
-  alert: '#E24657',
+  alert: '#E24657', // not used
 
   /**
    * #E24657 Red
    */
-  danger: '#E24657',
+  danger: '#E24657', // not used
 
   /**
    * #F4B25C Yellow
    */
-  warning4: '#F4B25C',
+  warning4: '#F4B25C', // not used
 
   /**
    * #4FD9C2 Green
    */
-  success4: '#4FD9C2',
+  success4: '#4FD9C2', // not used
 
   /**
    * #4FD9C2 Green
    */
-  green: '#4FD9C2',
+  green: '#4FD9C2', // not used
 
   /**
    * #3BD5BC Green
    */
-  // green: '#3BD5BC',
+  // green: '#3BD5BC', // not used
 
   /**
    * #000000 Black
@@ -73,17 +78,17 @@ export const colors = {
   /**
    * #E6E6E6 Light Gray
    */
-  whiteHover: '#E6E6E6',
+  whiteHover: '#E6E6E6', // not used
 
   /**
    * #F4F4F4  Light Gray
    */
-  placeholder: '#F4F4F4',
+  placeholder: '#F4F4F4', // not used
 
   /**
    * #F9F7D7 Light Yellow
    */
-  highlight: '#F9F7D7',
+  highlight: '#F9F7D7', // not used
 
   primary: {
     25: '#fafafa',
@@ -97,6 +102,16 @@ export const colors = {
     700: '#000000',
     800: '#000000',
     900: '#000000',
+  },
+
+  slate: {
+    50: '#f5f6f7',
+    100: '#e9ebed',
+    200: '#c5cbd1',
+    300: '#2b333d',
+    400: '#1f252d',
+    500: '#161b21',
+    600: '#0d1115',
   },
 
   success: {
