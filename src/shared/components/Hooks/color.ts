@@ -51,11 +51,6 @@ export const colors = {
   alert: '#E24657', // not used
 
   /**
-   * #E24657 Red
-   */
-  danger: '#E24657', // not used
-
-  /**
    * #F4B25C Yellow
    */
   warning4: '#F4B25C', // not used
@@ -63,17 +58,7 @@ export const colors = {
   /**
    * #4FD9C2 Green
    */
-  success4: '#4FD9C2', // not used
-
-  /**
-   * #4FD9C2 Green
-   */
   green: '#4FD9C2', // not used
-
-  /**
-   * #3BD5BC Green
-   */
-  // green: '#3BD5BC', // not used
 
   /**
    * #000000 Black
@@ -151,8 +136,6 @@ export const colors = {
   },
 
   info: {
-    50: '#CDF1FA',
-    100: '#50C8E8',
-    200: '#3EA5C0',
+    50: '#4299E1', // used
   },
 }
