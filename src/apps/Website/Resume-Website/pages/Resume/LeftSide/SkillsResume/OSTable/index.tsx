@@ -52,7 +52,7 @@ const getItems = () => {
 }
 
 const OSTable: FC = () => {
-  const nameColor = useColorModeValue('#000000', colors.iceGray)
+  const nameColor = useColorModeValue(colors.black, colors.iceGray)
   const skillColor = useColorModeValue('#0b3948', '#98bed5')
   const noSkillColor = useColorModeValue('#8d9da7', '#303c40')
   const columnWidth = useBreakpointValue({ base: '0px', md: '0px' })
