@@ -41,7 +41,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({
       fontSize={'16px'}
       letterSpacing={'1px'}
       _hover={{
-        color: '#02bece',
+        color: colors.links,
         bg: useColorModeValue('gray.100', 'gray.900'),
       }}
       onClick={() => {
@@ -79,7 +79,7 @@ const LanguageMenuMobile: React.FC = () => {
       {({ isOpen, onClose }) => (
         <>
           <MenuButton
-            _hover={{ color: '#02bece' }}
+            _hover={{ color: colors.links }}
             fontWeight={'light'}
             color={color}
             fontSize={'18px'}

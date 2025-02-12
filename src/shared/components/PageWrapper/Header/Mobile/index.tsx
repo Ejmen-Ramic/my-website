@@ -89,7 +89,7 @@ const HeaderMobile = () => {
             color={useColorModeValue('#2b333d', colors.white)}
             mt={'20px'}
             mr={'20px'}
-            _hover={{ color: '#02bece' }}
+            _hover={{ color: colors.links }}
             data-testid={'drawer-close-button'}
           />
           <DrawerHeader
@@ -112,7 +112,7 @@ const HeaderMobile = () => {
                         <Button
                           variant={'link'}
                           border={'none'}
-                          _hover={{ color: '#02bece' }}
+                          _hover={{ color: colors.links }}
                           color={color}
                           fontWeight={'light'}
                           fontSize={'18px'}
