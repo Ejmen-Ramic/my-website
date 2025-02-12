@@ -159,7 +159,7 @@ const Footer = () => {
                 <SocialButton
                   label={'GitHub'}
                   href={'https://github.com/Ejmen-Ramic/'}
-                  color={'#333333'}
+                  color={colors.primary[300]}
                   hoverColor={'gray'}
                   data-testid={'footer-github-link'}
                 >
