@@ -1,6 +1,11 @@
 // This file will contain all the colors we are using with guide on where it is used often
 export const colors = {
   /**
+   * #ECEFF4 Ice Gray
+   */
+  iceGray: '#ECEFF4',
+
+  /**
    * #ede9e3 Light Gray
    */
   primary1: '#ede9e3',

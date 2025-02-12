@@ -39,7 +39,7 @@ const EngineeringSKills: FC = () => {
               spacing={'20px'}
               p={'32px'}
               borderRadius={{ md: '10px' }}
-              border={{ base: 'none', md: '1px solid #ECEFF4' }}
+              border={{ base: 'none', md: `1px solid ${colors.iceGray}` }}
             >
               <FadeInView delay={0.1}>
                 <Heading>

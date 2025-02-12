@@ -6,21 +6,21 @@ import {
   useColorModeValue,
   HStack,
   Icon,
-} from '@chakra-ui/react';
-import { Trans } from '@lingui/macro';
-import { FC } from 'react';
-import { colors } from '../../../../../../shared/components/Hooks/color';
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
-import { itemsFeatureProjects } from './Props';
+} from '@chakra-ui/react'
+import { Trans } from '@lingui/macro'
+import { FC } from 'react'
+import { colors } from '../../../../../../shared/components/Hooks/color'
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { itemsFeatureProjects } from './Props'
 
 const FeaturedProjects: FC = () => {
-  const GridColor = useColorModeValue(colors.white, 'gray.800');
-  const StackColor = useColorModeValue(colors.white, '#2D3748');
-  const HeaderPopColor = useColorModeValue('teal.400', 'blue.400');
+  const GridColor = useColorModeValue(colors.white, 'gray.800')
+  const StackColor = useColorModeValue(colors.white, '#2D3748')
+  const HeaderPopColor = useColorModeValue('teal.400', 'blue.400')
   const popoverShadow = useColorModeValue(
     '0 16px 32px rgba(0, 0, 0, 0.15)',
     '0 20px 40px rgba(0, 0, 0, 0.3)'
-  );
+  )
   return (
     <FadeInView>
       <Stack
@@ -30,7 +30,7 @@ const FeaturedProjects: FC = () => {
         p={'32px'}
         spacing={'20px'}
         borderRadius={{ md: '10px' }}
-        border={{ base: 'none', lg: '1px solid #ECEFF4' }}
+        border={{ base: 'none', lg: `1px solid ${colors.iceGray}` }}
         data-testid={'featured-projects-component'}
       >
         <FadeInView delay={0.1}>
@@ -53,7 +53,7 @@ const FeaturedProjects: FC = () => {
                 bg={StackColor}
                 spacing={'20px'}
                 p={'32px'}
-                border={'1px solid #ECEFF4'}
+                border={`1px solid ${colors.iceGray}`}
                 borderRadius={'10px'}
                 boxShadow={popoverShadow}
                 data-testid={`technical-skills-content-${i}`}
@@ -91,7 +91,7 @@ const FeaturedProjects: FC = () => {
         </Grid>
       </Stack>
     </FadeInView>
-  );
-};
+  )
+}
 
-export default FeaturedProjects;
+export default FeaturedProjects
