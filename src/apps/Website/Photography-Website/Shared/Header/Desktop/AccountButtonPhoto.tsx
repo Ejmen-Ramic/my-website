@@ -10,7 +10,9 @@ const AccountButton = (props: ButtonProps) => {
         <Button
           bg={useColorModeValue('#979191', `${colors.white}14`)}
           color={colors.white}
-          _hover={{ bgColor: useColorModeValue('#817e7e', 'gray.600') }}
+          _hover={{
+            bgColor: useColorModeValue(colors.primary[200], 'gray.600'),
+          }}
           p={'13px'}
         >
           <MdOutlineAccountCircle size={'22px'} />

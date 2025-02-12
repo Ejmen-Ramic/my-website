@@ -34,7 +34,7 @@ const MenuContainer = () => {
     <Flex h={'100%'}>
       <DropDownMenu
         menuData={menuData}
-        linkColor={useColorModeValue('#817e7e', colors.links)}
+        linkColor={useColorModeValue(colors.primary[200], colors.links)}
       />
     </Flex>
   )
@@ -82,7 +82,7 @@ const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
               as={FaChevronDown}
               h={4}
               w={4}
-              color={useColorModeValue(colors.primary4, '#817e7e')}
+              color={useColorModeValue(colors.primary4, colors.primary[200])}
               _groupHover={{
                 color: linkColor,
               }}

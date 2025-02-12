@@ -53,9 +53,12 @@ const Header = () => {
           <Link to={'/photography'}>
             <Box
               h={'100%'}
-              borderColor={homeHovered ? '#817e7e' : colors.primary4}
+              borderColor={homeHovered ? colors.primary[200] : colors.primary4}
               borderTopWidth={homeHovered ? '8px' : '0px'}
-              borderTopColor={useColorModeValue('#817e7e', colors.links)}
+              borderTopColor={useColorModeValue(
+                colors.primary[200],
+                colors.links
+              )}
               transition={'all 0.1s ease-in-out'}
               onMouseEnter={() => setHomeHovered(true)}
               onMouseLeave={() => setHomeHovered(false)}
@@ -66,7 +69,9 @@ const Header = () => {
               <Button
                 variant={'link'}
                 border={'none'}
-                _hover={{ color: useColorModeValue('#817e7e', colors.links) }}
+                _hover={{
+                  color: useColorModeValue(colors.primary[200], colors.links),
+                }}
                 color={useColorModeValue(colors.primary4, colors.white)}
                 fontWeight={'light'}
                 letterSpacing={'1px'}
@@ -83,9 +88,12 @@ const Header = () => {
           <Link to={'/about-me'}>
             <Box
               h={'100%'}
-              borderColor={aboutHovered ? '#817e7e' : colors.primary4}
+              borderColor={aboutHovered ? colors.primary[200] : colors.primary4}
               borderTopWidth={aboutHovered ? '8px' : '0px'}
-              borderTopColor={useColorModeValue('#817e7e', colors.links)}
+              borderTopColor={useColorModeValue(
+                colors.primary[200],
+                colors.links
+              )}
               transition={'all 0.1s ease-in-out'}
               onMouseEnter={() => setAboutHovered(true)}
               onMouseLeave={() => setAboutHovered(false)}
@@ -96,7 +104,9 @@ const Header = () => {
               <Button
                 variant={'link'}
                 border={'none'}
-                _hover={{ color: useColorModeValue('#817e7e', colors.links) }}
+                _hover={{
+                  color: useColorModeValue(colors.primary[200], colors.links),
+                }}
                 color={useColorModeValue(colors.primary4, colors.white)}
                 fontWeight={'light'}
                 letterSpacing={'1px'}
@@ -111,9 +121,12 @@ const Header = () => {
           </Link>
           <Box
             h={'100%'}
-            borderColor={hobbiesHovered ? '#817e7e' : colors.primary4}
+            borderColor={hobbiesHovered ? colors.primary[200] : colors.primary4}
             borderTopWidth={hobbiesHovered ? '8px' : '0px'}
-            borderTopColor={useColorModeValue('#817e7e', colors.links)}
+            borderTopColor={useColorModeValue(
+              colors.primary[200],
+              colors.links
+            )}
             transition={'all 0.1s ease-in-out'}
             onMouseEnter={() => {
               setHobbiesHovered(true)
@@ -130,9 +143,14 @@ const Header = () => {
           <Link to={'/contact-us'}>
             <Box
               h={'100%'}
-              borderColor={contactHovered ? '#817e7e' : colors.primary4}
+              borderColor={
+                contactHovered ? colors.primary[200] : colors.primary4
+              }
               borderTopWidth={contactHovered ? '8px' : '0px'}
-              borderTopColor={useColorModeValue('#817e7e', colors.links)}
+              borderTopColor={useColorModeValue(
+                colors.primary[200],
+                colors.links
+              )}
               transition={'all 0.1s ease-in-out'}
               onMouseEnter={() => setContactHovered(true)}
               onMouseLeave={() => setContactHovered(false)}
@@ -144,7 +162,9 @@ const Header = () => {
               <Button
                 variant={'link'}
                 border={'none'}
-                _hover={{ color: useColorModeValue('#817e7e', colors.links) }}
+                _hover={{
+                  color: useColorModeValue(colors.primary[200], colors.links),
+                }}
                 color={useColorModeValue(colors.primary4, colors.white)}
                 fontWeight={'light'}
                 letterSpacing={'1px'}
