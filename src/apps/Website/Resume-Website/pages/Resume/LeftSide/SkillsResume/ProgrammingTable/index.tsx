@@ -9,15 +9,16 @@ import {
   Tbody,
   Td,
   useColorModeValue,
-} from '@chakra-ui/react';
-import { Trans } from '@lingui/macro';
-import { FC, ReactNode } from 'react';
-import { FaCircle } from 'react-icons/fa6';
+} from '@chakra-ui/react'
+import { Trans } from '@lingui/macro'
+import { FC, ReactNode } from 'react'
+import { FaCircle } from 'react-icons/fa6'
+import { colors } from '../../../../../../../../shared/components/Hooks/color'
 
 type Header = {
-  name?: ReactNode;
-  style?: ChakraProps;
-};
+  name?: ReactNode
+  style?: ChakraProps
+}
 
 const skillLevel = [
   'Novice',
@@ -25,12 +26,12 @@ const skillLevel = [
   'Intermediate',
   'Proficient',
   'Advanced',
-] as const;
+] as const
 
 type Item = {
-  name: string;
-  level: (typeof skillLevel)[number][];
-};
+  name: string
+  level: (typeof skillLevel)[number][]
+}
 
 const getItems = () => {
   const items: Item[] = [
@@ -86,15 +87,15 @@ const getItems = () => {
       name: 'PHP',
       level: ['Novice', 'Beginner'],
     },
-  ];
-  return items;
-};
+  ]
+  return items
+}
 
 const ProgrammingTable: FC = () => {
-  const nameColor = useColorModeValue('#000000', '#ECEFF4');
-  const skillColor = useColorModeValue('#0b3948', '#98bed5');
-  const noSkillColor = useColorModeValue('#8d9da7', '#303c40');
-  const columnWidth = useBreakpointValue({ base: '0px', md: '0px' });
+  const nameColor = useColorModeValue('#000000', colors.iceGray)
+  const skillColor = useColorModeValue('#0b3948', '#98bed5')
+  const noSkillColor = useColorModeValue('#8d9da7', '#303c40')
+  const columnWidth = useBreakpointValue({ base: '0px', md: '0px' })
   const headers = useBreakpointValue({
     base: [
       {
@@ -108,9 +109,9 @@ const ProgrammingTable: FC = () => {
         ),
       },
     ],
-  }) as Header[];
+  }) as Header[]
 
-  const items = getItems();
+  const items = getItems()
 
   return (
     <Table border={'none'}>
@@ -144,7 +145,7 @@ const ProgrammingTable: FC = () => {
               {name}
             </Td>
             {skillLevel.map((skill, j) => {
-              const isCheck = level.includes(skill);
+              const isCheck = level.includes(skill)
               return (
                 <Td
                   key={j}
@@ -170,13 +171,13 @@ const ProgrammingTable: FC = () => {
                     />
                   )}
                 </Td>
-              );
+              )
             })}
           </Tr>
         ))}
       </Tbody>
     </Table>
-  );
-};
+  )
+}
 
-export default ProgrammingTable;
+export default ProgrammingTable
