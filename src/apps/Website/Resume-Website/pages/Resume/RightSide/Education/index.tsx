@@ -6,14 +6,15 @@ import {
   Text,
   useColorModeValue,
   Stack,
-} from '@chakra-ui/react';
-import { FaCalendarAlt } from 'react-icons/fa';
-import { FaGraduationCap, FaLocationDot } from 'react-icons/fa6';
-import { itemProps } from './Props';
-import { Trans } from '@lingui/macro';
+} from '@chakra-ui/react'
+import { FaCalendarAlt } from 'react-icons/fa'
+import { FaGraduationCap, FaLocationDot } from 'react-icons/fa6'
+import { itemProps } from './Props'
+import { Trans } from '@lingui/macro'
+import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 const Education = () => {
-  const colorMode = useColorModeValue('#000000', '#ECEFF4');
+  const colorMode = useColorModeValue('#000000', colors.iceGray)
 
   return (
     <VStack w={'full'} alignItems={'start'}>
@@ -64,7 +65,7 @@ const Education = () => {
         </VStack>
       ))}
     </VStack>
-  );
-};
+  )
+}
 
-export default Education;
+export default Education

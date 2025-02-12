@@ -6,16 +6,17 @@ import {
   Text,
   useColorModeValue,
   Link,
-} from '@chakra-ui/react';
-import { Trans } from '@lingui/macro';
-import { ReactNode } from 'react';
-import { FaLink, FaRunning, FaShapes } from 'react-icons/fa';
+} from '@chakra-ui/react'
+import { Trans } from '@lingui/macro'
+import { ReactNode } from 'react'
+import { FaLink, FaRunning, FaShapes } from 'react-icons/fa'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 type Props = {
-  text: string | JSX.Element;
-  icon: ReactNode;
-  link?: string;
-};
+  text: string | JSX.Element
+  icon: ReactNode
+  link?: string
+}
 
 const itemProps: Props[] = [
   {
@@ -28,14 +29,14 @@ const itemProps: Props[] = [
     icon: <FaRunning />,
     link: 'https://strava.app.link/6Xms63ppyPb',
   },
-];
+]
 
 const ExtraCurriculum = () => {
-  const colorMode = useColorModeValue('#000000', '#ECEFF4');
-  const colorLink = useColorModeValue('#0B3948', '#98bed5');
+  const colorMode = useColorModeValue('#000000', colors.iceGray)
+  const colorLink = useColorModeValue('#0B3948', '#98bed5')
 
   return (
-    <VStack w={'full'} alignItems={'start'} color={'#ECEFF4'}>
+    <VStack w={'full'} alignItems={'start'} color={colors.iceGray}>
       <HStack w={'full'} spacing={'10px'}>
         <FaShapes size={'18px'} color={colorMode} />
         <Heading
@@ -73,7 +74,7 @@ const ExtraCurriculum = () => {
         </HStack>
       </VStack>
     </VStack>
-  );
-};
+  )
+}
 
-export default ExtraCurriculum;
+export default ExtraCurriculum
