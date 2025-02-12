@@ -4,13 +4,14 @@ import {
   Text,
   useColorModeValue,
   VStack,
-} from '@chakra-ui/react';
-import { Trans } from '@lingui/macro';
+} from '@chakra-ui/react'
+import { Trans } from '@lingui/macro'
+import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 type LanguageProps = {
-  language: string | JSX.Element;
-  level: string | JSX.Element;
-};
+  language: string | JSX.Element
+  level: string | JSX.Element
+}
 
 const languages: LanguageProps[] = [
   {
@@ -29,11 +30,11 @@ const languages: LanguageProps[] = [
     language: <Trans>Russian</Trans>,
     level: <Trans>Intermediate</Trans>,
   },
-];
+]
 
 const LanguageProficiency = () => {
-  const nameColor = useColorModeValue('#000000', '#ECEFF4');
-  const skillColor = useColorModeValue('#0b3948', '#ECEFF4');
+  const nameColor = useColorModeValue('#000000', colors.iceGray)
+  const skillColor = useColorModeValue('#0b3948', colors.iceGray)
 
   return (
     <VStack w={'full'} alignItems={'start'} spacing={'3px'}>
@@ -60,7 +61,7 @@ const LanguageProficiency = () => {
         </HStack>
       ))}
     </VStack>
-  );
-};
+  )
+}
 
-export default LanguageProficiency;
+export default LanguageProficiency

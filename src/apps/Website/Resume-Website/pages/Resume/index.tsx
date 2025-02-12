@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   Center,
   Stack,
@@ -9,18 +9,19 @@ import {
   Heading,
   Link,
   useColorModeValue,
-} from '@chakra-ui/react';
-import { BsGithub } from 'react-icons/bs';
-import { GrLanguage } from 'react-icons/gr';
-import ResumeLeftSide from './LeftSide/ResumeLeftSide';
-import ResumeRightSide from './RightSide';
-import { Trans } from '@lingui/macro';
-import PDFFEtcher from './PDF/PDFFetcher';
-import { useLanguage } from '../../../../../shared/components/LanguageSwitcher/languageContext';
-import Page from '../../../../../shared/components/PageWrapper';
+} from '@chakra-ui/react'
+import { BsGithub } from 'react-icons/bs'
+import { GrLanguage } from 'react-icons/gr'
+import ResumeLeftSide from './LeftSide/ResumeLeftSide'
+import ResumeRightSide from './RightSide'
+import { Trans } from '@lingui/macro'
+import PDFFEtcher from './PDF/PDFFetcher'
+import { useLanguage } from '../../../../../shared/components/LanguageSwitcher/languageContext'
+import Page from '../../../../../shared/components/PageWrapper'
+import { colors } from '../../../../../shared/components/Hooks/color'
 
 const Resume: React.FC<{}> = () => {
-  const { locale, changeLanguage } = useLanguage();
+  const { locale, changeLanguage } = useLanguage()
 
   return (
     <Page w={'full'} spacing={'0px'}>
@@ -83,7 +84,7 @@ const Resume: React.FC<{}> = () => {
               alignItems={'start'}
             >
               <Heading
-                color={useColorModeValue('#FFFFFF', '#ECEFF4')}
+                color={useColorModeValue('#FFFFFF', colors.iceGray)}
                 fontWeight={700}
                 fontSize={'25px'}
                 textTransform={'uppercase'}
@@ -91,7 +92,7 @@ const Resume: React.FC<{}> = () => {
                 Ejmen Ramic
               </Heading>
               <Text
-                color={useColorModeValue('#FFFFFF', '#ECEFF4')}
+                color={useColorModeValue('#FFFFFF', colors.iceGray)}
                 fontWeight={600}
                 fontSize={'12px'}
               >
@@ -120,7 +121,7 @@ const Resume: React.FC<{}> = () => {
         </VStack>
       </Center>
     </Page>
-  );
-};
+  )
+}
 
-export default Resume;
+export default Resume

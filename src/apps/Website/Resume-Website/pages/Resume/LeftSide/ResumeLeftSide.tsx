@@ -1,20 +1,21 @@
-import React from 'react';
+import React from 'react'
 import {
   VStack,
   Box,
   Heading,
   Button,
   useColorModeValue,
-} from '@chakra-ui/react';
-import { IoMailOutline } from 'react-icons/io5';
-import { resumeItems } from './items';
-import SkillsResume from './SkillsResume';
-import { Trans } from '@lingui/macro';
+} from '@chakra-ui/react'
+import { IoMailOutline } from 'react-icons/io5'
+import { resumeItems } from './items'
+import SkillsResume from './SkillsResume'
+import { Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const ResumeLeftSide = () => {
   const handleContactClick = (link: string) => {
-    window.location.href = link;
-  };
+    window.location.href = link
+  }
 
   return (
     <VStack
@@ -31,12 +32,12 @@ const ResumeLeftSide = () => {
         <Heading
           textTransform={'uppercase'}
           fontSize={'18px'}
-          color={useColorModeValue('#000000', '#ECEFF4')}
+          color={useColorModeValue('#000000', colors.iceGray)}
         >
           <Trans>Contact</Trans>
         </Heading>
         <Box
-          bgColor={useColorModeValue('#000000', '#ECEFF4')}
+          bgColor={useColorModeValue('#000000', colors.iceGray)}
           height={'2px'}
           w={'full'}
         ></Box>
@@ -73,7 +74,7 @@ const ResumeLeftSide = () => {
       </VStack>
       <SkillsResume />
     </VStack>
-  );
-};
+  )
+}
 
-export default ResumeLeftSide;
+export default ResumeLeftSide
