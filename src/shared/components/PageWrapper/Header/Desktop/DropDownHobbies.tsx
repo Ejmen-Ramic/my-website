@@ -50,12 +50,17 @@ interface MenuDataProps {
 }
 
 const DropDownHobbies = ({ menuData }: MenuDataProps) => {
-  const linkColor = '#02bece'
+  const linkColor = colors.links
   const { onOpen, onClose, isOpen } = useDisclosure()
 
   return (
     <Stack direction={'row'} spacing={4}>
-      <Popover trigger={'hover'} placement={'bottom-start'} onOpen={onOpen} onClose={onClose}>
+      <Popover
+        trigger={'hover'}
+        placement={'bottom-start'}
+        onOpen={onOpen}
+        onClose={onClose}
+      >
         <PopoverTrigger>
           <HStack alignItems={'center'} cursor={'pointer'} role={'group'}>
             <Link

@@ -47,7 +47,7 @@ const MenuContainer = () => {
 }
 
 const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
-  const linkColor = '#02bece'
+  const linkColor = colors.links
   const { onOpen, onClose, isOpen } = useDisclosure()
   const { changeLanguage } = useLanguage()
 
