@@ -5,28 +5,28 @@ import {
   HStack,
   Show,
   useColorModeValue,
-} from '@chakra-ui/react';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import DropDownMenu from './DropDownMenu';
-import HeaderMobile from '../Mobile';
-import ColorModePhoto from '../ColorModePhoto';
-import AccountButtonPhoto from './AccountButtonPhoto';
-import EjmenSignature from '../EjmenSignature';
-import { Trans } from '@lingui/macro';
-import { colors } from '../../../../../../shared/components/Hooks/color';
+} from '@chakra-ui/react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import DropDownMenu from './DropDownMenu'
+import HeaderMobile from '../Mobile'
+import ColorModePhoto from '../ColorModePhoto'
+import AccountButtonPhoto from './AccountButtonPhoto'
+import EjmenSignature from '../EjmenSignature'
+import { Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const Header = () => {
-  const [homeHovered, setHomeHovered] = useState(false);
-  const [hobbiesHovered, setHobbiesHovered] = useState(false);
-  const [aboutHovered, setAboutHovered] = useState(false);
-  const [contactHovered, setContactHovered] = useState(false);
+  const [homeHovered, setHomeHovered] = useState(false)
+  const [hobbiesHovered, setHobbiesHovered] = useState(false)
+  const [aboutHovered, setAboutHovered] = useState(false)
+  const [contactHovered, setContactHovered] = useState(false)
 
   return (
     <Flex
       w={'full'}
       h={{ base: '58px', md: '67px', lg: '120px' }}
-      bg={useColorModeValue('#ede9e3', '#2b333d')}
+      bg={useColorModeValue(colors.primary1, '#2b333d')}
       justifyContent={'space-between'}
       top={0}
       mt={{ base: '10px', md: '0px' }}
@@ -116,10 +116,10 @@ const Header = () => {
             borderTopColor={useColorModeValue('#817e7e', colors.links)}
             transition={'all 0.1s ease-in-out'}
             onMouseEnter={() => {
-              setHobbiesHovered(true);
+              setHobbiesHovered(true)
             }}
             onMouseLeave={() => {
-              setHobbiesHovered(false);
+              setHobbiesHovered(false)
             }}
             overflow={'hidden'}
             justifyItems={'center'}
@@ -170,7 +170,7 @@ const Header = () => {
         <HeaderMobile />
       </Show>
     </Flex>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
