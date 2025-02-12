@@ -41,7 +41,7 @@ const LanguageProficiency = () => {
       <Heading
         textTransform={'capitalize'}
         fontSize={'14px'}
-        color={useColorModeValue(colors.navy, '#98BED5')}
+        color={useColorModeValue(colors.navy, colors.primary[100])}
       >
         <Trans>Languages</Trans>
       </Heading>

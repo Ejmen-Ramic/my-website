@@ -41,7 +41,7 @@ const Resume: React.FC<{}> = () => {
           >
             <Button
               variant={'ghost'}
-              color={useColorModeValue(colors.navy, '#98bed5')}
+              color={useColorModeValue(colors.navy, colors.primary[100])}
               onClick={() => changeLanguage(locale === 'en' ? 'ba' : 'en')}
               data-testid={'language-switcher-resume'}
             >
@@ -57,7 +57,7 @@ const Resume: React.FC<{}> = () => {
               >
                 <Button
                   variant={'ghost'}
-                  color={useColorModeValue(colors.navy, '#98bed5')}
+                  color={useColorModeValue(colors.navy, colors.primary[100])}
                   data-testid={'source-code'}
                 >
                   <BsGithub style={{ marginRight: '10px' }} />

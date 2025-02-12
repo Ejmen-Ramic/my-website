@@ -94,7 +94,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
   return (
     <Box>
       <Tooltip
-        bg={useColorModeValue(colors.navy, '#98bed5')}
+        bg={useColorModeValue(colors.navy, colors.primary[100])}
         borderRadius={'5px'}
         label={<Text color={ToolTipColor}>Gallery</Text>}
       >

@@ -53,7 +53,7 @@ const getItems = () => {
 
 const ToolsTable: FC = () => {
   const nameColor = useColorModeValue(colors.black, colors.iceGray)
-  const skillColor = useColorModeValue(colors.navy, '#98bed5')
+  const skillColor = useColorModeValue(colors.navy, colors.primary[100])
   const noSkillColor = useColorModeValue(colors.slate[200], '#303c40')
   const columnWidth = useBreakpointValue({ base: '0px', md: '0px' })
   const headers = useBreakpointValue({
@@ -62,7 +62,7 @@ const ToolsTable: FC = () => {
         name: (
           <Text
             textTransform={'capitalize'}
-            color={useColorModeValue(colors.navy, '#98BED5')}
+            color={useColorModeValue(colors.navy, colors.primary[100])}
           >
             <Trans>Tools</Trans>
           </Text>

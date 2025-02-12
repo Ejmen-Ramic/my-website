@@ -33,7 +33,7 @@ const itemProps: Props[] = [
 
 const ExtraCurriculum = () => {
   const colorMode = useColorModeValue(colors.black, colors.iceGray)
-  const colorLink = useColorModeValue(colors.navy, '#98bed5')
+  const colorLink = useColorModeValue(colors.navy, colors.primary[100])
 
   return (
     <VStack w={'full'} alignItems={'start'} color={colors.iceGray}>

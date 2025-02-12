@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import { Box, Text } from '@chakra-ui/react'
 import { Trans } from '@lingui/macro'
+import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 export type Props = {
   year: string
@@ -28,7 +29,7 @@ export const itemProps: Props[] = [
             •
           </Box>
           The Dean's List for academic excellence in{' '}
-          <Box as={'span'} color={'#98bed5'} fontWeight={'bold'}>
+          <Box as={'span'} color={colors.primary[100]} fontWeight={'bold'}>
             Semester2, 2019/2020{' '}
           </Box>{' '}
           Session
@@ -37,7 +38,7 @@ export const itemProps: Props[] = [
             •
           </Box>
           The Dean's List for academic excellence in{' '}
-          <Box as={'span'} color={'#98bed5'} fontWeight={'bold'}>
+          <Box as={'span'} color={colors.primary[100]} fontWeight={'bold'}>
             Semester2, 2020/2021{' '}
           </Box>
           Session
