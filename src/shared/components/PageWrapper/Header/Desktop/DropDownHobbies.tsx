@@ -81,7 +81,7 @@ const DropDownHobbies = ({ menuData }: MenuDataProps) => {
               as={FaChevronDown}
               h={4}
               w={4}
-              color={useColorModeValue(colors.primary4, '#white')}
+              color={useColorModeValue(colors.primary4, colors.white)}
               _groupHover={{
                 color: linkColor,
               }}
