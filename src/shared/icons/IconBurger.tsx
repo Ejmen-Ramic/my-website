@@ -1,9 +1,9 @@
-import { useColorModeValue } from '@chakra-ui/react';
-import React from 'react';
-import { colors } from '../components/Hooks/color';
+import { useColorModeValue } from '@chakra-ui/react'
+import React from 'react'
+import { colors } from '../components/Hooks/color'
 
 interface IconBurgerProps extends React.SVGProps<SVGSVGElement> {
-  size?: string;
+  size?: string
 }
 //   base?: string
 //   md?: string
@@ -29,7 +29,7 @@ const IconBurger = ({ size, ...props }: IconBurgerProps) => {
         // width={width}
         // height={height}
         d={'M4 18L20 18'}
-        stroke={useColorModeValue('#2b333d', colors.white)}
+        stroke={useColorModeValue(colors.primary4, colors.white)}
         strokeWidth={'2'}
         strokeLinecap={'round'}
       />
@@ -37,7 +37,7 @@ const IconBurger = ({ size, ...props }: IconBurgerProps) => {
         // width={width}
         // height={height}
         d={'M4 12L20 12'}
-        stroke={useColorModeValue('#2b333d', colors.white)}
+        stroke={useColorModeValue(colors.primary4, colors.white)}
         strokeWidth={'2'}
         strokeLinecap={'round'}
       />
@@ -45,12 +45,12 @@ const IconBurger = ({ size, ...props }: IconBurgerProps) => {
         // width={width}
         // height={height}
         d={'M4 6L20 6'}
-        stroke={useColorModeValue('#2b333d', colors.white)}
+        stroke={useColorModeValue(colors.primary4, colors.white)}
         strokeWidth={'2'}
         strokeLinecap={'round'}
       />
     </svg>
-  );
-};
+  )
+}
 
-export default IconBurger;
+export default IconBurger
