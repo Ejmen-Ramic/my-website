@@ -32,7 +32,10 @@ const menuData = [
 const MenuContainer = () => {
   return (
     <Flex h={'100%'}>
-      <DropDownMenu menuData={menuData} linkColor={useColorModeValue('#817e7e', '#02bece')} />
+      <DropDownMenu
+        menuData={menuData}
+        linkColor={useColorModeValue(colors.primary[200], colors.links)}
+      />
     </Flex>
   )
 }
@@ -53,14 +56,19 @@ const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
 
   return (
     <Stack direction={'row'} spacing={4}>
-      <Popover trigger={'hover'} placement={'bottom-start'} onOpen={onOpen} onClose={onClose}>
+      <Popover
+        trigger={'hover'}
+        placement={'bottom-start'}
+        onOpen={onOpen}
+        onClose={onClose}
+      >
         <PopoverTrigger>
           <HStack alignItems={'center'} cursor={'pointer'} role={'group'}>
             <Link
               p={2}
               fontSize={'16px'}
               fontFamily={'revert-layer'}
-              color={useColorModeValue('#2b333d', colors.white)}
+              color={useColorModeValue(colors.primary4, colors.white)}
               textDecor={'none'}
               letterSpacing={'1px'}
               _groupHover={{
@@ -74,7 +82,7 @@ const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
               as={FaChevronDown}
               h={4}
               w={4}
-              color={useColorModeValue('#2b333d', '#817e7e')}
+              color={useColorModeValue(colors.primary4, colors.primary[200])}
               _groupHover={{
                 color: linkColor,
               }}
@@ -104,7 +112,11 @@ const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
   )
 }
 
-const DropDownItem = ({ label, href, linkColor }: MenuData & { linkColor: string }) => {
+const DropDownItem = ({
+  label,
+  href,
+  linkColor,
+}: MenuData & { linkColor: string }) => {
   return (
     <Link
       href={href!}

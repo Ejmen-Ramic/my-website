@@ -8,11 +8,6 @@ import {
   Text,
   VisuallyHidden,
   useColorModeValue,
-  Button,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
 } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
@@ -20,7 +15,7 @@ import { FaXTwitter } from 'react-icons/fa6'
 import FadeInView from '../../Hooks/FadeInView'
 import { Trans } from '@lingui/macro'
 import { colors } from '../../Hooks/color'
-import SubscribeForm from '../../Newsletter'
+import SubscribeForm from './Newsletter'
 
 const Logo = (props: any) => {
   return (
@@ -30,7 +25,7 @@ const Logo = (props: any) => {
         textTransform={'uppercase'}
         fontFamily={'inherit'}
         fontWeight={'400'}
-        color={useColorModeValue('#2b333d', colors.white)}
+        color={useColorModeValue(colors.primary4, colors.white)}
       >
         Ejmen Ramic
       </Text>
@@ -78,11 +73,7 @@ const SocialButton = ({
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
-    <Text
-      fontWeight={'500'}
-      fontSize={'lg'}
-      mb={2}
-    >
+    <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
       {children}
     </Text>
   )
@@ -92,7 +83,7 @@ const Footer = () => {
   const year = new Date().getFullYear()
   return (
     <Box
-      bg={useColorModeValue('gray.100', '#2b333d')}
+      bg={useColorModeValue('gray.100', colors.primary4)}
       color={useColorModeValue('gray.700', 'gray.200')}
       w={'100%'}
       bottom={'0'}
@@ -104,7 +95,8 @@ const Footer = () => {
         py={10}
         px={{ base: '20px', md: '40px', lg: '0px' }}
         maxW={'6xl'}
-        align='center'
+        align={'center'}
+        data-testid={'footer'}
       >
         <SimpleGrid
           templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 2fr' }}
@@ -119,55 +111,38 @@ const Footer = () => {
                 fontSize={'13px'}
                 fontFamily={'revert-layer'}
                 fontWeight={'400'}
-                color={useColorModeValue('#2b333d', colors.white)}
+                color={useColorModeValue(colors.primary4, colors.white)}
               >
                 <Trans>
-                  Welcome to my website! I am a software engineer and photographer based in Bosnia and Herzegovina. Feel
-                  free to view my resume and work. <br /> <br />
+                  Welcome to my website! I am a software engineer and
+                  photographer based in Bosnia and Herzegovina. Feel free to
+                  view my resume and work. <br /> <br />
                   Powered by
                 </Trans>{' '}
-                <Link
-                  href='https://react.dev/'
-                  isExternal
-                >
-                  <Box
-                    as='span'
-                    color='#02bece'
-                  >
+                <Link href={'https://react.dev/'} isExternal>
+                  <Box as={'span'} color={colors.links}>
                     React
                   </Box>
                 </Link>
                 <Box
                   as={'span'}
-                  color={useColorModeValue('#2b333d', colors.white)}
+                  color={useColorModeValue(colors.primary4, colors.white)}
                 >
                   {''} • {''}
                 </Box>
-                <Link
-                  href='https://www.typescriptlang.org/'
-                  isExternal
-                >
-                  <Box
-                    as='span'
-                    color='#02bece'
-                  >
+                <Link href={'https://www.typescriptlang.org/'} isExternal>
+                  <Box as={'span'} color={colors.links}>
                     Typescript
                   </Box>
                 </Link>
                 <Box
                   as={'span'}
-                  color={useColorModeValue('#2b333d', colors.white)}
+                  color={useColorModeValue(colors.primary4, colors.white)}
                 >
                   {''} • {''}
                 </Box>
-                <Link
-                  href='https://chakra-ui.com/'
-                  isExternal
-                >
-                  <Box
-                    as='span'
-                    color='#02bece'
-                  >
+                <Link href={'https://chakra-ui.com/'} isExternal>
+                  <Box as={'span'} color={colors.links}>
                     Chakra UI
                   </Box>
                 </Link>
@@ -175,19 +150,18 @@ const Footer = () => {
             </FadeInView>
             <FadeInView delay={0.1}>
               <Text fontSize={'sm'}>
-                <Trans>Copyright</Trans> ©{year} EjmenRamic. <Trans>All rights reserved</Trans>
+                <Trans>Copyright</Trans> ©{year} EjmenRamic.{' '}
+                <Trans>All rights reserved</Trans>
               </Text>
             </FadeInView>
             <FadeInView delay={0.1}>
-              <Stack
-                direction={'row'}
-                spacing={6}
-              >
+              <Stack direction={'row'} spacing={6}>
                 <SocialButton
                   label={'GitHub'}
                   href={'https://github.com/Ejmen-Ramic/'}
-                  color={'#333333'}
+                  color={colors.primary[300]}
                   hoverColor={'gray'}
+                  data-testid={'footer-github-link'}
                 >
                   <FaGithub />
                 </SocialButton>
@@ -197,15 +171,19 @@ const Footer = () => {
                   href={'https://x.com/EjmenRamic'}
                   color={'#00aced'}
                   hoverColor={'#657786'}
+                  data-testid={'footer-x-link'}
                 >
                   <FaXTwitter />
                 </SocialButton>
 
                 <SocialButton
                   label={'LinkedIn'}
-                  href={'https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'}
+                  href={
+                    'https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'
+                  }
                   color={'#0077b5'}
                   hoverColor={'#0A66C2'}
+                  data-testid={'footer-linkedin-link'}
                 >
                   <FaLinkedin />
                 </SocialButton>
@@ -214,6 +192,7 @@ const Footer = () => {
                   href={'https://www.instagram.com/ejmenramic/'}
                   color={'#0077b5'}
                   hoverColor={'#C13584'}
+                  data-testid={'footer-instagram-link'}
                 >
                   <FaInstagram />
                 </SocialButton>
@@ -240,9 +219,12 @@ const Footer = () => {
             <FadeInView delay={0.1}>
               <Link
                 href={'/'}
-                color={useColorModeValue('#02bece', '#02bece')}
-                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
+                color={useColorModeValue(colors.links, colors.links)}
+                _hover={{
+                  color: useColorModeValue(colors.primary4, colors.white),
+                }}
                 fontSize={'16px'}
+                data-testid={'footer-home-link'}
               >
                 <Trans>Home</Trans>
               </Link>
@@ -250,22 +232,27 @@ const Footer = () => {
             <FadeInView delay={0.1}>
               <Link
                 href={'/resume'}
-                color={useColorModeValue('#02bece', '#02bece')}
-                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
+                color={useColorModeValue(colors.links, colors.links)}
+                _hover={{
+                  color: useColorModeValue(colors.primary4, colors.white),
+                }}
                 fontSize={'16px'}
+                data-testid={'footer-resume-link'}
               >
                 <Trans>Resume</Trans>
               </Link>
             </FadeInView>
-            <FadeInView delay={0.1}>
+            {/* <FadeInView delay={0.1}>
               <Menu>
                 <MenuButton
                   as={Button}
                   variant={'link'}
                   border={'none'}
-                  color={useColorModeValue('#02bece', '#02bece')}
-                  _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
-                  _expanded={{ color: useColorModeValue('#2b333d', colors.white) }}
+                  color={useColorModeValue(colors.links, colors.links)}
+                  _hover={{ color: useColorModeValue(colors.primary4, colors.white) }}
+                  _expanded={{
+                    color: useColorModeValue(colors.primary4, colors.white),
+                  }}
                   fontWeight={400}
                   fontSize={'16px'}
                   textTransform={'capitalize'}
@@ -275,7 +262,7 @@ const Footer = () => {
                 <MenuList borderRadius={'3px'}>
                   <MenuItem
                     _hover={{
-                      color: '#02bece',
+                      color: colors.links,
                       bg: useColorModeValue('gray.100', 'gray.900'),
                     }}
                   >
@@ -285,13 +272,16 @@ const Footer = () => {
                   </MenuItem>
                 </MenuList>
               </Menu>
-            </FadeInView>
+            </FadeInView> */}
             <FadeInView delay={0.1}>
               <Link
                 href={'/about'}
-                color={useColorModeValue('#02bece', '#02bece')}
-                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
+                color={useColorModeValue(colors.links, colors.links)}
+                _hover={{
+                  color: useColorModeValue(colors.primary4, colors.white),
+                }}
                 fontSize={'16px'}
+                data-testid={'footer-about-link'}
               >
                 <Trans>About Me</Trans>
               </Link>
@@ -299,9 +289,12 @@ const Footer = () => {
             <FadeInView delay={0.1}>
               <Link
                 href={'/contact'}
-                color={useColorModeValue('#02bece', '#02bece')}
-                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
+                color={useColorModeValue(colors.links, colors.links)}
+                _hover={{
+                  color: useColorModeValue(colors.primary4, colors.white),
+                }}
                 fontSize={'16px'}
+                data-testid={'footer-contact-link'}
               >
                 <Trans>Contacts</Trans>
               </Link>

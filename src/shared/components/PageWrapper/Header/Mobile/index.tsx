@@ -17,15 +17,19 @@ import {
 } from '@chakra-ui/react'
 
 import { Link } from 'react-router-dom'
-import { IoBriefcaseOutline, IoHomeOutline, IoPersonOutline, IoFileTrayFullOutline, IoCodeSlash } from 'react-icons/io5'
-import MenuContainerMobile from './DropDownHobbies'
+import {
+  IoBriefcaseOutline,
+  IoHomeOutline,
+  // IoPersonOutline,
+  IoFileTrayFullOutline,
+  IoCodeSlash,
+} from 'react-icons/io5'
 import { IconType } from 'react-icons'
 import HeaderForm from './Form'
 import LanguageDropDown from './LanguageMenuMobile'
 import { t, Trans } from '@lingui/macro'
-import IconBurgerMobile from '../../../../icons/IconBurgerMobile'
-import IconBurger from '../../../../icons/IconBurger'
 import { colors } from '../../../Hooks/color'
+import HamburgerIcon from './HamburgerIcon'
 
 type MenuItemLink = {
   label: string
@@ -35,7 +39,7 @@ type MenuItemLink = {
 
 const HeaderMobile = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const color = useColorModeValue('#2b333d', colors.white)
+  const color = useColorModeValue(colors.primary4, colors.white)
   const year = new Date().getFullYear()
 
   const isMenuItemLink = (item: any): item is MenuItemLink => {
@@ -44,36 +48,55 @@ const HeaderMobile = () => {
   const menuItems: (MenuItemLink | React.ReactElement)[] = [
     { label: t`Home`, icon: IoHomeOutline, to: '/' },
     { label: t`Resume`, icon: IoBriefcaseOutline, to: '/resume' },
-    <MenuContainerMobile />,
+    // <MenuContainerMobile />,
     { label: t`About Me`, icon: IoCodeSlash, to: '/about' },
     { label: t`Contacts`, icon: IoFileTrayFullOutline, to: '/contact' },
-    { label: t`My Account`, icon: IoPersonOutline, to: '/signin' },
+    // { label: t`My Account`, icon: IoPersonOutline, to: '/signin' },
     <LanguageDropDown />,
   ]
 
   return (
-    <Box>
+    <Box data-testid={'header-mobile'}>
       <Box mr={'20px'}>
-        <Button onClick={onOpen} variant={'unstyled'} fontSize={'15px'} mt={{ base: '30%', md: '43%', lg: '25%' }}>
+        <Button
+          onClick={onOpen}
+          variant={'unstyled'}
+          fontSize={'15px'}
+          mt={{ base: '25%', md: '37%', lg: '25%' }}
+          alignItems={'center'}
+          justifyContent={'center'}
+          display={'flex'}
+          flexDirection={'column'}
+          textAlign={'center'}
+          data-testid={'burger-button'}
+        >
           <Hide below={'md'}>
-            <IconBurger size={'30px'} />
+            <HamburgerIcon isOpen={isOpen} color={color} size={'30px'} />
           </Hide>
           <Show below={'md'}>
-            <Box as={IconBurgerMobile} size={'20px'} _hover={{ color: '#02bece' }} />
+            <HamburgerIcon isOpen={isOpen} color={color} size={'20px'} />
           </Show>
         </Button>
       </Box>
       <Drawer isOpen={isOpen} placement={'left'} onClose={onClose}>
         <DrawerOverlay />
-        <DrawerContent backgroundColor={useColorModeValue(colors.white, '#2b333d')}>
+        <DrawerContent
+          backgroundColor={useColorModeValue(colors.white, colors.primary4)}
+          data-testid={'drawer'}
+        >
           <DrawerCloseButton
             size={'20px'}
-            color={useColorModeValue('#2b333d', colors.white)}
+            color={useColorModeValue(colors.primary4, colors.white)}
             mt={'20px'}
             mr={'20px'}
-            _hover={{ color: '#02bece' }}
+            _hover={{ color: colors.links }}
+            data-testid={'drawer-close-button'}
           />
-          <DrawerHeader color={useColorModeValue('#2b333d', colors.white)} fontSize={'25px'} letterSpacing={'2px'}>
+          <DrawerHeader
+            color={useColorModeValue(colors.primary4, colors.white)}
+            fontSize={'25px'}
+            letterSpacing={'2px'}
+          >
             <Trans>Main Menu</Trans>
           </DrawerHeader>
           <DrawerBody>
@@ -82,19 +105,28 @@ const HeaderMobile = () => {
                 {menuItems.map((item, index) => (
                   <Box key={index} transition={'all 0.1s ease-in-out'}>
                     {isMenuItemLink(item) ? (
-                      <Link to={item.to}>
+                      <Link
+                        to={item.to}
+                        data-testid={`drawer-${item.to.toLowerCase()}-link`}
+                      >
                         <Button
                           variant={'link'}
                           border={'none'}
-                          _hover={{ color: '#02bece' }}
+                          _hover={{ color: colors.links }}
                           color={color}
                           fontWeight={'light'}
                           fontSize={'18px'}
                           letterSpacing={'1px'}
                           textTransform={'capitalize'}
                           ml={'7.5%'}
+                          data-testid={`drawer-${item.label.toLowerCase()}-link`}
                         >
-                          {item.icon && <item.icon size={30} style={{ marginRight: '12px' }} />}
+                          {item.icon && (
+                            <item.icon
+                              size={30}
+                              style={{ marginRight: '12px' }}
+                            />
+                          )}
                           {item.label}
                         </Button>
                       </Link>
@@ -106,7 +138,8 @@ const HeaderMobile = () => {
               </Stack>
               <HeaderForm />
               <Text bottom={'0'} fontSize={'sm'} mb={'40px'} mt={'40px'}>
-                <Trans>Copyright</Trans> ©{year} EjmenRamic. <Trans>All rights reserved.</Trans>
+                <Trans>Copyright</Trans> ©{year} EjmenRamic.{' '}
+                <Trans>All rights reserved.</Trans>
               </Text>
             </Flex>
           </DrawerBody>

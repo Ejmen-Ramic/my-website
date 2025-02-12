@@ -1,4 +1,10 @@
-import { Button, ButtonProps, Flex, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import {
+  Button,
+  ButtonProps,
+  Flex,
+  useColorMode,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import { BsSun, BsMoonStarsFill } from 'react-icons/bs'
 import { colors } from '../../../../../shared/components/Hooks/color'
 
@@ -11,9 +17,9 @@ const ColorMode = (props: ButtonProps) => {
      */
     <Flex justifyContent={'center'} alignItems={'center'}>
       <Button
-        bg={useColorModeValue('#979191', '#FFFFFF14')}
+        bg={useColorModeValue('#979191', `${colors.white}14`)}
         color={colors.white}
-        _hover={{ bgColor: useColorModeValue('#817e7e', 'gray.600') }}
+        _hover={{ bgColor: useColorModeValue(colors.primary[200], 'gray.600') }}
         aria-label={'Toggle Color Mode'}
         onClick={toggleColorMode}
         _focus={{ boxShadow: 'none' }}

@@ -13,19 +13,27 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import { FaChevronDown } from 'react-icons/fa'
-import { t, Trans } from '@lingui/macro'
+import { Trans } from '@lingui/macro'
 import { IoLanguageOutline } from 'react-icons/io5'
 import { useLanguage } from '../../../LanguageSwitcher/languageContext'
 import { colors } from '../../../Hooks/color'
 
+interface MenuData {
+  name: string | JSX.Element
+  locale?: string
+}
+
+interface LanguageMenuProps {
+  languageOptions: MenuData[]
+}
 
 const languageOptions = [
   {
-    name: t`English`,
+    name: <Trans>English</Trans>,
     locale: 'en',
   },
   {
-    name: t`Bosnian`,
+    name: <Trans>Bosnian</Trans>,
     locale: 'ba',
   },
 ]
@@ -38,30 +46,30 @@ const MenuContainer = () => {
   )
 }
 
-interface MenuData {
-  name: string
-  locale?: string
-}
-
-interface LanguageMenuProps {
-  languageOptions: MenuData[]
-}
-
 const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
-  const linkColor = '#02bece'
+  const linkColor = colors.links
   const { onOpen, onClose, isOpen } = useDisclosure()
   const { changeLanguage } = useLanguage()
 
   return (
-    <Stack direction={'row'} spacing={4}>
-      <Popover trigger={'hover'} placement={'bottom-start'} onOpen={onOpen} onClose={onClose}>
+    <Stack
+      direction={'row'}
+      spacing={4}
+      data-testid={'language-switcher-desktop'}
+    >
+      <Popover
+        trigger={'hover'}
+        placement={'bottom-start'}
+        onOpen={onOpen}
+        onClose={onClose}
+      >
         <PopoverTrigger>
           <HStack alignItems={'center'} cursor={'pointer'} role={'group'}>
             <Link
               p={2}
               fontSize={'18px'}
               fontFamily={'revert-layer'}
-              color={useColorModeValue('#2b333d', colors.white)}
+              color={useColorModeValue(colors.primary4, colors.white)}
               textDecor={'none'}
               letterSpacing={'1px'}
               _groupHover={{
@@ -78,7 +86,7 @@ const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
                   w={4}
                   ml={'8px'}
                   mr={'10px'}
-                  color={useColorModeValue('#2b333d', colors.white)}
+                  color={useColorModeValue(colors.primary4, colors.white)}
                   _groupHover={{
                     color: linkColor,
                   }}
@@ -123,11 +131,15 @@ const LanguageItem = ({
   linkColor,
   changeLanguage,
   onClose,
-}: MenuData & { linkColor: string; changeLanguage: (locale: string) => void; onClose: () => void }) => {
+}: MenuData & {
+  linkColor: string
+  changeLanguage: (locale: string) => void
+  onClose: () => void
+}) => {
   return (
     <Link
       onClick={() => {
-        changeLanguage(locale!)  // Update language using context function
+        changeLanguage(locale!)
         onClose()
       }}
       display={'block'}
@@ -137,6 +149,7 @@ const LanguageItem = ({
         bg: useColorModeValue('gray.100', 'gray.900'),
         color: linkColor,
       }}
+      data-testid={`desktop-language-option-${locale}`}
     >
       <Stack direction={'row'} align={'center'}>
         <Box>

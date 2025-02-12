@@ -10,8 +10,8 @@ import {
   AccordionPanel,
   Grid,
   GridItem,
-} from '@chakra-ui/react'
-import FadeInView from '../../../../../../../shared/components/Hooks/FadeInView'
+} from '@chakra-ui/react';
+import FadeInView from '../../../../../../../shared/components/Hooks/FadeInView';
 
 const FrequentQuestions = () => {
   return (
@@ -26,12 +26,19 @@ const FrequentQuestions = () => {
         >
           <Heading>Frequently Asked Questions </Heading>
           <Text>
-            The following list of frequently asked questions by employers that may also assist you in getting your
-            questions answered:
+            The following list of frequently asked questions by employers that
+            may also assist you in getting your questions answered:
           </Text>
-          <Grid templateColumns={['1fr', '1fr', '1fr', '1fr 1fr ']} gap={'16px'} w={'100%'}>
+          <Grid
+            templateColumns={['1fr', '1fr', '1fr', '1fr 1fr ']}
+            gap={'16px'}
+            w={'100%'}
+          >
             <GridItem>
-              <Accordion allowToggle mt={{ base: '30px', md: '70px', lg: '100px' }}>
+              <Accordion
+                allowToggle
+                mt={{ base: '30px', md: '70px', lg: '100px' }}
+              >
                 <AccordionItem>
                   <AccordionButton
                     style={{
@@ -45,15 +52,16 @@ const FrequentQuestions = () => {
                       height: '48px',
                     }}
                   >
-                    <Box as='span' flex={'1'} textAlign={'left'}>
+                    <Box as={'span'} flex={'1'} textAlign={'left'}>
                       1. What is Coding?
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                   <AccordionPanel pb={4} style={{ display: 'block' }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
 
@@ -67,7 +75,7 @@ const FrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
@@ -77,9 +85,10 @@ const FrequentQuestions = () => {
                   </AccordionButton>
 
                   <AccordionPanel pb={4} style={{ display: 'block' }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
 
@@ -93,7 +102,7 @@ const FrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
@@ -103,9 +112,10 @@ const FrequentQuestions = () => {
                   </AccordionButton>
 
                   <AccordionPanel pb={4} style={{ display: 'block' }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
 
@@ -119,7 +129,7 @@ const FrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
@@ -129,9 +139,10 @@ const FrequentQuestions = () => {
                   </AccordionButton>
 
                   <AccordionPanel pb={4} style={{ display: 'block' }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
 
@@ -144,24 +155,29 @@ const FrequentQuestions = () => {
                       padding: '12px',
                       border: '1px solid #000',
                       borderRadius: '4px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
-                      5. Can you customize training material according to our company?
+                      5. Can you customize training material according to our
+                      company?
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                   <AccordionPanel pb={4} style={{ display: 'block' }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
               </Accordion>
             </GridItem>
             <GridItem>
-              <Accordion allowToggle mt={{ base: '0px', md: '0px', lg: '100px' }}>
+              <Accordion
+                allowToggle
+                mt={{ base: '0px', md: '0px', lg: '100px' }}
+              >
                 <AccordionItem>
                   <AccordionButton
                     style={{
@@ -172,7 +188,7 @@ const FrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
@@ -181,9 +197,10 @@ const FrequentQuestions = () => {
                     <AccordionIcon />
                   </AccordionButton>
                   <AccordionPanel pb={4} style={{ display: 'block' }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
 
@@ -197,7 +214,7 @@ const FrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
@@ -206,9 +223,10 @@ const FrequentQuestions = () => {
                     <AccordionIcon />
                   </AccordionButton>
                   <AccordionPanel pb={4} style={{ display: 'block' }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
 
@@ -222,7 +240,7 @@ const FrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
@@ -231,9 +249,10 @@ const FrequentQuestions = () => {
                     <AccordionIcon />
                   </AccordionButton>
                   <AccordionPanel pb={4} style={{ display: 'block' }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
 
@@ -247,18 +266,20 @@ const FrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
-                      9. What will I learn from this Python Programming Training Course?
+                      9. What will I learn from this Python Programming Training
+                      Course?
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                   <AccordionPanel pb={4} style={{ display: 'block' }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
 
@@ -272,18 +293,20 @@ const FrequentQuestions = () => {
                       border: '1px solid #000',
                       borderRadius: '4px',
                       marginBottom: '16px',
-                      height: '48px', // Set a fixed height for the button
+                      height: '48px',
                     }}
                   >
                     <Box as={'span'} flex={'1'} textAlign={'left'}>
-                      10. Can you customize training material according to our company?
+                      10. Can you customize training material according to our
+                      company?
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                   <AccordionPanel pb={4} style={{ display: 'block' }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
               </Accordion>
@@ -292,7 +315,7 @@ const FrequentQuestions = () => {
         </VStack>
       </FadeInView>
     </>
-  )
-}
+  );
+};
 
-export default FrequentQuestions
+export default FrequentQuestions;

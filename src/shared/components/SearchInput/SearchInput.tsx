@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react';
 
 const people = [
   {
@@ -21,19 +21,19 @@ const people = [
     name: 'Ryan Florence',
     image: 'https://bit.ly/ryan-florence',
   },
-]
+];
 const SearchInput = () => {
   return (
     <Flex
-      boxSize="full"
-      h="100vh"
-      pos="absolute"
+      boxSize={'full'}
+      h={'100vh'}
+      pos={'absolute'}
       bg={'gray.400'}
       _dark={{
         bg: 'gray.600',
       }}
       p={30}
-      justifyContent="center"
+      justifyContent={'center'}
     >
       {/* <AutoComplete rollNavigation>
         <AutoCompleteInput variant="filled" placeholder="Search..." autoFocus />
@@ -52,7 +52,7 @@ const SearchInput = () => {
         </AutoCompleteList>
       </AutoComplete> */}
     </Flex>
-  )
-}
+  );
+};
 
-export default SearchInput
+export default SearchInput;

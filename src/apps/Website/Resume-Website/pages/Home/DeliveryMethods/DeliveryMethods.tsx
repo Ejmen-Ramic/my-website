@@ -1,7 +1,19 @@
-import { Button, Flex, Heading, Hide, Icon, Link, SimpleGrid, Text, VStack, Image } from '@chakra-ui/react'
-import { BsArrowRight } from 'react-icons/bs'
-import items from './Props'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import {
+  Button,
+  Flex,
+  Heading,
+  Hide,
+  Icon,
+  Link,
+  SimpleGrid,
+  Text,
+  VStack,
+  Image,
+} from '@chakra-ui/react';
+import { BsArrowRight } from 'react-icons/bs';
+import items from './Props';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 
 // interface DMProps {
 //   title: string;
@@ -14,16 +26,23 @@ import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 const DeliveryMethods = () => {
   return (
     <FadeInView>
-      <VStack spacing={'180px'} textAlign={'center'} w={'full'} mx={'auto'} justifyContent={'center'}>
+      <VStack
+        spacing={'180px'}
+        textAlign={'center'}
+        w={'full'}
+        mx={'auto'}
+        justifyContent={'center'}
+      >
         <VStack w={'full'} px={'25px'}>
           <Heading>Our Available Delivery Methods</Heading>
           <Text>
-            The Knowledge Academy is World's Leading Organization for training professionals. The Knowledge Academy
-            provides training in 490+{' '}
-            <Hide below='lg'>
+            The Knowledge Academy is World's Leading Organization for training
+            professionals. The Knowledge Academy provides training in 490+{' '}
+            <Hide below={'lg'}>
               <br />
             </Hide>
-            locations in around 221+ countries, covering 3000 subjects with the following delivery methods:
+            locations in around 221+ countries, covering 3000 subjects with the
+            following delivery methods:
           </Text>
         </VStack>
 
@@ -53,7 +72,7 @@ const DeliveryMethods = () => {
                     variant={'ghost'}
                     color={'#EF562D'}
                     bg={'transparent'}
-                    _hover={{ bg: 'transparent', color: '#02bece' }}
+                    _hover={{ bg: 'transparent', color: colors.links }}
                     _active={{ bg: 'transparent' }}
                   >
                     Enquire Now
@@ -65,7 +84,7 @@ const DeliveryMethods = () => {
         </SimpleGrid>
       </VStack>
     </FadeInView>
-  )
-}
+  );
+};
 
-export default DeliveryMethods
+export default DeliveryMethods;

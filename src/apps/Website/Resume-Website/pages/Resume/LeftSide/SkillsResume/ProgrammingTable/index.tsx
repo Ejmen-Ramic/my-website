@@ -13,13 +13,20 @@ import {
 import { Trans } from '@lingui/macro'
 import { FC, ReactNode } from 'react'
 import { FaCircle } from 'react-icons/fa6'
+import { colors } from '../../../../../../../../shared/components/Hooks/color'
 
 type Header = {
   name?: ReactNode
   style?: ChakraProps
 }
 
-const skillLevel = ['Novice', 'Beginner', 'Intermediate', 'Proficient', 'Advanced'] as const
+const skillLevel = [
+  'Novice',
+  'Beginner',
+  'Intermediate',
+  'Proficient',
+  'Advanced',
+] as const
 
 type Item = {
   name: string
@@ -85,10 +92,9 @@ const getItems = () => {
 }
 
 const ProgrammingTable: FC = () => {
-  const nameColor = useColorModeValue('#000000', '#ECEFF4')
-  const skillColor = useColorModeValue('#0b3948', '#98bed5')
-  const noSkillColor = useColorModeValue('#8d9da7', '#303c40')
-
+  const nameColor = useColorModeValue(colors.black, colors.iceGray)
+  const skillColor = useColorModeValue(colors.navy, colors.primary[100])
+  const noSkillColor = useColorModeValue(colors.slate[200], colors.slate[250])
   const columnWidth = useBreakpointValue({ base: '0px', md: '0px' })
   const headers = useBreakpointValue({
     base: [
@@ -96,7 +102,7 @@ const ProgrammingTable: FC = () => {
         name: (
           <Text
             textTransform={'capitalize'}
-            color={useColorModeValue('#0B3948', '#98BED5')}
+            color={useColorModeValue(colors.navy, colors.primary[100])}
           >
             <Trans>Programming</Trans>
           </Text>
@@ -126,15 +132,9 @@ const ProgrammingTable: FC = () => {
           ))}
         </Tr>
       </Thead>
-      <Tbody
-        gap={'24px'}
-        alignItems={'start'}
-      >
+      <Tbody gap={'24px'} alignItems={'start'}>
         {items.map(({ name, level }: Item, i) => (
-          <Tr
-            key={i}
-            border={0}
-          >
+          <Tr key={i} border={0}>
             <Td
               fontSize={'12px'}
               fontWeight={600}

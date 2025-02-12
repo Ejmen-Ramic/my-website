@@ -21,4 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
+node_modules/
+/test-results/
+/src/playwright/playwright-report/
+/blob-report/
+/playwright/.cache/

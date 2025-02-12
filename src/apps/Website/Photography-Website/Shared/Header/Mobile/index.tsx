@@ -17,7 +17,13 @@ import {
 } from '@chakra-ui/react'
 
 import { Link } from 'react-router-dom'
-import { IoBriefcaseOutline, IoHomeOutline, IoPersonOutline, IoFileTrayFullOutline, IoCodeSlash } from 'react-icons/io5'
+import {
+  IoBriefcaseOutline,
+  IoHomeOutline,
+  IoPersonOutline,
+  IoFileTrayFullOutline,
+  IoCodeSlash,
+} from 'react-icons/io5'
 import MenuContainerMobile from './DropDownMenuMobile'
 import { IconType } from 'react-icons'
 import HeaderForm from './Form'
@@ -34,7 +40,7 @@ type MenuItemLink = {
 
 const HeaderMobile = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const color = useColorModeValue('#2b333d', colors.white)
+  const color = useColorModeValue(colors.primary4, colors.white)
   const year = new Date().getFullYear()
 
   const isMenuItemLink = (item: any): item is MenuItemLink => {
@@ -52,26 +58,41 @@ const HeaderMobile = () => {
   return (
     <Box>
       <Box mr={'20px'}>
-        <Button onClick={onOpen} variant={'unstyled'} fontSize={'15px'} mt={{ base: '30%', md: '43%', lg: '25%' }}>
+        <Button
+          onClick={onOpen}
+          variant={'unstyled'}
+          fontSize={'15px'}
+          mt={{ base: '30%', md: '43%', lg: '25%' }}
+        >
           <Hide below={'md'}>
             <IconBurger size={'30px'} />
           </Hide>
           <Show below={'md'}>
-            <Box as={IconBurgerMobile} size={'20px'} _hover={{ color: '#02bece' }} />
+            <Box
+              as={IconBurgerMobile}
+              size={'20px'}
+              _hover={{ color: colors.links }}
+            />
           </Show>
         </Button>
       </Box>
       <Drawer isOpen={isOpen} placement={'left'} onClose={onClose}>
         <DrawerOverlay />
-        <DrawerContent backgroundColor={useColorModeValue(colors.white, '#2b333d')}>
+        <DrawerContent
+          backgroundColor={useColorModeValue(colors.white, colors.primary4)}
+        >
           <DrawerCloseButton
             size={'20px'}
-            color={useColorModeValue('#2b333d', colors.white)}
+            color={useColorModeValue(colors.primary4, colors.white)}
             mt={'20px'}
             mr={'20px'}
-            _hover={{ color: '#02bece' }}
+            _hover={{ color: colors.links }}
           />
-          <DrawerHeader color={useColorModeValue('#2b333d', colors.white)} fontSize={'25px'} letterSpacing={'2px'}>
+          <DrawerHeader
+            color={useColorModeValue(colors.primary4, colors.white)}
+            fontSize={'25px'}
+            letterSpacing={'2px'}
+          >
             <Trans>Main Menu</Trans>
           </DrawerHeader>
           <DrawerBody>
@@ -84,7 +105,7 @@ const HeaderMobile = () => {
                         <Button
                           variant={'link'}
                           border={'none'}
-                          _hover={{ color: '#02bece' }}
+                          _hover={{ color: colors.links }}
                           color={color}
                           fontWeight={'light'}
                           fontSize={'18px'}
@@ -92,7 +113,12 @@ const HeaderMobile = () => {
                           textTransform={'capitalize'}
                           ml={'7.5%'}
                         >
-                          {item.icon && <item.icon size={30} style={{ marginRight: '12px' }} />}
+                          {item.icon && (
+                            <item.icon
+                              size={30}
+                              style={{ marginRight: '12px' }}
+                            />
+                          )}
                           {item.label}
                         </Button>
                       </Link>
@@ -104,7 +130,8 @@ const HeaderMobile = () => {
               </Stack>
               <HeaderForm />
               <Text bottom={'0'} fontSize={'sm'} mb={'40px'} mt={'40px'}>
-                <Trans>Copyright</Trans> ©{year} EjmenRamic. <Trans>All rights reserved</Trans>
+                <Trans>Copyright</Trans> ©{year} EjmenRamic.{' '}
+                <Trans>All rights reserved</Trans>
               </Text>
             </Flex>
           </DrawerBody>

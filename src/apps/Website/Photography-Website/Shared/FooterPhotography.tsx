@@ -32,7 +32,7 @@ const Logo = (props: any) => {
         textTransform={'uppercase'}
         fontFamily={'inherit'}
         fontWeight={'400'}
-        color={useColorModeValue('#2b333d', colors.white)}
+        color={useColorModeValue(colors.primary4, colors.white)}
       >
         Ejmen Ramic
       </Text>
@@ -90,15 +90,24 @@ const FooterPhotography = () => {
   const year = new Date().getFullYear()
   return (
     <Box
-      bg={useColorModeValue('#d1cec7', '#2b333d')}
+      bg={useColorModeValue('#d1cec7', colors.primary4)}
       color={useColorModeValue('gray.700', 'gray.200')}
       w={'100%'}
       bottom={'0'}
       left={'0'}
       right={'0'}
     >
-      <Container as={Stack} py={10} px={{ base: '20px', md: '40px', lg: '0px' }} maxW={'6xl'} align='center'>
-        <SimpleGrid templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 2fr' }} spacing={20}>
+      <Container
+        as={Stack}
+        py={10}
+        px={{ base: '20px', md: '40px', lg: '0px' }}
+        maxW={'6xl'}
+        align={'center'}
+      >
+        <SimpleGrid
+          templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 2fr' }}
+          spacing={20}
+        >
           <Stack spacing={6}>
             <Box>
               <Logo color={useColorModeValue('gray.700', colors.white)} />
@@ -108,31 +117,38 @@ const FooterPhotography = () => {
                 fontSize={'13px'}
                 fontFamily={'revert-layer'}
                 fontWeight={'400'}
-                color={useColorModeValue('#2b333d', colors.white)}
+                color={useColorModeValue(colors.primary4, colors.white)}
               >
                 <Trans>
-                  Welcome to my website! I am a software engineer and photographer based in Bosnia and Herzegovina. Feel
-                  free to view my resume and work. <br /> <br />
+                  Welcome to my website! I am a software engineer and
+                  photographer based in Bosnia and Herzegovina. Feel free to
+                  view my resume and work. <br /> <br />
                   Powered by
                 </Trans>{' '}
-                <Link href='https://react.dev/' isExternal>
-                  <Box as='span' color='#02bece'>
+                <Link href={'https://react.dev/'} isExternal>
+                  <Box as={'span'} color={colors.links}>
                     React
                   </Box>
                 </Link>
-                <Box as={'span'} color={useColorModeValue('#2b333d', colors.white)}>
+                <Box
+                  as={'span'}
+                  color={useColorModeValue(colors.primary4, colors.white)}
+                >
                   {''} • {''}
                 </Box>
-                <Link href='https://www.typescriptlang.org/' isExternal>
-                  <Box as='span' color='#02bece'>
+                <Link href={'https://www.typescriptlang.org/'} isExternal>
+                  <Box as={'span'} color={colors.links}>
                     Typescript
                   </Box>
                 </Link>
-                <Box as={'span'} color={useColorModeValue('#2b333d', colors.white)}>
+                <Box
+                  as={'span'}
+                  color={useColorModeValue(colors.primary4, colors.white)}
+                >
                   {''} • {''}
                 </Box>
-                <Link href='https://chakra-ui.com/' isExternal>
-                  <Box as='span' color='#02bece'>
+                <Link href={'https://chakra-ui.com/'} isExternal>
+                  <Box as={'span'} color={colors.links}>
                     Chakra UI
                   </Box>
                 </Link>
@@ -140,7 +156,8 @@ const FooterPhotography = () => {
             </FadeInView>
             <FadeInView delay={0.1}>
               <Text fontSize={'sm'}>
-                <Trans>Copyright</Trans> ©{year} EjmenRamic. <Trans>All rights reserved</Trans>
+                <Trans>Copyright</Trans> ©{year} EjmenRamic.{' '}
+                <Trans>All rights reserved</Trans>
               </Text>
             </FadeInView>
             <FadeInView delay={0.1}>
@@ -148,19 +165,26 @@ const FooterPhotography = () => {
                 <SocialButton
                   label={'GitHub'}
                   href={'https://github.com/Ejmen-Ramic/'}
-                  color={'#333333'}
+                  color={colors.primary[300]}
                   hoverColor={'gray'}
                 >
                   <FaGithub />
                 </SocialButton>
 
-                <SocialButton label={'X'} href={'https://x.com/EjmenRamic'} color={'#00aced'} hoverColor={'#657786'}>
+                <SocialButton
+                  label={'X'}
+                  href={'https://x.com/EjmenRamic'}
+                  color={'#00aced'}
+                  hoverColor={'#657786'}
+                >
                   <FaXTwitter />
                 </SocialButton>
 
                 <SocialButton
                   label={'LinkedIn'}
-                  href={'https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'}
+                  href={
+                    'https://www.linkedin.com/in/ejmen-rami%C4%87-a882601a4/?originalSubdomain=my'
+                  }
                   color={'#0077b5'}
                   hoverColor={'#0A66C2'}
                 >
@@ -177,7 +201,12 @@ const FooterPhotography = () => {
               </Stack>
             </FadeInView>
           </Stack>
-          <Stack align={'flex-start'} mt={{ base: '5px' }} mb={{ base: '5%', md: '0%' }} fontFamily={'inherit'}>
+          <Stack
+            align={'flex-start'}
+            mt={{ base: '5px' }}
+            mb={{ base: '5%', md: '0%' }}
+            fontFamily={'inherit'}
+          >
             <FadeInView delay={0.1}>
               <Text
                 mb={{ md: '20px' }}
@@ -192,8 +221,10 @@ const FooterPhotography = () => {
             <FadeInView delay={0.1}>
               <Link
                 href={'/'}
-                color={useColorModeValue('#02bece', '#02bece')}
-                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
+                color={useColorModeValue(colors.links, colors.links)}
+                _hover={{
+                  color: useColorModeValue(colors.primary4, colors.white),
+                }}
                 fontSize={'16px'}
               >
                 <Trans>Home</Trans>
@@ -202,8 +233,10 @@ const FooterPhotography = () => {
             <FadeInView delay={0.1}>
               <Link
                 href={'/resume'}
-                color={useColorModeValue('#02bece', '#02bece')}
-                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
+                color={useColorModeValue(colors.links, colors.links)}
+                _hover={{
+                  color: useColorModeValue(colors.primary4, colors.white),
+                }}
                 fontSize={'16px'}
               >
                 <Trans>Resume</Trans>
@@ -215,9 +248,13 @@ const FooterPhotography = () => {
                   as={Button}
                   variant={'link'}
                   border={'none'}
-                  color={useColorModeValue('#02bece', '#02bece')}
-                  _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
-                  _expanded={{ color: useColorModeValue('#2b333d', colors.white) }}
+                  color={useColorModeValue(colors.links, colors.links)}
+                  _hover={{
+                    color: useColorModeValue(colors.primary4, colors.white),
+                  }}
+                  _expanded={{
+                    color: useColorModeValue(colors.primary4, colors.white),
+                  }}
                   fontWeight={400}
                   fontSize={'16px'}
                   textTransform={'capitalize'}
@@ -227,7 +264,7 @@ const FooterPhotography = () => {
                 <MenuList borderRadius={'3px'}>
                   <MenuItem
                     _hover={{
-                      color: '#02bece',
+                      color: colors.links,
                       bg: useColorModeValue('gray.100', 'gray.900'),
                     }}
                   >
@@ -241,8 +278,10 @@ const FooterPhotography = () => {
             <FadeInView delay={0.1}>
               <Link
                 href={'/about'}
-                color={useColorModeValue('#02bece', '#02bece')}
-                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
+                color={useColorModeValue(colors.links, colors.links)}
+                _hover={{
+                  color: useColorModeValue(colors.primary4, colors.white),
+                }}
                 fontSize={'16px'}
               >
                 <Trans>About Me</Trans>
@@ -251,8 +290,10 @@ const FooterPhotography = () => {
             <FadeInView delay={0.1}>
               <Link
                 href={'/contact'}
-                color={useColorModeValue('#02bece', '#02bece')}
-                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
+                color={useColorModeValue(colors.links, colors.links)}
+                _hover={{
+                  color: useColorModeValue(colors.primary4, colors.white),
+                }}
                 fontSize={'16px'}
               >
                 <Trans>Contacts</Trans>
@@ -281,7 +322,7 @@ const FooterPhotography = () => {
                   _hover={{
                     bg: 'green.600',
                   }}
-                  aria-label='Subscribe'
+                  aria-label={'Subscribe'}
                   icon={<BiMailSend />}
                 />
               </Stack>

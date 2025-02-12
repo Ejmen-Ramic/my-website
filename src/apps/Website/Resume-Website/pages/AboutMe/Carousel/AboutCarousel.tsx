@@ -1,8 +1,16 @@
-import React from 'react'
-import { Box, IconButton, useBreakpointValue, Stack, Heading, Text, Container } from '@chakra-ui/react'
-import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
-import Slider from 'react-slick'
-import { t } from '@lingui/macro'
+import React from 'react';
+import {
+  Box,
+  IconButton,
+  useBreakpointValue,
+  Stack,
+  Heading,
+  Text,
+  Container,
+} from '@chakra-ui/react';
+import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
+import Slider from 'react-slick';
+import { t } from '@lingui/macro';
 
 const settings = {
   dots: true,
@@ -14,12 +22,12 @@ const settings = {
   autoplaySpeed: 5000,
   slidesToShow: 1,
   slidesToScroll: 1,
-}
+};
 
 const AboutCarousel = () => {
-  const [slider, setSlider] = React.useState<Slider | null>(null)
-  const top = useBreakpointValue({ base: '90%', md: '50%' })
-  const side = useBreakpointValue({ base: '30%', md: '40px' })
+  const [slider, setSlider] = React.useState<Slider | null>(null);
+  const top = useBreakpointValue({ base: '90%', md: '50%' });
+  const side = useBreakpointValue({ base: '30%', md: '40px' });
   const cards = [
     {
       title: t`Design Projects 1`,
@@ -39,20 +47,30 @@ const AboutCarousel = () => {
       image:
         'https://images.unsplash.com/photo-1507237998874-b4d52d1dd655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
     },
-  ]
+  ];
 
   return (
-    <Box position={'relative'} mb={'200px'} maxH={'800px'} w={'full'} overflow={'hidden'}>
+    <Box
+      position={'relative'}
+      mb={'200px'}
+      maxH={'800px'}
+      w={'full'}
+      overflow={'hidden'}
+    >
       <link
         rel={'stylesheet'}
         type={'text/css'}
         charSet={'UTF-8'}
-        href={'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css'}
+        href={
+          'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css'
+        }
       />
       <link
         rel={'stylesheet'}
-        type='text/css'
-        href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'
+        type={'text/css'}
+        href={
+          'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'
+        }
       />
       <IconButton
         aria-label={'left-arrow'}
@@ -64,7 +82,7 @@ const AboutCarousel = () => {
         zIndex={2}
         onClick={() => slider?.slickPrev()}
       >
-        <BiLeftArrowAlt size='40px' />
+        <BiLeftArrowAlt size={'40px'} />
       </IconButton>
       <IconButton
         aria-label={'right-arrow'}
@@ -89,7 +107,11 @@ const AboutCarousel = () => {
             backgroundSize={'cover'}
             backgroundImage={`url(${card.image})`}
           >
-            <Container size={'container.lg'} height={'600px'} position={'relative'}>
+            <Container
+              size={'container.lg'}
+              height={'600px'}
+              position={'relative'}
+            >
               <Stack
                 spacing={6}
                 w={'full'}
@@ -98,7 +120,9 @@ const AboutCarousel = () => {
                 top={'50%'}
                 transform={'translate(0, -50%)'}
               >
-                <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>{card.title}</Heading>
+                <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+                  {card.title}
+                </Heading>
                 <Text fontSize={{ base: 'md', lg: 'lg' }} color={'GrayText'}>
                   {card.text}
                 </Text>
@@ -108,7 +132,7 @@ const AboutCarousel = () => {
         ))}
       </Slider>
     </Box>
-  )
-}
+  );
+};
 
-export default AboutCarousel
+export default AboutCarousel;

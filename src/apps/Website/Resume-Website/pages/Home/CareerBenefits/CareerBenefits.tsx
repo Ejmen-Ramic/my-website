@@ -1,11 +1,19 @@
-import { Box, HStack, Heading, Hide, VStack, Text, Button, Icon, Grid } from '@chakra-ui/react'
-import { BsFillInfoCircleFill } from 'react-icons/bs'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+import {
+  Box,
+  HStack,
+  Heading,
+  Hide,
+  VStack,
+  Text,
+  Button,
+  Icon,
+  Grid,
+} from '@chakra-ui/react';
+import { BsFillInfoCircleFill } from 'react-icons/bs';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 
 const CareerBenefits = () => {
-  // const [lightColor, darkColor] = useToken("colors", ["#FFBB88", "#FF6000"]);
-
   return (
     <HStack
       minH={{ base: '700px', lg: '800px' }}
@@ -18,18 +26,34 @@ const CareerBenefits = () => {
       backgroundPosition={'center'}
     >
       <FadeInView>
-        <Grid w={'100%'} gridColumnGap={'150px'} templateColumns={['1fr', '1fr', '1fr', '1fr 1fr']}>
-          <VStack position={'relative'} minH={'600px'} maxW={'710px'} zIndex={1}>
+        <Grid
+          w={'100%'}
+          gridColumnGap={'150px'}
+          templateColumns={['1fr', '1fr', '1fr', '1fr 1fr']}
+        >
+          <VStack
+            position={'relative'}
+            minH={'600px'}
+            maxW={'710px'}
+            zIndex={1}
+          >
             <VStack alignItems={'flex-start'} p={'50px'}>
-              <Heading color={colors.white}>Career Benefits of Learning Coding</Heading>
+              <Heading color={colors.white}>
+                Career Benefits of Learning Coding
+              </Heading>
               <Text pb={'30px'} pt={'30px'} color={colors.white}>
-                Coding is a part of computer programming, and coders, also known as programmers, write instructions for
-                what a computer, software, or application does and how it does. Coders or programmers wh write computer
-                programs are the backbones of almost every modern technology being used today. That's why computer
-                programming abilities enhance anyone to become a computer programmer and attain numerous highly skilled
-                and paid job opportunities in this modern tech world. Here are the main benefits of learning coding that
-                can affect an individual's growth and life for the better:
-                <br /> <br />• To attain career advancements prospects across industries.
+                Coding is a part of computer programming, and coders, also known
+                as programmers, write instructions for what a computer,
+                software, or application does and how it does. Coders or
+                programmers wh write computer programs are the backbones of
+                almost every modern technology being used today. That's why
+                computer programming abilities enhance anyone to become a
+                computer programmer and attain numerous highly skilled and paid
+                job opportunities in this modern tech world. Here are the main
+                benefits of learning coding that can affect an individual's
+                growth and life for the better:
+                <br /> <br />• To attain career advancements prospects across
+                industries.
                 <br /> • To get a better understanding of technology.
                 <br /> • To enhance problem-solving skills.
                 <Hide below={'lg'}>
@@ -47,7 +71,10 @@ const CareerBenefits = () => {
                   >
                     Need More Information
                   </Button> */}
-              <Button mt={'20px'} leftIcon={<Icon as={BsFillInfoCircleFill} boxSize={4} />}>
+              <Button
+                mt={'20px'}
+                leftIcon={<Icon as={BsFillInfoCircleFill} boxSize={4} />}
+              >
                 Need More Information
               </Button>
             </VStack>
@@ -72,6 +99,6 @@ const CareerBenefits = () => {
         </Grid>
       </FadeInView>
     </HStack>
-  )
-}
-export default CareerBenefits
+  );
+};
+export default CareerBenefits;

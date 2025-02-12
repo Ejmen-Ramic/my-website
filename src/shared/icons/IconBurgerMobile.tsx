@@ -31,7 +31,7 @@ const IconBurgerMobile = ({ size, ...props }: IconBurgerProps) => {
         // width={width}
         // height={height}
         d={'M4 18L20 18'}
-        stroke={useColorModeValue('#2b333d', colors.white)}
+        stroke={useColorModeValue(colors.primary4, colors.white)}
         strokeWidth={'2'}
         strokeLinecap={'round'}
       />
@@ -39,7 +39,7 @@ const IconBurgerMobile = ({ size, ...props }: IconBurgerProps) => {
         // width={width}
         // height={height}
         d={'M4 12L20 12'}
-        stroke={useColorModeValue('#2b333d', colors.white)}
+        stroke={useColorModeValue(colors.primary4, colors.white)}
         strokeWidth={'2'}
         strokeLinecap={'round'}
       />
@@ -47,7 +47,7 @@ const IconBurgerMobile = ({ size, ...props }: IconBurgerProps) => {
         // width={width}
         // height={height}
         d={'M4 6L20 6'}
-        stroke={useColorModeValue('#2b333d', colors.white)}
+        stroke={useColorModeValue(colors.primary4, colors.white)}
         strokeWidth={'2'}
         strokeLinecap={'round'}
       />

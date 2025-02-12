@@ -50,19 +50,24 @@ interface MenuDataProps {
 }
 
 const DropDownHobbies = ({ menuData }: MenuDataProps) => {
-  const linkColor = '#02bece'
+  const linkColor = colors.links
   const { onOpen, onClose, isOpen } = useDisclosure()
 
   return (
     <Stack direction={'row'} spacing={4}>
-      <Popover trigger={'hover'} placement={'bottom-start'} onOpen={onOpen} onClose={onClose}>
+      <Popover
+        trigger={'hover'}
+        placement={'bottom-start'}
+        onOpen={onOpen}
+        onClose={onClose}
+      >
         <PopoverTrigger>
           <HStack alignItems={'center'} cursor={'pointer'} role={'group'}>
             <Link
               p={2}
               fontSize={'18px'}
               fontFamily={'revert-layer'}
-              color={useColorModeValue('#2b333d', '#white')}
+              color={useColorModeValue(colors.primary4, colors.white)}
               textDecor={'none'}
               letterSpacing={'1px'}
               _groupHover={{
@@ -76,7 +81,7 @@ const DropDownHobbies = ({ menuData }: MenuDataProps) => {
               as={FaChevronDown}
               h={4}
               w={4}
-              color={useColorModeValue('#2b333d', '#white')}
+              color={useColorModeValue(colors.primary4, colors.white)}
               _groupHover={{
                 color: linkColor,
               }}

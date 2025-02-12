@@ -5,14 +5,23 @@ import OSTable from './OSTable'
 import LanguageProficiency from './LanguageProficiency'
 import DesignTable from './DesignTable'
 import { Trans } from '@lingui/macro'
+import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 const SkillsResume = () => {
   return (
     <VStack w={'full'} alignItems={'start'}>
-      <Heading textTransform={'uppercase'} fontSize={'18px'} color={useColorModeValue('#000000', '#ECEFF4')}>
+      <Heading
+        textTransform={'uppercase'}
+        fontSize={'18px'}
+        color={useColorModeValue(colors.black, colors.iceGray)}
+      >
         <Trans>Skills</Trans>
       </Heading>
-      <Box bgColor={useColorModeValue('#000000', '#ECEFF4')} height={'2px'} w={'full'}></Box>
+      <Box
+        bgColor={useColorModeValue(colors.black, colors.iceGray)}
+        height={'2px'}
+        w={'full'}
+      ></Box>
       <VStack w={'full'} spacing={'20px'} alignItems={'start'}>
         <ProgrammingTable />
         <ToolsTable />

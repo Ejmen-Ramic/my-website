@@ -1,4 +1,14 @@
-import { Flex, Text, Icon, Menu, MenuButton, MenuList, MenuItem, useColorModeValue, chakra } from '@chakra-ui/react'
+import {
+  Flex,
+  Text,
+  Icon,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  useColorModeValue,
+  chakra,
+} from '@chakra-ui/react'
 import { t, Trans } from '@lingui/macro'
 import { BiChevronDown } from 'react-icons/bi'
 import { IoCameraOutline } from 'react-icons/io5'
@@ -25,7 +35,7 @@ const MenuLink = ({ name, path, onClose }: MenuLinkProps) => {
         fontSize={'16px'}
         letterSpacing={'1px'}
         _hover={{
-          color: '#02bece',
+          color: colors.links,
           bg: useColorModeValue('gray.100', 'gray.900'),
         }}
       >
@@ -46,14 +56,14 @@ const dropdownLinks = [
 ]
 
 const DropDownMenuMobile = () => {
-  const color = useColorModeValue('#2b333d', colors.white)
+  const color = useColorModeValue(colors.primary4, colors.white)
 
   return (
     <Menu autoSelect={false} isLazy>
       {({ isOpen, onClose }) => (
         <>
           <MenuButton
-            _hover={{ color: '#02bece' }}
+            _hover={{ color: colors.links }}
             fontWeight={'light'}
             color={color}
             fontSize={'18px'}
@@ -78,7 +88,12 @@ const DropDownMenuMobile = () => {
           </MenuButton>
           <MenuList fontSize={''}>
             {dropdownLinks.map((link, index) => (
-              <MenuLink key={index} name={link.name} path={link.path} onClose={onClose} />
+              <MenuLink
+                key={index}
+                name={link.name}
+                path={link.path}
+                onClose={onClose}
+              />
             ))}
           </MenuList>
         </>

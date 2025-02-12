@@ -5,7 +5,6 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { ChakraProvider, theme } from '@chakra-ui/react'
 import { BrowserRouter } from 'react-router-dom'
-
 import { I18nProvider } from '@lingui/react'
 import { messages } from './locales/en/messages'
 import { i18n } from '@lingui/core'

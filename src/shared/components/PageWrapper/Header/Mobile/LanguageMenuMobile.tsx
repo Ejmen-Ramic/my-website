@@ -1,11 +1,19 @@
 import React from 'react'
-import { Flex, Text, Icon, Menu, MenuButton, MenuList, MenuItem, useColorModeValue } from '@chakra-ui/react'
+import {
+  Flex,
+  Text,
+  Icon,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import { BiChevronDown } from 'react-icons/bi'
 import { IoLanguageOutline } from 'react-icons/io5'
-import { t, Trans } from '@lingui/macro'
+import { Trans } from '@lingui/macro'
 import { dynamicActivate } from '../../../LanguageSwitcher/dynamicActivate'
 import { colors } from '../../../Hooks/color'
-
 
 const LanguageDropDown: React.FC = () => {
   return (
@@ -16,25 +24,31 @@ const LanguageDropDown: React.FC = () => {
 }
 
 interface MenuLinkProps {
-  name: string
+  name: string | JSX.Element
   locale: string
   onClose: () => void
   changeLanguage: (locale: string) => void
 }
 
-const MenuLink: React.FC<MenuLinkProps> = ({ name, locale, onClose, changeLanguage }) => {
+const MenuLink: React.FC<MenuLinkProps> = ({
+  name,
+  locale,
+  onClose,
+  changeLanguage,
+}) => {
   return (
     <MenuItem
       fontSize={'16px'}
       letterSpacing={'1px'}
       _hover={{
-        color: '#02bece',
+        color: colors.links,
         bg: useColorModeValue('gray.100', 'gray.900'),
       }}
       onClick={() => {
         changeLanguage(locale)
         onClose()
       }}
+      data-testid={`mobile-language-option-${locale}`}
     >
       <Text>{name}</Text>
     </MenuItem>
@@ -43,17 +57,17 @@ const MenuLink: React.FC<MenuLinkProps> = ({ name, locale, onClose, changeLangua
 
 const dropdownLinks = [
   {
-    name: t`English`,
+    name: <Trans>English</Trans>,
     locale: 'en',
   },
   {
-    name: t`Bosnian`,
+    name: <Trans>Bosnian</Trans>,
     locale: 'ba',
   },
 ]
 
 const LanguageMenuMobile: React.FC = () => {
-  const color = useColorModeValue('#2b333d', colors.white)
+  const color = useColorModeValue(colors.primary4, colors.white)
 
   const changeLanguage = async (locale: string) => {
     await dynamicActivate(locale)
@@ -65,7 +79,7 @@ const LanguageMenuMobile: React.FC = () => {
       {({ isOpen, onClose }) => (
         <>
           <MenuButton
-            _hover={{ color: '#02bece' }}
+            _hover={{ color: colors.links }}
             fontWeight={'light'}
             color={color}
             fontSize={'18px'}
@@ -73,6 +87,7 @@ const LanguageMenuMobile: React.FC = () => {
             letterSpacing={'1px'}
             ml={'7%'}
             mb={'5px'}
+            data-testid={'language-switcher-mobile'}
           >
             <Flex alignItems={'center'}>
               <IoLanguageOutline size={33} style={{ marginRight: '12px' }} />
