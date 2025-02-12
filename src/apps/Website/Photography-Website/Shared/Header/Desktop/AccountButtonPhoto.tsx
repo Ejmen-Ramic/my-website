@@ -8,7 +8,7 @@ const AccountButton = (props: ButtonProps) => {
     <Flex justifyContent={'center'} alignItems={'center'}>
       <Link to={'/signin'}>
         <Button
-          bg={useColorModeValue('#979191', '#FFFFFF14')}
+          bg={useColorModeValue('#979191', `${colors.white}14`)}
           color={colors.white}
           _hover={{ bgColor: useColorModeValue('#817e7e', 'gray.600') }}
           p={'13px'}
