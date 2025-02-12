@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   Stack,
   Flex,
@@ -11,10 +11,10 @@ import {
   PopoverContent,
   useDisclosure,
   useColorModeValue,
-} from '@chakra-ui/react';
-import { FaChevronDown } from 'react-icons/fa';
-import { t, Trans } from '@lingui/macro';
-import { colors } from '../../../../../../shared/components/Hooks/color';
+} from '@chakra-ui/react'
+import { FaChevronDown } from 'react-icons/fa'
+import { t, Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const menuData = [
   {
@@ -27,7 +27,7 @@ const menuData = [
   //   label: "Become a Tutor",
   //   href: "/hobbies",
   // },
-];
+]
 
 const MenuContainer = () => {
   return (
@@ -37,22 +37,22 @@ const MenuContainer = () => {
         linkColor={useColorModeValue('#817e7e', colors.links)}
       />
     </Flex>
-  );
-};
+  )
+}
 
 interface MenuData {
-  id: number;
-  label: string;
-  href: string;
+  id: number
+  label: string
+  href: string
 }
 
 interface MenuDataProps {
-  menuData: MenuData[];
-  linkColor: string;
+  menuData: MenuData[]
+  linkColor: string
 }
 
 const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
-  const { onOpen, onClose, isOpen } = useDisclosure();
+  const { onOpen, onClose, isOpen } = useDisclosure()
 
   return (
     <Stack direction={'row'} spacing={4}>
@@ -68,7 +68,7 @@ const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
               p={2}
               fontSize={'16px'}
               fontFamily={'revert-layer'}
-              color={useColorModeValue('#2b333d', colors.white)}
+              color={useColorModeValue(colors.primary4, colors.white)}
               textDecor={'none'}
               letterSpacing={'1px'}
               _groupHover={{
@@ -82,7 +82,7 @@ const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
               as={FaChevronDown}
               h={4}
               w={4}
-              color={useColorModeValue('#2b333d', '#817e7e')}
+              color={useColorModeValue(colors.primary4, '#817e7e')}
               _groupHover={{
                 color: linkColor,
               }}
@@ -109,8 +109,8 @@ const DropDownMenu = ({ menuData, linkColor }: MenuDataProps) => {
         </PopoverContent>
       </Popover>
     </Stack>
-  );
-};
+  )
+}
 
 const DropDownItem = ({
   label,
@@ -134,7 +134,7 @@ const DropDownItem = ({
         </Text>
       </Stack>
     </Link>
-  );
-};
+  )
+}
 
-export default MenuContainer;
+export default MenuContainer
