@@ -58,7 +58,7 @@ const getItems = () => {
 const DesignTable: FC = () => {
   const nameColor = useColorModeValue(colors.black, colors.iceGray)
   const skillColor = useColorModeValue(colors.navy, '#98bed5')
-  const noSkillColor = useColorModeValue('#8d9da7', '#303c40')
+  const noSkillColor = useColorModeValue(colors.slate[200], '#303c40')
   const columnWidth = useBreakpointValue({ base: '0px', md: '0px' })
   const headers = useBreakpointValue({
     base: [
