@@ -14,38 +14,38 @@ import {
   Hide,
   Text,
   Flex,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'
 
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import {
   IoBriefcaseOutline,
   IoHomeOutline,
   IoPersonOutline,
   IoFileTrayFullOutline,
   IoCodeSlash,
-} from 'react-icons/io5';
-import MenuContainerMobile from './DropDownMenuMobile';
-import { IconType } from 'react-icons';
-import HeaderForm from './Form';
-import IconBurgerMobile from '../../../../../../shared/icons/IconBurgerMobile';
-import IconBurger from '../../../../../../shared/icons/IconBurger';
-import { t, Trans } from '@lingui/macro';
-import { colors } from '../../../../../../shared/components/Hooks/color';
+} from 'react-icons/io5'
+import MenuContainerMobile from './DropDownMenuMobile'
+import { IconType } from 'react-icons'
+import HeaderForm from './Form'
+import IconBurgerMobile from '../../../../../../shared/icons/IconBurgerMobile'
+import IconBurger from '../../../../../../shared/icons/IconBurger'
+import { t, Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 type MenuItemLink = {
-  label: string;
-  icon?: IconType;
-  to: string;
-};
+  label: string
+  icon?: IconType
+  to: string
+}
 
 const HeaderMobile = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const color = useColorModeValue('#2b333d', colors.white);
-  const year = new Date().getFullYear();
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const color = useColorModeValue(colors.primary4, colors.white)
+  const year = new Date().getFullYear()
 
   const isMenuItemLink = (item: any): item is MenuItemLink => {
-    return (item as MenuItemLink).to !== undefined;
-  };
+    return (item as MenuItemLink).to !== undefined
+  }
   const menuItems: (MenuItemLink | React.ReactElement)[] = [
     { label: t`Home`, icon: IoHomeOutline, to: '/' },
     { label: t`Resume`, icon: IoBriefcaseOutline, to: '/resume' },
@@ -53,7 +53,7 @@ const HeaderMobile = () => {
     { label: t`About Me`, icon: IoCodeSlash, to: '/about' },
     { label: t`Contacts`, icon: IoFileTrayFullOutline, to: '/contact' },
     { label: t`My Account`, icon: IoPersonOutline, to: '/signin' },
-  ];
+  ]
 
   return (
     <Box>
@@ -79,17 +79,17 @@ const HeaderMobile = () => {
       <Drawer isOpen={isOpen} placement={'left'} onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent
-          backgroundColor={useColorModeValue(colors.white, '#2b333d')}
+          backgroundColor={useColorModeValue(colors.white, colors.primary4)}
         >
           <DrawerCloseButton
             size={'20px'}
-            color={useColorModeValue('#2b333d', colors.white)}
+            color={useColorModeValue(colors.primary4, colors.white)}
             mt={'20px'}
             mr={'20px'}
             _hover={{ color: colors.links }}
           />
           <DrawerHeader
-            color={useColorModeValue('#2b333d', colors.white)}
+            color={useColorModeValue(colors.primary4, colors.white)}
             fontSize={'25px'}
             letterSpacing={'2px'}
           >
@@ -138,7 +138,7 @@ const HeaderMobile = () => {
         </DrawerContent>
       </Drawer>
     </Box>
-  );
-};
+  )
+}
 
-export default HeaderMobile;
+export default HeaderMobile
