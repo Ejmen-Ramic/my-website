@@ -26,7 +26,7 @@ const Header = () => {
     <Flex
       w={'full'}
       h={{ base: '58px', md: '67px', lg: '120px' }}
-      bg={useColorModeValue(colors.primary1, '#2b333d')}
+      bg={useColorModeValue(colors.primary1, colors.primary4)}
       justifyContent={'space-between'}
       top={0}
       mt={{ base: '10px', md: '0px' }}
@@ -53,7 +53,7 @@ const Header = () => {
           <Link to={'/photography'}>
             <Box
               h={'100%'}
-              borderColor={homeHovered ? '#817e7e' : '#2b333d'}
+              borderColor={homeHovered ? '#817e7e' : colors.primary4}
               borderTopWidth={homeHovered ? '8px' : '0px'}
               borderTopColor={useColorModeValue('#817e7e', colors.links)}
               transition={'all 0.1s ease-in-out'}
@@ -67,7 +67,7 @@ const Header = () => {
                 variant={'link'}
                 border={'none'}
                 _hover={{ color: useColorModeValue('#817e7e', colors.links) }}
-                color={useColorModeValue('#2b333d', colors.white)}
+                color={useColorModeValue(colors.primary4, colors.white)}
                 fontWeight={'light'}
                 letterSpacing={'1px'}
                 textTransform={'capitalize'}
@@ -83,7 +83,7 @@ const Header = () => {
           <Link to={'/about-me'}>
             <Box
               h={'100%'}
-              borderColor={aboutHovered ? '#817e7e' : '#2b333d'}
+              borderColor={aboutHovered ? '#817e7e' : colors.primary4}
               borderTopWidth={aboutHovered ? '8px' : '0px'}
               borderTopColor={useColorModeValue('#817e7e', colors.links)}
               transition={'all 0.1s ease-in-out'}
@@ -97,7 +97,7 @@ const Header = () => {
                 variant={'link'}
                 border={'none'}
                 _hover={{ color: useColorModeValue('#817e7e', colors.links) }}
-                color={useColorModeValue('#2b333d', colors.white)}
+                color={useColorModeValue(colors.primary4, colors.white)}
                 fontWeight={'light'}
                 letterSpacing={'1px'}
                 textTransform={'capitalize'}
@@ -111,7 +111,7 @@ const Header = () => {
           </Link>
           <Box
             h={'100%'}
-            borderColor={hobbiesHovered ? '#817e7e' : '#2b333d'}
+            borderColor={hobbiesHovered ? '#817e7e' : colors.primary4}
             borderTopWidth={hobbiesHovered ? '8px' : '0px'}
             borderTopColor={useColorModeValue('#817e7e', colors.links)}
             transition={'all 0.1s ease-in-out'}
@@ -130,7 +130,7 @@ const Header = () => {
           <Link to={'/contact-us'}>
             <Box
               h={'100%'}
-              borderColor={contactHovered ? '#817e7e' : '#2b333d'}
+              borderColor={contactHovered ? '#817e7e' : colors.primary4}
               borderTopWidth={contactHovered ? '8px' : '0px'}
               borderTopColor={useColorModeValue('#817e7e', colors.links)}
               transition={'all 0.1s ease-in-out'}
@@ -145,7 +145,7 @@ const Header = () => {
                 variant={'link'}
                 border={'none'}
                 _hover={{ color: useColorModeValue('#817e7e', colors.links) }}
-                color={useColorModeValue('#2b333d', colors.white)}
+                color={useColorModeValue(colors.primary4, colors.white)}
                 fontWeight={'light'}
                 letterSpacing={'1px'}
                 textTransform={'capitalize'}

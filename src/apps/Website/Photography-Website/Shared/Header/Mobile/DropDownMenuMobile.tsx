@@ -8,24 +8,24 @@ import {
   MenuItem,
   useColorModeValue,
   chakra,
-} from '@chakra-ui/react';
-import { t, Trans } from '@lingui/macro';
-import { BiChevronDown } from 'react-icons/bi';
-import { IoCameraOutline } from 'react-icons/io5';
-import { colors } from '../../../../../../shared/components/Hooks/color';
+} from '@chakra-ui/react'
+import { t, Trans } from '@lingui/macro'
+import { BiChevronDown } from 'react-icons/bi'
+import { IoCameraOutline } from 'react-icons/io5'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const MenuContainerMobile = () => {
   return (
     <Flex h={'full'}>
       <DropDownMenuMobile />
     </Flex>
-  );
-};
+  )
+}
 
 interface MenuLinkProps {
-  name: string;
-  path: string;
-  onClose: () => void;
+  name: string
+  path: string
+  onClose: () => void
 }
 
 const MenuLink = ({ name, path, onClose }: MenuLinkProps) => {
@@ -42,8 +42,8 @@ const MenuLink = ({ name, path, onClose }: MenuLinkProps) => {
         <Text>{name}</Text>
       </MenuItem>
     </chakra.a>
-  );
-};
+  )
+}
 const dropdownLinks = [
   {
     name: t`Photography`,
@@ -53,10 +53,10 @@ const dropdownLinks = [
   //   name: "Become a Tutor",
   //   path: "/hobbies",
   // },
-];
+]
 
 const DropDownMenuMobile = () => {
-  const color = useColorModeValue('#2b333d', colors.white);
+  const color = useColorModeValue(colors.primary4, colors.white)
 
   return (
     <Menu autoSelect={false} isLazy>
@@ -99,7 +99,7 @@ const DropDownMenuMobile = () => {
         </>
       )}
     </Menu>
-  );
-};
+  )
+}
 
-export default MenuContainerMobile;
+export default MenuContainerMobile
