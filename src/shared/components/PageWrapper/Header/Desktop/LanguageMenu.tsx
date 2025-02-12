@@ -69,7 +69,7 @@ const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
               p={2}
               fontSize={'18px'}
               fontFamily={'revert-layer'}
-              color={useColorModeValue('#2b333d', colors.white)}
+              color={useColorModeValue(colors.primary4, colors.white)}
               textDecor={'none'}
               letterSpacing={'1px'}
               _groupHover={{
@@ -86,7 +86,7 @@ const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
                   w={4}
                   ml={'8px'}
                   mr={'10px'}
-                  color={useColorModeValue('#2b333d', colors.white)}
+                  color={useColorModeValue(colors.primary4, colors.white)}
                   _groupHover={{
                     color: linkColor,
                   }}

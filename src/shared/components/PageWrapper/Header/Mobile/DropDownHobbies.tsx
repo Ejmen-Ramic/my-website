@@ -56,7 +56,7 @@ const dropdownLinks = [
 ]
 
 const DropDownMenuMobile = () => {
-  const color = useColorModeValue('#2b333d', colors.white)
+  const color = useColorModeValue(colors.primary4, colors.white)
 
   return (
     <Menu autoSelect={false} isLazy>
