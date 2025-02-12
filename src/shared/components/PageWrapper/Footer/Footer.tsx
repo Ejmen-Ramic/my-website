@@ -8,14 +8,14 @@ import {
   Text,
   VisuallyHidden,
   useColorModeValue,
-} from '@chakra-ui/react';
-import { ReactNode } from 'react';
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
-import FadeInView from '../../Hooks/FadeInView';
-import { Trans } from '@lingui/macro';
-import { colors } from '../../Hooks/color';
-import SubscribeForm from './Newsletter';
+} from '@chakra-ui/react'
+import { ReactNode } from 'react'
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
+import FadeInView from '../../Hooks/FadeInView'
+import { Trans } from '@lingui/macro'
+import { colors } from '../../Hooks/color'
+import SubscribeForm from './Newsletter'
 
 const Logo = (props: any) => {
   return (
@@ -25,13 +25,13 @@ const Logo = (props: any) => {
         textTransform={'uppercase'}
         fontFamily={'inherit'}
         fontWeight={'400'}
-        color={useColorModeValue('#2b333d', colors.white)}
+        color={useColorModeValue(colors.primary4, colors.white)}
       >
         Ejmen Ramic
       </Text>
     </FadeInView>
-  );
-};
+  )
+}
 
 const SocialButton = ({
   children,
@@ -39,11 +39,11 @@ const SocialButton = ({
   href,
   hoverColor,
 }: {
-  children: ReactNode;
-  label: string;
-  href: string;
-  color: string;
-  hoverColor: string;
+  children: ReactNode
+  label: string
+  href: string
+  color: string
+  hoverColor: string
 }) => {
   return (
     <chakra.button
@@ -68,22 +68,22 @@ const SocialButton = ({
       </FadeInView>
       <FadeInView delay={0.1}>{children}</FadeInView>
     </chakra.button>
-  );
-};
+  )
+}
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
     <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
       {children}
     </Text>
-  );
-};
+  )
+}
 
 const Footer = () => {
-  const year = new Date().getFullYear();
+  const year = new Date().getFullYear()
   return (
     <Box
-      bg={useColorModeValue('gray.100', '#2b333d')}
+      bg={useColorModeValue('gray.100', colors.primary4)}
       color={useColorModeValue('gray.700', 'gray.200')}
       w={'100%'}
       bottom={'0'}
@@ -111,7 +111,7 @@ const Footer = () => {
                 fontSize={'13px'}
                 fontFamily={'revert-layer'}
                 fontWeight={'400'}
-                color={useColorModeValue('#2b333d', colors.white)}
+                color={useColorModeValue(colors.primary4, colors.white)}
               >
                 <Trans>
                   Welcome to my website! I am a software engineer and
@@ -126,7 +126,7 @@ const Footer = () => {
                 </Link>
                 <Box
                   as={'span'}
-                  color={useColorModeValue('#2b333d', colors.white)}
+                  color={useColorModeValue(colors.primary4, colors.white)}
                 >
                   {''} • {''}
                 </Box>
@@ -137,7 +137,7 @@ const Footer = () => {
                 </Link>
                 <Box
                   as={'span'}
-                  color={useColorModeValue('#2b333d', colors.white)}
+                  color={useColorModeValue(colors.primary4, colors.white)}
                 >
                   {''} • {''}
                 </Box>
@@ -220,7 +220,9 @@ const Footer = () => {
               <Link
                 href={'/'}
                 color={useColorModeValue(colors.links, colors.links)}
-                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
+                _hover={{
+                  color: useColorModeValue(colors.primary4, colors.white),
+                }}
                 fontSize={'16px'}
                 data-testid={'footer-home-link'}
               >
@@ -231,7 +233,9 @@ const Footer = () => {
               <Link
                 href={'/resume'}
                 color={useColorModeValue(colors.links, colors.links)}
-                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
+                _hover={{
+                  color: useColorModeValue(colors.primary4, colors.white),
+                }}
                 fontSize={'16px'}
                 data-testid={'footer-resume-link'}
               >
@@ -245,9 +249,9 @@ const Footer = () => {
                   variant={'link'}
                   border={'none'}
                   color={useColorModeValue(colors.links, colors.links)}
-                  _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
+                  _hover={{ color: useColorModeValue(colors.primary4, colors.white) }}
                   _expanded={{
-                    color: useColorModeValue('#2b333d', colors.white),
+                    color: useColorModeValue(colors.primary4, colors.white),
                   }}
                   fontWeight={400}
                   fontSize={'16px'}
@@ -273,7 +277,9 @@ const Footer = () => {
               <Link
                 href={'/about'}
                 color={useColorModeValue(colors.links, colors.links)}
-                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
+                _hover={{
+                  color: useColorModeValue(colors.primary4, colors.white),
+                }}
                 fontSize={'16px'}
                 data-testid={'footer-about-link'}
               >
@@ -284,7 +290,9 @@ const Footer = () => {
               <Link
                 href={'/contact'}
                 color={useColorModeValue(colors.links, colors.links)}
-                _hover={{ color: useColorModeValue('#2b333d', colors.white) }}
+                _hover={{
+                  color: useColorModeValue(colors.primary4, colors.white),
+                }}
                 fontSize={'16px'}
                 data-testid={'footer-contact-link'}
               >
@@ -303,7 +311,7 @@ const Footer = () => {
         </SimpleGrid>
       </Container>
     </Box>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

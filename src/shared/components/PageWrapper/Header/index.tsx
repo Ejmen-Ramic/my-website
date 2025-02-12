@@ -30,7 +30,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
       data-testid={'header'}
       h={{ base: '58px', md: '67px', lg: '120px' }}
       w={'full'}
-      bg={useColorModeValue('gray.100', '#2b333d')}
+      bg={useColorModeValue('gray.100', colors.primary4)}
       justifyContent={'space-between'}
       top={isStickyHeader ? '0' : '-58px'}
     >
@@ -39,7 +39,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
           <Heading
             w={{ base: 'max-content', md: 'fit-content' }}
             ml={{ base: '20px', md: '40px' }}
-            color={useColorModeValue('#2b333d', colors.white)}
+            color={useColorModeValue(colors.primary4, colors.white)}
             _hover={{ color: useColorModeValue('gray.400', 'gray.600') }}
             fontSize={{ base: '20px', md: '30px', lg: '35px' }}
             fontFamily={'oswald'}
@@ -64,7 +64,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
           <Link to={'/'} data-testid={'home-link'}>
             <Box
               h={'100%'}
-              borderColor={homeHovered ? colors.links : '#2b333d'}
+              borderColor={homeHovered ? colors.links : colors.primary4}
               borderTopWidth={homeHovered ? '8px' : '0px'}
               borderTopColor={colors.links}
               transition={'all 0.1s ease-in-out'}
@@ -78,7 +78,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
                 variant={'link'}
                 border={'none'}
                 _hover={{ color: colors.links }}
-                color={useColorModeValue('#2b333d', colors.white)}
+                color={useColorModeValue(colors.primary4, colors.white)}
                 fontWeight={'light'}
                 fontSize={'18px'}
                 letterSpacing={'1px'}
@@ -94,7 +94,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
           <Link to={'/resume'} data-testid={'resume-link'}>
             <Box
               h={'100%'}
-              borderColor={resumeHovered ? colors.links : '#2b333d'}
+              borderColor={resumeHovered ? colors.links : colors.primary4}
               borderTopWidth={resumeHovered ? '8px' : '0px'}
               borderTopColor={colors.links}
               transition={'all 0.1s ease-in-out'}
@@ -108,7 +108,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
                 variant={'link'}
                 border={'none'}
                 _hover={{ color: colors.links }}
-                color={useColorModeValue('#2b333d', colors.white)}
+                color={useColorModeValue(colors.primary4, colors.white)}
                 fontWeight={'light'}
                 fontSize={'18px'}
                 letterSpacing={'1px'}
@@ -123,7 +123,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
           </Link>
           {/* <Box
             h={'100%'}
-            borderColor={hobbiesHovered ? colors.links : '#2b333d'}
+            borderColor={hobbiesHovered ? colors.links : colors.primary4}
             borderTopWidth={hobbiesHovered ? '4px' : '0px'}
             borderTopColor={colors.links}
             transition={'all 0.1s ease-in-out'}
@@ -142,7 +142,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
           <Link to={'/about'} data-testid={'about-link'}>
             <Box
               h={'100%'}
-              borderColor={aboutHovered ? colors.links : '#2b333d'}
+              borderColor={aboutHovered ? colors.links : colors.primary4}
               borderTopWidth={aboutHovered ? '8px' : '0px'}
               borderTopColor={colors.links}
               transition={'all 0.1s ease-in-out'}
@@ -156,7 +156,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
                 variant={'link'}
                 border={'none'}
                 _hover={{ color: colors.links }}
-                color={useColorModeValue('#2b333d', colors.white)}
+                color={useColorModeValue(colors.primary4, colors.white)}
                 fontWeight={'light'}
                 fontSize={'18px'}
                 letterSpacing={'1px'}
@@ -172,7 +172,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
           <Link to={'/contact'} data-testid={'contact-link'}>
             <Box
               h={'100%'}
-              borderColor={contactHovered ? colors.links : '#2b333d'}
+              borderColor={contactHovered ? colors.links : colors.primary4}
               borderTopWidth={contactHovered ? '8px' : '0px'}
               borderTopColor={colors.links}
               transition={'all 0.1s ease-in-out'}
@@ -186,7 +186,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
                 variant={'link'}
                 border={'none'}
                 _hover={{ color: colors.links }}
-                color={useColorModeValue('#2b333d', colors.white)}
+                color={useColorModeValue(colors.primary4, colors.white)}
                 fontWeight={'light'}
                 fontSize={'18px'}
                 letterSpacing={'1px'}
@@ -201,7 +201,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
           </Link>
           <Box
             h={'100%'}
-            borderColor={languageHovered ? colors.links : '#2b333d'}
+            borderColor={languageHovered ? colors.links : colors.primary4}
             borderTopWidth={languageHovered ? '4px' : '0px'}
             borderTopColor={colors.links}
             transition={'all 0.1s ease-in-out'}
