@@ -67,7 +67,7 @@ const DropDownHobbies = ({ menuData }: MenuDataProps) => {
               p={2}
               fontSize={'18px'}
               fontFamily={'revert-layer'}
-              color={useColorModeValue('#2b333d', '#white')}
+              color={useColorModeValue(colors.primary4, colors.white)}
               textDecor={'none'}
               letterSpacing={'1px'}
               _groupHover={{
@@ -81,7 +81,7 @@ const DropDownHobbies = ({ menuData }: MenuDataProps) => {
               as={FaChevronDown}
               h={4}
               w={4}
-              color={useColorModeValue('#2b333d', '#white')}
+              color={useColorModeValue(colors.primary4, '#white')}
               _groupHover={{
                 color: linkColor,
               }}
