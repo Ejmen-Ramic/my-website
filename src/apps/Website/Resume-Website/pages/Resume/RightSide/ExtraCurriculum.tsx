@@ -32,7 +32,7 @@ const itemProps: Props[] = [
 ]
 
 const ExtraCurriculum = () => {
-  const colorMode = useColorModeValue('#000000', colors.iceGray)
+  const colorMode = useColorModeValue(colors.black, colors.iceGray)
   const colorLink = useColorModeValue('#0B3948', '#98bed5')
 
   return (

@@ -14,7 +14,7 @@ import { Trans } from '@lingui/macro'
 import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 const Education = () => {
-  const colorMode = useColorModeValue('#000000', colors.iceGray)
+  const colorMode = useColorModeValue(colors.black, colors.iceGray)
 
   return (
     <VStack w={'full'} alignItems={'start'}>
