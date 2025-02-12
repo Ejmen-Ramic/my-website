@@ -54,7 +54,7 @@ const getItems = () => {
 const ToolsTable: FC = () => {
   const nameColor = useColorModeValue(colors.black, colors.iceGray)
   const skillColor = useColorModeValue(colors.navy, colors.primary[100])
-  const noSkillColor = useColorModeValue(colors.slate[200], '#303c40')
+  const noSkillColor = useColorModeValue(colors.slate[200], colors.slate[250])
   const columnWidth = useBreakpointValue({ base: '0px', md: '0px' })
   const headers = useBreakpointValue({
     base: [

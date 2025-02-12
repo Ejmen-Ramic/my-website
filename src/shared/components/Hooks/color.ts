@@ -97,6 +97,7 @@ export const colors = {
     50: '#f5f6f7',
     100: '#e9ebed',
     200: '#8d9da7', // used
+    250: '#303c40', // used
     300: '#2b333d', // used
     400: '#1f252d',
     500: '#161b21',
