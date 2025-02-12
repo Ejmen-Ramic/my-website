@@ -16,7 +16,7 @@ import { Trans } from '@lingui/macro'
 import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 const Projects = () => {
-  const colorMode = useColorModeValue('#000000', colors.iceGray)
+  const colorMode = useColorModeValue(colors.black, colors.iceGray)
   const colorLink = useColorModeValue('#0B3948', '#98bed5')
   return (
     <VStack w={'full'} alignItems={'start'} color={colorMode}>
