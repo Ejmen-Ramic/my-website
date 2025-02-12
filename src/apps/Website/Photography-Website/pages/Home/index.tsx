@@ -53,7 +53,7 @@ const PhotographyHome: React.FC = () => {
                   left={'0'}
                   w={'full'}
                   h={'full'}
-                  bg={'#000000'}
+                  bg={colors.black}
                   opacity={{ base: 0.2, lg: '0' }}
                   transition={'opacity 0.7s ease'}
                   _hover={{ opacity: 0.5 }}

@@ -32,12 +32,12 @@ const ResumeLeftSide = () => {
         <Heading
           textTransform={'uppercase'}
           fontSize={'18px'}
-          color={useColorModeValue('#000000', colors.iceGray)}
+          color={useColorModeValue(colors.black, colors.iceGray)}
         >
           <Trans>Contact</Trans>
         </Heading>
         <Box
-          bgColor={useColorModeValue('#000000', colors.iceGray)}
+          bgColor={useColorModeValue(colors.black, colors.iceGray)}
           height={'2px'}
           w={'full'}
         ></Box>
