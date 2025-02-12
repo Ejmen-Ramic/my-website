@@ -67,7 +67,7 @@ const dropdownLinks = [
 ]
 
 const LanguageMenuMobile: React.FC = () => {
-  const color = useColorModeValue('#2b333d', colors.white)
+  const color = useColorModeValue(colors.primary4, colors.white)
 
   const changeLanguage = async (locale: string) => {
     await dynamicActivate(locale)

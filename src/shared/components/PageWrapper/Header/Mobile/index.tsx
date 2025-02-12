@@ -39,7 +39,7 @@ type MenuItemLink = {
 
 const HeaderMobile = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const color = useColorModeValue('#2b333d', colors.white)
+  const color = useColorModeValue(colors.primary4, colors.white)
   const year = new Date().getFullYear()
 
   const isMenuItemLink = (item: any): item is MenuItemLink => {
@@ -81,19 +81,19 @@ const HeaderMobile = () => {
       <Drawer isOpen={isOpen} placement={'left'} onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent
-          backgroundColor={useColorModeValue(colors.white, '#2b333d')}
+          backgroundColor={useColorModeValue(colors.white, colors.primary4)}
           data-testid={'drawer'}
         >
           <DrawerCloseButton
             size={'20px'}
-            color={useColorModeValue('#2b333d', colors.white)}
+            color={useColorModeValue(colors.primary4, colors.white)}
             mt={'20px'}
             mr={'20px'}
             _hover={{ color: colors.links }}
             data-testid={'drawer-close-button'}
           />
           <DrawerHeader
-            color={useColorModeValue('#2b333d', colors.white)}
+            color={useColorModeValue(colors.primary4, colors.white)}
             fontSize={'25px'}
             letterSpacing={'2px'}
           >
