@@ -33,7 +33,7 @@ const languages: LanguageProps[] = [
 ]
 
 const LanguageProficiency = () => {
-  const nameColor = useColorModeValue('#000000', colors.iceGray)
+  const nameColor = useColorModeValue(colors.black, colors.iceGray)
   const skillColor = useColorModeValue('#0b3948', colors.iceGray)
 
   return (
