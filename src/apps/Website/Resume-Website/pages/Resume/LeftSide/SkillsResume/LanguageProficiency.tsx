@@ -34,14 +34,14 @@ const languages: LanguageProps[] = [
 
 const LanguageProficiency = () => {
   const nameColor = useColorModeValue(colors.black, colors.iceGray)
-  const skillColor = useColorModeValue('#0b3948', colors.iceGray)
+  const skillColor = useColorModeValue(colors.navy, colors.iceGray)
 
   return (
     <VStack w={'full'} alignItems={'start'} spacing={'3px'}>
       <Heading
         textTransform={'capitalize'}
         fontSize={'14px'}
-        color={useColorModeValue('#0B3948', '#98BED5')}
+        color={useColorModeValue(colors.navy, '#98BED5')}
       >
         <Trans>Languages</Trans>
       </Heading>

@@ -17,7 +17,7 @@ import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 const Projects = () => {
   const colorMode = useColorModeValue(colors.black, colors.iceGray)
-  const colorLink = useColorModeValue('#0B3948', '#98bed5')
+  const colorLink = useColorModeValue(colors.navy, '#98bed5')
   return (
     <VStack w={'full'} alignItems={'start'} color={colorMode}>
       <HStack w={'full'} spacing={'10px'}>

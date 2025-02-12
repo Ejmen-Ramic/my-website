@@ -57,7 +57,7 @@ const getItems = () => {
 
 const DesignTable: FC = () => {
   const nameColor = useColorModeValue(colors.black, colors.iceGray)
-  const skillColor = useColorModeValue('#0b3948', '#98bed5')
+  const skillColor = useColorModeValue(colors.navy, '#98bed5')
   const noSkillColor = useColorModeValue('#8d9da7', '#303c40')
   const columnWidth = useBreakpointValue({ base: '0px', md: '0px' })
   const headers = useBreakpointValue({
@@ -66,7 +66,7 @@ const DesignTable: FC = () => {
         name: (
           <Text
             textTransform={'capitalize'}
-            color={useColorModeValue('#0B3948', '#98BED5')}
+            color={useColorModeValue(colors.navy, '#98BED5')}
           >
             <Trans>Graphics Design</Trans>
           </Text>

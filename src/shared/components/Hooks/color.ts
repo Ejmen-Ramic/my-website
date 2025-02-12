@@ -41,6 +41,11 @@ export const colors = {
   links: '#02bece',
 
   /**
+   * #0B3948 Deep Navy
+   */
+  navy: '#0B3948',
+
+  /**
    * #E24657 Red
    */
   alert: '#E24657', // not used
