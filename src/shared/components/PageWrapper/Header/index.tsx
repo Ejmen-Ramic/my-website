@@ -64,9 +64,9 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
           <Link to={'/'} data-testid={'home-link'}>
             <Box
               h={'100%'}
-              borderColor={homeHovered ? '#02bece' : '#2b333d'}
+              borderColor={homeHovered ? colors.links : '#2b333d'}
               borderTopWidth={homeHovered ? '8px' : '0px'}
-              borderTopColor={'#02bece'}
+              borderTopColor={colors.links}
               transition={'all 0.1s ease-in-out'}
               onMouseEnter={() => setHomeHovered(true)}
               onMouseLeave={() => setHomeHovered(false)}
@@ -77,7 +77,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
               <Button
                 variant={'link'}
                 border={'none'}
-                _hover={{ color: '#02bece' }}
+                _hover={{ color: colors.links }}
                 color={useColorModeValue('#2b333d', colors.white)}
                 fontWeight={'light'}
                 fontSize={'18px'}
@@ -94,9 +94,9 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
           <Link to={'/resume'} data-testid={'resume-link'}>
             <Box
               h={'100%'}
-              borderColor={resumeHovered ? '#02bece' : '#2b333d'}
+              borderColor={resumeHovered ? colors.links : '#2b333d'}
               borderTopWidth={resumeHovered ? '8px' : '0px'}
-              borderTopColor={'#02bece'}
+              borderTopColor={colors.links}
               transition={'all 0.1s ease-in-out'}
               onMouseEnter={() => setResumeHovered(true)}
               onMouseLeave={() => setResumeHovered(false)}
@@ -107,7 +107,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
               <Button
                 variant={'link'}
                 border={'none'}
-                _hover={{ color: '#02bece' }}
+                _hover={{ color: colors.links }}
                 color={useColorModeValue('#2b333d', colors.white)}
                 fontWeight={'light'}
                 fontSize={'18px'}
@@ -123,9 +123,9 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
           </Link>
           {/* <Box
             h={'100%'}
-            borderColor={hobbiesHovered ? '#02bece' : '#2b333d'}
+            borderColor={hobbiesHovered ? colors.links : '#2b333d'}
             borderTopWidth={hobbiesHovered ? '4px' : '0px'}
-            borderTopColor={'#02bece'}
+            borderTopColor={colors.links}
             transition={'all 0.1s ease-in-out'}
             onMouseEnter={() => {
               setHobbiesHovered(true)
@@ -142,9 +142,9 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
           <Link to={'/about'} data-testid={'about-link'}>
             <Box
               h={'100%'}
-              borderColor={aboutHovered ? '#02bece' : '#2b333d'}
+              borderColor={aboutHovered ? colors.links : '#2b333d'}
               borderTopWidth={aboutHovered ? '8px' : '0px'}
-              borderTopColor={'#02bece'}
+              borderTopColor={colors.links}
               transition={'all 0.1s ease-in-out'}
               onMouseEnter={() => setAboutHovered(true)}
               onMouseLeave={() => setAboutHovered(false)}
@@ -155,7 +155,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
               <Button
                 variant={'link'}
                 border={'none'}
-                _hover={{ color: '#02bece' }}
+                _hover={{ color: colors.links }}
                 color={useColorModeValue('#2b333d', colors.white)}
                 fontWeight={'light'}
                 fontSize={'18px'}
@@ -172,9 +172,9 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
           <Link to={'/contact'} data-testid={'contact-link'}>
             <Box
               h={'100%'}
-              borderColor={contactHovered ? '#02bece' : '#2b333d'}
+              borderColor={contactHovered ? colors.links : '#2b333d'}
               borderTopWidth={contactHovered ? '8px' : '0px'}
-              borderTopColor={'#02bece'}
+              borderTopColor={colors.links}
               transition={'all 0.1s ease-in-out'}
               onMouseEnter={() => setContactHovered(true)}
               onMouseLeave={() => setContactHovered(false)}
@@ -185,7 +185,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
               <Button
                 variant={'link'}
                 border={'none'}
-                _hover={{ color: '#02bece' }}
+                _hover={{ color: colors.links }}
                 color={useColorModeValue('#2b333d', colors.white)}
                 fontWeight={'light'}
                 fontSize={'18px'}
@@ -201,9 +201,9 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
           </Link>
           <Box
             h={'100%'}
-            borderColor={languageHovered ? '#02bece' : '#2b333d'}
+            borderColor={languageHovered ? colors.links : '#2b333d'}
             borderTopWidth={languageHovered ? '4px' : '0px'}
-            borderTopColor={'#02bece'}
+            borderTopColor={colors.links}
             transition={'all 0.1s ease-in-out'}
             onMouseEnter={() => {
               setLanguageHovered(true)
