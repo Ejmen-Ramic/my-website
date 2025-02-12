@@ -1,7 +1,7 @@
-import { Box } from '@chakra-ui/react';
-import { FaWhatsapp } from 'react-icons/fa';
-import { colors } from '../Hooks/color';
-import { keyframes } from '@emotion/react';
+import { Box } from '@chakra-ui/react'
+import { FaWhatsapp } from 'react-icons/fa'
+import { colors } from '../Hooks/color'
+import { keyframes } from '@emotion/react'
 
 const circle = keyframes`
   0% {
@@ -10,7 +10,7 @@ const circle = keyframes`
   100% {
     transform: rotate(360deg) translate(-50px) rotate(-360deg);
   }
-`;
+`
 
 const WhatsappIcon = () => {
   return (
@@ -39,7 +39,7 @@ const WhatsappIcon = () => {
       >
         <FaWhatsapp
           size={'30px'}
-          color={'#ffffff'}
+          color={colors.white}
           style={{ marginRight: '35px' }}
         />
         <Box
@@ -57,7 +57,7 @@ const WhatsappIcon = () => {
         />
       </Box>
     </Box>
-  );
-};
+  )
+}
 
-export default WhatsappIcon;
+export default WhatsappIcon
