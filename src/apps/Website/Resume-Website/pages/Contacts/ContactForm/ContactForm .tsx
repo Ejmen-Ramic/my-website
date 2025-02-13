@@ -96,7 +96,7 @@ const ContactForm: FC = () => {
 
   return (
     <Flex
-      bg={useColorModeValue(colors.gray[100], 'gray.900')}
+      bg={useColorModeValue(colors.gray[100], colors.gray[900])}
       align={'center'}
       justify={'center'}
       css={{

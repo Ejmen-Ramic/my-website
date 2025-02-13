@@ -106,7 +106,7 @@ const ThreeTierPricing = () => {
                 bg={useColorModeValue('red.300', 'red.700')}
                 px={3}
                 py={1}
-                color={useColorModeValue('gray.900', colors.gray[300])}
+                color={useColorModeValue(colors.gray[900], colors.gray[300])}
                 fontSize={'sm'}
                 fontWeight={'600'}
                 rounded={'xl'}

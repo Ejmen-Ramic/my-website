@@ -42,7 +42,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({
       letterSpacing={'1px'}
       _hover={{
         color: colors.links,
-        bg: useColorModeValue(colors.gray[100], 'gray.900'),
+        bg: useColorModeValue(colors.gray[100], colors.gray[900]),
       }}
       onClick={() => {
         changeLanguage(locale)
