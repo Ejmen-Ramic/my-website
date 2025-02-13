@@ -30,7 +30,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
       data-testid={'header'}
       h={{ base: '58px', md: '67px', lg: '120px' }}
       w={'full'}
-      bg={useColorModeValue('gray.100', colors.primary4)}
+      bg={useColorModeValue(colors.gray[100], colors.primary4)}
       justifyContent={'space-between'}
       top={isStickyHeader ? '0' : '-58px'}
     >

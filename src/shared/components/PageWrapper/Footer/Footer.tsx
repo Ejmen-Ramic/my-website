@@ -83,7 +83,7 @@ const Footer = () => {
   const year = new Date().getFullYear()
   return (
     <Box
-      bg={useColorModeValue('gray.100', colors.primary4)}
+      bg={useColorModeValue(colors.gray[100], colors.primary4)}
       color={useColorModeValue('gray.700', 'gray.200')}
       w={'100%'}
       bottom={'0'}
@@ -263,7 +263,7 @@ const Footer = () => {
                   <MenuItem
                     _hover={{
                       color: colors.links,
-                      bg: useColorModeValue('gray.100', 'gray.900'),
+                      bg: useColorModeValue(colors.gray[100], 'gray.900'),
                     }}
                   >
                     <Link href={'/photography'}>

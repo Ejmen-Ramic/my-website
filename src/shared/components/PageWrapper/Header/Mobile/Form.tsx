@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import {
   Box,
   Heading,
@@ -7,32 +7,32 @@ import {
   useColorModeValue,
   useToast,
   Text,
-} from '@chakra-ui/react';
-import { t, Trans } from '@lingui/macro';
-import { colors } from '../../../Hooks/color';
-import * as Sentry from '@sentry/browser';
+} from '@chakra-ui/react'
+import { t, Trans } from '@lingui/macro'
+import { colors } from '../../../Hooks/color'
+import * as Sentry from '@sentry/browser'
 
-type Status = 'IDLE' | 'SUCCESS' | 'ERROR';
+type Status = 'IDLE' | 'SUCCESS' | 'ERROR'
 
 interface SubscribeResponse {
-  message: string;
-  data?: any;
-  error?: string;
+  message: string
+  data?: any
+  error?: string
 }
 
 const HeaderForm = () => {
-  const [email, setEmail] = useState<string>('');
-  const [status, setStatus] = useState<Status>('IDLE');
-  const [loading, setLoading] = useState<boolean>(false);
-  const toast = useToast();
+  const [email, setEmail] = useState<string>('')
+  const [status, setStatus] = useState<Status>('IDLE')
+  const [loading, setLoading] = useState<boolean>(false)
+  const toast = useToast()
 
   const validateEmail = (email: string): boolean => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
 
   const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
+    event.preventDefault()
 
     if (!validateEmail(email)) {
       toast({
@@ -41,12 +41,12 @@ const HeaderForm = () => {
         status: 'error',
         duration: 3000,
         isClosable: true,
-      });
-      return;
+      })
+      return
     }
 
-    setLoading(true);
-    setStatus('IDLE');
+    setLoading(true)
+    setStatus('IDLE')
 
     try {
       const response = await fetch(
@@ -58,29 +58,29 @@ const HeaderForm = () => {
           },
           body: JSON.stringify({ email }),
         }
-      );
+      )
 
-      const data: SubscribeResponse = await response.json();
+      const data: SubscribeResponse = await response.json()
 
       if (response.ok) {
-        setStatus('SUCCESS');
-        setEmail('');
+        setStatus('SUCCESS')
+        setEmail('')
         toast({
           title: t`Success!`,
           description: t`You have been successfully subscribed to our newsletter.`,
           status: 'success',
           duration: 5000,
           isClosable: true,
-        });
+        })
       } else {
-        setStatus('ERROR');
+        setStatus('ERROR')
         toast({
           title: t`Subscription failed`,
           description: data.error || t`An error occurred while subscribing.`,
           status: 'error',
           duration: 5000,
           isClosable: true,
-        });
+        })
 
         Sentry.captureMessage('Newsletter subscription failed', {
           extra: {
@@ -89,11 +89,11 @@ const HeaderForm = () => {
             response: data,
           },
           level: 'error',
-        });
+        })
       }
     } catch (err) {
-      setStatus('ERROR');
-      console.error('Newsletter subscription error:', err);
+      setStatus('ERROR')
+      console.error('Newsletter subscription error:', err)
 
       toast({
         title: t`Connection Error`,
@@ -101,18 +101,18 @@ const HeaderForm = () => {
         status: 'error',
         duration: 5000,
         isClosable: true,
-      });
+      })
 
       Sentry.captureException(err, {
         extra: {
           email,
           context: 'Newsletter subscription',
         },
-      });
+      })
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   return (
     <Box mt={'auto'} bottom={0}>
@@ -133,14 +133,14 @@ const HeaderForm = () => {
             rounded={'17px'}
             _placeholder={{ color: 'gray.300' }}
             placeholder={t`Enter your email`}
-            color={'gray.100'}
+            color={colors.gray[100]}
             bg={useColorModeValue('blackAlpha.100', 'gray.600')}
             borderWidth={0}
           />
           <Button
             type={'submit'}
             height={'50px'}
-            color={useColorModeValue(colors.white, 'gray.100')}
+            color={useColorModeValue(colors.white, colors.gray[100])}
             bg={useColorModeValue('green.400', 'gray.700')}
             _hover={{ bg: 'yellow.400', color: 'gray.900' }}
             position={'absolute'}
@@ -165,7 +165,7 @@ const HeaderForm = () => {
         )}
       </form>
     </Box>
-  );
-};
+  )
+}
 
-export default HeaderForm;
+export default HeaderForm
