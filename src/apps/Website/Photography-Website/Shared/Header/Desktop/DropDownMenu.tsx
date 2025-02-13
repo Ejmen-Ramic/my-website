@@ -124,7 +124,7 @@ const DropDownItem = ({
       p={2}
       rounded={'md'}
       _hover={{
-        bg: useColorModeValue('gray.100', 'gray.900'),
+        bg: useColorModeValue(colors.gray[100], 'gray.900'),
         color: linkColor,
       }}
     >

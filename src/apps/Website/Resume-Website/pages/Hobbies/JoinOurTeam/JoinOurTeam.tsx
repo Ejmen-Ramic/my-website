@@ -13,9 +13,9 @@ import {
   useBreakpointValue,
   IconProps,
   Icon,
-} from '@chakra-ui/react';
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
-import { colors } from '../../../../../../shared/components/Hooks/color';
+} from '@chakra-ui/react'
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 const avatars = [
   {
@@ -38,7 +38,7 @@ const avatars = [
     name: 'Christian Nwamba',
     url: 'https://bit.ly/code-beast',
   },
-];
+]
 
 const JoinOurTeam = () => {
   return (
@@ -156,7 +156,7 @@ const JoinOurTeam = () => {
               <Stack spacing={4}>
                 <Input
                   placeholder={'Firstname'}
-                  bg={'gray.100'}
+                  bg={colors.gray[100]}
                   border={0}
                   color={'gray.500'}
                   _placeholder={{
@@ -165,7 +165,7 @@ const JoinOurTeam = () => {
                 />
                 <Input
                   placeholder={'firstname@lastname.io'}
-                  bg={'gray.100'}
+                  bg={colors.gray[100]}
                   border={0}
                   color={'gray.500'}
                   _placeholder={{
@@ -174,7 +174,7 @@ const JoinOurTeam = () => {
                 />
                 <Input
                   placeholder={'+1 (___) __-___-___'}
-                  bg={'gray.100'}
+                  bg={colors.gray[100]}
                   border={0}
                   color={'gray.500'}
                   _placeholder={{
@@ -214,12 +214,12 @@ const JoinOurTeam = () => {
         />
       </Box>
     </FadeInView>
-  );
-};
+  )
+}
 
 export const Blur = (props: IconProps) => {
-  const width = useBreakpointValue({ base: '100%', md: '40vw', lg: '30vw' });
-  const zIndex = useBreakpointValue({ base: -1, md: -1, lg: 0 });
+  const width = useBreakpointValue({ base: '100%', md: '40vw', lg: '30vw' })
+  const zIndex = useBreakpointValue({ base: -1, md: -1, lg: 0 })
   return (
     <Icon
       width={width}
@@ -238,7 +238,7 @@ export const Blur = (props: IconProps) => {
       <circle cx={70.5} cy={458.5} r={101.5} fill={'#48BB78'} />
       <circle cx={426.5} cy={-0.5} r={101.5} fill={'#4299E1'} />
     </Icon>
-  );
-};
+  )
+}
 
-export default JoinOurTeam;
+export default JoinOurTeam

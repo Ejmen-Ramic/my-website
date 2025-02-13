@@ -20,7 +20,7 @@ const EngineeringSKills: FC = () => {
   return (
     <Stack
       w={'full'}
-      bg={{ md: useColorModeValue('gray.100', 'gray.700') }}
+      bg={{ md: useColorModeValue(colors.gray[100], 'gray.700') }}
       data-testid={'engineering-skills-component'}
     >
       <FadeInView>

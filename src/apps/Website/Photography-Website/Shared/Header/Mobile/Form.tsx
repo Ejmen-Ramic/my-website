@@ -1,4 +1,10 @@
-import { Box, Heading, Input, Button, useColorModeValue } from '@chakra-ui/react'
+import {
+  Box,
+  Heading,
+  Input,
+  Button,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import { t, Trans } from '@lingui/macro'
 import { colors } from '../../../../../../shared/components/Hooks/color'
 
@@ -20,14 +26,14 @@ const HeaderForm = () => {
             _placeholder={{ color: 'gray.300' }}
             placeholder={t`Enter your email`}
             _focus={{ outline: 0, bg: 'whiteAlpha.400' }}
-            color={'gray.100'}
+            color={colors.gray[100]}
             bg={useColorModeValue('blackAlpha.100', 'gray.600')}
             borderWidth={0}
           />
           <Button
             type={'submit'}
             height={'50px'}
-            color={useColorModeValue(colors.white, 'gray.100')}
+            color={useColorModeValue(colors.white, colors.gray[100])}
             bg={useColorModeValue('green.400', 'gray.700')}
             _hover={{ bg: 'yellow.400', color: 'gray.900' }}
             position={'absolute'}

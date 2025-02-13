@@ -142,7 +142,7 @@ const TestimonialAvatar = ({
 }
 
 export default function WithSpeechBubbles() {
-  const bg = useColorModeValue('gray.100', 'gray.700')
+  const bg = useColorModeValue(colors.gray[100], 'gray.700')
   return (
     <VStack bg={bg} w={'full'}>
       <FadeInView>
