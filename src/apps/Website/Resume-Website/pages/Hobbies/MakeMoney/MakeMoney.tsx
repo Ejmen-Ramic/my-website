@@ -111,7 +111,7 @@ const MakeMoneyPart = () => {
               <Box>
                 <Icon
                   as={Arrow}
-                  color={useColorModeValue('gray.800', colors.gray[300])}
+                  color={useColorModeValue(colors.gray[800], colors.gray[300])}
                   w={71}
                   position={'absolute'}
                   right={-71}

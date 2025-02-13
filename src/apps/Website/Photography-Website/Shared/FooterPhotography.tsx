@@ -318,7 +318,7 @@ const FooterPhotography = () => {
                 />
                 <IconButton
                   bg={useColorModeValue('green.400', 'green.800')}
-                  color={useColorModeValue(colors.white, 'gray.800')}
+                  color={useColorModeValue(colors.white, colors.gray[800])}
                   _hover={{
                     bg: 'green.600',
                   }}

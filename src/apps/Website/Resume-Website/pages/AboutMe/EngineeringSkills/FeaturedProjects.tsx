@@ -14,7 +14,7 @@ import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { itemsFeatureProjects } from './Props'
 
 const FeaturedProjects: FC = () => {
-  const GridColor = useColorModeValue(colors.white, 'gray.800')
+  const GridColor = useColorModeValue(colors.white, colors.gray[800])
   const StackColor = useColorModeValue(colors.white, '#2D3748')
   const HeaderPopColor = useColorModeValue('teal.400', 'blue.400')
   const popoverShadow = useColorModeValue(

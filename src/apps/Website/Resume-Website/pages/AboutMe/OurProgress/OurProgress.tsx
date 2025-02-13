@@ -58,7 +58,7 @@ function StatsCard(props: StatsCardProps) {
         py={'5'}
         shadow={'xl'}
         border={'1px solid'}
-        borderColor={useColorModeValue('gray.800', colors.gray[500])}
+        borderColor={useColorModeValue(colors.gray[800], colors.gray[500])}
         bgColor={useColorModeValue(colors.white, colors.gray[700])}
         rounded={'lg'}
       >
@@ -66,7 +66,7 @@ function StatsCard(props: StatsCardProps) {
           <Flex justifyContent={'space-between'}>
             <Box
               pl={{ base: 2, md: 4 }}
-              color={useColorModeValue('gray.800', colors.white)}
+              color={useColorModeValue(colors.gray[800], colors.white)}
             >
               <StatLabel fontWeight={'medium'} isTruncated>
                 {title}
@@ -77,7 +77,7 @@ function StatsCard(props: StatsCardProps) {
             </Box>
             <Box
               my={'auto'}
-              color={useColorModeValue('gray.800', colors.white)}
+              color={useColorModeValue(colors.gray[800], colors.white)}
               alignContent={'center'}
             >
               {icon}

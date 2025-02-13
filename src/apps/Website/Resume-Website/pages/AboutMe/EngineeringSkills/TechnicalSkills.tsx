@@ -23,7 +23,7 @@ import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { itemsTechSkills } from './Props'
 
 const TechnicalSkills: FC = () => {
-  const GridColor = useColorModeValue(colors.white, 'gray.800')
+  const GridColor = useColorModeValue(colors.white, colors.gray[800])
   const StackColor = useColorModeValue(colors.white, '#2D3748')
   const hoverShadowLight = useColorModeValue(
     '0 8px 16px rgba(0, 0, 0, 0.2)',

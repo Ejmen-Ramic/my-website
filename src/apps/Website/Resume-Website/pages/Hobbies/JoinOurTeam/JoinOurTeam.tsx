@@ -102,7 +102,7 @@ const JoinOurTeam = () => {
                 justify={'center'}
                 fontFamily={'heading'}
                 fontSize={{ base: 'sm', md: 'lg' }}
-                bg={'gray.800'}
+                bg={colors.gray[800]}
                 color={colors.white}
                 rounded={'full'}
                 minWidth={useBreakpointValue({ base: '44px', md: '60px' })}
@@ -134,7 +134,7 @@ const JoinOurTeam = () => {
           >
             <Stack spacing={4}>
               <Heading
-                color={'gray.800'}
+                color={colors.gray[800]}
                 lineHeight={1.1}
                 fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
               >
@@ -187,7 +187,7 @@ const JoinOurTeam = () => {
                 <Button
                   fontFamily={'heading'}
                   bg={colors.gray[200]}
-                  color={'gray.800'}
+                  color={colors.gray[800]}
                 >
                   Upload CV
                 </Button>

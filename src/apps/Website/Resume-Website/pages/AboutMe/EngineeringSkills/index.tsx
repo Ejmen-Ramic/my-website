@@ -35,7 +35,7 @@ const EngineeringSKills: FC = () => {
             <Stack
               w={'full'}
               maxW={'1400px'}
-              bg={useColorModeValue(colors.white, 'gray.800')}
+              bg={useColorModeValue(colors.white, colors.gray[800])}
               spacing={'20px'}
               p={'32px'}
               borderRadius={{ md: '10px' }}

@@ -165,7 +165,7 @@ const Card = ({ id, title, description, date }: CardProps) => {
     <HStack
       flex={1}
       p={{ base: 3, sm: 6 }}
-      bg={useColorModeValue(colors.gray[100], 'gray.800')}
+      bg={useColorModeValue(colors.gray[100], colors.gray[800])}
       spacing={5}
       rounded={'lg'}
       alignItems={'center'}

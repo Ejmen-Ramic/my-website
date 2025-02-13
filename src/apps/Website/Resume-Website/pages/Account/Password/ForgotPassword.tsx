@@ -22,7 +22,7 @@ const ForgotPassword = (): JSX.Element => {
       minH={'100vh'}
       align={'center'}
       justify={'center'}
-      bg={useColorModeValue('gray.50', 'gray.800')}
+      bg={useColorModeValue('gray.50', colors.gray[800])}
     >
       <FadeInView>
         <Stack
@@ -40,7 +40,7 @@ const ForgotPassword = (): JSX.Element => {
           </Heading>
           <Text
             fontSize={{ base: 'sm', sm: 'md' }}
-            color={useColorModeValue('gray.800', colors.gray[400])}
+            color={useColorModeValue(colors.gray[800], colors.gray[400])}
           >
             <Trans>You&apos;ll get an email with a reset link</Trans>
           </Text>

@@ -102,7 +102,7 @@ const LanguageMenu = ({ languageOptions }: LanguageMenuProps) => {
           border={0}
           mt={'-7px'}
           zIndex={1}
-          bg={useColorModeValue(colors.white, 'gray.800')}
+          bg={useColorModeValue(colors.white, colors.gray[800])}
           p={3}
           rounded={'lg'}
           maxW={'200px'}

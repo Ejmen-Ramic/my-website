@@ -23,8 +23,8 @@ import items from './Props'
 const Endorsement: FC = () => {
   const textColor = useColorModeValue(colors.gray[600], colors.gray[400])
   const bg = useColorModeValue(colors.gray[100], colors.gray[700])
-  const borderTopColor = useColorModeValue(colors.white, 'gray.800')
-  const cardBg = useColorModeValue(colors.white, 'gray.800')
+  const borderTopColor = useColorModeValue(colors.white, colors.gray[800])
+  const cardBg = useColorModeValue(colors.white, colors.gray[800])
   const buttonColor = useColorModeValue('blue.500', 'blue.300')
 
   const [openPopoverId, setOpenPopoverId] = useState<string | null>(null)

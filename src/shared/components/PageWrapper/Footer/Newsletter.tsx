@@ -131,7 +131,7 @@ const Newsletter: React.FC = () => {
     'whiteAlpha.200'
   )
   const buttonBgColor = useColorModeValue('green.400', 'green.800')
-  const buttonColor = useColorModeValue(colors.white, 'gray.800')
+  const buttonColor = useColorModeValue(colors.white, colors.gray[800])
   const buttonHoverBgColor = 'green.600'
 
   return (

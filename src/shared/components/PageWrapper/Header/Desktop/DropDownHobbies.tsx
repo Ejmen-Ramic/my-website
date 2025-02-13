@@ -98,7 +98,7 @@ const DropDownHobbies = ({ menuData }: MenuDataProps) => {
           border={'1px'}
           borderColor={useColorModeValue('transparent', colors.white)}
           rounded={'lg'}
-          bg={useColorModeValue(colors.white, 'gray.800')}
+          bg={useColorModeValue(colors.white, colors.gray[800])}
           zIndex={1}
         >
           <Stack>

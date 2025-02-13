@@ -32,9 +32,9 @@ const TestimonialContent = ({
   const [isExpanded, setIsExpanded] = useState(false)
   const wordLimit = 19
 
-  const borderTopColor = useColorModeValue(colors.white, 'gray.800')
+  const borderTopColor = useColorModeValue(colors.white, colors.gray[800])
   const buttonColor = useColorModeValue('blue.500', 'blue.300')
-  const cardBg = useColorModeValue(colors.white, 'gray.800')
+  const cardBg = useColorModeValue(colors.white, colors.gray[800])
 
   const words = description.split(' ')
   const shouldShowReadMore = words.length > wordLimit
