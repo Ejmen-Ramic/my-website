@@ -84,7 +84,7 @@ const Footer = () => {
   return (
     <Box
       bg={useColorModeValue(colors.gray[100], colors.primary4)}
-      color={useColorModeValue('gray.700', 'gray.200')}
+      color={useColorModeValue('gray.700', colors.gray[200])}
       w={'100%'}
       bottom={'0'}
       left={'0'}

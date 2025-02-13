@@ -183,7 +183,7 @@ const JoinOurTeam = () => {
                 />
                 <Button
                   fontFamily={'heading'}
-                  bg={'gray.200'}
+                  bg={colors.gray[200]}
                   color={'gray.800'}
                 >
                   Upload CV

@@ -1,4 +1,14 @@
-import { chakra, Stack, HStack, Text, Box, Flex, Link, Icon, useColorModeValue } from '@chakra-ui/react'
+import {
+  chakra,
+  Stack,
+  HStack,
+  Text,
+  Box,
+  Flex,
+  Link,
+  Icon,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import { FaGithub } from 'react-icons/fa'
 import { colors } from '../../../../../../../shared/components/Hooks/color'
 
@@ -29,8 +39,20 @@ const AboutIntro = () => {
         zIndex={'0'}
         opacity={'0.8'}
       ></Box>
-      <Stack pos={'relative'} zIndex={1} direction={'column'} justifyContent={'center'} spacing={6} maxW={'550px'}>
-        <chakra.h1 fontSize={{ base: '3xl', sm: '5xl' }} lineHeight={1} fontWeight={'bold'} textAlign={'left'}>
+      <Stack
+        pos={'relative'}
+        zIndex={1}
+        direction={'column'}
+        justifyContent={'center'}
+        spacing={6}
+        maxW={'550px'}
+      >
+        <chakra.h1
+          fontSize={{ base: '3xl', sm: '5xl' }}
+          lineHeight={1}
+          fontWeight={'bold'}
+          textAlign={'left'}
+        >
           Explore TemplatesKart <br />
         </chakra.h1>
         <Text
@@ -40,8 +62,9 @@ const AboutIntro = () => {
           fontWeight={'400'}
           color={useColorModeValue('gray.500', 'gray.700')}
         >
-          TemplatesKart is a set of more than 100 responsive components built with chakraUI. All components support
-          dark/light color scheme and chakraUI theme customizations. TemplatesKart is free for everyone.
+          TemplatesKart is a set of more than 100 responsive components built
+          with chakraUI. All components support dark/light color scheme and
+          chakraUI theme customizations. TemplatesKart is free for everyone.
         </Text>
         <HStack spacing={{ base: 0, sm: 2 }} flexWrap={'wrap'}>
           <chakra.button
@@ -67,8 +90,8 @@ const AboutIntro = () => {
             rounded={'md'}
             fontWeight={'bold'}
             alignItems={'center'}
-            bg={useColorModeValue('gray.200', 'gray.600')}
-            _hover={{ bg: useColorModeValue('gray.200', 'gray.700') }}
+            bg={useColorModeValue(colors.gray[200], 'gray.600')}
+            _hover={{ bg: useColorModeValue(colors.gray[200], 'gray.700') }}
           >
             <Icon as={FaGithub} h={4} w={4} />
             <chakra.span ml={1}> Source code</chakra.span>

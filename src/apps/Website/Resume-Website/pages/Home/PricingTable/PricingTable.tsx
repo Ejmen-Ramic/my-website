@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode } from 'react'
 import {
   Box,
   Stack,
@@ -11,8 +11,8 @@ import {
   ListItem,
   ListIcon,
   Button,
-} from '@chakra-ui/react';
-import { FaCheckCircle } from 'react-icons/fa';
+} from '@chakra-ui/react'
+import { FaCheckCircle } from 'react-icons/fa'
 
 function PriceWrapper({ children }: { children: ReactNode }) {
   return (
@@ -21,12 +21,12 @@ function PriceWrapper({ children }: { children: ReactNode }) {
       shadow={'base'}
       borderWidth={'1px'}
       alignSelf={{ base: 'center', lg: 'flex-start' }}
-      borderColor={useColorModeValue('gray.200', 'gray.500')}
+      borderColor={useColorModeValue(colors.gray[200], 'gray.500')}
       borderRadius={'xl'}
     >
       {children}
     </Box>
-  );
+  )
 }
 
 const ThreeTierPricing = () => {
@@ -209,7 +209,7 @@ const ThreeTierPricing = () => {
         </PriceWrapper>
       </Stack>
     </Box>
-  );
-};
+  )
+}
 
-export default ThreeTierPricing;
+export default ThreeTierPricing
