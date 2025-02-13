@@ -40,7 +40,7 @@ const Header = ({ isStickyHeader }: HeaderProps = {}) => {
             w={{ base: 'max-content', md: 'fit-content' }}
             ml={{ base: '20px', md: '40px' }}
             color={useColorModeValue(colors.primary4, colors.white)}
-            _hover={{ color: useColorModeValue('gray.400', 'gray.600') }}
+            _hover={{ color: useColorModeValue(colors.gray[400], 'gray.600') }}
             fontSize={{ base: '20px', md: '30px', lg: '35px' }}
             fontFamily={'oswald'}
             fontWeight={'300'}

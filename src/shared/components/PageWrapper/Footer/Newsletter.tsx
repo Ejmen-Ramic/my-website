@@ -211,7 +211,7 @@ const Newsletter: React.FC = () => {
 
         {/* <Text
           mt={2}
-          color={useColorModeValue('gray.600', 'gray.400')}
+          color={useColorModeValue('gray.600', colors.gray[400])}
           fontSize={'xs'}
           textAlign={'center'}
         >

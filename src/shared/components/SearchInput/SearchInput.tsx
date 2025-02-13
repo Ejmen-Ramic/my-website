@@ -1,4 +1,5 @@
-import { Flex } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react'
+import { colors } from '../Hooks/color'
 
 const people = [
   {
@@ -21,14 +22,14 @@ const people = [
     name: 'Ryan Florence',
     image: 'https://bit.ly/ryan-florence',
   },
-];
+]
 const SearchInput = () => {
   return (
     <Flex
       boxSize={'full'}
       h={'100vh'}
       pos={'absolute'}
-      bg={'gray.400'}
+      bg={colors.gray[400]}
       _dark={{
         bg: 'gray.600',
       }}
@@ -52,7 +53,7 @@ const SearchInput = () => {
         </AutoCompleteList>
       </AutoComplete> */}
     </Flex>
-  );
-};
+  )
+}
 
-export default SearchInput;
+export default SearchInput

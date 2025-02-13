@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment } from 'react'
 import {
   chakra,
   Container,
@@ -10,9 +10,9 @@ import {
   Flex,
   Box,
   Show,
-} from '@chakra-ui/react';
-import { FaGithub } from 'react-icons/fa';
-import { colors } from '../../../../../../../shared/components/Hooks/color';
+} from '@chakra-ui/react'
+import { FaGithub } from 'react-icons/fa'
+import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 const features = [
   {
@@ -99,7 +99,7 @@ const features = [
       </svg>
     ),
   },
-];
+]
 const HeroSection = () => {
   return (
     <Fragment>
@@ -123,7 +123,7 @@ const HeroSection = () => {
               <br /> built on top of Chakra UI
             </chakra.h1>
             <Text
-              color={useColorModeValue('gray.500', 'gray.400')}
+              color={useColorModeValue('gray.500', colors.gray[400])}
               fontSize={'lg'}
               textAlign={'left'}
               fontWeight={'400'}
@@ -160,7 +160,7 @@ const HeroSection = () => {
                     </Text>
                     <Text
                       fontSize={'sm'}
-                      color={'gray.400'}
+                      color={colors.gray[400]}
                       maxW={{ base: '100%', md: '200px' }}
                     >
                       {feature.detail}
@@ -227,7 +227,7 @@ const HeroSection = () => {
         </Box>
       </Show>
     </Fragment>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection
