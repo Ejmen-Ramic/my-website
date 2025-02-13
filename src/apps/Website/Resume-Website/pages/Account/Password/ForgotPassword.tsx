@@ -29,7 +29,7 @@ const ForgotPassword = (): JSX.Element => {
           spacing={4}
           w={'full'}
           maxW={'md'}
-          bg={useColorModeValue(colors.white, 'gray.700')}
+          bg={useColorModeValue(colors.white, colors.gray[700])}
           rounded={'xl'}
           boxShadow={'lg'}
           p={6}

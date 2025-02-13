@@ -148,7 +148,10 @@ const ContactForm: FC = () => {
                       icon={<MdEmail />}
                       _hover={{
                         bg: 'blue.500',
-                        color: useColorModeValue(colors.white, 'gray.700'),
+                        color: useColorModeValue(
+                          colors.white,
+                          colors.gray[700]
+                        ),
                       }}
                       onClick={onCopy}
                       isRound
@@ -168,7 +171,10 @@ const ContactForm: FC = () => {
                       icon={<BsGithub />}
                       _hover={{
                         bg: 'blue.500',
-                        color: useColorModeValue(colors.white, 'gray.700'),
+                        color: useColorModeValue(
+                          colors.white,
+                          colors.gray[700]
+                        ),
                       }}
                       isRound
                       data-testid={'github-icon'}
@@ -186,7 +192,10 @@ const ContactForm: FC = () => {
                       icon={<BsTwitterX size='28px' />}
                       _hover={{
                         bg: 'blue.500',
-                        color: useColorModeValue(colors.white, 'gray.700'),
+                        color: useColorModeValue(
+                          colors.white,
+                          colors.gray[700]
+                        ),
                       }}
                       isRound
                       data-testid={'x-icon'}
@@ -206,7 +215,10 @@ const ContactForm: FC = () => {
                       icon={<BsLinkedin size='28px' />}
                       _hover={{
                         bg: 'blue.500',
-                        color: useColorModeValue(colors.white, 'gray.700'),
+                        color: useColorModeValue(
+                          colors.white,
+                          colors.gray[700]
+                        ),
                       }}
                       isRound
                       data-testid={'linkedin-icon'}
@@ -215,10 +227,10 @@ const ContactForm: FC = () => {
                 </Stack>
 
                 <Box
-                  bg={useColorModeValue(colors.white, 'gray.700')}
+                  bg={useColorModeValue(colors.white, colors.gray[700])}
                   borderRadius={'lg'}
                   p={8}
-                  color={useColorModeValue('gray.700', 'whiteAlpha.900')}
+                  color={useColorModeValue(colors.gray[700], 'whiteAlpha.900')}
                   shadow={'base'}
                 >
                   <form

@@ -188,7 +188,7 @@ const HeroSection = () => {
               </chakra.button>
               <Flex
                 border={'1px solid'}
-                borderColor={'gray.700'}
+                borderColor={colors.gray[700]}
                 justify={'center'}
                 p={3}
                 px={4}

@@ -229,7 +229,7 @@ const LineWithDot = () => {
         left={'50%'}
         height={'calc(100% + 10px)'}
         border={'1px solid'}
-        borderColor={useColorModeValue(colors.gray[200], 'gray.700')}
+        borderColor={useColorModeValue(colors.gray[200], colors.gray[700])}
         top={'0px'}
       ></chakra.span>
       <Box pos={'relative'} p={'10px'}>

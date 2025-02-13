@@ -67,7 +67,7 @@ const ThreeTierPricing = () => {
             </HStack>
           </Box>
           <VStack
-            bg={useColorModeValue('gray.50', 'gray.700')}
+            bg={useColorModeValue('gray.50', colors.gray[700])}
             py={4}
             borderBottomRadius={'xl'}
           >
@@ -131,7 +131,7 @@ const ThreeTierPricing = () => {
               </HStack>
             </Box>
             <VStack
-              bg={useColorModeValue('gray.50', 'gray.700')}
+              bg={useColorModeValue('gray.50', colors.gray[700])}
               py={4}
               borderBottomRadius={'xl'}
             >
@@ -183,7 +183,7 @@ const ThreeTierPricing = () => {
             </HStack>
           </Box>
           <VStack
-            bg={useColorModeValue('gray.50', 'gray.700')}
+            bg={useColorModeValue('gray.50', colors.gray[700])}
             py={4}
             borderBottomRadius={'xl'}
           >

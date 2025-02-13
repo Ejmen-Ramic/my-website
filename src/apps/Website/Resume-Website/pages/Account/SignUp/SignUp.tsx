@@ -44,7 +44,7 @@ const SignUp = () => {
           </Stack>
           <Box
             rounded={'lg'}
-            bg={useColorModeValue(colors.white, 'gray.700')}
+            bg={useColorModeValue(colors.white, colors.gray[700])}
             boxShadow={'lg'}
             p={8}
           >

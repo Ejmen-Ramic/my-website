@@ -84,7 +84,7 @@ const Footer = () => {
   return (
     <Box
       bg={useColorModeValue(colors.gray[100], colors.primary4)}
-      color={useColorModeValue('gray.700', colors.gray[200])}
+      color={useColorModeValue(colors.gray[700], colors.gray[200])}
       w={'100%'}
       bottom={'0'}
       left={'0'}
@@ -104,7 +104,7 @@ const Footer = () => {
         >
           <Stack spacing={6}>
             <Box>
-              <Logo color={useColorModeValue('gray.700', colors.white)} />
+              <Logo color={useColorModeValue(colors.gray[700], colors.white)} />
             </Box>
             <FadeInView delay={0.1}>
               <Text
@@ -209,7 +209,7 @@ const Footer = () => {
               <Text
                 mb={{ md: '20px' }}
                 fontSize={'17px'}
-                color={useColorModeValue('gray.700', colors.white)}
+                color={useColorModeValue(colors.gray[700], colors.white)}
                 fontFamily={'inherit'}
                 fontWeight={'400'}
               >

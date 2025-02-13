@@ -60,7 +60,7 @@ const AboutIntro = () => {
           textAlign={'left'}
           lineHeight={'1.375'}
           fontWeight={'400'}
-          color={useColorModeValue(colors.gray[500], 'gray.700')}
+          color={useColorModeValue(colors.gray[500], colors.gray[700])}
         >
           TemplatesKart is a set of more than 100 responsive components built
           with chakraUI. All components support dark/light color scheme and
@@ -91,7 +91,9 @@ const AboutIntro = () => {
             fontWeight={'bold'}
             alignItems={'center'}
             bg={useColorModeValue(colors.gray[200], colors.gray[600])}
-            _hover={{ bg: useColorModeValue(colors.gray[200], 'gray.700') }}
+            _hover={{
+              bg: useColorModeValue(colors.gray[200], colors.gray[700]),
+            }}
           >
             <Icon as={FaGithub} h={4} w={4} />
             <chakra.span ml={1}> Source code</chakra.span>

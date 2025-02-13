@@ -59,7 +59,7 @@ function StatsCard(props: StatsCardProps) {
         shadow={'xl'}
         border={'1px solid'}
         borderColor={useColorModeValue('gray.800', colors.gray[500])}
-        bgColor={useColorModeValue(colors.white, 'gray.700')}
+        bgColor={useColorModeValue(colors.white, colors.gray[700])}
         rounded={'lg'}
       >
         <FadeInView delay={0.3}>
