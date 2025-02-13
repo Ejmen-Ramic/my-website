@@ -73,7 +73,10 @@ const MakeMoneyPart = () => {
                 your audience
               </Text>
             </Heading>
-            <Text color={'gray.500'} textAlign={{ base: 'left', md: 'center' }}>
+            <Text
+              color={colors.gray[500]}
+              textAlign={{ base: 'left', md: 'center' }}
+            >
               Monetize your content by charging your most loyal learners and
               reward them loyalty points. Give back to your loyal readers by
               granting them access to your pre-releases and sneak-peaks.

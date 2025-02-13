@@ -1,4 +1,12 @@
-import { Container, Text, VStack, Stack, Avatar, Icon, useColorModeValue } from '@chakra-ui/react'
+import {
+  Container,
+  Text,
+  VStack,
+  Stack,
+  Avatar,
+  Icon,
+  useColorModeValue,
+} from '@chakra-ui/react'
 // Here we have used react-icons package for the icon
 import { FaQuoteRight } from 'react-icons/fa'
 import { colors } from '../../../../../../shared/components/Hooks/color'
@@ -44,9 +52,14 @@ const TestimonialCard = () => {
           top={'-1.5rem'}
         />
         <Stack direction={'column'} spacing={5}>
-          <Text color={'gray.500'}></Text>
-          <Text color={'gray.500'}></Text>
-          <Text fontWeight={'bold'} fontSize={'lg'} align={'right'} mr={'3rem !important'}>
+          <Text color={colors.gray[500]}></Text>
+          <Text color={colors.gray[500]}></Text>
+          <Text
+            fontWeight={'bold'}
+            fontSize={'lg'}
+            align={'right'}
+            mr={'3rem !important'}
+          >
             {testimonial.username}
           </Text>
         </Stack>

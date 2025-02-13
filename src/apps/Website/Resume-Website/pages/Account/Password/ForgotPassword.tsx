@@ -47,7 +47,7 @@ const ForgotPassword = (): JSX.Element => {
           <FormControl id={'email'}>
             <Input
               placeholder={t`your-email@example.com`}
-              _placeholder={{ color: 'gray.500' }}
+              _placeholder={{ color: colors.gray[500] }}
               type={'email'}
             />
           </FormControl>

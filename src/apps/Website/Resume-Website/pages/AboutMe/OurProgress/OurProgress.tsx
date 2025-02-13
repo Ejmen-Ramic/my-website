@@ -8,48 +8,48 @@ import {
   StatNumber,
   useColorModeValue,
   VStack,
-} from '@chakra-ui/react';
-import { useState, useEffect, ReactNode } from 'react';
-import { BsPerson } from 'react-icons/bs';
-import { FaAddressCard, FaCamera } from 'react-icons/fa6';
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
-import { t, Trans } from '@lingui/macro';
-import { colors } from '../../../../../../shared/components/Hooks/color';
+} from '@chakra-ui/react'
+import { useState, useEffect, ReactNode } from 'react'
+import { BsPerson } from 'react-icons/bs'
+import { FaAddressCard, FaCamera } from 'react-icons/fa6'
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { t, Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 interface StatsCardProps {
-  title: string;
-  icon: ReactNode;
-  stat: string;
+  title: string
+  icon: ReactNode
+  stat: string
 }
 
 function StatsCard(props: StatsCardProps) {
-  const { title, stat, icon } = props;
-  const [count, setCount] = useState(0);
-  const targetCount = parseInt(stat.replace(/,/g, ''), 10);
-  const threshold = targetCount - 200;
+  const { title, stat, icon } = props
+  const [count, setCount] = useState(0)
+  const targetCount = parseInt(stat.replace(/,/g, ''), 10)
+  const threshold = targetCount - 200
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCount((prevCount) => {
-        let increment = Math.ceil(targetCount / 100);
+        let increment = Math.ceil(targetCount / 100)
 
         if (prevCount + increment >= threshold) {
-          increment = 1;
+          increment = 1
         }
 
         if (prevCount + increment >= targetCount) {
-          clearInterval(interval);
-          return targetCount;
+          clearInterval(interval)
+          return targetCount
         }
 
-        return prevCount + increment;
-      });
-    }, 20);
+        return prevCount + increment
+      })
+    }, 20)
 
     return () => {
-      clearInterval(interval);
-    };
-  }, [stat, targetCount, threshold]);
+      clearInterval(interval)
+    }
+  }, [stat, targetCount, threshold])
 
   return (
     <FadeInView delay={0.2}>
@@ -58,7 +58,7 @@ function StatsCard(props: StatsCardProps) {
         py={'5'}
         shadow={'xl'}
         border={'1px solid'}
-        borderColor={useColorModeValue('gray.800', 'gray.500')}
+        borderColor={useColorModeValue('gray.800', colors.gray[500])}
         bgColor={useColorModeValue(colors.white, 'gray.700')}
         rounded={'lg'}
       >
@@ -86,7 +86,7 @@ function StatsCard(props: StatsCardProps) {
         </FadeInView>
       </Stat>
     </FadeInView>
-  );
+  )
 }
 
 export default function BasicStatistics() {
@@ -119,5 +119,5 @@ export default function BasicStatistics() {
         />
       </SimpleGrid>
     </VStack>
-  );
+  )
 }

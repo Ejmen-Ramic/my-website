@@ -60,7 +60,7 @@ const AboutIntro = () => {
           textAlign={'left'}
           lineHeight={'1.375'}
           fontWeight={'400'}
-          color={useColorModeValue('gray.500', 'gray.700')}
+          color={useColorModeValue(colors.gray[500], 'gray.700')}
         >
           TemplatesKart is a set of more than 100 responsive components built
           with chakraUI. All components support dark/light color scheme and

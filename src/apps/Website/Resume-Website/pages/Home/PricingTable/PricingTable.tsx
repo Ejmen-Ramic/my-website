@@ -22,7 +22,7 @@ function PriceWrapper({ children }: { children: ReactNode }) {
       shadow={'base'}
       borderWidth={'1px'}
       alignSelf={{ base: 'center', lg: 'flex-start' }}
-      borderColor={useColorModeValue(colors.gray[200], 'gray.500')}
+      borderColor={useColorModeValue(colors.gray[200], colors.gray[500])}
       borderRadius={'xl'}
     >
       {children}
@@ -37,7 +37,7 @@ const ThreeTierPricing = () => {
         <Heading as={'h1'} fontSize={'4xl'}>
           Plans that fit your need
         </Heading>
-        <Text fontSize={'lg'} color={'gray.500'}>
+        <Text fontSize={'lg'} color={colors.gray[500]}>
           Start with 14-day free trial. No credit card needed. Cancel at
           anytime.
         </Text>
@@ -61,7 +61,7 @@ const ThreeTierPricing = () => {
               <Text fontSize={'5xl'} fontWeight={'900'}>
                 79
               </Text>
-              <Text fontSize={'3xl'} color={'gray.500'}>
+              <Text fontSize={'3xl'} color={colors.gray[500]}>
                 /month
               </Text>
             </HStack>
@@ -125,7 +125,7 @@ const ThreeTierPricing = () => {
                 <Text fontSize={'5xl'} fontWeight={'900'}>
                   149
                 </Text>
-                <Text fontSize={'3xl'} color={'gray.500'}>
+                <Text fontSize={'3xl'} color={colors.gray[500]}>
                   /month
                 </Text>
               </HStack>
@@ -177,7 +177,7 @@ const ThreeTierPricing = () => {
               <Text fontSize={'5xl'} fontWeight={'900'}>
                 349
               </Text>
-              <Text fontSize={'3xl'} color={'gray.500'}>
+              <Text fontSize={'3xl'} color={colors.gray[500]}>
                 /month
               </Text>
             </HStack>

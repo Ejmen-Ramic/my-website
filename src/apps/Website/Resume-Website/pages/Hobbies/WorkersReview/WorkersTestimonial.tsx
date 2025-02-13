@@ -148,7 +148,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
               <chakra.span
                 fontFamily={'Inter'}
                 fontWeight={'medium'}
-                color={'gray.500'}
+                color={colors.gray[500]}
               >
                 {' '}
                 - {role}
@@ -202,7 +202,7 @@ const GridBlurredBackdrop = () => {
           width={'70%'}
           fontFamily={'Inter'}
           fontWeight={'medium'}
-          color={useColorModeValue('gray.500', colors.gray[400])}
+          color={useColorModeValue(colors.gray[500], colors.gray[400])}
         >
           See why over{' '}
           <chakra.strong color={useColorModeValue('gray.700', 'gray.50')}>

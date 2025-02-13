@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import {
   Button,
   Stack,
@@ -10,49 +10,49 @@ import {
   Avatar,
   Heading,
   Skeleton,
-} from '@chakra-ui/react';
-import items from './Props';
-import FadeInView from '../../../../../../../shared/components/Hooks/FadeInView';
-import { colors } from '../../../../../../../shared/components/Hooks/color';
+} from '@chakra-ui/react'
+import items from './Props'
+import FadeInView from '../../../../../../../shared/components/Hooks/FadeInView'
+import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 interface BoxClassProps {
-  languageimage: string;
-  alt: string;
-  image: string;
-  name: string;
-  jobtitle: string;
-  rating: string;
-  skills: string;
-  followers: string;
+  languageimage: string
+  alt: string
+  image: string
+  name: string
+  jobtitle: string
+  rating: string
+  skills: string
+  followers: string
 }
 
 const BoxClass = () => {
-  const boxColorValue = useColorModeValue(colors.white, 'gray.800');
-  const buttonProfileColor = useColorModeValue('#151f21', 'gray.500');
-  const buttonFollowColor = useColorModeValue('green.400', 'blue.800');
+  const boxColorValue = useColorModeValue(colors.white, 'gray.800')
+  const buttonProfileColor = useColorModeValue('#151f21', colors.gray[500])
+  const buttonFollowColor = useColorModeValue('green.400', 'blue.800')
 
   const zoomInStyles = {
     transition: 'transform 0.001s',
     '&:hover': {
       transform: 'scale(1.01)',
     },
-  };
+  }
 
-  const [renderedItems, setRenderedItems] = useState<BoxClassProps[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [renderedItems, setRenderedItems] = useState<BoxClassProps[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
     const timer = setTimeout(() => {
       if (currentIndex < items.length) {
-        setRenderedItems((prevItems) => [...prevItems, items[currentIndex]]);
-        setCurrentIndex(currentIndex + 1);
+        setRenderedItems((prevItems) => [...prevItems, items[currentIndex]])
+        setCurrentIndex(currentIndex + 1)
       } else {
-        setIsLoading(false);
+        setIsLoading(false)
       }
-    }, 500);
-    return () => clearTimeout(timer);
-  }, [currentIndex]);
+    }, 500)
+    return () => clearTimeout(timer)
+  }, [currentIndex])
 
   return (
     <FadeInView>
@@ -117,26 +117,26 @@ const BoxClass = () => {
                   >
                     {name}
                   </Heading>
-                  <Text color={'gray.500'}>{jobtitle}</Text>
+                  <Text color={colors.gray[500]}>{jobtitle}</Text>
                 </Stack>
                 <Stack spacing={'50px'}>
                   <Stack direction={'column'} justify={'center'} spacing={6}>
                     <Stack direction={'row'} justify={'center'}>
                       <Stack spacing={0} align={'center'}>
                         <Text fontWeight={600}>{followers}</Text>
-                        <Text fontSize={'sm'} color={'gray.500'}>
+                        <Text fontSize={'sm'} color={colors.gray[500]}>
                           Followers
                         </Text>
                       </Stack>
                       <Stack spacing={0} align={'center'}>
                         <Text fontWeight={600}>{rating}</Text>
-                        <Text fontSize={'sm'} color={'gray.500'}>
+                        <Text fontSize={'sm'} color={colors.gray[500]}>
                           Rating
                         </Text>
                       </Stack>
                     </Stack>
                     <Stack alignItems={'center'}>
-                      <Text fontSize={'sm'} color={'gray.500'}>
+                      <Text fontSize={'sm'} color={colors.gray[500]}>
                         Skills
                       </Text>
                       <Text fontWeight={600}>{skills}</Text>
@@ -188,7 +188,7 @@ const BoxClass = () => {
           )}
       </Stack>
     </FadeInView>
-  );
-};
+  )
+}
 
-export default BoxClass;
+export default BoxClass

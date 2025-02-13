@@ -123,7 +123,7 @@ const HeroSection = () => {
               <br /> built on top of Chakra UI
             </chakra.h1>
             <Text
-              color={useColorModeValue('gray.500', colors.gray[400])}
+              color={useColorModeValue(colors.gray[500], colors.gray[400])}
               fontSize={'lg'}
               textAlign={'left'}
               fontWeight={'400'}

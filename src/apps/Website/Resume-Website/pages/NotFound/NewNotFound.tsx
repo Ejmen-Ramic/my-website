@@ -1,8 +1,8 @@
-import { Box, Heading, Text, Button, VStack } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
-import Footer from '../../../../../shared/components/PageWrapper/Footer/Footer';
-import { colors } from '../../../../../shared/components/Hooks/color';
-import Header from '../../../../../shared/components/PageWrapper/Header';
+import { Box, Heading, Text, Button, VStack } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
+import Footer from '../../../../../shared/components/PageWrapper/Footer/Footer'
+import { colors } from '../../../../../shared/components/Hooks/color'
+import Header from '../../../../../shared/components/PageWrapper/Header'
 
 const NotFound = () => {
   return (
@@ -27,7 +27,7 @@ const NotFound = () => {
           <Text fontSize={'18px'} mt={3} mb={2}>
             Page Not Found
           </Text>
-          <Text color={'gray.500'} mb={6}>
+          <Text color={colors.gray[500]} mb={6}>
             The page you're looking for does not seem to exist
           </Text>
           <Link to={'/'}>
@@ -44,7 +44,7 @@ const NotFound = () => {
       </VStack>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound

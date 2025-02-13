@@ -147,7 +147,10 @@ const JoinOurTeam = () => {
                   !
                 </Text>
               </Heading>
-              <Text color={'gray.500'} fontSize={{ base: 'sm', sm: 'md' }}>
+              <Text
+                color={colors.gray[500]}
+                fontSize={{ base: 'sm', sm: 'md' }}
+              >
                 We’re looking for amazing engineers just like you! Become a part
                 of our rockstar engineering team and skyrocket your career!
               </Text>
@@ -158,27 +161,27 @@ const JoinOurTeam = () => {
                   placeholder={'Firstname'}
                   bg={colors.gray[100]}
                   border={0}
-                  color={'gray.500'}
+                  color={colors.gray[500]}
                   _placeholder={{
-                    color: 'gray.500',
+                    color: colors.gray[500],
                   }}
                 />
                 <Input
                   placeholder={'firstname@lastname.io'}
                   bg={colors.gray[100]}
                   border={0}
-                  color={'gray.500'}
+                  color={colors.gray[500]}
                   _placeholder={{
-                    color: 'gray.500',
+                    color: colors.gray[500],
                   }}
                 />
                 <Input
                   placeholder={'+1 (___) __-___-___'}
                   bg={colors.gray[100]}
                   border={0}
-                  color={'gray.500'}
+                  color={colors.gray[500]}
                   _placeholder={{
-                    color: 'gray.500',
+                    color: colors.gray[500],
                   }}
                 />
                 <Button
