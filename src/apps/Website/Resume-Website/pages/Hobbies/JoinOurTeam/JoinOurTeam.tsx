@@ -126,7 +126,7 @@ const JoinOurTeam = () => {
             </Stack>
           </Stack>
           <Stack
-            bg={'gray.50'}
+            bg={colors.gray[50]}
             rounded={'xl'}
             p={{ base: 4, sm: 6, md: 8 }}
             spacing={{ base: 8 }}

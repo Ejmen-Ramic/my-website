@@ -26,7 +26,7 @@ const SignUp = () => {
       minH={'100vh'}
       align={'center'}
       justify={'center'}
-      bg={useColorModeValue('gray.50', colors.gray[800])}
+      bg={useColorModeValue(colors.gray[50], colors.gray[800])}
     >
       <FadeInView>
         <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>

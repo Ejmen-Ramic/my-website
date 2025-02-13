@@ -22,7 +22,7 @@ const ForgotPassword = (): JSX.Element => {
       minH={'100vh'}
       align={'center'}
       justify={'center'}
-      bg={useColorModeValue('gray.50', colors.gray[800])}
+      bg={useColorModeValue(colors.gray[50], colors.gray[800])}
     >
       <FadeInView>
         <Stack

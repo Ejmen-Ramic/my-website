@@ -193,7 +193,7 @@ const GridBlurredBackdrop = () => {
           fontSize={48}
           fontFamily={'Work Sans'}
           fontWeight={'bold'}
-          color={useColorModeValue(colors.gray[700], 'gray.50')}
+          color={useColorModeValue(colors.gray[700], colors.gray[50])}
         >
           You're in good company
         </chakra.h1>
@@ -205,7 +205,9 @@ const GridBlurredBackdrop = () => {
           color={useColorModeValue(colors.gray[500], colors.gray[400])}
         >
           See why over{' '}
-          <chakra.strong color={useColorModeValue(colors.gray[700], 'gray.50')}>
+          <chakra.strong
+            color={useColorModeValue(colors.gray[700], colors.gray[50])}
+          >
             150,000+
           </chakra.strong>{' '}
           influencers use EEZY to manage their social media content!
