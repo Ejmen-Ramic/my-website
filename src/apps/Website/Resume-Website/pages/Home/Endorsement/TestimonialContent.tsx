@@ -104,7 +104,7 @@ const TestimonialHeading = ({ children }: { children: ReactNode }) => {
 }
 
 const TestimonialText = ({ children }: { children: ReactNode }) => {
-  const textColor = useColorModeValue('gray.600', colors.gray[400])
+  const textColor = useColorModeValue(colors.gray[600], colors.gray[400])
   return (
     <Text textAlign={'center'} color={textColor} fontSize={'sm'}>
       {children}
@@ -121,7 +121,7 @@ const TestimonialAvatar = ({
   name: string
   title: string | JSX.Element
 }) => {
-  const textColor = useColorModeValue('gray.600', colors.gray[400])
+  const textColor = useColorModeValue(colors.gray[600], colors.gray[400])
   return (
     <Flex align={'center'} mt={8} direction={'column'}>
       <FadeInView delay={0.1}>

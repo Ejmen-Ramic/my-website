@@ -244,7 +244,7 @@ const LineWithDot = () => {
           backgroundSize={'cover'}
           backgroundRepeat={'no-repeat'}
           backgroundPosition={'center center'}
-          bg={useColorModeValue('gray.600', colors.gray[200])}
+          bg={useColorModeValue(colors.gray[600], colors.gray[200])}
           borderRadius={'100px'}
           backgroundImage={'none'}
           opacity={1}

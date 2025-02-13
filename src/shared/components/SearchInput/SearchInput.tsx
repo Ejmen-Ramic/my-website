@@ -31,7 +31,7 @@ const SearchInput = () => {
       pos={'absolute'}
       bg={colors.gray[400]}
       _dark={{
-        bg: 'gray.600',
+        bg: colors.gray[600],
       }}
       p={30}
       justifyContent={'center'}

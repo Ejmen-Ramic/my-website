@@ -35,7 +35,7 @@ const SignIn = () => {
             <Heading fontSize={'4xl'}>
               <Trans>Sign in to your account</Trans>
             </Heading>
-            <Text fontSize={'lg'} color={'gray.600'}>
+            <Text fontSize={'lg'} color={colors.gray[600]}>
               <Trans>to enjoy all of the cool</Trans>{' '}
               <Link style={{ color: colors.info[50] }} to={'/'}>
                 <Trans>features</Trans>

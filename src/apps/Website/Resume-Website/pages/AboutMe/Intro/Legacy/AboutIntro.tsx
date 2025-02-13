@@ -90,7 +90,7 @@ const AboutIntro = () => {
             rounded={'md'}
             fontWeight={'bold'}
             alignItems={'center'}
-            bg={useColorModeValue(colors.gray[200], 'gray.600')}
+            bg={useColorModeValue(colors.gray[200], colors.gray[600])}
             _hover={{ bg: useColorModeValue(colors.gray[200], 'gray.700') }}
           >
             <Icon as={FaGithub} h={4} w={4} />

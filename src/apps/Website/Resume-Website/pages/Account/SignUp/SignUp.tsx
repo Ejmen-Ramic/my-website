@@ -34,7 +34,7 @@ const SignUp = () => {
             <Heading fontSize={'4xl'} textAlign={'center'}>
               Sign up
             </Heading>
-            <Text fontSize={'lg'} color={'gray.600'}>
+            <Text fontSize={'lg'} color={colors.gray[600]}>
               to enjoy all of the cool{' '}
               <Link style={{ color: colors.info[50] }} to={'/'}>
                 features

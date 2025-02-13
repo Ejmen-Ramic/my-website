@@ -21,7 +21,7 @@ import { FC, useEffect, useState } from 'react'
 import items from './Props'
 
 const Endorsement: FC = () => {
-  const textColor = useColorModeValue('gray.600', colors.gray[400])
+  const textColor = useColorModeValue(colors.gray[600], colors.gray[400])
   const bg = useColorModeValue(colors.gray[100], 'gray.700')
   const borderTopColor = useColorModeValue(colors.white, 'gray.800')
   const cardBg = useColorModeValue(colors.white, 'gray.800')

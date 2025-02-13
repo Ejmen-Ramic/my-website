@@ -37,7 +37,9 @@ const Header = () => {
             w={{ base: '120px', md: '100px', lg: '160px' }}
             h={{ base: '90px', md: '150px', lg: '300px' }}
             ml={{ base: '15px', md: '30px', lg: '100px' }}
-            _hover={{ color: useColorModeValue(colors.gray[400], 'gray.600') }}
+            _hover={{
+              color: useColorModeValue(colors.gray[400], colors.gray[600]),
+            }}
             transition={'0.6s'}
           />
         </Link>
