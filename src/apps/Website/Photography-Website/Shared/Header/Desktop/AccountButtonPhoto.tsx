@@ -11,7 +11,7 @@ const AccountButton = (props: ButtonProps) => {
           bg={useColorModeValue('#979191', `${colors.white}14`)}
           color={colors.white}
           _hover={{
-            bgColor: useColorModeValue(colors.primary[200], 'gray.600'),
+            bgColor: useColorModeValue(colors.primary[200], colors.gray[600]),
           }}
           p={'13px'}
         >
