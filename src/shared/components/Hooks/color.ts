@@ -10,7 +10,7 @@ export const colors = {
    */
   primary1: '#ede9e3',
 
-  /**
+  /*
    * #CACACA Gray
    */
   primary2: '#CACACA', // not used
@@ -91,6 +91,18 @@ export const colors = {
     100: '#98bed5', // used
     200: '#817e7e', // used
     300: '#333333', // used
+  },
+
+  gray: {
+    100: '#F7FAFC',
+    200: '#EDF2F7',
+    300: '#E2E8F0',
+    400: '#CBD5E0',
+    500: '#A0AEC0',
+    600: '#718096',
+    700: '#2D3748',
+    800: '#1A202C',
+    900: '#171923',
   },
 
   slate: {
