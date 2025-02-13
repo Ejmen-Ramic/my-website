@@ -13,7 +13,7 @@ const ColorMode = (props: ButtonProps) => {
   return (
     <Flex justifyContent={'center'} alignItems={'center'}>
       <Button
-        bg={useColorModeValue('gray.300', `${colors.white}14`)}
+        bg={useColorModeValue(colors.gray[300], `${colors.white}14`)}
         aria-label={'Toggle Color Mode'}
         onClick={toggleColorMode}
         _focus={{ boxShadow: 'none' }}

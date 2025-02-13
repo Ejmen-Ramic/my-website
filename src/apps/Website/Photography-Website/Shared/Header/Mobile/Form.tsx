@@ -23,7 +23,7 @@ const HeaderForm = () => {
             px={'25px'}
             height={'50px'}
             rounded={'17px'}
-            _placeholder={{ color: 'gray.300' }}
+            _placeholder={{ color: colors.gray[300] }}
             placeholder={t`Enter your email`}
             _focus={{ outline: 0, bg: 'whiteAlpha.400' }}
             color={colors.gray[100]}

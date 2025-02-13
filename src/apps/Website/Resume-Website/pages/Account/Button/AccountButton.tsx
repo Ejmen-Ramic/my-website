@@ -7,7 +7,7 @@ const AccountButton = (props: ButtonProps) => {
   return (
     <Flex justifyContent={'center'} alignItems={'center'}>
       <Link to={'/signin'}>
-        <Button bg={useColorModeValue('gray.300', `${colors.white}14`)}>
+        <Button bg={useColorModeValue(colors.gray[300], `${colors.white}14`)}>
           <MdOutlineAccountCircle size={'22px'} />
         </Button>
       </Link>

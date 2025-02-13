@@ -131,7 +131,7 @@ const HeaderForm = () => {
             pl={'15px'}
             height={'50px'}
             rounded={'17px'}
-            _placeholder={{ color: 'gray.300' }}
+            _placeholder={{ color: colors.gray[300] }}
             placeholder={t`Enter your email`}
             color={colors.gray[100]}
             bg={useColorModeValue('blackAlpha.100', 'gray.600')}

@@ -8,10 +8,10 @@ import {
   Icon,
   useColorModeValue,
   createIcon,
-} from '@chakra-ui/react';
-import { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+} from '@chakra-ui/react'
+import { useEffect } from 'react'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 const MakeMoneyPart = () => {
   const Arrow = createIcon({
@@ -25,18 +25,18 @@ const MakeMoneyPart = () => {
         fill={'currentColor'}
       />
     ),
-  });
-  const controls = useAnimation();
+  })
+  const controls = useAnimation()
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
-  });
+  })
 
   useEffect(() => {
     if (inView) {
-      controls.start({ opacity: 1, y: 0 });
+      controls.start({ opacity: 1, y: 0 })
     }
-  }, [controls, inView]);
+  }, [controls, inView])
 
   const fadeInVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -45,7 +45,7 @@ const MakeMoneyPart = () => {
       y: 0,
       transition: { duration: 0.5 },
     },
-  };
+  }
   return (
     <>
       <motion.div
@@ -107,7 +107,7 @@ const MakeMoneyPart = () => {
               <Box>
                 <Icon
                   as={Arrow}
-                  color={useColorModeValue('gray.800', 'gray.300')}
+                  color={useColorModeValue('gray.800', colors.gray[300])}
                   w={71}
                   position={'absolute'}
                   right={-71}
@@ -129,7 +129,7 @@ const MakeMoneyPart = () => {
         </Container>
       </motion.div>
     </>
-  );
-};
+  )
+}
 
-export default MakeMoneyPart;
+export default MakeMoneyPart

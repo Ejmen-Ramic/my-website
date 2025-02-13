@@ -13,6 +13,7 @@ import {
   Button,
 } from '@chakra-ui/react'
 import { FaCheckCircle } from 'react-icons/fa'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
 function PriceWrapper({ children }: { children: ReactNode }) {
   return (
@@ -105,7 +106,7 @@ const ThreeTierPricing = () => {
                 bg={useColorModeValue('red.300', 'red.700')}
                 px={3}
                 py={1}
-                color={useColorModeValue('gray.900', 'gray.300')}
+                color={useColorModeValue('gray.900', colors.gray[300])}
                 fontSize={'sm'}
                 fontWeight={'600'}
                 rounded={'xl'}
