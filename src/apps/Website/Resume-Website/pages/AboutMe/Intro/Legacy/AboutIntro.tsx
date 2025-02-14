@@ -77,7 +77,7 @@ const AboutIntro = () => {
             zIndex={5}
             lineHeight={1}
             bg={colors.blue[400]}
-            _hover={{ bg: 'blue.600' }}
+            _hover={{ bg: colors.blue[600] }}
           >
             View Components
           </chakra.button>
