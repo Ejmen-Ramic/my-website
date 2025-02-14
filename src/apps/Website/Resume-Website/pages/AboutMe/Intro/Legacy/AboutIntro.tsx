@@ -76,7 +76,7 @@ const AboutIntro = () => {
             mb={{ base: 2, sm: 0 }}
             zIndex={5}
             lineHeight={1}
-            bg={'blue.400'}
+            bg={colors.blue[400]}
             _hover={{ bg: 'blue.600' }}
           >
             View Components

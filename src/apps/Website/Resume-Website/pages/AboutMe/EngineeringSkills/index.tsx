@@ -15,7 +15,7 @@ import FeaturedProjects from './FeaturedProjects'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 
 const EngineeringSKills: FC = () => {
-  const HighlightColor = useColorModeValue('blue.400', 'teal.400')
+  const HighlightColor = useColorModeValue(colors.blue[400], 'teal.400')
 
   return (
     <Stack

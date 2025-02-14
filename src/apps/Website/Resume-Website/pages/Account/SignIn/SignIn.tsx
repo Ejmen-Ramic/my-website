@@ -91,7 +91,7 @@ const SignIn = () => {
                   </Link>
                 </Stack>
                 <Button
-                  bg={'blue.400'}
+                  bg={colors.blue[400]}
                   color={colors.white}
                   _hover={{
                     bg: 'blue.500',

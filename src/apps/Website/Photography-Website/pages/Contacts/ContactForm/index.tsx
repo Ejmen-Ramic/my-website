@@ -201,7 +201,7 @@ const ContactForm = () => {
 
                     <Button
                       colorScheme={'blue'}
-                      bg={'blue.400'}
+                      bg={colors.blue[400]}
                       color={colors.white}
                       _hover={{
                         bg: 'blue.500',
