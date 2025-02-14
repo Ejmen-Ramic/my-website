@@ -36,7 +36,7 @@ const SignUp = () => {
             </Heading>
             <Text fontSize={'lg'} color={colors.gray[600]}>
               to enjoy all of the cool{' '}
-              <Link style={{ color: colors.info[50] }} to={'/'}>
+              <Link style={{ color: colors.blue[400] }} to={'/'}>
                 features
               </Link>{' '}
               ✌️
@@ -99,7 +99,7 @@ const SignUp = () => {
               <Stack pt={6}>
                 <Text align={'center'}>
                   Already a user?{' '}
-                  <Link style={{ color: colors.info[50] }} to={'/signin'}>
+                  <Link style={{ color: colors.blue[400] }} to={'/signin'}>
                     Login
                   </Link>
                 </Text>

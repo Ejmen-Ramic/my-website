@@ -94,6 +94,7 @@ export const colors = {
   },
 
   gray: {
+    // All used
     50: '#F9FAFB',
     100: '#F7FAFC',
     200: '#EDF2F7',
@@ -149,7 +150,11 @@ export const colors = {
     200: '#BF7F2C',
   },
 
-  info: {
-    50: '#4299E1', // used
+  blue: {
+    300: '#63B3ED',
+    400: '#4299E1',
+    500: '#3182CE',
+    600: '#2B6CB0',
+    800: '#2C5282',
   },
 }

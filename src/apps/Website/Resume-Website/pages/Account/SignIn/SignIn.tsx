@@ -37,7 +37,7 @@ const SignIn = () => {
             </Heading>
             <Text fontSize={'lg'} color={colors.gray[600]}>
               <Trans>to enjoy all of the cool</Trans>{' '}
-              <Link style={{ color: colors.info[50] }} to={'/'}>
+              <Link style={{ color: colors.blue[400] }} to={'/'}>
                 <Trans>features</Trans>
               </Link>{' '}
               ✌️
@@ -84,7 +84,7 @@ const SignIn = () => {
                     <Trans>Remember me</Trans>
                   </Checkbox>
                   <Link
-                    style={{ color: colors.info[50] }}
+                    style={{ color: colors.blue[400] }}
                     to={'/passwordreset'}
                   >
                     <Trans>Forgot password?</Trans>
@@ -103,7 +103,7 @@ const SignIn = () => {
               <Stack pt={6}>
                 <Text align={'center'}>
                   <Trans>Not a user?</Trans>{' '}
-                  <Link style={{ color: colors.info[50] }} to={'/signup'}>
+                  <Link style={{ color: colors.blue[400] }} to={'/signup'}>
                     <Trans>Register</Trans>
                   </Link>
                 </Text>
