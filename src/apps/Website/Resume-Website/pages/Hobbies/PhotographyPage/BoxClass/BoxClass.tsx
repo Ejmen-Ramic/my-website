@@ -29,7 +29,7 @@ interface BoxClassProps {
 const BoxClass = () => {
   const boxColorValue = useColorModeValue(colors.white, colors.gray[800])
   const buttonProfileColor = useColorModeValue('#151f21', colors.gray[500])
-  const buttonFollowColor = useColorModeValue('green.400', 'blue.800')
+  const buttonFollowColor = useColorModeValue('green.400', colors.blue[800])
 
   const zoomInStyles = {
     transition: 'transform 0.001s',

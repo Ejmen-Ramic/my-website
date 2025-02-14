@@ -65,7 +65,7 @@ const PDFFEtcher = () => {
       <MenuButton
         as={Button}
         variant={'ghost'}
-        color={useColorModeValue('blue.800', colors.blue[300])}
+        color={useColorModeValue(colors.blue[800], colors.blue[300])}
         rightIcon={<ChevronDownIcon />}
         data-testid={'pdfFetcher'}
       >
