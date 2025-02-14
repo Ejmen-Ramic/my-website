@@ -33,7 +33,7 @@ const TestimonialContent = ({
   const wordLimit = 19
 
   const borderTopColor = useColorModeValue(colors.white, colors.gray[800])
-  const buttonColor = useColorModeValue('blue.500', colors.blue[300])
+  const buttonColor = useColorModeValue(colors.blue[500], colors.blue[300])
   const cardBg = useColorModeValue(colors.white, colors.gray[800])
 
   const words = description.split(' ')

@@ -9,7 +9,7 @@ interface TruncatedTextProps {
 }
 const TruncatedText: FC<TruncatedTextProps> = ({ fullText, children }) => {
   const [isExpanded, setIsExpanded] = useState(false)
-  const buttonColor = useColorModeValue('blue.500', colors.blue[300])
+  const buttonColor = useColorModeValue(colors.blue[500], colors.blue[300])
   const textColor = useColorModeValue(colors.gray[600], colors.gray[400])
 
   const words = fullText.split(' ')

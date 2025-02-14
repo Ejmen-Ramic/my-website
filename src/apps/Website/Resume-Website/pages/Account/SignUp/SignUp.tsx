@@ -90,7 +90,7 @@ const SignUp = () => {
                   bg={colors.blue[400]}
                   color={colors.white}
                   _hover={{
-                    bg: 'blue.500',
+                    bg: colors.blue[500],
                   }}
                 >
                   Sign up

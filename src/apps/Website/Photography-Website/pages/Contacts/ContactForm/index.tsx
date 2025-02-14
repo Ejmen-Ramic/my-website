@@ -74,7 +74,7 @@ const ContactForm = () => {
                       fontSize={'3xl'}
                       icon={<MdEmail />}
                       _hover={{
-                        bg: 'blue.500',
+                        bg: colors.blue[500],
                         color: useColorModeValue(
                           colors.white,
                           colors.gray[700]
@@ -97,7 +97,7 @@ const ContactForm = () => {
                       fontSize={'3xl'}
                       icon={<BsGithub />}
                       _hover={{
-                        bg: 'blue.500',
+                        bg: colors.blue[500],
                         color: useColorModeValue(
                           colors.white,
                           colors.gray[700]
@@ -114,7 +114,7 @@ const ContactForm = () => {
                       size={'lg'}
                       icon={<BsTwitterX size={'28px'} />}
                       _hover={{
-                        bg: 'blue.500',
+                        bg: colors.blue[500],
                         color: useColorModeValue(
                           colors.white,
                           colors.gray[700]
@@ -135,7 +135,7 @@ const ContactForm = () => {
                       size={'lg'}
                       icon={<BsLinkedin size={'28px'} />}
                       _hover={{
-                        bg: 'blue.500',
+                        bg: colors.blue[500],
                         color: useColorModeValue(
                           colors.white,
                           colors.gray[700]
@@ -204,7 +204,7 @@ const ContactForm = () => {
                       bg={colors.blue[400]}
                       color={colors.white}
                       _hover={{
-                        bg: 'blue.500',
+                        bg: colors.blue[500],
                       }}
                     >
                       <Trans>Send Message</Trans>
