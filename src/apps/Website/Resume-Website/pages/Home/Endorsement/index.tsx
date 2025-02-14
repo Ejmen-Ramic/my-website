@@ -25,7 +25,7 @@ const Endorsement: FC = () => {
   const bg = useColorModeValue(colors.gray[100], colors.gray[700])
   const borderTopColor = useColorModeValue(colors.white, colors.gray[800])
   const cardBg = useColorModeValue(colors.white, colors.gray[800])
-  const buttonColor = useColorModeValue('blue.500', 'blue.300')
+  const buttonColor = useColorModeValue('blue.500', colors.blue[300])
 
   const [openPopoverId, setOpenPopoverId] = useState<string | null>(null)
   useEffect(() => {

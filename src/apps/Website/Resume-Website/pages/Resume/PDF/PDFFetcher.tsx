@@ -6,48 +6,49 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-} from '@chakra-ui/react';
-import { BsFillPrinterFill } from 'react-icons/bs';
-import { ChevronDownIcon } from '@chakra-ui/icons';
-import { Trans } from '@lingui/macro';
+} from '@chakra-ui/react'
+import { BsFillPrinterFill } from 'react-icons/bs'
+import { ChevronDownIcon } from '@chakra-ui/icons'
+import { Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
 
-type SupportedLanguages = 'en' | 'bs';
+type SupportedLanguages = 'en' | 'bs'
 type PDFPaths = {
-  [key in SupportedLanguages]: string;
-};
+  [key in SupportedLanguages]: string
+}
 
 const PDFFEtcher = () => {
-  const toast = useToast();
+  const toast = useToast()
 
   const pdfPaths: PDFPaths = {
     en: '/Website/Resume/PDF/ejmen-ramic-resume-en.pdf',
     bs: '/Website/Resume/PDF/ejmen-ramic-resume-bs.pdf',
-  };
+  }
 
   const handleDownload = (selectedLang: SupportedLanguages) => {
-    const pdfPath = pdfPaths[selectedLang];
+    const pdfPath = pdfPaths[selectedLang]
 
     fetch(pdfPath)
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error('Network response was not ok')
         }
-        return response.blob();
+        return response.blob()
       })
       .then((blob) => {
-        const fileURL = window.URL.createObjectURL(blob);
-        const alink = document.createElement('a');
-        alink.href = fileURL;
-        alink.download = `ejmen-ramic-resume-${selectedLang}.pdf`;
-        document.body.appendChild(alink);
-        alink.click();
-        document.body.removeChild(alink);
+        const fileURL = window.URL.createObjectURL(blob)
+        const alink = document.createElement('a')
+        alink.href = fileURL
+        alink.download = `ejmen-ramic-resume-${selectedLang}.pdf`
+        document.body.appendChild(alink)
+        alink.click()
+        document.body.removeChild(alink)
       })
       .catch((error) => {
         console.error(
           'There has been a problem with your fetch operation:',
           error
-        );
+        )
         toast({
           title: 'Error fetching PDF',
           description:
@@ -55,16 +56,16 @@ const PDFFEtcher = () => {
           status: 'error',
           duration: 5000,
           isClosable: true,
-        });
-      });
-  };
+        })
+      })
+  }
 
   return (
     <Menu>
       <MenuButton
         as={Button}
         variant={'ghost'}
-        color={useColorModeValue('blue.800', 'blue.300')}
+        color={useColorModeValue('blue.800', colors.blue[300])}
         rightIcon={<ChevronDownIcon />}
         data-testid={'pdfFetcher'}
       >
@@ -79,7 +80,7 @@ const PDFFEtcher = () => {
         </MenuItem>
       </MenuList>
     </Menu>
-  );
-};
+  )
+}
 
-export default PDFFEtcher;
+export default PDFFEtcher
