@@ -103,7 +103,7 @@ const ThreeTierPricing = () => {
             >
               <Text
                 textTransform={'uppercase'}
-                bg={useColorModeValue('red.300', 'red.700')}
+                bg={useColorModeValue(colors.red[300], colors.red[700])}
                 px={3}
                 py={1}
                 color={useColorModeValue(colors.gray[900], colors.gray[300])}
