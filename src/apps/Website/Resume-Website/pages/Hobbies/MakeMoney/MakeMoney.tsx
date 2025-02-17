@@ -100,7 +100,7 @@ const MakeMoneyPart = () => {
                 fontSize={'xl'}
                 px={6}
                 _hover={{
-                  bg: 'green.500',
+                  bg: colors.green[500],
                 }}
               >
                 Get Started

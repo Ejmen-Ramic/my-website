@@ -130,9 +130,9 @@ const Newsletter: React.FC = () => {
     'blackAlpha.200',
     'whiteAlpha.200'
   )
-  const buttonBgColor = useColorModeValue(colors.green[400], 'green.800')
+  const buttonBgColor = useColorModeValue(colors.green[400], colors.green[800])
   const buttonColor = useColorModeValue(colors.white, colors.gray[800])
-  const buttonHoverBgColor = 'green.600'
+  const buttonHoverBgColor = colors.green[600]
 
   return (
     <FadeInView delay={0.1}>

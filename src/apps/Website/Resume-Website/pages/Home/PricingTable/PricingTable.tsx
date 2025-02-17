@@ -73,15 +73,15 @@ const ThreeTierPricing = () => {
           >
             <List spacing={3} textAlign={'start'} px={12}>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color={'green.500'} />
+                <ListIcon as={FaCheckCircle} color={colors.green[500]} />
                 unlimited build minutes
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color={'green.500'} />
+                <ListIcon as={FaCheckCircle} color={colors.green[500]} />
                 Lorem, ipsum dolor.
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color={'green.500'} />
+                <ListIcon as={FaCheckCircle} color={colors.green[500]} />
                 5TB Lorem, ipsum dolor.
               </ListItem>
             </List>
@@ -137,23 +137,23 @@ const ThreeTierPricing = () => {
             >
               <List spacing={3} textAlign={'start'} px={12}>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color={'green.500'} />
+                  <ListIcon as={FaCheckCircle} color={colors.green[500]} />
                   unlimited build minutes
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color={'green.500'} />
+                  <ListIcon as={FaCheckCircle} color={colors.green[500]} />
                   Lorem, ipsum dolor.
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color={'green.500'} />
+                  <ListIcon as={FaCheckCircle} color={colors.green[500]} />
                   5TB Lorem, ipsum dolor.
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color={'green.500'} />
+                  <ListIcon as={FaCheckCircle} color={colors.green[500]} />
                   5TB Lorem, ipsum dolor.
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color={'green.500'} />
+                  <ListIcon as={FaCheckCircle} color={colors.green[500]} />
                   5TB Lorem, ipsum dolor.
                 </ListItem>
               </List>
@@ -189,15 +189,15 @@ const ThreeTierPricing = () => {
           >
             <List spacing={3} textAlign={'start'} px={12}>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color={'green.500'} />
+                <ListIcon as={FaCheckCircle} color={colors.green[500]} />
                 unlimited build minutes
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color={'green.500'} />
+                <ListIcon as={FaCheckCircle} color={colors.green[500]} />
                 Lorem, ipsum dolor.
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color={'green.500'} />
+                <ListIcon as={FaCheckCircle} color={colors.green[500]} />
                 5TB Lorem, ipsum dolor.
               </ListItem>
             </List>

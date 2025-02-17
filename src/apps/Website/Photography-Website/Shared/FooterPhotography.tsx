@@ -320,7 +320,7 @@ const FooterPhotography = () => {
                   bg={useColorModeValue(colors.green[400], colors.green[800])}
                   color={useColorModeValue(colors.white, colors.gray[800])}
                   _hover={{
-                    bg: 'green.600',
+                    bg: colors.green[600],
                   }}
                   aria-label={'Subscribe'}
                   icon={<BiMailSend />}
