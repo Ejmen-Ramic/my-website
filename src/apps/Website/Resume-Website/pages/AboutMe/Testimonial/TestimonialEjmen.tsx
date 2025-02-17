@@ -36,7 +36,7 @@ const TestimonialCard = () => {
         p={4}
         bg={useColorModeValue(colors.white, 'blackAlpha.600')}
         border={'3px solid'}
-        borderColor={'green.400'}
+        borderColor={colors.green[400]}
         maxW={'xl'}
         margin={'0 auto'}
         boxShadow={'lg'}
@@ -46,7 +46,7 @@ const TestimonialCard = () => {
           as={FaQuoteRight}
           w={10}
           h={10}
-          color={'green.400'}
+          color={colors.green[400]}
           left={'-1.3rem'}
           position={'absolute'}
           top={'-1.5rem'}
@@ -67,7 +67,7 @@ const TestimonialCard = () => {
           name={'avatar'}
           src={testimonial.image}
           showBorder={true}
-          borderColor={'green.400'}
+          borderColor={colors.green[400]}
           size={'xl'}
           pos={'absolute'}
           right={'-48px'}

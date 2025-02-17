@@ -130,7 +130,7 @@ const Newsletter: React.FC = () => {
     'blackAlpha.200',
     'whiteAlpha.200'
   )
-  const buttonBgColor = useColorModeValue('green.400', 'green.800')
+  const buttonBgColor = useColorModeValue(colors.green[400], 'green.800')
   const buttonColor = useColorModeValue(colors.white, colors.gray[800])
   const buttonHoverBgColor = 'green.600'
 
@@ -153,7 +153,7 @@ const Newsletter: React.FC = () => {
                 border={0}
                 _focus={{
                   bg: inputFocusBgColor,
-                  borderColor: 'green.400',
+                  borderColor: colors.green[400],
                   boxShadow: '0 0 0 1px green.400',
                 }}
                 _hover={{

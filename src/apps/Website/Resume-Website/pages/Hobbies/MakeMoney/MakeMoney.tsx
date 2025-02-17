@@ -69,7 +69,7 @@ const MakeMoneyPart = () => {
               textAlign={{ base: 'left', md: 'center' }}
             >
               Make money from <br />
-              <Text as={'span'} color={'green.400'}>
+              <Text as={'span'} color={colors.green[400]}>
                 your audience
               </Text>
             </Heading>
@@ -93,7 +93,7 @@ const MakeMoneyPart = () => {
             >
               <Button
                 colorScheme={'green'}
-                bg={'green.400'}
+                bg={colors.green[400]}
                 rounded={'full'}
                 w={'200px'}
                 h={'50px'}
