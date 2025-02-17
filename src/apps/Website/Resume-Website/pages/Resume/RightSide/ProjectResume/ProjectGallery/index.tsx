@@ -103,7 +103,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
           onClick={openGallery}
           variant={'ghost'}
           p={0}
-          color={useColorModeValue(colors.navy, 'teal.400')}
+          color={useColorModeValue(colors.navy, colors.teal[400])}
           _hover={{
             bg: 'transparent',
             color: GalleryIconColor,

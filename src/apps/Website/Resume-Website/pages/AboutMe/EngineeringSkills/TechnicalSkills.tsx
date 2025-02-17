@@ -34,7 +34,7 @@ const TechnicalSkills: FC = () => {
     '0 20px 40px rgba(0, 0, 0, 0.3)'
   )
   const transformScale = useColorModeValue('scale(1)', 'scale(1.03)')
-  const HeaderPopColor = useColorModeValue('teal.400', colors.blue[400])
+  const HeaderPopColor = useColorModeValue(colors.teal[400], colors.blue[400])
 
   const [openPopoverIndex, setOpenPopoverIndex] = useState<number | null>(null)
 

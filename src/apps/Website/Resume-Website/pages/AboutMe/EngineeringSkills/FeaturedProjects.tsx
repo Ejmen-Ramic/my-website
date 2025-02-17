@@ -16,7 +16,7 @@ import { itemsFeatureProjects } from './Props'
 const FeaturedProjects: FC = () => {
   const GridColor = useColorModeValue(colors.white, colors.gray[800])
   const StackColor = useColorModeValue(colors.white, '#2D3748')
-  const HeaderPopColor = useColorModeValue('teal.400', colors.blue[400])
+  const HeaderPopColor = useColorModeValue(colors.teal[400], colors.blue[400])
   const popoverShadow = useColorModeValue(
     '0 16px 32px rgba(0, 0, 0, 0.15)',
     '0 20px 40px rgba(0, 0, 0, 0.3)'

@@ -190,7 +190,7 @@ const Card = ({ id, title, description, date }: CardProps) => {
         <Box>
           <Text
             fontSize={'lg'}
-            color={isEvenId ? 'teal.400' : colors.blue[400]}
+            color={isEvenId ? colors.teal[400] : colors.blue[400]}
             data-testid={`milestone-date-${id}`}
           >
             {date}
