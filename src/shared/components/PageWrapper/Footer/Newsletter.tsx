@@ -131,7 +131,7 @@ const Newsletter: React.FC = () => {
   )
   const inputFocusBgColor = useColorModeValue(
     'blackAlpha.200',
-    'whiteAlpha.200'
+    colors.whiteAlpha[200]
   )
   const buttonBgColor = useColorModeValue(colors.green[400], colors.green[800])
   const buttonColor = useColorModeValue(colors.white, colors.gray[800])
