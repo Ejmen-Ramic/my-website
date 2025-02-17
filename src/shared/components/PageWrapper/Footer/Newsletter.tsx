@@ -198,7 +198,12 @@ const Newsletter: React.FC = () => {
         </Stack>
 
         {status === 'SUCCESS' && (
-          <Text mt={2} color={'green.500'} textAlign={'center'} fontSize={'sm'}>
+          <Text
+            mt={2}
+            color={colors.green[500]}
+            textAlign={'center'}
+            fontSize={'sm'}
+          >
             <Trans>Thank you for subscribing to my newsletter!</Trans>
           </Text>
         )}

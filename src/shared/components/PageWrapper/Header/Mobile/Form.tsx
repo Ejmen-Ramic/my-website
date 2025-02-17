@@ -154,7 +154,7 @@ const HeaderForm = () => {
           </Button>
         </Box>
         {status === 'SUCCESS' && (
-          <Text mt={2} color={'green.500'} fontSize={'sm'}>
+          <Text mt={2} color={colors.green[500]} fontSize={'sm'}>
             <Trans>Thank you for subscribing!</Trans>
           </Text>
         )}
