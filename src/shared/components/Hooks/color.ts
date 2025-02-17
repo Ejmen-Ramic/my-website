@@ -58,7 +58,8 @@ export const colors = {
   /**
    * #4FD9C2 Green
    */
-  green: '#4FD9C2', // not used
+  // not used
+  // green: '#4FD9C2',
 
   /**
    * #000000 Black
@@ -167,5 +168,10 @@ export const colors = {
   red: {
     300: '#FC8181',
     700: '#9B2C2C',
+  },
+
+  green: {
+    400: '#48BB78',
+    800: '#22543D',
   },
 }
