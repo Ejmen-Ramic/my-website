@@ -35,7 +35,7 @@ const HeaderForm = () => {
             height={'50px'}
             color={useColorModeValue(colors.white, colors.gray[100])}
             bg={useColorModeValue(colors.green[400], colors.gray[700])}
-            _hover={{ bg: 'yellow.400', color: colors.gray[900] }}
+            _hover={{ bg: colors.yellow[400], color: colors.gray[900] }}
             position={'absolute'}
             top={'0'}
             right={'0'}
