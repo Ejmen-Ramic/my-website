@@ -54,7 +54,7 @@ const SocialButton = ({
 }) => {
   return (
     <chakra.button
-      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+      bg={useColorModeValue('blackAlpha.100', colors.whiteAlpha[100])}
       rounded={'full'}
       w={8}
       h={8}
@@ -310,7 +310,10 @@ const FooterPhotography = () => {
               <Stack direction={'row'}>
                 <Input
                   placeholder={t`Your email address`}
-                  bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+                  bg={useColorModeValue(
+                    'blackAlpha.100',
+                    colors.whiteAlpha[100]
+                  )}
                   border={0}
                   _focus={{
                     bg: 'whiteAlpha.300',
