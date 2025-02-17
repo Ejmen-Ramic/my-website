@@ -11,7 +11,7 @@ const AboutIntro: FC = () => {
         w={'full'}
         px={{ base: '35px', lg: '150px' }}
         spacing={'100px'}
-        mt={{ base: '50', md: '100px', lg: '150px' }}
+        mt={{ base: '50px', md: '100px', lg: '150px' }}
         data-testid={'about-intro-component'}
       >
         <Flex w={'full'} direction={{ base: 'column', lg: 'row' }}>
@@ -22,7 +22,7 @@ const AboutIntro: FC = () => {
             alignItems={'start'}
           >
             <FadeInView delay={0.5} direction={'left'}>
-              <Box bgColor={'red'} height={'2px'} width={'90px'}></Box>
+              <Box bgColor={'red'} height={'2px'} width={'90px'} />
             </FadeInView>
             <FadeInView delay={0.3}>
               <Heading
