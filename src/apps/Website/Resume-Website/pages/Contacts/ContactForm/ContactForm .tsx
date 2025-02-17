@@ -230,7 +230,10 @@ const ContactForm: FC = () => {
                   bg={useColorModeValue(colors.white, colors.gray[700])}
                   borderRadius={'lg'}
                   p={8}
-                  color={useColorModeValue(colors.gray[700], 'whiteAlpha.900')}
+                  color={useColorModeValue(
+                    colors.gray[700],
+                    colors.whiteAlpha[900]
+                  )}
                   shadow={'base'}
                 >
                   <form
