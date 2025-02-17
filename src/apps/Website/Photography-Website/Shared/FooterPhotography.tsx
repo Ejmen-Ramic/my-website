@@ -316,7 +316,7 @@ const FooterPhotography = () => {
                   )}
                   border={0}
                   _focus={{
-                    bg: 'whiteAlpha.300',
+                    bg: colors.whiteAlpha[300],
                   }}
                 />
                 <IconButton
