@@ -34,7 +34,7 @@ const TestimonialCard = () => {
       <VStack
         spacing={3}
         p={4}
-        bg={useColorModeValue(colors.white, 'blackAlpha.600')}
+        bg={useColorModeValue(colors.white, colors.blackAlpha[600])}
         border={'3px solid'}
         borderColor={colors.green[400]}
         maxW={'xl'}
