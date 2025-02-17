@@ -25,7 +25,7 @@ const HeaderForm = () => {
             rounded={'17px'}
             _placeholder={{ color: colors.gray[300] }}
             placeholder={t`Enter your email`}
-            _focus={{ outline: 0, bg: 'whiteAlpha.400' }}
+            _focus={{ outline: 0, bg: colors.whiteAlpha[400] }}
             color={colors.gray[100]}
             bg={useColorModeValue('blackAlpha.100', colors.gray[600])}
             borderWidth={0}
