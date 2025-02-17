@@ -126,7 +126,7 @@ const Newsletter: React.FC = () => {
   }
 
   const inputBgColor = useColorModeValue(
-    'blackAlpha.100',
+    colors.blackAlpha[100],
     colors.whiteAlpha[100]
   )
   const inputFocusBgColor = useColorModeValue(

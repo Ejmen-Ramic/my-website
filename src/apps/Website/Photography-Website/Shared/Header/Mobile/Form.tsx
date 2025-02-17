@@ -27,7 +27,7 @@ const HeaderForm = () => {
             placeholder={t`Enter your email`}
             _focus={{ outline: 0, bg: colors.whiteAlpha[400] }}
             color={colors.gray[100]}
-            bg={useColorModeValue('blackAlpha.100', colors.gray[600])}
+            bg={useColorModeValue(colors.blackAlpha[100], colors.gray[600])}
             borderWidth={0}
           />
           <Button

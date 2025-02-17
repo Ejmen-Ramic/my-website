@@ -87,11 +87,17 @@ export const colors = {
   highlight: '#F9F7D7', // not used
 
   whiteAlpha: {
-    100: '#FFFFFF1A', // White with 10% opacity
-    200: '#FFFFFF33', // White with 20% opacity
-    300: '#FFFFFF4D', // White with 30% opacity
-    400: '#FFFFFF66', // White with 40% opacity
-    900: '#FFFFFFED', // White with 93% opacity
+    100: '#FFFFFF1A',
+    200: '#FFFFFF33',
+    300: '#FFFFFF4D',
+    400: '#FFFFFF66',
+    900: '#FFFFFFED',
+  },
+
+  blackAlpha: {
+    100: '#0000001A',
+    200: '#00000033',
+    600: '#00000099',
   },
 
   primary: {
