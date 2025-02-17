@@ -159,7 +159,7 @@ const HeaderForm = () => {
           </Text>
         )}
         {status === 'ERROR' && (
-          <Text mt={2} color={'red.500'} fontSize={'sm'}>
+          <Text mt={2} color={colors.red[500]} fontSize={'sm'}>
             <Trans>Subscription failed. Please try again.</Trans>
           </Text>
         )}

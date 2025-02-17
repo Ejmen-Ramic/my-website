@@ -209,7 +209,12 @@ const Newsletter: React.FC = () => {
         )}
 
         {status === 'ERROR' && (
-          <Text mt={2} color={'red.500'} textAlign={'center'} fontSize={'sm'}>
+          <Text
+            mt={2}
+            color={colors.red[500]}
+            textAlign={'center'}
+            fontSize={'sm'}
+          >
             <Trans>Unable to subscribe. Please try again later.</Trans>
           </Text>
         )}
