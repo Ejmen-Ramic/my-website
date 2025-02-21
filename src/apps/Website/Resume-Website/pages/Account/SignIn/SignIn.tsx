@@ -15,12 +15,12 @@ import {
 } from '@chakra-ui/react'
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { Trans } from '@lingui/macro'
 import { colors } from '../../../../../../shared/components/Hooks/color'
 
-const SignIn = () => {
+const SignIn: FC = () => {
   const [showPassword, setShowPassword] = useState(false)
   return (
     <Flex

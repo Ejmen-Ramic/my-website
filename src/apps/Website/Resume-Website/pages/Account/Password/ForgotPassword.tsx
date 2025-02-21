@@ -11,12 +11,13 @@ import {
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { t, Trans } from '@lingui/macro'
 import { colors } from '../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
 // type ForgotPasswordFormInputs = {
 //   email: string;
 // };
 
-const ForgotPassword = (): JSX.Element => {
+const ForgotPassword: FC = (): JSX.Element => {
   return (
     <Flex
       minH={'100vh'}

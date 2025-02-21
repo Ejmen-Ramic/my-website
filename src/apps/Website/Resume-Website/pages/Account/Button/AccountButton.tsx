@@ -2,8 +2,9 @@ import { Button, ButtonProps, Flex, useColorModeValue } from '@chakra-ui/react'
 import { MdOutlineAccountCircle } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import { colors } from '../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
-const AccountButton = (props: ButtonProps) => {
+const AccountButton: FC = (props: ButtonProps) => {
   return (
     <Flex justifyContent={'center'} alignItems={'center'}>
       <Link to={'/signin'}>

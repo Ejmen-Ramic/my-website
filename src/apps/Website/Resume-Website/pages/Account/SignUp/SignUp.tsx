@@ -13,13 +13,13 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react'
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { colors } from '../../../../../../shared/components/Hooks/color'
 
-const SignUp = () => {
+const SignUp: FC = () => {
   const [showPassword, setShowPassword] = useState(false)
   return (
     <Flex
