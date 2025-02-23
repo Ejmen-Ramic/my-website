@@ -9,11 +9,12 @@ import {
   Text,
   VStack,
   Image,
-} from '@chakra-ui/react';
-import { BsArrowRight } from 'react-icons/bs';
-import items from './Props';
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
-import { colors } from '../../../../../../shared/components/Hooks/color';
+} from '@chakra-ui/react'
+import { BsArrowRight } from 'react-icons/bs'
+import items from './Props'
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { colors } from '../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
 // interface DMProps {
 //   title: string;
@@ -23,7 +24,7 @@ import { colors } from '../../../../../../shared/components/Hooks/color';
 //   link: string;
 // }
 
-const DeliveryMethods = () => {
+const DeliveryMethods: FC = () => {
   return (
     <FadeInView>
       <VStack
@@ -84,7 +85,7 @@ const DeliveryMethods = () => {
         </SimpleGrid>
       </VStack>
     </FadeInView>
-  );
-};
+  )
+}
 
-export default DeliveryMethods;
+export default DeliveryMethods

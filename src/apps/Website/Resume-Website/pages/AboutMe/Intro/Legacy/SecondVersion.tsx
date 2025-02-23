@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { FC, Fragment } from 'react'
 import {
   chakra,
   Container,
@@ -100,7 +100,7 @@ const features = [
     ),
   },
 ]
-const HeroSection = () => {
+const HeroSection:FC = () => {
   return (
     <Fragment>
       <Container maxW={'max-content'} pr={{ base: 6, md: 10 }} py={14}>

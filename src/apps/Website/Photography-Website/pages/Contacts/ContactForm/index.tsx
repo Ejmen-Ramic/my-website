@@ -23,8 +23,9 @@ import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { t, Trans } from '@lingui/macro'
 import { colors } from '../../../../../../shared/components/Hooks/color'
 import ContactBackground from './Assets/contact-image.jpg'
+import { FC } from 'react'
 
-const ContactForm = () => {
+const ContactForm: FC = () => {
   const { hasCopied, onCopy } = useClipboard('ejmenramic5@gmail.com')
 
   return (

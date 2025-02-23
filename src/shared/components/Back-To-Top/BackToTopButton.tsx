@@ -1,32 +1,32 @@
-import { ArrowUpIcon } from '@chakra-ui/icons';
-import { Box, IconButton, Icon } from '@chakra-ui/react';
-import { useState, useEffect } from 'react';
-import { colors } from '../Hooks/color';
+import { ArrowUpIcon } from '@chakra-ui/icons'
+import { Box, IconButton, Icon } from '@chakra-ui/react'
+import { useState, useEffect, FC } from 'react'
+import { colors } from '../Hooks/color'
 
-const ScrollToTopButton = () => {
-  const [showButton, setShowButton] = useState(false);
+const ScrollToTopButton: FC = () => {
+  const [showButton, setShowButton] = useState(false)
 
   const handleScroll = () => {
     if (window.pageYOffset > 100) {
-      setShowButton(true);
+      setShowButton(true)
     } else {
-      setShowButton(false);
+      setShowButton(false)
     }
-  };
+  }
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
-    });
-  };
+    })
+  }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
     <Box
@@ -51,7 +51,7 @@ const ScrollToTopButton = () => {
         onClick={scrollToTop}
       />
     </Box>
-  );
-};
+  )
+}
 
-export default ScrollToTopButton;
+export default ScrollToTopButton

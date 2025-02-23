@@ -30,6 +30,7 @@ import LanguageDropDown from './LanguageMenuMobile'
 import { t, Trans } from '@lingui/macro'
 import { colors } from '../../../Hooks/color'
 import HamburgerIcon from './HamburgerIcon'
+import { FC } from 'react'
 
 type MenuItemLink = {
   label: string
@@ -37,7 +38,7 @@ type MenuItemLink = {
   to: string
 }
 
-const HeaderMobile = () => {
+const HeaderMobile: FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const color = useColorModeValue(colors.primary4, colors.white)
   const year = new Date().getFullYear()

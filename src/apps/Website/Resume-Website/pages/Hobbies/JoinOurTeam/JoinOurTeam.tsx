@@ -16,6 +16,7 @@ import {
 } from '@chakra-ui/react'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { colors } from '../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
 const avatars = [
   {
@@ -40,7 +41,7 @@ const avatars = [
   },
 ]
 
-const JoinOurTeam = () => {
+const JoinOurTeam: FC = () => {
   return (
     <FadeInView>
       <Box position={'relative'} my={'100px'}>

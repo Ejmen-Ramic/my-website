@@ -16,7 +16,7 @@ import {
   MenuItem,
   MenuList,
 } from '@chakra-ui/react'
-import { ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import { BiMailSend } from 'react-icons/bi'

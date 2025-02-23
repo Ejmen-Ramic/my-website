@@ -8,12 +8,13 @@ import {
   Button,
   Icon,
   Grid,
-} from '@chakra-ui/react';
-import { BsFillInfoCircleFill } from 'react-icons/bs';
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
-import { colors } from '../../../../../../shared/components/Hooks/color';
+} from '@chakra-ui/react'
+import { BsFillInfoCircleFill } from 'react-icons/bs'
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { colors } from '../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
-const CareerBenefits = () => {
+const CareerBenefits: FC = () => {
   return (
     <HStack
       minH={{ base: '700px', lg: '800px' }}
@@ -99,6 +100,6 @@ const CareerBenefits = () => {
         </Grid>
       </FadeInView>
     </HStack>
-  );
-};
-export default CareerBenefits;
+  )
+}
+export default CareerBenefits

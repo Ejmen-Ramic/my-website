@@ -2,6 +2,7 @@ import { Box } from '@chakra-ui/react'
 import { FaWhatsapp } from 'react-icons/fa'
 import { colors } from '../Hooks/color'
 import { keyframes } from '@emotion/react'
+import { FC } from 'react'
 
 const circle = keyframes`
   0% {
@@ -12,7 +13,7 @@ const circle = keyframes`
   }
 `
 
-const WhatsappIcon = () => {
+const WhatsappIcon: FC = () => {
   return (
     <Box
       width={'100vw'}

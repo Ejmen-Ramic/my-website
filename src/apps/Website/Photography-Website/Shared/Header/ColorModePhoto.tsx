@@ -7,8 +7,9 @@ import {
 } from '@chakra-ui/react'
 import { BsSun, BsMoonStarsFill } from 'react-icons/bs'
 import { colors } from '../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
-const ColorMode = (props: ButtonProps) => {
+const ColorMode:FC = (props: ButtonProps) => {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
     /**

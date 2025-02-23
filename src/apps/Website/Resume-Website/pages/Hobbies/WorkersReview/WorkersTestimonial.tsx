@@ -6,7 +6,7 @@ import {
   SimpleGrid,
   useColorModeValue,
 } from '@chakra-ui/react'
-import { useEffect } from 'react'
+import { FC, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { colors } from '../../../../../../shared/components/Hooks/color'
@@ -61,7 +61,9 @@ interface TestimonialCardProps {
   index: number
 }
 
-const TestimonialCard = (props: TestimonialCardProps) => {
+const TestimonialCard: FC<TestimonialCardProps> = (
+  props: TestimonialCardProps
+) => {
   const { name, role, content, avatar, index } = props
   const controls = useAnimation()
   const [ref, inView] = useInView({

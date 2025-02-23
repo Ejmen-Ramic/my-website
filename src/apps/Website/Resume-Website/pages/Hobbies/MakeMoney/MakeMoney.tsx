@@ -9,12 +9,12 @@ import {
   useColorModeValue,
   createIcon,
 } from '@chakra-ui/react'
-import { useEffect } from 'react'
+import { FC, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { colors } from '../../../../../../shared/components/Hooks/color'
 
-const MakeMoneyPart = () => {
+const MakeMoneyPart: FC = () => {
   const Arrow = createIcon({
     displayName: 'Arrow',
     viewBox: '0 0 72 24',

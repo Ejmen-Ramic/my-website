@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import {
   Button,
   Stack,
@@ -26,7 +26,7 @@ interface BoxClassProps {
   followers: string
 }
 
-const BoxClass = () => {
+const BoxClass: FC = () => {
   const boxColorValue = useColorModeValue(colors.white, colors.gray[800])
   const buttonProfileColor = useColorModeValue('#151f21', colors.gray[500])
   const buttonFollowColor = useColorModeValue(

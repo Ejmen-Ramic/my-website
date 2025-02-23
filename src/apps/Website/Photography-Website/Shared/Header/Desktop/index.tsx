@@ -6,7 +6,7 @@ import {
   Show,
   useColorModeValue,
 } from '@chakra-ui/react'
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import { Link } from 'react-router-dom'
 import DropDownMenu from './DropDownMenu'
 import HeaderMobile from '../Mobile'
@@ -16,7 +16,7 @@ import EjmenSignature from '../EjmenSignature'
 import { Trans } from '@lingui/macro'
 import { colors } from '../../../../../../shared/components/Hooks/color'
 
-const Header = () => {
+const Header:FC = () => {
   const [homeHovered, setHomeHovered] = useState(false)
   const [hobbiesHovered, setHobbiesHovered] = useState(false)
   const [aboutHovered, setAboutHovered] = useState(false)

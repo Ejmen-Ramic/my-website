@@ -11,8 +11,9 @@ import {
 } from '@chakra-ui/react'
 import { FaGithub } from 'react-icons/fa'
 import { colors } from '../../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
-const AboutIntro = () => {
+const AboutIntro:FC = () => {
   return (
     <Stack
       p={{ base: 5, md: 10 }}

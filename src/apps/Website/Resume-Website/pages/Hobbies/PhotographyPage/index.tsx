@@ -1,6 +1,7 @@
+import { FC } from 'react'
 import Photography from '.'
 
-const PhotographyPage = () => {
+const PhotographyPage: FC = () => {
   return (
     <>
       <Photography />

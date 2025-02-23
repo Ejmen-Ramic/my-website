@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import {
   Stack,
   Flex,
@@ -29,7 +29,7 @@ const menuData = [
   // },
 ]
 
-const MenuContainer = () => {
+const MenuContainer:FC = () => {
   return (
     <Flex h={'100%'}>
       <DropDownMenu

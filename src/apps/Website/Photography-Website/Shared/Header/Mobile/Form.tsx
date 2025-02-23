@@ -7,8 +7,9 @@ import {
 } from '@chakra-ui/react'
 import { t, Trans } from '@lingui/macro'
 import { colors } from '../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
-const HeaderForm = () => {
+const HeaderForm:FC = () => {
   return (
     <Box mt={'auto'} bottom={0}>
       <Heading fontSize={'20px'} pb={'15px'}>

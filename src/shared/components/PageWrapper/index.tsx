@@ -1,13 +1,13 @@
-import Footer from './Footer/Footer';
-import Header from './Header';
-import PageWrapper from '../Hooks/PageWrapper';
-import { Box, StackProps } from '@chakra-ui/react';
+import Footer from './Footer/Footer'
+import Header from './Header'
+import PageWrapper from '../Hooks/PageWrapper'
+import { Box, StackProps } from '@chakra-ui/react'
 
 interface PageWrapperProps extends StackProps {
-  children: React.ReactNode;
-  isFooterDisabled?: boolean;
-  isHeaderDisabled?: boolean;
-  isStickyHeader?: boolean;
+  children: React.ReactNode
+  isFooterDisabled?: boolean
+  isHeaderDisabled?: boolean
+  isStickyHeader?: boolean
 }
 
 const Page = ({
@@ -39,7 +39,7 @@ const Page = ({
       <Box flex={'1'}>{children}</Box>
       {!isFooterDisabled && <Footer />}
     </PageWrapper>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

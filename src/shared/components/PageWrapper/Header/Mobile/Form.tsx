@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import {
   Box,
   Heading,
@@ -20,7 +20,7 @@ interface SubscribeResponse {
   error?: string
 }
 
-const HeaderForm = () => {
+const HeaderForm: FC = () => {
   const [email, setEmail] = useState<string>('')
   const [status, setStatus] = useState<Status>('IDLE')
   const [loading, setLoading] = useState<boolean>(false)

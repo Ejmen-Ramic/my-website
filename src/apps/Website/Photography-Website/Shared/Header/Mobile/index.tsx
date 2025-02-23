@@ -31,6 +31,7 @@ import IconBurgerMobile from '../../../../../../shared/icons/IconBurgerMobile'
 import IconBurger from '../../../../../../shared/icons/IconBurger'
 import { t, Trans } from '@lingui/macro'
 import { colors } from '../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
 type MenuItemLink = {
   label: string
@@ -38,7 +39,7 @@ type MenuItemLink = {
   to: string
 }
 
-const HeaderMobile = () => {
+const HeaderMobile: FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const color = useColorModeValue(colors.primary4, colors.white)
   const year = new Date().getFullYear()

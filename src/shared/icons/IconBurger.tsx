@@ -1,5 +1,5 @@
 import { useColorModeValue } from '@chakra-ui/react'
-import React from 'react'
+import React, { FC } from 'react'
 import { colors } from '../components/Hooks/color'
 
 interface IconBurgerProps extends React.SVGProps<SVGSVGElement> {
@@ -8,7 +8,10 @@ interface IconBurgerProps extends React.SVGProps<SVGSVGElement> {
 //   base?: string
 //   md?: string
 // }
-const IconBurger = ({ size, ...props }: IconBurgerProps) => {
+const IconBurger: FC<IconBurgerProps> = ({
+  size,
+  ...props
+}: IconBurgerProps) => {
   // const baseWidth = size?.base || '24'
   // const baseHeight = size?.base || '24'
   // const mdWidth = size?.md || '24'

@@ -7,7 +7,7 @@ import {
   Show,
   useColorModeValue,
 } from '@chakra-ui/react'
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import HeaderMobile from './Mobile'
 import { Link } from 'react-router-dom'
 import LanguageMenu from './Desktop/LanguageMenu'
@@ -18,7 +18,7 @@ import ColorMode from '../../Color-Mode/ColorMode'
 interface HeaderProps {
   isStickyHeader?: boolean
 }
-const Header = ({ isStickyHeader }: HeaderProps = {}) => {
+const Header: FC<HeaderProps> = ({ isStickyHeader }: HeaderProps = {}) => {
   const [homeHovered, setHomeHovered] = useState(false)
   const [resumeHovered, setResumeHovered] = useState(false)
   const [aboutHovered, setAboutHovered] = useState(false)

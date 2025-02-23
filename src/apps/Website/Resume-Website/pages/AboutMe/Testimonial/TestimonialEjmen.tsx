@@ -10,6 +10,7 @@ import {
 // Here we have used react-icons package for the icon
 import { FaQuoteRight } from 'react-icons/fa'
 import { colors } from '../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 interface TestimonialAttributes {
   username: string
   position: string
@@ -28,7 +29,7 @@ const testimonial: TestimonialAttributes = {
       risus at semper`,
 }
 
-const TestimonialCard = () => {
+const TestimonialCard:FC = () => {
   return (
     <Container maxW={'5xl'} p={{ base: 10, md: 14 }}>
       <VStack

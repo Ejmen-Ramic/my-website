@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react'
 import { colors } from '../Hooks/color'
+import { FC } from 'react'
 
 const people = [
   {
@@ -23,7 +24,7 @@ const people = [
     image: 'https://bit.ly/ryan-florence',
   },
 ]
-const SearchInput = () => {
+const SearchInput: FC = () => {
   return (
     <Flex
       boxSize={'full'}

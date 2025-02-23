@@ -1,13 +1,13 @@
-import { Box, BoxProps } from "@chakra-ui/react"
+import { Box, BoxProps } from '@chakra-ui/react'
+import { FC } from 'react'
 
 interface PageWrapperProps extends BoxProps {
-    children: React.ReactNode
+  children: React.ReactNode
 }
-const PageWrapper = ({children, ...Props}: PageWrapperProps) => {
-    return(
-        <Box {...Props}>
-            {children}
-        </Box>
-    )
+const PageWrapper: FC<PageWrapperProps> = ({
+  children,
+  ...Props
+}: PageWrapperProps) => {
+  return <Box {...Props}>{children}</Box>
 }
 export default PageWrapper

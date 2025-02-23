@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react'
+import { FC, ReactNode, useState } from 'react'
 import {
   Box,
   Flex,
@@ -16,7 +16,7 @@ import items from './Props'
 import { Trans } from '@lingui/macro'
 import { colors } from '../../../../../../shared/components/Hooks/color'
 
-const Testimonial = ({ children }: { children: ReactNode }) => {
+const Testimonial: FC<{ children: ReactNode }> = ({ children }) => {
   return <Box>{children}</Box>
 }
 

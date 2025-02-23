@@ -1,21 +1,22 @@
-import { Box } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
+import { Box } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
+import { FC } from 'react'
 
 interface HamburgerIconProps {
-  isOpen: boolean;
-  color?: string;
-  size?: string;
+  isOpen: boolean
+  color?: string
+  size?: string
 }
 
-const MotionBox = motion(Box);
+const MotionBox = motion(Box)
 
-const HamburgerIcon = ({
+const HamburgerIcon: FC<HamburgerIconProps> = ({
   isOpen,
   color = 'currentColor',
   size = '30px',
 }: HamburgerIconProps) => {
-  const lineHeight = '2px';
-  const transition = { duration: 0.3 };
+  const lineHeight = '2px'
+  const transition = { duration: 0.3 }
 
   return (
     <Box
@@ -78,7 +79,7 @@ const HamburgerIcon = ({
         />
       </Box>
     </Box>
-  );
-};
+  )
+}
 
-export default HamburgerIcon;
+export default HamburgerIcon
