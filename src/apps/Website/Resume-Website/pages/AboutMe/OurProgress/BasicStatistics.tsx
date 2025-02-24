@@ -3,7 +3,7 @@ import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { BsPerson } from 'react-icons/bs'
 import { FaAddressCard, FaCamera } from 'react-icons/fa6'
 import { t, Trans } from '@lingui/macro'
-import StatsCard from './OurProgress'
+import StatsCard from '.'
 import { FC } from 'react'
 
 const BasicStatistics: FC = () => {

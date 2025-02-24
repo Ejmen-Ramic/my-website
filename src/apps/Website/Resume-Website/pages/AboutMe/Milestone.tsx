@@ -9,10 +9,10 @@ import {
   useColorModeValue,
   useBreakpointValue,
 } from '@chakra-ui/react'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import FadeInView from '../../../../../shared/components/Hooks/FadeInView'
 import { Trans } from '@lingui/macro'
 import React, { FC } from 'react'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+import { colors } from '../../../../../shared/components/Hooks/color'
 
 type CardProps = {
   id: number
@@ -91,7 +91,7 @@ const milestones = [
   },
 ]
 
-const Milestones:FC = () => {
+const Milestones: FC = () => {
   const isMobile = useBreakpointValue({ base: true, md: false })
   const isDesktop = useBreakpointValue({ base: false, md: true })
 
