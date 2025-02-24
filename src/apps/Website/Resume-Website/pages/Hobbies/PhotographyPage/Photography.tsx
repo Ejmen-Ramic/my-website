@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import Footer from '../../../../../../shared/components/PageWrapper/Footer/Footer'
 import Header from '../../../../../../shared/components/PageWrapper/Header'
-import BoxClass from './BoxClass/BoxClass'
+import BoxClass from './BoxClass'
 
 const Photography: FC = () => {
   return (
