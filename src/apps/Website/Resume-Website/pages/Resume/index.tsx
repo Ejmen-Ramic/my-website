@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react'
 import { BsGithub } from 'react-icons/bs'
 import { GrLanguage } from 'react-icons/gr'
-import ResumeLeftSide from './LeftSide/ResumeLeftSide'
+import ResumeLeftSide from './LeftSide'
 import ResumeRightSide from './RightSide'
 import { Trans } from '@lingui/macro'
 import PDFFEtcher from './PDF/PDFFetcher'

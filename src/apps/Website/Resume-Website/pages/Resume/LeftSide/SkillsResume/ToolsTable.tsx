@@ -13,7 +13,7 @@ import {
 import { Trans } from '@lingui/macro'
 import { FC, ReactNode } from 'react'
 import { FaCircle } from 'react-icons/fa6'
-import { colors } from '../../../../../../../../shared/components/Hooks/color'
+import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 type Header = {
   name?: ReactNode
@@ -36,26 +36,22 @@ type Item = {
 const getItems = () => {
   const items: Item[] = [
     {
-      name: ' Adobe Lightroom',
+      name: 'GitHub',
       level: ['Novice', 'Beginner', 'Intermediate', 'Proficient', 'Advanced'],
     },
     {
-      name: 'Adobe Photoshop',
+      name: 'Wordpress',
+      level: ['Novice', 'Beginner', 'Intermediate', 'Proficient', 'Advanced'],
+    },
+    {
+      name: 'MongoDB',
       level: ['Novice', 'Beginner', 'Intermediate'],
-    },
-    {
-      name: 'Adobe Premier',
-      level: ['Novice', 'Beginner'],
-    },
-    {
-      name: 'Figma',
-      level: ['Novice', 'Beginner'],
     },
   ]
   return items
 }
 
-const DesignTable: FC = () => {
+const ToolsTable: FC = () => {
   const nameColor = useColorModeValue(colors.black, colors.iceGray)
   const skillColor = useColorModeValue(colors.navy, colors.primary[100])
   const noSkillColor = useColorModeValue(colors.slate[200], colors.slate[250])
@@ -68,7 +64,7 @@ const DesignTable: FC = () => {
             textTransform={'capitalize'}
             color={useColorModeValue(colors.navy, colors.primary[100])}
           >
-            <Trans>Graphics Design</Trans>
+            <Trans>Tools</Trans>
           </Text>
         ),
       },
@@ -144,4 +140,4 @@ const DesignTable: FC = () => {
   )
 }
 
-export default DesignTable
+export default ToolsTable

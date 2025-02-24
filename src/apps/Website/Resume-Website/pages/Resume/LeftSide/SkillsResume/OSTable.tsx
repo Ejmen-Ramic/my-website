@@ -13,7 +13,7 @@ import {
 import { Trans } from '@lingui/macro'
 import { FC, ReactNode } from 'react'
 import { FaCircle } from 'react-icons/fa6'
-import { colors } from '../../../../../../../../shared/components/Hooks/color'
+import { colors } from '../../../../../../../shared/components/Hooks/color'
 
 type Header = {
   name?: ReactNode
