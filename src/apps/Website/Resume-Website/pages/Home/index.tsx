@@ -1,11 +1,11 @@
-import Page from '../../../../../shared/components/PageWrapper';
-import Welcome from './Welcome/WelcomePart';
-import ChooseToLearn from './TechnicalExpertise./TechnicalExpertise';
-import ReasonsToChoose from './ReasonsToCount/ReasonsToChoose';
-import FAQ from './FrequentQuestions';
-import { VStack } from '@chakra-ui/react';
-import { FC } from 'react';
-import Endorsement from './Endorsement';
+import Page from '../../../../../shared/components/PageWrapper'
+import Welcome from './Welcome'
+import ChooseToLearn from './TechnicalExpertise'
+import FAQ from './FrequentQuestions'
+import { VStack } from '@chakra-ui/react'
+import { FC } from 'react'
+import Endorsement from './Endorsement'
+import ReasonsToChoose from './ReasonsToChoose'
 const HomePage: FC = () => {
   return (
     <Page>
@@ -18,7 +18,7 @@ const HomePage: FC = () => {
       </VStack>
       <FAQ />
     </Page>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

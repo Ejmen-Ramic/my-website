@@ -12,7 +12,7 @@ import {
 import { FC, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+import { colors } from '../../../../../shared/components/Hooks/color'
 
 const MakeMoneyPart: FC = () => {
   const Arrow = createIcon({

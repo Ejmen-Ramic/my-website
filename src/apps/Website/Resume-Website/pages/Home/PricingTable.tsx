@@ -13,7 +13,7 @@ import {
   Button,
 } from '@chakra-ui/react'
 import { FaCheckCircle } from 'react-icons/fa'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+import { colors } from '../../../../../shared/components/Hooks/color'
 
 function PriceWrapper({ children }: { children: ReactNode }) {
   return (

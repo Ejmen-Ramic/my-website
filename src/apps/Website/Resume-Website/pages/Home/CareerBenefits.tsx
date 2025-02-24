@@ -10,9 +10,10 @@ import {
   Grid,
 } from '@chakra-ui/react'
 import { BsFillInfoCircleFill } from 'react-icons/bs'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+
 import { FC } from 'react'
+import FadeInView from '../../../../../shared/components/Hooks/FadeInView'
+import { colors } from '../../../../../shared/components/Hooks/color'
 
 const CareerBenefits: FC = () => {
   return (

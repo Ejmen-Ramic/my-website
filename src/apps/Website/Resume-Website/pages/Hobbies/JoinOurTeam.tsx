@@ -14,9 +14,10 @@ import {
   IconProps,
   Icon,
 } from '@chakra-ui/react'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+
 import { FC } from 'react'
+import FadeInView from '../../../../../shared/components/Hooks/FadeInView'
+import { colors } from '../../../../../shared/components/Hooks/color'
 
 const avatars = [
   {

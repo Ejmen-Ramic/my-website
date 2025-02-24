@@ -20,12 +20,12 @@ import {
 } from '@chakra-ui/react'
 import { BsGithub, BsLinkedin, BsPerson, BsTwitterX } from 'react-icons/bs'
 import { MdEmail, MdOutlineEmail } from 'react-icons/md'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { t, Trans } from '@lingui/macro'
-import { colors } from '../../../../../../shared/components/Hooks/color'
 import type React from 'react'
 import { type FC, useEffect, useState } from 'react'
 import emailjs from '@emailjs/browser'
+import FadeInView from '../../../../../shared/components/Hooks/FadeInView'
+import { colors } from '../../../../../shared/components/Hooks/color'
 
 const confetti = {
   light: {

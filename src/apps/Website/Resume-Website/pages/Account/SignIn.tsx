@@ -16,9 +16,9 @@ import {
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
 import { FC, useState } from 'react'
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { Trans } from '@lingui/macro'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+import { colors } from '../../../../../shared/components/Hooks/color'
+import FadeInView from '../../../../../shared/components/Hooks/FadeInView'
 
 const SignIn: FC = () => {
   const [showPassword, setShowPassword] = useState(false)

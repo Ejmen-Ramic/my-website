@@ -1,6 +1,6 @@
 import { Stack, SimpleGrid, HStack } from '@chakra-ui/react'
-import { colors } from '../../../../../../shared/components/Hooks/color'
 import { FC } from 'react'
+import { colors } from '../../../../../shared/components/Hooks/color'
 
 const Cards: FC = () => {
   const zoomInStyles = {
