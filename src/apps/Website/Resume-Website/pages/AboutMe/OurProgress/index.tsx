@@ -6,7 +6,7 @@ import {
   StatNumber,
   useColorModeValue,
 } from '@chakra-ui/react'
-import { useState, useEffect, ReactNode } from 'react'
+import { useState, useEffect, ReactNode, FC } from 'react'
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
 import { colors } from '../../../../../../shared/components/Hooks/color'
 
@@ -16,7 +16,7 @@ interface StatsCardProps {
   stat: string
 }
 
-const StatsCard = (props: StatsCardProps) => {
+const StatsCard: FC<StatsCardProps> = (props: StatsCardProps) => {
   const { title, stat, icon } = props
   const [count, setCount] = useState(0)
   const targetCount = parseInt(stat.replace(/,/g, ''), 10)

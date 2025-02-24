@@ -7,6 +7,7 @@ import {
 } from '@chakra-ui/react'
 import { Trans } from '@lingui/macro'
 import { colors } from '../../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
 type LanguageProps = {
   language: string | JSX.Element
@@ -32,7 +33,7 @@ const languages: LanguageProps[] = [
   },
 ]
 
-const LanguageProficiency = () => {
+const LanguageProficiency: FC = () => {
   const nameColor = useColorModeValue(colors.black, colors.iceGray)
   const skillColor = useColorModeValue(colors.navy, colors.iceGray)
 

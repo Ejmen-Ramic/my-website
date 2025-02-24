@@ -11,13 +11,14 @@ import { BsFillPrinterFill } from 'react-icons/bs'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import { Trans } from '@lingui/macro'
 import { colors } from '../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
 type SupportedLanguages = 'en' | 'bs'
 type PDFPaths = {
   [key in SupportedLanguages]: string
 }
 
-const PDFFEtcher = () => {
+const PDFFEtcher: FC = () => {
   const toast = useToast()
 
   const pdfPaths: PDFPaths = {

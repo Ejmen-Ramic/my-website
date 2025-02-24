@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import {
   Box,
   Button,
@@ -30,7 +30,7 @@ type ReasonItem = {
   description: string
 }
 
-const ReasonsToChoose = () => {
+const ReasonsToChoose: FC = () => {
   const reasons: ReasonItem[] = [
     {
       icon: <Icon as={BsSpeedometer} boxSize={9} color={darkModeColor} />,

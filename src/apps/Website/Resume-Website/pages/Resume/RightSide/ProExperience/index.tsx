@@ -12,8 +12,9 @@ import { FaBriefcase, FaLocationDot } from 'react-icons/fa6'
 import { itemProps } from './Props'
 import { Trans } from '@lingui/macro'
 import { colors } from '../../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
-const ProExperience = () => {
+const ProExperience: FC = () => {
   const colorMode = useColorModeValue(colors.black, colors.iceGray)
 
   return (

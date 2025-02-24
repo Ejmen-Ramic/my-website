@@ -14,8 +14,9 @@ import { FaPaintBrush } from 'react-icons/fa'
 import { itemProps } from './Props'
 import { Trans } from '@lingui/macro'
 import { colors } from '../../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
-const Projects = () => {
+const Projects: FC = () => {
   const colorMode = useColorModeValue(colors.black, colors.iceGray)
   const colorLink = useColorModeValue(colors.navy, colors.primary[100])
   return (

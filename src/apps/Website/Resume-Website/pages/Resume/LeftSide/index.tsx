@@ -10,8 +10,9 @@ import { resumeItems } from './items'
 import SkillsResume from './SkillsResume'
 import { Trans } from '@lingui/macro'
 import { colors } from '../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
-const ResumeLeftSide = () => {
+const ResumeLeftSide: FC = () => {
   const handleContactClick = (link: string) => {
     window.location.href = link
   }

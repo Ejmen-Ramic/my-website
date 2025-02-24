@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { FC, useEffect, useMemo, useState } from 'react'
 import Particles, { initParticlesEngine } from '@tsparticles/react'
 import {
   type Container,
@@ -9,7 +9,7 @@ import {
 import { loadSlim } from '@tsparticles/slim'
 import { colors } from '../../../../../../shared/components/Hooks/color'
 
-const ParticlesBackground = () => {
+const ParticlesBackground: FC = () => {
   const [init, setInit] = useState(false)
 
   useEffect(() => {

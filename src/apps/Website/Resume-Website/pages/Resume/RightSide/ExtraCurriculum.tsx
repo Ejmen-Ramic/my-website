@@ -8,7 +8,7 @@ import {
   Link,
 } from '@chakra-ui/react'
 import { Trans } from '@lingui/macro'
-import { ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import { FaLink, FaRunning, FaShapes } from 'react-icons/fa'
 import { colors } from '../../../../../../shared/components/Hooks/color'
 
@@ -31,7 +31,7 @@ const itemProps: Props[] = [
   },
 ]
 
-const ExtraCurriculum = () => {
+const ExtraCurriculum: FC = () => {
   const colorMode = useColorModeValue(colors.black, colors.iceGray)
   const colorLink = useColorModeValue(colors.navy, colors.primary[100])
 

@@ -4,8 +4,9 @@ import ProExperience from './ProExperience'
 import Projects from './ProjectResume'
 import ExtraCurriculum from './ExtraCurriculum'
 import { colors } from '../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
-const ResumeRightSide = () => {
+const ResumeRightSide: FC = () => {
   return (
     <VStack
       w={'full'}

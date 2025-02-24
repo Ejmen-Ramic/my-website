@@ -10,10 +10,11 @@ import {
   AccordionPanel,
   Grid,
   GridItem,
-} from '@chakra-ui/react';
-import FadeInView from '../../../../../../../shared/components/Hooks/FadeInView';
+} from '@chakra-ui/react'
+import FadeInView from '../../../../../../../shared/components/Hooks/FadeInView'
+import { FC } from 'react'
 
-const FrequentQuestions = () => {
+const FrequentQuestions: FC = () => {
   return (
     <>
       <FadeInView>
@@ -315,7 +316,7 @@ const FrequentQuestions = () => {
         </VStack>
       </FadeInView>
     </>
-  );
-};
+  )
+}
 
-export default FrequentQuestions;
+export default FrequentQuestions

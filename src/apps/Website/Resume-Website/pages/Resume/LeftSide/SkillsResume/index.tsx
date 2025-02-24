@@ -6,8 +6,9 @@ import LanguageProficiency from './LanguageProficiency'
 import DesignTable from './DesignTable'
 import { Trans } from '@lingui/macro'
 import { colors } from '../../../../../../../shared/components/Hooks/color'
+import { FC } from 'react'
 
-const SkillsResume = () => {
+const SkillsResume: FC = () => {
   return (
     <VStack w={'full'} alignItems={'start'}>
       <Heading

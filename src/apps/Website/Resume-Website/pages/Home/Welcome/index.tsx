@@ -6,20 +6,21 @@ import {
   Tooltip,
   VStack,
   Text,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'
 import {
   faGithub,
   faInstagram,
   faLinkedin,
-} from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
-import { Link } from 'react-router-dom';
-import { Trans } from '@lingui/macro';
-import { colors } from '../../../../../../shared/components/Hooks/color';
-import ParticlesBackground from './Particles';
+} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView'
+import { Link } from 'react-router-dom'
+import { Trans } from '@lingui/macro'
+import { colors } from '../../../../../../shared/components/Hooks/color'
+import ParticlesBackground from './Particles'
+import { FC } from 'react'
 
-const Welcome = () => {
+const Welcome: FC = () => {
   return (
     <Box
       position={'relative'}
@@ -185,7 +186,7 @@ const Welcome = () => {
         </FadeInView>
       </VStack>
     </Box>
-  );
-};
+  )
+}
 
-export default Welcome;
+export default Welcome

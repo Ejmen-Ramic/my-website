@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import {
   Center,
   Stack,
@@ -20,7 +20,7 @@ import { useLanguage } from '../../../../../shared/components/LanguageSwitcher/l
 import Page from '../../../../../shared/components/PageWrapper'
 import { colors } from '../../../../../shared/components/Hooks/color'
 
-const Resume: React.FC<{}> = () => {
+const Resume: FC = () => {
   const { locale, changeLanguage } = useLanguage()
 
   return (
