@@ -38,17 +38,17 @@ const SearchInput: FC = () => {
       justifyContent={'center'}
     >
       {/* <AutoComplete rollNavigation>
-        <AutoCompleteInput variant="filled" placeholder="Search..." autoFocus />
+        <AutoCompleteInput variant={"filled"} placeholder={"Search..."} autoFocus />
         <AutoCompleteList>
           {people.map((person, oid) => (
             <AutoCompleteItem
               key={`option-${oid}`}
               value={person.name}
-              textTransform="capitalize"
-              align="center"
+              textTransform={"capitalize"}
+              align={"center"}
             >
-              <Avatar size="sm" name={person.name} src={person.image} />
-              <Text ml="4">{person.name}</Text>
+              <Avatar size={"sm"} name={person.name} src={person.image} />
+              <Text ml={"4"}>{person.name}</Text>
             </AutoCompleteItem>
           ))}
         </AutoCompleteList>

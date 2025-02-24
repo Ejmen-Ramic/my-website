@@ -79,7 +79,7 @@ const TestimonialContent = ({
             {displayText}
             {shouldShowReadMore && (
               <Button
-                variant='link'
+                variant={'link'}
                 color={buttonColor}
                 ml={2}
                 onClick={() => setIsExpanded(!isExpanded)}

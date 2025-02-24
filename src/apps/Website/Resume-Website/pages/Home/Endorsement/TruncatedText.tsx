@@ -25,8 +25,8 @@ const TruncatedText: FC<TruncatedTextProps> = ({ fullText, children }) => {
       </Text>
       {shouldTruncate && (
         <Button
-          size='sm'
-          variant='link'
+          size={'sm'}
+          variant={'link'}
           color={buttonColor}
           onClick={() => setIsExpanded(!isExpanded)}
         >

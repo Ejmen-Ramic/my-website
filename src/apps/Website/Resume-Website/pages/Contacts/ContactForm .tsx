@@ -189,7 +189,7 @@ const ContactForm: FC = () => {
                       aria-label={'x'}
                       variant={'ghost'}
                       size={'lg'}
-                      icon={<BsTwitterX size='28px' />}
+                      icon={<BsTwitterX size={'28px'} />}
                       _hover={{
                         bg: colors.blue[500],
                         color: useColorModeValue(
