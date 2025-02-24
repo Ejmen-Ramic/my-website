@@ -85,10 +85,6 @@ export const imagesV6 = [
     details: '',
   },
   {
-    src: './Website/Resume/Resume/v6-images/home-v6-5.png',
-    details: '',
-  },
-  {
     src: './Website/Resume/Resume/v6-images/bcp-v6-1.png',
     details: '',
   },
