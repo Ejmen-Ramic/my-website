@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 import Footer from '../../../../../shared/components/PageWrapper/Footer/Footer'
 import { colors } from '../../../../../shared/components/Hooks/color'
 import Header from '../../../../../shared/components/PageWrapper/Header'
+import { FC } from 'react'
 
-const NotFound = () => {
+const NotFound: FC = () => {
   return (
     <>
       <Header />

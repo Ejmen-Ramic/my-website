@@ -1,19 +1,37 @@
-import Footer from '../../../../../shared/components/PageWrapper/Footer/Footer'
+import Footer from '../../../../../../shared/components/PageWrapper/Footer/Footer'
 
-import { Box, Button, Center, Flex, Heading, Text, VStack } from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  Center,
+  Flex,
+  Heading,
+  Text,
+  VStack,
+} from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-import { colors } from '../../../../../shared/components/Hooks/color'
-import Header from '../../../../../shared/components/PageWrapper/Header'
+import { colors } from '../../../../../../shared/components/Hooks/color'
+import Header from '../../../../../../shared/components/PageWrapper/Header'
+import { FC } from 'react'
 
-const NotFound = () => {
+const NotFound: FC = () => {
   return (
     <>
       <Header />
       <Center>
         <Flex>
-          <VStack spacing={'50px'} minH={'700px'} width={'full'} justifyContent={'center'}>
+          <VStack
+            spacing={'50px'}
+            minH={'700px'}
+            width={'full'}
+            justifyContent={'center'}
+          >
             <Heading>404: Not Found</Heading>
-            <Text fontSize={'2xl'} maxW={{ base: '350px', md: 'full' }} textAlign={{ base: 'center', md: 'unset' }}>
+            <Text
+              fontSize={'2xl'}
+              maxW={{ base: '350px', md: 'full' }}
+              textAlign={{ base: 'center', md: 'unset' }}
+            >
               Press the button below to go to the{' '}
               <Box color={'red'} textTransform={'uppercase'} as={'span'}>
                 Home

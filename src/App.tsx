@@ -4,7 +4,7 @@ import { extendTheme, ChakraProvider } from '@chakra-ui/react'
 import ScrollToTopButton from './shared/components/Back-To-Top/BackToTopButton'
 import About from './apps/Website/Resume-Website/pages/AboutMe/index'
 import HomePage from './apps/Website/Resume-Website/pages/Home'
-import NotFound from './apps/Website/Resume-Website/pages/NotFound/NotFound'
+import NotFound from './apps/Website/Resume-Website/pages/NotFound/Legacy/NotFound'
 import Test from './apps/Website/test'
 
 import Hobbies from './apps/Website/Resume-Website/pages/Hobbies'
