@@ -1,7 +1,7 @@
 import { Button, ButtonProps, Flex, useColorModeValue } from '@chakra-ui/react'
 import { MdOutlineAccountCircle } from 'react-icons/md'
 import { Link } from 'react-router-dom'
-import { colors } from '../../../../../../shared/components/Hooks/color'
+import { colors } from '../../../../../shared/components/Hooks/color'
 import { FC } from 'react'
 
 const AccountButton: FC = (props: ButtonProps) => {
