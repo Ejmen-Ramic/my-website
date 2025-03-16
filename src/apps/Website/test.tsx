@@ -6,7 +6,6 @@ const Example: FC = () => {
     <>
       {/* <TestimonialContent /> */}
       <Endorsement />
-      // Test
     </>
   )
 }
