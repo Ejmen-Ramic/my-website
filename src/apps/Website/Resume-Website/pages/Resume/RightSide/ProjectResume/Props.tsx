@@ -83,7 +83,6 @@ export const itemProps = [
         subscriptions and hosts seamlessly and scale its operations effectively.
       </Trans>
     ),
-    // gallery: <ImageGallery images={adminImages} />,
   },
   {
     name: <Trans>Project V6</Trans>,

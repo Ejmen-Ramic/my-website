@@ -107,9 +107,8 @@ const Welcome: FC = () => {
             <Trans>
               Hi. My name is Ejmen. I'm a software engineer from Bosnia and
               Herzegovina, and this is my web resume. Here, you can see my
-              capabilities and skills as a software engineer and as a
-              photographer. Feel free to explore my website and my photo
-              gallery.
+              capabilities and skills as a software engineer. Feel free to
+              explore my website.
             </Trans>
           </Text>
         </FadeInView>
