@@ -28,6 +28,7 @@ const SignIn: FC = () => {
       align={'center'}
       justify={'center'}
       bg={useColorModeValue(colors.gray[50], colors.gray[800])}
+      data-testid={'sign-in'}
     >
       <FadeInView>
         <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
