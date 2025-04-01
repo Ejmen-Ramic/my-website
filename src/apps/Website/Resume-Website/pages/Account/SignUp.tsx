@@ -29,14 +29,25 @@ const SignUp: FC = () => {
       bg={useColorModeValue(colors.gray[50], colors.gray[800])}
     >
       <FadeInView>
-        <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+        <Stack
+          spacing={8}
+          mx={'auto'}
+          maxW={'lg'}
+          py={12}
+          px={6}
+          data-testid={'sign-up'}
+        >
           <Stack align={'center'}>
             <Heading fontSize={'4xl'} textAlign={'center'}>
               Sign up
             </Heading>
             <Text fontSize={'lg'} color={colors.gray[600]}>
               to enjoy all of the cool{' '}
-              <Link style={{ color: colors.blue[400] }} to={'/'}>
+              <Link
+                style={{ color: colors.blue[400] }}
+                to={'/'}
+                data-testid={'sign-up-feature-link'}
+              >
                 features
               </Link>{' '}
               ✌️
@@ -51,23 +62,35 @@ const SignUp: FC = () => {
             <Stack spacing={4}>
               <HStack>
                 <Box>
-                  <FormControl id={'firstName'} isRequired>
+                  <FormControl
+                    id={'firstName'}
+                    isRequired
+                    data-testid={'insert-first-name'}
+                  >
                     <FormLabel>First Name</FormLabel>
                     <Input type={'text'} />
                   </FormControl>
                 </Box>
                 <Box>
-                  <FormControl id={'lastName'}>
+                  <FormControl id={'lastName'} data-testid={'insert-last-name'}>
                     <FormLabel>Last Name</FormLabel>
                     <Input type={'text'} />
                   </FormControl>
                 </Box>
               </HStack>
-              <FormControl id={'email'} isRequired>
+              <FormControl
+                id={'email'}
+                isRequired
+                data-testid={'insert-signup-email'}
+              >
                 <FormLabel>Email address</FormLabel>
                 <Input type={'email'} />
               </FormControl>
-              <FormControl id={'password'} isRequired>
+              <FormControl
+                id={'password'}
+                isRequired
+                data-testid={'insert-signup-password'}
+              >
                 <FormLabel>Password</FormLabel>
                 <InputGroup>
                   <Input type={showPassword ? 'text' : 'password'} />
@@ -77,6 +100,7 @@ const SignUp: FC = () => {
                       onClick={() =>
                         setShowPassword((showPassword) => !showPassword)
                       }
+                      data-testid={'toggle-password-visibility'}
                     >
                       {showPassword ? <ViewIcon /> : <ViewOffIcon />}
                     </Button>
@@ -92,6 +116,7 @@ const SignUp: FC = () => {
                   _hover={{
                     bg: colors.blue[500],
                   }}
+                  data-testid={'sign-up-button'}
                 >
                   Sign up
                 </Button>
