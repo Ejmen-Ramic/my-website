@@ -51,13 +51,13 @@ const SignIn: FC = () => {
             p={8}
           >
             <Stack spacing={4}>
-              <FormControl id={'email'}>
+              <FormControl id={'email'} data-testid={'insert-email'}>
                 <FormLabel>
                   <Trans>Email address</Trans>
                 </FormLabel>
                 <Input type={'email'} />
               </FormControl>
-              <FormControl id={'password'}>
+              <FormControl id={'password'} data-testid={'insert-password'}>
                 <FormLabel>
                   <Trans>Password</Trans>
                 </FormLabel>
