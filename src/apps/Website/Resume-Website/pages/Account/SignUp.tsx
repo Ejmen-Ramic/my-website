@@ -62,38 +62,29 @@ const SignUp: FC = () => {
             <Stack spacing={4}>
               <HStack>
                 <Box>
-                  <FormControl
-                    id={'firstName'}
-                    isRequired
-                    data-testid={'insert-first-name'}
-                  >
+                  <FormControl id={'firstName'} isRequired>
                     <FormLabel>First Name</FormLabel>
-                    <Input type={'text'} />
+                    <Input type={'text'} data-testid={'insert-first-name'} />
                   </FormControl>
                 </Box>
                 <Box>
-                  <FormControl id={'lastName'} data-testid={'insert-last-name'}>
+                  <FormControl id={'lastName'}>
                     <FormLabel>Last Name</FormLabel>
-                    <Input type={'text'} />
+                    <Input type={'text'} data-testid={'insert-last-name'} />
                   </FormControl>
                 </Box>
               </HStack>
-              <FormControl
-                id={'email'}
-                isRequired
-                data-testid={'insert-signup-email'}
-              >
+              <FormControl id={'email'} isRequired>
                 <FormLabel>Email address</FormLabel>
-                <Input type={'email'} />
+                <Input type={'email'} data-testid={'insert-signup-email'} />
               </FormControl>
-              <FormControl
-                id={'password'}
-                isRequired
-                data-testid={'insert-signup-password'}
-              >
+              <FormControl id={'password'} isRequired>
                 <FormLabel>Password</FormLabel>
                 <InputGroup>
-                  <Input type={showPassword ? 'text' : 'password'} />
+                  <Input
+                    type={showPassword ? 'text' : 'password'}
+                    data-testid={'insert-signup-password'}
+                  />
                   <InputRightElement h={'full'}>
                     <Button
                       variant={'ghost'}
