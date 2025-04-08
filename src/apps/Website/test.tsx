@@ -5,7 +5,8 @@ const Example: FC = () => {
   return (
     <>
       {/* <TestimonialContent /> */}
-      test <Endorsement />
+      test
+      <Endorsement />
     </>
   );
 };
