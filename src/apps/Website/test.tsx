@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import Endorsement from './Resume-Website/pages/Home/Endorsement'
+import { FC } from 'react';
+import Endorsement from './Resume-Website/pages/Home/Endorsement';
 
 const Example: FC = () => {
   return (
@@ -8,6 +8,6 @@ const Example: FC = () => {
       test
       <Endorsement />
     </>
-  )
-}
-export default Example
+  );
+};
+export default Example;
