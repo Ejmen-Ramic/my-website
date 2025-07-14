@@ -1,13 +1,13 @@
-import { FC } from 'react'
-import Endorsement from './Resume-Website/pages/Home/Endorsement'
+import { FC } from 'react';
+import Endorsement from './Resume-Website/pages/Home/Endorsement';
 
 const Example: FC = () => {
   return (
     <>
       {/* <TestimonialContent /> */}
       <Endorsement />
-      test
+      tests
     </>
-  )
-}
-export default Example
+  );
+};
+export default Example;
