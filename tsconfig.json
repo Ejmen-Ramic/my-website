@@ -17,5 +17,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "src/playwright/tests-examples"]
+  "include": ["src", "src/playwright/tests-examples", "src/backend/.ts"]
 }
