@@ -1,30 +1,30 @@
-import { Suspense, useEffect } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import { extendTheme, ChakraProvider } from '@chakra-ui/react'
-import ScrollToTopButton from './shared/components/Back-To-Top/BackToTopButton'
-import About from './apps/Website/Resume-Website/pages/AboutMe/index'
-import HomePage from './apps/Website/Resume-Website/pages/Home'
-import NotFound from './apps/Website/Resume-Website/pages/NotFound/Legacy/NotFound'
-import Test from './apps/Website/test'
+import { Suspense, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { extendTheme, ChakraProvider } from '@chakra-ui/react';
+import ScrollToTopButton from './shared/components/Back-To-Top/BackToTopButton';
+import About from './apps/Website/Resume-Website/pages/AboutMe/index';
+import HomePage from './apps/Website/Resume-Website/pages/Home';
+import NotFound from './apps/Website/Resume-Website/pages/NotFound/Legacy/NotFound';
+import Test from './apps/Website/test';
 
-import Hobbies from './apps/Website/Resume-Website/pages/Hobbies'
-import Resume from './apps/Website/Resume-Website/pages/Resume'
-import PhotographyHome from './apps/Website/Photography-Website/pages/Home'
-import { i18n } from '@lingui/core'
+import Hobbies from './apps/Website/Resume-Website/pages/Hobbies';
+import Resume from './apps/Website/Resume-Website/pages/Resume';
+import PhotographyHome from './apps/Website/Photography-Website/pages/Home';
+import { i18n } from '@lingui/core';
 import {
   fromNavigator,
   fromStorage,
   fromUrl,
   multipleDetect,
-} from '@lingui/detect-locale'
-import BosniaAlbum from './apps/Website/Photography-Website/pages/Photography/Bosnia'
-import AboutPhotography from './apps/Website/Photography-Website/pages/About'
-import ContactPhotography from './apps/Website/Photography-Website/pages/Contacts'
-import { LanguageProvider } from './shared/components/LanguageSwitcher/languageContext'
-import ContactPage from './apps/Website/Resume-Website/pages/Contacts'
-import SignIn from './apps/Website/Resume-Website/pages/Account/SignIn'
-import SignUp from './apps/Website/Resume-Website/pages/Account/SignUp'
-import ForgotPassword from './apps/Website/Resume-Website/pages/Account/ForgotPassword'
+} from '@lingui/detect-locale';
+import BosniaAlbum from './apps/Website/Photography-Website/pages/Photography/Bosnia';
+import AboutPhotography from './apps/Website/Photography-Website/pages/About';
+import ContactPhotography from './apps/Website/Photography-Website/pages/Contacts';
+import { LanguageProvider } from './shared/components/LanguageSwitcher/languageContext';
+import ContactPage from './apps/Website/Resume-Website/pages/Contacts';
+import SignIn from './apps/Website/Resume-Website/pages/Account/SignIn';
+import SignUp from './apps/Website/Resume-Website/pages/Account/SignUp';
+import ForgotPassword from './apps/Website/Resume-Website/pages/Account/ForgotPassword';
 
 const breakpoints = {
   sm: '30em',
@@ -32,7 +32,7 @@ const breakpoints = {
   lg: '62em',
   xl: '80em',
   '2xl': '96em',
-}
+};
 
 export const theme = extendTheme({
   breakpoints,
@@ -40,50 +40,50 @@ export const theme = extendTheme({
     initialColorMode: 'system',
     useSystemColorMode: true,
   },
-})
+});
 
 const App: React.FC = () => {
   const handleScroll = () => {
-    const scrollToTopButton = document.getElementById('scrollToTopButton')
+    const scrollToTopButton = document.getElementById('scrollToTopButton');
     if (scrollToTopButton) {
       scrollToTopButton.style.display =
-        window.pageYOffset > 100 ? 'block' : 'none'
+        window.pageYOffset > 100 ? 'block' : 'none';
     }
-  }
+  };
 
   const localeAsync = async () => {
-    const DEFAULT_FALLBACK = () => 'en'
+    const DEFAULT_FALLBACK = () => 'en';
     const result = multipleDetect(
       fromUrl('lang'),
       fromStorage('lang'),
       fromNavigator(),
       DEFAULT_FALLBACK
-    )
-    const detectedLocale = result[0].split('-')[0]
+    );
+    const detectedLocale = result[0].split('-')[0];
 
-    const localLocale = localStorage.getItem('locale')
+    const localLocale = localStorage.getItem('locale');
 
-    const availableLocales = ['en', 'ba']
+    const availableLocales = ['en', 'ba'];
     const locale =
       localLocale || availableLocales.includes(detectedLocale)
         ? detectedLocale
-        : 'en'
+        : 'en';
 
-    const { messages } = await import(`../src/locales/${locale}/messages.ts`)
-    i18n.loadAndActivate({ locale, messages })
-  }
+    const { messages } = await import(`../src/locales/${locale}/messages.ts`);
+    i18n.loadAndActivate({ locale, messages });
+  };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
-    localeAsync()
-  })
+    localeAsync();
+  });
 
   return (
     <ChakraProvider theme={theme}>
@@ -113,7 +113,7 @@ const App: React.FC = () => {
         </Suspense>
       </LanguageProvider>
     </ChakraProvider>
-  )
-}
+  );
+};
 
-export default App
+export default App;
