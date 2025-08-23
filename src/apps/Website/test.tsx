@@ -7,7 +7,7 @@ const Example: FC = () => {
       {/* <TestimonialContent /> */}
       test
       <Endorsement />
-      test
+      tests
     </>
   );
 };
