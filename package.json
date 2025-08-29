@@ -136,6 +136,7 @@
     "@types/express": "^4.17.21",
     "@types/mailchimp__mailchimp_marketing": "^3.0.20",
     "@types/node": "^22.10.2",
+    "@vercel/node": "^5.3.17",
     "babel-core": "^7.0.0-bridge.0",
     "babel-plugin-macros": "^3.1.0",
     "ts-node-dev": "^2.0.0",
