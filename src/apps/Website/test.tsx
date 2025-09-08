@@ -42,6 +42,7 @@ import {
   GitHubUser,
   LanguageStats,
 } from '../../backend/githubService';
+import { colors } from '../../shared/components/Hooks/color';
 
 const COLORS = [
   '#0088FE',
@@ -197,7 +198,7 @@ const GitHubDashboard: React.FC = () => {
       <Box maxW='7xl' mx='auto'>
         {/* Header */}
         <Box mb={8}>
-          <Heading as='h1' size='xl' mb={2}>
+          <Heading as='h1' size='xl' mb={2} color={colors.teal[600]}>
             GitHub Analytics Dashboard
           </Heading>
           <Text color='gray.600'>
@@ -211,7 +212,7 @@ const GitHubDashboard: React.FC = () => {
             <Flex align='center' gap={4}>
               <Avatar src={profile.avatar_url} name={profile.name} size='xl' />
               <Box>
-                <Heading as='h2' size='lg'>
+                <Heading as='h2' size='lg' color={colors.teal[600]}>
                   {profile.name}
                 </Heading>
                 <Text color='gray.600'>@{profile.login}</Text>
@@ -293,8 +294,14 @@ const GitHubDashboard: React.FC = () => {
                   nameKey={'name'}
                   cx={'50%'}
                   cy={'50%'}
-                  outerRadius={100}
-                  label={false}
+                  outerRadius={90}
+                  innerRadius={40} // donut so labels can sit inside
+                  label={({ name, percent }) => {
+                    const pct = Math.round((percent ?? 0) * 100);
+                    // hide labels under 4%
+                    return pct >= 4 ? `${name} ${pct}%` : '';
+                  }}
+                  labelLine={false}
                 >
                   {languageStats.map((entry, index) => (
                     <Cell
@@ -303,22 +310,20 @@ const GitHubDashboard: React.FC = () => {
                     />
                   ))}
                 </Pie>
-
-                <Legend
-                  verticalAlign={'middle'}
-                  align={'right'}
-                  layout={'vertical'}
-                  wrapperStyle={{ paddingLeft: 16, lineHeight: '24px' }}
-                  formatter={(value: string, entry: any) => {
-                    // entry.payload is the datum: { name, value, ... }
-                    const datum = entry?.payload as {
+                <Tooltip
+                  formatter={(value: number, _name: string, props: any) => {
+                    // props.payload is the datum for this slice
+                    const datum = props?.payload as {
                       name: string;
                       value: number;
                     };
                     const pct = Math.round(
-                      (datum?.value / totalLangBytes) * 100
+                      ((datum?.value ?? 0) / totalLangBytes) * 100
                     );
-                    return `${value} — ${pct}%`;
+                    return [
+                      `${Number(value).toLocaleString()} (${pct}%)`,
+                      datum?.name,
+                    ];
                   }}
                 />
               </PieChart>
@@ -327,7 +332,7 @@ const GitHubDashboard: React.FC = () => {
         </Grid>
 
         {/* Top Repos */}
-        <Box bg='white' rounded='lg' shadow='md' p={6}>
+        {/* <Box bg='white' rounded='lg' shadow='md' p={6}>
           <Heading size='md' mb={4}>
             Top Repositories by Stars
           </Heading>
@@ -342,10 +347,10 @@ const GitHubDashboard: React.FC = () => {
               <Bar dataKey='forks' fill='#82ca9d' name='Forks' />
             </BarChart>
           </ResponsiveContainer>
-        </Box>
+        </Box> */}
 
         {/* Commits */}
-        <Box bg='white' rounded='lg' shadow='md' p={6} mt={8}>
+        {/* <Box bg='white' rounded='lg' shadow='md' p={6} mt={8}>
           <Heading size='md' mb={4}>
             Recent Commits
           </Heading>
@@ -371,7 +376,7 @@ const GitHubDashboard: React.FC = () => {
               </Box>
             ))}
           </Stack>
-        </Box>
+        </Box> */}
       </Box>
       test
     </Box>
