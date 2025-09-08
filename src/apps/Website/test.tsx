@@ -122,6 +122,7 @@ const GitHubDashboard: React.FC = () => {
     }
   };
 
+  const totalLangBytes = languageStats.reduce((s, d) => s + d.value, 0) || 1;
   const processCommitsByDate = (
     commits: CommitSearchResult[]
   ): CommitByDate[] => {
@@ -284,19 +285,16 @@ const GitHubDashboard: React.FC = () => {
             <Heading size='md' mb={4}>
               Language Distribution
             </Heading>
-            <ResponsiveContainer width='100%' height={300}>
+            <ResponsiveContainer width={'100%'} height={300}>
               <PieChart>
                 <Pie
                   data={languageStats}
-                  cx='50%'
-                  cy='50%'
-                  labelLine={false}
-                  label={({ name, percent }) =>
-                    `${name} ${(percent ?? 0).toFixed(0)}%`
-                  }
-                  outerRadius={80}
-                  fill='#8884d8'
-                  dataKey='value'
+                  dataKey={'value'}
+                  nameKey={'name'}
+                  cx={'50%'}
+                  cy={'50%'}
+                  outerRadius={100}
+                  label={false}
                 >
                   {languageStats.map((entry, index) => (
                     <Cell
@@ -305,7 +303,24 @@ const GitHubDashboard: React.FC = () => {
                     />
                   ))}
                 </Pie>
-                <Tooltip />
+
+                <Legend
+                  verticalAlign={'middle'}
+                  align={'right'}
+                  layout={'vertical'}
+                  wrapperStyle={{ paddingLeft: 16, lineHeight: '24px' }}
+                  formatter={(value: string, entry: any) => {
+                    // entry.payload is the datum: { name, value, ... }
+                    const datum = entry?.payload as {
+                      name: string;
+                      value: number;
+                    };
+                    const pct = Math.round(
+                      (datum?.value / totalLangBytes) * 100
+                    );
+                    return `${value} — ${pct}%`;
+                  }}
+                />
               </PieChart>
             </ResponsiveContainer>
           </Box>
