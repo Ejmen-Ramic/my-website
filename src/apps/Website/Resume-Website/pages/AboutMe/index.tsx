@@ -1,11 +1,12 @@
-import { VStack } from '@chakra-ui/react'
-import AboutIntro from './Intro'
+import { VStack } from '@chakra-ui/react';
+import AboutIntro from './Intro';
 // import SchoolCertificates from './SchoolCertificates'
 // import OurProgress from './OurProgress/OurProgress'
-import Milestones from './Milestone'
-import Page from '../../../../../shared/components/PageWrapper'
-import EngineeringSKills from './EngineeringSkills'
-import { FC } from 'react'
+import Milestones from './Milestone';
+import Page from '../../../../../shared/components/PageWrapper';
+import EngineeringSKills from './EngineeringSkills';
+import { FC } from 'react';
+import GitHubDashboard from '../../../test';
 
 const AboutPage: FC = () => {
   return (
@@ -18,9 +19,10 @@ const AboutPage: FC = () => {
         <EngineeringSKills />
         <Milestones />
         {/* <AboutCarousel /> */}
+        <GitHubDashboard />
       </VStack>
     </Page>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;
