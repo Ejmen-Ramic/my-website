@@ -158,64 +158,126 @@ export const githubService = {
     }
   },
 
-  // Get recent commits across all repositories
+  // UPDATED: Get recent commits with pagination to fetch more than 100
   async getRecentCommits(days: number = 30): Promise<CommitSearchResult[]> {
     try {
       const since = new Date();
       since.setDate(since.getDate() - days);
+      
+      let allCommits: CommitSearchResult[] = [];
+      let page = 1;
+      const perPage = 100;
+      
+      while (page <= 10) { // Limit to 10 pages (1000 commits max) to avoid rate limits
+        const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
+          params: {
+            q: `author:${username} committer-date:>${since.toISOString().split('T')[0]}`,
+            sort: 'committer-date',
+            order: 'desc',
+            per_page: perPage,
+            page: page
+          }
+        });
 
-      const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
-        params: {
-          q: `author:${username} committer-date:>${since.toISOString().split('T')[0]}`,
-          sort: 'committer-date',
-          order: 'desc',
-          per_page: 100
-        }
-      });
+        const commits = response.data.items;
+        if (commits.length === 0) break;
+        
+        allCommits = [...allCommits, ...commits];
+        
+        // If we got less than perPage results, we've reached the end
+        if (commits.length < perPage) break;
+        
+        page++;
+        
+        // Add delay to respect rate limits
+        await new Promise(resolve => setTimeout(resolve, 200));
+      }
 
-      return response.data.items;
+      console.log(`Fetched ${allCommits.length} commits for last ${days} days`);
+      return allCommits;
     } catch (error) {
       console.error('Error fetching recent commits:', error);
       throw error;
     }
   },
 
-  // NEW METHOD: Get commits by specific year
+  // UPDATED: Get commits by specific year with pagination
   async getCommitsByYear(year: number): Promise<CommitSearchResult[]> {
     try {
       const startDate = `${year}-01-01`;
       const endDate = `${year}-12-31`;
+      
+      let allCommits: CommitSearchResult[] = [];
+      let page = 1;
+      const perPage = 100;
+      
+      while (page <= 10) { // Limit to 10 pages (1000 commits max) to avoid rate limits
+        const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
+          params: {
+            q: `author:${username} committer-date:${startDate}..${endDate}`,
+            sort: 'committer-date',
+            order: 'desc',
+            per_page: perPage,
+            page: page
+          }
+        });
 
-      const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
-        params: {
-          q: `author:${username} committer-date:${startDate}..${endDate}`,
-          sort: 'committer-date',
-          order: 'desc',
-          per_page: 100
-        }
-      });
+        const commits = response.data.items;
+        if (commits.length === 0) break;
+        
+        allCommits = [...allCommits, ...commits];
+        
+        // If we got less than perPage results, we've reached the end
+        if (commits.length < perPage) break;
+        
+        page++;
+        
+        // Add delay to respect rate limits
+        await new Promise(resolve => setTimeout(resolve, 200));
+      }
 
-      console.log(`Fetched ${response.data.items.length} commits for year ${year}`);
-      return response.data.items;
+      console.log(`Fetched ${allCommits.length} commits for year ${year}`);
+      return allCommits;
     } catch (error) {
       console.error(`Error fetching commits for year ${year}:`, error);
       return []; // Return empty array instead of throwing
     }
   },
 
-  // NEW METHOD: Get commits by date range
+  // UPDATED: Get commits by date range with pagination
   async getCommitsByDateRange(startDate: string, endDate: string): Promise<CommitSearchResult[]> {
     try {
-      const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
-        params: {
-          q: `author:${username} committer-date:${startDate}..${endDate}`,
-          sort: 'committer-date',
-          order: 'desc',
-          per_page: 100
-        }
-      });
+      let allCommits: CommitSearchResult[] = [];
+      let page = 1;
+      const perPage = 100;
+      
+      while (page <= 10) { // Limit to 10 pages (1000 commits max) to avoid rate limits
+        const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
+          params: {
+            q: `author:${username} committer-date:${startDate}..${endDate}`,
+            sort: 'committer-date',
+            order: 'desc',
+            per_page: perPage,
+            page: page
+          }
+        });
 
-      return response.data.items;
+        const commits = response.data.items;
+        if (commits.length === 0) break;
+        
+        allCommits = [...allCommits, ...commits];
+        
+        // If we got less than perPage results, we've reached the end
+        if (commits.length < perPage) break;
+        
+        page++;
+        
+        // Add delay to respect rate limits
+        await new Promise(resolve => setTimeout(resolve, 200));
+      }
+
+      console.log(`Fetched ${allCommits.length} commits for date range ${startDate} to ${endDate}`);
+      return allCommits;
     } catch (error) {
       console.error(`Error fetching commits for date range ${startDate} to ${endDate}:`, error);
       return [];

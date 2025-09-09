@@ -9,7 +9,8 @@ import {
   MenuItem,
   Button,
   Checkbox,
-  Radio,
+  Text,
+  Divider,
 } from '@chakra-ui/react';
 import {
   ResponsiveContainer,
@@ -23,7 +24,14 @@ import {
   Line,
   Legend,
 } from 'recharts';
-import { format, subDays, isAfter, isBefore, startOfDay } from 'date-fns';
+import {
+  format,
+  subDays,
+  isAfter,
+  addDays,
+  startOfWeek,
+  startOfMonth,
+} from 'date-fns';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 
 interface CommitActivityChartProps {
@@ -31,10 +39,13 @@ interface CommitActivityChartProps {
   graphColor: string;
 }
 
-const options = [
+const rangeOptions = [
   { label: 'Last 90 days', value: '90', type: 'range' },
   { label: 'Last 150 days', value: '150', type: 'range' },
   { label: 'Full Year', value: '365', type: 'range' },
+];
+
+const yearOptions = [
   { label: '2025', value: '2025', type: 'year' },
   { label: '2024', value: '2024', type: 'year' },
 ];
@@ -43,57 +54,144 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
   commitActivity,
   graphColor,
 }) => {
-  // Default to 2025 as requested
-  const [selectedRange, setSelectedRange] = useState<string>('');
+  // Allow both range and year selections simultaneously
+  const [selectedRanges, setSelectedRanges] = useState<string[]>([]);
   const [selectedYears, setSelectedYears] = useState<string[]>(['2025']);
 
-  const handleSelect = (opt: (typeof options)[number]) => {
-    if (opt.type === 'range') {
-      setSelectedRange(opt.value);
-      setSelectedYears([]); // clear years if switching back
-    } else {
-      // toggle year on/off
-      setSelectedYears((prev) =>
-        prev.includes(opt.value)
-          ? prev.filter((y) => y !== opt.value)
-          : [...prev, opt.value]
-      );
-      setSelectedRange(''); // clear range if choosing years
-    }
+  const handleRangeSelect = (value: string) => {
+    setSelectedRanges((prev) =>
+      prev.includes(value) ? prev.filter((r) => r !== value) : [...prev, value]
+    );
   };
 
-  // Filter data based on selection
+  const handleYearSelect = (value: string) => {
+    setSelectedYears((prev) =>
+      prev.includes(value) ? prev.filter((y) => y !== value) : [...prev, value]
+    );
+  };
+
+  // Aggregate data based on time range
+  const aggregateData = (data: typeof commitActivity, days: number) => {
+    if (days === 90) {
+      // Every 3 days (30 points)
+      const aggregated: {
+        [key: string]: { date: string; commits: number; count: number };
+      } = {};
+
+      data.forEach((item) => {
+        const date = new Date(item.date);
+        const daysSinceStart = Math.floor(
+          (date.getTime() - new Date(data[0]?.date || date).getTime()) /
+            (1000 * 60 * 60 * 24)
+        );
+        const groupIndex = Math.floor(daysSinceStart / 3);
+        const groupKey = `group-${groupIndex}`;
+
+        if (!aggregated[groupKey]) {
+          aggregated[groupKey] = {
+            date: format(
+              addDays(new Date(data[0]?.date || date), groupIndex * 3),
+              'yyyy-MM-dd'
+            ),
+            commits: 0,
+            count: 0,
+          };
+        }
+        aggregated[groupKey].commits += item.commits;
+        aggregated[groupKey].count += 1;
+      });
+
+      return Object.values(aggregated).map((item) => ({
+        date: item.date,
+        commits: Math.round(item.commits / Math.max(item.count, 1)),
+      }));
+    } else if (days === 150 || days === 182) {
+      // Weekly aggregation (26 points for ~182 days)
+      const aggregated: {
+        [key: string]: { date: string; commits: number; count: number };
+      } = {};
+
+      data.forEach((item) => {
+        const date = new Date(item.date);
+        const weekStart = startOfWeek(date);
+        const weekKey = format(weekStart, 'yyyy-MM-dd');
+
+        if (!aggregated[weekKey]) {
+          aggregated[weekKey] = { date: weekKey, commits: 0, count: 0 };
+        }
+        aggregated[weekKey].commits += item.commits;
+        aggregated[weekKey].count += 1;
+      });
+
+      return Object.values(aggregated).map((item) => ({
+        date: item.date,
+        commits: Math.round(item.commits / Math.max(item.count, 1)),
+      }));
+    } else if (days === 365) {
+      // Monthly aggregation (12 points)
+      const aggregated: {
+        [key: string]: { date: string; commits: number; count: number };
+      } = {};
+
+      data.forEach((item) => {
+        const date = new Date(item.date);
+        const monthStart = startOfMonth(date);
+        const monthKey = format(monthStart, 'yyyy-MM-dd');
+
+        if (!aggregated[monthKey]) {
+          aggregated[monthKey] = { date: monthKey, commits: 0, count: 0 };
+        }
+        aggregated[monthKey].commits += item.commits;
+        aggregated[monthKey].count += 1;
+      });
+
+      return Object.values(aggregated).map((item) => ({
+        date: item.date,
+        commits: Math.round(item.commits / Math.max(item.count, 1)),
+      }));
+    }
+
+    return data;
+  };
+
+  // Filter and process data based on selections
   const filteredData = useMemo(() => {
     const today = new Date();
+    let baseData = commitActivity;
 
-    if (selectedRange) {
-      // Filter by days range
-      const daysBack = parseInt(selectedRange);
-      const cutoffDate = subDays(today, daysBack);
+    // Filter by years if selected
+    if (selectedYears.length > 0) {
+      baseData = commitActivity.filter((item) => {
+        const itemYear = new Date(item.date).getFullYear().toString();
+        return selectedYears.includes(itemYear);
+      });
+    }
 
-      return commitActivity.filter((item) => {
+    // If range is selected, further filter by date range
+    if (selectedRanges.length > 0) {
+      // Use the largest selected range
+      const maxRange = Math.max(...selectedRanges.map((r) => parseInt(r)));
+      const cutoffDate = subDays(today, maxRange);
+
+      baseData = baseData.filter((item) => {
         const itemDate = new Date(item.date);
         return (
           isAfter(itemDate, cutoffDate) ||
           itemDate.getTime() === cutoffDate.getTime()
         );
       });
-    } else if (selectedYears.length > 0) {
-      // Filter by selected years
-      return commitActivity.filter((item) => {
-        const itemYear = new Date(item.date).getFullYear().toString();
-        return selectedYears.includes(itemYear);
-      });
+
+      // Apply aggregation based on the selected range
+      baseData = aggregateData(baseData, maxRange);
     }
 
-    return commitActivity;
-  }, [commitActivity, selectedRange, selectedYears]);
+    return baseData;
+  }, [commitActivity, selectedRanges, selectedYears]);
 
-  // Prepare data for multi-year line chart
+  // Prepare data for multi-year comparison
   const multiYearData = useMemo(() => {
     if (selectedYears.length <= 1) return filteredData;
 
-    // Group data by date (month-day) and create separate series for each year
     const groupedData: { [key: string]: any } = {};
 
     filteredData.forEach((item) => {
@@ -114,7 +212,22 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
   const isMultiYear = selectedYears.length > 1;
   const chartData = isMultiYear ? multiYearData : filteredData;
 
-  // Custom tooltip for multi-year chart
+  // Generate menu button text
+  const getMenuButtonText = () => {
+    const parts = [];
+    if (selectedYears.length > 0) {
+      parts.push(selectedYears.join(', '));
+    }
+    if (selectedRanges.length > 0) {
+      const rangeLabels = selectedRanges.map(
+        (r) => rangeOptions.find((opt) => opt.value === r)?.label || r
+      );
+      parts.push(rangeLabels.join(', '));
+    }
+    return parts.length > 0 ? parts.join(' | ') : 'Select filters';
+  };
+
+  // Custom tooltip
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       return (
@@ -130,7 +243,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
           <p>{`Date: ${label}`}</p>
           {payload.map((entry: any, index: number) => (
             <p key={index} style={{ color: entry.color }}>
-              {`${entry.dataKey}: ${entry.value}`}
+              {`${entry.dataKey}: ${entry.value} commits`}
             </p>
           ))}
         </div>
@@ -146,30 +259,54 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
 
         <Menu closeOnSelect={false}>
           <MenuButton as={Button} rightIcon={<ChevronDownIcon />} size={'sm'}>
-            {selectedYears.length > 0
-              ? selectedYears.join(', ')
-              : options.find((o) => o.value === selectedRange)?.label ||
-                'Select range'}
+            {getMenuButtonText()}
           </MenuButton>
-          <MenuList>
-            {options.map((opt) => (
-              <MenuItem key={opt.value} closeOnSelect={false}>
-                {opt.type === 'range' ? (
-                  <Radio
-                    isChecked={selectedRange === opt.value}
-                    onChange={() => handleSelect(opt)}
+          <MenuList maxH={'400px'} overflowY={'auto'}>
+            {/* Time Range Section */}
+            <Box px={'12px'} py={'8px'}>
+              <Text
+                fontSize={'sm'}
+                fontWeight={'bold'}
+                color={'gray.500'}
+                mb={'8px'}
+              >
+                TIME RANGES
+              </Text>
+              {rangeOptions.map((opt) => (
+                <MenuItem key={opt.value} closeOnSelect={false} pl={'4px'}>
+                  <Checkbox
+                    isChecked={selectedRanges.includes(opt.value)}
+                    onChange={() => handleRangeSelect(opt.value)}
                     mr={'8px'}
                   />
-                ) : (
+                  {opt.label}
+                </MenuItem>
+              ))}
+            </Box>
+
+            <Divider />
+
+            {/* Years Section */}
+            <Box px={'12px'} py={'8px'}>
+              <Text
+                fontSize={'sm'}
+                fontWeight={'bold'}
+                color={'gray.500'}
+                mb={'8px'}
+              >
+                YEARS
+              </Text>
+              {yearOptions.map((opt) => (
+                <MenuItem key={opt.value} closeOnSelect={false} pl={'4px'}>
                   <Checkbox
                     isChecked={selectedYears.includes(opt.value)}
-                    onChange={() => handleSelect(opt)}
+                    onChange={() => handleYearSelect(opt.value)}
                     mr={'8px'}
                   />
-                )}
-                {opt.label}
-              </MenuItem>
-            ))}
+                  {opt.label}
+                </MenuItem>
+              ))}
+            </Box>
           </MenuList>
         </Menu>
       </Flex>
@@ -184,11 +321,15 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
               tick={{ fill: graphColor, fontSize: 14 }}
               axisLine={{ stroke: graphColor }}
             />
-            <YAxis tick={{ fill: graphColor, fontSize: 14 }} />
+            <YAxis
+              tick={{ fill: graphColor, fontSize: 14 }}
+              domain={[0, 'dataMax']} // This ensures Y-axis shows full range
+            />
             <Tooltip
               labelFormatter={(date: string) =>
                 format(new Date(date), 'MMM dd, yyyy')
               }
+              formatter={(value: any) => [`${value} commits`, 'Commits']}
             />
             <Area
               type={'monotone'}
@@ -206,7 +347,10 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
               tick={{ fill: graphColor, fontSize: 14 }}
               axisLine={{ stroke: graphColor }}
             />
-            <YAxis tick={{ fill: graphColor, fontSize: 14 }} />
+            <YAxis
+              tick={{ fill: graphColor, fontSize: 14 }}
+              domain={[0, 'dataMax']} // This ensures Y-axis shows full range
+            />
             <Tooltip content={<CustomTooltip />} />
             <Legend />
             {selectedYears.map((year, idx) => (
