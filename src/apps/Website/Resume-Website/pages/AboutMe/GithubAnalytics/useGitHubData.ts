@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { format, parseISO, startOfYear, endOfYear } from 'date-fns';
+import { format, parseISO} from 'date-fns';
 import { CommitSearchResult, GitHubRepo, githubService, GitHubUser, LanguageStats } from '../../../../../../backend/githubService';
 
 export interface CommitByDate {
