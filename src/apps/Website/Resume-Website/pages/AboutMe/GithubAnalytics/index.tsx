@@ -28,6 +28,7 @@ const GitHubDashboard: React.FC = () => {
   };
   const CardBGColor = useColorModeValue(colors.white, colors.gray[800]);
   const HighlightColor = useColorModeValue(colors.blue[400], colors.teal[400]);
+  const GraphColor = useColorModeValue('#1a202c', colors.white);
 
   const {
     loading,
@@ -112,7 +113,10 @@ const GitHubDashboard: React.FC = () => {
 
         {/* Charts */}
         <Grid templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }} gap={8}>
-          <CommitActivityChart commitActivity={commitActivity} />
+          <CommitActivityChart
+            commitActivity={commitActivity}
+            graphColor={GraphColor}
+          />
           <LanguageDistributionChart
             languageStats={languageStats}
             totalLangBytes={totalLangBytes}

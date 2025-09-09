@@ -178,6 +178,48 @@ export const githubService = {
       console.error('Error fetching recent commits:', error);
       throw error;
     }
+  },
+
+  // NEW METHOD: Get commits by specific year
+  async getCommitsByYear(year: number): Promise<CommitSearchResult[]> {
+    try {
+      const startDate = `${year}-01-01`;
+      const endDate = `${year}-12-31`;
+
+      const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
+        params: {
+          q: `author:${username} committer-date:${startDate}..${endDate}`,
+          sort: 'committer-date',
+          order: 'desc',
+          per_page: 100
+        }
+      });
+
+      console.log(`Fetched ${response.data.items.length} commits for year ${year}`);
+      return response.data.items;
+    } catch (error) {
+      console.error(`Error fetching commits for year ${year}:`, error);
+      return []; // Return empty array instead of throwing
+    }
+  },
+
+  // NEW METHOD: Get commits by date range
+  async getCommitsByDateRange(startDate: string, endDate: string): Promise<CommitSearchResult[]> {
+    try {
+      const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
+        params: {
+          q: `author:${username} committer-date:${startDate}..${endDate}`,
+          sort: 'committer-date',
+          order: 'desc',
+          per_page: 100
+        }
+      });
+
+      return response.data.items;
+    } catch (error) {
+      console.error(`Error fetching commits for date range ${startDate} to ${endDate}:`, error);
+      return [];
+    }
   }
 };
 

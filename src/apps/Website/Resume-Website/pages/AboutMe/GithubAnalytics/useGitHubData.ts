@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { format, parseISO } from 'date-fns';
+import { format, parseISO, startOfYear, endOfYear } from 'date-fns';
 import { CommitSearchResult, GitHubRepo, githubService, GitHubUser, LanguageStats } from '../../../../../../backend/githubService';
-
 
 export interface CommitByDate {
   date: string;
   commits: number;
+  year?: number; // Add year field
 }
 
 export interface RepoStat {
@@ -43,14 +43,21 @@ export const useGitHubData = () => {
       setLoading(true);
       setError(null);
 
-      const [profileData, reposData, recentCommitsData] = await Promise.all([
+      const [profileData, reposData] = await Promise.all([
         githubService.getUserProfile(),
         githubService.getUserRepos(),
-        githubService.getRecentCommits(90),
       ]);
 
       setProfile(profileData);
       setRepos(reposData);
+
+      // Fetch commits for multiple years
+      const [commits2024, commits2025, recentCommitsData] = await Promise.all([
+        githubService.getCommitsByYear(2024),
+        githubService.getCommitsByYear(2025),
+        githubService.getRecentCommits(90),
+      ]);
+
       setRecentCommits(recentCommitsData);
 
       const languageData: LanguageStats = await githubService.getLanguageStats();
@@ -60,7 +67,9 @@ export const useGitHubData = () => {
         .slice(0, 8);
       setLanguageStats(languageArray);
 
-      const commitsByDate = processCommitsByDate(recentCommitsData);
+      // Combine commits from different years
+      const allCommits = [...commits2024, ...commits2025];
+      const commitsByDate = processCommitsByDate(allCommits);
       setCommitActivity(commitsByDate);
     } catch (err) {
       const errorMessage =
@@ -81,7 +90,11 @@ export const useGitHubData = () => {
     });
 
     return Object.entries(commitsByDate)
-      .map(([date, commits]) => ({ date, commits }))
+      .map(([date, commits]) => ({ 
+        date, 
+        commits,
+        year: new Date(date).getFullYear() // Add year field
+      }))
       .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
   };
 
