@@ -15,6 +15,7 @@ import {
   Grid,
   Skeleton,
   SkeletonText,
+  HStack,
 } from '@chakra-ui/react';
 import { useGitHubData } from './useGitHubData';
 import { colors } from '../../../../../../shared/components/Hooks/color';
@@ -24,6 +25,7 @@ import StatsGrid from './StatsGrid';
 import CommitActivityChart from './CommitActivityChart';
 import LanguageDistributionChart from './LanguageDistributionChart';
 import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
+import { FaGithub } from 'react-icons/fa';
 
 const GitHubDashboard: React.FC = () => {
   const MainBGColor = {
@@ -184,9 +186,15 @@ const GitHubDashboard: React.FC = () => {
       >
         {/* Header */}
         <VStack spacing={'20px'} alignItems={'start'}>
+          {/* <HStack w={'full'} spacing={'16px'}> */}
+          {/* <Box as={'span'} display={{ base: 'none', md: 'block' }}>
+              <FaGithub style={{ fontSize: '30px' }} />
+            </Box> */}
           <Heading>
             <Trans>GitHub Analytics Dashboard</Trans>
           </Heading>
+          {/* </HStack> */}
+
           <Text>
             <Trans>
               Showcasing development{' '}
