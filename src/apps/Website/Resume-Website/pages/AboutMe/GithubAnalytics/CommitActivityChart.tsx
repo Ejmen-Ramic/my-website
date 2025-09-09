@@ -12,6 +12,8 @@ import {
   Text,
   Divider,
   useToast,
+  useColorModeValue,
+  Stack,
 } from '@chakra-ui/react';
 import {
   ResponsiveContainer,
@@ -34,7 +36,8 @@ import {
   startOfMonth,
 } from 'date-fns';
 import { ChevronDownIcon } from '@chakra-ui/icons';
-import { t } from '@lingui/macro';
+import { t, Trans } from '@lingui/macro';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 
 interface CommitActivityChartProps {
   commitActivity: { date: string; commits: number; year?: number }[];
@@ -42,9 +45,9 @@ interface CommitActivityChartProps {
 }
 
 const rangeOptions = [
-  { label: 'Last 90 days', value: '90', type: 'range' },
-  { label: 'Last 150 days', value: '150', type: 'range' },
-  { label: 'Full Year', value: '365', type: 'range' },
+  { label: t`Last 90 days`, value: '90', type: 'range' },
+  { label: t`Last 150 days`, value: '150', type: 'range' },
+  { label: t`Full Year`, value: '365', type: 'range' },
 ];
 
 const yearOptions = [
@@ -56,6 +59,8 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
   commitActivity,
   graphColor,
 }) => {
+  const MainBGColor = useColorModeValue(colors.gray[100], colors.gray[700]);
+
   const [selectedRange, setSelectedRange] = useState<string>('365');
   const [selectedYears, setSelectedYears] = useState<string[]>(['2025']);
   const toast = useToast();
@@ -234,9 +239,9 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
         selectedRange;
       parts.push(rangeLabel);
     } else if (selectedYears.length > 1) {
-      parts.push('Full Year');
+      parts.push(t`Full Year`);
     }
-    return parts.length > 0 ? parts.join(' | ') : 'Select filters';
+    return parts.length > 0 ? parts.join(' | ') : t`Select filters`;
   };
 
   const CustomTooltip = ({ active, payload, label }: any) => {
@@ -264,9 +269,11 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
   };
 
   return (
-    <Box bg={'gray.700'} rounded={'lg'} shadow={'md'} p={'24px'}>
+    <Stack bg={MainBGColor} rounded={'lg'} shadow={'md'} p={'24px'}>
       <Flex justify={'space-between'} align={'center'} mb={'16px'}>
-        <Heading fontSize={'20px'}>Commit Activity</Heading>
+        <Heading fontSize={'20px'}>
+          <Trans>Commit Activity</Trans>
+        </Heading>
 
         <Menu closeOnSelect={false} placement={'bottom-end'}>
           <MenuButton as={Button} rightIcon={<ChevronDownIcon />} size={'sm'}>
@@ -392,7 +399,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
           </LineChart>
         )}
       </ResponsiveContainer>
-    </Box>
+    </Stack>
   );
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from 'recharts';
-import { Box, Heading } from '@chakra-ui/react';
+import { Heading, Stack, useColorModeValue } from '@chakra-ui/react';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 
 const COLORS = [
   '#0088FE',
@@ -20,8 +21,10 @@ const LanguageDistributionChart: React.FC<LanguageDistributionChartProps> = ({
   languageStats,
   totalLangBytes,
 }) => {
+  const MainBGColor = useColorModeValue(colors.gray[100], colors.gray[700]);
+
   return (
-    <Box bg={'gray.700'} rounded={'lg'} shadow={'md'} p={6}>
+    <Stack bg={MainBGColor} rounded={'lg'} shadow={'md'} p={6}>
       <Heading size={'md'} mb={4}>
         Language Distribution
       </Heading>
@@ -62,7 +65,7 @@ const LanguageDistributionChart: React.FC<LanguageDistributionChartProps> = ({
           />
         </PieChart>
       </ResponsiveContainer>
-    </Box>
+    </Stack>
   );
 };
 

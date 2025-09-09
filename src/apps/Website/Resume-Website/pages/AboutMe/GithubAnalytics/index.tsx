@@ -60,8 +60,10 @@ const GitHubDashboard: React.FC = () => {
             <Trans>Error:</Trans>
           </AlertTitle>
           <AlertDescription>
-            {error}. Make sure your GitHub token is set correctly in the .env
-            file
+            {error}.{' '}
+            <Trans>
+              Make sure your GitHub token is set correctly in the .env file
+            </Trans>
           </AlertDescription>
         </Box>
       </Alert>
@@ -72,36 +74,36 @@ const GitHubDashboard: React.FC = () => {
 
   return (
     <Stack
-      w='full'
-      minH='100vh'
+      w={'full'}
+      minH={'100vh'}
       bg={MainBGColor}
       pt={{ lg: '100px', base: '32px' }}
       pb={{ lg: '100px', base: '32px' }}
       px={{ base: '32px', lg: 'unset' }}
     >
       <Stack
-        w='full'
-        maxW='1400px'
-        mx='auto'
-        spacing='32px'
-        p='32px'
+        w={'full'}
+        maxW={'1400px'}
+        mx={'auto'}
+        spacing={'32px'}
+        p={'32px'}
         bg={CardBGColor}
         borderRadius={{ md: '10px' }}
         border={{ base: 'none', md: `1px solid ${colors.iceGray}` }}
       >
         {/* Header */}
-        <VStack spacing='20px' alignItems='start'>
+        <VStack spacing={'20px'} alignItems={'start'}>
           <Heading>
             <Trans>GitHub Analytics Dashboard</Trans>
           </Heading>
           <Text>
             <Trans>
               Showcasing development{' '}
-              <Box as='span' fontWeight='bold' color={HighlightColor}>
+              <Box as={'span'} fontWeight={'bold'} color={HighlightColor}>
                 activity
               </Box>{' '}
               and{' '}
-              <Box as='span' fontWeight='bold' color={HighlightColor}>
+              <Box as={'span'} fontWeight={'bold'} color={HighlightColor}>
                 project
               </Box>{' '}
               statistics

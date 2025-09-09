@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { format, parseISO} from 'date-fns';
 import { CommitSearchResult, GitHubRepo, githubService, GitHubUser, LanguageStats } from '../../../../../../backend/githubService';
+import { t } from '@lingui/macro';
 
 export interface CommitByDate {
   date: string;
@@ -71,9 +72,9 @@ export const useGitHubData = () => {
       setCommitActivity(commitsByDate);
     } catch (err) {
       const errorMessage =
-        err instanceof Error ? err.message : 'An unknown error occurred';
+        err instanceof Error ? err.message : t`An unknown error occurred`;
       setError(errorMessage);
-      console.error('Error fetching GitHub data:', err);
+      console.error(t`Error fetching GitHub data:`, err);
     } finally {
       setLoading(false);
     }
@@ -101,10 +102,10 @@ export const useGitHubData = () => {
     const totalForks = repos.reduce((sum, repo) => sum + repo.forks_count, 0);
 
     return [
-      { name: 'Public Repos', value: repos.length },
-      { name: 'Total Stars', value: totalStars },
-      { name: 'Total Forks', value: totalForks },
-      { name: 'Total Commits', value: recentCommits.length },
+      { name: t`Public Repos`, value: repos.length },
+      { name: t`Total Stars`, value: totalStars },
+      { name: t`Total Forks`, value: totalForks },
+      { name: t`Total Commits`, value: recentCommits.length },
     ];
   };
 
