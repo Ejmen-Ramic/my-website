@@ -21,18 +21,18 @@ const LanguageDistributionChart: React.FC<LanguageDistributionChartProps> = ({
   totalLangBytes,
 }) => {
   return (
-    <Box bg='gray.700' rounded='lg' shadow='md' p={6}>
-      <Heading size='md' mb={4}>
+    <Box bg={'gray.700'} rounded={'lg'} shadow={'md'} p={6}>
+      <Heading size={'md'} mb={4}>
         Language Distribution
       </Heading>
-      <ResponsiveContainer width='100%' height={300}>
+      <ResponsiveContainer width={'100%'} height={300}>
         <PieChart>
           <Pie
             data={languageStats}
-            dataKey='value'
-            nameKey='name'
-            cx='50%'
-            cy='50%'
+            dataKey={'value'}
+            nameKey={'name'}
+            cx={'50%'}
+            cy={'50%'}
             outerRadius={90}
             innerRadius={40}
             label={({ name, percent }) => {

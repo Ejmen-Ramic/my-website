@@ -17,18 +17,18 @@ const StatsGrid: React.FC<StatsGridProps> = ({ repoStats, MainBGColor }) => {
         md: 'repeat(2, 1fr)',
         lg: 'repeat(4, 1fr)',
       }}
-      gap='24px'
+      gap={'24px'}
     >
       {repoStats.map((stat) => (
         <Stack
           key={stat.name}
           bg={MainBGColor}
-          rounded='lg'
-          shadow='md'
-          p='24px'
+          rounded={'lg'}
+          shadow={'md'}
+          p={'24px'}
         >
-          <Text fontWeight='semibold'>{stat.name}</Text>
-          <Text fontSize='3xl' fontWeight='bold' color={ColorNumber}>
+          <Text fontWeight={'semibold'}>{stat.name}</Text>
+          <Text fontSize={'3xl'} fontWeight={'bold'} color={ColorNumber}>
             {stat.value}
           </Text>
         </Stack>

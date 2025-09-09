@@ -296,7 +296,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
                     isChecked={selectedRange === opt.value}
                     onChange={() => handleRangeSelect(opt.value)}
                     mr={'8px'}
-                    pointerEvents='none'
+                    pointerEvents={'none'}
                     isDisabled={selectedYears.length > 1}
                   />
                   {opt.label}

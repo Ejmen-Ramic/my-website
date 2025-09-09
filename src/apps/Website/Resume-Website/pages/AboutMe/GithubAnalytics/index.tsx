@@ -42,19 +42,23 @@ const GitHubDashboard: React.FC = () => {
 
   if (loading) {
     return (
-      <Flex justify='center' align='center' h='64'>
-        <Spinner size='xl' mr={3} />
-        <Text fontSize='xl'>Loading GitHub data...</Text>
+      <Flex justify={'center'} align={'center'} h={'64px'}>
+        <Spinner size={'xl'} mr={3} />
+        <Text fontSize={'xl'}>
+          <Trans>Loading GitHub data...</Trans>
+        </Text>
       </Flex>
     );
   }
 
   if (error) {
     return (
-      <Alert status='error' borderRadius='md'>
+      <Alert status={'error'} borderRadius={'md'}>
         <AlertIcon />
         <Box>
-          <AlertTitle>Error:</AlertTitle>
+          <AlertTitle>
+            <Trans>Error:</Trans>
+          </AlertTitle>
           <AlertDescription>
             {error}. Make sure your GitHub token is set correctly in the .env
             file
