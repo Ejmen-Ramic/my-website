@@ -28,10 +28,14 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
+  Stack,
+  useColorModeValue,
+  VStack,
 } from '@chakra-ui/react';
 import { format } from 'date-fns';
 import { useGitHubData } from './useGitHubData';
 import { colors } from '../../../../../../shared/components/Hooks/color';
+import { Trans } from '@lingui/macro';
 
 const COLORS = [
   '#0088FE',
@@ -43,6 +47,14 @@ const COLORS = [
 ];
 
 const GitHubDashboard: React.FC = () => {
+  const MainBGColor = {
+    md: useColorModeValue(colors.gray[100], colors.gray[700]),
+  };
+  const CardBGColor = useColorModeValue(colors.white, colors.gray[800]);
+  const ColorNumber = useColorModeValue(colors.blue[400], colors.teal[400]);
+  const GraphColor = useColorModeValue('#1a202c', colors.white);
+  const HighlightColor = useColorModeValue(colors.blue[400], colors.teal[400]);
+
   const {
     loading,
     error,
@@ -82,34 +94,49 @@ const GitHubDashboard: React.FC = () => {
   const topRepos = getTopRepos();
 
   return (
-    <Box p={6} bg='gray.50' minH='100vh'>
-      <Box maxW='7xl' mx='auto'>
+    <Stack w={'full'} minH={'100vh'} bg={MainBGColor} py={'100px'}>
+      <Stack
+        w={'full'}
+        maxW={'1400px'}
+        mx={'auto'}
+        spacing={'32px'}
+        p={'32px'}
+        bg={CardBGColor}
+        borderRadius={{ md: '10px' }}
+        border={{ base: 'none', md: `1px solid ${colors.iceGray}` }}
+      >
         {/* Header */}
-        <Box mb={8}>
-          <Heading as='h1' size='xl' mb={2} color={colors.teal[600]}>
-            GitHub Analytics Dashboard
+        <VStack spacing={'20px'} alignItems={'start'}>
+          <Heading>
+            <Trans>GitHub Analytics Dashboard</Trans>
           </Heading>
-          <Text color='gray.600'>
-            Showcasing development activity and project statistics
+          <Text>
+            <Trans>
+              Showcasing development activity and project statistics
+            </Trans>
           </Text>
-        </Box>
+        </VStack>
 
         {/* Profile */}
         {profile && (
-          <Box bg='white' rounded='lg' shadow='md' p={6} mb={8}>
-            <Flex align='center' gap={4}>
+          <VStack
+            alignItems={'start'}
+            bg={MainBGColor}
+            rounded={'lg'}
+            shadow={'md'}
+            p={6}
+          >
+            <Flex gap={'32px'}>
               <Avatar src={profile.avatar_url} name={profile.name} size='xl' />
-              <Box>
-                <Heading as='h2' size='lg' color={colors.teal[600]}>
+              <VStack alignItems={'start'} gap={'8px'}>
+                <Heading as={'h2'} size={'lg'}>
                   {profile.name}
                 </Heading>
-                <Text color='gray.600'>@{profile.login}</Text>
-                <Text fontSize='sm' color='gray.500'>
-                  {profile.bio}
-                </Text>
-              </Box>
+                <Text>@{profile.login}</Text>
+                <Text fontSize='sm'>{profile.bio}</Text>
+              </VStack>
             </Flex>
-          </Box>
+          </VStack>
         )}
 
         {/* Stats */}
@@ -119,15 +146,18 @@ const GitHubDashboard: React.FC = () => {
             md: 'repeat(2, 1fr)',
             lg: 'repeat(4, 1fr)',
           }}
-          gap={6}
-          mb={8}
+          gap={'24px'}
         >
           {repoStats.map((stat) => (
-            <Box key={stat.name} bg='white' rounded='lg' shadow='md' p={6}>
-              <Text fontWeight='semibold' color='gray.700'>
-                {stat.name}
-              </Text>
-              <Text fontSize='3xl' fontWeight='bold' color='blue.600'>
+            <Box
+              key={stat.name}
+              bg={MainBGColor}
+              rounded={'lg'}
+              shadow={'md'}
+              p={'24px'}
+            >
+              <Text fontWeight={'semibold'}>{stat.name}</Text>
+              <Text fontSize={'3xl'} fontWeight={'bold'} color={ColorNumber}>
                 {stat.value}
               </Text>
             </Box>
@@ -135,13 +165,9 @@ const GitHubDashboard: React.FC = () => {
         </Grid>
 
         {/* Charts */}
-        <Grid
-          templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}
-          gap={8}
-          mb={8}
-        >
+        <Grid templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }} gap={8}>
           {/* Commit Activity */}
-          <Box bg='white' rounded='lg' shadow='md' p={6}>
+          <Box bg={MainBGColor} rounded={'lg'} shadow={'md'} p={6}>
             <Heading size='md' mb={4}>
               Commit Activity (Last 90 Days)
             </Heading>
@@ -153,8 +179,10 @@ const GitHubDashboard: React.FC = () => {
                   tickFormatter={(date: string) =>
                     format(new Date(date), 'MMM dd')
                   }
+                  tick={{ fill: GraphColor, fontSize: 16 }}
+                  axisLine={{ stroke: GraphColor }}
                 />
-                <YAxis />
+                <YAxis tick={{ fill: GraphColor, fontSize: 16 }} />
                 <Tooltip
                   labelFormatter={(date: string) =>
                     format(new Date(date), 'MMM dd, yyyy')
@@ -172,7 +200,7 @@ const GitHubDashboard: React.FC = () => {
           </Box>
 
           {/* Language Distribution */}
-          <Box bg='white' rounded='lg' shadow='md' p={6}>
+          <Box bg={MainBGColor} rounded={'lg'} shadow={'md'} p={6}>
             <Heading size='md' mb={4}>
               Language Distribution
             </Heading>
@@ -218,8 +246,8 @@ const GitHubDashboard: React.FC = () => {
             </ResponsiveContainer>
           </Box>
         </Grid>
-      </Box>
-    </Box>
+      </Stack>
+    </Stack>
   );
 };
 

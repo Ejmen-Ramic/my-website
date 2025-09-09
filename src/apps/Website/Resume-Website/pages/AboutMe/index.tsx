@@ -6,7 +6,7 @@ import Milestones from './Milestone';
 import Page from '../../../../../shared/components/PageWrapper';
 import EngineeringSKills from './EngineeringSkills';
 import { FC } from 'react';
-import GitHubDashboard from '../../../test';
+import GitHubDashboard from './GithubAnalytics';
 
 const AboutPage: FC = () => {
   return (
