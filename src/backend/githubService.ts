@@ -1,4 +1,3 @@
-// githubService.ts
 import axios, { AxiosResponse } from 'axios';
 
 const GITHUB_API_BASE = 'https://api.github.com';

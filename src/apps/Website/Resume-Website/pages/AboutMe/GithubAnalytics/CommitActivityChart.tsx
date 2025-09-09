@@ -54,20 +54,32 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
   commitActivity,
   graphColor,
 }) => {
-  // Allow both range and year selections simultaneously
-  const [selectedRanges, setSelectedRanges] = useState<string[]>([]);
-  const [selectedYears, setSelectedYears] = useState<string[]>(['2025']);
+  // Allow both range and year selections simultaneously - Set defaults
+  const [selectedRanges, setSelectedRanges] = useState<string[]>(['365']); // Default to Full Year
+  const [selectedYears, setSelectedYears] = useState<string[]>(['2025']); // Default to 2025
 
   const handleRangeSelect = (value: string) => {
-    setSelectedRanges((prev) =>
-      prev.includes(value) ? prev.filter((r) => r !== value) : [...prev, value]
-    );
+    setSelectedRanges((prev) => {
+      // If trying to uncheck and it's the last selected range, prevent it
+      if (prev.includes(value) && prev.length === 1) {
+        return prev; // Don't allow unchecking the last range
+      }
+      return prev.includes(value)
+        ? prev.filter((r) => r !== value)
+        : [...prev, value];
+    });
   };
 
   const handleYearSelect = (value: string) => {
-    setSelectedYears((prev) =>
-      prev.includes(value) ? prev.filter((y) => y !== value) : [...prev, value]
-    );
+    setSelectedYears((prev) => {
+      // If trying to uncheck and it's the last selected year, prevent it
+      if (prev.includes(value) && prev.length === 1) {
+        return prev; // Don't allow unchecking the last year
+      }
+      return prev.includes(value)
+        ? prev.filter((y) => y !== value)
+        : [...prev, value];
+    });
   };
 
   // Aggregate data based on time range
@@ -103,7 +115,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
 
       return Object.values(aggregated).map((item) => ({
         date: item.date,
-        commits: Math.round(item.commits / Math.max(item.count, 1)),
+        commits: item.commits, // Sum total commits, don't average
       }));
     } else if (days === 150 || days === 182) {
       // Weekly aggregation (26 points for ~182 days)
@@ -125,7 +137,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
 
       return Object.values(aggregated).map((item) => ({
         date: item.date,
-        commits: Math.round(item.commits / Math.max(item.count, 1)),
+        commits: item.commits, // Sum total commits, don't average
       }));
     } else if (days === 365) {
       // Monthly aggregation (12 points)
@@ -147,7 +159,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
 
       return Object.values(aggregated).map((item) => ({
         date: item.date,
-        commits: Math.round(item.commits / Math.max(item.count, 1)),
+        commits: item.commits, // Sum total commits for the month, don't average
       }));
     }
 
