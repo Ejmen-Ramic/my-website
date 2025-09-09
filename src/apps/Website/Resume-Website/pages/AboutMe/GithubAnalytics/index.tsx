@@ -38,6 +38,7 @@ const GitHubDashboard: React.FC = () => {
     languageStats,
     totalLangBytes,
     getRepoStats,
+    getCommitStats,
   } = useGitHubData();
 
   if (loading) {
@@ -115,7 +116,11 @@ const GitHubDashboard: React.FC = () => {
         {profile && <ProfileCard profile={profile} MainBGColor={MainBGColor} />}
 
         {/* Stats */}
-        <StatsGrid repoStats={repoStats} MainBGColor={MainBGColor} />
+        <StatsGrid
+          repoStats={repoStats}
+          MainBGColor={MainBGColor}
+          commitsByYear={getCommitStats()}
+        />
 
         {/* Charts */}
         <Grid templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }} gap={8}>

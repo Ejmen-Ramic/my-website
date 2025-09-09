@@ -105,7 +105,9 @@ export const useGitHubData = () => {
       { name: t`Public Repos`, value: repos.length },
       { name: t`Total Stars`, value: totalStars },
       { name: t`Total Forks`, value: totalForks },
-      { name: t`Total Commits`, value: recentCommits.length },
+            { name: t`Total Commits`, value: recentCommits.length },
+
+      
     ];
   };
 
@@ -121,6 +123,18 @@ export const useGitHubData = () => {
       }));
   };
 
+const getCommitStats = () => {
+  const stats: { [year: number]: number } = {};
+
+  commitActivity.forEach((c) => {
+    if (!c.year) return;
+    stats[c.year] = (stats[c.year] || 0) + c.commits; 
+  });
+
+  return stats;
+};
+
+
   const totalLangBytes = languageStats.reduce((s, d) => s + d.value, 0) || 1;
 
   return {
@@ -133,6 +147,7 @@ export const useGitHubData = () => {
     recentCommits,
     getRepoStats,
     getTopRepos,
+    getCommitStats
   };
 };
 
