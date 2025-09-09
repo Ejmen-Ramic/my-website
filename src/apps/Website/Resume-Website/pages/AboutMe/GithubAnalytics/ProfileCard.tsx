@@ -1,5 +1,13 @@
 import React from 'react';
-import { Avatar, Box, Flex, Heading, Text, VStack } from '@chakra-ui/react';
+import {
+  Avatar,
+  Flex,
+  Heading,
+  Text,
+  useColorModeValue,
+  VStack,
+} from '@chakra-ui/react';
+import { colors } from '../../../../../../shared/components/Hooks/color';
 
 interface ProfileCardProps {
   profile: {
@@ -8,10 +16,11 @@ interface ProfileCardProps {
     login: string;
     bio: string;
   };
-  MainBGColor: any;
 }
 
-const ProfileCard: React.FC<ProfileCardProps> = ({ profile, MainBGColor }) => {
+const ProfileCard: React.FC<ProfileCardProps> = ({ profile }) => {
+  const MainBGColor = useColorModeValue(colors.gray[100], colors.gray[700]);
+
   return (
     <VStack
       alignItems={'start'}

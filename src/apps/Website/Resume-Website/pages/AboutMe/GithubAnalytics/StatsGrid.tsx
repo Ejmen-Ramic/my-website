@@ -18,17 +18,12 @@ import { colors } from '../../../../../../shared/components/Hooks/color';
 
 interface StatsGridProps {
   repoStats: { name: string; value: string | number }[];
-  commitsByYear: { [year: number]: number }; // 👈 already precomputed in Dashboard
-  MainBGColor: any;
+  commitsByYear: { [year: number]: number };
 }
 
-const StatsGrid: React.FC<StatsGridProps> = ({
-  repoStats,
-  commitsByYear,
-  MainBGColor,
-}) => {
+const StatsGrid: React.FC<StatsGridProps> = ({ repoStats, commitsByYear }) => {
   const ColorNumber = useColorModeValue(colors.blue[400], colors.teal[400]);
-
+  const MainBGColor = useColorModeValue(colors.gray[100], colors.gray[700]);
   const [selectedYear, setSelectedYear] = useState<number>(2025);
 
   return (

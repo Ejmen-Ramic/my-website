@@ -81,13 +81,14 @@ const GitHubDashboard: React.FC = () => {
       pt={{ lg: '100px', base: '32px' }}
       pb={{ lg: '100px', base: '32px' }}
       px={{ base: '32px', lg: 'unset' }}
+      mb={{ base: '50px', lg: '100px' }}
     >
       <Stack
         w={'full'}
         maxW={'1400px'}
         mx={'auto'}
         spacing={'32px'}
-        p={'32px'}
+        p={{ md: '32px' }}
         bg={CardBGColor}
         borderRadius={{ md: '10px' }}
         border={{ base: 'none', md: `1px solid ${colors.iceGray}` }}
@@ -113,14 +114,10 @@ const GitHubDashboard: React.FC = () => {
         </VStack>
 
         {/* Profile */}
-        {profile && <ProfileCard profile={profile} MainBGColor={MainBGColor} />}
+        {profile && <ProfileCard profile={profile} />}
 
         {/* Stats */}
-        <StatsGrid
-          repoStats={repoStats}
-          MainBGColor={MainBGColor}
-          commitsByYear={getCommitStats()}
-        />
+        <StatsGrid repoStats={repoStats} commitsByYear={getCommitStats()} />
 
         {/* Charts */}
         <Grid templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }} gap={8}>
