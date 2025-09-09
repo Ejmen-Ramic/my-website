@@ -92,7 +92,7 @@ export const useGitHubData = () => {
       .map(([date, commits]) => ({ 
         date, 
         commits,
-        year: new Date(date).getFullYear() // Add year field
+        year: new Date(date).getFullYear() 
       }))
       .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
   };

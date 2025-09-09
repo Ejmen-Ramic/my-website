@@ -29,7 +29,6 @@ const StatsGrid: React.FC<StatsGridProps> = ({
 }) => {
   const ColorNumber = useColorModeValue(colors.blue[400], colors.teal[400]);
 
-  // default year = 2025
   const [selectedYear, setSelectedYear] = useState<number>(2025);
 
   return (
@@ -42,7 +41,6 @@ const StatsGrid: React.FC<StatsGridProps> = ({
       gap={'24px'}
     >
       {repoStats.map((stat) => {
-        // Special handling for Total Commits
         if (stat.name === 'Total Commits') {
           return (
             <Stack
@@ -55,7 +53,6 @@ const StatsGrid: React.FC<StatsGridProps> = ({
               <Flex justify='space-between' align='center'>
                 <Text fontWeight={'semibold'}>{stat.name}</Text>
 
-                {/* Year dropdown */}
                 <Menu closeOnSelect={true} placement={'bottom-end'}>
                   <MenuButton
                     as={Button}
@@ -94,7 +91,6 @@ const StatsGrid: React.FC<StatsGridProps> = ({
                 </Menu>
               </Flex>
 
-              {/* Show commits for the selected year */}
               <Text fontSize={'3xl'} fontWeight={'bold'} color={ColorNumber}>
                 {commitsByYear[selectedYear] ?? 0}
               </Text>
@@ -102,7 +98,6 @@ const StatsGrid: React.FC<StatsGridProps> = ({
           );
         }
 
-        // Default cards
         return (
           <Stack
             key={stat.name}
