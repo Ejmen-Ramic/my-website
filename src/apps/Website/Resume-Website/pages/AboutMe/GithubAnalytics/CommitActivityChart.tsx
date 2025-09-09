@@ -38,6 +38,7 @@ import {
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import { t, Trans } from '@lingui/macro';
 import { colors } from '../../../../../../shared/components/Hooks/color';
+import FilterMenu from './FilterMenu';
 
 interface CommitActivityChartProps {
   commitActivity: { date: string; commits: number; year?: number }[];
@@ -269,79 +270,34 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
   };
 
   return (
-    <Stack bg={MainBGColor} rounded={'lg'} shadow={'md'} p={'24px'}>
-      <Flex justify={'space-between'} align={'center'} mb={'16px'}>
-        <Heading fontSize={'20px'}>
+    <Stack
+      bg={MainBGColor}
+      rounded={'lg'}
+      shadow={'md'}
+      py={'24px'}
+      pr={'24px'}
+      pl={{ md: '24px' }}
+    >
+      <Flex
+        justify={{ base: 'center', md: 'space-between' }}
+        align={'center'}
+        pl={'24px'}
+        mb={'16px'}
+      >
+        <Heading fontSize={'20px'} textAlign={'center'}>
           <Trans>Commit Activity</Trans>
         </Heading>
-
-        <Menu closeOnSelect={false} placement={'bottom-end'}>
-          <MenuButton as={Button} rightIcon={<ChevronDownIcon />} size={'sm'}>
-            {getMenuButtonText()}
-          </MenuButton>
-          <MenuList maxH={'400px'} overflowY={'auto'}>
-            {/* Time Range Section */}
-            <Box px={'12px'} py={'8px'}>
-              <Text
-                fontSize={'sm'}
-                fontWeight={'bold'}
-                color={'gray.500'}
-                mb={'8px'}
-              >
-                TIME RANGES
-              </Text>
-              {rangeOptions.map((opt) => (
-                <MenuItem
-                  key={opt.value}
-                  closeOnSelect={false}
-                  pl={'4px'}
-                  onClick={() => handleRangeSelect(opt.value)}
-                  isDisabled={selectedYears.length > 1}
-                  opacity={selectedYears.length > 1 ? 0.5 : 1}
-                >
-                  <Checkbox
-                    isChecked={selectedRange === opt.value}
-                    onChange={() => handleRangeSelect(opt.value)}
-                    mr={'8px'}
-                    pointerEvents={'none'}
-                    isDisabled={selectedYears.length > 1}
-                  />
-                  {opt.label}
-                </MenuItem>
-              ))}
-            </Box>
-
-            <Divider />
-
-            {/* Years Section */}
-            <Box px={'12px'} py={'8px'}>
-              <Text
-                fontSize={'sm'}
-                fontWeight={'bold'}
-                color={'gray.500'}
-                mb={'8px'}
-              >
-                YEARS
-              </Text>
-              {yearOptions.map((opt) => (
-                <MenuItem
-                  key={opt.value}
-                  closeOnSelect={false}
-                  pl={'4px'}
-                  onClick={() => handleYearSelect(opt.value)}
-                >
-                  <Checkbox
-                    isChecked={selectedYears.includes(opt.value)}
-                    onChange={() => handleYearSelect(opt.value)}
-                    mr={'8px'}
-                    pointerEvents={'none'}
-                  />
-                  {opt.label}
-                </MenuItem>
-              ))}
-            </Box>
-          </MenuList>
-        </Menu>
+        <Box display={{ base: 'none', md: 'block' }}>
+          <FilterMenu
+            selectedRange={selectedRange}
+            selectedYears={selectedYears}
+            rangeOptions={rangeOptions}
+            yearOptions={yearOptions}
+            getMenuButtonText={getMenuButtonText}
+            handleRangeSelect={handleRangeSelect}
+            handleYearSelect={handleYearSelect}
+          />
+        </Box>
       </Flex>
 
       <ResponsiveContainer width={'100%'} height={300}>
@@ -399,6 +355,17 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
           </LineChart>
         )}
       </ResponsiveContainer>
+      <Box pl={'24px'} display={{ base: 'block', md: 'none' }}>
+        <FilterMenu
+          selectedRange={selectedRange}
+          selectedYears={selectedYears}
+          rangeOptions={rangeOptions}
+          yearOptions={yearOptions}
+          getMenuButtonText={getMenuButtonText}
+          handleRangeSelect={handleRangeSelect}
+          handleYearSelect={handleYearSelect}
+        />
+      </Box>
     </Stack>
   );
 };

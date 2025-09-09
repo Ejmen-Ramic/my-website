@@ -25,7 +25,7 @@ const LanguageDistributionChart: React.FC<LanguageDistributionChartProps> = ({
 
   return (
     <Stack bg={MainBGColor} rounded={'lg'} shadow={'md'} p={6}>
-      <Heading size={'md'} mb={4}>
+      <Heading size={'md'} mb={4} textAlign={{ base: 'center', md: 'start' }}>
         Language Distribution
       </Heading>
       <ResponsiveContainer width={'100%'} height={300}>
