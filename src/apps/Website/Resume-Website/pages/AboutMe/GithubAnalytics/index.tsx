@@ -13,6 +13,8 @@ import {
   useColorModeValue,
   VStack,
   Grid,
+  Skeleton,
+  SkeletonText,
 } from '@chakra-ui/react';
 import { useGitHubData } from './useGitHubData';
 import { colors } from '../../../../../../shared/components/Hooks/color';
@@ -21,6 +23,7 @@ import ProfileCard from './ProfileCard';
 import StatsGrid from './StatsGrid';
 import CommitActivityChart from './CommitActivityChart';
 import LanguageDistributionChart from './LanguageDistributionChart';
+import FadeInView from '../../../../../../shared/components/Hooks/FadeInView';
 
 const GitHubDashboard: React.FC = () => {
   const MainBGColor = {
@@ -43,12 +46,98 @@ const GitHubDashboard: React.FC = () => {
 
   if (loading) {
     return (
-      <Flex justify={'center'} align={'center'} h={'64px'}>
-        <Spinner size={'xl'} mr={3} />
-        <Text fontSize={'xl'}>
-          <Trans>Loading GitHub data...</Trans>
-        </Text>
-      </Flex>
+      <Stack
+        w={'full'}
+        minH={'100vh'}
+        bg={MainBGColor}
+        pt={{ lg: '100px', base: '32px' }}
+        pb={{ lg: '100px', base: '32px' }}
+        px={{ base: '32px', lg: 'unset' }}
+        mb={{ base: '50px', lg: '100px' }}
+      >
+        <Stack
+          w={'full'}
+          maxW={'1400px'}
+          mx={'auto'}
+          spacing={'32px'}
+          p={{ md: '32px' }}
+          bg={CardBGColor}
+          borderRadius={{ md: '10px' }}
+          border={{ base: 'none', md: `1px solid ${colors.iceGray}` }}
+        >
+          {/* Header skeleton */}
+          <VStack spacing={'20px'} alignItems={'start'}>
+            <Skeleton height='32px' width='280px' />
+            <SkeletonText mt='4' noOfLines={2} spacing='4' width='80%' />
+          </VStack>
+
+          {/* Profile skeleton */}
+          <Box w='full'>
+            <Skeleton height='150px' borderRadius='md' />
+          </Box>
+
+          {/* Stats skeleton */}
+          <Grid templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }} gap={6}>
+            {Array.from({ length: 3 }).map((_, i) => (
+              <Skeleton key={i} height='120px' borderRadius='md' />
+            ))}
+          </Grid>
+
+          {/* Charts skeleton */}
+          <Grid templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }} gap={8}>
+            <Skeleton height='300px' borderRadius='md' />
+            <Skeleton height='300px' borderRadius='md' />
+          </Grid>
+        </Stack>
+      </Stack>
+    );
+  }
+  if (loading) {
+    return (
+      <Stack
+        w={'full'}
+        minH={'100vh'}
+        bg={MainBGColor}
+        pt={{ lg: '100px', base: '32px' }}
+        pb={{ lg: '100px', base: '32px' }}
+        px={{ base: '32px', lg: 'unset' }}
+        mb={{ base: '50px', lg: '100px' }}
+      >
+        <Stack
+          w={'full'}
+          maxW={'1400px'}
+          mx={'auto'}
+          spacing={'32px'}
+          p={{ md: '32px' }}
+          bg={CardBGColor}
+          borderRadius={{ md: '10px' }}
+          border={{ base: 'none', md: `1px solid ${colors.iceGray}` }}
+        >
+          {/* Header skeleton */}
+          <VStack spacing={'20px'} alignItems={'start'}>
+            <Skeleton height='32px' width='280px' />
+            <SkeletonText mt='4' noOfLines={2} spacing='4' width='80%' />
+          </VStack>
+
+          {/* Profile skeleton */}
+          <Box w='full'>
+            <Skeleton height='150px' borderRadius='md' />
+          </Box>
+
+          {/* Stats skeleton */}
+          <Grid templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }} gap={6}>
+            {Array.from({ length: 3 }).map((_, i) => (
+              <Skeleton key={i} height='120px' borderRadius='md' />
+            ))}
+          </Grid>
+
+          {/* Charts skeleton */}
+          <Grid templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }} gap={8}>
+            <Skeleton height='300px' borderRadius='md' />
+            <Skeleton height='300px' borderRadius='md' />
+          </Grid>
+        </Stack>
+      </Stack>
     );
   }
 
