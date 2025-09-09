@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   Box,
   Flex,
@@ -11,6 +11,7 @@ import {
   Checkbox,
   Text,
   Divider,
+  useToast,
 } from '@chakra-ui/react';
 import {
   ResponsiveContainer,
@@ -33,6 +34,7 @@ import {
   startOfMonth,
 } from 'date-fns';
 import { ChevronDownIcon } from '@chakra-ui/icons';
+import { t } from '@lingui/macro';
 
 interface CommitActivityChartProps {
   commitActivity: { date: string; commits: number; year?: number }[];
@@ -54,38 +56,41 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
   commitActivity,
   graphColor,
 }) => {
-  // Allow both range and year selections simultaneously - Set defaults
-  const [selectedRanges, setSelectedRanges] = useState<string[]>(['365']); // Default to Full Year
-  const [selectedYears, setSelectedYears] = useState<string[]>(['2025']); // Default to 2025
+  const [selectedRange, setSelectedRange] = useState<string>('365');
+  const [selectedYears, setSelectedYears] = useState<string[]>(['2025']);
+  const toast = useToast();
 
   const handleRangeSelect = (value: string) => {
-    setSelectedRanges((prev) => {
-      // If trying to uncheck and it's the last selected range, prevent it
-      if (prev.includes(value) && prev.length === 1) {
-        return prev; // Don't allow unchecking the last range
-      }
-      return prev.includes(value)
-        ? prev.filter((r) => r !== value)
-        : [...prev, value];
-    });
+    setSelectedRange(value);
   };
 
   const handleYearSelect = (value: string) => {
     setSelectedYears((prev) => {
-      // If trying to uncheck and it's the last selected year, prevent it
       if (prev.includes(value) && prev.length === 1) {
-        return prev; // Don't allow unchecking the last year
+        return prev;
       }
-      return prev.includes(value)
+      const newYears = prev.includes(value)
         ? prev.filter((y) => y !== value)
         : [...prev, value];
+
+      return newYears;
     });
   };
 
-  // Aggregate data based on time range
+  useEffect(() => {
+    if (selectedYears.length > 1) {
+      toast({
+        title: t`Multiple Years Selected`,
+        description: t`Only full year data can be shown when multiple years are selected.`,
+        status: 'info',
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+  }, [selectedYears.length, toast]);
+
   const aggregateData = (data: typeof commitActivity, days: number) => {
     if (days === 90) {
-      // Every 3 days (30 points)
       const aggregated: {
         [key: string]: { date: string; commits: number; count: number };
       } = {};
@@ -115,10 +120,9 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
 
       return Object.values(aggregated).map((item) => ({
         date: item.date,
-        commits: item.commits, // Sum total commits, don't average
+        commits: item.commits,
       }));
     } else if (days === 150 || days === 182) {
-      // Weekly aggregation (26 points for ~182 days)
       const aggregated: {
         [key: string]: { date: string; commits: number; count: number };
       } = {};
@@ -137,10 +141,9 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
 
       return Object.values(aggregated).map((item) => ({
         date: item.date,
-        commits: item.commits, // Sum total commits, don't average
+        commits: item.commits,
       }));
     } else if (days === 365) {
-      // Monthly aggregation (12 points)
       const aggregated: {
         [key: string]: { date: string; commits: number; count: number };
       } = {};
@@ -159,19 +162,17 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
 
       return Object.values(aggregated).map((item) => ({
         date: item.date,
-        commits: item.commits, // Sum total commits for the month, don't average
+        commits: item.commits,
       }));
     }
 
     return data;
   };
 
-  // Filter and process data based on selections
   const filteredData = useMemo(() => {
     const today = new Date();
     let baseData = commitActivity;
 
-    // Filter by years if selected
     if (selectedYears.length > 0) {
       baseData = commitActivity.filter((item) => {
         const itemYear = new Date(item.date).getFullYear().toString();
@@ -179,11 +180,9 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
       });
     }
 
-    // If range is selected, further filter by date range
-    if (selectedRanges.length > 0) {
-      // Use the largest selected range
-      const maxRange = Math.max(...selectedRanges.map((r) => parseInt(r)));
-      const cutoffDate = subDays(today, maxRange);
+    if (selectedRange && selectedYears.length <= 1) {
+      const rangeValue = parseInt(selectedRange);
+      const cutoffDate = subDays(today, rangeValue);
 
       baseData = baseData.filter((item) => {
         const itemDate = new Date(item.date);
@@ -193,14 +192,14 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
         );
       });
 
-      // Apply aggregation based on the selected range
-      baseData = aggregateData(baseData, maxRange);
+      baseData = aggregateData(baseData, rangeValue);
+    } else if (selectedYears.length > 1) {
+      baseData = aggregateData(baseData, 365);
     }
 
     return baseData;
-  }, [commitActivity, selectedRanges, selectedYears]);
+  }, [commitActivity, selectedRange, selectedYears]);
 
-  // Prepare data for multi-year comparison
   const multiYearData = useMemo(() => {
     if (selectedYears.length <= 1) return filteredData;
 
@@ -224,22 +223,22 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
   const isMultiYear = selectedYears.length > 1;
   const chartData = isMultiYear ? multiYearData : filteredData;
 
-  // Generate menu button text
   const getMenuButtonText = () => {
     const parts = [];
     if (selectedYears.length > 0) {
       parts.push(selectedYears.join(', '));
     }
-    if (selectedRanges.length > 0) {
-      const rangeLabels = selectedRanges.map(
-        (r) => rangeOptions.find((opt) => opt.value === r)?.label || r
-      );
-      parts.push(rangeLabels.join(', '));
+    if (selectedRange && selectedYears.length <= 1) {
+      const rangeLabel =
+        rangeOptions.find((opt) => opt.value === selectedRange)?.label ||
+        selectedRange;
+      parts.push(rangeLabel);
+    } else if (selectedYears.length > 1) {
+      parts.push('Full Year');
     }
     return parts.length > 0 ? parts.join(' | ') : 'Select filters';
   };
 
-  // Custom tooltip
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       return (
@@ -269,7 +268,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
       <Flex justify={'space-between'} align={'center'} mb={'16px'}>
         <Heading fontSize={'20px'}>Commit Activity</Heading>
 
-        <Menu closeOnSelect={false}>
+        <Menu closeOnSelect={false} placement={'bottom-end'}>
           <MenuButton as={Button} rightIcon={<ChevronDownIcon />} size={'sm'}>
             {getMenuButtonText()}
           </MenuButton>
@@ -285,11 +284,20 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
                 TIME RANGES
               </Text>
               {rangeOptions.map((opt) => (
-                <MenuItem key={opt.value} closeOnSelect={false} pl={'4px'}>
+                <MenuItem
+                  key={opt.value}
+                  closeOnSelect={false}
+                  pl={'4px'}
+                  onClick={() => handleRangeSelect(opt.value)}
+                  isDisabled={selectedYears.length > 1}
+                  opacity={selectedYears.length > 1 ? 0.5 : 1}
+                >
                   <Checkbox
-                    isChecked={selectedRanges.includes(opt.value)}
+                    isChecked={selectedRange === opt.value}
                     onChange={() => handleRangeSelect(opt.value)}
                     mr={'8px'}
+                    pointerEvents='none'
+                    isDisabled={selectedYears.length > 1}
                   />
                   {opt.label}
                 </MenuItem>
@@ -309,11 +317,17 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
                 YEARS
               </Text>
               {yearOptions.map((opt) => (
-                <MenuItem key={opt.value} closeOnSelect={false} pl={'4px'}>
+                <MenuItem
+                  key={opt.value}
+                  closeOnSelect={false}
+                  pl={'4px'}
+                  onClick={() => handleYearSelect(opt.value)}
+                >
                   <Checkbox
                     isChecked={selectedYears.includes(opt.value)}
                     onChange={() => handleYearSelect(opt.value)}
                     mr={'8px'}
+                    pointerEvents={'none'}
                   />
                   {opt.label}
                 </MenuItem>
@@ -335,7 +349,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
             />
             <YAxis
               tick={{ fill: graphColor, fontSize: 14 }}
-              domain={[0, 'dataMax']} // This ensures Y-axis shows full range
+              domain={[0, 'dataMax']}
             />
             <Tooltip
               labelFormatter={(date: string) =>
@@ -361,7 +375,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
             />
             <YAxis
               tick={{ fill: graphColor, fontSize: 14 }}
-              domain={[0, 'dataMax']} // This ensures Y-axis shows full range
+              domain={[0, 'dataMax']}
             />
             <Tooltip content={<CustomTooltip />} />
             <Legend />

@@ -5,7 +5,7 @@ import { CommitSearchResult, GitHubRepo, githubService, GitHubUser, LanguageStat
 export interface CommitByDate {
   date: string;
   commits: number;
-  year?: number; // Add year field
+  year?: number; 
 }
 
 export interface RepoStat {
@@ -51,7 +51,6 @@ export const useGitHubData = () => {
       setProfile(profileData);
       setRepos(reposData);
 
-      // Fetch commits for multiple years
       const [commits2024, commits2025, recentCommitsData] = await Promise.all([
         githubService.getCommitsByYear(2024),
         githubService.getCommitsByYear(2025),
@@ -67,7 +66,6 @@ export const useGitHubData = () => {
         .slice(0, 8);
       setLanguageStats(languageArray);
 
-      // Combine commits from different years
       const allCommits = [...commits2024, ...commits2025];
       const commitsByDate = processCommitsByDate(allCommits);
       setCommitActivity(commitsByDate);

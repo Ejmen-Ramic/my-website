@@ -4,7 +4,6 @@ const GITHUB_API_BASE = 'https://api.github.com';
 const token = process.env.REACT_APP_GITHUB_TOKEN;
 const username = process.env.REACT_APP_GITHUB_USERNAME;
 
-// TypeScript interfaces
 interface GitHubUser {
   login: string;
   id: number;
@@ -78,7 +77,6 @@ const api = axios.create({
 });
 
 export const githubService = {
-  // Get user profile data
   async getUserProfile(): Promise<GitHubUser> {
     try {
       const response: AxiosResponse<GitHubUser> = await api.get(`/users/${username}`);
@@ -89,7 +87,6 @@ export const githubService = {
     }
   },
 
-  // Get all user repositories
   async getUserRepos(): Promise<GitHubRepo[]> {
     try {
       const response: AxiosResponse<GitHubRepo[]> = await api.get(`/users/${username}/repos`, {
@@ -106,7 +103,6 @@ export const githubService = {
     }
   },
 
-  // Get commit activity for a specific repository
   async getRepoCommitActivity(repoName: string): Promise<CommitActivity[]> {
     try {
       const response: AxiosResponse<CommitActivity[]> = await api.get(`/repos/${username}/${repoName}/stats/commit_activity`);
@@ -117,7 +113,6 @@ export const githubService = {
     }
   },
 
-  // Get contributor stats for a repository
   async getRepoContributorStats(repoName: string): Promise<ContributorStats[]> {
     try {
       const response: AxiosResponse<ContributorStats[]> = await api.get(`/repos/${username}/${repoName}/stats/contributors`);
@@ -128,7 +123,6 @@ export const githubService = {
     }
   },
 
-  // Get language statistics across all repositories
   async getLanguageStats(): Promise<LanguageStats> {
     try {
       const repos = await this.getUserRepos();
@@ -143,7 +137,6 @@ export const githubService = {
             languageStats[language] = (languageStats[language] || 0) + bytes;
           });
 
-          // Add delay to respect rate limits
           await new Promise(resolve => setTimeout(resolve, 100));
         } catch (error) {
           console.error(`Error fetching languages for ${repo.name}:`, error);
@@ -157,7 +150,6 @@ export const githubService = {
     }
   },
 
-  // UPDATED: Get recent commits with pagination to fetch more than 100
   async getRecentCommits(days: number = 30): Promise<CommitSearchResult[]> {
     try {
       const since = new Date();
@@ -167,7 +159,7 @@ export const githubService = {
       let page = 1;
       const perPage = 100;
       
-      while (page <= 10) { // Limit to 10 pages (1000 commits max) to avoid rate limits
+      while (page <= 10) { 
         const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
           params: {
             q: `author:${username} committer-date:>${since.toISOString().split('T')[0]}`,
@@ -183,12 +175,10 @@ export const githubService = {
         
         allCommits = [...allCommits, ...commits];
         
-        // If we got less than perPage results, we've reached the end
         if (commits.length < perPage) break;
         
         page++;
         
-        // Add delay to respect rate limits
         await new Promise(resolve => setTimeout(resolve, 200));
       }
 
@@ -200,7 +190,6 @@ export const githubService = {
     }
   },
 
-  // UPDATED: Get commits by specific year with pagination
   async getCommitsByYear(year: number): Promise<CommitSearchResult[]> {
     try {
       const startDate = `${year}-01-01`;
@@ -210,7 +199,7 @@ export const githubService = {
       let page = 1;
       const perPage = 100;
       
-      while (page <= 10) { // Limit to 10 pages (1000 commits max) to avoid rate limits
+      while (page <= 10) { 
         const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
           params: {
             q: `author:${username} committer-date:${startDate}..${endDate}`,
@@ -226,12 +215,10 @@ export const githubService = {
         
         allCommits = [...allCommits, ...commits];
         
-        // If we got less than perPage results, we've reached the end
         if (commits.length < perPage) break;
         
         page++;
         
-        // Add delay to respect rate limits
         await new Promise(resolve => setTimeout(resolve, 200));
       }
 
@@ -239,18 +226,17 @@ export const githubService = {
       return allCommits;
     } catch (error) {
       console.error(`Error fetching commits for year ${year}:`, error);
-      return []; // Return empty array instead of throwing
+      return []; 
     }
   },
 
-  // UPDATED: Get commits by date range with pagination
   async getCommitsByDateRange(startDate: string, endDate: string): Promise<CommitSearchResult[]> {
     try {
       let allCommits: CommitSearchResult[] = [];
       let page = 1;
       const perPage = 100;
       
-      while (page <= 10) { // Limit to 10 pages (1000 commits max) to avoid rate limits
+      while (page <= 10) { 
         const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
           params: {
             q: `author:${username} committer-date:${startDate}..${endDate}`,
@@ -266,12 +252,10 @@ export const githubService = {
         
         allCommits = [...allCommits, ...commits];
         
-        // If we got less than perPage results, we've reached the end
         if (commits.length < perPage) break;
         
         page++;
         
-        // Add delay to respect rate limits
         await new Promise(resolve => setTimeout(resolve, 200));
       }
 
@@ -284,7 +268,6 @@ export const githubService = {
   }
 };
 
-// Export types for use in components
 export type {
   GitHubUser,
   GitHubRepo,
