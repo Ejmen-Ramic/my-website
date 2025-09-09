@@ -94,7 +94,14 @@ const GitHubDashboard: React.FC = () => {
   const topRepos = getTopRepos();
 
   return (
-    <Stack w={'full'} minH={'100vh'} bg={MainBGColor} py={'100px'}>
+    <Stack
+      w={'full'}
+      minH={'100vh'}
+      bg={MainBGColor}
+      pt={{ lg: '100px', base: '32px' }}
+      pb={{ lg: '100px', base: '32px' }}
+      px={{ base: '32px', lg: 'unset' }}
+    >
       <Stack
         w={'full'}
         maxW={'1400px'}
@@ -112,7 +119,15 @@ const GitHubDashboard: React.FC = () => {
           </Heading>
           <Text>
             <Trans>
-              Showcasing development activity and project statistics
+              Showcasing development{' '}
+              <Box as={'span'} fontWeight={'bold'} color={HighlightColor}>
+                activity
+              </Box>{' '}
+              and{' '}
+              <Box as={'span'} fontWeight={'bold'} color={HighlightColor}>
+                project
+              </Box>{' '}
+              statistics
             </Trans>
           </Text>
         </VStack>
@@ -149,7 +164,7 @@ const GitHubDashboard: React.FC = () => {
           gap={'24px'}
         >
           {repoStats.map((stat) => (
-            <Box
+            <Stack
               key={stat.name}
               bg={MainBGColor}
               rounded={'lg'}
@@ -160,22 +175,26 @@ const GitHubDashboard: React.FC = () => {
               <Text fontSize={'3xl'} fontWeight={'bold'} color={ColorNumber}>
                 {stat.value}
               </Text>
-            </Box>
+            </Stack>
           ))}
         </Grid>
 
         {/* Charts */}
         <Grid templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }} gap={8}>
           {/* Commit Activity */}
-          <Box bg={MainBGColor} rounded={'lg'} shadow={'md'} p={6}>
-            <Heading size='md' mb={4}>
-              Commit Activity (Last 90 Days)
-            </Heading>
-            <ResponsiveContainer width='100%' height={300}>
+          <Stack
+            bg={MainBGColor}
+            rounded={'lg'}
+            shadow={'md'}
+            p={6}
+            spacing={'36px'}
+          >
+            <Heading fontSize={'20px'}>Commit Activity (Last 90 Days)</Heading>
+            <ResponsiveContainer width={'100%'} height={300}>
               <AreaChart data={commitActivity}>
-                <CartesianGrid strokeDasharray='3 3' />
+                <CartesianGrid strokeDasharray={'3 3'} />
                 <XAxis
-                  dataKey='date'
+                  dataKey={'date'}
                   tickFormatter={(date: string) =>
                     format(new Date(date), 'MMM dd')
                   }
@@ -189,15 +208,15 @@ const GitHubDashboard: React.FC = () => {
                   }
                 />
                 <Area
-                  type='monotone'
-                  dataKey='commits'
-                  stroke='#8884d8'
-                  fill='#8884d8'
+                  type={'monotone'}
+                  dataKey={'commits'}
+                  stroke={'#8884d8'}
+                  fill={'#8884d8'}
                   fillOpacity={0.6}
                 />
               </AreaChart>
             </ResponsiveContainer>
-          </Box>
+          </Stack>
 
           {/* Language Distribution */}
           <Box bg={MainBGColor} rounded={'lg'} shadow={'md'} p={6}>
