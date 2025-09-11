@@ -1,8 +1,9 @@
 import axios, { AxiosResponse } from 'axios';
 
+// TEMP: client-only, unauthenticated. Replace 'YOUR_USERNAME' with your public GitHub username.
+// Later, switch to calling your own /api/github/* proxy and remove the hardcoded username.
 const GITHUB_API_BASE = 'https://api.github.com';
-const token = process.env.REACT_APP_GITHUB_TOKEN;
-const username = process.env.REACT_APP_GITHUB_USERNAME;
+const username = 'YOUR_USERNAME'; // e.g., 'octocat'
 
 interface GitHubUser {
   login: string;
@@ -70,202 +71,160 @@ interface LanguageStats {
 const api = axios.create({
   baseURL: GITHUB_API_BASE,
   headers: {
-    'Authorization': `token ${token}`,
-    'Accept': 'application/vnd.github+json',
-    'X-GitHub-Api-Version': '2022-11-28'
-  }
+    Accept: 'application/vnd.github+json',
+    'X-GitHub-Api-Version': '2022-11-28',
+  },
 });
 
 export const githubService = {
   async getUserProfile(): Promise<GitHubUser> {
-    try {
-      const response: AxiosResponse<GitHubUser> = await api.get(`/users/${username}`);
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching user profile:', error);
-      throw error;
-    }
+    const response: AxiosResponse<GitHubUser> = await api.get(`/users/${username}`);
+    return response.data;
   },
 
   async getUserRepos(): Promise<GitHubRepo[]> {
-    try {
-      const response: AxiosResponse<GitHubRepo[]> = await api.get(`/users/${username}/repos`, {
-        params: {
-          per_page: 100,
-          sort: 'updated',
-          type: 'owner'
-        }
-      });
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching repositories:', error);
-      throw error;
-    }
+    const response: AxiosResponse<GitHubRepo[]> = await api.get(`/users/${username}/repos`, {
+      params: { per_page: 100, sort: 'updated', type: 'owner' },
+    });
+    return response.data;
   },
 
   async getRepoCommitActivity(repoName: string): Promise<CommitActivity[]> {
     try {
-      const response: AxiosResponse<CommitActivity[]> = await api.get(`/repos/${username}/${repoName}/stats/commit_activity`);
+      const response: AxiosResponse<CommitActivity[]> = await api.get(
+        `/repos/${username}/${repoName}/stats/commit_activity`
+      );
       return response.data || [];
-    } catch (error) {
-      console.error(`Error fetching commit activity for ${repoName}:`, error);
+    } catch {
       return [];
     }
   },
 
   async getRepoContributorStats(repoName: string): Promise<ContributorStats[]> {
     try {
-      const response: AxiosResponse<ContributorStats[]> = await api.get(`/repos/${username}/${repoName}/stats/contributors`);
+      const response: AxiosResponse<ContributorStats[]> = await api.get(
+        `/repos/${username}/${repoName}/stats/contributors`
+      );
       return response.data || [];
-    } catch (error) {
-      console.error(`Error fetching contributor stats for ${repoName}:`, error);
+    } catch {
       return [];
     }
   },
 
   async getLanguageStats(): Promise<LanguageStats> {
-    try {
-      const repos = await this.getUserRepos();
-      const languageStats: LanguageStats = {};
-
-      for (const repo of repos) {
-        try {
-          const response: AxiosResponse<LanguageStats> = await api.get(`/repos/${username}/${repo.name}/languages`);
-          const languages = response.data;
-
-          Object.entries(languages).forEach(([language, bytes]) => {
-            languageStats[language] = (languageStats[language] || 0) + bytes;
-          });
-
-          await new Promise(resolve => setTimeout(resolve, 100));
-        } catch (error) {
-          console.error(`Error fetching languages for ${repo.name}:`, error);
-        }
+    const repos = await this.getUserRepos();
+    const languageStats: LanguageStats = {};
+    for (const repo of repos) {
+      try {
+        const response: AxiosResponse<LanguageStats> = await api.get(
+          `/repos/${username}/${repo.name}/languages`
+        );
+        const languages = response.data;
+        Object.entries(languages).forEach(([language, bytes]) => {
+          languageStats[language] = (languageStats[language] || 0) + Number(bytes);
+        });
+        await new Promise((r) => setTimeout(r, 100));
+      } catch {
+        // ignore per-repo language failures
       }
-
-      return languageStats;
-    } catch (error) {
-      console.error('Error fetching language stats:', error);
-      throw error;
     }
+    return languageStats;
   },
 
   async getRecentCommits(days: number = 30): Promise<CommitSearchResult[]> {
-    try {
-      const since = new Date();
-      since.setDate(since.getDate() - days);
-      
-      let allCommits: CommitSearchResult[] = [];
-      let page = 1;
-      const perPage = 100;
-      
-      while (page <= 10) { 
-        const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
+    const since = new Date();
+    since.setDate(since.getDate() - days);
+    let allCommits: CommitSearchResult[] = [];
+    let page = 1;
+    const perPage = 100;
+
+    while (page <= 10) {
+      const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get(
+        '/search/commits',
+        {
           params: {
             q: `author:${username} committer-date:>${since.toISOString().split('T')[0]}`,
             sort: 'committer-date',
             order: 'desc',
             per_page: perPage,
-            page: page
-          }
-        });
-
-        const commits = response.data.items;
-        if (commits.length === 0) break;
-        
-        allCommits = [...allCommits, ...commits];
-        
-        if (commits.length < perPage) break;
-        
-        page++;
-        
-        await new Promise(resolve => setTimeout(resolve, 200));
-      }
-
-      console.log(`Fetched ${allCommits.length} commits for last ${days} days`);
-      return allCommits;
-    } catch (error) {
-      console.error('Error fetching recent commits:', error);
-      throw error;
+            page,
+          },
+          headers: {
+            // Some search endpoints historically required a custom Accept, but v3 JSON works for most
+            Accept: 'application/vnd.github+json',
+          },
+        }
+      );
+      const commits = response.data.items || [];
+      if (commits.length === 0) break;
+      allCommits = allCommits.concat(commits);
+      if (commits.length < perPage) break;
+      page++;
+      await new Promise((r) => setTimeout(r, 200));
     }
+
+    return allCommits;
   },
 
   async getCommitsByYear(year: number): Promise<CommitSearchResult[]> {
-    try {
-      const startDate = `${year}-01-01`;
-      const endDate = `${year}-12-31`;
-      
-      let allCommits: CommitSearchResult[] = [];
-      let page = 1;
-      const perPage = 100;
-      
-      while (page <= 10) { 
-        const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
+    const startDate = `${year}-01-01`;
+    const endDate = `${year}-12-31`;
+    let allCommits: CommitSearchResult[] = [];
+    let page = 1;
+    const perPage = 100;
+
+    while (page <= 10) {
+      const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get(
+        '/search/commits',
+        {
           params: {
             q: `author:${username} committer-date:${startDate}..${endDate}`,
             sort: 'committer-date',
             order: 'desc',
             per_page: perPage,
-            page: page
-          }
-        });
-
-        const commits = response.data.items;
-        if (commits.length === 0) break;
-        
-        allCommits = [...allCommits, ...commits];
-        
-        if (commits.length < perPage) break;
-        
-        page++;
-        
-        await new Promise(resolve => setTimeout(resolve, 200));
-      }
-
-      console.log(`Fetched ${allCommits.length} commits for year ${year}`);
-      return allCommits;
-    } catch (error) {
-      console.error(`Error fetching commits for year ${year}:`, error);
-      return []; 
+            page,
+          },
+        }
+      );
+      const commits = response.data.items || [];
+      if (commits.length === 0) break;
+      allCommits = allCommits.concat(commits);
+      if (commits.length < perPage) break;
+      page++;
+      await new Promise((r) => setTimeout(r, 200));
     }
+
+    return allCommits;
   },
 
   async getCommitsByDateRange(startDate: string, endDate: string): Promise<CommitSearchResult[]> {
-    try {
-      let allCommits: CommitSearchResult[] = [];
-      let page = 1;
-      const perPage = 100;
-      
-      while (page <= 10) { 
-        const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
+    let allCommits: CommitSearchResult[] = [];
+    let page = 1;
+    const perPage = 100;
+
+    while (page <= 10) {
+      const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get(
+        '/search/commits',
+        {
           params: {
             q: `author:${username} committer-date:${startDate}..${endDate}`,
             sort: 'committer-date',
             order: 'desc',
             per_page: perPage,
-            page: page
-          }
-        });
-
-        const commits = response.data.items;
-        if (commits.length === 0) break;
-        
-        allCommits = [...allCommits, ...commits];
-        
-        if (commits.length < perPage) break;
-        
-        page++;
-        
-        await new Promise(resolve => setTimeout(resolve, 200));
-      }
-
-      console.log(`Fetched ${allCommits.length} commits for date range ${startDate} to ${endDate}`);
-      return allCommits;
-    } catch (error) {
-      console.error(`Error fetching commits for date range ${startDate} to ${endDate}:`, error);
-      return [];
+            page,
+          },
+        }
+      );
+      const commits = response.data.items || [];
+      if (commits.length === 0) break;
+      allCommits = allCommits.concat(commits);
+      if (commits.length < perPage) break;
+      page++;
+      await new Promise((r) => setTimeout(r, 200));
     }
-  }
+
+    return allCommits;
+  },
 };
 
 export type {
@@ -274,5 +233,5 @@ export type {
   CommitActivity,
   ContributorStats,
   CommitSearchResult,
-  LanguageStats
+  LanguageStats,
 };
