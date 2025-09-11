@@ -3,7 +3,7 @@ import axios, { AxiosResponse } from 'axios';
 // TEMP: client-only, unauthenticated. Replace 'YOUR_USERNAME' with your public GitHub username.
 // Later, switch to calling your own /api/github/* proxy and remove the hardcoded username.
 const GITHUB_API_BASE = 'https://api.github.com';
-const username = 'YOUR_USERNAME'; // e.g., 'octocat'
+const username = 'Ejmen-Ramic'; // e.g., 'octocat'
 
 interface GitHubUser {
   login: string;
