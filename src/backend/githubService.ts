@@ -1,8 +1,13 @@
 import axios, { AxiosResponse } from 'axios';
 
-const API_BASE = process.env.NODE_ENV === 'production' 
-  ? 'https://your-backend-url.com' 
-  : 'http://localhost:5000';
+const API_BASE = process.env.NODE_ENV === 'production'
+  ? 'https://your-app-name.vercel.app' // replace with your app’s Vercel URL
+  : 'http://localhost:3000';            // CRA/Vite dev server
+
+const api = axios.create({
+  baseURL: API_BASE,
+  headers: { 'Content-Type': 'application/json' }
+});
 
 interface GitHubUser {
   login: string;
@@ -67,12 +72,6 @@ interface LanguageStats {
   [language: string]: number;
 }
 
-const api = axios.create({
-  baseURL: API_BASE,
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
 
 export const githubService = {
   async getUserProfile(): Promise<GitHubUser> {
