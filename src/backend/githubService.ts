@@ -2,8 +2,8 @@ import axios, { AxiosResponse } from "axios";
 
 const API_BASE =
   process.env.NODE_ENV === "production"
-    ? `https://${process.env.REACT_APP_VERCEL_URL || "my-website-lyart-eight.vercel.app"}`
-    : "http://localhost:3000"; // CRA/Vite dev server with `vercel dev` proxy
+    ? ''
+    : "http://localhost:3000";
 
 interface GitHubUser {
   login: string;

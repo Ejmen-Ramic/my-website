@@ -26,3 +26,4 @@ node_modules/
 /src/playwright/playwright-report/
 /blob-report/
 /playwright/.cache/
+.vercel
