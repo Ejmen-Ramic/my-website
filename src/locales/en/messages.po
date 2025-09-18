@@ -156,6 +156,10 @@ msgstr "All rights reserved."
 msgid "An error occurred while subscribing."
 msgstr "An error occurred while subscribing."
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:75
+msgid "An unknown error occurred"
+msgstr "An unknown error occurred"
+
 #: src/apps/Website/Resume-Website/pages/AboutMe/Milestone.tsx:38
 msgid "April 15, 2022 - January 15, 2023"
 msgstr "April 15, 2022 - January 15, 2023"
@@ -214,6 +218,10 @@ msgstr "Co-founder of AfterFund USA"
 #: src/apps/Website/Photography-Website/Shared/Header/Desktop/DropDownMenu.tsx:22
 msgid "Coding"
 msgstr "Coding"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:288
+msgid "Commit Activity"
+msgstr "Commit Activity"
 
 #: src/shared/components/PageWrapper/Header/Mobile/Form.tsx:99
 msgid "Connection Error"
@@ -315,7 +323,7 @@ msgstr "Ejmen's ability to identify, analyze, and resolve issues efficiently is 
 msgid "Email"
 msgstr "Email"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:55
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:56
 msgid "Email address"
 msgstr "Email address"
 
@@ -343,6 +351,14 @@ msgstr "English Version"
 msgid "Enter your email"
 msgstr "Enter your email"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:77
+msgid "Error fetching GitHub data:"
+msgstr "Error fetching GitHub data:"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:152
+msgid "Error:"
+msgstr "Error:"
+
 #: src/apps/Website/Resume-Website/pages/Home/Welcome/index.tsx:90
 msgid "Explore <0>my</0><1/>limitless possibilities"
 msgstr "Explore <0>my</0><1/>limitless possibilities"
@@ -363,7 +379,7 @@ msgstr "Fast development"
 msgid "Featured Projects"
 msgstr "Featured Projects"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:41
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:42
 msgid "features"
 msgstr "features"
 
@@ -393,7 +409,7 @@ msgstr "Fluent"
 msgid "FLUX, Malaysia"
 msgstr "FLUX, Malaysia"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:90
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:91
 msgid "Forgot password?"
 msgstr "Forgot password?"
 
@@ -409,9 +425,18 @@ msgstr "Frameworks"
 msgid "Frequently Asked Questions"
 msgstr "Frequently Asked Questions"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:51
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:243
+msgid "Full Year"
+msgstr "Full Year"
+
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:27
 msgid "German"
 msgstr "German"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:194
+msgid "GitHub Analytics Dashboard"
+msgstr "GitHub Analytics Dashboard"
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:249
 msgid "Graphic Design"
@@ -645,6 +670,14 @@ msgstr "Kuala Lumpur, Malaysia"
 msgid "Languages"
 msgstr "Languages"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:50
+msgid "Last 150 days"
+msgstr "Last 150 days"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:49
+msgid "Last 90 days"
+msgstr "Last 90 days"
+
 #: src/Inbox.js:33
 #~ msgid "Last login on {0}."
 #~ msgstr "Last login on {0}."
@@ -681,6 +714,10 @@ msgstr "LifeLine, a Poverty Profiling System, aims to optimize donation distribu
 msgid "Main Menu"
 msgstr "Main Menu"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:156
+msgid "Make sure your GitHub token is set correctly in the .env file"
+msgstr "Make sure your GitHub token is set correctly in the .env file"
+
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/items.tsx:20
 msgid "Malaysia, Kuala Lumpur"
 msgstr "Malaysia, Kuala Lumpur"
@@ -713,6 +750,10 @@ msgstr "Migration to ShadCn UI"
 #: src/apps/Website/Resume-Website/pages/AboutMe/Milestone.tsx:113
 msgid "Milestones"
 msgstr "Milestones"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:89
+msgid "Multiple Years Selected"
+msgstr "Multiple Years Selected"
 
 #: src/apps/Website/Photography-Website/Shared/Header/Mobile/index.tsx:56
 msgid "My Account"
@@ -756,7 +797,7 @@ msgstr "Need More Information"
 msgid "Newsletter Subscription"
 msgstr "Newsletter Subscription"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:105
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:106
 msgid "Not a user?"
 msgstr "Not a user?"
 
@@ -772,6 +813,10 @@ msgstr "One of my greatest strengths is my ability to <0>learn quickly</0> and <
 #~ msgid "One of my greatest strengths is my ability to learn quickly and adapt to new technologies. For instance, I picked up Chakra UI on my own and have been able to integrate it seamlessly into my projects.<0/><1/> On the flip side, a weakness of mine is that I can be a bit of a perfectionist. Sometimes I spend too much time tweaking small details. I'm working on balancing my attention to detail with efficiency."
 #~ msgstr "One of my greatest strengths is my ability to learn quickly and adapt to new technologies. For instance, I picked up Chakra UI on my own and have been able to integrate it seamlessly into my projects.<0/><1/> On the flip side, a weakness of mine is that I can be a bit of a perfectionist. Sometimes I spend too much time tweaking small details. I'm working on balancing my attention to detail with efficiency."
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:90
+msgid "Only full year data can be shown when multiple years are selected."
+msgstr "Only full year data can be shown when multiple years are selected."
+
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/OSTable.tsx:67
 msgid "Operative System"
 msgstr "Operative System"
@@ -780,7 +825,7 @@ msgstr "Operative System"
 #~ msgid "Operative Sytem"
 #~ msgstr "Operative Sytem"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:61
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:62
 msgid "Password"
 msgstr "Password"
 
@@ -841,6 +886,10 @@ msgstr "Promoted to the role of Junior Software & QA Engineer, I embraced new ch
 msgid "Promotion - Software & QA Engineer - Malaysia"
 msgstr "Promotion - Software & QA Engineer - Malaysia"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:105
+msgid "Public Repos"
+msgstr "Public Repos"
+
 #: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:87
 #~ msgid "Read less"
 #~ msgstr "Read less"
@@ -865,7 +914,7 @@ msgstr "Recommendation from top employers in Malaysia and Bosnia"
 msgid "Recommendation from top employers in USA, Malaysia and Bosnia"
 msgstr "Recommendation from top employers in USA, Malaysia and Bosnia"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:107
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:108
 msgid "Register"
 msgstr "Register"
 
@@ -873,7 +922,7 @@ msgstr "Register"
 msgid "Registered"
 msgstr "Registered"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:84
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:85
 msgid "Remember me"
 msgstr "Remember me"
 
@@ -914,6 +963,10 @@ msgstr "Seamless Problem-Solver"
 #~ msgid "See all <0>unread messages</0>or <1>mark them</1> as read."
 #~ msgstr "See all <0>unread messages</0>or <1>mark them</1> as read."
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:245
+msgid "Select filters"
+msgstr "Select filters"
+
 #: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:16
 #: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:19
 msgid "Semester 1, 2019/2020"
@@ -937,11 +990,15 @@ msgstr "Send Message"
 msgid "September 25, 2022"
 msgstr "September 25, 2022"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:100
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:199
+msgid "Showcasing development <0>activity</0> and <1>project</1> statistics"
+msgstr "Showcasing development <0>activity</0> and <1>project</1> statistics"
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:101
 msgid "Sign in"
 msgstr "Sign in"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:36
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:37
 msgid "Sign in to your account"
 msgstr "Sign in to your account"
 
@@ -1038,7 +1095,7 @@ msgstr "The following list of frequently asked questions by employers that may a
 msgid "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters."
 msgstr "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters."
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:39
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:40
 msgid "to enjoy all of the cool"
 msgstr "to enjoy all of the cool"
 
@@ -1046,6 +1103,18 @@ msgstr "to enjoy all of the cool"
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/ToolsTable.tsx:67
 msgid "Tools"
 msgstr "Tools"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:108
+msgid "Total Commits"
+msgstr "Total Commits"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:107
+msgid "Total Forks"
+msgstr "Total Forks"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:106
+msgid "Total Stars"
+msgstr "Total Stars"
 
 #: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:54
 msgid "Trustworthy Expert"

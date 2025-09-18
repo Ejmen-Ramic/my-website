@@ -143,6 +143,10 @@ msgstr "Sva prava zadržana."
 msgid "An error occurred while subscribing."
 msgstr "Došlo je do greške prilikom pretplate."
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:75
+msgid "An unknown error occurred"
+msgstr ""
+
 #: src/apps/Website/Resume-Website/pages/AboutMe/Milestone.tsx:38
 msgid "April 15, 2022 - January 15, 2023"
 msgstr "15. april 2022 - 15. Januar 2023"
@@ -201,6 +205,10 @@ msgstr "Suosnivač AfterFund USA"
 #: src/apps/Website/Photography-Website/Shared/Header/Desktop/DropDownMenu.tsx:22
 msgid "Coding"
 msgstr "Kodiranje"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:288
+msgid "Commit Activity"
+msgstr ""
 
 #: src/shared/components/PageWrapper/Header/Mobile/Form.tsx:99
 msgid "Connection Error"
@@ -298,7 +306,7 @@ msgstr "Ejmenova sposobnost prepoznavanja, analize i efikasnog rješavanja probl
 msgid "Email"
 msgstr "Email"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:55
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:56
 msgid "Email address"
 msgstr "Email adresa"
 
@@ -326,6 +334,14 @@ msgstr "Engleska Verzija"
 msgid "Enter your email"
 msgstr "Vaša email adresa"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:77
+msgid "Error fetching GitHub data:"
+msgstr ""
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:152
+msgid "Error:"
+msgstr ""
+
 #: src/apps/Website/Resume-Website/pages/Home/Welcome/index.tsx:90
 msgid "Explore <0>my</0><1/>limitless possibilities"
 msgstr "Istražite <0>moje</0><1/>neograničene mogućnosti"
@@ -346,7 +362,7 @@ msgstr "Brz razvoj"
 msgid "Featured Projects"
 msgstr "Istaknuti projekti"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:41
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:42
 msgid "features"
 msgstr "značajke"
 
@@ -376,7 +392,7 @@ msgstr "Tečno"
 msgid "FLUX, Malaysia"
 msgstr "FLUX, Malezija"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:90
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:91
 msgid "Forgot password?"
 msgstr "Zaboravili ste lozinku?"
 
@@ -392,9 +408,18 @@ msgstr "Framework"
 msgid "Frequently Asked Questions"
 msgstr "Često postavljana pitanja"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:51
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:243
+msgid "Full Year"
+msgstr ""
+
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:27
 msgid "German"
 msgstr "Njemački"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:194
+msgid "GitHub Analytics Dashboard"
+msgstr ""
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:249
 msgid "Graphic Design"
@@ -632,6 +657,14 @@ msgstr "Kuala Lumpur, Malezija"
 msgid "Languages"
 msgstr "Jezici"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:50
+msgid "Last 150 days"
+msgstr ""
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:49
+msgid "Last 90 days"
+msgstr ""
+
 #: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:60
 msgid "Libraries"
 msgstr "Biblioteke"
@@ -664,6 +697,10 @@ msgstr "LifeLine, sistem za profiliranje siromaštva, ima za cilj optimizirati d
 msgid "Main Menu"
 msgstr "Glavni meni"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:156
+msgid "Make sure your GitHub token is set correctly in the .env file"
+msgstr ""
+
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/items.tsx:20
 msgid "Malaysia, Kuala Lumpur"
 msgstr "Malezija, Kuala Lumpur"
@@ -692,6 +729,10 @@ msgstr "Migracija na ShadCN UI"
 #: src/apps/Website/Resume-Website/pages/AboutMe/Milestone.tsx:113
 msgid "Milestones"
 msgstr "Prekretnice"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:89
+msgid "Multiple Years Selected"
+msgstr ""
 
 #: src/apps/Website/Photography-Website/Shared/Header/Mobile/index.tsx:56
 msgid "My Account"
@@ -735,7 +776,7 @@ msgstr "Potrebne su dodatne informacije"
 msgid "Newsletter Subscription"
 msgstr "Newsletter Pretplata"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:105
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:106
 msgid "Not a user?"
 msgstr "Niste korisnik?"
 
@@ -751,6 +792,10 @@ msgstr "Jedna od mojih najvećih snaga je sposobnost <0>brzo učiti</0> i <1>pri
 #~ msgid "One of my greatest strengths is my ability to learn quickly and adapt to new technologies. For instance, I picked up Chakra UI on my own and have been able to integrate it seamlessly into my projects.<0/><1/> On the flip side, a weakness of mine is that I can be a bit of a perfectionist. Sometimes I spend too much time tweaking small details. I'm working on balancing my attention to detail with efficiency."
 #~ msgstr "Jedna od mojih najvećih snaga je moja sposobnost da brzo učim i prilagođavam se novim tehnologijama. Na primjer, samostalno sam naučio Chakra UI i uspio ga besprijekorno integrirati u svoje projekte.<0/><1/> S druge strane, moja slabost je to što mogu biti malo perfekcionista. Ponekad trošim previše vremena na sitne detalje. Radim na balansiranju svoje pažnje prema detaljima s efikasnošću."
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:90
+msgid "Only full year data can be shown when multiple years are selected."
+msgstr ""
+
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/OSTable.tsx:67
 msgid "Operative System"
 msgstr "Operativni Sistem"
@@ -759,7 +804,7 @@ msgstr "Operativni Sistem"
 #~ msgid "Operative Sytem"
 #~ msgstr "Operativni sistem"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:61
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:62
 msgid "Password"
 msgstr "Lozinka"
 
@@ -820,6 +865,10 @@ msgstr "Promovisan u ulogu Junior Softverskog i QA inženjera, prihvatio sam nov
 msgid "Promotion - Software & QA Engineer - Malaysia"
 msgstr "Promocija - Softverski i QA inženjer - Malezija"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:105
+msgid "Public Repos"
+msgstr ""
+
 #: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:87
 #~ msgid "Read less"
 #~ msgstr "Pročitaj manje"
@@ -844,7 +893,7 @@ msgstr "Preporuka od vodećih poslodavaca u Maleziji i Bosni"
 msgid "Recommendation from top employers in USA, Malaysia and Bosnia"
 msgstr "Preporuke od vrhunskih poslodavaca iz SAD-a, Malezije i Bosne"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:107
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:108
 msgid "Register"
 msgstr "Registrovati se"
 
@@ -852,7 +901,7 @@ msgstr "Registrovati se"
 msgid "Registered"
 msgstr "Registrovan"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:84
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:85
 msgid "Remember me"
 msgstr "Zapamti me"
 
@@ -889,6 +938,10 @@ msgstr "Besprijekoran rješavač problema"
 #~ msgid "Secret Coder"
 #~ msgstr "Tajni Koder"
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:245
+msgid "Select filters"
+msgstr ""
+
 #: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:16
 #: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:19
 msgid "Semester 1, 2019/2020"
@@ -912,11 +965,15 @@ msgstr "Pošalji poruku"
 msgid "September 25, 2022"
 msgstr "25. Septembar 2022."
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:100
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:199
+msgid "Showcasing development <0>activity</0> and <1>project</1> statistics"
+msgstr ""
+
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:101
 msgid "Sign in"
 msgstr "Prijavi se"
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:36
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:37
 msgid "Sign in to your account"
 msgstr "Prijavite se na svoj račun"
 
@@ -1013,7 +1070,7 @@ msgstr "Sljedeća lista često postavljanih pitanja od strane poslodavaca takođ
 msgid "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters."
 msgstr "Tabla projekata je ekskluzivni resurs za ugovorni rad. Savršena je za slobodne stručnjake, agencije i povremene radnike."
 
-#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:39
+#: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:40
 msgid "to enjoy all of the cool"
 msgstr "da uživate u svim cool"
 
@@ -1021,6 +1078,18 @@ msgstr "da uživate u svim cool"
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/ToolsTable.tsx:67
 msgid "Tools"
 msgstr "Alati"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:108
+msgid "Total Commits"
+msgstr ""
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:107
+msgid "Total Forks"
+msgstr ""
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:106
+msgid "Total Stars"
+msgstr ""
 
 #: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:54
 msgid "Trustworthy Expert"
