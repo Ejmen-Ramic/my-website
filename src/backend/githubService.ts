@@ -1,13 +1,9 @@
-import axios, { AxiosResponse } from 'axios';
+import axios, { AxiosResponse } from "axios";
 
-const API_BASE = process.env.NODE_ENV === 'production'
-  ? 'https://your-app-name.vercel.app' // replace with your app’s Vercel URL
-  : 'http://localhost:3000';            // CRA/Vite dev server
-
-const api = axios.create({
-  baseURL: API_BASE,
-  headers: { 'Content-Type': 'application/json' }
-});
+const API_BASE =
+  process.env.NODE_ENV === "production"
+    ? `https://${process.env.REACT_APP_VERCEL_URL || "my-website-lyart-eight.vercel.app"}`
+    : "http://localhost:3000"; // CRA/Vite dev server with `vercel dev` proxy
 
 interface GitHubUser {
   login: string;
@@ -72,91 +68,68 @@ interface LanguageStats {
   [language: string]: number;
 }
 
+const api = axios.create({
+  baseURL: `${API_BASE}/api/github`,
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
 
 export const githubService = {
   async getUserProfile(): Promise<GitHubUser> {
-    try {
-      const response: AxiosResponse<GitHubUser> = await api.get('/api/github/profile');
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching user profile:', error);
-      throw error;
-    }
+    const response: AxiosResponse<GitHubUser> = await api.get("/profile");
+    return response.data;
   },
 
   async getUserRepos(): Promise<GitHubRepo[]> {
-    try {
-      const response: AxiosResponse<GitHubRepo[]> = await api.get('/api/github/repos');
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching repositories:', error);
-      throw error;
-    }
+    const response: AxiosResponse<GitHubRepo[]> = await api.get("/repos");
+    return response.data;
   },
 
   async getRepoCommitActivity(repoName: string): Promise<CommitActivity[]> {
-    try {
-      const response: AxiosResponse<CommitActivity[]> = await api.get(`/api/github/repos/${repoName}/commit-activity`);
-      return response.data || [];
-    } catch (error) {
-      console.error(`Error fetching commit activity for ${repoName}:`, error);
-      return [];
-    }
+    const response: AxiosResponse<CommitActivity[]> = await api.get(
+      `/repos/${repoName}/commit-activity`
+    );
+    return response.data || [];
   },
 
   async getRepoContributorStats(repoName: string): Promise<ContributorStats[]> {
-    try {
-      const response: AxiosResponse<ContributorStats[]> = await api.get(`/api/github/repos/${repoName}/contributors`);
-      return response.data || [];
-    } catch (error) {
-      console.error(`Error fetching contributor stats for ${repoName}:`, error);
-      return [];
-    }
+    const response: AxiosResponse<ContributorStats[]> = await api.get(
+      `/repos/${repoName}/contributors`
+    );
+    return response.data || [];
   },
 
   async getLanguageStats(): Promise<LanguageStats> {
-    try {
-      const response: AxiosResponse<LanguageStats> = await api.get('/api/github/languages');
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching language stats:', error);
-      throw error;
-    }
+    const response: AxiosResponse<LanguageStats> = await api.get("/languages");
+    return response.data;
   },
 
   async getRecentCommits(days: number = 30): Promise<CommitSearchResult[]> {
-    try {
-      const response: AxiosResponse<CommitSearchResult[]> = await api.get('/api/github/commits/recent', {
-        params: { days }
-      });
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching recent commits:', error);
-      throw error;
-    }
+    const response: AxiosResponse<CommitSearchResult[]> = await api.get(
+      "/commits/recent",
+      { params: { days } }
+    );
+    return response.data;
   },
 
   async getCommitsByYear(year: number): Promise<CommitSearchResult[]> {
-    try {
-      const response: AxiosResponse<CommitSearchResult[]> = await api.get(`/api/github/commits/year/${year}`);
-      return response.data;
-    } catch (error) {
-      console.error(`Error fetching commits for year ${year}:`, error);
-      return [];
-    }
+    const response: AxiosResponse<CommitSearchResult[]> = await api.get(
+      `/commits/${year}`
+    );
+    return response.data;
   },
 
-  async getCommitsByDateRange(startDate: string, endDate: string): Promise<CommitSearchResult[]> {
-    try {
-      const response: AxiosResponse<CommitSearchResult[]> = await api.get('/api/github/commits/range', {
-        params: { startDate, endDate }
-      });
-      return response.data;
-    } catch (error) {
-      console.error(`Error fetching commits for date range ${startDate} to ${endDate}:`, error);
-      return [];
-    }
-  }
+  async getCommitsByDateRange(
+    startDate: string,
+    endDate: string
+  ): Promise<CommitSearchResult[]> {
+    const response: AxiosResponse<CommitSearchResult[]> = await api.get(
+      "/commits/range",
+      { params: { startDate, endDate } }
+    );
+    return response.data;
+  },
 };
 
 export type {
@@ -165,5 +138,5 @@ export type {
   CommitActivity,
   ContributorStats,
   CommitSearchResult,
-  LanguageStats
+  LanguageStats,
 };
