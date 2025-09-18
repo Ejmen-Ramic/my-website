@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { GITHUB_USERNAME, githubApi } from "./utils/githubClient";
+import { githubApi, GITHUB_USERNAME } from "./utils/githubClient";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader("Access-Control-Allow-Origin", "*");
