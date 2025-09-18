@@ -1,8 +1,8 @@
 import axios, { AxiosResponse } from 'axios';
 
-const GITHUB_API_BASE = 'https://api.github.com';
-const token = process.env.REACT_APP_GITHUB_TOKEN;
-const username = process.env.REACT_APP_GITHUB_USERNAME;
+const API_BASE = process.env.NODE_ENV === 'production' 
+  ? 'https://your-backend-url.com' 
+  : 'http://localhost:5000';
 
 interface GitHubUser {
   login: string;
@@ -68,18 +68,16 @@ interface LanguageStats {
 }
 
 const api = axios.create({
-  baseURL: GITHUB_API_BASE,
+  baseURL: API_BASE,
   headers: {
-    'Authorization': `token ${token}`,
-    'Accept': 'application/vnd.github+json',
-    'X-GitHub-Api-Version': '2022-11-28'
+    'Content-Type': 'application/json'
   }
 });
 
 export const githubService = {
   async getUserProfile(): Promise<GitHubUser> {
     try {
-      const response: AxiosResponse<GitHubUser> = await api.get(`/users/${username}`);
+      const response: AxiosResponse<GitHubUser> = await api.get('/api/github/profile');
       return response.data;
     } catch (error) {
       console.error('Error fetching user profile:', error);
@@ -89,13 +87,7 @@ export const githubService = {
 
   async getUserRepos(): Promise<GitHubRepo[]> {
     try {
-      const response: AxiosResponse<GitHubRepo[]> = await api.get(`/users/${username}/repos`, {
-        params: {
-          per_page: 100,
-          sort: 'updated',
-          type: 'owner'
-        }
-      });
+      const response: AxiosResponse<GitHubRepo[]> = await api.get('/api/github/repos');
       return response.data;
     } catch (error) {
       console.error('Error fetching repositories:', error);
@@ -105,7 +97,7 @@ export const githubService = {
 
   async getRepoCommitActivity(repoName: string): Promise<CommitActivity[]> {
     try {
-      const response: AxiosResponse<CommitActivity[]> = await api.get(`/repos/${username}/${repoName}/stats/commit_activity`);
+      const response: AxiosResponse<CommitActivity[]> = await api.get(`/api/github/repos/${repoName}/commit-activity`);
       return response.data || [];
     } catch (error) {
       console.error(`Error fetching commit activity for ${repoName}:`, error);
@@ -115,7 +107,7 @@ export const githubService = {
 
   async getRepoContributorStats(repoName: string): Promise<ContributorStats[]> {
     try {
-      const response: AxiosResponse<ContributorStats[]> = await api.get(`/repos/${username}/${repoName}/stats/contributors`);
+      const response: AxiosResponse<ContributorStats[]> = await api.get(`/api/github/repos/${repoName}/contributors`);
       return response.data || [];
     } catch (error) {
       console.error(`Error fetching contributor stats for ${repoName}:`, error);
@@ -125,25 +117,8 @@ export const githubService = {
 
   async getLanguageStats(): Promise<LanguageStats> {
     try {
-      const repos = await this.getUserRepos();
-      const languageStats: LanguageStats = {};
-
-      for (const repo of repos) {
-        try {
-          const response: AxiosResponse<LanguageStats> = await api.get(`/repos/${username}/${repo.name}/languages`);
-          const languages = response.data;
-
-          Object.entries(languages).forEach(([language, bytes]) => {
-            languageStats[language] = (languageStats[language] || 0) + bytes;
-          });
-
-          await new Promise(resolve => setTimeout(resolve, 100));
-        } catch (error) {
-          console.error(`Error fetching languages for ${repo.name}:`, error);
-        }
-      }
-
-      return languageStats;
+      const response: AxiosResponse<LanguageStats> = await api.get('/api/github/languages');
+      return response.data;
     } catch (error) {
       console.error('Error fetching language stats:', error);
       throw error;
@@ -152,38 +127,10 @@ export const githubService = {
 
   async getRecentCommits(days: number = 30): Promise<CommitSearchResult[]> {
     try {
-      const since = new Date();
-      since.setDate(since.getDate() - days);
-      
-      let allCommits: CommitSearchResult[] = [];
-      let page = 1;
-      const perPage = 100;
-      
-      while (page <= 10) { 
-        const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
-          params: {
-            q: `author:${username} committer-date:>${since.toISOString().split('T')[0]}`,
-            sort: 'committer-date',
-            order: 'desc',
-            per_page: perPage,
-            page: page
-          }
-        });
-
-        const commits = response.data.items;
-        if (commits.length === 0) break;
-        
-        allCommits = [...allCommits, ...commits];
-        
-        if (commits.length < perPage) break;
-        
-        page++;
-        
-        await new Promise(resolve => setTimeout(resolve, 200));
-      }
-
-      console.log(`Fetched ${allCommits.length} commits for last ${days} days`);
-      return allCommits;
+      const response: AxiosResponse<CommitSearchResult[]> = await api.get('/api/github/commits/recent', {
+        params: { days }
+      });
+      return response.data;
     } catch (error) {
       console.error('Error fetching recent commits:', error);
       throw error;
@@ -192,75 +139,20 @@ export const githubService = {
 
   async getCommitsByYear(year: number): Promise<CommitSearchResult[]> {
     try {
-      const startDate = `${year}-01-01`;
-      const endDate = `${year}-12-31`;
-      
-      let allCommits: CommitSearchResult[] = [];
-      let page = 1;
-      const perPage = 100;
-      
-      while (page <= 10) { 
-        const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
-          params: {
-            q: `author:${username} committer-date:${startDate}..${endDate}`,
-            sort: 'committer-date',
-            order: 'desc',
-            per_page: perPage,
-            page: page
-          }
-        });
-
-        const commits = response.data.items;
-        if (commits.length === 0) break;
-        
-        allCommits = [...allCommits, ...commits];
-        
-        if (commits.length < perPage) break;
-        
-        page++;
-        
-        await new Promise(resolve => setTimeout(resolve, 200));
-      }
-
-      console.log(`Fetched ${allCommits.length} commits for year ${year}`);
-      return allCommits;
+      const response: AxiosResponse<CommitSearchResult[]> = await api.get(`/api/github/commits/year/${year}`);
+      return response.data;
     } catch (error) {
       console.error(`Error fetching commits for year ${year}:`, error);
-      return []; 
+      return [];
     }
   },
 
   async getCommitsByDateRange(startDate: string, endDate: string): Promise<CommitSearchResult[]> {
     try {
-      let allCommits: CommitSearchResult[] = [];
-      let page = 1;
-      const perPage = 100;
-      
-      while (page <= 10) { 
-        const response: AxiosResponse<{ items: CommitSearchResult[] }> = await api.get('/search/commits', {
-          params: {
-            q: `author:${username} committer-date:${startDate}..${endDate}`,
-            sort: 'committer-date',
-            order: 'desc',
-            per_page: perPage,
-            page: page
-          }
-        });
-
-        const commits = response.data.items;
-        if (commits.length === 0) break;
-        
-        allCommits = [...allCommits, ...commits];
-        
-        if (commits.length < perPage) break;
-        
-        page++;
-        
-        await new Promise(resolve => setTimeout(resolve, 200));
-      }
-
-      console.log(`Fetched ${allCommits.length} commits for date range ${startDate} to ${endDate}`);
-      return allCommits;
+      const response: AxiosResponse<CommitSearchResult[]> = await api.get('/api/github/commits/range', {
+        params: { startDate, endDate }
+      });
+      return response.data;
     } catch (error) {
       console.error(`Error fetching commits for date range ${startDate} to ${endDate}:`, error);
       return [];
