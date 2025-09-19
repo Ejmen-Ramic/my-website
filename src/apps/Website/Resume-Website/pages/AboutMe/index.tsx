@@ -19,7 +19,7 @@ const AboutPage: FC = () => {
         <EngineeringSKills />
         <Milestones />
         {/* <AboutCarousel /> */}
-        <GitHubDashboard />
+        {/* <GitHubDashboard /> */}
       </VStack>
     </Page>
   );
