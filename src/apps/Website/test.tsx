@@ -4,7 +4,7 @@ const Test: FC = () => {
   return (
     <>
       {/* <TestimonialContent /> */}
-      test
+      tests
     </>
   );
 };
