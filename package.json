@@ -102,7 +102,7 @@
   "test": "node scripts/test.js",
   "extract": "lingui extract",
   "compile": "lingui compile --typescript",
-  "vercel-dev": "vercel dev",
+  "server": "ts-node-dev --project tsconfig.server.json server.ts",
   "dev": "concurrently \"npm run server\" \"npm start\"" 
   },
   "eslintConfig": {
