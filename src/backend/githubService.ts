@@ -1,11 +1,11 @@
-import axios, { AxiosResponse } from "axios";
+import axios, { AxiosResponse } from 'axios';
 
 const API_BASE =
-  process.env.NODE_ENV === "production"
+  process.env.NODE_ENV === 'production'
     ? ''
-    : "http://localhost:3000";
+    : 'http://localhost:5000';
 
-interface GitHubUser {
+export interface GitHubUser {
   login: string;
   id: number;
   avatar_url: string;
@@ -17,7 +17,7 @@ interface GitHubUser {
   created_at: string;
 }
 
-interface GitHubRepo {
+export interface GitHubRepo {
   id: number;
   name: string;
   full_name: string;
@@ -31,13 +31,13 @@ interface GitHubRepo {
   pushed_at: string;
 }
 
-interface CommitActivity {
+export interface CommitActivity {
   total: number;
   week: number;
   days: number[];
 }
 
-interface ContributorStats {
+export interface ContributorStats {
   author: GitHubUser;
   total: number;
   weeks: Array<{
@@ -48,7 +48,7 @@ interface ContributorStats {
   }>;
 }
 
-interface CommitSearchResult {
+export interface CommitSearchResult {
   sha: string;
   commit: {
     message: string;
@@ -64,25 +64,26 @@ interface CommitSearchResult {
   };
 }
 
-interface LanguageStats {
+export interface LanguageStats {
   [language: string]: number;
 }
 
 const api = axios.create({
   baseURL: `${API_BASE}/api/github`,
   headers: {
-    "Content-Type": "application/json",
+    'Content-Type': 'application/json',
+    Accept: 'application/vnd.github.text-match+json',
   },
 });
 
 export const githubService = {
   async getUserProfile(): Promise<GitHubUser> {
-    const response: AxiosResponse<GitHubUser> = await api.get("/profile");
+    const response: AxiosResponse<GitHubUser> = await api.get('/profile');
     return response.data;
   },
 
   async getUserRepos(): Promise<GitHubRepo[]> {
-    const response: AxiosResponse<GitHubRepo[]> = await api.get("/repos");
+    const response: AxiosResponse<GitHubRepo[]> = await api.get('/repos');
     return response.data;
   },
 
@@ -101,13 +102,13 @@ export const githubService = {
   },
 
   async getLanguageStats(): Promise<LanguageStats> {
-    const response: AxiosResponse<LanguageStats> = await api.get("/languages");
+    const response: AxiosResponse<LanguageStats> = await api.get('/languages');
     return response.data;
   },
 
   async getRecentCommits(days: number = 30): Promise<CommitSearchResult[]> {
     const response: AxiosResponse<CommitSearchResult[]> = await api.get(
-      "/commits/recent",
+      '/commits/recent',
       { params: { days } }
     );
     return response.data;
@@ -115,7 +116,7 @@ export const githubService = {
 
   async getCommitsByYear(year: number): Promise<CommitSearchResult[]> {
     const response: AxiosResponse<CommitSearchResult[]> = await api.get(
-      `/commits/${year}`
+      `/commits/year/${year}`
     );
     return response.data;
   },
@@ -125,18 +126,9 @@ export const githubService = {
     endDate: string
   ): Promise<CommitSearchResult[]> {
     const response: AxiosResponse<CommitSearchResult[]> = await api.get(
-      "/commits/range",
+      '/commits/range',
       { params: { startDate, endDate } }
     );
     return response.data;
   },
-};
-
-export type {
-  GitHubUser,
-  GitHubRepo,
-  CommitActivity,
-  ContributorStats,
-  CommitSearchResult,
-  LanguageStats,
 };
