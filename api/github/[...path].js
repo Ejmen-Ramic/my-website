@@ -1,12 +1,11 @@
-// api/github/[...path].ts
+// api/github/[...path].js
 
-import type { VercelRequest, VercelResponse } from '@vercel/node';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+// CommonJS file to avoid ESM exports in Vercel runtime
 const axios = require('axios');
 
 const GITHUB_API_BASE = 'https://api.github.com';
 
-async function handler(req: VercelRequest, res: VercelResponse) {
+async function handler(req, res) {
   // return res.status(200).json({ ok: true, note: 'top-of-handler reached' });
 
   const token = process.env.GITHUB_TOKEN;
@@ -30,19 +29,19 @@ async function handler(req: VercelRequest, res: VercelResponse) {
     timeout: 30000
   });
 
-  async function getLanguagesForAllRepos(user: string) {
+  async function getLanguagesForAllRepos(user) {
     const reposResponse = await api.get(`/users/${user}/repos`, {
       params: { per_page: 100, sort: 'updated', type: 'owner' }
     });
-    const repos = reposResponse.data as any[];
+    const repos = reposResponse.data;
 
-    const languageStats: { [key: string]: number } = {};
+    const languageStats = {};
     for (const repo of repos) {
       try {
         const resp = await api.get(`/repos/${user}/${repo.name}/languages`);
-        const languages = resp.data as Record<string, number>;
+        const languages = resp.data;
         Object.entries(languages).forEach(([language, bytes]) => {
-          languageStats[language] = (languageStats[language] || 0) + (bytes as number);
+          languageStats[language] = (languageStats[language] || 0) + bytes;
         });
         await new Promise((r) => setTimeout(r, 100));
       } catch {}
@@ -50,8 +49,8 @@ async function handler(req: VercelRequest, res: VercelResponse) {
     return languageStats;
   }
 
-  async function pagedCommitSearch(q: string) {
-    let all: any[] = [];
+  async function pagedCommitSearch(q) {
+    let all = [];
     let page = 1;
     const perPage = 100;
 
@@ -71,7 +70,7 @@ async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    const segments = (req.query.path as string[] | undefined) ?? [];
+    const segments = Array.isArray(req.query?.path) ? req.query.path : [];
 
     if (segments.length === 1 && segments[0] === 'profile') {
       const response = await api.get(`/users/${username}`);
@@ -103,7 +102,7 @@ async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     if (segments.length === 2 && segments[0] === 'commits' && segments[1] === 'recent') {
-      const days = Number(req.query.days ?? 30);
+      const days = Number(req.query?.days ?? 30);
       const since = new Date();
       since.setDate(since.getDate() - days);
       const sinceStr = since.toISOString().split('T')[0];
@@ -120,8 +119,8 @@ async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     if (segments.length === 2 && segments[0] === 'commits' && segments[1] === 'range') {
-      const startDate = String(req.query.startDate ?? '');
-      const endDate = String(req.query.endDate ?? '');
+      const startDate = String(req.query?.startDate ?? '');
+      const endDate = String(req.query?.endDate ?? '');
       if (!startDate || !endDate) {
         return res.status(400).json({ error: 'startDate and endDate are required' });
       }
@@ -131,7 +130,7 @@ async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     return res.status(404).json({ error: 'Not found' });
-  } catch (error: any) {
+  } catch (error) {
     const status = error?.response?.status ?? 500;
     const details = error?.response?.data ?? error?.message ?? 'Server error';
     console.error('API error:', status, details);
@@ -143,5 +142,4 @@ async function handler(req: VercelRequest, res: VercelResponse) {
   }
 }
 
-// Important: CommonJS export so Vercel (CJS) can load it
 module.exports = handler;
