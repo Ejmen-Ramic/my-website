@@ -1,21 +1,28 @@
-// CommonJS-friendly: avoid relying on ESM-only features in output
+// api/github/[...path].ts
+
+// CommonJS-friendly: avoid ESM-only output in Vercel runtime
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-// Use require for runtime imports to be CJS-safe
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const axios = require('axios');
 
 const GITHUB_API_BASE = 'https://api.github.com';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  // Uncomment this temporary line to verify routing if needed:
+  // return res.status(200).json({ ok: true, note: 'top-of-handler reached' });
+
+  // Read envs inside handler to avoid import-time crashes
   const token = process.env.GITHUB_TOKEN;
   const username = process.env.GITHUB_USERNAME;
 
   if (!username || !token) {
     return res.status(500).json({
-      error: 'Missing GITHUB_USERNAME or GITHUB_TOKEN in Vercel environment'
+      error: 'Missing GITHUB_USERNAME or GITHUB_TOKEN in Vercel environment',
+      have: { username: !!username, token: !!token }
     });
   }
 
+  // Create axios instance after verifying envs
   const api = axios.create({
     baseURL: GITHUB_API_BASE,
     headers: {
@@ -23,7 +30,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       Accept: 'application/vnd.github+json',
       'X-GitHub-Api-Version': '2022-11-28',
       'User-Agent': 'PricePilot-App'
-    }
+    },
+    timeout: 30000
   });
 
   async function getLanguagesForAllRepos(user: string) {
@@ -40,8 +48,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         Object.entries(languages).forEach(([language, bytes]) => {
           languageStats[language] = (languageStats[language] || 0) + (bytes as number);
         });
+        // be polite to the API
         await new Promise((r) => setTimeout(r, 100));
-      } catch {}
+      } catch {
+        // ignore per-repo language failures
+      }
     }
     return languageStats;
   }
@@ -54,6 +65,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     while (page <= 10) {
       const resp = await api.get('/search/commits', {
         params: { q, sort: 'committer-date', order: 'desc', per_page: perPage, page },
+        // special Accept required for commit search
         headers: { Accept: 'application/vnd.github.cloak-preview+json' }
       });
       const items = resp.data?.items ?? [];
@@ -69,11 +81,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     const segments = (req.query.path as string[] | undefined) ?? [];
 
+    // GET /api/github/profile
     if (segments.length === 1 && segments[0] === 'profile') {
       const response = await api.get(`/users/${username}`);
       return res.status(200).json(response.data);
     }
 
+    // GET /api/github/repos
     if (segments.length === 1 && segments[0] === 'repos') {
       const response = await api.get(`/users/${username}/repos`, {
         params: { per_page: 100, sort: 'updated', type: 'owner' }
@@ -81,23 +95,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(200).json(response.data);
     }
 
+    // GET /api/github/repos/:repo/commit-activity
     if (segments.length === 3 && segments[0] === 'repos' && segments[2] === 'commit-activity') {
       const repoName = segments[1];
       const response = await api.get(`/repos/${username}/${repoName}/stats/commit_activity`);
       return res.status(200).json(response.data ?? []);
     }
 
+    // GET /api/github/repos/:repo/contributors
     if (segments.length === 3 && segments[0] === 'repos' && segments[2] === 'contributors') {
       const repoName = segments[1];
       const response = await api.get(`/repos/${username}/${repoName}/stats/contributors`);
       return res.status(200).json(response.data ?? []);
     }
 
+    // GET /api/github/languages
     if (segments.length === 1 && segments[0] === 'languages') {
       const languageStats = await getLanguagesForAllRepos(username);
       return res.status(200).json(languageStats);
     }
 
+    // GET /api/github/commits/recent?days=30
     if (segments.length === 2 && segments[0] === 'commits' && segments[1] === 'recent') {
       const days = Number(req.query.days ?? 30);
       const since = new Date();
@@ -108,7 +126,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(200).json(all);
     }
 
-    // /api/github/commits/year/:year
+    // GET /api/github/commits/year/:yyyy
     if (segments.length === 3 && segments[0] === 'commits' && segments[1] === 'year' && /^\d{4}$/.test(segments[2])) {
       const year = segments[2];
       const q = `author:${username} committer-date:${year}-01-01..${year}-12-31`;
@@ -116,6 +134,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(200).json(all);
     }
 
+    // GET /api/github/commits/range?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
     if (segments.length === 2 && segments[0] === 'commits' && segments[1] === 'range') {
       const startDate = String(req.query.startDate ?? '');
       const endDate = String(req.query.endDate ?? '');
