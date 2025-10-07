@@ -1,5 +1,4 @@
 // api/github/[...path].js
-
 const axios = require('axios');
 
 const GITHUB_API_BASE = 'https://api.github.com';
@@ -31,6 +30,7 @@ async function handler(req, res) {
       params: { per_page: 100, sort: 'updated', type: 'owner' }
     });
     const repos = reposResponse.data;
+
     const languageStats = {};
     for (const repo of repos) {
       try {
@@ -49,6 +49,7 @@ async function handler(req, res) {
     let all = [];
     let page = 1;
     const perPage = 100;
+
     while (page <= 10) {
       const resp = await api.get('/search/commits', {
         params: { q, sort: 'committer-date', order: 'desc', per_page: perPage, page },
@@ -65,37 +66,41 @@ async function handler(req, res) {
   }
 
   try {
-    // Normalize catch-all segments from various shapes:
-    // - req.query['...path'] -> "profile" or ["repos", "foo"]
-    // - req.query.path -> "profile" or ["repos","foo"]
-    // - req.query[0] -> "profile" or ["repos","foo"]
     const q = req.query || {};
-    let segments = [];
 
-    const dotDotDot = q['...path'];
-    if (Array.isArray(dotDotDot)) {
-      segments = dotDotDot;
-    } else if (typeof dotDotDot === 'string' && dotDotDot.length) {
-      segments = [dotDotDot];
-    } else if (Array.isArray(q.path)) {
-      segments = q.path;
-    } else if (typeof q.path === 'string' && q.path.length) {
-      segments = [q.path];
-    } else if (Array.isArray(q[0])) {
-      segments = q[0];
-    } else if (typeof q[0] === 'string' && q[0].length) {
-      segments = [q[0]];
+    // Robust normalization for Vercel catch-all:
+    // Accept query['...path'], query.path, or query[0]
+    // Each may be an array OR a single string "a/b/c"
+    function toSegments(v) {
+      if (!v) return [];
+      if (Array.isArray(v)) return v.flatMap((s) => String(s).split('/').filter(Boolean));
+      if (typeof v === 'string') return v.split('/').filter(Boolean);
+      return [];
     }
 
+    let segments =
+      toSegments(q['...path']) ||
+      toSegments(q.path) ||
+      toSegments(q[0]);
+
+    if (!Array.isArray(segments) || segments.length === 0) {
+      segments = [];
+    }
+
+    // Optional debug
     if (q.debug === '1') {
       return res.status(200).json({ query: q, segments });
     }
 
+    // Routes
+
+    // GET /api/github/profile
     if (segments.length === 1 && segments[0] === 'profile') {
       const response = await api.get(`/users/${username}`);
       return res.status(200).json(response.data);
     }
 
+    // GET /api/github/repos
     if (segments.length === 1 && segments[0] === 'repos') {
       const response = await api.get(`/users/${username}/repos`, {
         params: { per_page: 100, sort: 'updated', type: 'owner' }
@@ -103,23 +108,13 @@ async function handler(req, res) {
       return res.status(200).json(response.data);
     }
 
-    if (segments.length === 3 && segments[0] === 'repos' && segments[2] === 'commit-activity') {
-      const repoName = segments[1];
-      const response = await api.get(`/repos/${username}/${repoName}/stats/commit_activity`);
-      return res.status(200).json(response.data ?? []);
-    }
-
-    if (segments.length === 3 && segments[0] === 'repos' && segments[2] === 'contributors') {
-      const repoName = segments[1];
-      const response = await api.get(`/repos/${username}/${repoName}/stats/contributors`);
-      return res.status(200).json(response.data ?? []);
-    }
-
+    // GET /api/github/languages
     if (segments.length === 1 && segments[0] === 'languages') {
       const languageStats = await getLanguagesForAllRepos(username);
       return res.status(200).json(languageStats);
     }
 
+    // GET /api/github/commits/recent?days=30
     if (segments.length === 2 && segments[0] === 'commits' && segments[1] === 'recent') {
       const days = Number(q.days ?? 30);
       const since = new Date();
@@ -130,6 +125,7 @@ async function handler(req, res) {
       return res.status(200).json(all);
     }
 
+    // GET /api/github/commits/year/2024
     if (segments.length === 3 && segments[0] === 'commits' && segments[1] === 'year' && /^\d{4}$/.test(segments[2])) {
       const year = segments[2];
       const searchQ = `author:${username} committer-date:${year}-01-01..${year}-12-31`;
@@ -137,6 +133,7 @@ async function handler(req, res) {
       return res.status(200).json(all);
     }
 
+    // GET /api/github/commits/range?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
     if (segments.length === 2 && segments[0] === 'commits' && segments[1] === 'range') {
       const startDate = String(q.startDate ?? '');
       const endDate = String(q.endDate ?? '');
@@ -146,6 +143,20 @@ async function handler(req, res) {
       const searchQ = `author:${username} committer-date:${startDate}..${endDate}`;
       const all = await pagedCommitSearch(searchQ);
       return res.status(200).json(all);
+    }
+
+    // GET /api/github/repos/:repo/commit-activity
+    if (segments.length === 3 && segments[0] === 'repos' && segments[2] === 'commit-activity') {
+      const repoName = segments[1];
+      const response = await api.get(`/repos/${username}/${repoName}/stats/commit_activity`);
+      return res.status(200).json(response.data ?? []);
+    }
+
+    // GET /api/github/repos/:repo/contributors
+    if (segments.length === 3 && segments[0] === 'repos' && segments[2] === 'contributors') {
+      const repoName = segments[1];
+      const response = await api.get(`/repos/${username}/${repoName}/stats/contributors`);
+      return res.status(200).json(response.data ?? []);
     }
 
     return res.status(404).json({ error: 'Not found', segments });
