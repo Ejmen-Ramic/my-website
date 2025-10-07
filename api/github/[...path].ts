@@ -68,7 +68,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (!username || !token) {
     return res.status(500).json({ error: 'Missing GITHUB_USERNAME or GITHUB_TOKEN in environment' });
   }
-
+// Verify Vercel envs exist in production
+  if (!process.env.GITHUB_USERNAME || !process.env.GITHUB_TOKEN) {
+    return res.status(500).json({
+      error: 'Missing GITHUB_USERNAME or GITHUB_TOKEN in Vercel environment'
+    });
+  }
   try {
     const segments = (req.query.path as string[] | undefined) ?? [];
 
