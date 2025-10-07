@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { format, parseISO} from 'date-fns';
-import { CommitSearchResult, GitHubRepo, githubService, GitHubUser, LanguageStats } from '../../../../../../backend/githubService';
 import { t } from '@lingui/macro';
-
+import { CommitSearchResult, GitHubRepo, githubService, GitHubUser, LanguageStats } from '../../../../../../backend/githubService';
 export interface CommitByDate {
   date: string;
   commits: number;

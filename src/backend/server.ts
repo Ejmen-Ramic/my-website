@@ -1,8 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import axios from 'axios';
-import * as dotenv from "dotenv";
-dotenv.config({ path: ".env.local" }); 
+import * as dotenv from 'dotenv';
+
+dotenv.config({ path: '.env.local' });
+console.log('ENV:', !!process.env.GITHUB_USERNAME, !!process.env.GITHUB_TOKEN);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -24,7 +26,7 @@ const token = process.env.GITHUB_TOKEN;
 const username = process.env.GITHUB_USERNAME;
 
 if (!token || !username) {
-  throw new Error("Missing GITHUB_TOKEN or GITHUB_USERNAME in .env.local");
+  throw new Error('Missing GITHUB_TOKEN or GITHUB_USERNAME in .env.local');
 }
 
 const api = axios.create({
@@ -33,8 +35,8 @@ const api = axios.create({
     Authorization: `Bearer ${token}`,
     Accept: 'application/vnd.github+json',
     'X-GitHub-Api-Version': '2022-11-28',
-    'User-Agent': 'PricePilot-App'
-  }
+    'User-Agent': 'PricePilot-App',
+  },
 });
 
 app.get('/api/github/profile', async (req, res) => {
@@ -53,8 +55,8 @@ app.get('/api/github/repos', async (req, res) => {
       params: {
         per_page: 100,
         sort: 'updated',
-        type: 'owner'
-      }
+        type: 'owner',
+      },
     });
     res.json(response.data);
   } catch (error: any) {
@@ -66,41 +68,49 @@ app.get('/api/github/repos', async (req, res) => {
 app.get('/api/github/repos/:repoName/commit-activity', async (req, res) => {
   try {
     const { repoName } = req.params;
-    const response = await api.get(`/repos/${username}/${repoName}/stats/commit_activity`);
+    const response = await api.get(
+      `/repos/${username}/${repoName}/stats/commit_activity`
+    );
     res.json(response.data || []);
   } catch (error: any) {
-
+    res.status(error.response?.status || 500).json({ error: error.message });
   }
 });
 
 app.get('/api/github/repos/:repoName/contributors', async (req, res) => {
   try {
     const { repoName } = req.params;
-    const response = await api.get(`/repos/${username}/${repoName}/stats/contributors`);
+    const response = await api.get(
+      `/repos/${username}/${repoName}/stats/contributors`
+    );
     res.json(response.data || []);
   } catch (error: any) {
+    res.status(error.response?.status || 500).json({ error: error.message });
   }
 });
 
 app.get('/api/github/languages', async (req, res) => {
   try {
     const reposResponse = await api.get(`/users/${username}/repos`, {
-      params: { per_page: 100, sort: 'updated', type: 'owner' }
+      params: { per_page: 100, sort: 'updated', type: 'owner' },
     });
     const repos = reposResponse.data;
-    
+
     const languageStats: { [key: string]: number } = {};
 
     for (const repo of repos) {
       try {
-        const response = await api.get(`/repos/${username}/${repo.name}/languages`);
-        const languages = response.data;
+        const response = await api.get(
+          `/repos/${username}/${repo.name}/languages`
+        );
+        const languages = response.data as Record<string, number>;
 
         Object.entries(languages).forEach(([language, bytes]) => {
-          languageStats[language] = (languageStats[language] || 0) + (bytes as number);
+          languageStats[language] =
+            (languageStats[language] || 0) + (bytes as number);
         });
 
-        await new Promise(resolve => setTimeout(resolve, 100));
+        await new Promise((resolve) => setTimeout(resolve, 100));
       } catch (error: any) {
         console.error(`Error fetching languages for ${repo.name}:`, error);
       }
@@ -118,31 +128,34 @@ app.get('/api/github/commits/recent', async (req, res) => {
     const days = Number(req.query.days) || 30;
     const since = new Date();
     since.setDate(since.getDate() - days);
-    
+
     let allCommits: any[] = [];
     let page = 1;
     const perPage = 100;
-    
+
     while (page <= 10) {
       const response = await api.get('/search/commits', {
         params: {
-          q: `author:${username} committer-date:>${since.toISOString().split('T')[0]}`,
+          q: `author:${username} committer-date:>${since
+            .toISOString()
+            .split('T')[0]}`,
           sort: 'committer-date',
           order: 'desc',
           per_page: perPage,
-          page: page
-        }
+          page,
+        },
+        headers: { Accept: 'application/vnd.github.cloak-preview+json' },
       });
 
       const commits = response.data.items;
-      if (commits.length === 0) break;
-      
+      if (!commits || commits.length === 0) break;
+
       allCommits = [...allCommits, ...commits];
-      
+
       if (commits.length < perPage) break;
-      
+
       page++;
-      await new Promise(resolve => setTimeout(resolve, 200));
+      await new Promise((resolve) => setTimeout(resolve, 200));
     }
 
     console.log(`Fetched ${allCommits.length} commits for last ${days} days`);
@@ -158,11 +171,11 @@ app.get('/api/github/commits/year/:year', async (req, res) => {
     const { year } = req.params;
     const startDate = `${year}-01-01`;
     const endDate = `${year}-12-31`;
-    
+
     let allCommits: any[] = [];
     let page = 1;
     const perPage = 100;
-    
+
     while (page <= 10) {
       const response = await api.get('/search/commits', {
         params: {
@@ -170,39 +183,44 @@ app.get('/api/github/commits/year/:year', async (req, res) => {
           sort: 'committer-date',
           order: 'desc',
           per_page: perPage,
-          page: page
-        }
+          page,
+        },
+        headers: { Accept: 'application/vnd.github.cloak-preview+json' },
       });
 
       const commits = response.data.items;
-      if (commits.length === 0) break;
-      
+      if (!commits || commits.length === 0) break;
+
       allCommits = [...allCommits, ...commits];
-      
+
       if (commits.length < perPage) break;
-      
+
       page++;
-      await new Promise(resolve => setTimeout(resolve, 200));
+      await new Promise((resolve) => setTimeout(resolve, 200));
     }
 
     console.log(`Fetched ${allCommits.length} commits for year ${year}`);
     res.json(allCommits);
   } catch (error: any) {
+    res.status(error.response?.status || 500).json({ error: error.message });
   }
 });
 
 app.get('/api/github/commits/range', async (req, res) => {
   try {
-    const { startDate, endDate } = req.query as { startDate?: string; endDate?: string };
-    
+    const { startDate, endDate } = req.query as {
+      startDate?: string;
+      endDate?: string;
+    };
+
     if (!startDate || !endDate) {
       return res.status(400).json({ error: 'startDate and endDate are required' });
     }
-    
+
     let allCommits: any[] = [];
     let page = 1;
     const perPage = 100;
-    
+
     while (page <= 10) {
       const response = await api.get('/search/commits', {
         params: {
@@ -210,24 +228,28 @@ app.get('/api/github/commits/range', async (req, res) => {
           sort: 'committer-date',
           order: 'desc',
           per_page: perPage,
-          page: page
-        }
+          page,
+        },
+        headers: { Accept: 'application/vnd.github.cloak-preview+json' },
       });
 
       const commits = response.data.items;
-      if (commits.length === 0) break;
-      
+      if (!commits || commits.length === 0) break;
+
       allCommits = [...allCommits, ...commits];
-      
+
       if (commits.length < perPage) break;
-      
+
       page++;
-      await new Promise(resolve => setTimeout(resolve, 200));
+      await new Promise((resolve) => setTimeout(resolve, 200));
     }
 
-    console.log(`Fetched ${allCommits.length} commits for date range ${startDate} to ${endDate}`);
+    console.log(
+      `Fetched ${allCommits.length} commits for date range ${startDate} to ${endDate}`
+    );
     res.json(allCommits);
   } catch (error: any) {
+    res.status(error.response?.status || 500).json({ error: error.message });
   }
 });
 
