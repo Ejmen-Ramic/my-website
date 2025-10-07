@@ -7,12 +7,15 @@ dotenv.config({ path: ".env.local" });
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Enable CORS for your React app
-app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? 'https://your-deployed-app.com' 
-    : 'http://localhost:3000'
-}));
+app.use(
+  cors({
+    origin:
+      process.env.NODE_ENV === 'production'
+        ? 'https://your-deployed-app.com'
+        : ['http://localhost:3000', 'http://localhost:5001'],
+    credentials: false,
+  })
+);
 
 app.use(express.json());
 
@@ -28,12 +31,12 @@ const api = axios.create({
   baseURL: GITHUB_API_BASE,
   headers: {
     Authorization: `Bearer ${token}`,
-    'Accept': 'application/vnd.github+json',
-    'X-GitHub-Api-Version': '2022-11-28'
+    Accept: 'application/vnd.github+json',
+    'X-GitHub-Api-Version': '2022-11-28',
+    'User-Agent': 'PricePilot-App'
   }
 });
 
-// User profile endpoint
 app.get('/api/github/profile', async (req, res) => {
   try {
     const response = await api.get(`/users/${username}`);
@@ -44,7 +47,6 @@ app.get('/api/github/profile', async (req, res) => {
   }
 });
 
-// User repos endpoint
 app.get('/api/github/repos', async (req, res) => {
   try {
     const response = await api.get(`/users/${username}/repos`, {
@@ -61,34 +63,27 @@ app.get('/api/github/repos', async (req, res) => {
   }
 });
 
-// Repo commit activity endpoint
 app.get('/api/github/repos/:repoName/commit-activity', async (req, res) => {
   try {
     const { repoName } = req.params;
     const response = await api.get(`/repos/${username}/${repoName}/stats/commit_activity`);
     res.json(response.data || []);
   } catch (error: any) {
-    // console.error(`Error fetching commit activity for ${repoName}:`, error);
-    // res.json([]);
+
   }
 });
 
-// Repo contributor stats endpoint
 app.get('/api/github/repos/:repoName/contributors', async (req, res) => {
   try {
     const { repoName } = req.params;
     const response = await api.get(`/repos/${username}/${repoName}/stats/contributors`);
     res.json(response.data || []);
   } catch (error: any) {
-    // console.error(`Error fetching contributor stats for ${repoName}:`, error);
-    // res.json([]);
   }
 });
 
-// Language stats endpoint
 app.get('/api/github/languages', async (req, res) => {
   try {
-    // Get repos first
     const reposResponse = await api.get(`/users/${username}/repos`, {
       params: { per_page: 100, sort: 'updated', type: 'owner' }
     });
@@ -118,7 +113,6 @@ app.get('/api/github/languages', async (req, res) => {
   }
 });
 
-// Recent commits endpoint
 app.get('/api/github/commits/recent', async (req, res) => {
   try {
     const days = Number(req.query.days) || 30;
@@ -159,7 +153,6 @@ app.get('/api/github/commits/recent', async (req, res) => {
   }
 });
 
-// Commits by year endpoint
 app.get('/api/github/commits/year/:year', async (req, res) => {
   try {
     const { year } = req.params;
@@ -195,12 +188,9 @@ app.get('/api/github/commits/year/:year', async (req, res) => {
     console.log(`Fetched ${allCommits.length} commits for year ${year}`);
     res.json(allCommits);
   } catch (error: any) {
-    // console.error(`Error fetching commits for year ${year}:`, error);
-    // res.json([]);
   }
 });
 
-// Commits by date range endpoint
 app.get('/api/github/commits/range', async (req, res) => {
   try {
     const { startDate, endDate } = req.query as { startDate?: string; endDate?: string };
@@ -238,8 +228,6 @@ app.get('/api/github/commits/range', async (req, res) => {
     console.log(`Fetched ${allCommits.length} commits for date range ${startDate} to ${endDate}`);
     res.json(allCommits);
   } catch (error: any) {
-    // console.error(`Error fetching commits for date range ${startDate} to ${endDate}:`, error);
-    // res.json([]);
   }
 });
 
