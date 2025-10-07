@@ -36,6 +36,7 @@ async function getLanguagesForAllRepos(user: string) {
       });
       await new Promise((r) => setTimeout(r, 100));
     } catch (e) {
+      // ignore per-repo failures
     }
   }
 
@@ -63,14 +64,21 @@ async function pagedCommitSearch(q: string) {
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  // Clear error if env missing in prod
+  if (!username || !token) {
+    return res.status(500).json({ error: 'Missing GITHUB_USERNAME or GITHUB_TOKEN in environment' });
+  }
+
   try {
     const segments = (req.query.path as string[] | undefined) ?? [];
 
+    // GET /api/github/profile
     if (segments.length === 1 && segments[0] === 'profile') {
       const response = await api.get(`/users/${username}`);
       return res.status(200).json(response.data);
     }
 
+    // GET /api/github/repos
     if (segments.length === 1 && segments[0] === 'repos') {
       const response = await api.get(`/users/${username}/repos`, {
         params: { per_page: 100, sort: 'updated', type: 'owner' },
@@ -78,23 +86,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(200).json(response.data);
     }
 
+    // GET /api/github/repos/:repoName/commit-activity
     if (segments.length === 3 && segments[0] === 'repos' && segments[2] === 'commit-activity') {
       const repoName = segments[1];
       const response = await api.get(`/repos/${username}/${repoName}/stats/commit_activity`);
       return res.status(200).json(response.data ?? []);
     }
 
+    // GET /api/github/repos/:repoName/contributors
     if (segments.length === 3 && segments[0] === 'repos' && segments[2] === 'contributors') {
       const repoName = segments[1];
       const response = await api.get(`/repos/${username}/${repoName}/stats/contributors`);
       return res.status(200).json(response.data ?? []);
     }
 
+    // GET /api/github/languages
     if (segments.length === 1 && segments[0] === 'languages') {
       const languageStats = await getLanguagesForAllRepos(username as string);
       return res.status(200).json(languageStats);
     }
 
+    // GET /api/github/commits/recent?days=90
     if (segments.length === 2 && segments[0] === 'commits' && segments[1] === 'recent') {
       const days = Number(req.query.days ?? 30);
       const since = new Date();
@@ -105,13 +117,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(200).json(all);
     }
 
-   if (segments.length === 3 && segments[0] === 'commits' && segments[1] === 'year' && /^\d{4}$/.test(segments[2])) {
+    // NEW parity: GET /api/github/commits/year/:year
+    if (segments.length === 3 && segments[0] === 'commits' && segments[1] === 'year' && /^\d{4}$/.test(segments[2])) {
       const year = segments[2];
       const q = `author:${username} committer-date:${year}-01-01..${year}-12-31`;
       const all = await pagedCommitSearch(q);
       return res.status(200).json(all);
     }
 
+    // GET /api/github/commits/range?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
     if (segments.length === 2 && segments[0] === 'commits' && segments[1] === 'range') {
       const startDate = String(req.query.startDate ?? '');
       const endDate = String(req.query.endDate ?? '');
@@ -125,7 +139,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     return res.status(404).json({ error: 'Not found' });
   } catch (error: any) {
-    console.error('API error:', error?.message);
+    console.error('API error:', error?.response?.status, error?.response?.data ?? error?.message);
     return res.status(error?.response?.status ?? 500).json({ error: error?.message ?? 'Server error' });
   }
 }
