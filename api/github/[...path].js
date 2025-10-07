@@ -1,12 +1,13 @@
 // api/github/[...path].js
 
-// CommonJS file to avoid ESM exports in Vercel runtime
+// CommonJS file to avoid ESM issues on Vercel
 const axios = require('axios');
 
 const GITHUB_API_BASE = 'https://api.github.com';
 
 async function handler(req, res) {
-  // return res.status(200).json({ ok: true, note: 'top-of-handler reached' });
+  // Uncomment to confirm routing quickly:
+  // return res.status(200).json({ ok: true, note: 'top-of-handler reached', query: req.query });
 
   const token = process.env.GITHUB_TOKEN;
   const username = process.env.GITHUB_USERNAME;
@@ -44,7 +45,9 @@ async function handler(req, res) {
           languageStats[language] = (languageStats[language] || 0) + bytes;
         });
         await new Promise((r) => setTimeout(r, 100));
-      } catch {}
+      } catch {
+        // ignore per-repo language errors
+      }
     }
     return languageStats;
   }
@@ -70,13 +73,31 @@ async function handler(req, res) {
   }
 
   try {
-    const segments = Array.isArray(req.query?.path) ? req.query.path : [];
+    // Normalize catch-all segments: Vercel may provide at query.path or query[0]
+    let segments = [];
+    const q = req.query || {};
+    if (Array.isArray(q.path)) {
+      segments = q.path;
+    } else if (typeof q.path === 'string') {
+      segments = [q.path];
+    } else if (typeof q[0] === 'string') {
+      segments = [q[0]];
+    } else if (Array.isArray(q[0])) {
+      segments = q[0];
+    }
 
+    // Optional debug: visit /api/github/profile?debug=1 to see query shape
+    if (q.debug === '1') {
+      return res.status(200).json({ query: q, segments });
+    }
+
+    // GET /api/github/profile
     if (segments.length === 1 && segments[0] === 'profile') {
       const response = await api.get(`/users/${username}`);
       return res.status(200).json(response.data);
     }
 
+    // GET /api/github/repos
     if (segments.length === 1 && segments[0] === 'repos') {
       const response = await api.get(`/users/${username}/repos`, {
         params: { per_page: 100, sort: 'updated', type: 'owner' }
@@ -84,52 +105,58 @@ async function handler(req, res) {
       return res.status(200).json(response.data);
     }
 
+    // GET /api/github/repos/:repo/commit-activity
     if (segments.length === 3 && segments[0] === 'repos' && segments[2] === 'commit-activity') {
       const repoName = segments[1];
       const response = await api.get(`/repos/${username}/${repoName}/stats/commit_activity`);
       return res.status(200).json(response.data ?? []);
     }
 
+    // GET /api/github/repos/:repo/contributors
     if (segments.length === 3 && segments[0] === 'repos' && segments[2] === 'contributors') {
       const repoName = segments[1];
       const response = await api.get(`/repos/${username}/${repoName}/stats/contributors`);
       return res.status(200).json(response.data ?? []);
     }
 
+    // GET /api/github/languages
     if (segments.length === 1 && segments[0] === 'languages') {
       const languageStats = await getLanguagesForAllRepos(username);
       return res.status(200).json(languageStats);
     }
 
+    // GET /api/github/commits/recent?days=30
     if (segments.length === 2 && segments[0] === 'commits' && segments[1] === 'recent') {
-      const days = Number(req.query?.days ?? 30);
+      const days = Number(q.days ?? 30);
       const since = new Date();
       since.setDate(since.getDate() - days);
       const sinceStr = since.toISOString().split('T')[0];
-      const q = `author:${username} committer-date:>${sinceStr}`;
-      const all = await pagedCommitSearch(q);
+      const searchQ = `author:${username} committer-date:>${sinceStr}`;
+      const all = await pagedCommitSearch(searchQ);
       return res.status(200).json(all);
     }
 
+    // GET /api/github/commits/year/:yyyy
     if (segments.length === 3 && segments[0] === 'commits' && segments[1] === 'year' && /^\d{4}$/.test(segments[2])) {
       const year = segments[2];
-      const q = `author:${username} committer-date:${year}-01-01..${year}-12-31`;
-      const all = await pagedCommitSearch(q);
+      const searchQ = `author:${username} committer-date:${year}-01-01..${year}-12-31`;
+      const all = await pagedCommitSearch(searchQ);
       return res.status(200).json(all);
     }
 
+    // GET /api/github/commits/range?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
     if (segments.length === 2 && segments[0] === 'commits' && segments[1] === 'range') {
-      const startDate = String(req.query?.startDate ?? '');
-      const endDate = String(req.query?.endDate ?? '');
+      const startDate = String(q.startDate ?? '');
+      const endDate = String(q.endDate ?? '');
       if (!startDate || !endDate) {
         return res.status(400).json({ error: 'startDate and endDate are required' });
       }
-      const q = `author:${username} committer-date:${startDate}..${endDate}`;
-      const all = await pagedCommitSearch(q);
+      const searchQ = `author:${username} committer-date:${startDate}..${endDate}`;
+      const all = await pagedCommitSearch(searchQ);
       return res.status(200).json(all);
     }
 
-    return res.status(404).json({ error: 'Not found' });
+    return res.status(404).json({ error: 'Not found', segments });
   } catch (error) {
     const status = error?.response?.status ?? 500;
     const details = error?.response?.data ?? error?.message ?? 'Server error';
