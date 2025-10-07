@@ -1,10 +1,11 @@
+// CommonJS-friendly: avoid relying on ESM-only features in output
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import axios from 'axios';
+// Use require for runtime imports to be CJS-safe
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const axios = require('axios');
 
 const GITHUB_API_BASE = 'https://api.github.com';
 
-// Move reading envs inside the handler to avoid crashing at import time
-// (Vercel sometimes inlines build-time envs differently)
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   const token = process.env.GITHUB_TOKEN;
   const username = process.env.GITHUB_USERNAME;
@@ -15,7 +16,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
   }
 
-  // create axios instance after we verified envs
   const api = axios.create({
     baseURL: GITHUB_API_BASE,
     headers: {
@@ -38,7 +38,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         const resp = await api.get(`/repos/${user}/${repo.name}/languages`);
         const languages = resp.data as Record<string, number>;
         Object.entries(languages).forEach(([language, bytes]) => {
-          languageStats[language] = (languageStats[language] || 0) + bytes;
+          languageStats[language] = (languageStats[language] || 0) + (bytes as number);
         });
         await new Promise((r) => setTimeout(r, 100));
       } catch {}
@@ -108,6 +108,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(200).json(all);
     }
 
+    // /api/github/commits/year/:year
     if (segments.length === 3 && segments[0] === 'commits' && segments[1] === 'year' && /^\d{4}$/.test(segments[2])) {
       const year = segments[2];
       const q = `author:${username} committer-date:${year}-01-01..${year}-12-31`;
