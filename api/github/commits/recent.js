@@ -1,4 +1,4 @@
-const handler = require('../../[...path].js');
+const handler = require('../[...path].js');
 
 module.exports = (req, res) => {
   // Force the same shape the catch‑all expects

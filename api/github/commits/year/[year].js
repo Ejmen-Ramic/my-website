@@ -1,4 +1,4 @@
-const handler = require('../../../[...path].js');
+const handler = require('../../[...path].js');
 
 module.exports = (req, res) => {
   const year = req.query?.year || req.params?.year;
