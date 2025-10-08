@@ -25,6 +25,15 @@ async function handler(req, res) {
     timeout: 30000
   });
 
+  // ---------- Helpers ----------
+  function splitSegments(val) {
+    if (!val) return [];
+    if (Array.isArray(val)) {
+      return val.flatMap(v => String(v).split('/').filter(Boolean));
+    }
+    return String(val).split('/').filter(Boolean);
+  }
+
   async function getLanguagesForAllRepos(user) {
     const reposResponse = await api.get(`/users/${user}/repos`, {
       params: { per_page: 100, sort: 'updated', type: 'owner' }
@@ -39,8 +48,11 @@ async function handler(req, res) {
         Object.entries(languages).forEach(([language, bytes]) => {
           languageStats[language] = (languageStats[language] || 0) + bytes;
         });
+        // light throttle to be nice to API
         await new Promise((r) => setTimeout(r, 100));
-      } catch {}
+      } catch {
+        // ignore per-repo language errors
+      }
     }
     return languageStats;
   }
@@ -66,33 +78,25 @@ async function handler(req, res) {
   }
 
   try {
-    const q = req.query || {};
+    // ---------- Robust catch‑all path normalization ----------
+    // Prefer named catch‑all "path"; fallback to "...path"
+    let segments = splitSegments(req.query?.path || req.query?.['...path']);
 
-    // Robust normalization for Vercel catch-all:
-    // Accept query['...path'], query.path, or query[0]
-    // Each may be an array OR a single string "a/b/c"
-    function toSegments(v) {
-      if (!v) return [];
-      if (Array.isArray(v)) return v.flatMap((s) => String(s).split('/').filter(Boolean));
-      if (typeof v === 'string') return v.split('/').filter(Boolean);
-      return [];
-    }
-
-    let segments =
-      toSegments(q['...path']) ||
-      toSegments(q.path) ||
-      toSegments(q[0]);
-
-    if (!Array.isArray(segments) || segments.length === 0) {
-      segments = [];
+    // Final fallback: derive from req.url (portion after /api/github/)
+    if (segments.length === 0 && req?.url) {
+      const idx = req.url.indexOf('/api/github/');
+      if (idx >= 0) {
+        const tail = req.url.slice(idx + '/api/github/'.length).split('?')[0];
+        segments = splitSegments(tail);
+      }
     }
 
     // Optional debug
-    if (q.debug === '1') {
-      return res.status(200).json({ query: q, segments });
+    if (req.query?.debug === '1') {
+      return res.status(200).json({ query: req.query, url: req.url, segments });
     }
 
-    // Routes
+    // ---------- Routes ----------
 
     // GET /api/github/profile
     if (segments.length === 1 && segments[0] === 'profile') {
@@ -116,7 +120,7 @@ async function handler(req, res) {
 
     // GET /api/github/commits/recent?days=30
     if (segments.length === 2 && segments[0] === 'commits' && segments[1] === 'recent') {
-      const days = Number(q.days ?? 30);
+      const days = Number(req.query?.days ?? 30);
       const since = new Date();
       since.setDate(since.getDate() - days);
       const sinceStr = since.toISOString().split('T')[0];
@@ -135,8 +139,8 @@ async function handler(req, res) {
 
     // GET /api/github/commits/range?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
     if (segments.length === 2 && segments[0] === 'commits' && segments[1] === 'range') {
-      const startDate = String(q.startDate ?? '');
-      const endDate = String(q.endDate ?? '');
+      const startDate = String(req.query?.startDate ?? '');
+      const endDate = String(req.query?.endDate ?? '');
       if (!startDate || !endDate) {
         return res.status(400).json({ error: 'startDate and endDate are required' });
       }
@@ -159,6 +163,7 @@ async function handler(req, res) {
       return res.status(200).json(response.data ?? []);
     }
 
+    // Default
     return res.status(404).json({ error: 'Not found', segments });
   } catch (error) {
     const status = error?.response?.status ?? 500;
