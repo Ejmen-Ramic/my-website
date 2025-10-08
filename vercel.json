@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/api/github", "destination": "/api/github/profile" },
+    { "source": "/api/github/(.*)", "destination": "/api/github/$1" }
+  ]
+}
