@@ -1,9 +1,81 @@
-// api/github/[...path].js
-const axios = require('axios');
+import axios, { AxiosInstance } from 'axios';
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const GITHUB_API_BASE = 'https://api.github.com';
 
-async function handler(req, res) {
+type LanguageStats = Record<string, number>;
+
+// Normalize segments coming from various sources:
+// - JSON string produced by our shim (e.g. '["commits","recent"]')
+// - string[] from a catch‑all
+// - string like "commits/recent"
+// - undefined/null
+function readSegments(val: unknown): string[] {
+  if (!val) return [];
+
+  // If it's a JSON-encoded array (from shims), parse it
+  if (typeof val === 'string' && val.startsWith('[')) {
+    try {
+      const parsed = JSON.parse(val);
+      if (Array.isArray(parsed)) return parsed.filter(Boolean).map(String);
+    } catch {
+      // fall through to normal handling
+    }
+  }
+
+  // If it's already an array, flatten and normalize to strings
+  if (Array.isArray(val)) {
+    return (val as unknown[]).flatMap(v => String(v).split('/').filter(Boolean));
+  }
+
+  // Otherwise treat it as a string and split on '/'
+  return String(val).split('/').filter(Boolean);
+}
+
+async function getLanguagesForAllRepos(api: AxiosInstance, user: string): Promise<LanguageStats> {
+  const reposResponse = await api.get(`/users/${user}/repos`, {
+    params: { per_page: 100, sort: 'updated', type: 'owner' }
+  });
+  const repos: Array<{ name: string }> = reposResponse.data;
+
+  const languageStats: LanguageStats = {};
+  for (const repo of repos) {
+    try {
+      const resp = await api.get(`/repos/${user}/${repo.name}/languages`);
+      const languages = resp.data as Record<string, number>;
+      for (const [language, bytes] of Object.entries(languages)) {
+        languageStats[language] = (languageStats[language] || 0) + (bytes || 0);
+      }
+      // light throttle to be nice to API
+      await new Promise(r => setTimeout(r, 100));
+    } catch {
+      // ignore per-repo language errors
+    }
+  }
+  return languageStats;
+}
+
+async function pagedCommitSearch(api: AxiosInstance, q: string) {
+  let all: any[] = [];
+  let page = 1;
+  const perPage = 100;
+
+  while (page <= 10) {
+    const resp = await api.get('/search/commits', {
+      params: { q, sort: 'committer-date', order: 'desc', per_page: perPage, page },
+      headers: { Accept: 'application/vnd.github.cloak-preview+json' }
+    });
+    const items: any[] = resp.data?.items ?? [];
+    if (items.length === 0) break;
+    all = all.concat(items);
+    if (items.length < perPage) break;
+    page++;
+    await new Promise(r => setTimeout(r, 200));
+  }
+  return all;
+}
+
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   const token = process.env.GITHUB_TOKEN;
   const username = process.env.GITHUB_USERNAME;
 
@@ -25,74 +97,22 @@ async function handler(req, res) {
     timeout: 30000
   });
 
-  // ---------- Helpers ----------
-  function splitSegments(val) {
-    if (!val) return [];
-    if (Array.isArray(val)) {
-      return val.flatMap(v => String(v).split('/').filter(Boolean));
-    }
-    return String(val).split('/').filter(Boolean);
-  }
-
-  async function getLanguagesForAllRepos(user) {
-    const reposResponse = await api.get(`/users/${user}/repos`, {
-      params: { per_page: 100, sort: 'updated', type: 'owner' }
-    });
-    const repos = reposResponse.data;
-
-    const languageStats = {};
-    for (const repo of repos) {
-      try {
-        const resp = await api.get(`/repos/${user}/${repo.name}/languages`);
-        const languages = resp.data;
-        Object.entries(languages).forEach(([language, bytes]) => {
-          languageStats[language] = (languageStats[language] || 0) + bytes;
-        });
-        // light throttle to be nice to API
-        await new Promise((r) => setTimeout(r, 100));
-      } catch {
-        // ignore per-repo language errors
-      }
-    }
-    return languageStats;
-  }
-
-  async function pagedCommitSearch(q) {
-    let all = [];
-    let page = 1;
-    const perPage = 100;
-
-    while (page <= 10) {
-      const resp = await api.get('/search/commits', {
-        params: { q, sort: 'committer-date', order: 'desc', per_page: perPage, page },
-        headers: { Accept: 'application/vnd.github.cloak-preview+json' }
-      });
-      const items = resp.data?.items ?? [];
-      if (items.length === 0) break;
-      all = all.concat(items);
-      if (items.length < perPage) break;
-      page++;
-      await new Promise((r) => setTimeout(r, 200));
-    }
-    return all;
-  }
-
   try {
-    // ---------- Robust catch‑all path normalization ----------
     // Prefer named catch‑all "path"; fallback to "...path"
-    let segments = splitSegments(req.query?.path || req.query?.['...path']);
+    const q = req.query;
+    let segments = readSegments((q as any).path || (q as any)['...path']);
 
     // Final fallback: derive from req.url (portion after /api/github/)
     if (segments.length === 0 && req?.url) {
       const idx = req.url.indexOf('/api/github/');
       if (idx >= 0) {
         const tail = req.url.slice(idx + '/api/github/'.length).split('?')[0];
-        segments = splitSegments(tail);
+        segments = readSegments(tail);
       }
     }
 
     // Optional debug
-    if (req.query?.debug === '1') {
+    if ((q as any).debug === '1') {
       return res.status(200).json({ query: req.query, url: req.url, segments });
     }
 
@@ -114,38 +134,43 @@ async function handler(req, res) {
 
     // GET /api/github/languages
     if (segments.length === 1 && segments[0] === 'languages') {
-      const languageStats = await getLanguagesForAllRepos(username);
+      const languageStats = await getLanguagesForAllRepos(api, username);
       return res.status(200).json(languageStats);
     }
 
     // GET /api/github/commits/recent?days=30
     if (segments.length === 2 && segments[0] === 'commits' && segments[1] === 'recent') {
-      const days = Number(req.query?.days ?? 30);
+      const days = Number((q as any).days ?? 30);
       const since = new Date();
       since.setDate(since.getDate() - days);
       const sinceStr = since.toISOString().split('T')[0];
       const searchQ = `author:${username} committer-date:>${sinceStr}`;
-      const all = await pagedCommitSearch(searchQ);
+      const all = await pagedCommitSearch(api, searchQ);
       return res.status(200).json(all);
     }
 
     // GET /api/github/commits/year/2024
-    if (segments.length === 3 && segments[0] === 'commits' && segments[1] === 'year' && /^\d{4}$/.test(segments[2])) {
+    if (
+      segments.length === 3 &&
+      segments[0] === 'commits' &&
+      segments[1] === 'year' &&
+      /^\d{4}$/.test(segments[2])
+    ) {
       const year = segments[2];
       const searchQ = `author:${username} committer-date:${year}-01-01..${year}-12-31`;
-      const all = await pagedCommitSearch(searchQ);
+      const all = await pagedCommitSearch(api, searchQ);
       return res.status(200).json(all);
     }
 
     // GET /api/github/commits/range?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
     if (segments.length === 2 && segments[0] === 'commits' && segments[1] === 'range') {
-      const startDate = String(req.query?.startDate ?? '');
-      const endDate = String(req.query?.endDate ?? '');
+      const startDate = String((q as any).startDate ?? '');
+      const endDate = String((q as any).endDate ?? '');
       if (!startDate || !endDate) {
         return res.status(400).json({ error: 'startDate and endDate are required' });
       }
       const searchQ = `author:${username} committer-date:${startDate}..${endDate}`;
-      const all = await pagedCommitSearch(searchQ);
+      const all = await pagedCommitSearch(api, searchQ);
       return res.status(200).json(all);
     }
 
@@ -165,7 +190,7 @@ async function handler(req, res) {
 
     // Default
     return res.status(404).json({ error: 'Not found', segments });
-  } catch (error) {
+  } catch (error: any) {
     const status = error?.response?.status ?? 500;
     const details = error?.response?.data ?? error?.message ?? 'Server error';
     console.error('API error:', status, details);
@@ -176,5 +201,3 @@ async function handler(req, res) {
     });
   }
 }
-
-module.exports = handler;
