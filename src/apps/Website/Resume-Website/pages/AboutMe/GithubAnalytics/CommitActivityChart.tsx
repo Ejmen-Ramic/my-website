@@ -30,6 +30,7 @@ import {
 import { t, Trans } from '@lingui/macro';
 import { colors } from '../../../../../../shared/components/Hooks/color';
 import FilterMenu from './FilterMenu';
+import { i18n } from '@lingui/core';
 
 interface CommitActivityChartProps {
   commitActivity: { date: string; commits: number; year?: number }[];
@@ -37,9 +38,9 @@ interface CommitActivityChartProps {
 }
 
 const rangeOptions = [
-  { label: t`Last 90 days`, value: '90', type: 'range' },
-  { label: t`Last 150 days`, value: '150', type: 'range' },
-  { label: t`Full Year`, value: '365', type: 'range' },
+  { label: i18n._('Last 90 days'), value: '90', type: 'range' },
+  { label: i18n._('Last 150 days'), value: '150', type: 'range' },
+  { label: i18n._('Full Year'), value: '365', type: 'range' },
 ];
 
 const yearOptions = [
