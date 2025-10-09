@@ -1,4 +1,3 @@
-// api/github/[...path].js
 const axios = require('axios');
 
 const GITHUB_API_BASE = 'https://api.github.com';
