@@ -85,7 +85,8 @@ var express_1 = __importDefault(require("express"));
 var cors_1 = __importDefault(require("cors"));
 var axios_1 = __importDefault(require("axios"));
 var dotenv = __importStar(require("dotenv"));
-dotenv.config({ path: ".env.local" });
+dotenv.config({ path: '.env.local' });
+console.log('ENV:', !!process.env.GITHUB_USERNAME, !!process.env.GITHUB_TOKEN);
 var app = (0, express_1.default)();
 var PORT = process.env.PORT || 5000;
 app.use((0, cors_1.default)({
@@ -99,7 +100,7 @@ var GITHUB_API_BASE = 'https://api.github.com';
 var token = process.env.GITHUB_TOKEN;
 var username = process.env.GITHUB_USERNAME;
 if (!token || !username) {
-    throw new Error("Missing GITHUB_TOKEN or GITHUB_USERNAME in .env.local");
+    throw new Error('Missing GITHUB_TOKEN or GITHUB_USERNAME in .env.local');
 }
 var api = axios_1.default.create({
     baseURL: GITHUB_API_BASE,
@@ -107,8 +108,8 @@ var api = axios_1.default.create({
         Authorization: "Bearer ".concat(token),
         Accept: 'application/vnd.github+json',
         'X-GitHub-Api-Version': '2022-11-28',
-        'User-Agent': 'PricePilot-App'
-    }
+        'User-Agent': 'PricePilot-App',
+    },
 });
 app.get('/api/github/profile', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var response, error_1;
@@ -142,8 +143,8 @@ app.get('/api/github/repos', function (req, res) { return __awaiter(void 0, void
                         params: {
                             per_page: 100,
                             sort: 'updated',
-                            type: 'owner'
-                        }
+                            type: 'owner',
+                        },
                     })];
             case 1:
                 response = _b.sent();
@@ -160,18 +161,20 @@ app.get('/api/github/repos', function (req, res) { return __awaiter(void 0, void
 }); });
 app.get('/api/github/repos/:repoName/commit-activity', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var repoName, response, error_3;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
+    var _a;
+    return __generator(this, function (_b) {
+        switch (_b.label) {
             case 0:
-                _a.trys.push([0, 2, , 3]);
+                _b.trys.push([0, 2, , 3]);
                 repoName = req.params.repoName;
                 return [4 /*yield*/, api.get("/repos/".concat(username, "/").concat(repoName, "/stats/commit_activity"))];
             case 1:
-                response = _a.sent();
+                response = _b.sent();
                 res.json(response.data || []);
                 return [3 /*break*/, 3];
             case 2:
-                error_3 = _a.sent();
+                error_3 = _b.sent();
+                res.status(((_a = error_3.response) === null || _a === void 0 ? void 0 : _a.status) || 500).json({ error: error_3.message });
                 return [3 /*break*/, 3];
             case 3: return [2 /*return*/];
         }
@@ -179,18 +182,20 @@ app.get('/api/github/repos/:repoName/commit-activity', function (req, res) { ret
 }); });
 app.get('/api/github/repos/:repoName/contributors', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var repoName, response, error_4;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
+    var _a;
+    return __generator(this, function (_b) {
+        switch (_b.label) {
             case 0:
-                _a.trys.push([0, 2, , 3]);
+                _b.trys.push([0, 2, , 3]);
                 repoName = req.params.repoName;
                 return [4 /*yield*/, api.get("/repos/".concat(username, "/").concat(repoName, "/stats/contributors"))];
             case 1:
-                response = _a.sent();
+                response = _b.sent();
                 res.json(response.data || []);
                 return [3 /*break*/, 3];
             case 2:
-                error_4 = _a.sent();
+                error_4 = _b.sent();
+                res.status(((_a = error_4.response) === null || _a === void 0 ? void 0 : _a.status) || 500).json({ error: error_4.message });
                 return [3 /*break*/, 3];
             case 3: return [2 /*return*/];
         }
@@ -204,7 +209,7 @@ app.get('/api/github/languages', function (req, res) { return __awaiter(void 0, 
             case 0:
                 _b.trys.push([0, 9, , 10]);
                 return [4 /*yield*/, api.get("/users/".concat(username, "/repos"), {
-                        params: { per_page: 100, sort: 'updated', type: 'owner' }
+                        params: { per_page: 100, sort: 'updated', type: 'owner' },
                     })];
             case 1:
                 reposResponse = _b.sent();
@@ -224,7 +229,8 @@ app.get('/api/github/languages', function (req, res) { return __awaiter(void 0, 
                 languages = response.data;
                 Object.entries(languages).forEach(function (_a) {
                     var language = _a[0], bytes = _a[1];
-                    languageStats_1[language] = (languageStats_1[language] || 0) + bytes;
+                    languageStats_1[language] =
+                        (languageStats_1[language] || 0) + bytes;
                 });
                 return [4 /*yield*/, new Promise(function (resolve) { return setTimeout(resolve, 100); })];
             case 5:
@@ -267,17 +273,20 @@ app.get('/api/github/commits/recent', function (req, res) { return __awaiter(voi
                 if (!(page <= 10)) return [3 /*break*/, 4];
                 return [4 /*yield*/, api.get('/search/commits', {
                         params: {
-                            q: "author:".concat(username, " committer-date:>").concat(since.toISOString().split('T')[0]),
+                            q: "author:".concat(username, " committer-date:>").concat(since
+                                .toISOString()
+                                .split('T')[0]),
                             sort: 'committer-date',
                             order: 'desc',
                             per_page: perPage,
-                            page: page
-                        }
+                            page: page,
+                        },
+                        headers: { Accept: 'application/vnd.github.cloak-preview+json' },
                     })];
             case 2:
                 response = _b.sent();
                 commits = response.data.items;
-                if (commits.length === 0)
+                if (!commits || commits.length === 0)
                     return [3 /*break*/, 4];
                 allCommits = __spreadArray(__spreadArray([], allCommits, true), commits, true);
                 if (commits.length < perPage)
@@ -302,62 +311,14 @@ app.get('/api/github/commits/recent', function (req, res) { return __awaiter(voi
 }); });
 app.get('/api/github/commits/year/:year', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var year, startDate, endDate, allCommits, page, perPage, response, commits, error_8;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                _a.trys.push([0, 5, , 6]);
-                year = req.params.year;
-                startDate = "".concat(year, "-01-01");
-                endDate = "".concat(year, "-12-31");
-                allCommits = [];
-                page = 1;
-                perPage = 100;
-                _a.label = 1;
-            case 1:
-                if (!(page <= 10)) return [3 /*break*/, 4];
-                return [4 /*yield*/, api.get('/search/commits', {
-                        params: {
-                            q: "author:".concat(username, " committer-date:").concat(startDate, "..").concat(endDate),
-                            sort: 'committer-date',
-                            order: 'desc',
-                            per_page: perPage,
-                            page: page
-                        }
-                    })];
-            case 2:
-                response = _a.sent();
-                commits = response.data.items;
-                if (commits.length === 0)
-                    return [3 /*break*/, 4];
-                allCommits = __spreadArray(__spreadArray([], allCommits, true), commits, true);
-                if (commits.length < perPage)
-                    return [3 /*break*/, 4];
-                page++;
-                return [4 /*yield*/, new Promise(function (resolve) { return setTimeout(resolve, 200); })];
-            case 3:
-                _a.sent();
-                return [3 /*break*/, 1];
-            case 4:
-                console.log("Fetched ".concat(allCommits.length, " commits for year ").concat(year));
-                res.json(allCommits);
-                return [3 /*break*/, 6];
-            case 5:
-                error_8 = _a.sent();
-                return [3 /*break*/, 6];
-            case 6: return [2 /*return*/];
-        }
-    });
-}); });
-app.get('/api/github/commits/range', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var _a, startDate, endDate, allCommits, page, perPage, response, commits, error_9;
+    var _a;
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
                 _b.trys.push([0, 5, , 6]);
-                _a = req.query, startDate = _a.startDate, endDate = _a.endDate;
-                if (!startDate || !endDate) {
-                    return [2 /*return*/, res.status(400).json({ error: 'startDate and endDate are required' })];
-                }
+                year = req.params.year;
+                startDate = "".concat(year, "-01-01");
+                endDate = "".concat(year, "-12-31");
                 allCommits = [];
                 page = 1;
                 perPage = 100;
@@ -370,13 +331,14 @@ app.get('/api/github/commits/range', function (req, res) { return __awaiter(void
                             sort: 'committer-date',
                             order: 'desc',
                             per_page: perPage,
-                            page: page
-                        }
+                            page: page,
+                        },
+                        headers: { Accept: 'application/vnd.github.cloak-preview+json' },
                     })];
             case 2:
                 response = _b.sent();
                 commits = response.data.items;
-                if (commits.length === 0)
+                if (!commits || commits.length === 0)
                     return [3 /*break*/, 4];
                 allCommits = __spreadArray(__spreadArray([], allCommits, true), commits, true);
                 if (commits.length < perPage)
@@ -387,11 +349,64 @@ app.get('/api/github/commits/range', function (req, res) { return __awaiter(void
                 _b.sent();
                 return [3 /*break*/, 1];
             case 4:
+                console.log("Fetched ".concat(allCommits.length, " commits for year ").concat(year));
+                res.json(allCommits);
+                return [3 /*break*/, 6];
+            case 5:
+                error_8 = _b.sent();
+                res.status(((_a = error_8.response) === null || _a === void 0 ? void 0 : _a.status) || 500).json({ error: error_8.message });
+                return [3 /*break*/, 6];
+            case 6: return [2 /*return*/];
+        }
+    });
+}); });
+app.get('/api/github/commits/range', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var _a, startDate, endDate, allCommits, page, perPage, response, commits, error_9;
+    var _b;
+    return __generator(this, function (_c) {
+        switch (_c.label) {
+            case 0:
+                _c.trys.push([0, 5, , 6]);
+                _a = req.query, startDate = _a.startDate, endDate = _a.endDate;
+                if (!startDate || !endDate) {
+                    return [2 /*return*/, res.status(400).json({ error: 'startDate and endDate are required' })];
+                }
+                allCommits = [];
+                page = 1;
+                perPage = 100;
+                _c.label = 1;
+            case 1:
+                if (!(page <= 10)) return [3 /*break*/, 4];
+                return [4 /*yield*/, api.get('/search/commits', {
+                        params: {
+                            q: "author:".concat(username, " committer-date:").concat(startDate, "..").concat(endDate),
+                            sort: 'committer-date',
+                            order: 'desc',
+                            per_page: perPage,
+                            page: page,
+                        },
+                        headers: { Accept: 'application/vnd.github.cloak-preview+json' },
+                    })];
+            case 2:
+                response = _c.sent();
+                commits = response.data.items;
+                if (!commits || commits.length === 0)
+                    return [3 /*break*/, 4];
+                allCommits = __spreadArray(__spreadArray([], allCommits, true), commits, true);
+                if (commits.length < perPage)
+                    return [3 /*break*/, 4];
+                page++;
+                return [4 /*yield*/, new Promise(function (resolve) { return setTimeout(resolve, 200); })];
+            case 3:
+                _c.sent();
+                return [3 /*break*/, 1];
+            case 4:
                 console.log("Fetched ".concat(allCommits.length, " commits for date range ").concat(startDate, " to ").concat(endDate));
                 res.json(allCommits);
                 return [3 /*break*/, 6];
             case 5:
-                error_9 = _b.sent();
+                error_9 = _c.sent();
+                res.status(((_b = error_9.response) === null || _b === void 0 ? void 0 : _b.status) || 500).json({ error: error_9.message });
                 return [3 /*break*/, 6];
             case 6: return [2 /*return*/];
         }

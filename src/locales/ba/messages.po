@@ -143,9 +143,9 @@ msgstr "Sva prava zadržana."
 msgid "An error occurred while subscribing."
 msgstr "Došlo je do greške prilikom pretplate."
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:75
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:74
 msgid "An unknown error occurred"
-msgstr ""
+msgstr "Došlo je do nepoznate greške"
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/Milestone.tsx:38
 msgid "April 15, 2022 - January 15, 2023"
@@ -208,7 +208,7 @@ msgstr "Kodiranje"
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:288
 msgid "Commit Activity"
-msgstr ""
+msgstr "Aktivnost commit-a"
 
 #: src/shared/components/PageWrapper/Header/Mobile/Form.tsx:99
 msgid "Connection Error"
@@ -334,13 +334,13 @@ msgstr "Engleska Verzija"
 msgid "Enter your email"
 msgstr "Vaša email adresa"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:77
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:76
 msgid "Error fetching GitHub data:"
-msgstr ""
+msgstr "Greška pri preuzimanju GitHub podataka:"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:152
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:95
 msgid "Error:"
-msgstr ""
+msgstr "Greška:"
 
 #: src/apps/Website/Resume-Website/pages/Home/Welcome/index.tsx:90
 msgid "Explore <0>my</0><1/>limitless possibilities"
@@ -411,15 +411,15 @@ msgstr "Često postavljana pitanja"
 #: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:51
 #: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:243
 msgid "Full Year"
-msgstr ""
+msgstr "Cijela godina"
 
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/LanguageProficiency.tsx:27
 msgid "German"
 msgstr "Njemački"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:194
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:132
 msgid "GitHub Analytics Dashboard"
-msgstr ""
+msgstr "GitHub Analitička Tabla"
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:249
 msgid "Graphic Design"
@@ -659,11 +659,11 @@ msgstr "Jezici"
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:50
 msgid "Last 150 days"
-msgstr ""
+msgstr "Zadnjih 150 dana"
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:49
 msgid "Last 90 days"
-msgstr ""
+msgstr "Zadnjih 90 dana"
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/EngineeringSkills/Props.tsx:60
 msgid "Libraries"
@@ -697,9 +697,9 @@ msgstr "LifeLine, sistem za profiliranje siromaštva, ima za cilj optimizirati d
 msgid "Main Menu"
 msgstr "Glavni meni"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:156
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:99
 msgid "Make sure your GitHub token is set correctly in the .env file"
-msgstr ""
+msgstr "Provjeri da li je tvoj GitHub token ispravno postavljen u .env fajlu"
 
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/items.tsx:20
 msgid "Malaysia, Kuala Lumpur"
@@ -732,7 +732,7 @@ msgstr "Prekretnice"
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:89
 msgid "Multiple Years Selected"
-msgstr ""
+msgstr "Odabrano više godina"
 
 #: src/apps/Website/Photography-Website/Shared/Header/Mobile/index.tsx:56
 msgid "My Account"
@@ -794,7 +794,7 @@ msgstr "Jedna od mojih najvećih snaga je sposobnost <0>brzo učiti</0> i <1>pri
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:90
 msgid "Only full year data can be shown when multiple years are selected."
-msgstr ""
+msgstr "Podaci se mogu prikazati samo za cijele godine kada je odabrano više godina."
 
 #: src/apps/Website/Resume-Website/pages/Resume/LeftSide/SkillsResume/OSTable.tsx:67
 msgid "Operative System"
@@ -865,9 +865,9 @@ msgstr "Promovisan u ulogu Junior Softverskog i QA inženjera, prihvatio sam nov
 msgid "Promotion - Software & QA Engineer - Malaysia"
 msgstr "Promocija - Softverski i QA inženjer - Malezija"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:105
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:104
 msgid "Public Repos"
-msgstr ""
+msgstr "Javni repozitoriji"
 
 #: src/apps/Website/Resume-Website/pages/Home/Endorsment/TestimonialContent.tsx:87
 #~ msgid "Read less"
@@ -940,7 +940,7 @@ msgstr "Besprijekoran rješavač problema"
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/CommitActivityChart.tsx:245
 msgid "Select filters"
-msgstr ""
+msgstr "Odaberi filtere"
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:16
 #: src/apps/Website/Resume-Website/pages/AboutMe/SchoolCertificates/items.tsx:19
@@ -965,9 +965,9 @@ msgstr "Pošalji poruku"
 msgid "September 25, 2022"
 msgstr "25. Septembar 2022."
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:199
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:135
 msgid "Showcasing development <0>activity</0> and <1>project</1> statistics"
-msgstr ""
+msgstr "Prikazivanje statistike <0>aktivnosti</0> i <1>projekata</1> razvoja"
 
 #: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:101
 msgid "Sign in"
@@ -1079,17 +1079,17 @@ msgstr "da uživate u svim cool"
 msgid "Tools"
 msgstr "Alati"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:108
-msgid "Total Commits"
-msgstr ""
-
 #: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:107
-msgid "Total Forks"
-msgstr ""
+msgid "Total Commits"
+msgstr "Ukupan broj commit-a"
 
 #: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:106
+msgid "Total Forks"
+msgstr "Ukupan broj forkova"
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:105
 msgid "Total Stars"
-msgstr ""
+msgstr "Ukupan broj zvjezdica"
 
 #: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:54
 msgid "Trustworthy Expert"

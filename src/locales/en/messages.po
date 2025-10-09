@@ -156,7 +156,7 @@ msgstr "All rights reserved."
 msgid "An error occurred while subscribing."
 msgstr "An error occurred while subscribing."
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:75
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:74
 msgid "An unknown error occurred"
 msgstr "An unknown error occurred"
 
@@ -351,11 +351,11 @@ msgstr "English Version"
 msgid "Enter your email"
 msgstr "Enter your email"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:77
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:76
 msgid "Error fetching GitHub data:"
 msgstr "Error fetching GitHub data:"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:152
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:95
 msgid "Error:"
 msgstr "Error:"
 
@@ -434,7 +434,7 @@ msgstr "Full Year"
 msgid "German"
 msgstr "German"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:194
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:132
 msgid "GitHub Analytics Dashboard"
 msgstr "GitHub Analytics Dashboard"
 
@@ -714,7 +714,7 @@ msgstr "LifeLine, a Poverty Profiling System, aims to optimize donation distribu
 msgid "Main Menu"
 msgstr "Main Menu"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:156
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:99
 msgid "Make sure your GitHub token is set correctly in the .env file"
 msgstr "Make sure your GitHub token is set correctly in the .env file"
 
@@ -886,7 +886,7 @@ msgstr "Promoted to the role of Junior Software & QA Engineer, I embraced new ch
 msgid "Promotion - Software & QA Engineer - Malaysia"
 msgstr "Promotion - Software & QA Engineer - Malaysia"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:105
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:104
 msgid "Public Repos"
 msgstr "Public Repos"
 
@@ -990,7 +990,7 @@ msgstr "Send Message"
 msgid "September 25, 2022"
 msgstr "September 25, 2022"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:199
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/index.tsx:135
 msgid "Showcasing development <0>activity</0> and <1>project</1> statistics"
 msgstr "Showcasing development <0>activity</0> and <1>project</1> statistics"
 
@@ -1104,15 +1104,15 @@ msgstr "to enjoy all of the cool"
 msgid "Tools"
 msgstr "Tools"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:108
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:107
 msgid "Total Commits"
 msgstr "Total Commits"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:107
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:106
 msgid "Total Forks"
 msgstr "Total Forks"
 
-#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:106
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/useGitHubData.ts:105
 msgid "Total Stars"
 msgstr "Total Stars"
 
