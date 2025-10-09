@@ -24,7 +24,7 @@ const LanguageDistributionChart: React.FC<LanguageDistributionChartProps> = ({
   const MainBGColor = useColorModeValue(colors.gray[100], colors.gray[700]);
 
   return (
-    <Stack bg={MainBGColor} rounded={'lg'} shadow={'md'} p={6}>
+    <Stack bg={MainBGColor} rounded={'lg'} shadow={'md'} p={{ md: 6 }} py={6}>
       <Heading size={'md'} mb={4} textAlign={{ base: 'center', md: 'start' }}>
         Language Distribution
       </Heading>
