@@ -1070,6 +1070,10 @@ msgstr "Sljedeća lista često postavljanih pitanja od strane poslodavaca takođ
 msgid "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters."
 msgstr "Tabla projekata je ekskluzivni resurs za ugovorni rad. Savršena je za slobodne stručnjake, agencije i povremene radnike."
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/FilterMenu.tsx:56
+msgid "Time Ranges"
+msgstr "Vremenski rasponi"
+
 #: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:40
 msgid "to enjoy all of the cool"
 msgstr "da uživate u svim cool"
@@ -1171,6 +1175,10 @@ msgstr "Kada smo odlučili da pređemo na <0>TypeScript</0> u jednoj od firmi u 
 #: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:22
 msgid "Working with Ejmen has been a game-changer. His ability to identify, analyze, and resolve issues efficiently is remarkable. Whether it's backend optimization or creating user-friendly interfaces, his contributions consistently elevate the project."
 msgstr "Raditi s Ejmenom je bila velika promjena. Njegova sposobnost da efikasno identifikuje, analizira i rešava probleme je izuzetna. Bilo da je u pitanju optimizacija backend-a ili kreiranje korisnički prijateljskih interfejsa, njegov doprinos dosledno podiže projekat."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/FilterMenu.tsx:90
+msgid "Years"
+msgstr "Godine"
 
 #: src/shared/components/PageWrapper/Header/Mobile/Form.tsx:70
 msgid "You have been successfully subscribed to our newsletter."

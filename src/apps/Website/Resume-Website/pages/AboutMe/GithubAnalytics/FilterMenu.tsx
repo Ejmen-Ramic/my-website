@@ -12,6 +12,7 @@ import {
   Divider,
 } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
+import { Trans } from '@lingui/macro';
 
 interface FilterMenuProps {
   selectedRange: string;
@@ -50,8 +51,9 @@ const FilterMenu: React.FC<FilterMenuProps> = ({
             fontWeight={'bold'}
             color={'gray.500'}
             mb={'8px'}
+            textTransform={'uppercase'}
           >
-            TIME RANGES
+            <Trans>Time Ranges</Trans>
           </Text>
           {rangeOptions.map((opt) => (
             <MenuItem
@@ -83,8 +85,9 @@ const FilterMenu: React.FC<FilterMenuProps> = ({
             fontWeight={'bold'}
             color={'gray.500'}
             mb={'8px'}
+            textTransform={'uppercase'}
           >
-            YEARS
+            <Trans>Years</Trans>
           </Text>
           {yearOptions.map((opt) => (
             <MenuItem

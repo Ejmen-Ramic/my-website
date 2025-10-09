@@ -3,14 +3,6 @@ import {
   Box,
   Flex,
   Heading,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Button,
-  Checkbox,
-  Text,
-  Divider,
   useToast,
   useColorModeValue,
   Stack,
@@ -35,7 +27,6 @@ import {
   startOfWeek,
   startOfMonth,
 } from 'date-fns';
-import { ChevronDownIcon } from '@chakra-ui/icons';
 import { t, Trans } from '@lingui/macro';
 import { colors } from '../../../../../../shared/components/Hooks/color';
 import FilterMenu from './FilterMenu';

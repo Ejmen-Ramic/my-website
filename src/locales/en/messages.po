@@ -1095,6 +1095,10 @@ msgstr "The following list of frequently asked questions by employers that may a
 msgid "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters."
 msgstr "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters."
 
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/FilterMenu.tsx:56
+msgid "Time Ranges"
+msgstr "Time Ranges"
+
 #: src/apps/Website/Resume-Website/pages/Account/SignIn.tsx:40
 msgid "to enjoy all of the cool"
 msgstr "to enjoy all of the cool"
@@ -1192,6 +1196,10 @@ msgstr "When we decided to switch to <0>TypeScript</0> at one of the companies I
 #: src/apps/Website/Resume-Website/pages/Home/Endorsement/Props.tsx:22
 msgid "Working with Ejmen has been a game-changer. His ability to identify, analyze, and resolve issues efficiently is remarkable. Whether it's backend optimization or creating user-friendly interfaces, his contributions consistently elevate the project."
 msgstr "Working with Ejmen has been a game-changer. His ability to identify, analyze, and resolve issues efficiently is remarkable. Whether it's backend optimization or creating user-friendly interfaces, his contributions consistently elevate the project."
+
+#: src/apps/Website/Resume-Website/pages/AboutMe/GithubAnalytics/FilterMenu.tsx:90
+msgid "Years"
+msgstr "Years"
 
 #: src/shared/components/PageWrapper/Header/Mobile/Form.tsx:70
 msgid "You have been successfully subscribed to our newsletter."
