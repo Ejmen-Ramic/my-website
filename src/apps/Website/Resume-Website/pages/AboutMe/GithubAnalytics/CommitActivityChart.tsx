@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import {
   Box,
   Flex,
@@ -6,6 +6,7 @@ import {
   useToast,
   useColorModeValue,
   Stack,
+  Text,
 } from '@chakra-ui/react';
 import {
   ResponsiveContainer,
@@ -87,85 +88,91 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
     }
   }, [selectedYears.length, toast]);
 
-  const aggregateData = (data: typeof commitActivity, days: number) => {
-    if (days === 90) {
-      const aggregated: {
-        [key: string]: { date: string; commits: number; count: number };
-      } = {};
+  const aggregateData = useCallback(
+    (data: typeof commitActivity, days: number) => {
+      if (days === 90) {
+        const aggregated: Record<
+          string,
+          { date: string; commits: number; count: number }
+        > = {};
 
-      data.forEach((item) => {
-        const date = new Date(item.date);
-        const daysSinceStart = Math.floor(
-          (date.getTime() - new Date(data[0]?.date || date).getTime()) /
-            (1000 * 60 * 60 * 24)
-        );
-        const groupIndex = Math.floor(daysSinceStart / 3);
-        const groupKey = `group-${groupIndex}`;
+        data.forEach((item) => {
+          const date = new Date(item.date);
+          const daysSinceStart = Math.floor(
+            (date.getTime() - new Date(data[0]?.date || date).getTime()) /
+              (1000 * 60 * 60 * 24)
+          );
+          const groupIndex = Math.floor(daysSinceStart / 3);
+          const groupKey = `group-${groupIndex}`;
 
-        if (!aggregated[groupKey]) {
-          aggregated[groupKey] = {
-            date: format(
-              addDays(new Date(data[0]?.date || date), groupIndex * 3),
-              'yyyy-MM-dd'
-            ),
-            commits: 0,
-            count: 0,
-          };
-        }
-        aggregated[groupKey].commits += item.commits;
-        aggregated[groupKey].count += 1;
-      });
+          if (!aggregated[groupKey]) {
+            aggregated[groupKey] = {
+              date: format(
+                addDays(new Date(data[0]?.date || date), groupIndex * 3),
+                'yyyy-MM-dd'
+              ),
+              commits: 0,
+              count: 0,
+            };
+          }
+          aggregated[groupKey].commits += item.commits;
+          aggregated[groupKey].count += 1;
+        });
 
-      return Object.values(aggregated).map((item) => ({
-        date: item.date,
-        commits: item.commits,
-      }));
-    } else if (days === 150 || days === 182) {
-      const aggregated: {
-        [key: string]: { date: string; commits: number; count: number };
-      } = {};
+        return Object.values(aggregated).map((item) => ({
+          date: item.date,
+          commits: item.commits,
+        }));
+      } else if (days === 150 || days === 182) {
+        const aggregated: Record<
+          string,
+          { date: string; commits: number; count: number }
+        > = {};
 
-      data.forEach((item) => {
-        const date = new Date(item.date);
-        const weekStart = startOfWeek(date);
-        const weekKey = format(weekStart, 'yyyy-MM-dd');
+        data.forEach((item) => {
+          const date = new Date(item.date);
+          const weekStart = startOfWeek(date);
+          const weekKey = format(weekStart, 'yyyy-MM-dd');
 
-        if (!aggregated[weekKey]) {
-          aggregated[weekKey] = { date: weekKey, commits: 0, count: 0 };
-        }
-        aggregated[weekKey].commits += item.commits;
-        aggregated[weekKey].count += 1;
-      });
+          if (!aggregated[weekKey]) {
+            aggregated[weekKey] = { date: weekKey, commits: 0, count: 0 };
+          }
+          aggregated[weekKey].commits += item.commits;
+          aggregated[weekKey].count += 1;
+        });
 
-      return Object.values(aggregated).map((item) => ({
-        date: item.date,
-        commits: item.commits,
-      }));
-    } else if (days === 365) {
-      const aggregated: {
-        [key: string]: { date: string; commits: number; count: number };
-      } = {};
+        return Object.values(aggregated).map((item) => ({
+          date: item.date,
+          commits: item.commits,
+        }));
+      } else if (days === 365) {
+        const aggregated: Record<
+          string,
+          { date: string; commits: number; count: number }
+        > = {};
 
-      data.forEach((item) => {
-        const date = new Date(item.date);
-        const monthStart = startOfMonth(date);
-        const monthKey = format(monthStart, 'yyyy-MM-dd');
+        data.forEach((item) => {
+          const date = new Date(item.date);
+          const monthStart = startOfMonth(date);
+          const monthKey = format(monthStart, 'yyyy-MM-dd');
 
-        if (!aggregated[monthKey]) {
-          aggregated[monthKey] = { date: monthKey, commits: 0, count: 0 };
-        }
-        aggregated[monthKey].commits += item.commits;
-        aggregated[monthKey].count += 1;
-      });
+          if (!aggregated[monthKey]) {
+            aggregated[monthKey] = { date: monthKey, commits: 0, count: 0 };
+          }
+          aggregated[monthKey].commits += item.commits;
+          aggregated[monthKey].count += 1;
+        });
 
-      return Object.values(aggregated).map((item) => ({
-        date: item.date,
-        commits: item.commits,
-      }));
-    }
+        return Object.values(aggregated).map((item) => ({
+          date: item.date,
+          commits: item.commits,
+        }));
+      }
 
-    return data;
-  };
+      return data;
+    },
+    []
+  );
 
   const filteredData = useMemo(() => {
     const today = new Date();
@@ -196,7 +203,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
     }
 
     return baseData;
-  }, [commitActivity, selectedRange, selectedYears]);
+  }, [commitActivity, selectedRange, selectedYears, aggregateData]);
 
   const multiYearData = useMemo(() => {
     if (selectedYears.length <= 1) return filteredData;
@@ -240,7 +247,8 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       return (
-        <div
+        <Box
+          as={'div'}
           style={{
             backgroundColor: 'rgba(0, 0, 0, 0.8)',
             padding: '10px',
@@ -249,13 +257,13 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
             color: 'white',
           }}
         >
-          <p>{`Date: ${label}`}</p>
+          <Text as={'p'}>{`Date: ${label}`}</Text>
           {payload.map((entry: any, index: number) => (
-            <p key={index} style={{ color: entry.color }}>
+            <Text as={'p'} key={index} style={{ color: entry.color }}>
               {`${entry.dataKey}: ${entry.value} commits`}
-            </p>
+            </Text>
           ))}
-        </div>
+        </Box>
       );
     }
     return null;
@@ -268,7 +276,6 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
       shadow={'md'}
       py={'24px'}
       pr={'24px'}
-      pl={{ md: '24px' }}
     >
       <Flex
         justify={{ base: 'center', md: 'space-between' }}
@@ -347,6 +354,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
           </LineChart>
         )}
       </ResponsiveContainer>
+
       <Box pl={'24px'} display={{ base: 'block', md: 'none' }}>
         <FilterMenu
           selectedRange={selectedRange}
