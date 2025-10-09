@@ -7,6 +7,7 @@ import {
   useColorModeValue,
   Stack,
   Text,
+  IconButton,
 } from '@chakra-ui/react';
 import {
   ResponsiveContainer,
@@ -32,6 +33,7 @@ import { t, Trans } from '@lingui/macro';
 import { colors } from '../../../../../../shared/components/Hooks/color';
 import FilterMenu from './FilterMenu';
 import { i18n } from '@lingui/core';
+import { BiCollapseAlt, BiExpandAlt } from 'react-icons/bi';
 
 interface CommitActivityChartProps {
   commitActivity: { date: string; commits: number; year?: number }[];
@@ -57,6 +59,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
 
   const [selectedRange, setSelectedRange] = useState<string>('365');
   const [selectedYears, setSelectedYears] = useState<string[]>(['2025']);
+  const [isHorizontal, setIsHorizontal] = useState(false);
   const toast = useToast();
 
   const handleRangeSelect = (value: string) => {
@@ -229,7 +232,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
   const chartData = isMultiYear ? multiYearData : filteredData;
 
   const getMenuButtonText = () => {
-    const parts = [];
+    const parts: string[] = [];
     if (selectedYears.length > 0) {
       parts.push(selectedYears.join(', '));
     }
@@ -299,19 +302,34 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
         </Box>
       </Flex>
 
-      <ResponsiveContainer width={'100%'} height={300}>
+      <ResponsiveContainer width={'100%'} height={isHorizontal ? 500 : 300}>
         {!isMultiYear ? (
-          <AreaChart data={chartData}>
+          <AreaChart
+            data={chartData}
+            layout={isHorizontal ? 'vertical' : 'horizontal'}
+          >
             <CartesianGrid strokeDasharray={'3 3'} />
             <XAxis
-              dataKey={'date'}
-              tickFormatter={(date: string) => format(new Date(date), 'MMM dd')}
+              type={isHorizontal ? 'number' : 'category'}
+              dataKey={isHorizontal ? 'commits' : 'date'}
+              tickFormatter={
+                isHorizontal
+                  ? undefined
+                  : (date: string) => format(new Date(date), 'MMM dd')
+              }
               tick={{ fill: graphColor, fontSize: 14 }}
               axisLine={{ stroke: graphColor }}
             />
             <YAxis
+              type={isHorizontal ? 'category' : 'number'}
+              dataKey={isHorizontal ? 'date' : undefined}
+              tickFormatter={
+                isHorizontal
+                  ? (date: string) => format(new Date(date), 'MMM dd')
+                  : undefined
+              }
               tick={{ fill: graphColor, fontSize: 14 }}
-              domain={[0, 'dataMax']}
+              domain={isHorizontal ? undefined : [0, 'dataMax']}
             />
             <Tooltip
               labelFormatter={(date: string) =>
@@ -328,16 +346,22 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
             />
           </AreaChart>
         ) : (
-          <LineChart data={chartData}>
+          <LineChart
+            data={chartData}
+            layout={isHorizontal ? 'vertical' : 'horizontal'}
+          >
             <CartesianGrid strokeDasharray={'3 3'} />
             <XAxis
-              dataKey={'date'}
+              type={isHorizontal ? 'number' : 'category'}
+              dataKey={isHorizontal ? undefined : 'date'}
               tick={{ fill: graphColor, fontSize: 14 }}
               axisLine={{ stroke: graphColor }}
             />
             <YAxis
+              type={isHorizontal ? 'category' : 'number'}
+              dataKey={isHorizontal ? 'date' : undefined}
               tick={{ fill: graphColor, fontSize: 14 }}
-              domain={[0, 'dataMax']}
+              domain={isHorizontal ? undefined : [0, 'dataMax']}
             />
             <Tooltip content={<CustomTooltip />} />
             <Legend />
@@ -356,15 +380,34 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
       </ResponsiveContainer>
 
       <Box pl={'24px'} display={{ base: 'block', md: 'none' }}>
-        <FilterMenu
-          selectedRange={selectedRange}
-          selectedYears={selectedYears}
-          rangeOptions={rangeOptions}
-          yearOptions={yearOptions}
-          getMenuButtonText={getMenuButtonText}
-          handleRangeSelect={handleRangeSelect}
-          handleYearSelect={handleYearSelect}
-        />
+        <Flex align={'center'} gap={2}>
+          <Box flex={'1'}>
+            <FilterMenu
+              selectedRange={selectedRange}
+              selectedYears={selectedYears}
+              rangeOptions={rangeOptions}
+              yearOptions={yearOptions}
+              getMenuButtonText={getMenuButtonText}
+              handleRangeSelect={handleRangeSelect}
+              handleYearSelect={handleYearSelect}
+            />
+          </Box>
+          <IconButton
+            aria-label={isHorizontal ? 'Collapse' : 'Expand'}
+            icon={isHorizontal ? <BiCollapseAlt /> : <BiExpandAlt />}
+            onClick={() => setIsHorizontal((v) => !v)}
+            maxHeight={'32px'}
+            maxW={'20px'}
+            borderRadius={'md'}
+            variant={'outline'}
+            bg={useColorModeValue('gray.100', 'gray.700')}
+            borderColor={useColorModeValue('gray.300', 'gray.500')}
+            color={useColorModeValue('gray.800', 'gray.100')}
+            _active={{
+              bg: useColorModeValue('gray.300', 'gray.600'),
+            }}
+          />
+        </Flex>
       </Box>
     </Stack>
   );
