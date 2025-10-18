@@ -52,7 +52,7 @@ const Test: FC = () => {
       {canEnter !== null && <Text>{canEnter ? 'Yes' : 'No'}</Text>}
 
       <Button onClick={handleRest} color={'red'}>
-        Reset
+        Resett
       </Button>
     </Stack>
   );
