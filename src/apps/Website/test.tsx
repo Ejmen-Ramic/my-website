@@ -7,28 +7,21 @@ import {
   Switch,
   Text,
 } from '@chakra-ui/react';
+import { set } from 'date-fns';
 import { FC, useState } from 'react';
 import { isatty } from 'tty';
 
 const Test: FC = () => {
-  const [age, setAge] = useState<number>(0);
-  const [hasTicket, setHasTicket] = useState<boolean>(false);
-  const [isAdmin, setIsAdmin] = useState<boolean>(false);
+  const [username, setUsername] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
   const [canEnter, setCanEnter] = useState<boolean | null>(null);
-  // const handleCheckAccess = () => {
-  //   const accessGranted = isAdmin || (age >= 21 && hasTicket);
-  //   setCanEnter(accessGranted);
-  // };
-
-  const handleCheckAccess = () => {
-    const accessGranted = isAdmin || (age >= 21 && hasTicket);
+  const correctCredentials = () => {
+    const accessGranted = username === 'Ejmen' && password === '12345';
     setCanEnter(accessGranted);
   };
-
-  const handleRest = () => {
-    setAge(0);
-    setHasTicket(false);
-    setIsAdmin(false);
+  const hardReset = () => {
+    setUsername('');
+    setPassword('');
     setCanEnter(null);
   };
   return (
@@ -39,21 +32,22 @@ const Test: FC = () => {
       alignItems={'center'}
       justifyContent={'center'}
     >
-      <Input value={age} onChange={(e) => setAge(Number(e.target.value))} />
-      <Switch
-        isChecked={hasTicket}
-        onChange={(e) => setHasTicket(e.target.checked)}
+      <Input
+        type={'text'}
+        placeholder={'Username'}
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
       />
-      <Switch
-        isChecked={isAdmin}
-        onChange={(e) => setIsAdmin(e.target.checked)}
+      <Input
+        placeholder={'Password'}
+        type={'password'}
+        onChange={(e) => setPassword(e.target.value)}
       />
-      <Button onClick={handleCheckAccess}>Check Result</Button>
-      {canEnter !== null && <Text>{canEnter ? 'Yes' : 'No'}</Text>}
 
-      <Button onClick={handleRest} color={'red'}>
-        Resett
-      </Button>
+      <Button onClick={correctCredentials}>Login</Button>
+      {canEnter === true && <Text>Access Granted</Text>}
+      {canEnter === false && <Text>Access Denied</Text>}
+      <Button onClick={hardReset}>Reset</Button>
     </Stack>
   );
 };
