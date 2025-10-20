@@ -46,7 +46,7 @@ const Test: FC = () => {
 
       <Button onClick={correctCredentials}>Login</Button>
       {canEnter === true && <Text>Access Granted</Text>}
-      {canEnter === false && <Text>Access Denied</Text>}
+      {canEnter === false && <Text>Accesss Denied</Text>}
       <Button onClick={hardReset}>Reset</Button>
     </Stack>
   );
