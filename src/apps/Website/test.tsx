@@ -2,52 +2,64 @@ import {
   Button,
   FormLabel,
   HStack,
+  IconButton,
   Input,
   Stack,
   Switch,
   Text,
 } from '@chakra-ui/react';
-import { set } from 'date-fns';
-import { FC, useState } from 'react';
-import { isatty } from 'tty';
+import { useState } from 'react';
+import { FaRegTrashAlt } from 'react-icons/fa';
 
-const Test: FC = () => {
-  const [username, setUsername] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-  const [canEnter, setCanEnter] = useState<boolean | null>(null);
-  const correctCredentials = () => {
-    const accessGranted = username === 'Ejmen' && password === '12345';
-    setCanEnter(accessGranted);
+const Test = () => {
+  const [task, setTask] = useState<string>('');
+  const [tasks, setTasks] = useState<string[]>([]);
+
+  const addTasks = () => {
+    if (task.trim() === '') return;
+    setTasks([...tasks, task]);
+    setTask('');
   };
-  const hardReset = () => {
-    setUsername('');
-    setPassword('');
-    setCanEnter(null);
+
+  const deleteTask = (indexToDelete: number) => {
+    const filteredTask = tasks.filter((_, index) => index !== indexToDelete);
+    setTasks(filteredTask);
   };
   return (
     <Stack
-      w={'full'}
-      h={'100vh'}
-      gap={'10px'}
-      alignItems={'center'}
-      justifyContent={'center'}
+      w='full'
+      h='100vh'
+      alignItems='center'
+      justifyContent='center'
+      gap={3}
     >
-      <Input
-        type={'text'}
-        placeholder={'Username'}
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <Input
-        placeholder={'Password'}
-        type={'password'}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-
-      <Button onClick={correctCredentials}>Login</Button>
-      {canEnter === true && <Text>Access Granted</Text>}
-      {canEnter === false && <Text>Accesss Denied</Text>}
-      <Button onClick={hardReset}>Reset</Button>
+      <Input value={task} onChange={(e) => setTask(e.target.value)} />
+      <Button onClick={addTasks}>Add Task</Button>
+      {tasks.length === 0 ? (
+        <Text color='gray.500' textAlign='center'>
+          No tasks added yet
+        </Text>
+      ) : (
+        tasks.map((item, index) => (
+          <HStack>
+            <Text
+              key={index}
+              p={2}
+              borderWidth='1px'
+              borderRadius='md'
+              bg='gray.700'
+              color='white'
+            >
+              {item}
+            </Text>
+            <IconButton
+              aria-label={'Delete'}
+              icon={<FaRegTrashAlt />}
+              onClick={() => deleteTask(index)}
+            />
+          </HStack>
+        ))
+      )}
     </Stack>
   );
 };
