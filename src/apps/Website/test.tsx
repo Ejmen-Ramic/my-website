@@ -7,24 +7,43 @@ import {
   Stack,
   Switch,
   Text,
+  VStack,
 } from '@chakra-ui/react';
 import { useState } from 'react';
-import { FaRegTrashAlt } from 'react-icons/fa';
+import { FaEdit, FaRegTrashAlt } from 'react-icons/fa';
 
 const Test = () => {
-  const [task, setTask] = useState<string>('');
-  const [tasks, setTasks] = useState<string[]>([]);
+  const [addItem, setAddItem] = useState<string>('');
+  const [addItems, setAddItems] = useState<string[]>([]);
+  const [editingIndex, setEditingIndex] = useState<number | null>(null);
 
-  const addTasks = () => {
-    if (task.trim() === '') return;
-    setTasks([...tasks, task]);
-    setTask('');
+  const handleAddItem = () => {
+    if (addItem.trim() === '') return;
+    if (editingIndex !== null) {
+      const updateTasks = [...addItems];
+      updateTasks[editingIndex] = addItem;
+      setAddItems(updateTasks);
+      setEditingIndex(null);
+    } else {
+      setAddItems([...addItems, addItem]);
+    }
+    setAddItem('');
   };
 
-  const deleteTask = (indexToDelete: number) => {
-    const filteredTask = tasks.filter((_, index) => index !== indexToDelete);
-    setTasks(filteredTask);
+  const handleDeleteItem = (indexToDelete: number) => {
+    const deleteItem = addItems.filter((_, index) => index !== indexToDelete);
+    setAddItems(deleteItem);
   };
+
+  const handleEditTask = (index: number) => {
+    setAddItem(addItems[index]);
+    setEditingIndex(index);
+  };
+
+  const handleClearAll = () => {
+    setAddItems([]);
+  };
+
   return (
     <Stack
       w='full'
@@ -33,33 +52,38 @@ const Test = () => {
       justifyContent='center'
       gap={3}
     >
-      <Input value={task} onChange={(e) => setTask(e.target.value)} />
-      <Button onClick={addTasks}>Add Task</Button>
-      {tasks.length === 0 ? (
-        <Text color='gray.500' textAlign='center'>
-          No tasks added yet
-        </Text>
-      ) : (
-        tasks.map((item, index) => (
-          <HStack>
-            <Text
-              key={index}
-              p={2}
-              borderWidth='1px'
-              borderRadius='md'
-              bg='gray.700'
-              color='white'
-            >
-              {item}
-            </Text>
-            <IconButton
-              aria-label={'Delete'}
-              icon={<FaRegTrashAlt />}
-              onClick={() => deleteTask(index)}
-            />
-          </HStack>
-        ))
-      )}
+      <Input
+        placeholder={'type shopping item'}
+        value={addItem}
+        onChange={(e) => setAddItem(e.target.value)}
+      />
+      <HStack>
+        <Button onClick={handleAddItem}>
+          {editingIndex !== null ? 'Update Task' : 'Add Task'}
+        </Button>
+        <Button colorScheme='red' onClick={handleClearAll}>
+          Clear All
+        </Button>
+      </HStack>
+      <Text>Amount of movies added: {addItems.length} </Text>
+
+      {addItems.map((item, index) => (
+        <HStack key={index} gap={10}>
+          <Text w={'auto'} h={'50px'} p={'10px'} color={'white'}>
+            {item}
+          </Text>
+          <IconButton
+            aria-label='Edit'
+            icon={<FaEdit />}
+            onClick={() => handleEditTask(index)}
+          />
+          <IconButton
+            aria-label='delete item'
+            icon={<FaRegTrashAlt />}
+            onClick={() => handleDeleteItem(index)}
+          />
+        </HStack>
+      ))}
     </Stack>
   );
 };
