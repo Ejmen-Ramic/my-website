@@ -62,7 +62,7 @@ const Test = () => {
           {editingIndex !== null ? 'Update Task' : 'Add Task'}
         </Button>
         <Button colorScheme='red' onClick={handleClearAll}>
-          Clear Al
+          Clear All
         </Button>
       </HStack>
       <Text>Amount of movies added: {addItems.length} </Text>
