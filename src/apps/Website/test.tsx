@@ -1,91 +1,29 @@
-import {
-  Button,
-  FormLabel,
-  HStack,
-  IconButton,
-  Input,
-  Stack,
-  Switch,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
-import { useState } from 'react';
-import { FaEdit, FaRegTrashAlt } from 'react-icons/fa';
+import { Box, VStack, Text } from '@chakra-ui/react';
+import { todo } from 'node:test';
+import { FC } from 'react';
 
-const Test = () => {
-  const [addItem, setAddItem] = useState<string>('');
-  const [addItems, setAddItems] = useState<string[]>([]);
-  const [editingIndex, setEditingIndex] = useState<number | null>(null);
+type Todo = {
+  id: number;
+  text: string;
+  done: boolean;
+};
 
-  const handleAddItem = () => {
-    if (addItem.trim() === '') return;
-    if (editingIndex !== null) {
-      const updateTasks = [...addItems];
-      updateTasks[editingIndex] = addItem;
-      setAddItems(updateTasks);
-      setEditingIndex(null);
-    } else {
-      setAddItems([...addItems, addItem]);
-    }
-    setAddItem('');
-  };
+type TodoListProp = {
+  todos: Todo[];
+};
 
-  const handleDeleteItem = (indexToDelete: number) => {
-    const deleteItem = addItems.filter((_, index) => index !== indexToDelete);
-    setAddItems(deleteItem);
-  };
-
-  const handleEditTask = (index: number) => {
-    setAddItem(addItems[index]);
-    setEditingIndex(index);
-  };
-
-  const handleClearAll = () => {
-    setAddItems([]);
-  };
-
+const TodoList: FC<TodoListProp> = ({ todos }) => {
   return (
-    <Stack
-      w='full'
-      h='100vh'
-      alignItems='center'
-      justifyContent='center'
-      gap={3}
-    >
-      <Input
-        placeholder={'type shopping item'}
-        value={addItem}
-        onChange={(e) => setAddItem(e.target.value)}
-      />
-      <HStack>
-        <Button onClick={handleAddItem}>
-          {editingIndex !== null ? 'Update Task' : 'Add Task'}
-        </Button>
-        <Button colorScheme='red' onClick={handleClearAll}>
-          Clear Al
-        </Button>
-      </HStack>
-      <Text>Amount of movies added: {addItems.length} </Text>
-
-      {addItems.map((item, index) => (
-        <HStack key={index} gap={10}>
-          <Text w={'auto'} h={'50px'} p={'10px'} color={'white'}>
-            {item}
+    <VStack align={'start'}>
+      {todos.map((todo) => (
+        <Box key={todo.id}>
+          <Text>
+            {todo.text} - {todo.done ? 'Done' : 'Pending'}
           </Text>
-          <IconButton
-            aria-label='Edit'
-            icon={<FaEdit />}
-            onClick={() => handleEditTask(index)}
-          />
-          <IconButton
-            aria-label='delete item'
-            icon={<FaRegTrashAlt />}
-            onClick={() => handleDeleteItem(index)}
-          />
-        </HStack>
+        </Box>
       ))}
-    </Stack>
+    </VStack>
   );
 };
 
-export default Test;
+export default TodoList;
