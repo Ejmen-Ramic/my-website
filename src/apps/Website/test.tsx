@@ -18,7 +18,7 @@ const TodoList: FC<TodoListProp> = ({ todos }) => {
       {todos.map((todo) => (
         <Box key={todo.id}>
           <Text>
-            {todo.text} - {todo.done ? 'Done' : 'Pending'}
+            {todo.text} - {todo.done ? 'Done' : 'Pendings'}
           </Text>
         </Box>
       ))}
