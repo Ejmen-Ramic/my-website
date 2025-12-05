@@ -1,29 +1,17 @@
-import { Box, VStack, Text } from '@chakra-ui/react';
-import { todo } from 'node:test';
-import { FC } from 'react';
+import { Button, Text, VStack } from '@chakra-ui/react';
 
-type Todo = {
-  id: number;
-  text: string;
-  done: boolean;
+type ButtonProps = {
+  label: string;
+  onClick?: () => void;
 };
 
-type TodoListProp = {
-  todos: Todo[];
-};
-
-const TodoList: FC<TodoListProp> = ({ todos }) => {
+const Test = ({ label, onClick }: ButtonProps) => {
   return (
-    <VStack align={'start'}>
-      {todos.map((todo) => (
-        <Box key={todo.id}>
-          <Text>
-            {todo.text} - {todo.done ? 'Done' : 'Pendings'}
-          </Text>
-        </Box>
-      ))}
+    <VStack>
+      <Button onClick={onClick}>{label}</Button>
+      <Text>t</Text>
     </VStack>
   );
 };
 
-export default TodoList;
+export default Test;
