@@ -9,7 +9,7 @@ const Test = ({ label, onClick }: ButtonProps) => {
   return (
     <VStack>
       <Button onClick={onClick}>{label}</Button>
-      <Text>t</Text>
+      <Text></Text>
     </VStack>
   );
 };
