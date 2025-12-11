@@ -1,16 +1,18 @@
-import { Button, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Input, Stack, Text } from '@chakra-ui/react';
+import { useState } from 'react';
 
-type ButtonProps = {
-  label: string;
-  onClick?: () => void;
-};
+const Test = () => {
+  const [text, setText] = useState<string>('');
 
-const Test = ({ label, onClick }: ButtonProps) => {
+  const handleSubmit = (e: React.FormEvent): void => {
+    e.preventDefault();
+    console.log(text);
+  };
   return (
-    <VStack>
-      <Button onClick={onClick}>{label}</Button>
-      <Text></Text>
-    </VStack>
+    <Box as='form'>
+      <Input value={text} onChange={(e) => setText(e.target.value)} />
+      <Button onClick={handleSubmit}>Submit</Button>
+    </Box>
   );
 };
 
