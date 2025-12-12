@@ -11,7 +11,7 @@ const Test = () => {
   return (
     <Box as='form'>
       <Input value={text} onChange={(e) => setText(e.target.value)} />
-      <Button onClick={handleSubmit}>Submit</Button>
+      <Button onClick={handleSubmit}>Sub</Button>
     </Box>
   );
 };
