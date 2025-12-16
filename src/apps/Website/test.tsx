@@ -1,17 +1,22 @@
-import { Box, Button, Input, Stack, Text } from '@chakra-ui/react';
-import { useState } from 'react';
+import { Box, Button, Text } from '@chakra-ui/react';
+import { FC } from 'react';
 
-const Test = () => {
-  const [text, setText] = useState<string>('');
+type User = {
+  name: string;
+  age: number;
+};
 
-  const handleSubmit = (e: React.FormEvent): void => {
-    e.preventDefault();
-    console.log(text);
-  };
+type TestProps = {
+  users: User[];
+};
+const Test: FC<TestProps> = ({ users }) => {
   return (
-    <Box as='form'>
-      <Input value={text} onChange={(e) => setText(e.target.value)} />
-      <Button onClick={handleSubmit}>Sub</Button>
+    <Box>
+      {users.map((user, index) => (
+        <Text p='4' border='1px solid black' key={index}>
+          Name: {user.name} | Age: {user.age}
+        </Text>
+      ))}
     </Box>
   );
 };
