@@ -14,7 +14,7 @@ const Test: FC<TestProps> = ({ users }) => {
     <Box>
       {users.map((user, index) => (
         <Text p='4' border='1px solid black' key={index}>
-          Name: {user.name} | Age: {user.age}
+          Names: {user.name} | Ages: {user.age}
         </Text>
       ))}
     </Box>
