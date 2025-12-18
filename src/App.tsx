@@ -98,7 +98,7 @@ const App: React.FC = () => {
             <Route path={'/hobbies'} element={<Hobbies />} />
             <Route path={'/resume'} element={<Resume />} />
             <Route path={'/contact'} element={<ContactPage />} />
-            <Route path={'/test'} element={<Test users={[]} />} />
+            <Route path={'/test'} element={<Test />} />
             <Route path={'/signin'} element={<SignIn />} />
             <Route path={'/signup'} element={<SignUp />} />
             <Route path={'/passwordreset'} element={<ForgotPassword />} />

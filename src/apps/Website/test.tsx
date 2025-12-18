@@ -1,23 +1,45 @@
-import { Box, Button, Text } from '@chakra-ui/react';
-import { FC } from 'react';
+import { Input, VStack, Text } from '@chakra-ui/react';
+import { useState } from 'react';
 
-type User = {
-  name: string;
-  age: number;
-};
+const Test = () => {
+  const [address, setAddress] = useState({
+    street: '',
+    city: '',
+    zip: '',
+  });
 
-type TestProps = {
-  users: User[];
-};
-const Test: FC<TestProps> = ({ users }) => {
+  const handleAddress = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+
+    setAddress({
+      ...address,
+      [name]: value,
+    });
+  };
+
   return (
-    <Box>
-      {users.map((user, index) => (
-        <Text p='4' border='1px solid black' key={index}>
-          Names: {user.name} | Ages: {user.age}
-        </Text>
-      ))}
-    </Box>
+    <VStack>
+      <Input
+        name={'street'}
+        placeholder={'Type street'}
+        value={address.street}
+        onChange={handleAddress}
+      />
+      <Input
+        name={'city'}
+        placeholder={'Type city'}
+        value={address.city}
+        onChange={handleAddress}
+      />
+      <Input
+        name={'zip'}
+        placeholder={'Type zip'}
+        value={address.zip}
+        onChange={handleAddress}
+      />
+
+      <Text></Text>
+    </VStack>
   );
 };
 
