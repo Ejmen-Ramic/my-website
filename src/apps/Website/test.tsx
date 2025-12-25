@@ -1,26 +1,32 @@
-import { Box, Radio, RadioGroup, Stack, Text } from '@chakra-ui/react';
+import {
+  Button,
+  Checkbox,
+  CheckboxGroup,
+  Input,
+  Radio,
+  RadioGroup,
+  Stack,
+  VStack,
+  Text,
+  Box,
+  HStack,
+  Switch,
+} from '@chakra-ui/react';
 import { useState } from 'react';
 
 const Test = () => {
-  const [color, setColor] = useState<string>('');
-
-  const handleColor = (value: string) => {
-    setColor(value);
+  const [isOnline, setIsOnline] = useState(false);
+  const handleSwitch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setIsOnline(e.target.checked);
   };
-  return (
-    <Stack>
-      <RadioGroup value={color} onChange={handleColor}>
-        <Radio>Red</Radio>
-        <Radio>Blue</Radio>
-        <Radio>Green</Radio>
-      </RadioGroup>
 
-      <Box>
-        <Text>
-          {color ? `Selected color: ${color}` : 'No color has been selected'}
-        </Text>
-      </Box>
-    </Stack>
+  return (
+    <VStack gap={'20px'}>
+      <Switch onChange={handleSwitch} color={isOnline ? 'green' : 'red'}>
+        {isOnline ? 'Go online' : 'Go offline'}
+      </Switch>
+      <Text>{isOnline ? 'User is online' : 'User is offline'}</Text>
+    </VStack>
   );
 };
 
