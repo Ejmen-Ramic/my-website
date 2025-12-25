@@ -1,32 +1,30 @@
-import {
-  Button,
-  Checkbox,
-  CheckboxGroup,
-  Input,
-  Radio,
-  RadioGroup,
-  Stack,
-  VStack,
-  Text,
-  Box,
-  HStack,
-  Switch,
-} from '@chakra-ui/react';
-import { useState } from 'react';
+import { Button, Input, Stack, Text } from '@chakra-ui/react';
+import { time } from 'console';
+import { useEffect, useState } from 'react';
 
 const Test = () => {
-  const [isOnline, setIsOnline] = useState(false);
-  const handleSwitch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setIsOnline(e.target.checked);
+  const [isSaving, setIsSaving] = useState(false);
+
+  const handleSave = () => {
+    setIsSaving(true);
   };
 
+  useEffect(() => {
+    if (!isSaving) return;
+    const timer = setTimeout(() => {
+      setIsSaving(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [isSaving]);
+
   return (
-    <VStack gap={'20px'}>
-      <Switch onChange={handleSwitch} color={isOnline ? 'green' : 'red'}>
-        {isOnline ? 'Go online' : 'Go offline'}
-      </Switch>
-      <Text>{isOnline ? 'User is online' : 'User is offline'}</Text>
-    </VStack>
+    <Stack>
+      <Input placeholder='type your email' />
+      <Button onClick={handleSave} isLoading={isSaving}>
+        Subscribe
+      </Button>
+      {isSaving && <Text>Subscribed successfully ✅</Text>}
+    </Stack>
   );
 };
 
