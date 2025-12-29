@@ -5,7 +5,6 @@ import {
   Select,
   VStack,
   Text,
-  Toast,
   useToast,
 } from '@chakra-ui/react';
 import { useState } from 'react';
@@ -18,6 +17,7 @@ const Test = () => {
   });
 
   const toast = useToast();
+
   const handleForm = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -26,6 +26,7 @@ const Test = () => {
       ...prev,
       [name]: value,
     }));
+
     if (name === 'frequency' && value === 'daily') {
       toast({
         title: 'Heads up!',
@@ -46,21 +47,22 @@ const Test = () => {
   };
 
   const canSubscribe =
-    form.email.trim() !== '' && form.frequency === '' && form.agree;
+    form.email.trim() !== '' && form.frequency !== '' && form.agree;
 
   return (
     <VStack>
       <Input name='email' value={form.email} onChange={handleForm} />
       <Select name='frequency' value={form.frequency} onChange={handleForm}>
-        <option value={'daily'}>Daily</option>
-        <option value={'weekly'}>Weekly</option>
-        <option value={'monthly'}>Monthly</option>
+        <option value='daily'>Daily</option>
+        <option value='weekly'>Weekly</option>
+        <option value='monthly'>Monthly</option>
       </Select>
       <Checkbox isChecked={form.agree} onChange={handleCheck}>
         I agree to receive emails
       </Checkbox>
 
-      <Button disabled={canSubscribe}>Subscribe</Button>
+      {/* disable when cannot subscribe */}
+      <Button disabled={!canSubscribe}>Subscribe</Button>
 
       <Text color={canSubscribe ? 'green' : 'red'}>
         {canSubscribe ? 'Granted' : 'Not granted'}
