@@ -1,7 +1,7 @@
 import { Stack } from '@chakra-ui/react';
 
 const Test = () => {
-  return <Stack>test</Stack>;
+  return <Stack>tests</Stack>;
 };
 
 export default Test;
