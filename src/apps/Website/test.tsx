@@ -62,7 +62,7 @@ const Test = () => {
     <VStack>
       <Input name={'name'} value={form.name} onChange={handleForm} />
       <Select name={'theme'} value={form.theme} onChange={handleForm}>
-        <option value={'light'}>Light</option>
+        <option value={'light'}>Lights</option>
         <option value={'dark'}>Dark</option>
       </Select>
       <Checkbox isChecked={form.emailNotification} onChange={handleCheck}>
