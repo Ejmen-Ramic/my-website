@@ -12,7 +12,7 @@ import {
 import { useEffect, useState } from 'react';
 
 const Test = () => {
-  return <VStack>Test</VStack>;
+  return <VStack>Tests</VStack>;
 };
 
 export default Test;
