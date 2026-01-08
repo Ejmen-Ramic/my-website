@@ -12,35 +12,30 @@ import {
 import { useEffect, useState } from 'react';
 
 const Test = () => {
-  const [form, setForm] = useState({
-    username: '',
-  });
-
-  const handleForm = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const [form, setForm] = useState({ role: '', name: '' });
+  const handleForm = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
-
-    setForm((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
-
-  const canSubmit = form.username.trim() !== '';
-
+  const canSubmit = form.name.trim() !== '' && form.role !== 'guest';
   return (
     <VStack>
-      <Input
-        name='username'
-        placeholder={'username'}
-        value={form.username}
-        onChange={handleForm}
-      />
-      <Button isDisabled={!canSubmit}>Submit</Button>
+      {' '}
+      <Select name='role' value={form.role} onChange={handleForm}>
+        {' '}
+        <option value={'user'}>User</option>{' '}
+        <option value={'admin'}>Admin</option>{' '}
+        <option value={'guest'}>Guest</option>{' '}
+      </Select>{' '}
+      <Input name='name' value={form.name} onChange={handleForm} />{' '}
+      <Button isDisabled={!canSubmit}>Submit</Button>{' '}
       <Text color={canSubmit ? 'green' : 'red'}>
-        {canSubmit ? 'Ready' : 'Not Ready'}
-      </Text>
+        {' '}
+        {canSubmit ? 'Access Granted' : 'Access Denied'}{' '}
+      </Text>{' '}
     </VStack>
   );
 };
-
 export default Test;
