@@ -12,25 +12,45 @@ import {
 import { useEffect, useState } from 'react';
 
 const Test = () => {
-  const form = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    subscribed: false,
-    country: '',
+  const [form, setForm] = useState({
+    username: '',
+    acceptedTerms: false,
+  });
+
+  const handleForm = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
-  const canSubmit =
-    form.firstName.trim() !== '' &&
-    form.lastName.trim() !== '' &&
-    form.email.includes('@') &&
-    form.password.length >= 8 &&
-    form.confirmPassword === form.password &&
-    form.subscribed &&
-    (form.country === 'USA' || form.country === 'Canada');
+  const handleCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = e.target;
 
-  return <VStack></VStack>;
+    setForm((prev) => ({
+      ...prev,
+      [name]: checked,
+    }));
+  };
+
+  const canSubmit = form.username.trim() !== '' && form.acceptedTerms;
+
+  return (
+    <VStack>
+      <Input
+        name={'username'}
+        value={form.username}
+        onChange={handleForm}
+        placeholder={'type username'}
+      />
+      <Checkbox
+        name={'acceptedTerms'}
+        isChecked={form.acceptedTerms}
+        onChange={handleCheck}
+      />
+      <Button isDisabled={!canSubmit}>Submit</Button>
+    </VStack>
+  );
 };
 export default Test;
