@@ -49,7 +49,7 @@ const Test = () => {
         isChecked={form.acceptedTerms}
         onChange={handleCheck}
       />
-      <Button isDisabled={!canSubmit}>Submit</Button>
+      <Button isDisabled={!canSubmit}>Sub</Button>
     </VStack>
   );
 };
