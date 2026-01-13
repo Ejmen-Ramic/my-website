@@ -20,6 +20,7 @@ const Test = () => {
     username: '',
     role: '',
     acceptedTerms: false,
+    isSaving: false,
   });
 
   const handleForm = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -54,6 +55,18 @@ const Test = () => {
     form.username.trim() !== '' &&
     !isViewer &&
     (isEditor || (isOwner && form.acceptedTerms));
+
+  const handleSubmit = () => {
+    setForm((prev) => ({ ...prev, isSaving: true }));
+  };
+
+  useEffect(() => {
+    if (!form.isSaving) return;
+    const timer = setTimeout(() => {
+      setForm((prev) => ({ ...prev, isSaving: false }));
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, [form.isSaving]);
 
   return (
     <Flex w={'100vw'} align={'center'} justify={'center'}>
