@@ -19,78 +19,27 @@ const Test = () => {
   const [form, setForm] = useState({
     email: '',
     role: '', // 'user' | 'admin' | 'guest'
+    age: 0,
     acceptedTerms: false,
     newsletter: false,
-    age: 0,
+    emailVerified: false,
+    phoneVerified: false,
+    twoFactorEnabled: false,
+    trialUser: false,
+    hasPaidSubscription: false,
   });
-
-  const handleForm = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setForm((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = e.target;
-    setForm((prev) => ({
-      ...prev,
-      [name]: checked,
-    }));
-  };
-
-  const handlePlan = (value: string) => {
-    setForm((prev) => ({
-      ...prev,
-      plan: value,
-    }));
-  };
 
   const isGuest = form.role === 'guest';
   const isUser = form.role === 'user';
   const isAdmin = form.role === 'admin';
 
   const canSubmit =
-    form.email !== '' &&
-    !isGuest &&
-    (isUser || (form.age >= 18 && form.acceptedTerms)) &&
-    (isAdmin || (form.acceptedTerms && form.age));
+    (!isGuest && (form.hasPaidSubscription || form.age >= 18)) ||
+    (isUser && form.age >= 16);
 
   return (
     <Flex w={'100vw'} align={'center'} justify={'center'}>
-      <VStack w={'300px'} pt={'100px'} spacing={4}>
-        <Input
-          name={'email'}
-          placeholder={'type email'}
-          value={form.email}
-          onChange={handleForm}
-        />
-        <RadioGroup value={form.role} onChange={handlePlan}>
-          <Stack>
-            <Radio value={'basic'}>Basic</Radio>
-            <Radio value={'team'}>Team</Radio>
-            <Radio value={'enterprise'}>Enterprise</Radio>
-          </Stack>
-        </RadioGroup>
-        {isAdmin && (
-          <>
-            <Checkbox
-              name={'acceptedTerms'}
-              isChecked={form.acceptedTerms}
-              onChange={handleCheck}
-            >
-              Accept Terms
-            </Checkbox>
-          </>
-        )}
-
-        {/* {isBasic && <Text color={'yellow'}>Terms not required</Text>}
-        {isEnterprise && <Text color={'red'}>Enterprise is not allowed</Text>}
-        <Button isDisabled={!canSubmit || form.isSaving} onClick={handleSubmit}>
-          Submit
-        </Button> */}
-      </VStack>
+      <VStack w={'300px'} pt={'100px'} spacing={4}></VStack>
     </Flex>
   );
 };
