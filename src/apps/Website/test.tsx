@@ -24,7 +24,6 @@ const Test = () => {
     newsletter: false,
     emailVerified: false,
     phoneVerified: false,
-    twoFactorEnabled: false,
     trialUser: false,
     hasPaidSubscription: false,
   });
@@ -34,8 +33,18 @@ const Test = () => {
   const isAdmin = form.role === 'admin';
 
   const canSubmit =
-    (!isGuest && (form.hasPaidSubscription || form.age >= 18)) ||
-    (isUser && form.age >= 16);
+    form.email.trim() !== '' &&
+    form.acceptedTerms &&
+    ((isGuest && form.hasPaidSubscription && form.age >= 18) ||
+      (isUser &&
+        form.age >= 16 &&
+        form.emailVerified &&
+        (!form.newsletter || form.age >= 21) &&
+        !form.trialUser) ||
+      (isAdmin &&
+        form.age >= 18 &&
+        (form.emailVerified || form.phoneVerified) &&
+        form.trialUser));
 
   return (
     <Flex w={'100vw'} align={'center'} justify={'center'}>
