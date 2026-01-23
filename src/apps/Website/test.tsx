@@ -27,7 +27,7 @@ const Test = () => {
         <Input placeholder={'type value'} />
         <Text>Required</Text>
         <Text>Too short</Text>
-        <Text>Looks good</Text>
+        <Text></Text>
         <Text fontSize='sm'>
           touched: {String(touched)} | dirty: {String(dirty)}
         </Text>
