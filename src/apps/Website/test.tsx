@@ -26,7 +26,7 @@ const Test = () => {
       <VStack w='300px' pt='100px' spacing={4}>
         <Input placeholder={'type value'} />
         <Text>Required</Text>
-        <Text>Too short</Text>
+        <Text></Text>
         <Text></Text>
         <Text fontSize='sm'>
           touched: {String(touched)} | dirty: {String(dirty)}
