@@ -25,7 +25,7 @@ const Test = () => {
     <Flex w='100vw' align='center' justify='center'>
       <VStack w='300px' pt='100px' spacing={4}>
         <Input placeholder={'type value'} />
-        <Text>Required</Text>
+        <Text></Text>
         <Text></Text>
         <Text></Text>
         <Text fontSize='sm'>
