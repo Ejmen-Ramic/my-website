@@ -70,7 +70,7 @@ const Test = () => {
           !form.email.includes('@') && (
             <Text color='red'>Email must include @</Text>
           )}
-        <Button isDisabled={!canSubmit}>Submit</Button>
+        <Button isDisabled={!canSubmit}></Button>
       </VStack>
     </Flex>
   );
