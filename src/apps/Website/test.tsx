@@ -68,7 +68,7 @@ const Test = () => {
         {touchedEmail &&
           form.email.trim() !== '' &&
           !form.email.includes('@') && (
-            <Text color='red'>Email must include</Text>
+            <Text color='red'>Email must include @</Text>
           )}
         <Button isDisabled={!canSubmit}></Button>
       </VStack>
