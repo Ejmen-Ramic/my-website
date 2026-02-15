@@ -54,7 +54,7 @@ const Test = () => {
           placeholder={'Type Email'}
         />
         {touchedUsername && form.username.trim() === '' && (
-          <Text color={'red'}>Username is required</Text>
+          <Text color={'red'}>User is required</Text>
         )}
         {touchedUsername &&
           form.username.trim() !== '' &&
