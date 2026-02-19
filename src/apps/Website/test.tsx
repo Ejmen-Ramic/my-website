@@ -59,7 +59,7 @@ const Test = () => {
         {touchedUsername &&
           form.username.trim() !== '' &&
           form.username.length < 3 && (
-            <Text>Username must be at least 2 characters</Text>
+            <Text>Username must be at least 3 characters</Text>
           )}
 
         {touchedEmail && form.email.trim() === '' && (
