@@ -1,21 +1,4 @@
-import {
-  Button,
-  Checkbox,
-  Input,
-  Select,
-  VStack,
-  Text,
-  useToast,
-  Switch,
-  Box,
-  Flex,
-  Stack,
-  Radio,
-  RadioGroup,
-  InputElementProps,
-} from '@chakra-ui/react';
-
-import React, { useEffect, useState } from 'react';
+import { VStack, Flex } from '@chakra-ui/react';
 
 const Test = () => {
   return (
