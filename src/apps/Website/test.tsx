@@ -21,7 +21,7 @@ const Test = () => {
   return (
     <Flex w='100vw' align='center' justify='center'>
       <VStack w='300px' pt='100px' spacing={4}>
-        test
+        tests
       </VStack>
     </Flex>
   );
