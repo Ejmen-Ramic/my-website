@@ -15,14 +15,14 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-} from '@chakra-ui/react'
-import { FC, ReactNode } from 'react'
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
-import { FaXTwitter } from 'react-icons/fa6'
-import { BiMailSend } from 'react-icons/bi'
-import FadeInView from '../../../../shared/components/Hooks/FadeInView'
-import { t, Trans } from '@lingui/macro'
-import { colors } from '../../../../shared/components/Hooks/color'
+} from '@chakra-ui/react';
+import { ReactNode } from 'react';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { BiMailSend } from 'react-icons/bi';
+import FadeInView from '../../../../shared/components/Hooks/FadeInView';
+import { t, Trans } from '@lingui/macro';
+import { colors } from '../../../../shared/components/Hooks/color';
 
 const Logo = (props: any) => {
   return (
@@ -37,8 +37,8 @@ const Logo = (props: any) => {
         Ejmen Ramic
       </Text>
     </FadeInView>
-  )
-}
+  );
+};
 
 const SocialButton = ({
   children,
@@ -46,11 +46,11 @@ const SocialButton = ({
   href,
   hoverColor,
 }: {
-  children: ReactNode
-  label: string
-  href: string
-  color: string
-  hoverColor: string
+  children: ReactNode;
+  label: string;
+  href: string;
+  color: string;
+  hoverColor: string;
 }) => {
   return (
     <chakra.button
@@ -75,19 +75,19 @@ const SocialButton = ({
       </FadeInView>
       <FadeInView delay={0.1}>{children}</FadeInView>
     </chakra.button>
-  )
-}
+  );
+};
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
     <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
       {children}
     </Text>
-  )
-}
+  );
+};
 
 const FooterPhotography = () => {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
   return (
     <Box
       bg={useColorModeValue('#d1cec7', colors.primary4)}
@@ -312,7 +312,7 @@ const FooterPhotography = () => {
                   placeholder={t`Your email address`}
                   bg={useColorModeValue(
                     colors.blackAlpha[100],
-                    colors.whiteAlpha[100]
+                    colors.whiteAlpha[100],
                   )}
                   border={0}
                   _focus={{
@@ -334,7 +334,7 @@ const FooterPhotography = () => {
         </SimpleGrid>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default FooterPhotography
+export default FooterPhotography;
