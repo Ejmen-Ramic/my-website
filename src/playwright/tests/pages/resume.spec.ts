@@ -10,7 +10,7 @@ test.describe('Resume Page', () => {
       await expect(page).toHaveURL('http://localhost:3000/resume')
     })
 
-    test('test if all components are visible', async ({ page }) => {
+    test('if all components are visible', async ({ page }) => {
       const commonTestElements = new CommonTest(page);
       await commonTestElements.checkAllElements();
 

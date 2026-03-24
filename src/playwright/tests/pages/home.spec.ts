@@ -12,7 +12,7 @@ test.describe('Home Page', () => {
     // Verify the page loaded successfully
     await expect(page).toHaveURL('http://localhost:3000/')
   })
-  test('test if all components are visible', async ({ page }) => {
+  test('if all components are visible', async ({ page }) => {
     const testCommonElements = new CommonTest(page);
     await testCommonElements.checkAllElements();
 
@@ -31,7 +31,7 @@ test.describe('Home Page', () => {
     const faq = page.locator('[data-testid="faq-component"]')
     await expect(faq).toBeVisible()
   })
-  test('test all buttons', async ({ page }) => {
+  test('all buttons', async ({ page }) => {
     // Resume button on hero component
     const resumeButton = page.locator('[data-testid="resume-link-home"]')
     await resumeButton.click()
@@ -56,7 +56,7 @@ test.describe('Home Page', () => {
       await expect(popover).toBeVisible()
     }
   })
-  test('test FAQ', async ({ page }) => {
+  test('FAQ', async ({ page }) => {
     const faq = page.locator('[data-testid="faq-component"]')
     await expect(faq).toBeVisible()
 
@@ -68,7 +68,7 @@ test.describe('Home Page', () => {
       await faqAccordion.click()
     }
   })
-  test('test FAQ mobile', async ({ page }) => {
+  test('FAQ mobile', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 })
 
     const faq = page.locator('[data-testid="faq-component"]')

@@ -15,7 +15,7 @@ test.describe('Test for Contact Page', async () => {
     const contactForm = page.locator('[data-testid="contact-form"]')
     await expect(contactForm).toBeVisible()
   })
-  test('test copy email button', async ({ page }) => {
+  test('copy email button', async ({ page }) => {
     const emailButton = page.getByTestId('email-button')
     const tooltip = page.getByTestId('email-tooltip')
 

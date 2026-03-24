@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { format, parseISO} from 'date-fns';
 import { t } from '@lingui/macro';
 import { CommitSearchResult, GitHubRepo, githubService, GitHubUser, LanguageStats } from '../../../../../../backend/githubService';
+
 export interface CommitByDate {
   date: string;
   commits: number;
@@ -34,11 +35,7 @@ export const useGitHubData = () => {
   const [recentCommits, setRecentCommits] = useState<CommitSearchResult[]>([]);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    fetchGitHubData();
-  }, []);
-
-  const fetchGitHubData = async (): Promise<void> => {
+  const fetchGitHubData = useCallback(async (): Promise<void> => {
     try {
       setLoading(true);
       setError(null);
@@ -77,7 +74,12 @@ export const useGitHubData = () => {
     } finally {
       setLoading(false);
     }
-  };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    fetchGitHubData();
+  }, [fetchGitHubData]);
 
   const processCommitsByDate = (commits: CommitSearchResult[]): CommitByDate[] => {
     const commitsByDate: { [key: string]: number } = {};
@@ -104,9 +106,7 @@ export const useGitHubData = () => {
       { name: t`Public Repos`, value: repos.length },
       { name: t`Total Stars`, value: totalStars },
       { name: t`Total Forks`, value: totalForks },
-            { name: t`Total Commits`, value: recentCommits.length },
-
-      
+      { name: t`Total Commits`, value: recentCommits.length },
     ];
   };
 
@@ -122,17 +122,16 @@ export const useGitHubData = () => {
       }));
   };
 
-const getCommitStats = () => {
-  const stats: { [year: number]: number } = {};
+  const getCommitStats = () => {
+    const stats: { [year: number]: number } = {};
 
-  commitActivity.forEach((c) => {
-    if (!c.year) return;
-    stats[c.year] = (stats[c.year] || 0) + c.commits; 
-  });
+    commitActivity.forEach((c) => {
+      if (!c.year) return;
+      stats[c.year] = (stats[c.year] || 0) + c.commits; 
+    });
 
-  return stats;
-};
-
+    return stats;
+  };
 
   const totalLangBytes = languageStats.reduce((s, d) => s + d.value, 0) || 1;
 
