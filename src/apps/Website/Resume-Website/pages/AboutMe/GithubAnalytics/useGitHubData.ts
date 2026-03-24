@@ -48,9 +48,10 @@ export const useGitHubData = () => {
       setProfile(profileData);
       setRepos(reposData);
 
-      const [commits2024, commits2025, recentCommitsData] = await Promise.all([
+      const [commits2024, commits2025, commits2026, recentCommitsData] = await Promise.all([
         githubService.getCommitsByYear(2024),
         githubService.getCommitsByYear(2025),
+        githubService.getCommitsByYear(2026),
         githubService.getRecentCommits(90),
       ]);
 
@@ -63,7 +64,7 @@ export const useGitHubData = () => {
         .slice(0, 8);
       setLanguageStats(languageArray);
 
-      const allCommits = [...commits2024, ...commits2025];
+      const allCommits = [...commits2024, ...commits2025, ...commits2026];
       const commitsByDate = processCommitsByDate(allCommits);
       setCommitActivity(commitsByDate);
     } catch (err) {

@@ -47,6 +47,7 @@ const rangeOptions = [
 ];
 
 const yearOptions = [
+  { label: '2026', value: '2026', type: 'year' },
   { label: '2025', value: '2025', type: 'year' },
   { label: '2024', value: '2024', type: 'year' },
 ];
@@ -58,7 +59,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
   const MainBGColor = useColorModeValue(colors.gray[100], colors.gray[700]);
 
   const [selectedRange, setSelectedRange] = useState<string>('365');
-  const [selectedYears, setSelectedYears] = useState<string[]>(['2025']);
+  const [selectedYears, setSelectedYears] = useState<string[]>(['2026']);
   const [isHorizontal, setIsHorizontal] = useState(false);
   const toast = useToast();
 
@@ -103,7 +104,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
           const date = new Date(item.date);
           const daysSinceStart = Math.floor(
             (date.getTime() - new Date(data[0]?.date || date).getTime()) /
-              (1000 * 60 * 60 * 24)
+              (1000 * 60 * 60 * 24),
           );
           const groupIndex = Math.floor(daysSinceStart / 3);
           const groupKey = `group-${groupIndex}`;
@@ -112,7 +113,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
             aggregated[groupKey] = {
               date: format(
                 addDays(new Date(data[0]?.date || date), groupIndex * 3),
-                'yyyy-MM-dd'
+                'yyyy-MM-dd',
               ),
               commits: 0,
               count: 0,
@@ -174,7 +175,7 @@ const CommitActivityChart: React.FC<CommitActivityChartProps> = ({
 
       return data;
     },
-    []
+    [],
   );
 
   const filteredData = useMemo(() => {

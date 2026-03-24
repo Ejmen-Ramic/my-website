@@ -66,7 +66,7 @@ const StatsGrid: React.FC<StatsGridProps> = ({ repoStats, commitsByYear }) => {
                       >
                         YEARS
                       </Text>
-                      {[2025, 2024].map((year) => (
+                      {[2026, 2025, 2024].map((year) => (
                         <MenuItem
                           key={year}
                           closeOnSelect={true}
