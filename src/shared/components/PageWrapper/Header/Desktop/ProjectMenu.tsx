@@ -20,7 +20,7 @@ import { colors } from '../../../Hooks/color';
 const menuData = [
   {
     id: 1,
-    label: t`PricePilot`,
+    label: `PricePilot`,
     url: 'https://pricepilotapp.org',
   },
 ];
