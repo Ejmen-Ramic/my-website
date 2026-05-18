@@ -6,24 +6,25 @@ import {
   HStack,
   Show,
   useColorModeValue,
-} from '@chakra-ui/react'
-import { FC, useState } from 'react'
-import HeaderMobile from './Mobile'
-import { Link } from 'react-router-dom'
-import LanguageMenu from './Desktop/LanguageMenu'
-import { Trans } from '@lingui/macro'
-import { colors } from '../../Hooks/color'
-import ColorMode from '../../Color-Mode/ColorMode'
+} from '@chakra-ui/react';
+import { FC, useState } from 'react';
+import HeaderMobile from './Mobile';
+import { Link } from 'react-router-dom';
+import { Trans } from '@lingui/macro';
+import { colors } from '../../Hooks/color';
+import ColorMode from '../../Color-Mode/ColorMode';
+import ProjectsMenu from './Desktop/ProjectMenu';
+import LanguageMenu from './Desktop/LanguageMenu';
 
 interface HeaderProps {
-  isStickyHeader?: boolean
+  isStickyHeader?: boolean;
 }
 const Header: FC<HeaderProps> = ({ isStickyHeader }: HeaderProps = {}) => {
-  const [homeHovered, setHomeHovered] = useState(false)
-  const [resumeHovered, setResumeHovered] = useState(false)
-  const [aboutHovered, setAboutHovered] = useState(false)
-  const [contactHovered, setContactHovered] = useState(false)
-  const [languageHovered, setLanguageHovered] = useState(false)
+  const [homeHovered, setHomeHovered] = useState(false);
+  const [resumeHovered, setResumeHovered] = useState(false);
+  const [aboutHovered, setAboutHovered] = useState(false);
+  const [contactHovered, setContactHovered] = useState(false);
+  const [projectsHovered, setProjectsHovered] = useState(false);
 
   return (
     <Flex
@@ -203,22 +204,21 @@ const Header: FC<HeaderProps> = ({ isStickyHeader }: HeaderProps = {}) => {
           </Link>
           <Box
             h={'100%'}
-            borderColor={languageHovered ? colors.links : colors.primary4}
-            borderTopWidth={languageHovered ? '4px' : '0px'}
+            mr={'10px'}
+            borderColor={projectsHovered ? colors.links : colors.primary4}
+            borderTopWidth={projectsHovered ? '4px' : '0px'}
             borderTopColor={colors.links}
             transition={'all 0.1s ease-in-out'}
-            onMouseEnter={() => {
-              setLanguageHovered(true)
-            }}
-            onMouseLeave={() => {
-              setLanguageHovered(false)
-            }}
+            onMouseEnter={() => setProjectsHovered(true)}
+            onMouseLeave={() => setProjectsHovered(false)}
             overflow={'hidden'}
             justifyItems={'center'}
             boxSizing={'border-box'}
           >
-            <LanguageMenu />
+            <ProjectsMenu />
           </Box>
+
+          <LanguageMenu />
           {/* <AccountButton /> */}
           <ColorMode />
         </HStack>
@@ -232,7 +232,7 @@ const Header: FC<HeaderProps> = ({ isStickyHeader }: HeaderProps = {}) => {
         <HeaderMobile />
       </Show>
     </Flex>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
