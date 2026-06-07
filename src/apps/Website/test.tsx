@@ -11,6 +11,7 @@ const Test = () => {
         borderColor={'gray.200'}
         p={4}
       >
+        test
         <Input />
       </Stack>
     </VStack>
