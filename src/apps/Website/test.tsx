@@ -1,20 +1,20 @@
-import { Stack, VStack, Text, HStack, Button, Input } from '@chakra-ui/react';
+import { Box, Button, Input, Text } from '@chakra-ui/react';
+import { FC, useMemo, useState } from 'react';
 
-const Test = () => {
+const list = [10, 25, 8, 42, 15];
+
+const Test: FC = () => {
+  const [input, setInput] = useState('');
+
+  const highestNumber = useMemo(() => {
+    console.log('recalculating...');
+    return Math.max(...list);
+  }, [list]);
   return (
-    <VStack w={'full'} mt={'300px'}>
-      <Stack
-        w={'full'}
-        maxW={'400px'}
-        borderRadius={'md'}
-        border={'1px solid'}
-        borderColor={'gray.200'}
-        p={4}
-      >
-        test
-        <Input />
-      </Stack>
-    </VStack>
+    <Box>
+      <Text>{highestNumber}</Text>
+      <Input value={input} onChange={(e) => setInput(e.target.value)} />
+    </Box>
   );
 };
 
