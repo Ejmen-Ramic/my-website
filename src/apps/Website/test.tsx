@@ -1,20 +1,62 @@
-import { Box, Button, Input, Text } from '@chakra-ui/react';
-import { FC, useMemo, useState } from 'react';
+import { Box, Button, Text, Input, VStack, HStack } from '@chakra-ui/react';
+import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 
-const list = [10, 25, 8, 42, 15];
+interface TaskProps {
+  title: string;
+  completion: boolean;
+  id: number;
+}
 
 const Test: FC = () => {
-  const [input, setInput] = useState('');
+  const [addTask, setAddTask] = useState('');
+  const [tasks, setTasks] = useState<TaskProps[]>([]);
 
-  const highestNumber = useMemo(() => {
-    console.log('recalculating...');
-    return Math.max(...list);
-  }, [list]);
+  const handleAddTask = () => {
+    const newItem = { title: addTask, completion: false, id: Date.now() };
+    setTasks([...tasks, newItem]);
+    setAddTask('');
+  };
+
+  const handleToggle = (id: number) => {
+    setTasks(
+      tasks.map((task) => {
+        if (task.id === id) {
+          return { ...task, completion: !task.completion };
+        }
+        return task;
+      }),
+    );
+  };
+
+  const handleDeleteTask = (id: number) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
+
+  const handleDeleteAll = () => {
+    setTasks([]);
+  };
+
   return (
-    <Box>
-      <Text>{highestNumber}</Text>
-      <Input value={input} onChange={(e) => setInput(e.target.value)} />
-    </Box>
+    <VStack w={'full'}>
+      <VStack maxW={'600px'}>
+        <HStack w={'full'} maxW={'500px'}>
+          <Input value={addTask} onChange={(e) => setAddTask(e.target.value)} />
+          <Button onClick={handleAddTask}>Add Task</Button>
+          <Button onClick={handleDeleteAll}>Delete All</Button>
+        </HStack>
+        {tasks.map((task) => (
+          <HStack key={task.id}>
+            <Text>{task.title}</Text>
+            <Text color={task.completion ? 'green' : 'red'}>
+              {task.completion ? 'completed' : 'not completed'}
+            </Text>
+
+            <Button onClick={() => handleToggle(task.id)}>Toggle</Button>
+            <Button onClick={() => handleDeleteTask(task.id)}>Delete</Button>
+          </HStack>
+        ))}
+      </VStack>
+    </VStack>
   );
 };
 
