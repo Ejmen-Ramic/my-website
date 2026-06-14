@@ -36,15 +36,31 @@ const Test: FC = () => {
     setTasks([]);
   };
 
+  const [progress, setProgress] = useState<'all' | 'active' | 'completed'>(
+    'all',
+  );
+
+  let filteredTasks = tasks;
+  if (progress === 'active') {
+    filteredTasks = tasks.filter((task) => !task.completion);
+  } else if (progress === 'completed') {
+    filteredTasks = tasks.filter((task) => task.completion);
+  }
+
   return (
     <VStack w={'full'}>
-      <VStack maxW={'600px'}>
-        <HStack w={'full'} maxW={'500px'}>
+      <VStack>
+        <HStack w={'full'}>
           <Input value={addTask} onChange={(e) => setAddTask(e.target.value)} />
           <Button onClick={handleAddTask}>Add Task</Button>
           <Button onClick={handleDeleteAll}>Delete All</Button>
+          <HStack w={'full'}>
+            <Button onClick={() => setProgress('all')}>All</Button>
+            <Button onClick={() => setProgress('active')}>Active</Button>
+            <Button onClick={() => setProgress('completed')}>Completed</Button>
+          </HStack>
         </HStack>
-        {tasks.map((task) => (
+        {filteredTasks.map((task) => (
           <HStack key={task.id}>
             <Text>{task.title}</Text>
             <Text color={task.completion ? 'green' : 'red'}>
