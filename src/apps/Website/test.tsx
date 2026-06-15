@@ -55,7 +55,7 @@ const Test: FC = () => {
           <Button onClick={handleAddTask}>Add Task</Button>
           <Button onClick={handleDeleteAll}>Delete All</Button>
           <HStack w={'full'}>
-            <Button onClick={() => setProgress('all')}>All</Button>
+            <Button onClick={() => setProgress('all')}></Button>
             <Button onClick={() => setProgress('active')}>Active</Button>
             <Button onClick={() => setProgress('completed')}>Completed</Button>
           </HStack>
