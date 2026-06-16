@@ -1,77 +1,86 @@
-import { Box, Button, Text, Input, VStack, HStack } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Text,
+  Input,
+  VStack,
+  HStack,
+  Stack,
+} from '@chakra-ui/react';
 import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 
-interface TaskProps {
-  title: string;
-  completion: boolean;
+interface CartItem {
   id: number;
+  title: string;
+  price: number;
+  quantity: number;
 }
 
+const products: CartItem[] = [
+  { id: 1, title: 'Bread', price: 3, quantity: 0 },
+  { id: 2, title: 'Cereal', price: 5, quantity: 0 },
+  { id: 3, title: 'Meat', price: 10, quantity: 0 },
+  { id: 4, title: 'Fruits', price: 20, quantity: 0 },
+];
+
 const Test: FC = () => {
-  const [addTask, setAddTask] = useState('');
-  const [tasks, setTasks] = useState<TaskProps[]>([]);
+  const [cart, setCart] = useState<CartItem[]>([]);
 
-  const handleAddTask = () => {
-    const newItem = { title: addTask, completion: false, id: Date.now() };
-    setTasks([...tasks, newItem]);
-    setAddTask('');
-  };
-
-  const handleToggle = (id: number) => {
-    setTasks(
-      tasks.map((task) => {
-        if (task.id === id) {
-          return { ...task, completion: !task.completion };
-        }
-        return task;
-      }),
-    );
-  };
-
-  const handleDeleteTask = (id: number) => {
-    setTasks(tasks.filter((task) => task.id !== id));
+  const handleAddToCart = (product: CartItem) => {
+    const existing = cart.find((item) => item.id === product.id);
+    if (existing) {
+      setCart(
+        cart.map((item) => {
+          if (item.id === product.id) {
+            return { ...item, quantity: item.quantity + 1 };
+          }
+          return item;
+        }),
+      );
+    } else {
+      setCart([...cart, { ...product, quantity: 1 }]);
+    }
   };
 
   const handleDeleteAll = () => {
-    setTasks([]);
+    setCart([]);
   };
 
-  const [progress, setProgress] = useState<'all' | 'active' | 'completed'>(
-    'all',
+  const handleRemoveItem = (product: CartItem) => {
+    setCart(cart.filter((item) => item.id !== product.id));
+  };
+
+  const totalSum = useMemo(
+    () => cart.reduce((total, item) => total + item.price * item.quantity, 0),
+    [cart],
   );
 
-  let filteredTasks = tasks;
-  if (progress === 'active') {
-    filteredTasks = tasks.filter((task) => !task.completion);
-  } else if (progress === 'completed') {
-    filteredTasks = tasks.filter((task) => task.completion);
-  }
+  const totalQuantity = useMemo(
+    () => cart.reduce((total, item) => total + item.quantity, 0),
+    [cart],
+  );
 
   return (
-    <VStack w={'full'}>
-      <VStack>
-        <HStack w={'full'}>
-          <Input value={addTask} onChange={(e) => setAddTask(e.target.value)} />
-          <Button onClick={handleAddTask}>Add Task</Button>
-          <Button onClick={handleDeleteAll}>Delete All</Button>
-          <HStack w={'full'}>
-            <Button onClick={() => setProgress('all')}></Button>
-            <Button onClick={() => setProgress('active')}>Active</Button>
-            <Button onClick={() => setProgress('completed')}>Completed</Button>
-          </HStack>
+    <VStack w={'full'} alignContent={'center'} pt={'200px'}>
+      <Button onClick={handleDeleteAll}>Delete All</Button>
+      {products.map((product) => (
+        <HStack w={'full'} maxW={'300px'} key={product.id}>
+          <Text>{product.title}</Text>
+          <Button onClick={() => handleAddToCart(product)}>Add to cart</Button>
         </HStack>
-        {filteredTasks.map((task) => (
-          <HStack key={task.id}>
-            <Text>{task.title}</Text>
-            <Text color={task.completion ? 'green' : 'red'}>
-              {task.completion ? 'completed' : 'not completed'}
-            </Text>
-
-            <Button onClick={() => handleToggle(task.id)}>Toggle</Button>
-            <Button onClick={() => handleDeleteTask(task.id)}>Delete</Button>
+      ))}
+      {cart.map((item) => (
+        <VStack key={item.id}>
+          <HStack>
+            <Text>{item.title}</Text>
+            <Text>{item.price}</Text>
+            <Text>{item.quantity}</Text>
+            <Button onClick={() => handleRemoveItem(item)}>Remove</Button>
           </HStack>
-        ))}
-      </VStack>
+        </VStack>
+      ))}
+      <Text>Total summed price: {totalSum}</Text>
+      <Text>Total amount of items: {totalQuantity}</Text>
     </VStack>
   );
 };
