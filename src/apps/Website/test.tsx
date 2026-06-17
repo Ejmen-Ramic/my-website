@@ -2,35 +2,38 @@ import { Button, Input, VStack, Text } from '@chakra-ui/react';
 import { FC, useMemo, useState } from 'react';
 
 const Test: FC = () => {
-  const [bill, setBill] = useState(0);
-  const [tip, setTip] = useState(0);
+  const [height, setHeight] = useState(0);
+  const [weight, setWeight] = useState(0);
 
-  const billCalc = useMemo(() => {
-    return bill * (tip / 100);
-  }, [bill, tip]);
+  const BMI = useMemo(() => {
+    return weight / (height / 100) ** 2;
+  }, [height, weight]);
 
-  const tipCalc = useMemo(() => {
-    return bill + billCalc;
-  }, [bill, billCalc]);
-
-  const handleDeleteAll = () => {
-    setBill(0);
-    setTip(0);
-  };
+  const Categories = useMemo(() => {
+    if (BMI < 18.5) {
+      return 'UnderWeight';
+    } else if (BMI >= 18.5 && BMI <= 24.9) {
+      return 'Normal';
+    } else if (BMI >= 24.9 && BMI <= 29.9) {
+      return 'Overweight';
+    } else {
+      return 'Obese';
+    }
+  }, [BMI]);
 
   return (
     <VStack>
       <Input
         type={'number'}
-        value={bill}
-        onChange={(e) => setBill(Number(e.target.value))}
+        value={height}
+        onChange={(e) => setHeight(Number(e.target.value))}
       />
-      <Button onClick={() => setTip(10)}>10%</Button>
-      <Button onClick={() => setTip(15)}>15%</Button>
-      <Button onClick={() => setTip(20)}>20%</Button>
-      <Button onClick={handleDeleteAll}>Reset</Button>
-      <Text>Tip amount: {billCalc}</Text>
-      <Text>Total: {tipCalc}</Text>
+      <Input
+        type={'number'}
+        value={weight}
+        onChange={(e) => setWeight(Number(e.target.value))}
+      />
+      <Text>{Categories}</Text>
     </VStack>
   );
 };
