@@ -1,77 +1,36 @@
-import { VStack, HStack, Input, Button, Text } from '@chakra-ui/react';
-import { FC, useState } from 'react';
-
-interface TaskProps {
-  title: string;
-  completion: boolean;
-  id: number;
-}
+import { Button, Input, VStack, Text } from '@chakra-ui/react';
+import { FC, useMemo, useState } from 'react';
 
 const Test: FC = () => {
-  const [addTask, setAddTask] = useState('');
-  const [tasks, setTasks] = useState<TaskProps[]>([]);
+  const [bill, setBill] = useState(0);
+  const [tip, setTip] = useState(0);
 
-  const handleAddTask = () => {
-    const newItem = { title: addTask, completion: false, id: Date.now() };
-    setTasks([...tasks, newItem]);
-    setAddTask('');
-  };
+  const billCalc = useMemo(() => {
+    return bill * (tip / 100);
+  }, [bill, tip]);
 
-  const handleToggle = (id: number) => {
-    setTasks(
-      tasks.map((task) => {
-        if (task.id === id) {
-          return { ...task, completion: !task.completion };
-        }
-        return task;
-      }),
-    );
-  };
-
-  const handleDeleteTask = (id: number) => {
-    setTasks(tasks.filter((task) => task.id !== id));
-  };
+  const tipCalc = useMemo(() => {
+    return bill + billCalc;
+  }, [bill, billCalc]);
 
   const handleDeleteAll = () => {
-    setTasks([]);
+    setBill(0);
+    setTip(0);
   };
 
-  const [progress, setProgress] = useState<'all' | 'active' | 'completed'>(
-    'all',
-  );
-
-  let filteredTasks = tasks;
-  if (progress === 'active') {
-    filteredTasks = tasks.filter((task) => !task.completion);
-  } else if (progress === 'completed') {
-    filteredTasks = tasks.filter((task) => task.completion);
-  }
-
   return (
-    <VStack w={'full'}>
-      <VStack>
-        <HStack w={'full'}>
-          <Input value={addTask} onChange={(e) => setAddTask(e.target.value)} />
-          <Button onClick={handleAddTask}>Add Task</Button>
-          <Button onClick={handleDeleteAll}>Delete All</Button>
-          <HStack w={'full'}>
-            <Button onClick={() => setProgress('all')}>All</Button>
-            <Button onClick={() => setProgress('active')}>Active</Button>
-            <Button onClick={() => setProgress('completed')}>Completed</Button>
-          </HStack>
-        </HStack>
-        {filteredTasks.map((task) => (
-          <HStack key={task.id}>
-            <Text>{task.title}</Text>
-            <Text color={task.completion ? 'green' : 'red'}>
-              {task.completion ? 'completed' : 'not completed'}
-            </Text>
-
-            <Button onClick={() => handleToggle(task.id)}>Toggle</Button>
-            <Button onClick={() => handleDeleteTask(task.id)}>Delete</Button>
-          </HStack>
-        ))}
-      </VStack>
+    <VStack>
+      <Input
+        type={'number'}
+        value={bill}
+        onChange={(e) => setBill(Number(e.target.value))}
+      />
+      <Button onClick={() => setTip(10)}>10%</Button>
+      <Button onClick={() => setTip(15)}>15%</Button>
+      <Button onClick={() => setTip(20)}>20%</Button>
+      <Button onClick={handleDeleteAll}>Reset</Button>
+      <Text>Tip amount: {billCalc}</Text>
+      <Text>Total: {tipCalc}</Text>
     </VStack>
   );
 };
