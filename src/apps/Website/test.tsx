@@ -1,32 +1,55 @@
-import { Button, Input, VStack, Text } from '@chakra-ui/react';
+import { Button, Input, VStack, Text, Select } from '@chakra-ui/react';
 import { FC, useMemo, useState } from 'react';
 
+const rates: Record<string, number> = {
+  USD: 1,
+  EUR: 0.92,
+  GBP: 0.79,
+  MYR: 4.72,
+  JPY: 149.5,
+};
+
 const Test: FC = () => {
-  const [price, setPrice] = useState(0);
-  const [discount, setDiscount] = useState(0);
+  const [amount, setAmount] = useState(0);
+  const [conversionFrom, setConversionFrom] = useState('');
+  const [conversionTo, setConversionTo] = useState('');
 
-  const savedAmount = useMemo(() => {
-    return price * (discount / 100);
-  }, [price, discount]);
-
-  const finalPrice = useMemo(() => {
-    return price - savedAmount;
-  }, [price, savedAmount]);
+  const conversionFormula = useMemo(() => {
+    const fromRate = rates[conversionFrom];
+    const toRate = rates[conversionTo];
+    return (amount / fromRate) * toRate;
+  }, [amount, conversionFrom, conversionTo]);
 
   return (
     <VStack>
       <Input
-        type='number'
-        value={price}
-        onChange={(e) => setPrice(Number(e.target.value))}
+        type={'number'}
+        value={amount}
+        onChange={(e) => setAmount(Number(e.target.value))}
       />
-      <Input
-        type='number'
-        value={discount}
-        onChange={(e) => setDiscount(Number(e.target.value))}
-      />
-      <Text>{finalPrice}</Text>
-      <Text>{savedAmount}</Text>
+      <Select
+        value={conversionFrom}
+        onChange={(e) => setConversionFrom(e.target.value)}
+      >
+        <option value=''>From</option>
+        <option value='USD'>USD</option>
+        <option value='EUR'>EUR</option>
+        <option value='GBP'>GBP</option>
+        <option value='MYR'>MYR</option>
+        <option value='JPY'>JPY</option>
+      </Select>
+      <Select
+        value={conversionTo}
+        onChange={(e) => setConversionTo(e.target.value)}
+      >
+        <option value=''>To</option>
+        <option value='USD'>USD</option>
+        <option value='EUR'>EUR</option>
+        <option value='GBP'>GBP</option>
+        <option value='MYR'>MYR</option>
+        <option value='JPY'>JPY</option>
+      </Select>
+      <Text>{conversionFormula}</Text>
     </VStack>
   );
 };
