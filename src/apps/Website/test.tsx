@@ -1,56 +1,41 @@
-import { Button, Input, VStack, Text, Select } from '@chakra-ui/react';
+import { Button, Input, VStack, Text, Select, HStack } from '@chakra-ui/react';
 import { FC, useMemo, useState } from 'react';
 
-const rates: Record<string, number> = {
-  USD: 1,
-  EUR: 0.92,
-  GBP: 0.79,
-  MYR: 4.72,
-  JPY: 149.5,
-};
+interface FoodProps {
+  id: number;
+  name: string;
+  calories: number;
+}
+
+const food: FoodProps[] = [
+  { id: 1, name: 'Meat', calories: 100 },
+  { id: 2, name: 'Dairy', calories: 130 },
+  { id: 3, name: 'Chocolate', calories: 50 },
+  { id: 4, name: 'Fruit', calories: 20 },
+  { id: 5, name: 'Bread', calories: 300 },
+];
 
 const Test: FC = () => {
-  const [amount, setAmount] = useState(0);
-  const [conversionFrom, setConversionFrom] = useState('');
-  const [conversionTo, setConversionTo] = useState('');
+  const [foodStat, setFoodStat] = useState<FoodProps[]>([]);
 
-  const conversionFormula = useMemo(() => {
-    const fromRate = rates[conversionFrom];
-    const toRate = rates[conversionTo];
-    if (!fromRate || !toRate) return 0;
-    return (amount / fromRate) * toRate;
-  }, [amount, conversionFrom, conversionTo]);
+  const calorieCalculator = useMemo(
+    () => foodStat.reduce((total, item) => total + item.calories, 0),
+    [foodStat],
+  );
 
+  const handleAddFood = (food: FoodProps) => {
+    setFoodStat([...foodStat, food]);
+  };
   return (
     <VStack>
-      <Input
-        type={'number'}
-        value={amount}
-        onChange={(e) => setAmount(Number(e.target.value))}
-      />
-      <Select
-        value={conversionFrom}
-        onChange={(e) => setConversionFrom(e.target.value)}
-      >
-        <option value=''>From</option>
-        <option value='USD'>USD</option>
-        <option value='EUR'>EUR</option>
-        <option value='GBP'>GBP</option>
-        <option value='MYR'>MYR</option>
-        <option value='JPY'>JPY</option>
-      </Select>
-      <Select
-        value={conversionTo}
-        onChange={(e) => setConversionTo(e.target.value)}
-      >
-        <option value=''>To</option>
-        <option value='USD'>USD</option>
-        <option value='EUR'>EUR</option>
-        <option value='GBP'>GBP</option>
-        <option value='MYR'>MYR</option>
-        <option value='JPY'>JPY</option>
-      </Select>
-      <Text>{conversionFormula}</Text>
+      {food.map((item) => (
+        <HStack key={item.id}>
+          <Text>{item.name}</Text>
+          <Text>{item.calories}</Text>
+          <Button onClick={() => handleAddFood(item)}>Add</Button>
+        </HStack>
+      ))}
+      <Text>{calorieCalculator}</Text>
     </VStack>
   );
 };
