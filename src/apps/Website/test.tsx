@@ -17,6 +17,7 @@ const Test: FC = () => {
   const conversionFormula = useMemo(() => {
     const fromRate = rates[conversionFrom];
     const toRate = rates[conversionTo];
+    if (!fromRate || !toRate) return 0;
     return (amount / fromRate) * toRate;
   }, [amount, conversionFrom, conversionTo]);
 
