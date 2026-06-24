@@ -21,42 +21,32 @@ const workoutPlan: WorkoutProps[] = [
   { id: 2, title: 'Squats', sets: 0, reps: 0 },
   { id: 3, title: 'Pull Ups', sets: 0, reps: 0 },
   { id: 4, title: 'Lunges', sets: 0, reps: 0 },
-  { id: 5, title: 'Bench Press', sets: 0, reps: 0 },
 ];
 
 const Test: FC = () => {
+  const [setsInput, setSetsInput] = useState(0);
+  const [repsInput, setRepsInput] = useState(0);
   const [workout, setWorkout] = useState<WorkoutProps[]>([]);
 
   const handleAddWorkout = (exercise: WorkoutProps) => {
-    const existing = workout.find((muscle) => muscle.id === exercise.id);
-    if (existing) {
-      setWorkout(
-        workout.map((item) => {
-          if (item.id === exercise.id) {
-            return { ...item, sets: item.sets + 1, reps: item.reps + 1 };
-          }
-          return item;
-        }),
-      );
-    } else {
-      setWorkout([...workout, { ...exercise, sets: 1, reps: 1 }]);
-    }
+    if (setsInput === 0 || repsInput === 0) return;
+    const newWorkout = {
+      id: Date.now(),
+      title: exercise.title,
+      sets: setsInput,
+      reps: repsInput,
+    };
+    setWorkout([...workout, newWorkout]);
+    setSetsInput(0);
+    setRepsInput(0);
   };
 
   const handleRemoveAll = () => {
     setWorkout([]);
   };
   const handleRemoveWorkout = (id: number) => {
-    setWorkout(workout.filter((exercise) => exercise.id !== id));
+    setWorkout(workout.filter((item) => item.id !== id));
   };
-
-  const totalSets = useMemo(() => {
-    return workout.reduce((total, workout) => total + workout.sets, 0);
-  }, [workout]);
-
-  const totalReps = useMemo(() => {
-    return workout.reduce((total, workout) => total + workout.reps, 0);
-  }, [workout]);
 
   return (
     <VStack w={'full'} alignContent={'center'} mt={'300px'}>
@@ -73,10 +63,24 @@ const Test: FC = () => {
         <Button onClick={handleRemoveAll}> Remove All</Button>
         <HStack w={'full'} maxW={'500px'} justifyContent={'space-between'}>
           {workoutPlan.map((item) => (
-            <HStack key={item.id}>
+            <VStack key={item.id}>
               <Text>{item.title}</Text>
-              <Button onClick={() => handleAddWorkout(item)}>C</Button>
-            </HStack>
+              <Input
+                type='number'
+                placeholder='type reps'
+                value={repsInput}
+                onChange={(e) => setRepsInput(Number(e.target.value))}
+              />
+              <Input
+                type='number'
+                placeholder='type sets'
+                value={setsInput}
+                onChange={(e) => setSetsInput(Number(e.target.value))}
+              />
+              <Button onClick={() => handleAddWorkout(item)}>
+                Add Workout
+              </Button>
+            </VStack>
           ))}
         </HStack>
 
@@ -86,13 +90,12 @@ const Test: FC = () => {
               <Text>{item.title}</Text>
               <Text>{item.reps}</Text>
               <Text>{item.sets}</Text>
+
               <Button onClick={() => handleRemoveWorkout(item.id)}>
-                Remove workout
+                Remove Workout
               </Button>
             </HStack>
           ))}
-          <Text>{totalReps}</Text>
-          <Text>{totalSets}</Text>
         </VStack>
       </VStack>
     </VStack>
