@@ -10,54 +10,53 @@ import {
 import { title } from 'process';
 import { FC, useMemo, useState } from 'react';
 
-interface CartProps {
+interface WorkoutProps {
   id: number;
   title: string;
-  price: number;
-  quantity: number;
+  sets: number;
+  reps: number;
 }
-
-const products: CartProps[] = [
-  { id: 1, title: 'Apple', price: 2.5, quantity: 0 },
-  { id: 2, title: 'Banana', price: 1.2, quantity: 0 },
-  { id: 3, title: 'Bread', price: 3.8, quantity: 0 },
-  { id: 4, title: 'Milk', price: 4.5, quantity: 0 },
-  { id: 5, title: 'Eggs', price: 5.0, quantity: 0 },
+const workoutPlan: WorkoutProps[] = [
+  { id: 1, title: 'Push Ups', sets: 0, reps: 0 },
+  { id: 2, title: 'Squats', sets: 0, reps: 0 },
+  { id: 3, title: 'Pull Ups', sets: 0, reps: 0 },
+  { id: 4, title: 'Lunges', sets: 0, reps: 0 },
+  { id: 5, title: 'Bench Press', sets: 0, reps: 0 },
 ];
-const Test: FC = () => {
-  const [cart, setCart] = useState<CartProps[]>([]);
 
-  const handleAddToCart = (product: CartProps) => {
-    const existing = cart.find((item) => item.id === product.id);
+const Test: FC = () => {
+  const [workout, setWorkout] = useState<WorkoutProps[]>([]);
+
+  const handleAddWorkout = (exercise: WorkoutProps) => {
+    const existing = workout.find((muscle) => muscle.id === exercise.id);
     if (existing) {
-      setCart(
-        cart.map((item) => {
-          if (item.id === product.id) {
-            return { ...item, quantity: item.quantity + 1 };
+      setWorkout(
+        workout.map((item) => {
+          if (item.id === exercise.id) {
+            return { ...item, sets: item.sets + 1, reps: item.reps + 1 };
           }
           return item;
         }),
       );
     } else {
-      setCart([...cart, { ...product, quantity: 1 }]);
+      setWorkout([...workout, { ...exercise, sets: 1, reps: 1 }]);
     }
   };
 
   const handleRemoveAll = () => {
-    setCart([]);
+    setWorkout([]);
+  };
+  const handleRemoveWorkout = (id: number) => {
+    setWorkout(workout.filter((exercise) => exercise.id !== id));
   };
 
-  const handleRemoveCart = (id: number) => {
-    setCart(cart.filter((item) => item.id !== id));
-  };
+  const totalSets = useMemo(() => {
+    return workout.reduce((total, workout) => total + workout.sets, 0);
+  }, [workout]);
 
-  const totalQuantity = useMemo(() => {
-    return cart.reduce((total, item) => total + item.quantity, 0);
-  }, [cart]);
-
-  const totalPrice = useMemo(() => {
-    return cart.reduce((total, item) => total + item.quantity + item.price, 0);
-  }, [cart]);
+  const totalReps = useMemo(() => {
+    return workout.reduce((total, workout) => total + workout.reps, 0);
+  }, [workout]);
 
   return (
     <VStack w={'full'} alignContent={'center'} mt={'300px'}>
@@ -71,31 +70,29 @@ const Test: FC = () => {
         alignItems={'center'}
         p={'35px'}
       >
-        <Button onClick={handleRemoveAll}>Remove All </Button>
-
+        <Button onClick={handleRemoveAll}> Remove All</Button>
         <HStack w={'full'} maxW={'500px'} justifyContent={'space-between'}>
-          {products.map((prod) => (
-            <HStack key={prod.id}>
-              <Text>{prod.title}</Text>
-              <Button onClick={() => handleAddToCart(prod)}>✓</Button>
+          {workoutPlan.map((item) => (
+            <HStack key={item.id}>
+              <Text>{item.title}</Text>
+              <Button onClick={() => handleAddWorkout(item)}>C</Button>
             </HStack>
           ))}
         </HStack>
 
         <VStack w={'full'} maxW={'400px'}>
-          {cart.map((item) => (
+          {workout.map((item) => (
             <HStack key={item.id}>
               <Text>{item.title}</Text>
-              <Text>{item.quantity}</Text>
-
-              <Button onClick={() => handleRemoveCart(item.id)}>
-                Remove Item
+              <Text>{item.reps}</Text>
+              <Text>{item.sets}</Text>
+              <Button onClick={() => handleRemoveWorkout(item.id)}>
+                Remove workout
               </Button>
-              <Text>{item.price}</Text>
             </HStack>
           ))}
-          <Text>{totalQuantity}</Text>
-          <Text>{totalPrice}</Text>
+          <Text>{totalReps}</Text>
+          <Text>{totalSets}</Text>
         </VStack>
       </VStack>
     </VStack>
