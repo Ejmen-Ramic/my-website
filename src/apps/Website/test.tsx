@@ -6,18 +6,20 @@ import {
   Select,
   HStack,
   Stack,
+  filter,
 } from '@chakra-ui/react';
+import { stat } from 'fs';
 import { FC, useMemo, useState } from 'react';
 
 interface MovieProps {
   id: number;
   title: string;
-  watched: boolean;
+  completion: boolean;
 }
 
 const Test: FC = () => {
-  const [watchedMovie, setWatchedMovie] = useState('');
   const [movies, setMovies] = useState<MovieProps[]>([]);
+  const [addMovies, setAddMovies] = useState('');
   const [status, setStatus] = useState<'all' | 'watched' | 'not watched'>(
     'all',
   );
@@ -27,21 +29,21 @@ const Test: FC = () => {
   };
 
   const handleRemoveMovie = (id: number) => {
-    setMovies(movies.filter((movie) => movie.id !== id));
+    setMovies(movies.filter((item) => item.id !== id));
   };
 
   const handleAddMovie = () => {
-    if (watchedMovie === '') return;
-    const newMovie = { id: Date.now(), title: watchedMovie, watched: false };
-    setMovies([...movies, newMovie]);
-    setWatchedMovie('');
+    if (addMovies === '') return;
+    const newItem = { id: Date.now(), title: addMovies, completion: false };
+    setMovies([...movies, newItem]);
+    setAddMovies('');
   };
 
   const handleToggle = (id: number) => {
     setMovies(
       movies.map((item) => {
         if (item.id === id) {
-          return { ...item, watched: !item.watched };
+          return { ...item, completion: !item.completion };
         }
         return item;
       }),
@@ -50,9 +52,9 @@ const Test: FC = () => {
 
   let filteredMovies = movies;
   if (status === 'not watched') {
-    filteredMovies = movies.filter((item) => !item.watched);
+    filteredMovies = movies.filter((item) => !item.completion);
   } else if (status === 'watched') {
-    filteredMovies = movies.filter((item) => item.watched);
+    filteredMovies = movies.filter((item) => item.completion);
   }
 
   return (
@@ -70,44 +72,40 @@ const Test: FC = () => {
         <Button onClick={handleResetAll}> Remove All</Button>
         <HStack w={'full'} maxW={'500px'} justifyContent={'space-between'}>
           <Input
-            value={watchedMovie}
-            onChange={(e) => setWatchedMovie(e.target.value)}
+            value={addMovies}
+            onChange={(e) => setAddMovies(e.target.value)}
           />
           <Button onClick={handleAddMovie}>Add Task</Button>
         </HStack>
 
         <VStack w={'full'} maxW={'400px'}>
+          <Select
+            value={status}
+            onChange={(e) =>
+              setStatus(e.target.value as 'all' | 'watched' | 'not watched')
+            }
+          >
+            <option value={''}>Select Status</option>
+            <option value={'all'}>All</option>
+            <option value={'watched'}>Watched</option>
+            <option value={'not watched'}>Not Watched</option>
+          </Select>
           <HStack>
-            <Select
-              value={status}
-              onChange={(e) =>
-                setStatus(e.target.value as 'all' | 'watched' | 'not watched')
-              }
-            >
-              <option value={''}>Select Status</option>
-              <option value={status} onChange={() => setStatus('all')}>
-                All
-              </option>
-              <option value={status} onChange={() => setStatus('watched')}>
-                Watched
-              </option>
-              <option value={status} onChange={() => setStatus('not watched')}>
-                Not Watched{' '}
-              </option>
-            </Select>
+            {filteredMovies.map((item) => (
+              <HStack key={item.id}>
+                <VStack>
+                  <Button onClick={() => handleToggle(item.id)}>T</Button>
+                  <Text color={item.completion ? 'red' : 'green'}>
+                    {item.completion ? 'Not Completed' : 'Completed'}
+                  </Text>
+                  <Text>{item.title}</Text>
+                  <Button onClick={() => handleRemoveMovie(item.id)}>
+                    Remove Movie
+                  </Button>
+                </VStack>
+              </HStack>
+            ))}
           </HStack>
-          {filteredMovies.map((item) => (
-            <HStack key={item.id}>
-              <Button onClick={() => handleToggle(item.id)}>T</Button>
-              <Text color={item.watched ? 'green' : 'red'}>
-                {item.watched ? 'Completed' : 'Not Completed'}
-              </Text>
-              <Text>{item.title}</Text>
-              <Button onClick={() => handleRemoveMovie(item.id)}>
-                Remove Movie
-              </Button>
-            </HStack>
-          ))}
         </VStack>
       </VStack>
     </VStack>
@@ -115,5 +113,3 @@ const Test: FC = () => {
 };
 
 export default Test;
-
-// A movie watchlist — add movies, mark as watched, filter by watched/unwatched
