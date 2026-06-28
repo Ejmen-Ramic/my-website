@@ -85,7 +85,7 @@ const Test: FC = () => {
               setStatus(e.target.value as 'all' | 'watched' | 'not watched')
             }
           >
-            <option value={''}>Select Status</option>
+            <option value={''}>Select Statuses</option>
             <option value={'all'}>All</option>
             <option value={'watched'}>Watched</option>
             <option value={'not watched'}>Not Watched</option>
