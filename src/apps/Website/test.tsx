@@ -9,53 +9,45 @@ import {
   filter,
 } from '@chakra-ui/react';
 import { stat } from 'fs';
-import { FC, useMemo, useState } from 'react';
+import { FC, useEffect, useMemo, useState } from 'react';
 
-interface MovieProps {
+interface ContactsProps {
   id: number;
-  title: string;
-  completion: boolean;
+  name: string;
+  phoneNumber: number;
 }
 
 const Test: FC = () => {
-  const [movies, setMovies] = useState<MovieProps[]>([]);
-  const [addMovies, setAddMovies] = useState('');
-  const [status, setStatus] = useState<'all' | 'watched' | 'not watched'>(
-    'all',
-  );
+  const [contacts, setContacts] = useState<ContactsProps[]>([]);
+  const [inputName, setInputName] = useState('');
+  const [inputNumber, setInputNumber] = useState('');
+  const [searchInput, setSearchInput] = useState('');
+  const [activeSearch, setActiveSearch] = useState('');
 
-  const handleResetAll = () => {
-    setMovies([]);
+  const handleRemoveAll = () => {
+    setContacts([]);
+  };
+  const handleRemoveContact = (id: number) => {
+    setContacts(contacts.filter((item) => item.id !== id));
   };
 
-  const handleRemoveMovie = (id: number) => {
-    setMovies(movies.filter((item) => item.id !== id));
+  const handleAddContact = () => {
+    if (inputName === '' || inputNumber === '') return;
+    const newContacts = {
+      id: Date.now(),
+      name: inputName,
+      phoneNumber: Number(inputNumber),
+    };
+    setContacts([...contacts, newContacts]);
+    setInputName('');
+    setInputNumber('');
   };
 
-  const handleAddMovie = () => {
-    if (addMovies === '') return;
-    const newItem = { id: Date.now(), title: addMovies, completion: false };
-    setMovies([...movies, newItem]);
-    setAddMovies('');
-  };
-
-  const handleToggle = (id: number) => {
-    setMovies(
-      movies.map((item) => {
-        if (item.id === id) {
-          return { ...item, completion: !item.completion };
-        }
-        return item;
-      }),
+  const filteredContacts = useMemo(() => {
+    return contacts.filter((contacts) =>
+      contacts.name.toLowerCase().includes(activeSearch.toLowerCase()),
     );
-  };
-
-  let filteredMovies = movies;
-  if (status === 'not watched') {
-    filteredMovies = movies.filter((item) => !item.completion);
-  } else if (status === 'watched') {
-    filteredMovies = movies.filter((item) => item.completion);
-  }
+  }, [activeSearch, contacts]);
 
   return (
     <VStack w={'full'} alignContent={'center'} mt={'300px'}>
@@ -69,41 +61,33 @@ const Test: FC = () => {
         alignItems={'center'}
         p={'35px'}
       >
-        <Button onClick={handleResetAll}> Remove All</Button>
+        <Button onClick={handleRemoveAll}> Remove All</Button>
         <HStack w={'full'} maxW={'500px'} justifyContent={'space-between'}>
           <Input
-            value={addMovies}
-            onChange={(e) => setAddMovies(e.target.value)}
+            value={inputName}
+            onChange={(e) => setInputName(e.target.value)}
           />
-          <Button onClick={handleAddMovie}>Add Task</Button>
+          <Input
+            value={inputNumber}
+            onChange={(e) => setInputNumber(e.target.value)}
+            type={'number'}
+          />
+          <Button onClick={handleAddContact}>Add Contacts</Button>
         </HStack>
 
         <VStack w={'full'} maxW={'400px'}>
-          <Select
-            value={status}
-            onChange={(e) =>
-              setStatus(e.target.value as 'all' | 'watched' | 'not watched')
-            }
-          >
-            <option value={''}>Select Statuses</option>
-            <option value={'all'}>All</option>
-            <option value={'watched'}>Watched</option>
-            <option value={'not watched'}>Not Watched</option>
-          </Select>
+          <Input
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
+          />
+          <Button onClick={() => setActiveSearch(searchInput)}>S</Button>
           <HStack>
-            {filteredMovies.map((item) => (
-              <HStack key={item.id}>
-                <VStack>
-                  <Button onClick={() => handleToggle(item.id)}>T</Button>
-                  <Text color={item.completion ? 'red' : 'green'}>
-                    {item.completion ? 'Not Completed' : 'Completed'}
-                  </Text>
-                  <Text>{item.title}</Text>
-                  <Button onClick={() => handleRemoveMovie(item.id)}>
-                    Remove Movie
-                  </Button>
-                </VStack>
-              </HStack>
+            {filteredContacts.map((item) => (
+              <VStack key={item.id}>
+                <Text>{item.name}</Text>
+                <Text>{item.phoneNumber}</Text>
+                <Button onClick={() => handleRemoveContact(item.id)}>T</Button>
+              </VStack>
             ))}
           </HStack>
         </VStack>
