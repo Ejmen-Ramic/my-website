@@ -11,43 +11,31 @@ import {
 import { stat } from 'fs';
 import { FC, useEffect, useMemo, useState } from 'react';
 
-interface ContactsProps {
-  id: number;
-  name: string;
-  phoneNumber: number;
-}
-
 const Test: FC = () => {
-  const [contacts, setContacts] = useState<ContactsProps[]>([]);
-  const [inputName, setInputName] = useState('');
-  const [inputNumber, setInputNumber] = useState('');
-  const [searchInput, setSearchInput] = useState('');
-  const [activeSearch, setActiveSearch] = useState('');
+  const [goal, setGoal] = useState(0);
+  const [contribution, setContribution] = useState<number[]>([]);
+  const [contributionInput, setContributionInput] = useState(0);
 
   const handleRemoveAll = () => {
-    setContacts([]);
-  };
-  const handleRemoveContact = (id: number) => {
-    setContacts(contacts.filter((item) => item.id !== id));
-  };
-
-  const handleAddContact = () => {
-    if (inputName === '' || inputNumber === '') return;
-    const newContacts = {
-      id: Date.now(),
-      name: inputName,
-      phoneNumber: Number(inputNumber),
-    };
-    setContacts([...contacts, newContacts]);
-    setInputName('');
-    setInputNumber('');
+    setContribution([]);
+    setGoal(0);
+    setContributionInput(0);
   };
 
-  const filteredContacts = useMemo(() => {
-    return contacts.filter((contacts) =>
-      contacts.name.toLowerCase().includes(activeSearch.toLowerCase()),
-    );
-  }, [activeSearch, contacts]);
+  const handleAddContribution = () => {
+    if (contributionInput === 0) return;
+    setContribution([...contribution, contributionInput]);
+    setContributionInput(0);
+  };
+
+  const totalSaved = useMemo(() => {
+    return contribution.reduce((total, item) => total + item, 0);
+  }, [contribution]);
+
+  const progress = useMemo(() => {
+    if (goal === 0) return 0;
+    return (totalSaved / goal) * 100;
+  }, [totalSaved, goal]);
 
   return (
     <VStack w={'full'} alignContent={'center'} mt={'300px'}>
@@ -61,35 +49,19 @@ const Test: FC = () => {
         alignItems={'center'}
         p={'35px'}
       >
-        <Button onClick={handleRemoveAll}> Remove All</Button>
-        <HStack w={'full'} maxW={'500px'} justifyContent={'space-between'}>
-          <Input
-            value={inputName}
-            onChange={(e) => setInputName(e.target.value)}
-          />
-          <Input
-            value={inputNumber}
-            onChange={(e) => setInputNumber(e.target.value)}
-            type={'number'}
-          />
-          <Button onClick={handleAddContact}>Add Contacts</Button>
-        </HStack>
-
         <VStack w={'full'} maxW={'400px'}>
           <Input
-            value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value)}
+            value={contributionInput}
+            onChange={(e) => setContributionInput(Number(e.target.value))}
           />
-          <Button onClick={() => setActiveSearch(searchInput)}>S</Button>
-          <HStack>
-            {filteredContacts.map((item) => (
-              <VStack key={item.id}>
-                <Text>{item.name}</Text>
-                <Text>{item.phoneNumber}</Text>
-                <Button onClick={() => handleRemoveContact(item.id)}>T</Button>
-              </VStack>
-            ))}
-          </HStack>
+          <Input
+            value={goal}
+            onChange={(e) => setGoal(Number(e.target.value))}
+          />
+          <Button onClick={handleAddContribution}>Add Contribution</Button>
+          <Text>{progress}% complete</Text>
+          <Text>Total Saved: {totalSaved}</Text>
+          <Button onClick={handleRemoveAll}>Reset</Button>
         </VStack>
       </VStack>
     </VStack>
