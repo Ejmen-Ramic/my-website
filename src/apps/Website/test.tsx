@@ -11,48 +11,44 @@ import {
 import { stat } from 'fs';
 import { FC, useEffect, useMemo, useState } from 'react';
 
-interface VoterProps {
+interface InventoryProps {
   id: number;
   name: string;
-  votes: number;
+  quantity: number;
 }
 
 const Test: FC = () => {
-  const [candidates, setCandidates] = useState<VoterProps[]>([]);
-  const [candidateInput, setCandidateInput] = useState('');
+  const [inventory, setInventory] = useState<InventoryProps[]>([]);
+  const [inputItem, setInputItem] = useState('');
 
-  const handleRemoveAll = () => {
-    setCandidates([]);
+  const handleResetAll = () => {
+    setInventory([]);
   };
 
-  const handleAddCandidate = () => {
-    if (candidateInput === '') return;
-    const newVote = { id: Date.now(), name: candidateInput, votes: 0 };
-    setCandidates([...candidates, newVote]);
-    setCandidateInput('');
+  const handleRemoveItem = (id: number) => {
+    setInventory(inventory.filter((item) => item.id !== id));
   };
 
-  const handleVote = (id: number, type: 'add' | 'remove') => {
-    setCandidates(
-      candidates.map((candidate) => {
-        if (candidate.id === id) {
+  const handleAddItem = () => {
+    if (inputItem === '') return;
+    const newItem = { id: Date.now(), name: inputItem, quantity: 0 };
+    setInventory([...inventory, newItem]);
+    setInputItem('');
+  };
+
+  const handleUpdateQuantity = (id: number, type: 'add' | 'remove') => {
+    setInventory(
+      inventory.map((item) => {
+        if (item.id === id) {
           return {
-            ...candidate,
-            votes: type === 'add' ? candidate.votes + 1 : candidate.votes - 1,
+            ...item,
+            quantity: type === 'add' ? item.quantity + 1 : item.quantity - 1,
           };
         }
-        return candidate;
+        return item;
       }),
     );
   };
-
-  const handleRemoveVoter = (id: number) => {
-    setCandidates(candidates.filter((item) => item.id !== id));
-  };
-
-  const totalVotes = useMemo(() => {
-    return candidates.reduce((total, candidate) => total + candidate.votes, 0);
-  }, [candidates]);
 
   return (
     <VStack w={'full'} alignContent={'center'} mt={'300px'}>
@@ -67,37 +63,32 @@ const Test: FC = () => {
         p={'35px'}
       >
         <VStack w={'full'} maxW={'600px'}>
-          <Button onClick={handleRemoveAll}>Remove All Votes</Button>
           <HStack>
             <Input
-              value={candidateInput}
-              onChange={(e) => setCandidateInput(e.target.value)}
+              value={inputItem}
+              onChange={(e) => setInputItem(e.target.value)}
             />
-            <Button onClick={handleAddCandidate}>Add Candidate</Button>
+            <Button onClick={handleAddItem}>Add</Button>
+            <Button onClick={handleResetAll}>Reset</Button>
           </HStack>
-          <HStack>
-            {candidates.map((item) => (
-              <VStack key={item.id}>
-                <HStack>
-                  <Text>{item.name}</Text>
-                  <Text>Votes: {item.votes}</Text>
-                  <Text>
-                    {totalVotes === 0
-                      ? '0.0'
-                      : ((item.votes / totalVotes) * 100).toFixed(1)}
-                    %
-                  </Text>
-                  <Button onClick={() => handleVote(item.id, 'add')}>+</Button>
-                  <Button onClick={() => handleVote(item.id, 'remove')}>
-                    -
-                  </Button>
-                  <Button onClick={() => handleRemoveVoter(item.id)}>
-                    Remove Voter
-                  </Button>
-                </HStack>
-              </VStack>
-            ))}
-          </HStack>
+          {inventory.map((item) => (
+            <VStack key={item.id}>
+              <HStack>
+                <Text>{item.name}</Text>
+                <Text color={item.quantity < 5 ? 'red' : 'green'}>
+                  {' '}
+                  Q: {item.quantity}
+                </Text>
+                <Button onClick={() => handleUpdateQuantity(item.id, 'add')}>
+                  +
+                </Button>
+                <Button onClick={() => handleUpdateQuantity(item.id, 'remove')}>
+                  -
+                </Button>
+                <Button onClick={() => handleRemoveItem(item.id)}>R</Button>
+              </HStack>
+            </VStack>
+          ))}
         </VStack>
       </VStack>
     </VStack>
