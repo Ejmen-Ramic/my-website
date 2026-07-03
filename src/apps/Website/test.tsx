@@ -11,43 +11,35 @@ import {
 import { stat } from 'fs';
 import { FC, useEffect, useMemo, useState } from 'react';
 
-interface InventoryProps {
+interface RecipeProps {
   id: number;
   name: string;
-  quantity: number;
+  ingredients: string[];
 }
 
 const Test: FC = () => {
-  const [inventory, setInventory] = useState<InventoryProps[]>([]);
-  const [inputItem, setInputItem] = useState('');
+  const [recipe, setRecipe] = useState<RecipeProps[]>([]);
+  const [inputRecipe, setInputRecipe] = useState('');
+  const [inputIngredients, setInputIngredients] = useState('');
+  const [ingredientsList, setIngredientsList] = useState<string[]>([]);
 
-  const handleResetAll = () => {
-    setInventory([]);
+  const handleDeleteAll = () => {
+    setRecipe([]);
+  };
+  const handleRemoveRecipe = (id: number) => {
+    setRecipe(recipe.filter((item) => item.id !== id));
   };
 
-  const handleRemoveItem = (id: number) => {
-    setInventory(inventory.filter((item) => item.id !== id));
-  };
-
-  const handleAddItem = () => {
-    if (inputItem === '') return;
-    const newItem = { id: Date.now(), name: inputItem, quantity: 0 };
-    setInventory([...inventory, newItem]);
-    setInputItem('');
-  };
-
-  const handleUpdateQuantity = (id: number, type: 'add' | 'remove') => {
-    setInventory(
-      inventory.map((item) => {
-        if (item.id === id) {
-          return {
-            ...item,
-            quantity: type === 'add' ? item.quantity + 1 : item.quantity - 1,
-          };
-        }
-        return item;
-      }),
-    );
+  const handleAdd = () => {
+    if (inputRecipe === '' || inputIngredients === '') return;
+    const newRecipe = {
+      id: Date.now(),
+      name: inputRecipe,
+      ingredients: [inputIngredients],
+    };
+    setRecipe([...recipe, newRecipe]);
+    setInputRecipe('');
+    setInputIngredients('');
   };
 
   return (
@@ -62,32 +54,20 @@ const Test: FC = () => {
         alignItems={'center'}
         p={'35px'}
       >
-        <VStack w={'full'} maxW={'600px'}>
-          <HStack>
-            <Input
-              value={inputItem}
-              onChange={(e) => setInputItem(e.target.value)}
-            />
-            <Button onClick={handleAddItem}>Add</Button>
-            <Button onClick={handleResetAll}>Reset</Button>
-          </HStack>
-          {inventory.map((item) => (
-            <VStack key={item.id}>
-              <HStack>
-                <Text>{item.name}</Text>
-                <Text color={item.quantity < 5 ? 'red' : 'green'}>
-                  {' '}
-                  Q: {item.quantity}
-                </Text>
-                <Button onClick={() => handleUpdateQuantity(item.id, 'add')}>
-                  +
-                </Button>
-                <Button onClick={() => handleUpdateQuantity(item.id, 'remove')}>
-                  -
-                </Button>
-                <Button onClick={() => handleRemoveItem(item.id)}>R</Button>
-              </HStack>
-            </VStack>
+        <HStack>
+          <Input
+            value={inputRecipe}
+            onChange={(e) => setInputRecipe(e.target.value)}
+          />
+          <Input
+            value={inputIngredients}
+            onChange={(e) => setInputIngredients(e.target.value)}
+          />
+          <Button>Add</Button>
+        </HStack>
+        <VStack>
+          {recipe.map((item) => (
+            <HStack key={item.id}></HStack>
           ))}
         </VStack>
       </VStack>
