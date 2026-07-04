@@ -63,7 +63,7 @@ const Test: FC = () => {
             value={inputIngredients}
             onChange={(e) => setInputIngredients(e.target.value)}
           />
-          <Button>Add</Button>
+          <Button>Ad</Button>
         </HStack>
         <VStack>
           {recipe.map((item) => (
