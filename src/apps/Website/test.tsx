@@ -30,16 +30,22 @@ const Test: FC = () => {
     setRecipe(recipe.filter((item) => item.id !== id));
   };
 
-  const handleAdd = () => {
-    if (inputRecipe === '' || inputIngredients === '') return;
+  const handleAddIngredient = () => {
+    if (inputIngredients === '') return;
+    setIngredientsList([...ingredientsList, inputIngredients]);
+    setInputIngredients('');
+  };
+
+  const handleAddRecipe = () => {
+    if (inputRecipe === '') return;
     const newRecipe = {
       id: Date.now(),
       name: inputRecipe,
-      ingredients: [inputIngredients],
+      ingredients: ingredientsList,
     };
     setRecipe([...recipe, newRecipe]);
+    setIngredientsList([]);
     setInputRecipe('');
-    setInputIngredients('');
   };
 
   return (
@@ -54,20 +60,33 @@ const Test: FC = () => {
         alignItems={'center'}
         p={'35px'}
       >
-        <HStack>
-          <Input
-            value={inputRecipe}
-            onChange={(e) => setInputRecipe(e.target.value)}
-          />
-          <Input
-            value={inputIngredients}
-            onChange={(e) => setInputIngredients(e.target.value)}
-          />
-          <Button>Add</Button>
-        </HStack>
+        <VStack alignItems={'start'}>
+          <HStack>
+            <Input
+              value={inputRecipe}
+              onChange={(e) => setInputRecipe(e.target.value)}
+              placeholder={'add recipe'}
+            />
+            <Button onClick={handleAddRecipe}>Save</Button>
+          </HStack>
+          <HStack>
+            <Input
+              value={inputIngredients}
+              onChange={(e) => setInputIngredients(e.target.value)}
+              placeholder={'add ingredients'}
+            />
+            <Button onClick={handleAddIngredient}>Add</Button>
+            <Button onClick={handleDeleteAll}>R All</Button>
+          </HStack>
+        </VStack>
         <VStack>
           {recipe.map((item) => (
-            <HStack key={item.id}></HStack>
+            <HStack key={item.id}>
+              <Text>{item.name}</Text>
+              <Text>{item.ingredients.join(', ')}</Text>
+
+              <Button onClick={() => handleRemoveRecipe(item.id)}>R</Button>
+            </HStack>
           ))}
         </VStack>
       </VStack>
