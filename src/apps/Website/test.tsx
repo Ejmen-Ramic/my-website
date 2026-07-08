@@ -11,42 +11,69 @@ import {
 import { stat } from 'fs';
 import { FC, useEffect, useMemo, useState } from 'react';
 
-interface RecipeProps {
+interface ExpenseProps {
   id: number;
-  name: string;
-  ingredients: string[];
+  amount: number;
+  description: string;
+  type: 'income' | 'expense';
 }
 
 const Test: FC = () => {
-  const [recipe, setRecipe] = useState<RecipeProps[]>([]);
-  const [inputRecipe, setInputRecipe] = useState('');
-  const [inputIngredients, setInputIngredients] = useState('');
-  const [ingredientsList, setIngredientsList] = useState<string[]>([]);
+  const [transactionList, setTransactionList] = useState<ExpenseProps[]>([]);
+  const [type, setType] = useState<'income' | 'expense'>('income');
+  const [inputAmount, setInputAmount] = useState(0);
+  const [inputDescription, setInputDescription] = useState('');
 
-  const handleDeleteAll = () => {
-    setRecipe([]);
-  };
-  const handleRemoveRecipe = (id: number) => {
-    setRecipe(recipe.filter((item) => item.id !== id));
+  const handleResetAll = () => {
+    setTransactionList([]);
   };
 
-  const handleAddIngredient = () => {
-    if (inputIngredients === '') return;
-    setIngredientsList([...ingredientsList, inputIngredients]);
-    setInputIngredients('');
+  const handleResetItem = (id: number) => {
+    setTransactionList(transactionList.filter((item) => item.id !== id));
   };
 
-  const handleAddRecipe = () => {
-    if (inputRecipe === '') return;
-    const newRecipe = {
+  const handleAdd = () => {
+    if (inputAmount === 0 || inputDescription === '') return;
+    const newItem = {
       id: Date.now(),
-      name: inputRecipe,
-      ingredients: ingredientsList,
+      amount: inputAmount,
+      description: inputDescription,
+      type: type,
     };
-    setRecipe([...recipe, newRecipe]);
-    setIngredientsList([]);
-    setInputRecipe('');
+    setTransactionList([...transactionList, newItem]);
+    setInputAmount(0);
+    setInputDescription('');
   };
+
+  const totalBalance = useMemo(() => {
+    return transactionList.reduce((total, amount) => {
+      if (amount.type === 'income') {
+        return total + amount.amount;
+      } else {
+        return total - amount.amount;
+      }
+    }, 0);
+  }, [transactionList]);
+
+  const totalIncome = useMemo(() => {
+    return transactionList.reduce((total, amount) => {
+      if (amount.type === 'income') {
+        return total + amount.amount;
+      } else {
+        return total;
+      }
+    }, 0);
+  }, [transactionList]);
+
+  const totalExpense = useMemo(() => {
+    return transactionList.reduce((total, amount) => {
+      if (amount.type === 'expense') {
+        return total + amount.amount;
+      } else {
+        return total;
+      }
+    }, 0);
+  }, [transactionList]);
 
   return (
     <VStack w={'full'} alignContent={'center'} mt={'300px'}>
@@ -60,35 +87,32 @@ const Test: FC = () => {
         alignItems={'center'}
         p={'35px'}
       >
-        <VStack alignItems={'start'}>
-          <HStack>
-            <Input
-              value={inputRecipe}
-              onChange={(e) => setInputRecipe(e.target.value)}
-              placeholder={'add recipe'}
-            />
-            <Button onClick={handleAddRecipe}>Save</Button>
-          </HStack>
-          <HStack>
-            <Input
-              value={inputIngredients}
-              onChange={(e) => setInputIngredients(e.target.value)}
-              placeholder={'add ingredients'}
-            />
-            <Button onClick={handleAddIngredient}>Add</Button>
-            <Button onClick={handleDeleteAll}>R All</Button>
-          </HStack>
-        </VStack>
-        <VStack>
-          {recipe.map((item) => (
-            <HStack key={item.id}>
-              <Text>{item.name}</Text>
-              <Text>{item.ingredients.join(', ')}</Text>
+        <HStack>
+          <Input
+            type={'number'}
+            value={inputAmount}
+            onChange={(e) => setInputAmount(Number(e.target.value))}
+          />
+          <Input
+            value={inputDescription}
+            onChange={(e) => setInputDescription(e.target.value)}
+          />
+          <Button onClick={handleAdd}>Add</Button>
+          <Button onClick={handleResetAll}>Reset</Button>
+        </HStack>
+        {transactionList.map((item) => (
+          <VStack key={item.id}>
+            <HStack>
+              <Text>{item.description}</Text>
+              <Text>{item.amount}</Text>
 
-              <Button onClick={() => handleRemoveRecipe(item.id)}>R</Button>
+              <Button onClick={() => handleResetItem(item.id)}>D</Button>
             </HStack>
-          ))}
-        </VStack>
+          </VStack>
+        ))}
+        <Text>Income: {totalIncome}</Text>
+        <Text>Expense: {totalExpense}</Text>
+        <Text>Balance: {totalBalance}</Text>
       </VStack>
     </VStack>
   );
