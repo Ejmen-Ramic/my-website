@@ -9,13 +9,11 @@ import {
   filter,
 } from '@chakra-ui/react';
 import { interval } from 'date-fns';
-import { stat } from 'fs';
 import { FC, useEffect, useMemo, useState } from 'react';
-import { ThemeProvider } from './ThemeContext';
-import ThemeButton from './ThemeButton';
-import ThemeDisplay from './ThemeDisplay';
+import useTimer from './useTimer';
 
 const Test: FC = () => {
+  const { timer, isRunning, setIsRunning, handleReset } = useTimer();
   return (
     <VStack w={'full'} alignContent={'center'} mt={'300px'}>
       <VStack
@@ -28,10 +26,15 @@ const Test: FC = () => {
         alignItems={'center'}
         p={'35px'}
       >
-        <ThemeProvider>
-          <ThemeButton />
-          <ThemeDisplay />
-        </ThemeProvider>
+        <HStack>
+          <Button onClick={() => setIsRunning(!isRunning)}>
+            {!isRunning ? 'Start' : 'Stop'}
+          </Button>
+          <Button onClick={handleReset}>Reset</Button>
+        </HStack>
+        <Text>
+          {Math.floor(timer / 1000)}.{Math.floor((timer % 1000) / 10)}
+        </Text>
       </VStack>
     </VStack>
   );
