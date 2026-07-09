@@ -11,10 +11,9 @@ import {
 import { interval } from 'date-fns';
 import { stat } from 'fs';
 import { FC, useEffect, useMemo, useState } from 'react';
-import ThemeDisplay from './ThemeDisplay';
 import { ThemeProvider } from './ThemeContext';
 import ThemeButton from './ThemeButton';
-import ThemeIcon from './ThemeIcon';
+import ThemeDisplay from './ThemeDisplay';
 
 const Test: FC = () => {
   return (
@@ -30,7 +29,6 @@ const Test: FC = () => {
         p={'35px'}
       >
         <ThemeProvider>
-          <ThemeIcon />
           <ThemeButton />
           <ThemeDisplay />
         </ThemeProvider>

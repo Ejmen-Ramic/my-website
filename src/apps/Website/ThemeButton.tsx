@@ -1,16 +1,21 @@
-import { Button, Stack } from '@chakra-ui/react';
+import { Select } from '@chakra-ui/react';
 import { FC, useContext } from 'react';
 import { ThemeContext } from './ThemeContext';
-import ThemeIcon from './ThemeIcon';
 
 const ThemeButton: FC = () => {
-  const { isLight, setIsLight } = useContext(ThemeContext);
+  const { isLanguage, setIsLanguage } = useContext(ThemeContext);
   return (
-    <Stack>
-      <Button onClick={() => setIsLight(!isLight)}>
-        {!isLight ? 'On' : 'Off'}
-      </Button>
-    </Stack>
+    <>
+      <Select
+        value={isLanguage}
+        onChange={(e) => setIsLanguage(e.target.value)}
+      >
+        <option value={'English'}>English</option>
+        <option value={'Bosnian'}>Bosnian</option>
+        <option value={'Chinese'}>Chinese</option>
+      </Select>
+    </>
   );
 };
+
 export default ThemeButton;

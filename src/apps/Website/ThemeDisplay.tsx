@@ -1,15 +1,14 @@
-import { Stack, Text } from '@chakra-ui/react';
 import { FC, useContext } from 'react';
+import { Text } from '@chakra-ui/react';
 import { ThemeContext } from './ThemeContext';
-
 const ThemeDisplay: FC = () => {
-  const { isLight } = useContext(ThemeContext);
+  const { isLanguage } = useContext(ThemeContext);
+
   return (
-    <Stack>
-      <Text color={!isLight ? 'green' : 'red'}>
-        {!isLight ? 'Turn On' : 'Turn Off'}
-      </Text>
-    </Stack>
+    <>
+      <Text>{isLanguage}</Text>
+    </>
   );
 };
+
 export default ThemeDisplay;
