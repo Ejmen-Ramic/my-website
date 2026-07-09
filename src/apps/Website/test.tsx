@@ -12,22 +12,30 @@ import { interval } from 'date-fns';
 import { stat } from 'fs';
 import { FC, useEffect, useMemo, useState } from 'react';
 
+interface CountryProps {
+  id: number;
+  name: string;
+  region: string;
+  capital: string;
+}
+
+const countries: CountryProps[] = [
+  { id: 1, name: 'Japan', region: 'Asia', capital: 'Tokyo' },
+  { id: 2, name: 'Brazil', region: 'South America', capital: 'Brasilia' },
+  { id: 3, name: 'Germany', region: 'Europe', capital: 'Berlin' },
+  { id: 4, name: 'Egypt', region: 'Africa', capital: 'Cairo' },
+  { id: 5, name: 'Canada', region: 'North America', capital: 'Ottawa' },
+  { id: 6, name: 'Australia', region: 'Oceania', capital: 'Canberra' },
+];
+
 const Test: FC = () => {
-  const [timer, setTimer] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
+  const [inputCountry, setInputCountry] = useState('');
 
-  const handleReset = () => {
-    setTimer(0);
-  };
-
-  useEffect(() => {
-    if (isRunning) {
-      const interval = setInterval(() => {
-        setTimer((prev) => prev + 1);
-      }, 10);
-      return () => clearInterval(interval);
-    }
-  }, [isRunning]);
+  const filteredCountries = useMemo(() => {
+    return countries.filter((country) =>
+      country.name.toLowerCase().includes(inputCountry.toLowerCase()),
+    );
+  }, [inputCountry]);
 
   return (
     <VStack w={'full'} alignContent={'center'} mt={'300px'}>
@@ -41,17 +49,25 @@ const Test: FC = () => {
         alignItems={'center'}
         p={'35px'}
       >
-        <HStack>
-          <Button onClick={() => setIsRunning(!isRunning)}>
-            {!isRunning ? 'Start' : 'Stop'}
-          </Button>
-
-          <Button onClick={handleReset}>Reset</Button>
-        </HStack>
-
-        <Text>
-          {Math.floor(timer / 1000)}.{Math.floor((timer % 1000) / 10)}
-        </Text>
+        <Input
+          value={inputCountry}
+          onChange={(e) => setInputCountry(e.target.value)}
+        />
+        {inputCountry === '' ? (
+          <Text>Search Something</Text>
+        ) : filteredCountries.length === 0 ? (
+          <Text>Nothing Found</Text>
+        ) : (
+          filteredCountries.map((item) => (
+            <VStack key={item.id}>
+              <HStack>
+                <Text>{item.name}</Text>
+                <Text>{item.capital}</Text>
+                <Text>{item.region}</Text>
+              </HStack>
+            </VStack>
+          ))
+        )}
       </VStack>
     </VStack>
   );
