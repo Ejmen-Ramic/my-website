@@ -11,32 +11,12 @@ import {
 import { interval } from 'date-fns';
 import { stat } from 'fs';
 import { FC, useEffect, useMemo, useState } from 'react';
-
-interface CountryProps {
-  id: number;
-  name: string;
-  region: string;
-  capital: string;
-}
-
-const countries: CountryProps[] = [
-  { id: 1, name: 'Japan', region: 'Asia', capital: 'Tokyo' },
-  { id: 2, name: 'Brazil', region: 'South America', capital: 'Brasilia' },
-  { id: 3, name: 'Germany', region: 'Europe', capital: 'Berlin' },
-  { id: 4, name: 'Egypt', region: 'Africa', capital: 'Cairo' },
-  { id: 5, name: 'Canada', region: 'North America', capital: 'Ottawa' },
-  { id: 6, name: 'Australia', region: 'Oceania', capital: 'Canberra' },
-];
+import ThemeDisplay from './ThemeDisplay';
+import { ThemeProvider } from './ThemeContext';
+import ThemeButton from './ThemeButton';
+import ThemeIcon from './ThemeIcon';
 
 const Test: FC = () => {
-  const [inputCountry, setInputCountry] = useState('');
-
-  const filteredCountries = useMemo(() => {
-    return countries.filter((country) =>
-      country.name.toLowerCase().includes(inputCountry.toLowerCase()),
-    );
-  }, [inputCountry]);
-
   return (
     <VStack w={'full'} alignContent={'center'} mt={'300px'}>
       <VStack
@@ -49,25 +29,11 @@ const Test: FC = () => {
         alignItems={'center'}
         p={'35px'}
       >
-        <Input
-          value={inputCountry}
-          onChange={(e) => setInputCountry(e.target.value)}
-        />
-        {inputCountry === '' ? (
-          <Text>Search Something</Text>
-        ) : filteredCountries.length === 0 ? (
-          <Text>Nothing Found</Text>
-        ) : (
-          filteredCountries.map((item) => (
-            <VStack key={item.id}>
-              <HStack>
-                <Text>{item.name}</Text>
-                <Text>{item.capital}</Text>
-                <Text>{item.region}</Text>
-              </HStack>
-            </VStack>
-          ))
-        )}
+        <ThemeProvider>
+          <ThemeIcon />
+          <ThemeButton />
+          <ThemeDisplay />
+        </ThemeProvider>
       </VStack>
     </VStack>
   );
