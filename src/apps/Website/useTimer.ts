@@ -5,7 +5,7 @@ const useTimer = () => {
 const [timer, setTimer] = useState(0)
 const [isRunning, setIsRunning] = useState(false)
 
-    const handleReset = () => {
+    const handleResets = () => {
         setTimer(0)
     }
 
@@ -21,7 +21,7 @@ const [isRunning, setIsRunning] = useState(false)
     timer,
     isRunning,
     setIsRunning,
-    handleReset
+    handleResets
     }
 }
 
