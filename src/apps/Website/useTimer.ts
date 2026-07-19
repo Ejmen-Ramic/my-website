@@ -3,23 +3,23 @@ import { useEffect, useState } from "react";
 const useTimer = () => {
 
 const [timer, setTimer] = useState(0)
-const [isRunnings, setIsRunning] = useState(false)
+const [isRunning, setIsRunning] = useState(false)
 
     const handleReset = () => {
         setTimer(0)
     }
 
     useEffect(() => {
-    if(isRunnings) {
+    if(isRunning) {
         const interval = setInterval(() => {
             setTimer((prev) => prev + 1)
         },10)
         return () => clearInterval(interval)
     }
-    },[isRunnings])
+    },[isRunning])
     return {
     timer,
-    isRunnings,
+    isRunning,
     setIsRunning,
     handleReset
     }
