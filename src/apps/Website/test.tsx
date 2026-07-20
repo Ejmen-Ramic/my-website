@@ -28,7 +28,7 @@ const Test: FC = () => {
       >
         <HStack>
           <Button onClick={() => setIsRunning(!isRunning)}>
-            {!isRunning ? 'Start' : 'Stop'}
+            {!isRunning ? 'Starts' : 'Stop'}
           </Button>
           <Button onClick={handleReset}>Reset</Button>
         </HStack>
