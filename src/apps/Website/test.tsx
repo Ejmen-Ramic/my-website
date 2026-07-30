@@ -30,7 +30,7 @@ const Test: FC = () => {
           <Button onClick={() => setIsRunning(!isRunning)}>
             {!isRunning ? 'Start' : 'Stop'}
           </Button>
-          <Button onClick={handleReset}>Reset</Button>
+          <Button onClick={handleReset}>Resets</Button>
         </HStack>
         <Text>
           {Math.floor(timer / 1000)}.{Math.floor((timer % 1000) / 10)}
