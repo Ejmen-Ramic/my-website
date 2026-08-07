@@ -56,7 +56,7 @@ const Test: FC = () => {
     <VStack w={'full'} alignContent={'center'} mt={'300px'}>
       <VStack
         w={'full'}
-        maxW={'800px'}
+        maxW={'801px'}
         gap={'30px'}
         border={'1px'}
         borderColor={'gray'}
